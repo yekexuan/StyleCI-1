@@ -6,7 +6,7 @@
 <header id="top" class="header">
     <div class="text-vertical-center">
         <h1>StyleCI</h1>
-        <h3>Coding Style Continuous Integration Service</h3>
+        <h3>A PHP Coding Style Continuous Integration Service</h3>
         <br>
         @if($currentUser)
         <a href="{{ route('repos_path') }}" class="btn btn-dark btn-lg">Get Started</a>
