@@ -21,9 +21,11 @@ use Illuminate\Support\Facades\View;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
 use StyleCI\StyleCI\GitHub\Branches;
+use StyleCI\StyleCI\GitHub\Repos;
 use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Repositories\CommitRepository;
 use StyleCI\StyleCI\Repositories\RepoRepository;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
  * This is the repo controller class.
@@ -88,14 +90,22 @@ class RepoController extends AbstractController
      * Handles the request to analyse a repo.
      *
      * @param \Illuminate\Http\Request                       $request
-     * @param \StyleCI\StyleCI\GitHub\Branches               $branches
      * @param \StyleCI\StyleCI\Models\Repo                   $repo
+     * @param \StyleCI\StyleCI\GitHub\Branches               $branches
      * @param \StyleCI\StyleCI\Repositories\CommitRepository $commitRepository
+     * @param \Illuminate\Contracts\Auth\Guard               $auth
+     * @param \StyleCI\StyleCI\GitHub\Repos                  $repos
+     *
+     * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleAnalyse(Request $request, Repo $repo, Branches $branches, CommitRepository $commitRepository)
+    public function handleAnalyse(Request $request, Repo $repo, Branches $branches, CommitRepository $commitRepository, Guard $auth, Repos $repos)
     {
+        if (!array_get($repos->get($auth->user()), $repo->id)) {
+            throw new HttpException(403);
+        }
+
         $branches = $branches->get($repo);
 
         foreach ($branches as $branch) {

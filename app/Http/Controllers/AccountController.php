@@ -22,7 +22,7 @@ use StyleCI\StyleCI\Commands\DisableRepoCommand;
 use StyleCI\StyleCI\Commands\EnableRepoCommand;
 use StyleCI\StyleCI\GitHub\Repos;
 use StyleCI\StyleCI\Models\Repo;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
  * This is the account controller class.
@@ -115,7 +115,7 @@ class AccountController extends AbstractController
      * @param \Illuminate\Http\Request $request
      * @param int                      $id
      *
-     * @throws \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+     * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      *
      * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse
      */
@@ -124,7 +124,7 @@ class AccountController extends AbstractController
         $repo = array_get($this->repos->get($this->auth->user(), true), $id);
 
         if (!$repo) {
-            throw new NotFoundHttpException('Repo not found in your list of repos from GitHub.');
+            throw new HttpException(403);
         }
 
         $this->dispatch(new EnableRepoCommand($id, $repo['name'], $this->auth->user()));
@@ -142,12 +142,14 @@ class AccountController extends AbstractController
      * @param \Illuminate\Http\Request     $request
      * @param \StyleCI\StyleCI\Models\Repo $repo
      *
+     * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+     *
      * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse
      */
     public function handleDisable(Request $request, Repo $repo)
     {
         if (!array_get($this->repos->get($this->auth->user(), true), $repo->id)) {
-            throw new NotFoundHttpException('Repo not found in your list of repos from GitHub.');
+            throw new HttpException(403);
         }
 
         $this->dispatch(new DisableRepoCommand($repo));
