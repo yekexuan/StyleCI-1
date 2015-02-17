@@ -12,9 +12,11 @@
 @stop
 
 @section('content')
+@if($currentUser && $currentUser == $repo->user_id)
 <a class="btn btn-lg btn-danger btn-circle btn-float pull-right js-analyse-repo" href="{{ route('repo_analyse_path', $repo->id) }}" data-id="{{ $repo->id }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>" data-toggle="tooltip" data-placement="left" title="Analyse Now">
     <i class="fa fa-undo"></i>
 </a>
+@endif
 <div class="repo-table js-channel" data-channel="{{ $repo->id }}">
     <div class="repo-table-headers row hidden-xs @if($commits->count() == 0) hidden @endif">
         <div class="col-sm-6">
