@@ -1,6 +1,6 @@
 {
     "name": "styleci/styleci",
-    "description": "StyleCI Is A PHP Coding Style Continuous Integration Service",
+    "description": "StyleCI Is The PHP Coding Style Continuous Integration Service",
     "keywords": ["laravel", "framework", "styleci", "ci", "cs", "coding standard", "StyleCI", "StyleCI", "Graham Campbell", "GrahamCampbell"],
     "license": "MIT",
     "authors": [
