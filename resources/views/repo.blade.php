@@ -12,7 +12,7 @@
 @stop
 
 @section('content')
-@if($currentUser && $currentUser == $repo->user_id)
+@if($currentUser && $currentUser->id == $repo->user_id)
 <a class="btn btn-lg btn-danger btn-circle btn-float pull-right js-analyse-repo" href="{{ route('repo_analyse_path', $repo->id) }}" data-id="{{ $repo->id }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>" data-toggle="tooltip" data-placement="left" title="Analyse Now">
     <i class="fa fa-undo"></i>
 </a>
