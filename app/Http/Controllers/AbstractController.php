@@ -24,4 +24,16 @@ use Illuminate\Routing\Controller;
 abstract class AbstractController extends Controller
 {
     use DispatchesCommands, ValidatesRequests;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @param array $csrf
+     *
+     * @return void
+     */
+    public function __construct(array $csrf = [])
+    {
+        $this->middleware('csrf', $csrf);
+    }
 }

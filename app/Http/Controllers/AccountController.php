@@ -55,6 +55,8 @@ class AccountController extends AbstractController
      */
     public function __construct(Guard $auth, Repos $repos)
     {
+        parent::__construct();
+
         $this->auth = $auth;
         $this->repos = $repos;
 

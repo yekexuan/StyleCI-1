@@ -58,6 +58,8 @@ class GitHubController extends AbstractController
      */
     public function __construct(CommitRepository $commitRepository, ForkRepository $forkRepository, RepoRepository $repoRepository)
     {
+        parent::__construct(['except' => ['handle']]);
+
         $this->commitRepository = $commitRepository;
         $this->forkRepository = $forkRepository;
         $this->repoRepository = $repoRepository;
