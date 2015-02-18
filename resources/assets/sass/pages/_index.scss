@@ -1,0 +1,73 @@
+.text-vertical-center {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.text-vertical-center h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4.5em;
+    font-weight: 700;
+}
+
+.home-header {
+    padding-top: 100px;
+    padding-bottom: 140px;
+    display: table;
+    position: relative;
+    width: 100%;
+}
+
+.highlights {
+    background-color: #607D8B;
+    padding-bottom: 200px;
+
+    .row {
+        margin-top: -40px;
+    }
+
+    .panel-default {
+        border-radius: 3px;
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.16),0px 2px 5px 0px rgba(0,0,0,0.23);
+    }
+
+    .panel-image {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .panel-body {
+        p {
+            padding: 15px;
+        }
+    }
+}
+
+.features {
+
+    margin: 60px 0;
+
+    .featurette-divider {
+        margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -1px;
+    }
+
+    @media (min-width: 768px) {
+        .featurette-heading {
+            font-size: 50px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .featurette-heading {
+            margin-top: 120px;
+        }
+    }
+}
