@@ -70,12 +70,14 @@ class RepoController extends AbstractController
     /**
      * Handles the request to show a repo.
      *
-     * @param \StyleCI\StyleCI\Models\Repo $repo
-     * @param \Illuminate\Http\Request     $request
+     * @param \StyleCI\StyleCI\Models\Repo     $repo
+     * @param \Illuminate\Http\Request         $request
+     * @param \Illuminate\Contracts\Auth\Guard $auth
+     * @param \StyleCI\StyleCI\GitHub\Repos    $repos
      *
      * @return \Illuminate\View\View
      */
-    public function handleShow(Repo $repo, Request $request)
+    public function handleShow(Repo $repo, Request $request, Guard $auth, Repos $repos)
     {
         $commits = $repo->commits()->where('ref', 'refs/heads/master')->orderBy('created_at', 'desc')->paginate(50);
 
@@ -83,7 +85,9 @@ class RepoController extends AbstractController
             return new JsonResponse(['data' => AutoPresenter::decorate($commits->getCollection())->toArray()]);
         }
 
-        return View::make('repo', compact('repo', 'commits'));
+        $canAnalyse = (bool) array_get($repos->get($auth->user()), $repo->id);
+
+        return View::make('repo', compact('repo', 'commits', 'canAnalyse'));
     }
 
     /**
