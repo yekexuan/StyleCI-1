@@ -16,10 +16,6 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/StyleCI/PHP-CS-Fixer"
-        },
-        {
-            "type": "vcs",
             "url": "https://github.com/StyleCI/php-github-api"
         },
         {
