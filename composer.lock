@@ -1484,16 +1484,16 @@
         },
         {
             "name": "laravel/socialite",
-            "version": "dev-master",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/socialite.git",
-                "reference": "3c6d98c408eecfeef1ef0474659d71b3fa7ed1ea"
+                "reference": "af8c95f755148fe48f783013dc6aebc84858e77d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/socialite/zipball/3c6d98c408eecfeef1ef0474659d71b3fa7ed1ea",
-                "reference": "3c6d98c408eecfeef1ef0474659d71b3fa7ed1ea",
+                "url": "https://api.github.com/repos/StyleCI/socialite/zipball/af8c95f755148fe48f783013dc6aebc84858e77d",
+                "reference": "af8c95f755148fe48f783013dc6aebc84858e77d",
                 "shasum": ""
             },
             "require": {
@@ -1538,9 +1538,9 @@
                 "oauth"
             ],
             "support": {
-                "source": "https://github.com/StyleCI/socialite/tree/master"
+                "source": "https://github.com/StyleCI/socialite/tree/v3.0.0"
             },
-            "time": "2015-01-31 20:06:24"
+            "time": "2015-02-18 22:11:11"
         },
         {
             "name": "league/flysystem",
