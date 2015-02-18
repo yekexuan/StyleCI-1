@@ -7,6 +7,7 @@ CHANGE LOG
 * Fixed not showing the analyse now button in some cases
 * Disabled "remember me" so that we're hitting github again
 * Improved the welcome email
+* Switched over to the main php-cs-fixer repo
 
 
 ## V0.1 Alpha (17/02/2015)
