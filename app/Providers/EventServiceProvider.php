@@ -47,6 +47,10 @@ class EventServiceProvider extends ServiceProvider
         ],
         'StyleCI\StyleCI\Events\UserHasRageQuitEvent' => [
             'StyleCI\StyleCI\Handlers\Events\RevokeTokenHandler',
+            // 'StyleCI\StyleCI\Handlers\Events\LeavingMessageHandler',
+        ],
+        'StyleCI\StyleCI\Events\UserHasSignedUpEvent' => [
+            'StyleCI\StyleCI\Handlers\Events\WelcomeMessageHandler',
         ],
     ];
 }
