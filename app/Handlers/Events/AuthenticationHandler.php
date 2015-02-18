@@ -52,6 +52,6 @@ class AuthenticationHandler
     {
         $user = $event->getUser();
 
-        $this->auth->login($user, true);
+        $this->auth->login($user);
     }
 }
