@@ -60,7 +60,14 @@
 <div class="features">
     <div class="row featurette">
         <div class="col-sm-6">
-            <img class="featurette-image img-responsive" src="{{ url('img/analyse-repo.jpg') }}" alt="Analyse" />
+            <div class="fake-browser-ui">
+                <div class="frame">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <img class="featurette-image img-responsive" src="{{ url('img/analyse-repo.jpg') }}" alt="Analyse" />
+            </div>
         </div>
         <div class="col-sm-6">
             <h2 class="featurette-heading">Analyse pull requests</h2>
@@ -74,7 +81,14 @@
             <p class="lead">Download patch files for the coding style fixes ready to use, and apply them automatically using "git apply" or can be inspected via the browser too.</p>
         </div>
         <div class="col-sm-6">
-            <img class="featurette-image img-responsive" src="{{ url('img/patch-commit.jpg') }}" alt="Patch">
+            <div class="fake-browser-ui">
+                <div class="frame">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <img class="featurette-image img-responsive" src="{{ url('img/patch-commit.jpg') }}" alt="Patch">
+            </div>
         </div>
     </div>
     <hr>

@@ -46,8 +46,35 @@
 }
 
 .features {
-
     margin: 60px 0;
+
+    .fake-browser-ui {
+        padding: 20px 0 0;
+        border-radius: 3px;
+        border-bottom: 2px solid #ccc;
+        background: #ddd;
+        display: inline-block;
+        position: relative;
+        line-height: 0;
+    }
+
+    .fake-browser-ui .frame {
+        display: block;
+        height: 15px;
+        position: absolute;
+        top: 5px;
+        left: 1px;
+    }
+
+    .fake-browser-ui span {
+        height: 8px;
+        width: 8px;
+        border-radius: 8px;
+        background-color: #eee;
+        border: 1px solid #dadada;
+        float: left;
+        margin: 0 0 0 4px;
+    }
 
     .featurette-divider {
         margin: 80px 0; /* Space out the Bootstrap <hr> more */
