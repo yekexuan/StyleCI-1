@@ -14,6 +14,7 @@ CHANGE LOG
 * Fixed an issue where user's have no "name" set
 * Cleaned up favicons
 * Updated to a more stripped down version of socialite
+* Fixed showing more than 100 repos on the account page
 
 
 ## V0.1 Alpha (17/02/2015)
