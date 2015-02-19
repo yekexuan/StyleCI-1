@@ -66,7 +66,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <img class="featurette-image img-responsive" src="{{ url('img/analyse-repo.jpg') }}" alt="Analyse" />
+                <img class="featurette-image img-responsive" src="{{ asset('img/analyse-repo.jpg') }}" alt="Analyse" />
             </div>
         </div>
         <div class="col-sm-6">
@@ -87,7 +87,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <img class="featurette-image img-responsive" src="{{ url('img/patch-commit.jpg') }}" alt="Patch">
+                <img class="featurette-image img-responsive" src="{{ asset('img/patch-commit.jpg') }}" alt="Patch">
             </div>
         </div>
     </div>
@@ -100,7 +100,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <img class="featurette-image img-responsive" src="{{ url('img/php-cs.png') }}" alt="PHP CS Fixer">
+                <img class="featurette-image img-responsive" src="{{ asset('img/php-cs.png') }}" alt="PHP CS Fixer">
             </div>
         </div>
         <div class="col-sm-6">
