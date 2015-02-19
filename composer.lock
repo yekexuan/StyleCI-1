@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "50107885c02d95e0b8bab63ec4c136b7",
+    "hash": "e30bbdb7f0c7381e458431554cbcc645",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1484,38 +1484,33 @@
         },
         {
             "name": "laravel/socialite",
-            "version": "v3.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/socialite.git",
-                "reference": "af8c95f755148fe48f783013dc6aebc84858e77d"
+                "reference": "ae8b4e9f110d215f69e07bcec4349d4c02456bd8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/socialite/zipball/af8c95f755148fe48f783013dc6aebc84858e77d",
-                "reference": "af8c95f755148fe48f783013dc6aebc84858e77d",
+                "url": "https://api.github.com/repos/StyleCI/socialite/zipball/ae8b4e9f110d215f69e07bcec4349d4c02456bd8",
+                "reference": "ae8b4e9f110d215f69e07bcec4349d4c02456bd8",
                 "shasum": ""
             },
             "require": {
+                "guzzlehttp/guzzle": "~5.0",
                 "illuminate/contracts": "~5.0",
                 "illuminate/http": "~5.0",
                 "illuminate/support": "~5.0",
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "guzzlehttp/guzzle": "~5.0",
-                "league/oauth1-client": "~1.0",
                 "mockery/mockery": "~0.9",
                 "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "guzzlehttp/guzzle": "Required for the oauth2 adapters (~5.0).",
-                "league/oauth1-client": "Required for the oauth1 adapters (~1.0)."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -1532,15 +1527,15 @@
                     "email": "taylorotwell@gmail.com"
                 }
             ],
-            "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
+            "description": "Laravel wrapper around OAuth 2 libraries.",
             "keywords": [
                 "laravel",
                 "oauth"
             ],
             "support": {
-                "source": "https://github.com/StyleCI/socialite/tree/v3.0.0"
+                "source": "https://github.com/StyleCI/socialite/tree/master"
             },
-            "time": "2015-02-18 22:11:11"
+            "time": "2015-02-19 16:35:26"
         },
         {
             "name": "league/flysystem",

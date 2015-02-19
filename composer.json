@@ -26,7 +26,7 @@
     "require": {
         "php": ">=5.5.0",
         "laravel/framework": "5.0.*",
-        "laravel/socialite": "~3.0",
+        "laravel/socialite": "~4.0",
         "fideloper/proxy": "~3.0",
         "guzzlehttp/guzzle": "~5.0",
         "graham-campbell/binput": "~3.0",
