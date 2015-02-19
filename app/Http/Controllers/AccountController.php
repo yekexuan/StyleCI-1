@@ -170,6 +170,6 @@ class AccountController extends AbstractController
     {
         $this->dispatch(new DeleteAccountCommand($this->auth->user()));
 
-        return Redirect::route('home')->with('delete_account', 'Your account has been successfully deleted!');
+        return Redirect::route('home')->with('success', 'Your account has been successfully deleted!');
     }
 }
