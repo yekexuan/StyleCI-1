@@ -21,6 +21,16 @@
     background: url(/img/header-bg.jpg) no-repeat scroll 0% 0% / cover #36474F;
 }
 
+.home-logo-img {
+    max-width: 100% !important;
+}
+
+.home-logo-wrapper {
+    float: right;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
 .highlights {
     background-color: #36474f;
     border-color: #303F46;
