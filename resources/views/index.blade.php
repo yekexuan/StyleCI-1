@@ -9,7 +9,7 @@
         <h3>The PHP Coding Style Continuous Integration Service</h3>
         <br>
         @if($currentUser)
-        <a href="{{ route('repos_path') }}" class="btn btn-dark btn-lg">Get Started</a>
+        <a href="{{ route('repos_path') }}" class="btn btn-dark btn-lg">My Repositories</a>
         @else
         <a href="{{ route('auth_login_path') }}" class="btn btn-dark btn-lg" data-method="POST">Get Started</a>
         @endif
