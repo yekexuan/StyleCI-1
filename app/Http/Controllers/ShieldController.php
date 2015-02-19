@@ -14,6 +14,7 @@ namespace StyleCI\StyleCI\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use StyleCI\StyleCI\Models\Commit;
 use StyleCI\StyleCI\Models\Repo;
 
 /**
@@ -33,39 +34,35 @@ class ShieldController extends AbstractController
      */
     public function handle(Repo $repo, Request $request)
     {
-        $shieldUrl = $this->generateShieldUrl($repo, $request);
+        $commit = $repo->commits()->where('ref', 'refs/heads/master')->orderBy('created_at', 'desc')->first()
+
+        $shieldUrl = $this->generateShieldUrl($commit, $request->get('style', 'flat-square'));
 
         return Redirect::to($shieldUrl);
     }
 
     /**
-     * Generates a Shields.io URL.
+     * Generate a shields.io url for the commit status.
      *
-     * @param \Illuminate\Http\Request     $repo
-     * @param \StyleCI\StyleCI\Models\Repo $request
+     * @param \StyleCI\StyleCI\Models\Commit $commit
+     * @param string                         $style
      *
      * @return string
      */
-    protected function generateShieldUrl(Repo $repo, Request $request)
+    protected function generateShieldUrl(Commit $commit, $style)
     {
-        $url = 'https://img.shields.io/badge/%s-%s-%s.svg?style=%s';
-
-        $color = 'lightgrey';
+        $colour = 'lightgrey';
         $status = 'unknown';
-        if ($commit = $repo->commits()->where('ref', 'refs/heads/master')->orderBy('created_at', 'desc')->first()) {
+
+        if ($commit) {
             $status = strtolower($commit->summary());
             if ($commit->status === 1) {
-                $color = 'green';
+                $colour = 'green';
             } elseif ($commit->status === 2) {
-                $color = 'red';
+                $colour = 'red';
             }
         }
 
-        return vsprintf($url, [
-            'StyleCI',
-            $status,
-            $color,
-            $request->get('style', ''),
-        ]);
+        return vsprintf('https://img.shields.io/badge/%s-%s-%s.svg?style=%s', ['StyleCI', $status, $colour, $style]);
     }
 }
