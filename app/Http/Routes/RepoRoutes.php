@@ -32,27 +32,27 @@ class RepoRoutes
     {
         $router->get('repos', [
             'as'   => 'repos_path',
-            'uses' => 'RepoController@handleList'
+            'uses' => 'RepoController@handleList',
         ]);
 
         $router->get('repos/{repo}', [
             'as'   => 'repo_path',
-            'uses' => 'RepoController@handleShow'
+            'uses' => 'RepoController@handleShow',
         ]);
 
         $router->get('repos/{repo}/shield', [
             'as'   => 'repo_shield_path',
-            'uses' => 'ShieldController@handle'
+            'uses' => 'ShieldController@handle',
         ]);
 
         $router->post('repos/{repo}/analyse', [
             'as'   => 'repo_analyse_path',
-            'uses' => 'RepoController@handleAnalyse'
+            'uses' => 'RepoController@handleAnalyse',
         ]);
 
         $router->get('commits/{commit}', [
             'as'   => 'commit_path',
-            'uses' => 'CommitController@handleShow'
+            'uses' => 'CommitController@handleShow',
         ]);
 
         $router->get('commits/{commit}/diff', [
