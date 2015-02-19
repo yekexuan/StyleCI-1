@@ -85,7 +85,11 @@ class RepoController extends AbstractController
             return new JsonResponse(['data' => AutoPresenter::decorate($commits->getCollection())->toArray()]);
         }
 
-        $canAnalyse = (bool) array_get($repos->get($auth->user()), $repo->id);
+        if ($auth->user()) {
+            $canAnalyse = (bool) array_get($repos->get($auth->user()), $repo->id);
+        } else {
+            $canAnalyse = false;
+        }
 
         return View::make('repo', compact('repo', 'commits', 'canAnalyse'));
     }
