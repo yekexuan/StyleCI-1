@@ -2,6 +2,7 @@
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    color: #FFF;
 }
 
 .text-vertical-center h1 {
@@ -17,10 +18,11 @@
     display: table;
     position: relative;
     width: 100%;
+    background: url(/img/header-bg.jpg);
 }
 
 .highlights {
-    background-color: lighten(#607D8B, 50%);
+    background-color: #36474f;
     padding-bottom: 40px;
 
     .row {

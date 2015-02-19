@@ -21,6 +21,17 @@
             <div class="col-sm-4">
                 <div class="panel panel-default">
                     <div class="panel-image">
+                        <i class="fa fa-5x fa-gear"></i>
+                    </div>
+                    <div class="panel-body">
+                        <h3>Configure</h3>
+                        <p>Fix PSR-1, PSR-2, PSR-5, Symfony and more.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-default">
+                    <div class="panel-image">
                         <i class="fa fa-5x fa-code-fork"></i>
                     </div>
                     <div class="panel-body">
@@ -37,17 +48,6 @@
                     <div class="panel-body">
                         <h3>Patch</h3>
                         <p>Keep your code aligned with the best coding standards.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="panel panel-default">
-                    <div class="panel-image">
-                        <i class="fa fa-5x fa-gear"></i>
-                    </div>
-                    <div class="panel-body">
-                        <h3>Configurable</h3>
-                        <p>Fix PSR-1, PSR-2, PSR-5, Symfony and more.</p>
                     </div>
                 </div>
             </div>
