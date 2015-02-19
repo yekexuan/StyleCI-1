@@ -14,7 +14,7 @@ namespace StyleCI\StyleCI\Http\Controllers;
 
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Facades\Redirect;
-use Laravel\Socialite\Contracts\Factory as Socialite;
+use Laravel\Socialite\GithubProvider;
 use StyleCI\StyleCI\Commands\LoginCommand;
 
 /**
@@ -40,34 +40,32 @@ class AuthController extends AbstractController
     /**
      * Connect to the GitHub provider using OAuth.
      *
-     * @param \Laravel\Socialite\Contracts\Factory $socialite
+     * @param \Laravel\Socialite\GithubProvider $socialite
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function handleLogin(Socialite $socialite)
+    public function handleLogin(GithubProvider $socialite)
     {
-        $response = $socialite->driver('github');
-
-        $response->scopes([
+        $socialite->scopes([
             'read:org',
             'user:email',
             'public_repo',
             'admin:repo_hook',
         ]);
 
-        return $response->redirect();
+        return $socialite->redirect();
     }
 
     /**
      * Get the user access token to save notifications.
      *
-     * @param \Laravel\Socialite\Contracts\Factory $socialite
+     * @param \Laravel\Socialite\GithubProvider $socialite
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleCallback(Socialite $socialite)
+    public function handleCallback(GithubProvider $socialite)
     {
-        $socialiteUser = $socialite->driver('github')->user();
+        $socialiteUser = $socialite->user();
 
         $this->dispatch(new LoginCommand($socialiteUser->id, $socialiteUser->name, $socialiteUser->nickname, $socialiteUser->email, $socialiteUser->token));
 
