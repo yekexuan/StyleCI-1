@@ -108,8 +108,6 @@
                         <dd>{{ $currentUser->username }}</dd>
                         <dt>Email</dt>
                         <dd>{{ $currentUser->email }}</dd>
-                        <dt>Repositories</dt>
-                        <dd>{{ $currentUser->repos->count() }}</dd>
                     </dl>
                 </div>
             </div>
