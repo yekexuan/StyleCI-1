@@ -9,7 +9,9 @@
         <h3>The PHP Coding Style Continuous Integration Service</h3>
         <br>
         @if($currentUser)
-        <a href="{{ route('repos_path') }}" class="btn btn-dark btn-lg">My Repositories</a>
+        <div class="col-md-12" style="padding: 5px">
+            <a href="{{ route('repos_path') }}" class="btn btn-dark btn-lg">My Repositories</a>
+        </div>
         @else
         <div class="col-lg-2 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-12" style="padding: 5px">
             <a href="{{ route('auth_login_path') }}" class="btn btn-dark btn-lg" data-method="POST"><i class="fa fa-github"></i> Login with GitHub</a>
