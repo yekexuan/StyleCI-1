@@ -11,7 +11,7 @@
         @if($currentUser)
         <a href="{{ route('repos_path') }}" class="btn btn-dark btn-lg">Get Started</a>
         @else
-        <a href="{{ route('auth_login_path') }}" class="btn btn-dark btn-lg" data-method="POST">Get Started</a>
+        <a href="{{ route('auth_login_path') }}" class="btn btn-dark btn-lg" data-method="POST"><i class='fa fa-github'></i> Login with GitHub</a>
         @endif
     </div>
 </header>
@@ -25,7 +25,7 @@
                     </div>
                     <div class="panel-body">
                         <h3 class="featurette-heading">Analyse</h3>
-                        <p>We watch all your pull requests.</p>
+                        <p>We watch all of your pull requests and automatically analyse them.</p>
                     </div>
                 </div>
             </div>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="panel-body">
                         <h3>Patch</h3>
-                        <p>Keep your code aligned with coding standards.</p>
+                        <p>Keep your code aligned with the best coding standards.</p>
                     </div>
                 </div>
             </div>
@@ -46,8 +46,8 @@
                         <i class="fa fa-5x fa-gear"></i>
                     </div>
                     <div class="panel-body">
-                        <h3>Configure</h3>
-                        <p>Fix PSR-1, PSR-2, PSR-5, symfony and more.</p>
+                        <h3>Configurable</h3>
+                        <p>Fix PSR-1, PSR-2, PSR-5, Symfony and more.</p>
                     </div>
                 </div>
             </div>
@@ -70,15 +70,15 @@
             </div>
         </div>
         <div class="col-sm-6">
-            <h2 class="featurette-heading">Analyse pull requests</h2>
-            <p class="lead">Analyse all your pull requests and see the results alsong side any other continuous integration services such as travis right on GitHub.</p>
+            <h2 class="featurette-heading">Analysis of pull requests</h2>
+            <p class="lead">StyleCI automatically analyses all of your pull requests and will display a build status within GitHub before you merge.</p>
         </div>
     </div>
     <hr class="featurette-divider">
     <div class="row featurette">
         <div class="col-sm-6">
-            <h2 class="featurette-heading">Apply style fixes patch</h2>
-            <p class="lead">Download patch files for the coding style fixes ready to use, and apply them automatically using "git apply" or can be inspected via the browser too.</p>
+            <h2 class="featurette-heading">Patches provided</h2>
+            <p class="lead">Did the changes not meet the coding standards? Don't worry, StyleCI provides a patch file that you can download and <code>git apply patch.txt</code> , or you can view within your browser.</p>
         </div>
         <div class="col-sm-6">
             <div class="fake-browser-ui">
@@ -93,9 +93,19 @@
     </div>
     <hr>
     <div class="row featurette">
-        <div class="col-sm-12">
+        <div class="col-sm-6">
+            <div class="fake-browser-ui">
+                <div class="frame">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <img class="featurette-image img-responsive" src="{{ url('img/php-cs.png') }}" alt="PHP CS Fixer">
+            </div>
+        </div>
+        <div class="col-sm-6">
             <h2 class="featurette-heading">Configure to your needs</h2>
-            <p class="lead">Powered by php-cs-fixer, and is fully configurable to fix PSR-1, PSR-2, PSR-5, symfony, and various other checks via a .php_cs file that can be commited to your repo.</p>
+            <p class="lead">StyleCI is powered by <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer" target="_blank">PHP CS Fixer</a>, and is fully configurable to fix PSR-1, PSR-2, PSR-5, Symfony and various other checks which you can configure via a <code>.php_cs</code> file, commited to the root your repo.</p>
         </div>
     </div>
 </div>

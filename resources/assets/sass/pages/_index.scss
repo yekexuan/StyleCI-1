@@ -20,8 +20,8 @@
 }
 
 .highlights {
-    background-color: #607D8B;
-    padding-bottom: 200px;
+    background-color: lighten(#607D8B, 50%);
+    padding-bottom: 40px;
 
     .row {
         margin-top: -40px;
@@ -38,8 +38,13 @@
     }
 
     .panel-body {
+        h3 {
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
         p {
-            height: 60px;
+            font-size: 1.3em;
+            min-height: 60px;
             padding: 15px;
         }
     }
