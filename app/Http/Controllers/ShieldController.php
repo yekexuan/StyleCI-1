@@ -58,7 +58,7 @@ class ShieldController extends AbstractController
         if ($commit) {
             $status = strtolower(AutoPresenter::decorate($commit)->summary);
             if ($commit->status === 1) {
-                $colour = 'green';
+                $colour = 'brightgreen';
             } elseif ($commit->status === 2) {
                 $colour = 'red';
             }
