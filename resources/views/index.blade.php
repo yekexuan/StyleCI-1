@@ -8,7 +8,7 @@
         <h1>StyleCI</h1>
         <h3>The PHP Coding Style Continuous Integration Service</h3>
         <br>
-        <p class="btn-toolbar">
+        <div class="btn-toolbar">
             @if($currentUser)
             <a href="{{ route('repos_path') }}" class="btn navbar-btn btn-dark btn-lg">My Repositories</a>
             @else
