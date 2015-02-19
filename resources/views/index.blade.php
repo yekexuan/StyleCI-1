@@ -11,8 +11,12 @@
         @if($currentUser)
         <a href="{{ route('repos_path') }}" class="btn btn-dark btn-lg">My Repositories</a>
         @else
-        <a href="{{ route('auth_login_path') }}" class="btn btn-dark btn-lg" data-method="POST"><i class="fa fa-github"></i> Login with GitHub</a>&nbsp;&nbsp;
-        <a href="https://twitter.com/intent/user?screen_name=TeamStyleCI" class="btn btn-light btn-lg" target="_blank"><i class="fa fa-twitter"></i> Follow us on Twitter</a>
+        <div class="col-lg-2 col-lg-offset-4 col-md-3 col-md-offset-3 col-sm-12" style="padding: 5px">
+            <a href="{{ route('auth_login_path') }}" class="btn btn-dark btn-lg" data-method="POST"><i class="fa fa-github"></i> Login with GitHub</a>
+        </div>
+        <div style="padding: 5px" class="col-lg-2 col-md-3 col-sm-12">
+            <a href="https://twitter.com/intent/user?screen_name=TeamStyleCI" class="btn btn-light btn-lg" target="_blank"><i class="fa fa-twitter"></i> Follow us on Twitter</a>
+        </div>
         @endif
     </div>
 </header>
