@@ -14,6 +14,7 @@ namespace StyleCI\StyleCI\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Models\Commit;
 use StyleCI\StyleCI\Models\Repo;
 
@@ -55,7 +56,7 @@ class ShieldController extends AbstractController
         $status = 'unknown';
 
         if ($commit) {
-            $status = strtolower($commit->summary());
+            $status = strtolower(AutoPresenter::decorate($commit)->summary);
             if ($commit->status === 1) {
                 $colour = 'green';
             } elseif ($commit->status === 2) {
