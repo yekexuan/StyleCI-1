@@ -34,7 +34,7 @@ class ShieldController extends AbstractController
      */
     public function handle(Repo $repo, Request $request)
     {
-        $commit = $repo->commits()->where('ref', 'refs/heads/master')->orderBy('created_at', 'desc')->first()
+        $commit = $repo->commits()->where('ref', 'refs/heads/master')->orderBy('created_at', 'desc')->first();
 
         $shieldUrl = $this->generateShieldUrl($commit, $request->get('style', 'flat-square'));
 
@@ -44,12 +44,12 @@ class ShieldController extends AbstractController
     /**
      * Generate a shields.io url for the commit status.
      *
-     * @param \StyleCI\StyleCI\Models\Commit $commit
-     * @param string                         $style
+     * @param \StyleCI\StyleCI\Models\Commit|null $commit
+     * @param string                              $style
      *
      * @return string
      */
-    protected function generateShieldUrl(Commit $commit, $style)
+    protected function generateShieldUrl(Commit $commit = null, $style = 'flat-square')
     {
         $colour = 'lightgrey';
         $status = 'unknown';
