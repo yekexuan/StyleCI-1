@@ -59,7 +59,7 @@
 @section('content')
 <div class="features">
     <div class="row featurette">
-        <div class="col-sm-6">
+        <div class="col-sm-6 text-left">
             <div class="fake-browser-ui">
                 <div class="frame">
                     <span></span>
@@ -80,7 +80,7 @@
             <h2 class="featurette-heading">Patches provided</h2>
             <p class="lead">Did the changes not meet the coding standards? Don't worry, StyleCI provides a patch file that you can download and <code>git apply patch.txt</code> , or you can view within your browser.</p>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6 text-right">
             <div class="fake-browser-ui">
                 <div class="frame">
                     <span></span>
@@ -93,7 +93,7 @@
     </div>
     <hr>
     <div class="row featurette">
-        <div class="col-sm-6">
+        <div class="col-sm-6 text-left">
             <div class="fake-browser-ui">
                 <div class="frame">
                     <span></span>
