@@ -10,11 +10,11 @@
         <br>
         <div class="btn-toolbar">
             @if($currentUser)
-            <a href="{{ route('repos_path') }}" class="btn navbar-btn btn-dark btn-lg">My Repositories</a>
+            <a href="{{ route('repos_path') }}" class="btn navbar-btn btn-dark btn-lg"><i class="fa fa-github"></i> View Repositories</a>
             @else
             <a href="{{ route('auth_login_path') }}" class="btn navbar-btn btn-dark btn-lg" data-method="POST"><i class="fa fa-github"></i> Login with GitHub</a>
-            <a href="https://twitter.com/intent/user?screen_name=TeamStyleCI" class="btn navbar-btn btn-light btn-lg" target="_blank"><i class="fa fa-twitter"></i> Follow us on Twitter</a>
             @endif
+            <a href="https://twitter.com/intent/user?screen_name=TeamStyleCI" class="btn navbar-btn btn-light btn-lg" target="_blank"><i class="fa fa-twitter"></i> Follow us on Twitter</a>
         </div>
     </div>
 </header>
