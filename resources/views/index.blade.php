@@ -105,7 +105,7 @@
         </div>
         <div class="col-sm-6">
             <h2 class="featurette-heading">Configure to your needs</h2>
-            <p class="lead">StyleCI is powered by <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer" target="_blank">PHP CS Fixer</a>, and is fully configurable to fix PSR-1, PSR-2, PSR-5, Symfony and various other checks which you can configure via a <code>.styleci.yml</code> file, commited to the root your repo.</p>
+            <p class="lead">StyleCI is powered by <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer" target="_blank">PHP CS Fixer</a>, and is fully configurable to fix PSR-1, PSR-2, PSR-5, Symfony and various other checks via a <code>.styleci.yml</code> file, committed to the root your repository.</p>
         </div>
     </div>
 </div>
