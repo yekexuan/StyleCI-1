@@ -71,7 +71,7 @@ class AuthController extends AbstractController
 
         $this->dispatch(new LoginCommand($socialiteUser->id, $socialiteUser->name, $socialiteUser->nickname, $socialiteUser->email, $socialiteUser->token));
 
-        return Redirect::route('repos_path');
+        return Redirect::route('repos_path')->with('info', '<div class="container"><p class="lead">Please note that .php_cs config is currently disabled due to security concerns.</p><p>A replacement config system using a .styleci.yml file is coming very soon.</p></div>');
     }
 
     /**
