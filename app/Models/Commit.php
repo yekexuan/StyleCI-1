@@ -90,6 +90,8 @@ class Commit extends Model implements HasPresenter
                 return 'The StyleCI checks passed';
             case 2:
                 return 'The StyleCI checks failed';
+            case 3:
+                return 'The StyleCI checks have errored';
             default:
                 return 'The StyleCI checks are pending';
         }

@@ -12,6 +12,8 @@
 
 namespace StyleCI\StyleCI\Handlers\Commands;
 
+use Exception;
+use Psr\Log\LoggerInterface;
 use StyleCI\Fixer\Report;
 use StyleCI\Fixer\ReportBuilder;
 use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
@@ -33,15 +35,24 @@ class AnalyseCommitCommandHandler
     protected $builder;
 
     /**
+     * The logger instance.
+     *
+     * @var \Psr\Log\LoggerInterface
+     */
+    protected $logger;
+
+    /**
      * Create a new analyse commit command handler instance.
      *
      * @param \StyleCI\Fixer\ReportBuilder $builder
+     * @param \Psr\Log\LoggerInterface     $logger
      *
      * @return void
      */
-    public function __construct(ReportBuilder $builder)
+    public function __construct(ReportBuilder $builder, LoggerInterface $logger)
     {
         $this->builder = $builder;
+        $this->logger = $logger;
     }
 
     /**
@@ -55,9 +66,13 @@ class AnalyseCommitCommandHandler
     {
         $commit = $command->getCommit();
 
-        $report = $this->builder->analyse($commit->name(), $commit->id);
-
-        $this->saveReport($report, $commit);
+        try {
+            $this->saveReport($this->builder->analyse($commit->name(), $commit->id), $commit);
+        } catch (Exception $e) {
+            $commit->status = 3;
+            $commit->save();
+            $this->logger->error('Analysis errored.', [$e, $commit->toArray()]);
+        }
 
         event(new AnalysisHasCompletedEvent($commit));
     }

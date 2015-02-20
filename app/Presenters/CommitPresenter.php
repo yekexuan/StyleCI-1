@@ -35,6 +35,8 @@ class CommitPresenter extends BasePresenter implements Arrayable
                 return 'PASSED';
             case 2:
                 return 'FAILED';
+            case 3:
+                return 'ERRORED';
             default:
                 return 'PENDING';
         }
@@ -57,8 +59,8 @@ class CommitPresenter extends BasePresenter implements Arrayable
      */
     public function excecutedTime()
     {
-        // if analysis is pending, then we don't have a time yet
-        if ($this->wrappedObject->status === 0) {
+        // if analysis is pending or errored, then we don't have a time
+        if ($this->wrappedObject->status === 0 || $this->wrappedObject->status === 3) {
             return '-';
         }
 
