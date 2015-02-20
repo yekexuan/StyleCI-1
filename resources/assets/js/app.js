@@ -25,6 +25,7 @@ $(function() {
     });
 
     $('[data-toggle="tooltip"]').tooltip();
+    $('.js-time-ago').timeago();
 
     function makeRequest (method, target) {
         if (method === 'GET') {
@@ -118,11 +119,9 @@ $(function() {
             // The commit is displayed on this page.
             if ($commit.length) {
                 var $status = $commit.find('p.js-status'),
-                    $timeAgo = $commit.find('.js-time-ago'),
                     $time = $commit.find('.js-excecuted-time');
 
                 $status.html('<strong>' + data.event.summary + '</strong>');
-                $timeAgo.html(data.event.timeAgo);
                 $time.html(data.event.excecutedTime);
 
                 $commit.removeClass('bg-success')
@@ -151,6 +150,7 @@ $(function() {
                         _.forEach(response.data, function(item) {
                             $commitsHolder.append(commitsTpl({commit: item}));
                         });
+                        $commitsHolder.find('.js-time-ago').timeago();
                     })
                     .fail(function(response) {
                         (new StyleCI.Notifier()).notify(response.responseJSON.msg);
@@ -161,11 +161,9 @@ $(function() {
 
     StyleCI.Listeners.Commit = {
         CommitStatusChangeEventHandler: function(data) {
-            var $status = $('p.js-status'),
-                $time = $('.js-time-ago');
+            var $status = $('p.js-status');
 
             $status.html(data.event.description);
-            $time.html(data.event.timeAgo);
 
             if (data.event.status === 1) {
                 $status.css('color', 'green');
@@ -194,7 +192,7 @@ $(function() {
                         var $tpl = $('#commit-template'),
                             $tableHeaders = $('.repo-table-headers'),
                             $commitsHolder = $('.commits');
-                        
+
                         $tableHeaders.removeClass('hidden');
 
                         $.get(StyleCI.globals.url)
@@ -204,6 +202,7 @@ $(function() {
                                 _.forEach(response.data, function(item) {
                                     $commitsHolder.append(commitsTpl({commit: item}));
                                 });
+                                $commitsHolder.find('.js-time-ago').timeago();
                             })
                             .fail(function(response) {
                                 (new StyleCI.Notifier()).notify(response.responseJSON.msg);

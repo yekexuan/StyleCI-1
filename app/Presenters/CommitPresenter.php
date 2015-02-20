@@ -62,20 +62,26 @@ class CommitPresenter extends BasePresenter implements Arrayable
             return '-';
         }
 
-        $time = $this->wrappedObject->time;
+        $seconds = $this->wrappedObject->time;
 
-        // display the time to 1 dp if less than 10 secs
-        if ($time < 10) {
-            return number_format(round($time, 1), 1).' sec';
+        // first we calculate milliseconds and seconds
+        $milliseconds = str_replace("0.", '', $seconds - floor($seconds));
+        $seconds = $seconds % 3600;
+
+        // if seconds is more than a minute
+        if ($seconds >= 60) {
+            return gmdate('i:s', $seconds).' min';
+        } elseif ($seconds < 60 && $seconds != 0) {
+            $time = gmdate('s', $seconds);
+
+            if ($milliseconds) {
+                $time .= '.'.$milliseconds;
+            }
+
+            return $time.' sec';
+        } else {
+            return '0.'.round($milliseconds, 2).' sec';
         }
-
-        // display the time to nearest second if less than 2 min
-        if ($time < 120) {
-            return number_format(round($time, 0)).' sec';
-        }
-
-        // display the time to nearest minute otherwise
-        return number_format(round($time / 60, 0)).' min';
     }
 
     /**
@@ -89,6 +95,16 @@ class CommitPresenter extends BasePresenter implements Arrayable
     }
 
     /**
+     * Get the commit's created time ISO.
+     *
+     * @return string
+     */
+    public function createdAtToISO()
+    {
+        return $this->wrappedObject->created_at->toIso8601String();
+    }
+
+    /**
      * Convert presented commit to an array.
      *
      * @return array
@@ -96,17 +112,18 @@ class CommitPresenter extends BasePresenter implements Arrayable
     public function toArray()
     {
         return [
-            'id'            => $this->wrappedObject->id,
-            'repo_id'       => $this->wrappedObject->repo_id,
-            'repo_name'     => $this->wrappedObject->repo->name,
-            'message'       => $this->wrappedObject->message,
-            'description'   => $this->wrappedObject->description(),
-            'status'        => $this->wrappedObject->status,
-            'summary'       => $this->summary(),
-            'timeAgo'       => $this->timeAgo(),
-            'shorthandId'   => $this->shorthandId(),
-            'excecutedTime' => $this->excecutedTime(),
-            'link'          => route('commit_path', $this->wrappedObject->id),
+            'id'             => $this->wrappedObject->id,
+            'repo_id'        => $this->wrappedObject->repo_id,
+            'repo_name'      => $this->wrappedObject->repo->name,
+            'message'        => $this->wrappedObject->message,
+            'description'    => $this->wrappedObject->description(),
+            'status'         => $this->wrappedObject->status,
+            'summary'        => $this->summary(),
+            'timeAgo'        => $this->timeAgo(),
+            'shorthandId'    => $this->shorthandId(),
+            'excecutedTime'  => $this->excecutedTime(),
+            'createdAtToISO' => $this->createdAtToISO(),
+            'link'           => route('commit_path', $this->wrappedObject->id),
         ];
     }
 }

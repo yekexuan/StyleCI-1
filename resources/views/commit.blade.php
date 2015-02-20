@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-sm-8">
             <h2>{{ $commit->message }}</h2>
-            <span class="js-time-ago">{{ $commit->timeAgo }}</span>
+            <span class="js-time-ago" title="{{ $commit->createdAtToISO }}">{{ $commit->timeAgo }}</span>
             <h5>{{ $commit->id }}</h5>
         </div>
         <div class="col-sm-4">
