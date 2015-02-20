@@ -13,6 +13,7 @@
 namespace StyleCI\StyleCI\Handlers\Events;
 
 use Illuminate\Contracts\Mail\Mailer;
+use Illuminate\Contracts\Queue\ShouldBeQueued;
 use Illuminate\Mail\Message;
 use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Models\Commit;
@@ -23,7 +24,7 @@ use StyleCI\StyleCI\Repositories\UserRepository;
  *
  * @author Graham Campbell <graham@mineuk.com>
  */
-class AnalysisNotificationsHandler
+class AnalysisNotificationsHandler implements ShouldBeQueued
 {
     /**
      * The user repository instance.
