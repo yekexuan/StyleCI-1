@@ -69,7 +69,7 @@ class AnalysisNotificationsHandler
             return;
         }
 
-        // don't out notifications for analyses of forks
+        // don't send out notifications for analyses of forks
         if ($commit->fork_id) {
             return;
         }
