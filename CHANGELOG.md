@@ -20,6 +20,8 @@ CHANGE LOG
 * Fixed failing pull request analyses
 * Support plain text emails as well as html
 * Minor improvements to the account page
+* Correctly deal with errored analyses
+* Correctly disable repos that are already deleted from github
 
 
 ## V0.1 Alpha (17/02/2015)
