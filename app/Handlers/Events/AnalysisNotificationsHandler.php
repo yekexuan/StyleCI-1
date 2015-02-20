@@ -100,6 +100,7 @@ class AnalysisNotificationsHandler
 
         foreach ($this->userRepository->collaborators($commit) as $user) {
             $mail['email'] = $user->email;
+            $mail['name'] = explode(' ', $user->name)[0],
             $this->mailer->send(['emails.failed-html', 'emails.failed-text'], $mail, function (Message $message) use ($mail) {
                 $message->to($mail['email'])->subject($mail['subject']);
             });
