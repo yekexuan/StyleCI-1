@@ -501,16 +501,16 @@
         },
         {
             "name": "graham-campbell/core",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Core.git",
-                "reference": "c03ba2a8f89fdd56fb5d6b22fd596965e21f739d"
+                "reference": "ffa9170bc2a580ea603cfad931790ffad8a7332b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/c03ba2a8f89fdd56fb5d6b22fd596965e21f739d",
-                "reference": "c03ba2a8f89fdd56fb5d6b22fd596965e21f739d",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/ffa9170bc2a580ea603cfad931790ffad8a7332b",
+                "reference": "ffa9170bc2a580ea603cfad931790ffad8a7332b",
                 "shasum": ""
             },
             "require": {
@@ -556,7 +556,7 @@
                 "laravel",
                 "starter"
             ],
-            "time": "2015-02-04 20:15:11"
+            "time": "2015-02-20 09:37:52"
         },
         {
             "name": "graham-campbell/exceptions",
