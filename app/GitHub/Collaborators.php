@@ -16,7 +16,6 @@ use Github\ResultPager;
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Database\Eloquent\Model;
 use StyleCI\StyleCI\Models\Commit;
-use StyleCI\StyleCI\Models\Fork;
 use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Models\User;
 
@@ -68,8 +67,8 @@ class Collaborators
     {
         // cache the collaborator info from github for 12 hours
         return $this->cache->remember($this->getId($model).'collaborators', 720, function () use ($model) {
-            $user = ($model instanceof Commit || $model instanceof Fork) ? $model->repo->user : $model->user;
-            $name = ($model instanceof Fork || $model instanceof Repo) ? $model->name : $model->name();
+            $user = ($model instanceof Commit) ? $model->repo->user : $model->user;
+            $name = ($model instanceof Repo) ? $model->name : $model->name();
 
             return $this->fetchFromGitHub($user, $name);
         });
@@ -122,6 +121,6 @@ class Collaborators
      */
     protected function getId(Model $model)
     {
-        return ($model instanceof Repo || $model instanceof Fork) ? $model->id : $model->repo->id;
+        return ($model instanceof Repo) ? $model->id : $model->repo->id;
     }
 }
