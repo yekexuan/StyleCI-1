@@ -57,10 +57,12 @@ class WelcomeMessageHandler
             'name'    => explode(' ', $user->name)[0],
             'email'   => $user->email,
             'subject' => 'Welcome To StyleCI',
-
         ];
 
-        $this->mailer->send('emails.welcome', $mail, function (Message $message) use ($mail) {
+        $this->mailer->send([
+            'html' => 'emails.welcome-html',
+            'text' => 'emails.welcome-text',
+        ], $mail, function (Message $message) use ($mail) {
             $message->to($mail['email'])->subject($mail['subject']);
         });
     }
