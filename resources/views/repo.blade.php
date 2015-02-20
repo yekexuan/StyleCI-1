@@ -38,7 +38,7 @@
             <div class="col-sm-6">
                 <strong>{{ $commit->message }}</strong>
                 <br>
-                <small class="js-time-ago">{{ $commit->timeAgo }}</small>
+                <small class="js-time-ago" title="{{ $commit->createdAtToISO }}">{{ $commit->timeAgo }}</small>
             </div>
             <div class="col-sm-1">
                 <small class="js-excecuted-time">{{ $commit->excecutedTime }}</small>
@@ -71,7 +71,7 @@
         <div class="col-sm-6">
             <strong><%= commit.message %></strong>
             <br>
-            <small class="js-time-ago"><%= commit.timeAgo %></small>
+            <small class="js-time-ago" class="js-time-ago" title="<%= commit.createdAtToISO %>"><%= commit.timeAgo %></small>
         </div>
         <div class="col-sm-1">
             <small class="js-excecuted-time"><%= commit.excecutedTime %></small>
