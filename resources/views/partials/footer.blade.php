@@ -25,6 +25,6 @@
 <script type="text/javascript" src="{{ elixir('dist/js/app.js') }}"></script>
 @section('js')
 @show
-@if (Config::get('analytics.google'))
+@if (Config::get('analytics.enabled'))
     @include('partials.analytics')
 @endif
