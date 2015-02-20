@@ -134,7 +134,7 @@
                 <% } else if(repo.language == "PHP") { %>
                 <h5>StyleCI is currently disabled on this repo.</h5>
                 <% } else { %>
-                <h5>This repository is not primarily a PHP project and as such StyleCI may not function correctly.</h5>
+                <h5>This repo is not a PHP project and as such, StyleCI may not function correctly.</h5>
                 <% } %>
             </div>
             <div class="col-sm-4 list-vcenter">
