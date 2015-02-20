@@ -12,6 +12,7 @@
 
 namespace StyleCI\StyleCI\Handlers\Events;
 
+use Exception;
 use StyleCI\StyleCI\Events\RepoWasDisabledEvent;
 use StyleCI\StyleCI\GitHub\Hooks;
 
@@ -52,6 +53,10 @@ class DisableHooksHandler
     {
         $repo = $event->getRepo();
 
-        $this->hooks->disable($repo);
+        try {
+            $this->hooks->disable($repo);
+        } catch (Exception $e) {
+            // the repo was probably deleted from github
+        }
     }
 }
