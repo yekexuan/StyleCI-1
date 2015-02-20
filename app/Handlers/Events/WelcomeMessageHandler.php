@@ -59,10 +59,7 @@ class WelcomeMessageHandler
             'subject' => 'Welcome To StyleCI',
         ];
 
-        $this->mailer->send([
-            'html' => 'emails.welcome-html',
-            'text' => 'emails.welcome-text',
-        ], $mail, function (Message $message) use ($mail) {
+        $this->mailer->send(['html' => 'emails.welcome-html', 'text' => 'emails.welcome-text'], $mail, function (Message $message) use ($mail) {
             $message->to($mail['email'])->subject($mail['subject']);
         });
     }
