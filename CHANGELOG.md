@@ -2,6 +2,12 @@ CHANGE LOG
 ==========
 
 
+## V0.2 Alpha (Upcoming)
+
+* New config system (todo)
+* Private repo support (todo)
+
+
 ## V0.1.1 Alpha (20/02/2015)
 
 * Fixed not showing the analyse now button in some cases
