@@ -131,7 +131,7 @@ $(function() {
                 if (data.event.status === 1) {
                     $status.css('color', 'green');
                     $commit.addClass('bg-success');
-                } else if (data.event.status === 2) {
+                } else if (data.event.status === 2 || data.event.status === 3) {
                     $status.css('color', 'red');
                     $commit.addClass('bg-danger');
                 } else {
@@ -167,7 +167,7 @@ $(function() {
 
             if (data.event.status === 1) {
                 $status.css('color', 'green');
-            } else if (data.event.status === 2) {
+            } else if (data.event.status === 2 || data.event.status === 3) {
                 $status.css('color', 'red');
             } else {
                 $status.css('color', 'grey');

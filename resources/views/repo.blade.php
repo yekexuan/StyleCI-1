@@ -34,7 +34,7 @@
     </div>
     <div class="commits">
         @forelse ($commits as $commit)
-        <div id="js-commit-{{ $commit->shorthandId }}" class="row @if($commit->status === 1) bg-success @elseif ($commit->status === 2) bg-danger @else bg-active @endif">
+        <div id="js-commit-{{ $commit->shorthandId }}" class="row @if($commit->status === 1) bg-success @elseif ($commit->status === 2 || $commit->status === 3) bg-danger @else bg-active @endif">
             <div class="col-sm-6">
                 <strong>{{ $commit->message }}</strong>
                 <br>
@@ -44,7 +44,7 @@
                 <small class="js-excecuted-time">{{ $commit->excecutedTime }}</small>
             </div>
             <div class="col-sm-1">
-                <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status === 2) color:red; @else color:grey; @endif">
+                <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status === 2 || $commit->status === 3) color:red; @else color:grey; @endif">
                     <strong>{{ $commit->summary }}</strong>
                 </p>
             </div>
@@ -67,7 +67,7 @@
 
 @section('js')
 <script id="commit-template" type="text/x-lodash-template">
-    <div id="js-commit-<%= commit.shorthandId %>" class="row <% if (commit.status === 1) { %> bg-success <% } else if (commit.status === 2) { %> bg-danger <% } else { %> bg-active <% } %>">
+    <div id="js-commit-<%= commit.shorthandId %>" class="row <% if (commit.status === 1) { %> bg-success <% } else if (commit.status === 2 || commit.status === 3) { %> bg-danger <% } else { %> bg-active <% } %>">
         <div class="col-sm-6">
             <strong><%= commit.message %></strong>
             <br>
@@ -77,7 +77,7 @@
             <small class="js-excecuted-time"><%= commit.excecutedTime %></small>
         </div>
         <div class="col-sm-1">
-            <p class="js-status" style="<% if (commit.status === 1) { %> color:green; <% } else if (commit.status === 2) { %> color:red; <% } else { %> color:grey; <% } %>">
+            <p class="js-status" style="<% if (commit.status === 1) { %> color:green; <% } else if (commit.status === 2 || commit.status === 3) { %> color:red; <% } else { %> color:grey; <% } %>">
                 <strong><%= commit.summary %></strong>
             </p>
         </div>
