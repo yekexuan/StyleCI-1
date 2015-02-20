@@ -101,7 +101,7 @@ class Repos
 
             // set enabled to false by default
             // we'll mark those that are enabled at a later point
-            $list[$repo['id']] = ['name' => $repo['full_name'], 'admin' => $repo['permissions']['admin'], 'enabled' => false];
+            $list[$repo['id']] = ['name' => $repo['full_name'], 'language' => $repo['language'], 'admin' => $repo['permissions']['admin'], 'enabled' => false];
         }
 
         return $list;

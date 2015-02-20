@@ -131,8 +131,10 @@
                 <h4><%= repo.name %></h4>
                 <% if (repo.enabled) { %>
                 <h5>StyleCI is currently enabled on this repo.</h5>
-                <% } else { %>
+                <% } else if(repo.language == "PHP") { %>
                 <h5>StyleCI is currently disabled on this repo.</h5>
+                <% } else { %>
+                <h5>This not a PHP repo, so you should not enable StyleCI.</h5>
                 <% } %>
             </div>
             <div class="col-sm-4 list-vcenter">
