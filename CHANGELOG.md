@@ -2,7 +2,7 @@ CHANGE LOG
 ==========
 
 
-## V0.1.1 Alpha (Upcoming)
+## V0.1.1 Alpha (20/02/2015)
 
 * Fixed not showing the analyse now button in some cases
 * Disabled "remember me" so that we're hitting github again
