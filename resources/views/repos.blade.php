@@ -13,7 +13,7 @@
 
 @section('content')
 @forelse($repos as $repo)
-<div class="row">
+<div class="row" id="js-repo-{{ $repo->id }}">
     <div class="col-sm-8">
     <h3>{{ $repo->name }}</h3>
         @if ($commit = $commits->get($repo->id))
@@ -35,4 +35,12 @@
 <p class="lead">We haven't analysed anything yet.</p>
 <p>You can enable repos on your <a href="{{ route('account_path') }}">account page</a>.</p>
 @endforelse
+@stop
+
+@section('js')
+<script type="text/javascript">
+    $(function() {
+        StyleCI.Repos.RealTimeStatus();
+    });
+</script>
 @stop

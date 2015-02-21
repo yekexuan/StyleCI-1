@@ -6,7 +6,7 @@ $(function() {
     $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
         var token;
         if (! options.crossDomain) {
-            token = $('meta[name="token"]').attr('content');
+            token = $('meta[name="styleci:token"]').attr('content');
             if (token) {
                 return jqXHR.setRequestHeader('X-CSRF-Token', token);
             }
@@ -33,7 +33,7 @@ $(function() {
             return;
         }
 
-        var token = $('meta[name="token"]').attr('content');
+        var token = $('meta[name="styleci:token"]').attr('content');
 
         var  methodForm = '\n';
         methodForm += '<form action="' + target + '" method="POST" style="display:none">\n';
@@ -66,7 +66,8 @@ $(function() {
     StyleCI.globals = {
         host: window.location.host,
         base_url: window.location.protocol + '//' + window.location.host,
-        url: document.URL
+        url: document.URL,
+        user: $('meta[name="styleci:user"]').attr('content')
     };
 
     StyleCI.Events = {};
@@ -96,7 +97,7 @@ $(function() {
         var instance;
 
         function createInstance() {
-            return new Pusher($('meta[name="pusher"]').attr('content'));
+            return new Pusher($('meta[name="styleci:pusher"]').attr('content'));
         }
 
         return {
@@ -107,10 +108,31 @@ $(function() {
                 return instance;
             },
             getChannel: function(ch) {
-                return this.getInstance().subscribe('ch-' + ch);
+                return this.getInstance().subscribe(ch);
             }
         };
     })();
+
+    StyleCI.Listeners.Repos = {
+        RepoStatusChangeEventHandler: function(data) {
+            var $repo = $('#js-repo-' + data.event.repo_id);
+
+            // The commit is displayed on this page.
+            if ($repo.length) {
+                var $status = $repo.find('p.js-status');
+
+                $status.html('<strong>' + data.event.summary + '</strong>');
+
+                if (data.event.status === 1) {
+                    $status.css('color', 'green');
+                } else if (data.event.status === 2 || data.event.status === 3) {
+                    $status.css('color', 'red');
+                } else {
+                    $status.css('color', 'grey');
+                }
+            }
+        },
+    };
 
     StyleCI.Listeners.Repo = {
         CommitsStatusChangeEventHandler: function(data) {
@@ -175,9 +197,20 @@ $(function() {
         }
     };
 
+    StyleCI.Repos = {
+        RealTimeStatus: function() {
+            if (typeof StyleCI.globals.user !== 'undefined') {
+                StyleCI.Events.RealTime.getChannel('repos-' + StyleCI.globals.user).bind(
+                    'CommitStatusUpdatedEvent',
+                    StyleCI.Listeners.Repos.RepoStatusChangeEventHandler
+                );
+            }
+        },
+    };
+
     StyleCI.Repo = {
         RealTimeStatus: function() {
-            StyleCI.Events.RealTime.getChannel($('.js-channel').data('channel')).bind(
+            StyleCI.Events.RealTime.getChannel('ch-' + $('.js-channel').data('channel')).bind(
                 'CommitStatusUpdatedEvent',
                 StyleCI.Listeners.Repo.CommitsStatusChangeEventHandler
             );
@@ -220,7 +253,7 @@ $(function() {
 
     StyleCI.Commit = {
         RealTimeStatus: function() {
-            StyleCI.Events.RealTime.getChannel($('.js-channel').data('channel')).bind(
+            StyleCI.Events.RealTime.getChannel('ch-' + $('.js-channel').data('channel')).bind(
                 'CommitStatusUpdatedEvent',
                 StyleCI.Listeners.Commit.CommitStatusChangeEventHandler
             );
