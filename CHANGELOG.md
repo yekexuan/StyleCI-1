@@ -8,6 +8,13 @@ CHANGE LOG
 * Private repo support (todo)
 
 
+## V0.1.2 Alpha (Upcoming)
+
+* Improved emails
+* Tweaked the homepage
+* Minor login improvements
+
+
 ## V0.1.1 Alpha (20/02/2015)
 
 * Fixed not showing the analyse now button in some cases
@@ -27,6 +34,7 @@ CHANGE LOG
 * Support plain text emails as well as html
 * Minor improvements to the account page
 * Correctly deal with errored analyses
+* Queue up notifications separately
 * Correctly disable repos that are already deleted from github
 
 

@@ -1359,16 +1359,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.0.5",
+            "version": "v5.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "b1aea041cbc0cd54563e2d3709a54a71eed57653"
+                "reference": "43637b796f1ac0b1a960984231251ff04b438006"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/b1aea041cbc0cd54563e2d3709a54a71eed57653",
-                "reference": "b1aea041cbc0cd54563e2d3709a54a71eed57653",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/43637b796f1ac0b1a960984231251ff04b438006",
+                "reference": "43637b796f1ac0b1a960984231251ff04b438006",
                 "shasum": ""
             },
             "require": {
@@ -1480,7 +1480,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-02-13 19:10:59"
+            "time": "2015-02-20 16:22:21"
         },
         {
             "name": "laravel/socialite",
@@ -1488,12 +1488,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/socialite.git",
-                "reference": "f42d2fa557bb073705ee39f466163536067e7465"
+                "reference": "cfa6c58d446aade099499958640550327d0dec03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/socialite/zipball/f42d2fa557bb073705ee39f466163536067e7465",
-                "reference": "f42d2fa557bb073705ee39f466163536067e7465",
+                "url": "https://api.github.com/repos/StyleCI/socialite/zipball/cfa6c58d446aade099499958640550327d0dec03",
+                "reference": "cfa6c58d446aade099499958640550327d0dec03",
                 "shasum": ""
             },
             "require": {
@@ -1535,7 +1535,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/socialite/tree/master"
             },
-            "time": "2015-02-19 22:33:00"
+            "time": "2015-02-20 20:14:53"
         },
         {
             "name": "league/flysystem",

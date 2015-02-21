@@ -14,30 +14,41 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Enable Google Analytics
+    | Enable Analytics
     |--------------------------------------------------------------------------
     |
-    | This defines if Google Analytics is enabled.
-    |
-    | Requires a valid Google Analytics Tracking ID.
+    | This defines if analytics is enabled.
     |
     | Default to false.
     |
     */
 
-    'google' => false,
+    'enabled' => false,
 
     /*
     |--------------------------------------------------------------------------
-    | Google Analytics Tracking ID
+    | Google Analytics ID
     |--------------------------------------------------------------------------
     |
     | This defines the Google Analytics Tracking ID to use.
     |
-    | Default to 'UA-XXXXXXXX-X'.
+    | Default to ''.
     |
     */
 
-    'googleid' => 'UA-XXXXXXXX-X',
+    'googleanalytics' => '',
+
+    /*
+    |--------------------------------------------------------------------------
+    | User Report Id
+    |--------------------------------------------------------------------------
+    |
+    | This defines the User Report Unique ID to use.
+    |
+    | Default to ''.
+    |
+    */
+
+    'userreport' => '',
 
 ];
