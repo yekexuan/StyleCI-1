@@ -33,14 +33,14 @@ class Commit extends Model implements HasPresenter
     /**
      * A list of methods protected from mass assignment.
      *
-     * @var array
+     * @var string[]
      */
     protected $guarded = ['_token', '_method'];
 
     /**
      * The attributes that should be casted to native types.
      *
-     * @var array
+     * @var string[]
      */
     protected $casts = [
         'status' => 'int',
