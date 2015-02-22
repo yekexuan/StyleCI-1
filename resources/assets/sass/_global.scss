@@ -11,17 +11,18 @@ body, h1, h2, h3, h4 {
     min-height:100%;
     height:auto !important;
     height:100%;
-    margin:0 auto -60px;
-    padding:0 0 60px;
+    margin:0 auto -90px;
+    padding:0 0 90px;
 }
 
 #wrap > .container {
     padding-right:15px;
     padding-left:15px;
-    padding-bottom:60px;
+    padding-bottom:90px;
 }
 
 .footer {
+    height: 60px;
     padding-bottom: 50px;
     padding-top: 40px;
     background: $styleci-dark-primary;
