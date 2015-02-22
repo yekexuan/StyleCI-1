@@ -3,27 +3,24 @@
 <div class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-4">
-                <h4>StyleCI</h4>
-                <p>Copyright <a href="https://github.com/GrahamCampbell">Graham Campbell</a> and <a href="https://github.com/joecohens">Joe Cohen</a> {{ date('Y') }}.</p>
+            <div class="col-sm-4 copyright">
                 <ul class="footer-links">
+                    <li>&copy; {{ date('Y') }} StyleCI</li>
                     <li><a href="{{ route('donate') }}">Donate</a></li>
                     <li><a href="{{ route('privacy_policy') }}">Privacy</a></li>
                 </ul>
             </div>
-            <div class="col-lg-{{ Config::get('app.debug') ? '4' : '8' }}">
-                <h4>Social Links</h4>
-                <p>
-                    <a href="https://twitter.com/teamstyleci" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <a href="https://github.com/StyleCI" target="_blank"><i class="fa fa-github"></i></a>
-                </p>
+            <div class="col-sm-4 logo">
+                <img src="{{ asset('img/logo.png') }}" width="80" />
             </div>
-            @if(Config::get('app.debug'))
-            <div class="col-lg-4">
-                <h4>Here be dragons</h4>
-                <p>Generated in {{ round((microtime(1) - LARAVEL_START), 4) }} sec.</p>
+            <div class="col-sm-4 social-links">
+                <ul class="footer-links">
+                    <li><a href="https://status.styleci.io" target="_blank">Status</a></li>
+                    <li><a href="https://blog.styleci.io" target="_blank">Blog</a></li>
+                    <li><a href="https://twitter.com/teamstyleci" target="_blank">Twitter</a></li>
+                    <li><a href="https://github.com/StyleCI" target="_blank">GitHub</a></li>
+                </ul>
             </div>
-            @endif
         </div>
     </div>
 </div>
