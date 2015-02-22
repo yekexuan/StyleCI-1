@@ -24,20 +24,32 @@ body, h1, h2, h3, h4 {
 .footer {
     padding-bottom: 50px;
     padding-top: 40px;
-    background: #f5f5f5;
+    background: $styleci-dark-primary;
+    color: white;
+
+    .logo {
+        text-align: center;
+    }
+
+    .social-links {
+        text-align: right;
+    }
 
     ul.footer-links {
         list-style-type: none;
         margin: 0;
         padding: 0;
         li {
+            margin-right: 10px;
             display: inline;
-            background-color: $styleci-dark-primary;
-            color: white;
-            padding: 4px 8px;
+            color: $styleci-light;
             a {
-                color: white;
                 text-decoration: none;
+                color: white;
+
+                &:hover {
+                    color: $styleci-light;
+                }
             }
         }
     }
