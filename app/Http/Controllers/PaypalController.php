@@ -28,7 +28,7 @@ class PaypalController extends AbstractController
      */
     public function handleDonate()
     {
-        return View::make('donate');
+        return View::make('donations.index');
     }
 
     /**
@@ -38,7 +38,7 @@ class PaypalController extends AbstractController
      */
     public function handleThanks()
     {
-        return View::make('donate-thanks');
+        return View::make('donations.thanks');
     }
 
     /**
@@ -48,6 +48,6 @@ class PaypalController extends AbstractController
      */
     public function handleCancel()
     {
-        return View::make('donate-cancel');
+        return View::make('donations.cancel');
     }
 }

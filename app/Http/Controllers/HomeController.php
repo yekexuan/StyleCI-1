@@ -38,7 +38,7 @@ class HomeController extends AbstractController
      */
     public function handlePrivacy()
     {
-        return View::make('privacy-policy');
+        return View::make('policies.privacy');
     }
 
     /**
@@ -48,7 +48,7 @@ class HomeController extends AbstractController
      */
     public function handleSecurity()
     {
-        return View::make('security-policy');
+        return View::make('policies.security');
     }
 
     /**
@@ -58,6 +58,6 @@ class HomeController extends AbstractController
      */
     public function handleTerms()
     {
-        return View::make('terms-of-service');
+        return View::make('policies.terms');
     }
 }
