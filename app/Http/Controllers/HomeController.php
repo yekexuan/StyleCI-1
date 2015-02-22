@@ -40,4 +40,24 @@ class HomeController extends AbstractController
     {
         return View::make('privacy-policy');
     }
+
+    /**
+     * Handles the request to view the security policy.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function handleSecurity()
+    {
+        return View::make('security-policy');
+    }
+
+    /**
+     * Handles the request to view the terms of service.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function handleTerms()
+    {
+        return View::make('terms-of-service');
+    }
 }

@@ -7,7 +7,10 @@
                 <ul class="footer-links">
                     <li>&copy; {{ date('Y') }} StyleCI</li>
                     <li><a href="{{ route('donate') }}">Donate</a></li>
+                    <li><a href="{{ route('privacy_policy') }}">Terms</a></li>
                     <li><a href="{{ route('privacy_policy') }}">Privacy</a></li>
+                    <li><a href="{{ route('privacy_policy') }}">Security</a></li>
+                    <li><a href="mailto:team@styleci.io">Contact</a></li>
                 </ul>
             </div>
             <div class="col-sm-4 logo">
