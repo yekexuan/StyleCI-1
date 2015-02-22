@@ -1,24 +1,30 @@
 </div></div>
 
-<div id="footer">
-    <div class="container hidden-xs">
+<div class="footer">
+    <div class="container">
         <div class="row">
-            <div class="col-xs-8">
-                <p class="text-muted credit">
-                    &copy; <a href="https://github.com/GrahamCampbell">Graham Campbell</a> 2015. All rights reserved.
-                </p>
+            <div class="col-sm-4 copyright">
+                <ul class="footer-links">
+                    <li>&copy; {{ date('Y') }} StyleCI</li>
+                    <li><a href="{{ route('terms_of_service') }}">Terms</a></li>
+                    <li><a href="{{ route('privacy_policy') }}">Privacy</a></li>
+                    <li><a href="{{ route('security_policy') }}">Security</a></li>
+                    <li><a href="mailto:team@styleci.io">Contact</a></li>
+                </ul>
             </div>
-            <div class="col-xs-4">
-                <p class="text-muted credit pull-right">
-                    Generated in {{ round((microtime(1) - LARAVEL_START), 4) }} sec.
-                </p>
+            <div class="col-sm-4 logo">
+                <img src="{{ asset('img/logo.png') }}" width="80" />
+            </div>
+            <div class="col-sm-4 social-links">
+                <ul class="footer-links">
+                    <li><a href="https://status.styleci.io" target="_blank">Status</a></li>
+                    <li><a href="https://blog.styleci.io" target="_blank">Blog</a></li>
+                    <li><a href="{{ route('donate') }}">Donate</a></li>
+                    <li><a href="https://twitter.com/teamstyleci" target="_blank">Twitter</a></li>
+                    <li><a href="https://github.com/StyleCI" target="_blank">GitHub</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-    <div class="container visible-xs">
-        <p class="text-muted credit">
-            &copy; <a href="https://github.com/GrahamCampbell">Graham Campbell</a> 2015. All rights reserved.
-        </p>
     </div>
 </div>
 

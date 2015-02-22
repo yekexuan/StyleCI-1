@@ -30,4 +30,34 @@ class HomeController extends AbstractController
     {
         return View::make('index');
     }
+
+    /**
+     * Handles the request to view the privacy policy.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function handlePrivacy()
+    {
+        return View::make('policies.privacy');
+    }
+
+    /**
+     * Handles the request to view the security policy.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function handleSecurity()
+    {
+        return View::make('policies.security');
+    }
+
+    /**
+     * Handles the request to view the terms of service.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function handleTerms()
+    {
+        return View::make('policies.terms');
+    }
 }

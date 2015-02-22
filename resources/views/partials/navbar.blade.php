@@ -18,6 +18,7 @@
                     <a href="{{ route('auth_login_path') }}" data-method="POST">Repositories</a>
                     @endif
                 </li>
+                <li><a href="{{ route('donate') }}">Donate</a></li>
             </ul>
             @if($currentUser)
             <ul class="nav navbar-nav navbar-right">
