@@ -18,6 +18,9 @@
                     <a href="{{ route('auth_login_path') }}" data-method="POST">Repositories</a>
                     @endif
                 </li>
+                @if(Config::get('styleci.paypalDonate') && Config::get('styleci.paypalHostedButtonId') != '')
+                <li><a href="{{ route('donate') }}">Donate</a></li>
+                @endif
             </ul>
             @if($currentUser)
             <ul class="nav navbar-nav navbar-right">
