@@ -25,4 +25,30 @@ return [
 
     'allowed' => [],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Enable Donations
+    |--------------------------------------------------------------------------
+    |
+    | Paypal donations can be turned on and off from here.
+    |
+    | Default to true.
+    |
+    */
+
+    'paypalDonate' => true,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Paypal ID
+    |--------------------------------------------------------------------------
+    |
+    | The "hosted_button_id" for the Paypal donation form.
+    |
+    | This will only do anything if the donate config is set to true.
+    |
+    */
+
+    'paypalHostedButtonId' => '',
+
 ];

@@ -39,5 +39,20 @@ class MainRoutes
             'as'   => 'webhook_callback',
             'uses' => 'GitHubController@handle',
         ]);
+
+        $router->get('donate', [
+            'as'   => 'donate',
+            'uses' => 'PaypalController@handleDonate',
+        ]);
+
+        $router->get('donate/thanks', [
+            'as'   => 'donate_thanks',
+            'uses' => 'PaypalController@handleThanks',
+        ]);
+
+        $router->get('donate/cancel', [
+            'as'   => 'donate_cancel',
+            'uses' => 'PaypalController@handleCancel',
+        ]);
     }
 }
