@@ -35,6 +35,15 @@ body, h1, h2, h3, h4 {
         text-align: right;
     }
 
+    @media (max-width: $screen-xs-max) {
+        .social-links, .copyright, .logo {
+            margin-bottom: 10px;
+        }
+        .social-links, .copyright {
+            text-align: center;
+        }
+    }
+
     ul.footer-links {
         list-style-type: none;
         margin: 0;
