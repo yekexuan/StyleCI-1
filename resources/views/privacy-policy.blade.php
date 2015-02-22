@@ -36,7 +36,7 @@
 <ul>
     <li>StyleCI employees do not access any of the users private source code unless given explicit, written permission to access their source code in order to provide support.</li>
     <li>StyleCI does not store GitHub credentials.</li>
-    <li>StyleCI <a href="https://github.com/StyleCI/StyleCI">source code</a> is openly available. Browse the code and email <a href="mailto:team@styleci.io">the team</a> with questions.</li>
+    <li>StyleCI <a href="https://github.com/StyleCI">source code</a> is openly available. Browse the code and email <a href="mailto:team@styleci.io">the team</a> with questions.</li>
 </ul>
 
 <h2>Disclosure</h2>
