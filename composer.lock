@@ -3421,16 +3421,16 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "86b631415d442582b434db38f598da51144e539c"
+                "reference": "2a5b53e9a3b6dae6c7093b59df68b8033790eafd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/86b631415d442582b434db38f598da51144e539c",
-                "reference": "86b631415d442582b434db38f598da51144e539c",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/2a5b53e9a3b6dae6c7093b59df68b8033790eafd",
+                "reference": "2a5b53e9a3b6dae6c7093b59df68b8033790eafd",
                 "shasum": ""
             },
             "require": {
@@ -3479,7 +3479,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2015-02-10 23:31:50"
+            "time": "2015-02-22 05:03:39"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
