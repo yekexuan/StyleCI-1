@@ -54,5 +54,10 @@ class MainRoutes
             'as'   => 'donate_cancel',
             'uses' => 'PaypalController@handleCancel',
         ]);
+
+        $router->get('privacy', [
+            'as'   => 'privacy_policy',
+            'uses' => 'HomeController@handlePrivacy',
+        ]);
     }
 }
