@@ -35,9 +35,9 @@ class CreateCommitsTable extends Migration
             $table->string('ref', 128);
             $table->string('message', 128);
             $table->tinyInteger('status')->unsigned()->default(0);
-            $table->float('time');
-            $table->float('memory');
-            $table->longText('diff');
+            $table->float('time')->nullable();
+            $table->float('memory')->nullable();
+            $table->longText('diff')->nullable();
             $table->timestamps();
         });
     }
