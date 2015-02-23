@@ -16,7 +16,7 @@
     padding-bottom: 140px;
     position: relative;
     width: 100%;
-    background: url(/img/header-bg.jpg) no-repeat scroll 0% 0% / cover #36474F;
+    background: url("/img/header-bg.jpg") no-repeat scroll 0% 0% / cover #36474F;
 }
 
 .home-logo-img {
@@ -95,7 +95,7 @@
     }
 
     .featurette-divider {
-        margin: 80px 0; /* Space out the Bootstrap <hr> more */
+        margin: 80px 0;
     }
 
     /* Thin out the marketing headings */

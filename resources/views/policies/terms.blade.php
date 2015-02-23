@@ -5,6 +5,8 @@
 @section('content')
 <h1>Terms of Service</h1>
 
+<hr>
+
 <h2>General Information</h2>
 
 <p class="lead">Our terms of service will be available shortly.</p>
