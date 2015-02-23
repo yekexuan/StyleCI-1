@@ -141,7 +141,10 @@ $(function() {
             } else {
                 // We should reload all data again if not found
                 var $tpl = $('#commit-template'),
+                    $tableHeaders = $('.repo-table-headers'),
                     $commitsHolder = $('.commits');
+
+                $tableHeaders.removeClass('hidden');
 
                 $.get(StyleCI.globals.url)
                     .done(function(response) {
