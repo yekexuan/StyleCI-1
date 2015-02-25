@@ -5,7 +5,6 @@ CHANGE LOG
 ## V0.2 Alpha (Upcoming)
 
 * New config system (todo)
-* Private repo support (todo)
 
 
 ## V0.1.2 Alpha (Upcoming)
