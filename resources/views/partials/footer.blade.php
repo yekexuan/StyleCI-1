@@ -3,9 +3,8 @@
 <div class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-sm-5 copyright">
+            <div class="col-sm-5 platform-links">
                 <ul class="footer-links">
-                    <li>&copy; {{ date('Y') }} StyleCI</li>
                     <li><a href="{{ route('terms_of_service') }}">Terms</a></li>
                     <li><a href="{{ route('privacy_policy') }}">Privacy</a></li>
                     <li><a href="{{ route('security_policy') }}">Security</a></li>
@@ -23,6 +22,11 @@
                     <li><a href="https://twitter.com/teamstyleci" target="_blank">Twitter</a></li>
                     <li><a href="https://github.com/StyleCI" target="_blank">GitHub</a></li>
                 </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 copyright">
+                &copy; {{ date('Y') }} StyleCI
             </div>
         </div>
     </div>
