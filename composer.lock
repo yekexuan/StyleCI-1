@@ -1363,12 +1363,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0b16ba4edbc2f533ad3823e16f6537b331f433f8"
+                "reference": "e450a737a912442c0f8d20bdf8e0bb10051751bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0b16ba4edbc2f533ad3823e16f6537b331f433f8",
-                "reference": "0b16ba4edbc2f533ad3823e16f6537b331f433f8",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/e450a737a912442c0f8d20bdf8e0bb10051751bf",
+                "reference": "e450a737a912442c0f8d20bdf8e0bb10051751bf",
                 "shasum": ""
             },
             "require": {
@@ -1480,7 +1480,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-02-23 22:15:19"
+            "time": "2015-02-25 16:31:53"
         },
         {
             "name": "laravel/socialite",
@@ -2042,12 +2042,12 @@
             "version": "v2.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pusher/pusher-php-server.git",
+                "url": "https://github.com/pusher/pusher-http-php.git",
                 "reference": "64ac86e757ed3349bc172b4069b972d99ba47400"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pusher/pusher-php-server/zipball/64ac86e757ed3349bc172b4069b972d99ba47400",
+                "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/64ac86e757ed3349bc172b4069b972d99ba47400",
                 "reference": "64ac86e757ed3349bc172b4069b972d99ba47400",
                 "shasum": ""
             },
