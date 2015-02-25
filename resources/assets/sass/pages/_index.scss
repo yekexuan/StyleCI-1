@@ -16,7 +16,7 @@
     padding-bottom: 140px;
     position: relative;
     width: 100%;
-    background: url(/img/header-bg.jpg) no-repeat scroll 0% 0% / cover #36474F;
+    background: url("/img/header-bg.jpg") no-repeat scroll 0% 0% / cover #36474F;
 }
 
 .home-logo-img {
@@ -71,7 +71,6 @@
         border-radius: 3px;
         border-bottom: 2px solid #ccc;
         background: #ddd;
-        display: inline-block;
         position: relative;
         line-height: 0;
     }
@@ -95,7 +94,7 @@
     }
 
     .featurette-divider {
-        margin: 80px 0; /* Space out the Bootstrap <hr> more */
+        margin: 80px 0;
     }
 
     /* Thin out the marketing headings */
@@ -103,6 +102,12 @@
         font-weight: 300;
         line-height: 1;
         letter-spacing: -1px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        .fake-browser-ui {
+            display: inline-block;
+        }
     }
 
     @media (min-width: 768px) {

@@ -5,6 +5,8 @@
 @section('content')
 <h1>Security Policy</h1>
 
+<hr>
+
 <h2>Reporting A security Vulnerability</h2>
 
 <p>If you have spotted a security vulnerability in StyleCI, please contact us directly at <a href="mailto:team@styleci.io">team@styleci.io</a>. We request that you do not publicly disclose a bug before it has been fixed for obvious reasons.</p>

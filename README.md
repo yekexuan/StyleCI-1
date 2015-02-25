@@ -1,5 +1,5 @@
-StyleCI
-=======
+# StyleCI ![Analytics](https://ga-beacon.appspot.com/UA-60053271-6/StyleCI/StyleCI?pixel)
+
 
 StyleCI was created by, and is maintained by [Graham Campbell](https://github.com/GrahamCampbell), and is a PHP Coding Style Continuous Integration Service powered by [Laravel 5.0](http://laravel.com). Feel free to check out the [change log](CHANGELOG.md), [releases](https://github.com/StyleCI/StyleCI/releases), [license](LICENSE), [screenshots](SCREENSHOTS.md), [api docs](http://docs.grahamjcampbell.co.uk), and [contribution guidelines](CONTRIBUTING.md).
 

@@ -13,6 +13,10 @@ CHANGE LOG
 * Improved emails
 * Tweaked the homepage
 * Minor login improvements
+* Added various policies
+* Improved footer
+* Updated analytics
+* Tweaked database setup
 
 
 ## V0.1.1 Alpha (20/02/2015)
