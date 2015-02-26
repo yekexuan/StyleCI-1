@@ -105,7 +105,7 @@
                 <div class="col-md-9">
                     <dl class="profile">
                         <dt>GitHub</dt>
-                        <dd><a href="https://github.com/{{ $currentUser->username }}">{{ $currentUser->username }}</a></dd>
+                        <dd><a href="https://github.com/{{ $currentUser->username }}" target="_blank">{{ $currentUser->username }}</a></dd>
                         <dt>Email</dt>
                         <dd>{{ $currentUser->email }}</dd>
                     </dl>
