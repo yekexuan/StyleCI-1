@@ -118,7 +118,7 @@ $(function() {
 
             // The commit is displayed on this page.
             if ($commit.length) {
-                var $status = $commit.find('p.js-status'),
+                var $status = $commit.find('p.js-status');
 
                 $status.html('<strong>' + data.event.summary + '</strong>');
 
