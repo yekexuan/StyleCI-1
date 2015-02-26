@@ -66,7 +66,7 @@ class AnalysisNotificationsHandler implements ShouldBeQueued
         $commit = $event->getCommit();
 
         // if the analysis didn't fail, then we don't need to notify anyone
-        if ($commit->status !== 2) {
+        if ($commit->status < 2) {
             return;
         }
 
@@ -99,10 +99,18 @@ class AnalysisNotificationsHandler implements ShouldBeQueued
             'subject' => 'Failed Analysis',
         ];
 
+        if ($commit->status === 3) {
+            $status = 'errored';
+        } elseif ($commit->status === 4) {
+            $status = 'misconfigured';
+        } else {
+            $status = 'failed';
+        }
+
         foreach ($this->userRepository->collaborators($commit) as $user) {
             $mail['email'] = $user->email;
             $mail['name'] = explode(' ', $user->name)[0];
-            $this->mailer->send(['emails.failed-html', 'emails.failed-text'], $mail, function (Message $message) use ($mail) {
+            $this->mailer->send(["emails.{$status}-html", "emails.{$status}-text"], $mail, function (Message $message) use ($mail) {
                 $message->to($mail['email'])->subject($mail['subject']);
             });
         }
