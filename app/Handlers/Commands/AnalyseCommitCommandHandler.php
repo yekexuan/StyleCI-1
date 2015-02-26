@@ -14,6 +14,7 @@ namespace StyleCI\StyleCI\Handlers\Commands;
 
 use Exception;
 use Psr\Log\LoggerInterface;
+use StyleCI\Config\Exceptions\ConfigExceptionInterface;
 use StyleCI\Fixer\Report;
 use StyleCI\Fixer\ReportBuilder;
 use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
@@ -68,6 +69,9 @@ class AnalyseCommitCommandHandler
 
         try {
             $this->saveReport($this->builder->analyse($commit->name(), $commit->id), $commit);
+        } catch (ConfigExceptionInterface $e) {
+            $commit->status = 4;
+            $commit->save();
         } catch (Exception $e) {
             $commit->status = 3;
             $commit->save();

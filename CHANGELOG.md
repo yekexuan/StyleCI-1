@@ -11,6 +11,7 @@ CHANGE LOG
 * Improved footer
 * Updated analytics
 * Tweaked database setup
+* New config system
 
 
 ## V0.1.1 Alpha (20/02/2015)
