@@ -12,6 +12,8 @@ CHANGE LOG
 * Updated analytics
 * Tweaked database setup
 * New config system
+* Removed analysis time info
+* Fixed builds not showing as pending on github
 
 
 ## V0.1.1 Alpha (20/02/2015)
