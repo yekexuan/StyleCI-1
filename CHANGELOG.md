@@ -2,7 +2,7 @@ CHANGE LOG
 ==========
 
 
-## V0.1.2 Alpha (Upcoming)
+## V0.1.2 Alpha (26/02/2015)
 
 * Improved emails
 * Tweaked the homepage
