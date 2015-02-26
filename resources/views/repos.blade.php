@@ -17,7 +17,7 @@
     <div class="col-sm-8">
     <h3>{{ $repo->name }}</h3>
         @if ($commit = $commits->get($repo->id))
-        <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status === 2 || $commit->status === 3) color:red; @else color:grey; @endif">
+        <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status > 1) color:red; @else color:grey; @endif">
             <strong>{{ $commit->summary }}</strong>
         </p>
         @else

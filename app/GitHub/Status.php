@@ -87,6 +87,7 @@ class Status
             case 2:
                 return 'failure';
             case 3:
+            case 4:
                 return 'error';
             default:
                 return 'pending';
