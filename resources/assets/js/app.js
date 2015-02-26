@@ -119,10 +119,8 @@ $(function() {
             // The commit is displayed on this page.
             if ($commit.length) {
                 var $status = $commit.find('p.js-status'),
-                    $time = $commit.find('.js-excecuted-time');
 
                 $status.html('<strong>' + data.event.summary + '</strong>');
-                $time.html(data.event.excecutedTime);
 
                 $commit.removeClass('bg-success')
                     .removeClass('bg-danger')

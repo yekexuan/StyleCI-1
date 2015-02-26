@@ -19,11 +19,8 @@
 @endif
 <div class="repo-table js-channel" data-channel="{{ $repo->id }}">
     <div class="repo-table-headers row hidden-xs @if($commits->count() == 0) hidden @endif">
-        <div class="col-sm-6">
+        <div class="col-sm-7">
             <strong>Commit</strong>
-        </div>
-        <div class="col-sm-1">
-            <strong>Time</strong>
         </div>
         <div class="col-sm-1">
             <strong>Status</strong>
@@ -35,13 +32,10 @@
     <div class="commits">
         @forelse ($commits as $commit)
         <div id="js-commit-{{ $commit->shorthandId }}" class="row @if($commit->status === 1) bg-success @elseif ($commit->status > 1) bg-danger @else bg-active @endif">
-            <div class="col-sm-6">
+            <div class="col-sm-7">
                 <strong>{{ $commit->message }}</strong>
                 <br>
                 <small class="js-time-ago" title="{{ $commit->createdAtToISO }}">{{ $commit->timeAgo }}</small>
-            </div>
-            <div class="col-sm-1">
-                <small class="js-excecuted-time">{{ $commit->excecutedTime }}</small>
             </div>
             <div class="col-sm-1">
                 <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status > 1) color:red; @else color:grey; @endif">
@@ -68,13 +62,10 @@
 @section('js')
 <script id="commit-template" type="text/x-lodash-template">
     <div id="js-commit-<%= commit.shorthandId %>" class="row <% if (commit.status === 1) { %> bg-success <% } else if (commit.status > 1) { %> bg-danger <% } else { %> bg-active <% } %>">
-        <div class="col-sm-6">
+        <div class="col-sm-7">
             <strong><%= commit.message %></strong>
             <br>
             <small class="js-time-ago" class="js-time-ago" title="<%= commit.createdAtToISO %>"><%= commit.timeAgo %></small>
-        </div>
-        <div class="col-sm-1">
-            <small class="js-excecuted-time"><%= commit.excecutedTime %></small>
         </div>
         <div class="col-sm-1">
             <p class="js-status" style="<% if (commit.status === 1) { %> color:green; <% } else if (commit.status > 1) { %> color:red; <% } else { %> color:grey; <% } %>">

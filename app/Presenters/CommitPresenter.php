@@ -55,40 +55,6 @@ class CommitPresenter extends BasePresenter implements Arrayable
     }
 
     /**
-     * Get the commit's style check executed time.
-     *
-     * @return string
-     */
-    public function excecutedTime()
-    {
-        // if analysis is pending or errored, then we don't have a time
-        if ($this->wrappedObject->status !== 1 || $this->wrappedObject->status !== 2) {
-            return '-';
-        }
-
-        $seconds = $this->wrappedObject->time;
-
-        // first we calculate milliseconds and seconds
-        $milliseconds = str_replace("0.", '', $seconds - floor($seconds));
-        $seconds = $seconds % 3600;
-
-        // if seconds is more than a minute
-        if ($seconds >= 60) {
-            return gmdate('i:s', $seconds).' min';
-        } elseif ($seconds < 60 && $seconds != 0) {
-            $time = gmdate('s', $seconds);
-
-            if ($milliseconds) {
-                $time .= '.'.$milliseconds;
-            }
-
-            return $time.' sec';
-        } else {
-            return '0.'.round($milliseconds, 2).' sec';
-        }
-    }
-
-    /**
      * Get the commit's time ago.
      *
      * @return string
@@ -125,7 +91,6 @@ class CommitPresenter extends BasePresenter implements Arrayable
             'summary'        => $this->summary(),
             'timeAgo'        => $this->timeAgo(),
             'shorthandId'    => $this->shorthandId(),
-            'excecutedTime'  => $this->excecutedTime(),
             'createdAtToISO' => $this->createdAtToISO(),
             'link'           => route('commit_path', $this->wrappedObject->id),
         ];
