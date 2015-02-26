@@ -1300,12 +1300,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/php-github-api.git",
-                "reference": "7c8588ca42dd99818bea52e6be98c6d8a40b1799"
+                "reference": "512bab130787fb62d8f98750f156596c35187dd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/php-github-api/zipball/7c8588ca42dd99818bea52e6be98c6d8a40b1799",
-                "reference": "7c8588ca42dd99818bea52e6be98c6d8a40b1799",
+                "url": "https://api.github.com/repos/StyleCI/php-github-api/zipball/512bab130787fb62d8f98750f156596c35187dd7",
+                "reference": "512bab130787fb62d8f98750f156596c35187dd7",
                 "shasum": ""
             },
             "require": {
@@ -1355,7 +1355,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/php-github-api/tree/master"
             },
-            "time": "2015-02-19 20:05:21"
+            "time": "2015-02-26 19:58:20"
         },
         {
             "name": "laravel/framework",
@@ -3373,7 +3373,7 @@
         },
         {
             "name": "orchestra/database",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/database.git",
@@ -3422,16 +3422,16 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v3.0.3",
+            "version": "v3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "2a5b53e9a3b6dae6c7093b59df68b8033790eafd"
+                "reference": "8d0927a7f9b522d2af1e3d228f2f002eb2c122f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/2a5b53e9a3b6dae6c7093b59df68b8033790eafd",
-                "reference": "2a5b53e9a3b6dae6c7093b59df68b8033790eafd",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/8d0927a7f9b522d2af1e3d228f2f002eb2c122f2",
+                "reference": "8d0927a7f9b522d2af1e3d228f2f002eb2c122f2",
                 "shasum": ""
             },
             "require": {
@@ -3480,7 +3480,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2015-02-22 05:03:39"
+            "time": "2015-02-26 16:29:51"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
