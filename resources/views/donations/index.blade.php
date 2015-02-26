@@ -6,7 +6,7 @@
 <div class="page-heading">
     <div class="container">
         <h1>Donate to StyleCI</h1>
-        <p>Do you like what we do, interested in donating?</p>
+        <p>Do you like what we do; interested in donating?</p>
     </div>
 </div>
 @stop
