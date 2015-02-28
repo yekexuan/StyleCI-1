@@ -4,10 +4,10 @@ CHANGE LOG
 
 ## V0.2 Alpha (Upcoming)
 
-* New config system (todo)
+* Improved realtime updates
 
 
-## V0.1.2 Alpha (Upcoming)
+## V0.1.2 Alpha (26/02/2015)
 
 * Improved emails
 * Tweaked the homepage
@@ -16,6 +16,9 @@ CHANGE LOG
 * Improved footer
 * Updated analytics
 * Tweaked database setup
+* New config system
+* Removed analysis time info
+* Fixed builds not showing as pending on github
 
 
 ## V0.1.1 Alpha (20/02/2015)

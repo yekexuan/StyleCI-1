@@ -99,7 +99,7 @@ return [
     */
 
     'failed' => [
-        'database' => 'mysql', 'table' => 'failed_jobs',
+        'database' => env('DB_DRIVER', 'pgsql'), 'table' => 'failed_jobs',
     ],
 
 ];

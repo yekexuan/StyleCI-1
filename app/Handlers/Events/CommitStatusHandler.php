@@ -13,7 +13,6 @@
 namespace StyleCI\StyleCI\Handlers\Events;
 
 use Illuminate\Contracts\Queue\ShouldBeQueued;
-use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\GitHub\Status;
 
 /**
@@ -45,11 +44,11 @@ class CommitStatusHandler implements ShouldBeQueued
     /**
      * Handle the analysis has completed event.
      *
-     * @param \StyleCI\StyleCI\Events\AnalysisHasCompletedEvent $event
+     * @param \StyleCI\StyleCI\Events\AnalysisHasCompletedEvent|\StyleCI\StyleCI\Events\AnalysisWasQueuedEvent $event
      *
      * @return void
      */
-    public function handle(AnalysisHasCompletedEvent $event)
+    public function handle($event)
     {
         $commit = $event->getCommit();
 

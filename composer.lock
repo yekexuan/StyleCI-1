@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "859c595feb9aaf6086783de25d3fec4f",
+    "hash": "89a6d5520a7cfda79e39ca7d9c678045",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -224,16 +224,16 @@
         },
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "v1.5",
+            "version": "1.5.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "2d6851520bf0250f668307ab2fd28cbb0b35d2b9"
+                "reference": "d2355e23cd47c5a0c5dcf6c3795d156fa314d2a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/2d6851520bf0250f668307ab2fd28cbb0b35d2b9",
-                "reference": "2d6851520bf0250f668307ab2fd28cbb0b35d2b9",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/d2355e23cd47c5a0c5dcf6c3795d156fa314d2a0",
+                "reference": "d2355e23cd47c5a0c5dcf6c3795d156fa314d2a0",
                 "shasum": ""
             },
             "require": {
@@ -273,7 +273,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2015-02-18 19:35:59"
+            "time": "2015-02-26 21:09:43"
         },
         {
             "name": "fideloper/proxy",
@@ -1010,16 +1010,16 @@
         },
         {
             "name": "guzzlehttp/ringphp",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/RingPHP.git",
-                "reference": "a903f51b692427318bc813217c0e6505287e79a4"
+                "reference": "f43ab34aad69ca0ba04172cf2c3cd5c12fc0e5a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/a903f51b692427318bc813217c0e6505287e79a4",
-                "reference": "a903f51b692427318bc813217c0e6505287e79a4",
+                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/f43ab34aad69ca0ba04172cf2c3cd5c12fc0e5a4",
+                "reference": "f43ab34aad69ca0ba04172cf2c3cd5c12fc0e5a4",
                 "shasum": ""
             },
             "require": {
@@ -1056,7 +1056,8 @@
                     "homepage": "https://github.com/mtdowling"
                 }
             ],
-            "time": "2014-12-11 05:50:32"
+            "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
+            "time": "2015-02-26 20:43:09"
         },
         {
             "name": "guzzlehttp/streams",
@@ -1300,12 +1301,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/php-github-api.git",
-                "reference": "7c8588ca42dd99818bea52e6be98c6d8a40b1799"
+                "reference": "15a849d5ac4a53d97c83c4f2d22bf66749e4e4d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/php-github-api/zipball/7c8588ca42dd99818bea52e6be98c6d8a40b1799",
-                "reference": "7c8588ca42dd99818bea52e6be98c6d8a40b1799",
+                "url": "https://api.github.com/repos/StyleCI/php-github-api/zipball/15a849d5ac4a53d97c83c4f2d22bf66749e4e4d2",
+                "reference": "15a849d5ac4a53d97c83c4f2d22bf66749e4e4d2",
                 "shasum": ""
             },
             "require": {
@@ -1355,20 +1356,20 @@
             "support": {
                 "source": "https://github.com/StyleCI/php-github-api/tree/master"
             },
-            "time": "2015-02-19 20:05:21"
+            "time": "2015-02-26 21:22:57"
         },
         {
             "name": "laravel/framework",
-            "version": "5.0.x-dev",
+            "version": "v5.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "e450a737a912442c0f8d20bdf8e0bb10051751bf"
+                "reference": "c263240daa383e6b9bd979600dc61dcb2c436d53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/e450a737a912442c0f8d20bdf8e0bb10051751bf",
-                "reference": "e450a737a912442c0f8d20bdf8e0bb10051751bf",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c263240daa383e6b9bd979600dc61dcb2c436d53",
+                "reference": "c263240daa383e6b9bd979600dc61dcb2c436d53",
                 "shasum": ""
             },
             "require": {
@@ -1480,7 +1481,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-02-25 16:31:53"
+            "time": "2015-02-27 00:32:38"
         },
         {
             "name": "laravel/socialite",
@@ -1968,16 +1969,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.4.0",
+            "version": "v0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "eee16e9525405b32646b5a0f8a12fb84d566905d"
+                "reference": "3787f3436f4fd898e0ac1eb6f5abd2ab6b24085b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/eee16e9525405b32646b5a0f8a12fb84d566905d",
-                "reference": "eee16e9525405b32646b5a0f8a12fb84d566905d",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/3787f3436f4fd898e0ac1eb6f5abd2ab6b24085b",
+                "reference": "3787f3436f4fd898e0ac1eb6f5abd2ab6b24085b",
                 "shasum": ""
             },
             "require": {
@@ -2035,7 +2036,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2015-02-23 21:21:17"
+            "time": "2015-02-25 20:35:54"
         },
         {
             "name": "pusher/pusher-php-server",
@@ -2178,23 +2179,22 @@
             "time": "2014-08-15 10:29:00"
         },
         {
-            "name": "styleci/fixer",
-            "version": "v0.1.1-alpha",
+            "name": "styleci/config",
+            "version": "v0.1.0-alpha",
             "source": {
                 "type": "git",
-                "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "d3dfd8452f83029bf5f63005c89652fca9b63bdd"
+                "url": "https://github.com/StyleCI/Config.git",
+                "reference": "73f4170010c46667f6918e36400e8a08695ca66b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/d3dfd8452f83029bf5f63005c89652fca9b63bdd",
-                "reference": "d3dfd8452f83029bf5f63005c89652fca9b63bdd",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/73f4170010c46667f6918e36400e8a08695ca66b",
+                "reference": "73f4170010c46667f6918e36400e8a08695ca66b",
                 "shasum": ""
             },
             "require": {
-                "fabpot/php-cs-fixer": "1.5.*",
                 "php": ">=5.5.0",
-                "styleci/git": "0.1.*"
+                "symfony/yaml": "~2.3"
             },
             "require-dev": {
                 "graham-campbell/testbench": "~2.0"
@@ -2206,6 +2206,64 @@
             "extra": {
                 "branch-alias": {
                     "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "StyleCI\\Config\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@mineuk.com"
+                }
+            ],
+            "description": "StyleCI Config Is A Code Style Configuration Manager",
+            "keywords": [
+                "Graham Campbell",
+                "GrahamCampbell",
+                "StyleCI",
+                "config",
+                "configuration",
+                "cs"
+            ],
+            "time": "2015-02-26 15:38:13"
+        },
+        {
+            "name": "styleci/fixer",
+            "version": "v0.2.0-alpha",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StyleCI/Fixer.git",
+                "reference": "99ad8bb52293ccf184adf1c68231481961f65345"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/99ad8bb52293ccf184adf1c68231481961f65345",
+                "reference": "99ad8bb52293ccf184adf1c68231481961f65345",
+                "shasum": ""
+            },
+            "require": {
+                "fabpot/php-cs-fixer": "1.5.*,>1.5.0",
+                "php": ">=5.5.0",
+                "styleci/config": "0.1.*",
+                "styleci/git": "0.1.*"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~2.0"
+            },
+            "suggest": {
+                "illuminate/support": "Enables Laravel support (~5.0)."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2-dev"
                 }
             },
             "autoload": {
@@ -2232,7 +2290,7 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-02-19 11:30:37"
+            "time": "2015-02-26 15:43:08"
         },
         {
             "name": "styleci/git",
@@ -3083,6 +3141,53 @@
             "time": "2015-02-02 16:32:08"
         },
         {
+            "name": "symfony/yaml",
+            "version": "v2.6.4",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "60ed7751671113cf1ee7d7778e691642c2e9acd8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/60ed7751671113cf1ee7d7778e691642c2e9acd8",
+                "reference": "60ed7751671113cf1ee7d7778e691642c2e9acd8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "http://symfony.com",
+            "time": "2015-01-25 04:39:26"
+        },
+        {
             "name": "vinkla/pusher",
             "version": "1.0.0",
             "source": {
@@ -3373,7 +3478,7 @@
         },
         {
             "name": "orchestra/database",
-            "version": "v3.0.1",
+            "version": "v3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/database.git",
@@ -3422,16 +3527,16 @@
         },
         {
             "name": "orchestra/testbench",
-            "version": "v3.0.3",
+            "version": "v3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "2a5b53e9a3b6dae6c7093b59df68b8033790eafd"
+                "reference": "8d0927a7f9b522d2af1e3d228f2f002eb2c122f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/2a5b53e9a3b6dae6c7093b59df68b8033790eafd",
-                "reference": "2a5b53e9a3b6dae6c7093b59df68b8033790eafd",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/8d0927a7f9b522d2af1e3d228f2f002eb2c122f2",
+                "reference": "8d0927a7f9b522d2af1e3d228f2f002eb2c122f2",
                 "shasum": ""
             },
             "require": {
@@ -3480,7 +3585,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2015-02-22 05:03:39"
+            "time": "2015-02-26 16:29:51"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -4279,53 +4384,6 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2014-12-15 14:25:24"
-        },
-        {
-            "name": "symfony/yaml",
-            "version": "v2.6.4",
-            "target-dir": "Symfony/Component/Yaml",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Yaml.git",
-                "reference": "60ed7751671113cf1ee7d7778e691642c2e9acd8"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/60ed7751671113cf1ee7d7778e691642c2e9acd8",
-                "reference": "60ed7751671113cf1ee7d7778e691642c2e9acd8",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.6-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\Yaml\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                },
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                }
-            ],
-            "description": "Symfony Yaml Component",
-            "homepage": "http://symfony.com",
-            "time": "2015-01-25 04:39:26"
         }
     ],
     "aliases": [],

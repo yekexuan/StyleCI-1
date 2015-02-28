@@ -108,6 +108,19 @@
         .fake-browser-ui {
             display: inline-block;
         }
+        .featurette {
+            text-align: center !important;
+            .pull-right {
+                text-align: center !important;
+                float: none !important;
+            }
+        }
+    }
+
+    @media (min-width: $screen-md) {
+        .fake-browser-ui {
+            display: inline-block;
+        }
     }
 
     @media (min-width: 768px) {

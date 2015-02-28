@@ -63,7 +63,7 @@
 @section('content')
 <div class="features">
     <div class="row featurette">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
             <div class="fake-browser-ui">
                 <div class="frame">
                     <span></span>
@@ -73,14 +73,14 @@
                 <img class="featurette-image img-responsive" src="{{ asset('img/analyse-repo.jpg') }}" alt="Analyse" />
             </div>
         </div>
-        <div class="col-sm-7">
+        <div class="col-sm-6">
             <h2 class="featurette-heading">Analysis of pull requests</h2>
             <p class="lead">StyleCI automatically analyses all of your pull requests and will display a build status within GitHub before you merge.</p>
         </div>
     </div>
     <hr class="featurette-divider">
     <div class="row featurette">
-        <div class="col-sm-5 pull-right">
+        <div class="col-sm-6 pull-right text-right">
             <div class="fake-browser-ui">
                 <div class="frame">
                     <span></span>
@@ -90,26 +90,26 @@
                 <img class="featurette-image img-responsive" src="{{ asset('img/patch-commit.jpg') }}" alt="Patch">
             </div>
         </div>
-        <div class="col-sm-7 pull-left">
+        <div class="col-sm-6 pull-left">
             <h2 class="featurette-heading">Patches provided</h2>
             <p class="lead">Did the changes not meet the coding standards? Don't worry, StyleCI provides a patch file that you can download and <code>git apply patch.txt</code> , or you can view within your browser.</p>
         </div>
     </div>
     <hr class="featurette-divider">
     <div class="row featurette">
-        <div class="col-sm-5">
+        <div class="col-sm-6">
             <div class="fake-browser-ui">
                 <div class="frame">
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <img class="featurette-image img-responsive" src="{{ asset('img/php-cs.png') }}" alt="PHP CS Fixer">
+                <img class="featurette-image img-responsive" src="{{ asset('img/php-cs.jpg') }}" alt="PHP CS Fixer">
             </div>
         </div>
-        <div class="col-sm-7">
+        <div class="col-sm-6">
             <h2 class="featurette-heading">Configure to your needs</h2>
-            <p class="lead">StyleCI is powered by <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer" target="_blank">PHP CS Fixer</a>, and coming fully configurable to fix PSR-1, PSR-2, PSR-5, Symfony and various other checks via a <code>.styleci.yml</code> file, committed to the root your repository. Coming soon!</p>
+            <p class="lead">StyleCI is powered by <a href="https://github.com/FriendsOfPHP/PHP-CS-Fixer" target="_blank">PHP CS Fixer</a>, and coming fully configurable to fix PSR-1, PSR-2, PSR-5, Symfony and various other checks via a <code>.styleci.yml</code> file, committed to the root your repository. You can find out more on our <a href="https://blog.styleci.io/redefining-configuration" target="_blank">blog</a>.</p>
         </div>
     </div>
 </div>

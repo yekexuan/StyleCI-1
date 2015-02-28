@@ -140,11 +140,9 @@ $(function() {
 
             // The commit is displayed on this page.
             if ($commit.length) {
-                var $status = $commit.find('p.js-status'),
-                    $time = $commit.find('.js-excecuted-time');
+                var $status = $commit.find('p.js-status');
 
                 $status.html('<strong>' + data.event.summary + '</strong>');
-                $time.html(data.event.excecutedTime);
 
                 $commit.removeClass('bg-success')
                     .removeClass('bg-danger')
@@ -153,7 +151,7 @@ $(function() {
                 if (data.event.status === 1) {
                     $status.css('color', 'green');
                     $commit.addClass('bg-success');
-                } else if (data.event.status === 2 || data.event.status === 3) {
+                } else if (data.event.status > 1) {
                     $status.css('color', 'red');
                     $commit.addClass('bg-danger');
                 } else {
@@ -192,7 +190,7 @@ $(function() {
 
             if (data.event.status === 1) {
                 $status.css('color', 'green');
-            } else if (data.event.status === 2 || data.event.status === 3) {
+            } else if (data.event.status > 1) {
                 $status.css('color', 'red');
             } else {
                 $status.css('color', 'grey');

@@ -13,7 +13,6 @@
 namespace StyleCI\StyleCI\Handlers\Events;
 
 use McCool\LaravelAutoPresenter\PresenterDecorator;
-use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Repositories\UserRepository;
 use Vinkla\Pusher\PusherManager;
 

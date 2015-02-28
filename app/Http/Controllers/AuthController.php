@@ -69,7 +69,7 @@ class AuthController extends AbstractController
 
         $this->dispatch(new LoginCommand($socialiteUser->id, $socialiteUser->name, $socialiteUser->nickname, $socialiteUser->email, $socialiteUser->token));
 
-        return Redirect::route('repos_path')->with('info', '<p class="lead">Please note that .php_cs config is currently disabled due to security concerns.</p><p>A replacement config system using a .styleci.yml file is coming very soon.</p>');
+        return Redirect::route('repos_path')->with('info', '<p class="lead">Our new config system is live!</p><p>You can read all about this over on our blog: <a href="https://blog.styleci.io/redefining-configuration" target="_blank">https://blog.styleci.io/redefining-configuration</a>.</p>');
     }
 
     /**
