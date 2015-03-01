@@ -5,6 +5,7 @@ CHANGE LOG
 ## V0.2 Alpha (Upcoming)
 
 * Improved realtime updates
+* Switched to our login package
 
 
 ## V0.1.2 Alpha (26/02/2015)

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a207ef16704451065e80707daae96c5b",
+    "hash": "5ae3379e5199295cfbe4c6d741c2ffd3",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1484,61 +1484,6 @@
             "time": "2015-02-28 22:56:33"
         },
         {
-            "name": "laravel/socialite",
-            "version": "v4.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/StyleCI/socialite.git",
-                "reference": "cfa6c58d446aade099499958640550327d0dec03"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/socialite/zipball/cfa6c58d446aade099499958640550327d0dec03",
-                "reference": "cfa6c58d446aade099499958640550327d0dec03",
-                "shasum": ""
-            },
-            "require": {
-                "guzzlehttp/guzzle": "~5.0",
-                "illuminate/contracts": "~5.0",
-                "illuminate/http": "~5.0",
-                "illuminate/support": "~5.0",
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Laravel\\Socialite\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "description": "Laravel wrapper around OAuth 2 libraries.",
-            "keywords": [
-                "laravel",
-                "oauth"
-            ],
-            "support": {
-                "source": "https://github.com/StyleCI/socialite/tree/master"
-            },
-            "time": "2015-02-20 20:14:53"
-        },
-        {
             "name": "league/flysystem",
             "version": "1.0.1",
             "source": {
@@ -2348,6 +2293,62 @@
                 "repository"
             ],
             "time": "2015-02-17 19:47:12"
+        },
+        {
+            "name": "styleci/login",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StyleCI/Login.git",
+                "reference": "6b4a06af3e8132444136c3ab53354cf82bd4374b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/6b4a06af3e8132444136c3ab53354cf82bd4374b",
+                "reference": "6b4a06af3e8132444136c3ab53354cf82bd4374b",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~5.0",
+                "illuminate/http": "~5.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~2.0"
+            },
+            "suggest": {
+                "illuminate/support": "Enables Laravel support (~5.0)."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "StyleCI\\Login\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@mineuk.com"
+                }
+            ],
+            "description": "StyleCI Login Is A GitHub Login Provider",
+            "keywords": [
+                "Graham Campbell",
+                "GrahamCampbell",
+                "StyleCI",
+                "github",
+                "login"
+            ],
+            "time": "2015-03-01 13:35:54"
         },
         {
             "name": "swiftmailer/swiftmailer",
