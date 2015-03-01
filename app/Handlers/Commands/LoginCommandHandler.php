@@ -58,7 +58,7 @@ class LoginCommandHandler
 
         $new = $user->exists === false;
 
-        $user->name = $command->getName() ?: $command->getUsername();
+        $user->name = $command->getName();
         $user->email = $command->getEmail();
         $user->username = $command->getUsername();
         $user->access_token = $command->getToken();
