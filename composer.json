@@ -17,10 +17,6 @@
         {
             "type": "vcs",
             "url": "https://github.com/StyleCI/php-github-api"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/StyleCI/socialite"
         }
     ],
     "require": {
