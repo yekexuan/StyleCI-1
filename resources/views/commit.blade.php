@@ -39,7 +39,7 @@
     </div>
     @if ($commit->status === 2)
     <hr>
-    @foreach ($files as $name => $file)
+    @foreach ($commit->diffFiles() as $name => $file)
     <div class="panel panel-default">
         <div class="panel-heading">
             {{ $name }}

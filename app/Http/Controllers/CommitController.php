@@ -32,32 +32,7 @@ class CommitController extends AbstractController
      */
     public function handleShow(Commit $commit)
     {
-        // We first get the original and modified file names from the diff.
-        preg_match_all('/\-\-\-\sa\/(.*?.*)/i', $commit->diff, $originalNames);
-        preg_match_all('/\+\+\+\sb\/(.*?.*)/i', $commit->diff, $modifiedNames);
-
-        $fileNames = [];
-
-        // If the file name was modified we show the change.
-        foreach ($originalNames[1] as $key => $originalName) {
-            if ($originalName != $modifiedNames[1][$key]) {
-                $fileNames[] = $originalName.' -> '.$modifiedNames[1][$key];
-            } else {
-                $fileNames[] = $originalName;
-            }
-        }
-
-        // Then we split the diff into files.
-        $extractedFiles = preg_split("/\s+?diff ?/", ltrim($commit->diff));
-
-        $files = [];
-
-        // Match file names with files.
-        foreach ($extractedFiles as $index => $file) {
-            $files[$fileNames[$index]] = 'diff '.$file;
-        }
-
-        return View::make('commit', compact('commit', 'files'));
+        return View::make('commit', compact('commit'));
     }
 
     /**
