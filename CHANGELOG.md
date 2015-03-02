@@ -2,6 +2,12 @@ CHANGE LOG
 ==========
 
 
+## V0.1.3 Alpha (Upcoming)
+
+* Improved diff viewing
+* Tweaked the footer
+
+
 ## V0.1.2 Alpha (26/02/2015)
 
 * Improved emails
