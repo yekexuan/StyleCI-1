@@ -44,7 +44,7 @@
         <div class="panel-heading">
             {{ $name }}
         </div>
-        <div class="panel-body">
+        <div class="panel-body panel-body-commit">
             <pre class="brush: diff">
                 {{ $file }}
             </pre>
