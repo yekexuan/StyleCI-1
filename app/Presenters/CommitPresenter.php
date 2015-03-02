@@ -103,13 +103,13 @@ class CommitPresenter extends BasePresenter implements Arrayable
         }
 
         // Then we split the diff into files.
-        $extractedFiles = preg_split("/\s+?diff ?/", $diff);
+        $extractedFiles = preg_split("/(^\s*?diff --git)/m", $diff, -1, PREG_SPLIT_NO_EMPTY);
 
         $files = [];
 
         // Match file names with files.
         foreach ($extractedFiles as $index => $file) {
-            $files[$fileNames[$index]] = 'diff '.$file;
+            $files[$fileNames[$index]] = 'diff --git '.$file;
         }
 
         return $files;
