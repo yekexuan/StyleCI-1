@@ -228,12 +228,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "d2355e23cd47c5a0c5dcf6c3795d156fa314d2a0"
+                "reference": "b1fc12e0ddec3c985bf1ffe93e723edcd2a27d43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/d2355e23cd47c5a0c5dcf6c3795d156fa314d2a0",
-                "reference": "d2355e23cd47c5a0c5dcf6c3795d156fa314d2a0",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/b1fc12e0ddec3c985bf1ffe93e723edcd2a27d43",
+                "reference": "b1fc12e0ddec3c985bf1ffe93e723edcd2a27d43",
                 "shasum": ""
             },
             "require": {
@@ -273,7 +273,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2015-02-26 21:09:43"
+            "time": "2015-03-01 20:17:35"
         },
         {
             "name": "fideloper/proxy",
@@ -1364,12 +1364,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "76c0a75c9cfce58d18b5ad76438cca298aa36d7c"
+                "reference": "0d64529d3a473ea98149a4405bf014af548245be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/76c0a75c9cfce58d18b5ad76438cca298aa36d7c",
-                "reference": "76c0a75c9cfce58d18b5ad76438cca298aa36d7c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/0d64529d3a473ea98149a4405bf014af548245be",
+                "reference": "0d64529d3a473ea98149a4405bf014af548245be",
                 "shasum": ""
             },
             "require": {
@@ -1481,7 +1481,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-02-28 22:56:33"
+            "time": "2015-03-02 18:53:04"
         },
         {
             "name": "laravel/socialite",
