@@ -39,9 +39,18 @@
     </div>
     @if ($commit->status === 2)
     <hr>
-    <pre class="brush: diff">
-        {{ $commit->diff }}
-    </pre>
+    @foreach ($files as $name => $file)
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            {{ $name }}
+        </div>
+        <div class="panel-body">
+            <pre class="brush: diff">
+                {{ $file }}
+            </pre>
+        </div>
+    </div>
+    @endforeach
     @endif
 </div>
 @stop
