@@ -75,6 +75,47 @@ class CommitPresenter extends BasePresenter implements Arrayable
     }
 
     /**
+     * Get the diff splited to files.
+     *
+     * @return array
+     */
+    public function diffFiles()
+    {
+        if (trim($this->wrappedObject->diff) == '') {
+            return [];
+        }
+
+        $diff = ltrim($this->wrappedObject->diff);
+
+        // We first get the original and modified file names from the diff.
+        preg_match_all('/\-\-\-\sa\/(.*?.*)/i', $diff, $originalNames);
+        preg_match_all('/\+\+\+\sb\/(.*?.*)/i', $diff, $modifiedNames);
+
+        $fileNames = [];
+
+        // If the file name was modified we show the change.
+        foreach ($originalNames[1] as $key => $originalName) {
+            if ($originalName != $modifiedNames[1][$key]) {
+                $fileNames[] = $originalName.' -> '.$modifiedNames[1][$key];
+            } else {
+                $fileNames[] = $originalName;
+            }
+        }
+
+        // Then we split the diff into files.
+        $extractedFiles = preg_split("/(^\s*?diff --git)/m", $diff, -1, PREG_SPLIT_NO_EMPTY);
+
+        $files = [];
+
+        // Match file names with files.
+        foreach ($extractedFiles as $index => $file) {
+            $files[$fileNames[$index]] = 'diff --git '.$file;
+        }
+
+        return $files;
+    }
+
+    /**
      * Convert presented commit to an array.
      *
      * @return array
