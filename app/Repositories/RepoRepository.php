@@ -64,7 +64,7 @@ class RepoRepository
      */
     public function allByUser(User $user, $admin = false)
     {
-        return Repo::whereIn('id', array_keys($this->repos->get($user, $admin)))->orderBy('name', 'asc')->get();
+        return Repo::with('lastCommit')->whereIn('id', array_keys($this->repos->get($user, $admin)))->orderBy('name', 'asc')->get();
     }
 
     /**

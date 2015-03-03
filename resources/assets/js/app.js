@@ -132,6 +132,30 @@ $(function() {
                 }
             }
         },
+        RepoWasDisabledEventHandler: function(data) {
+            $('#js-repo-' + data.event.id).remove();
+        },
+        RepoWasEnabledEventHandler: function(data) {
+            var $repo = $('#js-repo-' + data.event.id);
+
+            // The repo is not displayed on this page so we refresh.
+            if (! $repo.length) {
+                var $tpl = $('#repos-template'),
+                    $reposHolder = $('.repos');
+
+                $.get(StyleCI.globals.url)
+                    .done(function(response) {
+                        var reposTpl = _.template($tpl.html());
+                        $reposHolder.empty();
+                        _.forEach(response.data, function(item) {
+                            $reposHolder.append(reposTpl({repo: item}));
+                        });
+                    })
+                    .fail(function(response) {
+                        (new StyleCI.Notifier()).notify(response.responseJSON.msg);
+                    });
+            }
+        }
     };
 
     StyleCI.Listeners.Repo = {
@@ -205,12 +229,20 @@ $(function() {
 
     StyleCI.Repos = {
         RealTimeStatus: function() {
-            if (typeof StyleCI.globals.user !== 'undefined') {
-                StyleCI.Events.RealTime.getChannel('repos-' + StyleCI.globals.user).bind(
-                    'CommitStatusUpdatedEvent',
-                    StyleCI.Listeners.Repos.RepoStatusChangeEventHandler
-                );
+            if (typeof StyleCI.globals.user === 'undefined') {
+                return;
             }
+
+            StyleCI.Events.RealTime.getChannel('repos-' + StyleCI.globals.user)
+                .bind('CommitStatusUpdatedEvent',
+                    StyleCI.Listeners.Repos.RepoStatusChangeEventHandler
+                )
+                .bind('RepoWasDisabledEvent',
+                    StyleCI.Listeners.Repos.RepoWasDisabledEventHandler
+                )
+                .bind('RepoWasEnabledEvent',
+                    StyleCI.Listeners.Repos.RepoWasEnabledEventHandler
+                );
         },
     };
 
