@@ -13,7 +13,7 @@
 @stop
 
 @section('content')
-<div class="commit js-channel" data-channel="{{ $commit->repo->id }}">
+<div id="js-commit-{{ $commit->shorthandId }}" class="commit js-channel" data-channel="{{ $commit->repo->id }}">
     <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status > 1) color:red; @else color:grey; @endif">
         {{ $commit->description() }}
     </p>
