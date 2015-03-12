@@ -31,7 +31,7 @@ class CreateForksTable extends Migration
         Schema::create('forks', function (Blueprint $table) {
             $table->bigInteger('id')->unsigned()->primary();
             $table->bigInteger('repo_id')->unsigned()->index();
-            $table->string('name', 128)->unique();
+            $table->string('name', 128);
             $table->timestamps();
         });
     }
