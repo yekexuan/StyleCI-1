@@ -14,7 +14,7 @@ namespace StyleCI\StyleCI\Http\Controllers;
 
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Facades\Redirect;
-use Laravel\Socialite\GithubProvider;
+use StyleCI\Login\LoginProvider;
 use StyleCI\StyleCI\Commands\LoginCommand;
 
 /**
@@ -40,34 +40,27 @@ class AuthController extends AbstractController
     /**
      * Connect to the GitHub provider using OAuth.
      *
-     * @param \Laravel\Socialite\GithubProvider $socialite
+     * @param \StyleCI\Login\LoginProvider $login
      *
      * @return \Illuminate\Http\RedirectResponse
      */
-    public function handleLogin(GithubProvider $socialite)
+    public function handleLogin(LoginProvider $login)
     {
-        $socialite->scopes([
-            'read:org',
-            'user:email',
-            'public_repo',
-            'admin:repo_hook',
-        ]);
-
-        return $socialite->redirect();
+        return $login->redirect();
     }
 
     /**
      * Get the user access token to save notifications.
      *
-     * @param \Laravel\Socialite\GithubProvider $socialite
+     * @param \StyleCI\Login\LoginProvider $login
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleCallback(GithubProvider $socialite)
+    public function handleCallback(LoginProvider $login)
     {
-        $socialiteUser = $socialite->user();
+        $user = $login->user();
 
-        $this->dispatch(new LoginCommand($socialiteUser->id, $socialiteUser->name, $socialiteUser->nickname, $socialiteUser->email, $socialiteUser->token));
+        $this->dispatch(new LoginCommand(array_get($user, 'id'), array_get($user, 'name'), array_get($user, 'login'), array_get($raw, 'email'), array_get($raw, 'token')));
 
         return Redirect::route('repos_path')->with('info', '<p class="lead">Our new config system is live!</p><p>You can read all about this over on our blog: <a href="https://blog.styleci.io/redefining-configuration" target="_blank">https://blog.styleci.io/redefining-configuration</a>.</p>');
     }
