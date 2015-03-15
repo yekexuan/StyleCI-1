@@ -36,6 +36,7 @@
         "graham-campbell/htmlmin": "~3.0",
         "knplabs/github-api": "~1.5",
         "mccool/laravel-auto-presenter": "~3.0",
+        "styleci/bugsnag": "0.1.*",
         "styleci/fixer": "0.2.*",
         "vinkla/pusher": "~1.0"
     },
