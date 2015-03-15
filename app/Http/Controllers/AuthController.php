@@ -67,7 +67,10 @@ class AuthController extends AbstractController
     {
         $socialiteUser = $socialite->user();
 
-        $this->dispatch(new LoginCommand($socialiteUser->id, $socialiteUser->name, $socialiteUser->nickname, $socialiteUser->email, $socialiteUser->token));
+        $username = $socialiteUser->nickname;
+        $name = trim(preg_replace('/[^A-Za-zÀÁÅÃÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ ]/', '', $socialiteUser->name ?: $username));
+
+        $this->dispatch(new LoginCommand($socialiteUser->id, $name, $username, $socialiteUser->email, $socialiteUser->token));
 
         return Redirect::route('repos_path')->with('info', '<p class="lead">Our new config system is live!</p><p>You can read all about this over on our blog: <a href="https://blog.styleci.io/redefining-configuration" target="_blank">https://blog.styleci.io/redefining-configuration</a>.</p>');
     }
