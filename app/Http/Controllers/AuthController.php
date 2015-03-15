@@ -68,7 +68,7 @@ class AuthController extends AbstractController
         $socialiteUser = $socialite->user();
 
         $username = $socialiteUser->nickname;
-        $name = trim(preg_replace('/[^A-Za-z ]/', '', $socialiteUser->name ?: $username));
+        $name = trim(preg_replace('/[^A-Za-zÀÁÅÃÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ ]/', '', $socialiteUser->name ?: $username));
 
         $this->dispatch(new LoginCommand($socialiteUser->id, $name, $username, $socialiteUser->email, $socialiteUser->token));
 
