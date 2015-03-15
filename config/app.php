@@ -152,6 +152,7 @@ return [
         'GrahamCampbell\GitHub\GitHubServiceProvider',
         'GrahamCampbell\HTMLMin\HTMLMinServiceProvider',
         'GrahamCampbell\Security\SecurityServiceProvider',
+        'StyleCI\Bugsnag\BugsnagServiceProvider',
         'StyleCI\Config\ConfigServiceProvider',
         'StyleCI\Fixer\FixerServiceProvider',
         'StyleCI\Git\GitServiceProvider',

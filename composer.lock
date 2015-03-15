@@ -4,8 +4,56 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2ee73abd4840ab7bf33eb53bdf22d6d4",
+    "hash": "2071d3cf7366e019b483a70da68caa3e",
     "packages": [
+        {
+            "name": "bugsnag/bugsnag",
+            "version": "v2.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bugsnag/bugsnag-php.git",
+                "reference": "cd734eeda4738f62b439550e27dc4507be93227a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bugsnag/bugsnag-php/zipball/cd734eeda4738f62b439550e27dc4507be93227a",
+                "reference": "cd734eeda4738f62b439550e27dc4507be93227a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Bugsnag_": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Smith",
+                    "email": "notifiers@bugsnag.com",
+                    "homepage": "https://bugsnag.com"
+                }
+            ],
+            "description": "Official Bugsnag notifier for PHP applications.",
+            "homepage": "https://github.com/bugsnag/bugsnag-php",
+            "keywords": [
+                "bugsnag",
+                "errors",
+                "exceptions",
+                "logging",
+                "tracking"
+            ],
+            "time": "2015-02-20 02:21:00"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "1.2.0",
@@ -2184,6 +2232,59 @@
                 "diff"
             ],
             "time": "2014-08-15 10:29:00"
+        },
+        {
+            "name": "styleci/bugsnag",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StyleCI/Bugsnag.git",
+                "reference": "0d637e95e77c8a4195bcb2ae5e1ede492b8351c5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/0d637e95e77c8a4195bcb2ae5e1ede492b8351c5",
+                "reference": "0d637e95e77c8a4195bcb2ae5e1ede492b8351c5",
+                "shasum": ""
+            },
+            "require": {
+                "bugsnag/bugsnag": "~2.5",
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "StyleCI\\Bugsnag\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@mineuk.com"
+                }
+            ],
+            "description": "StyleCI Bugsnag Is A Bugsnag Bridge For Laravel 5",
+            "keywords": [
+                "Bridge",
+                "Graham Campbell",
+                "GrahamCampbell",
+                "StyleCI",
+                "bugsnag"
+            ],
+            "time": "2015-03-15 18:24:44"
         },
         {
             "name": "styleci/config",
