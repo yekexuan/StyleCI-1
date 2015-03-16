@@ -184,16 +184,21 @@ $(function() {
 
     StyleCI.Listeners.Commit = {
         CommitStatusChangeEventHandler: function(data) {
-            var $status = $('p.js-status');
+            var $commit = $('#js-commit-' + data.event.shorthandId);
 
-            $status.html(data.event.description);
+            // The commit is the one we are looking at.
+            if ($commit.length) {
+                var $status = $('p.js-status');
 
-            if (data.event.status === 1) {
-                $status.css('color', 'green');
-            } else if (data.event.status > 1) {
-                $status.css('color', 'red');
-            } else {
-                $status.css('color', 'grey');
+                $status.html(data.event.description);
+
+                if (data.event.status === 1) {
+                    $status.css('color', 'green');
+                } else if (data.event.status > 1) {
+                    $status.css('color', 'red');
+                } else {
+                    $status.css('color', 'grey');
+                }
             }
         }
     };

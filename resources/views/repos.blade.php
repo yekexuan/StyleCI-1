@@ -22,7 +22,7 @@
         </p>
         @else
         <p class="js-status">
-            <strong>No commits have been pushed to the master yet.</strong>
+            <strong>No commits on the master branch have been analysed yet.</strong>
         </p>
         @endif
     </div>

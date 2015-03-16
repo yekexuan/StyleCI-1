@@ -60,7 +60,10 @@ class AuthController extends AbstractController
     {
         $user = $login->user();
 
-        $this->dispatch(new LoginCommand(array_get($user, 'id'), array_get($user, 'name'), array_get($user, 'login'), array_get($raw, 'email'), array_get($raw, 'token')));
+        $username = array_get($user, 'login');
+        $name = trim(preg_replace('/[^A-Za-zÀÁÅÃÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ ]/', '', array_get($user, 'name') ?: $username));
+
+        $this->dispatch(new LoginCommand(array_get($user, 'id'), $name, $username, array_get($raw, 'email'), array_get($raw, 'token')));
 
         return Redirect::route('repos_path')->with('info', '<p class="lead">Our new config system is live!</p><p>You can read all about this over on our blog: <a href="https://blog.styleci.io/redefining-configuration" target="_blank">https://blog.styleci.io/redefining-configuration</a>.</p>');
     }
