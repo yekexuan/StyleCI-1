@@ -14,27 +14,47 @@
 
 @section('content')
 <div id="js-commit-{{ $commit->shorthandId }}" class="commit js-channel" data-channel="{{ $commit->repo->id }}">
-    <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status > 1) color:red; @else color:grey; @endif">
-        {{ $commit->description() }}
-    </p>
-    <hr>
-    <div class="row">
-        <div class="col-sm-8">
-            <h2>{{ $commit->message }}</h2>
-            <span class="js-time-ago" title="{{ $commit->createdAtToISO }}">{{ $commit->timeAgo }}</span>
-            <h5>{{ $commit->id }}</h5>
+    <div class="well">
+        <div class="pull-right">
+            <img src="{{ route('repo_shield_path', $commit->repo->id) }}" alt="Shield" />
         </div>
-        <div class="col-sm-4">
-            @if ($commit->status === 2)
-            <ul class="list-group">
-                <a class="list-group-item" href="{{ route('commit_download_path', $commit->id) }}">
-                    <i class="fa fa-cloud-download"></i> Download patch
-                </a>
-                <a class="list-group-item" href="{{ route('commit_diff_path', $commit->id) }}">
-                    <i class="fa fa-code"></i> Open diff file
-                </a>
-            </ul>
-            @endif
+        <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status > 1) color:red; @else color:grey; @endif">
+            <i class="{{ $commit->icon }}"></i>
+            {{ $commit->description }}
+        </p>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>{{ $commit->message }}</h3>
+                <p>{{ $commit->id }}</p>
+                <br>
+                <ul class="list-inline">
+                    <li>
+                        <span>
+                            <i class="fa fa-calendar"></i>
+                            <span class="js-time-ago" title="{{ $commit->createdAtToISO }}">{{ $commit->timeAgo }}</span>
+                        </span>
+                    </li>
+                    <li>
+                        <a class="btn" href="https://github.com/{{ $commit->repo->name }}/commit/{{ $commit->id }}">
+                            <i class="fa fa-github"></i>
+                            Commit {{ $commit->shorthandId }}
+                        </a>
+                    </li>
+                    @if ($commit->status === 2)
+                    <li>
+                        <a class="btn btn-link" href="{{ route('commit_download_path', $commit->id) }}">
+                            <i class="fa fa-cloud-download"></i> Download patch
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn btn-link" href="{{ route('commit_diff_path', $commit->id) }}">
+                            <i class="fa fa-code"></i> Open diff file
+                        </a>
+                    </li>
+                    @endif
+                </ul>
+            </div>
         </div>
     </div>
     @if ($commit->status === 2)

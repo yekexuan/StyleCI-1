@@ -45,6 +45,22 @@ class CommitPresenter extends BasePresenter implements Arrayable
     }
 
     /**
+     * Get the commit status icon.
+     *
+     * @return string
+     */
+    public function icon()
+    {
+        if ($this->wrappedObject->status == 1) {
+            return 'fa fa-check-circle';
+        } elseif ($this->wrappedObject->status > 2) {
+            return 'fa fa-times-circle';
+        } else {
+            return 'fa fa-exclamation-circle';
+        }
+    }
+
+    /**
      * Get the commit's repo shorthand id.
      *
      * @return string
