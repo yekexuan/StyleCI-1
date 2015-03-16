@@ -53,11 +53,13 @@ class CommitPresenter extends BasePresenter implements Arrayable
     {
         if ($this->wrappedObject->status == 1) {
             return 'fa fa-check-circle';
-        } elseif ($this->wrappedObject->status > 2) {
-            return 'fa fa-times-circle';
-        } else {
-            return 'fa fa-exclamation-circle';
         }
+
+        if ($this->wrappedObject->status > 2) {
+            return 'fa fa-times-circle';
+        }
+
+        return 'fa fa-exclamation-circle';
     }
 
     /**
