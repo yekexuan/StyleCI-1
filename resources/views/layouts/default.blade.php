@@ -15,6 +15,8 @@
 <div class="container">
 @section('content')
 @show
+</div>
+</div>
 @include('partials.footer')
 @section('bottom')
 @show
