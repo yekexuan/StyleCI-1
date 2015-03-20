@@ -2,7 +2,7 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>{{ Config::get('core.name') }} - @yield('title', 'The Coding Style Continuous Integration Service')</title>
 @include('partials.header')
 </head>
