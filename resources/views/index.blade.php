@@ -5,7 +5,7 @@
 @section('top')
 <header id="top" class="home-header">
     <div class="text-vertical-center">
-        <div class="home-logo-wrapper"><img class="home-logo-img" src="{{ asset('img/logo.png') }}" alt"StyleCI"></div>
+        <div class="home-logo-wrapper"><img class="home-logo-img" src="{{ asset('img/logo.png') }}" alt="StyleCI"></div>
         <h3>The PHP Coding Style Continuous Integration Service</h3>
         <h3>Analyse all your <strong>public repos</strong> for <strong>free.</strong></h3>
         <br>
