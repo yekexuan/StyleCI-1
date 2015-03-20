@@ -60,4 +60,14 @@ class HomeController extends AbstractController
     {
         return View::make('policies.terms');
     }
+
+    /**
+     * Handles the request to view the about page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function handleAbout()
+    {
+        return View::make('about');
+    }
 }
