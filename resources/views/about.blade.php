@@ -1,8 +1,8 @@
-@extends(Config::get('core.default'))
+@extends('layouts.cutdown')
 
 @section('title', 'About')
 
-@section('top')
+@section('content')
 <div class="about">
     <header id="top" class="home-header">
         <div class="container">
@@ -20,10 +20,8 @@
                         <h4>Graham Campbell</h4>
                         <p>Founder</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="https://twitter.com/GrahamJCampbell"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="https://github.com/GrahamCampbell"><i class="fa fa-github"></i></a>
-                            </li>
+                            <li><a href="https://twitter.com/GrahamJCampbell"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://github.com/GrahamCampbell"><i class="fa fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -33,10 +31,8 @@
                         <h4>Joseph Cohen</h4>
                         <p>Code Monkey</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="https://twitter.com/joecohens"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="https://github.com/joecohens"><i class="fa fa-github"></i></a>
-                            </li>
+                            <li><a href="https://twitter.com/joecohens"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://github.com/joecohens"><i class="fa fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -46,10 +42,8 @@
                         <h4>James Brooks</h4>
                         <p>Startup Guru</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="https://twitter.com/jbrooksuk"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="https://github.com/jbrooksuk"><i class="fa fa-github"></i></a>
-                            </li>
+                            <li><a href="https://twitter.com/jbrooksuk"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://github.com/jbrooksuk"><i class="fa fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -59,14 +53,8 @@
                         <h4>Michael Banks</h4>
                         <p>PR Ninja</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="https://twitter.com/ChipIsTheName"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="https://facebook.com/chip.pub"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="https://linkedin.com/in/itschip"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                            <li><a href="https://github.com/MichaelBanks"><i class="fa fa-github"></i></a>
-                            </li>
+                            <li><a href="https://twitter.com/ChipIsTheName"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://github.com/MichaelBanks"><i class="fa fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -79,10 +67,4 @@
         </div>
     </header>
 </div>
-@stop
-
-@section('content')
-<h1>Placeholder</h1>
-<p>Foo bar baz.</p>
-
 @stop
