@@ -70,7 +70,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <img class="featurette-image img-responsive" src="{{ asset('img/analyse-repo.jpg') }}" alt="Analyse" />
+                <img class="featurette-image img-responsive" src="{{ asset('img/analyse-repo.jpg') }}" alt="Analyse">
             </div>
         </div>
         <div class="col-sm-6">

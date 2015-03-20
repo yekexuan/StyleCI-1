@@ -12,7 +12,7 @@
                 </ul>
             </div>
             <div class="col-sm-2 logo">
-                <a href="{{ route('home') }}"><img src="{{ asset('img/footer-logo.png') }}" height="28" alt="StyleCI" /></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('img/footer-logo.png') }}" height="28" alt="StyleCI"></a>
             </div>
             <div class="col-sm-5 social-links">
                 <ul class="footer-links">
