@@ -40,7 +40,7 @@ return [
     ],
 
     'stripe' => [
-        'model'  => 'User',
+        'model'  => 'StyleCI\StyleCI\Models\User',
         'secret' => '',
     ],
 
