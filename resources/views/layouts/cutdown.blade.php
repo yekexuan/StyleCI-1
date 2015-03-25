@@ -10,15 +10,10 @@
 <div id="wrap">
 @include('partials.navbar')
 @include('partials.notifications')
-@section('top')
-@show
-<div class="container">
 @section('content')
 @show
 </div>
-</div>
 @include('partials.footer')
-@section('bottom')
 @show
 </body>
 </html>

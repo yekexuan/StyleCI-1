@@ -96,7 +96,7 @@ class AnalysisNotificationsHandler implements ShouldBeQueued
             'repo'    => $commit->name(),
             'commit'  => $commit->message,
             'link'    => route('commit_path', $commit->id),
-            'subject' => 'Failed Analysis',
+            'subject' => '[StyleCI] Failed Analysis',
         ];
 
         if ($commit->status === 3) {

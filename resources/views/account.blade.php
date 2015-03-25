@@ -94,13 +94,13 @@
             <h2>Notifications</h2>
             <p class="lead">You will be able to configure your notifications here.</p>
             <br>
-            <p>Currently StyleCI will send you an email whenever a commit pushed to the master violates the coding standard rules you have defined for each repo. In the future, we will support much more notification channels and for all kinds of events.</p>
+            <p>Currently StyleCI will send you an email whenever a commit pushed to the master violates the coding standard rules you have defined for each repo. In the future, we will support many more notification channels and for all kinds of events.</p>
         </div>
         <div role="tabpanel" class="tab-pane" id="profile">
             <h2>Profile</h2>
             <div class="row">
                 <div class="col-md-3">
-                    <img src="{{ $currentUser->gravatar }}" alt="{{ $currentUser->name }}" />
+                    <img src="{{ $currentUser->gravatar }}" alt="{{ $currentUser->name }}">
                 </div>
                 <div class="col-md-9">
                     <dl class="profile">

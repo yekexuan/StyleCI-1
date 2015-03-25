@@ -57,7 +57,7 @@ class WelcomeMessageHandler implements ShouldBeQueued
         $mail = [
             'name'    => explode(' ', $user->name)[0],
             'email'   => $user->email,
-            'subject' => 'Welcome To StyleCI',
+            'subject' => '[StyleCI] Welcome To StyleCI',
         ];
 
         $this->mailer->send(['html' => 'emails.welcome-html', 'text' => 'emails.welcome-text'], $mail, function (Message $message) use ($mail) {

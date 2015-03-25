@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="@yield('description', 'StyleCI - The PHP Coding Style Continuous Integration Service')">
+<meta name="description" content="@yield('description', 'StyleCI is the PHP Coding Style Continuous Integration Service. Sign up with your GitHub account and analyse all your public PHP repositories for free!')">
 <meta name="author" content="Graham Campbell">
 
 <meta name="styleci:token" content="{{ csrf_token() }}">
@@ -37,8 +37,8 @@
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ asset('apple-touch-icon-144x144.png') }}">
 <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ asset('apple-touch-icon-120x120.png') }}">
 <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ asset('apple-touch-icon-152x152.png') }}">
-<link rel="icon" type="image/png" href="{{ asset('favicon-32x32.png" sizes="32x32') }}">
-<link rel="icon" type="image/png" href="{{ asset('favicon-16x16.png" sizes="16x16') }}">
-<meta name="application-name" content="StyleCI"/>
+<link rel="icon" type="image/png" href="{{ asset('favicon-32x32.png') }}" sizes="32x32">
+<link rel="icon" type="image/png" href="{{ asset('favicon-16x16.png') }}" sizes="16x16">
+<meta name="application-name" content="StyleCI">
 <meta name="msapplication-TileColor" content="#FFFFFF">
 <meta name="msapplication-TileImage" content="{{ asset('mstile-144x144.png') }}">

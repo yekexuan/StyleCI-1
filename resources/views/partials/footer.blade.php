@@ -1,5 +1,3 @@
-</div></div>
-
 <div class="footer">
     <div class="container">
         <div class="row">
@@ -8,11 +6,12 @@
                     <li><a href="{{ route('terms_of_service') }}">Terms</a></li>
                     <li><a href="{{ route('privacy_policy') }}">Privacy</a></li>
                     <li><a href="{{ route('security_policy') }}">Security</a></li>
+                    <li><a href="{{ route('about_us') }}">About</a></li>
                     <li><a href="mailto:team@styleci.io">Contact</a></li>
                 </ul>
             </div>
             <div class="col-sm-2 logo">
-                <a href="{{ route('home') }}"><img src="{{ asset('img/footer-logo.png') }}" height="28" /></a>
+                <a href="{{ route('home') }}"><img src="{{ asset('img/footer-logo.png') }}" height="28" alt="StyleCI"></a>
             </div>
             <div class="col-sm-5 social-links">
                 <ul class="footer-links">
