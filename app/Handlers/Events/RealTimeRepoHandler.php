@@ -21,6 +21,7 @@ use Vinkla\Pusher\PusherManager;
 /**
  * This is the real time repo handler class.
  *
+ * @author Graham Campbell <graham@mineuk.com>
  * @author Joseph Cohen <joseph.cohen@dinkbit.com>
  */
 class RealTimeRepoHandler
@@ -88,9 +89,10 @@ class RealTimeRepoHandler
      */
     protected function trigger($repo, $event)
     {
+        $users = $this->userRepository->collaborators($repo);
         $data = $this->presenter->decorate($repo);
 
-        foreach ($this->userRepository->collaborators($repo) as $user) {
+        foreach ($users as $user) {
             $this->pusher->trigger('repos-'.$user->id, $event, ['event' => $data->toArray()]);
         }
     }
