@@ -134,6 +134,16 @@ class CommitPresenter extends BasePresenter implements Arrayable
     }
 
     /**
+     * Get the commit status description.
+     *
+     * @return string
+     */
+    public function description()
+    {
+        return $this->wrappedObject->description();
+    }
+
+    /**
      * Convert presented commit to an array.
      *
      * @return array
