@@ -16,7 +16,9 @@
 <div id="js-commit-{{ $commit->shorthandId }}" class="commit js-channel" data-channel="{{ $commit->repo->id }}">
     <div class="well">
         <div class="pull-right">
-            <img src="{{ route('repo_shield_path', $commit->repo->id) }}" alt="Shield" />
+            <a href="#" data-toggle="modal" data-target="#badge-modal">
+                <img src="{{ route('repo_shield_path', $commit->repo->id) }}" alt="Shield" />
+            </a>
         </div>
         <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status > 1) color:red; @else color:grey; @endif">
             <i class="{{ $commit->icon }}"></i>
@@ -72,6 +74,35 @@
     </div>
     @endforeach
     @endif
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="badge-modal" tabindex="-1" role="dialog" aria-labelledby="badge-modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modal">Embed StyleCI Shield</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="image-url">Raw Image</label>
+                    <textarea class="form-control" rows="3" cols="40" id="image-url" readonly>{{ route('repo_shield_path', $commit->repo->id) }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="markdown-url">Markdown</label>
+                    <textarea class="form-control" rows="3" cols="40" id="markdown-url" readonly>[![StyleCI](https://styleci.io/repos/{{ $commit->repo->id }}/shield)](https://styleci.io/repos/{{ $commit->repo->id }})</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="html-url">HTML</label>
+                    <textarea class="form-control" rows="3" cols="40" id="html-url" readonly><img src="{{ route('repo_shield_path', $commit->repo->id) }}" alt="StyleCI" /></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 @stop
 
