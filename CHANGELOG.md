@@ -6,6 +6,15 @@ CHANGE LOG
 
 * Improved diff viewing
 * Tweaked the footer
+* Don't allow unsafe characters in names
+* Fix notify status on single commit view
+* Dropped the uniqueness from fork names
+* Added bugsnag integration
+* Fixed some html header syntax errors
+* Added alternative text to the homepage logo
+* Added a basic about page
+* Fixed a typo on the account page
+* Fixed long commit messages
 
 
 ## V0.1.2 Alpha (26/02/2015)
