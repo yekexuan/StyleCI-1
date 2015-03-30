@@ -88,7 +88,7 @@ class CommitRepository
         $commit = $this->findOrGenerate($id, ['repo_id' => $repo]);
 
         if (empty($commit->message)) {
-            $commit->message = $this->commits->get($commit)['commit']['message'];
+            $commit->message = substr($this->commits->get($commit)['commit']['message'], 0, 127);
         }
 
         if (empty($commit->ref)) {
