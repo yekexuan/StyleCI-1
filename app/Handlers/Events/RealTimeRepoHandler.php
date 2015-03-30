@@ -13,16 +13,18 @@
 namespace StyleCI\StyleCI\Handlers\Events;
 
 use McCool\LaravelAutoPresenter\PresenterDecorator;
+use StyleCI\StyleCI\Events\RepoWasDisabledEvent;
+use StyleCI\StyleCI\Events\RepoWasEnabledEvent;
 use StyleCI\StyleCI\Repositories\UserRepository;
 use Vinkla\Pusher\PusherManager;
 
 /**
- * This is the real time status handler class.
+ * This is the real time repo handler class.
  *
  * @author Graham Campbell <graham@mineuk.com>
  * @author Joseph Cohen <joseph.cohen@dinkbit.com>
  */
-class RealTimeStatusHandler
+class RealTimeRepoHandler
 {
     /**
      * The user repository instance.
@@ -46,7 +48,7 @@ class RealTimeStatusHandler
     protected $presenter;
 
     /**
-     * Create a new analysis notifications handler instance.
+     * Create a new repo notifications handler instance.
      *
      * @param \StyleCI\StyleCI\Repositories\UserRepository    $userRepository
      * @param \Vinkla\Pusher\PusherManager                    $pusher
@@ -62,24 +64,36 @@ class RealTimeStatusHandler
     }
 
     /**
-     * Handle the analysis has completed event.
+     * Handle the repo has been enabled or disabled event.
      *
-     * @param \StyleCI\StyleCI\Events\AnalysisHasCompletedEvent|\StyleCI\StyleCI\Events\AnalysisWasQueuedEvent $event
+     * @param \StyleCI\StyleCI\Events\RepoWasDisabledEvent|\StyleCI\StyleCI\Events\RepoWasEnabledEvent $event
      *
      * @return void
      */
     public function handle($event)
     {
-        $commit = $this->presenter->decorate($event->getCommit());
-
-        if ($commit->ref !== 'refs/heads/master') {
-            return;
+        if ($event instanceof RepoWasDisabledEvent) {
+            $this->trigger($event->getRepo(), 'RepoWasDisabledEvent');
+        } elseif ($event instanceof RepoWasEnabledEvent) {
+            $this->trigger($event->getRepo(), 'RepoWasEnabledEvent');
         }
+    }
 
-        $this->pusher->trigger('ch-'.$commit->repo_id, 'CommitStatusUpdatedEvent', ['event' => $commit->toArray()]);
+    /**
+     * Trigger the notification.
+     *
+     * @param \StyleCI\StyleCI\Models\Repo $repo
+     * @param string                       $event
+     *
+     * @return void
+     */
+    protected function trigger($repo, $event)
+    {
+        $users = $this->userRepository->collaborators($repo);
+        $data = $this->presenter->decorate($repo);
 
-        foreach ($this->userRepository->collaborators($event->getCommit()) as $user) {
-            $this->pusher->trigger('repos-'.$user->id, 'CommitStatusUpdatedEvent', ['event' => $commit->toArray()]);
+        foreach ($users as $user) {
+            $this->pusher->trigger('repos-'.$user->id, $event, ['event' => $data->toArray()]);
         }
     }
 }

@@ -13,13 +13,16 @@
 namespace StyleCI\StyleCI\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use McCool\LaravelAutoPresenter\HasPresenter;
+use StyleCI\StyleCI\Presenters\RepoPresenter;
 
 /**
  * This is the repo model class.
  *
  * @author Graham Campbell <graham@mineuk.com>
+ * @author Joseph Cohen <joseph.cohen@dinkbit.com>
  */
-class Repo extends Model
+class Repo extends Model implements HasPresenter
 {
     /**
      * Indicates if the IDs are auto-incrementing.
@@ -31,7 +34,7 @@ class Repo extends Model
     /**
      * A list of methods protected from mass assignment.
      *
-     * @var array
+     * @var string[]
      */
     protected $guarded = ['_token', '_method'];
 
@@ -63,5 +66,25 @@ class Repo extends Model
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the last commit.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function lastCommit()
+    {
+        return $this->hasOne(Commit::class)->where('ref', 'refs/heads/master')->latest();
+    }
+
+    /**
+     * Get the presenter class.
+     *
+     * @return string
+     */
+    public function getPresenterClass()
+    {
+        return RepoPresenter::class;
     }
 }

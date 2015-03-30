@@ -15,7 +15,6 @@ namespace StyleCI\StyleCI\Http\Controllers;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
@@ -50,21 +49,20 @@ class RepoController extends AbstractController
      * Handles the request to list the repos.
      *
      * @param \Illuminate\Contracts\Auth\Guard             $auth
+     * @param \Illuminate\Http\Request                     $request
      * @param \StyleCI\StyleCI\Repositories\RepoRepository $repos
      *
      * @return \Illuminate\View\View
      */
-    public function handleList(Guard $auth, RepoRepository $repoRepository)
+    public function handleList(Guard $auth, Request $request, RepoRepository $repoRepository)
     {
         $repos = $repoRepository->allByUser($auth->user());
 
-        $commits = new Collection();
-
-        foreach ($repos as $repo) {
-            $commits->put($repo->id, $repo->commits()->where('ref', 'refs/heads/master')->orderBy('created_at', 'desc')->first());
+        if ($request->ajax()) {
+            return new JsonResponse(['data' => AutoPresenter::decorate($repos)->toArray()]);
         }
 
-        return View::make('repos', compact('repos', 'commits'));
+        return View::make('repos', compact('repos'));
     }
 
     /**

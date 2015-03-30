@@ -14,27 +14,49 @@
 
 @section('content')
 <div id="js-commit-{{ $commit->shorthandId }}" class="commit js-channel" data-channel="{{ $commit->repo->id }}">
-    <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status > 1) color:red; @else color:grey; @endif">
-        {{ $commit->description() }}
-    </p>
-    <hr>
-    <div class="row">
-        <div class="col-sm-8">
-            <h2>{{ $commit->message }}</h2>
-            <span class="js-time-ago" title="{{ $commit->createdAtToISO }}">{{ $commit->timeAgo }}</span>
-            <h5>{{ $commit->id }}</h5>
+    <div class="well">
+        <div class="pull-right">
+            <a href="#" data-toggle="modal" data-target="#badge-modal">
+                <img src="{{ route('repo_shield_path', $commit->repo->id) }}" alt="Shield" />
+            </a>
         </div>
-        <div class="col-sm-4">
-            @if ($commit->status === 2)
-            <ul class="list-group">
-                <a class="list-group-item" href="{{ route('commit_download_path', $commit->id) }}">
-                    <i class="fa fa-cloud-download"></i> Download patch
-                </a>
-                <a class="list-group-item" href="{{ route('commit_diff_path', $commit->id) }}">
-                    <i class="fa fa-code"></i> Open diff file
-                </a>
-            </ul>
-            @endif
+        <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status > 1) color:red; @else color:grey; @endif">
+            <i class="{{ $commit->icon }}"></i>
+            {{ $commit->description }}
+        </p>
+        <hr>
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>{{ $commit->message }}</h3>
+                <p>{{ $commit->id }}</p>
+                <br>
+                <ul class="list-inline">
+                    <li>
+                        <span>
+                            <i class="fa fa-calendar"></i>
+                            <span class="js-time-ago" title="{{ $commit->createdAtToISO }}">{{ $commit->timeAgo }}</span>
+                        </span>
+                    </li>
+                    <li>
+                        <a class="btn" href="https://github.com/{{ $commit->repo->name }}/commit/{{ $commit->id }}">
+                            <i class="fa fa-github"></i>
+                            Commit {{ $commit->shorthandId }}
+                        </a>
+                    </li>
+                    @if ($commit->status === 2)
+                    <li>
+                        <a class="btn btn-link" href="{{ route('commit_download_path', $commit->id) }}">
+                            <i class="fa fa-cloud-download"></i> Download patch
+                        </a>
+                    </li>
+                    <li>
+                        <a class="btn btn-link" href="{{ route('commit_diff_path', $commit->id) }}">
+                            <i class="fa fa-code"></i> Open diff file
+                        </a>
+                    </li>
+                    @endif
+                </ul>
+            </div>
         </div>
     </div>
     @if ($commit->status === 2)
@@ -52,6 +74,35 @@
     </div>
     @endforeach
     @endif
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="badge-modal" tabindex="-1" role="dialog" aria-labelledby="badge-modal-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modal">Embed StyleCI Shield</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="image-url">Raw Image</label>
+                    <textarea class="form-control" rows="3" cols="40" id="image-url" readonly>{{ route('repo_shield_path', $commit->repo->id) }}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="markdown-url">Markdown</label>
+                    <textarea class="form-control" rows="3" cols="40" id="markdown-url" readonly>[![StyleCI](https://styleci.io/repos/{{ $commit->repo->id }}/shield)](https://styleci.io/repos/{{ $commit->repo->id }})</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="html-url">HTML</label>
+                    <textarea class="form-control" rows="3" cols="40" id="html-url" readonly><img src="{{ route('repo_shield_path', $commit->repo->id) }}" alt="StyleCI" /></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
 </div>
 @stop
 

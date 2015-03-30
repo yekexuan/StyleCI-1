@@ -2,6 +2,14 @@ CHANGE LOG
 ==========
 
 
+## V0.2 Alpha (Upcoming)
+
+* Improved realtime updates
+* Switched to our login package
+* Improved the commit page design
+* Added bade information to the commit page
+
+
 ## V0.1.3 Alpha (Upcoming)
 
 * Improved diff viewing

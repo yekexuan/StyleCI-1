@@ -2,8 +2,11 @@
 <meta name="description" content="@yield('description', 'StyleCI is the PHP Coding Style Continuous Integration Service. Sign up with your GitHub account and analyse all your public PHP repositories for free!')">
 <meta name="author" content="Graham Campbell">
 
-<meta name="token" content="{{ csrf_token() }}">
-<meta name="pusher" content="{{ env('PUSHER_APP_KEY') }}">
+<meta name="styleci:token" content="{{ csrf_token() }}">
+<meta name="styleci:pusher" content="{{ env('PUSHER_APP_KEY') }}">
+@if ($currentUser)
+<meta name="styleci:user" content="{{ $currentUser->id }}">
+@endif
 
 <meta content="summary" name="twitter:card">
 <meta content="@yield('title', 'StyleCI')" name="twitter:title">

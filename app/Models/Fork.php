@@ -31,7 +31,7 @@ class Fork extends Model
     /**
      * A list of methods protected from mass assignment.
      *
-     * @var array
+     * @var string[]
      */
     protected $guarded = ['_token', '_method'];
 
