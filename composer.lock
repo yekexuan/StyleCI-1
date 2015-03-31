@@ -4,7 +4,11 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "hash": "cfadde4f434cf5fbc497a3e6360cfda9",
+=======
+    "hash": "69c2202a50c3f42a8896933141c62285",
+>>>>>>> origin/0.1
     "packages": [
         {
             "name": "bugsnag/bugsnag",

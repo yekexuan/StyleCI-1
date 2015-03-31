@@ -65,7 +65,7 @@ class AuthController extends AbstractController
 
         $this->dispatch(new LoginCommand(array_get($user, 'id'), $name, $username, array_get($user, 'email'), array_get($user, 'token')));
 
-        return Redirect::route('repos_path')->with('info', '<p class="lead">Our new config system is live!</p><p>You can read all about this over on our blog: <a href="https://blog.styleci.io/redefining-configuration" target="_blank">https://blog.styleci.io/redefining-configuration</a>.</p>');
+        return Redirect::route('repos_path')->with('info', '<p class="lead">There are upcoming changes!</p><p>We\'re updating our fixer presets on 9th April. More information will be coming in a blog post.</p>');
     }
 
     /**
