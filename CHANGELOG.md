@@ -10,7 +10,7 @@ CHANGE LOG
 * Added bade information to the commit page
 
 
-## V0.1.3 Alpha (Upcoming)
+## V0.1.3 Alpha (31/03/2015)
 
 * Improved diff viewing
 * Tweaked the footer
