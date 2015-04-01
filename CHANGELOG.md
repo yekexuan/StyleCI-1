@@ -10,6 +10,11 @@ CHANGE LOG
 * Added bade information to the commit page
 
 
+## V0.1.4 Alpha (01/04/2015)
+
+* Updated dependencies including symfony (security hotfix)
+
+
 ## V0.1.3 Alpha (31/03/2015)
 
 * Improved diff viewing
