@@ -41,6 +41,7 @@ return [
 
     'stripe' => [
         'model'  => 'StyleCI\StyleCI\Models\User',
+        'key' => '',
         'secret' => '',
     ],
 
