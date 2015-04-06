@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d7e573a8418a02b9e9c02acb2f654585",
+    "hash": "90c11225f9a3dcf2f857dac0c102d3db",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -272,22 +272,22 @@
         },
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "v1.5.2",
+            "version": "1.6.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "1dff3bb23fef67d62e266249cd3203b0aa025a7e"
+                "reference": "c05484e8c4b7f7fec5458fb919046f552ccf20e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/1dff3bb23fef67d62e266249cd3203b0aa025a7e",
-                "reference": "1dff3bb23fef67d62e266249cd3203b0aa025a7e",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/c05484e8c4b7f7fec5458fb919046f552ccf20e5",
+                "reference": "c05484e8c4b7f7fec5458fb919046f552ccf20e5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.6",
                 "sebastian/diff": "~1.1",
-                "symfony/console": "~2.1",
+                "symfony/console": "~2.3",
                 "symfony/event-dispatcher": "~2.1",
                 "symfony/filesystem": "~2.1",
                 "symfony/finder": "~2.1",
@@ -321,7 +321,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2015-03-22 12:52:15"
+            "time": "2015-03-30 19:40:48"
         },
         {
             "name": "fideloper/proxy",
@@ -2237,16 +2237,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v0.1.0-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "73f4170010c46667f6918e36400e8a08695ca66b"
+                "reference": "ad57518466f8642283d7d77910bf7c5382dc0129"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/73f4170010c46667f6918e36400e8a08695ca66b",
-                "reference": "73f4170010c46667f6918e36400e8a08695ca66b",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/ad57518466f8642283d7d77910bf7c5382dc0129",
+                "reference": "ad57518466f8642283d7d77910bf7c5382dc0129",
                 "shasum": ""
             },
             "require": {
@@ -2262,7 +2262,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.1-dev"
+                    "dev-master": "0.2-dev"
                 }
             },
             "autoload": {
@@ -2289,26 +2289,26 @@
                 "configuration",
                 "cs"
             ],
-            "time": "2015-02-26 15:38:13"
+            "time": "2015-04-06 14:05:39"
         },
         {
             "name": "styleci/fixer",
-            "version": "v0.2.1-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "c3db5742450d6af78f3a5b3803c647b3b7d10c6f"
+                "reference": "6b334d1862328857a4b76d3fcd0a4507d1d42786"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/c3db5742450d6af78f3a5b3803c647b3b7d10c6f",
-                "reference": "c3db5742450d6af78f3a5b3803c647b3b7d10c6f",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/6b334d1862328857a4b76d3fcd0a4507d1d42786",
+                "reference": "6b334d1862328857a4b76d3fcd0a4507d1d42786",
                 "shasum": ""
             },
             "require": {
-                "fabpot/php-cs-fixer": "~1.5.1",
+                "fabpot/php-cs-fixer": "1.6.*,>1.6.0",
                 "php": ">=5.5.0",
-                "styleci/config": "0.1.*",
+                "styleci/config": "0.2.*",
                 "styleci/git": "0.1.*"
             },
             "require-dev": {
@@ -2320,7 +2320,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.2-dev"
+                    "dev-master": "0.3-dev"
                 }
             },
             "autoload": {
@@ -2347,7 +2347,7 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-03-15 17:47:40"
+            "time": "2015-04-06 15:23:16"
         },
         {
             "name": "styleci/git",
