@@ -2241,12 +2241,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "ad57518466f8642283d7d77910bf7c5382dc0129"
+                "reference": "8551aa8d1d92e7409e24e95f87a59a3a423b915d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/ad57518466f8642283d7d77910bf7c5382dc0129",
-                "reference": "ad57518466f8642283d7d77910bf7c5382dc0129",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/8551aa8d1d92e7409e24e95f87a59a3a423b915d",
+                "reference": "8551aa8d1d92e7409e24e95f87a59a3a423b915d",
                 "shasum": ""
             },
             "require": {
@@ -2289,7 +2289,7 @@
                 "configuration",
                 "cs"
             ],
-            "time": "2015-04-06 14:05:39"
+            "time": "2015-04-06 16:24:48"
         },
         {
             "name": "styleci/fixer",
@@ -2297,12 +2297,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "6b334d1862328857a4b76d3fcd0a4507d1d42786"
+                "reference": "91561ab8dd078895c58857b66e2aa6f891f20501"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/6b334d1862328857a4b76d3fcd0a4507d1d42786",
-                "reference": "6b334d1862328857a4b76d3fcd0a4507d1d42786",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/91561ab8dd078895c58857b66e2aa6f891f20501",
+                "reference": "91561ab8dd078895c58857b66e2aa6f891f20501",
                 "shasum": ""
             },
             "require": {
@@ -2347,7 +2347,7 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-04-06 15:23:16"
+            "time": "2015-04-06 16:25:18"
         },
         {
             "name": "styleci/git",
