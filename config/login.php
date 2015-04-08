@@ -45,4 +45,15 @@ return [
 
     'redirect' => env('APP_URL').'/auth/github-callback',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Scopes
+    |--------------------------------------------------------------------------
+    |
+    | The scopes lists attached to the token that we need granted by the user.
+    |
+    */
+
+    'scopes' => ['admin:repo_hook', 'public_repo', 'read:org', 'user:email'],
+
 ];
