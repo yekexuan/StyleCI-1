@@ -17,7 +17,7 @@
     <div class="well">
         <div class="pull-right">
             <a href="#" data-toggle="modal" data-target="#badge-modal">
-                <img src="{{ route('repo_shield_path', $commit->repo->id) }}" alt="Shield" />
+                <img src="{{ route('repo_shield_path', $commit->repo->id) }}" alt="StyleCI Shield">
             </a>
         </div>
         <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status > 1) color:red; @else color:grey; @endif">
@@ -76,7 +76,6 @@
     @endif
 </div>
 
-<!-- Modal -->
 <div class="modal fade" id="badge-modal" tabindex="-1" role="dialog" aria-labelledby="badge-modal-label" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -95,7 +94,7 @@
                 </div>
                 <div class="form-group">
                     <label for="html-url">HTML</label>
-                    <textarea class="form-control" rows="3" cols="40" id="html-url" readonly><img src="{{ route('repo_shield_path', $commit->repo->id) }}" alt="StyleCI" /></textarea>
+                    <textarea class="form-control" rows="3" cols="40" id="html-url" readonly><a href="{{ route('repo_path', $commit->repo->id) }}"><img src="{{ route('repo_shield_path', $commit->repo->id) }}" alt="StyleCI"></a></textarea>
                 </div>
             </div>
             <div class="modal-footer">
