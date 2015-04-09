@@ -2,12 +2,12 @@ CHANGE LOG
 ==========
 
 
-## V0.2 Alpha (Upcoming)
+## V0.2 Alpha (09/04/2015)
 
 * Improved realtime updates
 * Switched to our login package
 * Improved the commit page design
-* Added bade information to the commit page
+* Added badge information to the commit page
 
 
 ## V0.1.4 Alpha (01/04/2015)
