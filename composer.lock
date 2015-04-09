@@ -272,16 +272,16 @@
         },
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "1.6.x-dev",
+            "version": "v1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "c05484e8c4b7f7fec5458fb919046f552ccf20e5"
+                "reference": "14f802b2c00b672676d55612e3c0d03465b69bf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/c05484e8c4b7f7fec5458fb919046f552ccf20e5",
-                "reference": "c05484e8c4b7f7fec5458fb919046f552ccf20e5",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/14f802b2c00b672676d55612e3c0d03465b69bf6",
+                "reference": "14f802b2c00b672676d55612e3c0d03465b69bf6",
                 "shasum": ""
             },
             "require": {
@@ -321,7 +321,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2015-03-30 19:40:48"
+            "time": "2015-04-09 19:10:26"
         },
         {
             "name": "fideloper/proxy",
@@ -2237,16 +2237,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "dev-master",
+            "version": "v0.2.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "8551aa8d1d92e7409e24e95f87a59a3a423b915d"
+                "reference": "46301305d4dd1edbec976b0fa7ca28adb593b070"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/8551aa8d1d92e7409e24e95f87a59a3a423b915d",
-                "reference": "8551aa8d1d92e7409e24e95f87a59a3a423b915d",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/46301305d4dd1edbec976b0fa7ca28adb593b070",
+                "reference": "46301305d4dd1edbec976b0fa7ca28adb593b070",
                 "shasum": ""
             },
             "require": {
@@ -2289,24 +2289,24 @@
                 "configuration",
                 "cs"
             ],
-            "time": "2015-04-06 16:24:48"
+            "time": "2015-04-09 20:29:33"
         },
         {
             "name": "styleci/fixer",
-            "version": "dev-master",
+            "version": "v0.3.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "91561ab8dd078895c58857b66e2aa6f891f20501"
+                "reference": "7c27ac4bd95554a63c017e13eaf04ac7555414bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/91561ab8dd078895c58857b66e2aa6f891f20501",
-                "reference": "91561ab8dd078895c58857b66e2aa6f891f20501",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/7c27ac4bd95554a63c017e13eaf04ac7555414bb",
+                "reference": "7c27ac4bd95554a63c017e13eaf04ac7555414bb",
                 "shasum": ""
             },
             "require": {
-                "fabpot/php-cs-fixer": "1.6.*,>1.6.0",
+                "fabpot/php-cs-fixer": "~1.6.1",
                 "php": ">=5.5.0",
                 "styleci/config": "0.2.*",
                 "styleci/git": "0.1.*"
@@ -2347,7 +2347,7 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-04-06 16:25:18"
+            "time": "2015-04-09 20:40:07"
         },
         {
             "name": "styleci/git",
@@ -2408,16 +2408,16 @@
         },
         {
             "name": "styleci/login",
-            "version": "dev-master",
+            "version": "v0.1.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "32f6b4b6dcbf3d3453babe1744edc34d2328eaea"
+                "reference": "d41890bc2e311df54edf9dca507f3449a46cc7ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/32f6b4b6dcbf3d3453babe1744edc34d2328eaea",
-                "reference": "32f6b4b6dcbf3d3453babe1744edc34d2328eaea",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/d41890bc2e311df54edf9dca507f3449a46cc7ab",
+                "reference": "d41890bc2e311df54edf9dca507f3449a46cc7ab",
                 "shasum": ""
             },
             "require": {
@@ -2460,7 +2460,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-03-16 22:55:06"
+            "time": "2015-04-09 20:41:21"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4078,16 +4078,16 @@
         },
         {
             "name": "phpunit/php-token-stream",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-token-stream.git",
-                "reference": "db32c18eba00b121c145575fcbcd4d4d24e6db74"
+                "reference": "eab81d02569310739373308137284e0158424330"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/db32c18eba00b121c145575fcbcd4d4d24e6db74",
-                "reference": "db32c18eba00b121c145575fcbcd4d4d24e6db74",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-token-stream/zipball/eab81d02569310739373308137284e0158424330",
+                "reference": "eab81d02569310739373308137284e0158424330",
                 "shasum": ""
             },
             "require": {
@@ -4123,20 +4123,20 @@
             "keywords": [
                 "tokenizer"
             ],
-            "time": "2015-01-17 09:51:32"
+            "time": "2015-04-08 04:46:07"
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.6.1",
+            "version": "4.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "08b2aacdd8433abbba468f995d6d64b76a7a62ec"
+                "reference": "6c773fda0bdb5ea891d9e4430dcc26c990b9130b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/08b2aacdd8433abbba468f995d6d64b76a7a62ec",
-                "reference": "08b2aacdd8433abbba468f995d6d64b76a7a62ec",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6c773fda0bdb5ea891d9e4430dcc26c990b9130b",
+                "reference": "6c773fda0bdb5ea891d9e4430dcc26c990b9130b",
                 "shasum": ""
             },
             "require": {
@@ -4175,9 +4175,6 @@
             "autoload": {
                 "classmap": [
                     "src/"
-                ],
-                "files": [
-                    "src/Framework/Assert/Functions.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4198,7 +4195,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-04-03 13:46:59"
+            "time": "2015-04-07 09:16:49"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
