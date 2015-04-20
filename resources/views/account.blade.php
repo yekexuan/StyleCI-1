@@ -2,6 +2,14 @@
 
 @section('title', 'Your Account')
 
+@section('header')
+@if (isset($repos))
+<script>
+    window.REPOS = {{ json_encode($repos) }}
+</script>
+@endif
+@stop
+
 @section('top')
 <div class="page-heading">
     <div class="container">
@@ -49,7 +57,13 @@
                 Sync with GitHub
             </a>
             <h2>Repositories</h2>
-            <p>We're only showing your public repositories below</p>
+            <p>We're only showing your public repositories below.</p>
+            <form name="search">
+                <div class="form-group">
+                    <label for="query">Filter repositories</label>
+                    <input type="text" name="query" class="form-control" id="query">
+                </div>
+            </form>
             <hr>
             <div class="loading text-center">
                 <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repositories...</h3>
@@ -126,7 +140,7 @@
 <script id="repos-template" type="text/x-lodash-template">
     <% if (_.size(repos) > 0) { %>
         <% _.forEach(repos, function(repo) { %>
-        <div class="row">
+        <div class="row" data-repo="<%= repo.name %>">
             <div class="col-sm-8">
                 <h4><%= repo.name %></h4>
                 <% if (repo.enabled) { %>

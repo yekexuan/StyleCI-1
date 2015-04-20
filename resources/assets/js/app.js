@@ -2,6 +2,8 @@ $(function() {
     // App setup
     window.StyleCI = {};
 
+    var fuse;
+
     // Global Ajax Setup
     $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
         var token;
@@ -67,7 +69,8 @@ $(function() {
         host: window.location.host,
         base_url: window.location.protocol + '//' + window.location.host,
         url: document.URL,
-        user: $('meta[name="styleci:user"]').attr('content')
+        user: $('meta[name="styleci:user"]').attr('content'),
+        repos: []
     };
 
     StyleCI.Events = {};
@@ -311,13 +314,7 @@ $(function() {
 
             return $.get(requestUrl)
                 .done(function(response) {
-                    var reposTpl = _.template($tpl.html());
-                    var sortedData = _.sortBy(response.data, function(repo, key) {
-                        repo.id = key;
-                        return repo.name.toLowerCase();
-                    });
-                    $reposHolder.html(reposTpl({repos: sortedData}));
-                    $reposHolder.show();
+                    handleReposList(response.data);
                 })
                 .fail(function(response) {
                     (new StyleCI.Notifier()).notify(response.responseJSON.msg);
@@ -398,4 +395,31 @@ $(function() {
         StyleCI.Repo.AnalyseCommit($(this));
         return false;
     });
+
+    $('input[name=query]').on('keyup', function () {
+        var $this = $(this);
+
+        var r = fuse.search($this.val());
+
+        if ($.trim(r) === '') {
+            StyleCI.Account.getRepos();
+        } else {
+            handleReposList(r);
+        }
+    });
+
+    function handleReposList(data) {
+        var $tpl = $('#repos-template'),
+            $reposHolder = $('.repos');
+
+        var reposTpl = _.template($tpl.html());
+        var sortedData = _.sortBy(data, function(repo, key) {
+            repo.id = key;
+            return repo.name.toLowerCase();
+        });
+        $reposHolder.html(reposTpl({repos: sortedData}));
+        $reposHolder.show();
+
+        fuse = new Fuse(sortedData, { keys: ["name", "id"] });
+    }
 });

@@ -4,6 +4,7 @@
         "animate-sass": "~0.6.3",
         "bootstrap-sass-official": "~3.3.4",
         "font-awesome": "~4.3.0",
+        "fuse.js": "~1.2.2",
         "jquery-timeago": "~1.4.1",
         "lodash": "~3.6.0",
         "pusher": "~2.2.4",
