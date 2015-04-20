@@ -10,6 +10,7 @@ elixir(function(mix) {
             'vendor/bower_components/xregexp/xregexp-all.js',
             'vendor/bower_components/SyntaxHighlighter/src/js/shCore.js',
             'vendor/bower_components/pusher/dist/pusher.js',
+            'vendor/bower_components/fuse.js/src/fuse.js',
             'resources/assets/js/**/*.js',
             'resources/assets/js/app.js',
         ], 'public/dist/js/app.js', './')
