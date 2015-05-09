@@ -65,7 +65,7 @@ class AuthController extends AbstractController
 
         $this->dispatch(new LoginCommand(array_get($user, 'id'), $name, $username, array_get($user, 'email'), array_get($user, 'token')));
 
-        return Redirect::route('repos_path')->with('info', '<p class="lead">We\'ve made some improvements!</p><p>We have now brought our improvements into production. This includes changes to our presets. More information will be coming in a blog post.</p>');
+        return Redirect::route('repos_path');
     }
 
     /**
