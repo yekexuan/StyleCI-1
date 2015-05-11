@@ -217,7 +217,7 @@ $(function() {
             if ($commit.length) {
                 var $status = $('p.js-status');
 
-                $status.html(data.event.description);
+                $status.html('<i class="' + data.event.icon + '"> ' + data.event.description);
 
                 if (data.event.status === 1) {
                     $status.css('color', 'green');

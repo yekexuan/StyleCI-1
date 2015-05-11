@@ -179,7 +179,7 @@
     <a class="btn btn-primary" href="{{ route('repo_path', '') }}/<%= repo.id %>">
         <i class="fa fa-history"></i> Show Commits
     </a>
-    <a class="btn btn-danger js-disable-repo" href="{{ route('disable_repo_path', '') }}/<%= repo.id %>" data-id="<%= repo.id %>" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Disabling...">
+    <a class="btn btn-danger js-disable-repo js-confirm-action" href="{{ route('disable_repo_path', '') }}/<%= repo.id %>" data-id="<%= repo.id %>" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Disabling...">
         <i class="fa fa-times"></i> Disable StyleCI
     </a>
 </script>
