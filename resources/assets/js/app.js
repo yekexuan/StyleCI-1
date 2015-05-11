@@ -314,7 +314,11 @@ $(function() {
 
             return $.get(requestUrl)
                 .done(function(response) {
-                    handleReposList(response.data);
+                    var sortedData = _.sortBy(response.data, function(repo, key) {
+                        repo.id = key;
+                        return repo.name.toLowerCase();
+                    });
+                    handleReposList(sortedData);
                 })
                 .fail(function(response) {
                     (new StyleCI.Notifier()).notify(response.responseJSON.msg);
@@ -413,13 +417,10 @@ $(function() {
             $reposHolder = $('.repos');
 
         var reposTpl = _.template($tpl.html());
-        var sortedData = _.sortBy(data, function(repo, key) {
-            repo.id = key;
-            return repo.name.toLowerCase();
-        });
-        $reposHolder.html(reposTpl({repos: sortedData}));
+
+        $reposHolder.html(reposTpl({repos: data}));
         $reposHolder.show();
 
-        fuse = new Fuse(sortedData, { keys: ["name", "id"] });
+        fuse = new Fuse(data, { keys: ["name", "id"] });
     }
 });
