@@ -158,6 +158,7 @@ class CommitPresenter extends BasePresenter implements Arrayable
             'description'    => $this->wrappedObject->description(),
             'status'         => $this->wrappedObject->status,
             'summary'        => $this->summary(),
+            'icon'           => $this->icon(),
             'timeAgo'        => $this->timeAgo(),
             'shorthandId'    => $this->shorthandId(),
             'createdAtToISO' => $this->createdAtToISO(),
