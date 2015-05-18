@@ -22,6 +22,7 @@
         </div>
         <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status > 1) color:red; @else color:grey; @endif">
             <i class="{{ $commit->icon }}"></i>
+            @if ($commit->status > 1) {{ $commit->error_message }} @endif
             {{ $commit->description }}
         </p>
         <hr>
