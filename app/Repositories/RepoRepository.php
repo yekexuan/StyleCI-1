@@ -45,11 +45,9 @@ class RepoRepository
     /**
      * Find all repos.
      *
-     * @param string $id
-     *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function all($id)
+    public function all()
     {
         return Repo::orderBy('name', 'asc')->get();
     }
