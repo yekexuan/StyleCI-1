@@ -19,6 +19,7 @@
                         <img src="https://www.gravatar.com/avatar/838bf3ed69d559cb46956c509c9464af?s=225" class="img-responsive img-circle" alt="">
                         <h4>Graham Campbell</h4>
                         <p>Founder</p>
+                        <blockquote>Graham is a prolific PHP developer and the second largest contributor to the Laravel framework.</blockquote>
                         <ul class="list-inline social-buttons">
                             <li><a href="https://twitter.com/GrahamJCampbell"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="https://github.com/GrahamCampbell"><i class="fa fa-github"></i></a></li>
@@ -30,6 +31,7 @@
                         <img src="https://www.gravatar.com/avatar/b19a7e3567c963fe3116e140ab12b8c0?s=225" class="img-responsive img-circle" alt="">
                         <h4>Joseph Cohen</h4>
                         <p>Code Monkey</p>
+                        <blockquote>Joe is a founder of Dinkbit and a big contributor to StyleCI.</blockquote>
                         <ul class="list-inline social-buttons">
                             <li><a href="https://twitter.com/joecohens"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="https://github.com/joecohens"><i class="fa fa-github"></i></a></li>
@@ -41,6 +43,7 @@
                         <img src="https://www.gravatar.com/avatar/13616b6551a3854378f9e6fea964e519?s=225" class="img-responsive img-circle" alt="">
                         <h4>James Brooks</h4>
                         <p>Startup Guru</p>
+                        <blockquote>The founder of Cachet, James supports StyleCI with code and a little startup knowledge.</blockquote>
                         <ul class="list-inline social-buttons">
                             <li><a href="https://twitter.com/jbrooksuk"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="https://github.com/jbrooksuk"><i class="fa fa-github"></i></a></li>
@@ -52,6 +55,7 @@
                         <img src="https://www.gravatar.com/avatar/971d6f920bea5f86fa9b7f6d29ca6626?s=225" class="img-responsive img-circle" alt="">
                         <h4>Michael Banks</h4>
                         <p>PR Ninja</p>
+                        <blockquote>Michael works on PR, handling the Twitter account and marketing activities.</blockquote>
                         <ul class="list-inline social-buttons">
                             <li><a href="https://twitter.com/ChipIsTheName"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="https://github.com/MichaelBanks"><i class="fa fa-github"></i></a></li>
