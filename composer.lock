@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9c20263ef7977165a2e817d2b8494da5",
+    "hash": "73fb9a9f646eb686cb5cb8b89dcbd51f",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -272,16 +272,16 @@
         },
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "v1.8",
+            "version": "1.8.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "93c723fe0c50ed54292006e7249a4c1173cf5847"
+                "reference": "02c5222e5a37b63dcaf04942f7601d49dc69f3bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/93c723fe0c50ed54292006e7249a4c1173cf5847",
-                "reference": "93c723fe0c50ed54292006e7249a4c1173cf5847",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/02c5222e5a37b63dcaf04942f7601d49dc69f3bd",
+                "reference": "02c5222e5a37b63dcaf04942f7601d49dc69f3bd",
                 "shasum": ""
             },
             "require": {
@@ -322,7 +322,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-05-04 17:06:20"
+            "time": "2015-05-19 06:38:00"
         },
         {
             "name": "fideloper/proxy",
@@ -550,32 +550,32 @@
         },
         {
             "name": "graham-campbell/core",
-            "version": "v2.0.1",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Core.git",
-                "reference": "ffa9170bc2a580ea603cfad931790ffad8a7332b"
+                "reference": "38e3b9013eb008e19ebab0c7dd33db0b921101f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/ffa9170bc2a580ea603cfad931790ffad8a7332b",
-                "reference": "ffa9170bc2a580ea603cfad931790ffad8a7332b",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/38e3b9013eb008e19ebab0c7dd33db0b921101f2",
+                "reference": "38e3b9013eb008e19ebab0c7dd33db0b921101f2",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "5.0.*",
-                "illuminate/contracts": "5.0.*",
-                "illuminate/support": "5.0.*",
-                "php": ">=5.4.7"
+                "illuminate/console": "5.0.*|5.1.*",
+                "illuminate/contracts": "5.0.*|5.1.*",
+                "illuminate/support": "5.0.*|5.1.*",
+                "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.0",
-                "illuminate/html": "5.0.*"
+                "graham-campbell/testbench": "~2.1",
+                "laravelcollective/html": "5.0.*|5.1.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -605,38 +605,38 @@
                 "laravel",
                 "starter"
             ],
-            "time": "2015-02-20 09:37:52"
+            "time": "2015-05-19 20:30:10"
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "ac5412d5aca9a2d4dafebf5f85dcb5abcc6d4e25"
+                "reference": "b613794fc3f50fd8615c142f4578c9076cc2ae4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/ac5412d5aca9a2d4dafebf5f85dcb5abcc6d4e25",
-                "reference": "ac5412d5aca9a2d4dafebf5f85dcb5abcc6d4e25",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/b613794fc3f50fd8615c142f4578c9076cc2ae4e",
+                "reference": "b613794fc3f50fd8615c142f4578c9076cc2ae4e",
                 "shasum": ""
             },
             "require": {
                 "filp/whoops": "1.1.*",
-                "illuminate/contracts": "5.0.*",
-                "illuminate/support": "5.0.*",
-                "php": ">=5.5.0",
+                "illuminate/contracts": "5.0.*|5.1.*",
+                "illuminate/support": "5.0.*|5.1.*",
+                "php": ">=5.5.9",
                 "psr/log": "~1.0",
-                "symfony/debug": "2.6.*",
-                "symfony/http-foundation": "2.6.*"
+                "symfony/debug": "2.6.*|2.7.*",
+                "symfony/http-foundation": "2.6.*|2.7.*"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.0"
+                "graham-campbell/testbench": "~2.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -668,7 +668,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-02-04 20:18:59"
+            "time": "2015-05-20 15:45:24"
         },
         {
             "name": "graham-campbell/github",
@@ -1004,26 +1004,26 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "5.2.0",
+            "version": "5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "475b29ccd411f2fa8a408e64576418728c032cfa"
+                "reference": "f3c8c22471cb55475105c14769644a49c3262b93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/475b29ccd411f2fa8a408e64576418728c032cfa",
-                "reference": "475b29ccd411f2fa8a408e64576418728c032cfa",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f3c8c22471cb55475105c14769644a49c3262b93",
+                "reference": "f3c8c22471cb55475105c14769644a49c3262b93",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/ringphp": "~1.0",
+                "guzzlehttp/ringphp": "^1.1",
                 "php": ">=5.4.0"
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "~4.0",
-                "psr/log": "~1.0"
+                "phpunit/phpunit": "^4.0",
+                "psr/log": "^1.0"
             },
             "type": "library",
             "extra": {
@@ -1058,20 +1058,20 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-01-28 01:03:29"
+            "time": "2015-05-20 03:47:55"
         },
         {
             "name": "guzzlehttp/ringphp",
-            "version": "1.0.7",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/RingPHP.git",
-                "reference": "52d868f13570a9a56e5fce6614e0ec75d0f13ac2"
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/52d868f13570a9a56e5fce6614e0ec75d0f13ac2",
-                "reference": "52d868f13570a9a56e5fce6614e0ec75d0f13ac2",
+                "url": "https://api.github.com/repos/guzzle/RingPHP/zipball/dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
+                "reference": "dbbb91d7f6c191e5e405e900e3102ac7f261bc0b",
                 "shasum": ""
             },
             "require": {
@@ -1089,7 +1089,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -1109,7 +1109,7 @@
                 }
             ],
             "description": "Provides a simple API and specification that abstracts away the details of HTTP into a single PHP function.",
-            "time": "2015-03-30 01:43:20"
+            "time": "2015-05-20 03:37:09"
         },
         {
             "name": "guzzlehttp/streams",
@@ -1353,12 +1353,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/php-github-api.git",
-                "reference": "823564094213946d2dcbca4442bda399363f3f18"
+                "reference": "852c45f34a4f278cfddb137ac55798cab628dc81"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/php-github-api/zipball/823564094213946d2dcbca4442bda399363f3f18",
-                "reference": "823564094213946d2dcbca4442bda399363f3f18",
+                "url": "https://api.github.com/repos/StyleCI/php-github-api/zipball/852c45f34a4f278cfddb137ac55798cab628dc81",
+                "reference": "852c45f34a4f278cfddb137ac55798cab628dc81",
                 "shasum": ""
             },
             "require": {
@@ -1408,7 +1408,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/php-github-api/tree/master"
             },
-            "time": "2015-03-15 17:29:37"
+            "time": "2015-05-20 18:16:07"
         },
         {
             "name": "laravel/framework",
@@ -1621,16 +1621,16 @@
         },
         {
             "name": "mccool/laravel-auto-presenter",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ShawnMcCool/laravel-auto-presenter.git",
-                "reference": "fbde239dd9b3c9145e5f281fd585623181013b80"
+                "url": "https://github.com/laravel-auto-presenter/laravel-auto-presenter.git",
+                "reference": "846eee0565bf84d911c1d2cad81e707ec9ac2e9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ShawnMcCool/laravel-auto-presenter/zipball/fbde239dd9b3c9145e5f281fd585623181013b80",
-                "reference": "fbde239dd9b3c9145e5f281fd585623181013b80",
+                "url": "https://api.github.com/repos/laravel-auto-presenter/laravel-auto-presenter/zipball/846eee0565bf84d911c1d2cad81e707ec9ac2e9c",
+                "reference": "846eee0565bf84d911c1d2cad81e707ec9ac2e9c",
                 "shasum": ""
             },
             "require": {
@@ -1643,7 +1643,6 @@
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "fabpot/php-cs-fixer": "~1.2",
                 "graham-campbell/testbench": "~2.0"
             },
             "type": "library",
@@ -1678,7 +1677,7 @@
                 "lpm",
                 "presenter"
             ],
-            "time": "2015-02-04 19:20:36"
+            "time": "2015-05-18 10:21:57"
         },
         {
             "name": "monolog/monolog",
@@ -2298,16 +2297,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "e72509426c36ac40db619a07a9bb39ad614c2157"
+                "reference": "99a3ae7e7e221a5c247e1d8b0b7873ad1451a91f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/e72509426c36ac40db619a07a9bb39ad614c2157",
-                "reference": "e72509426c36ac40db619a07a9bb39ad614c2157",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/99a3ae7e7e221a5c247e1d8b0b7873ad1451a91f",
+                "reference": "99a3ae7e7e221a5c247e1d8b0b7873ad1451a91f",
                 "shasum": ""
             },
             "require": {
-                "fabpot/php-cs-fixer": "1.8.*",
+                "fabpot/php-cs-fixer": "~1.8.1",
                 "php": ">=5.5.0",
                 "styleci/config": "0.3.*",
                 "styleci/git": "0.1.*"
@@ -2348,7 +2347,7 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-05-08 09:17:49"
+            "time": "2015-05-20 17:49:06"
         },
         {
             "name": "styleci/git",
