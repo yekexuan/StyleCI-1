@@ -34,7 +34,7 @@
         "styleci/bugsnag": "0.1.*",
         "styleci/fixer": "0.4.*",
         "styleci/login": "0.1.*",
-        "vinkla/pusher": "~1.0"
+        "vinkla/pusher": "~1.1"
     },
     "require-dev": {
         "graham-campbell/testbench": "~2.0"
