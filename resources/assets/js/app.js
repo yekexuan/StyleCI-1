@@ -9,7 +9,7 @@ $(function() {
 
         if (! options.beforeSend) {
             options.beforeSend = function (xhr) {
-                jqXHR.setRequestHeader('Accept', 'application/json charset=utf-8');
+                jqXHR.setRequestHeader('Accept', 'application/json; charset=utf-8');
                 jqXHR.setRequestHeader('Content-Type', 'application/json');
             };
         }
