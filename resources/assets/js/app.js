@@ -7,7 +7,7 @@ $(function() {
     // Global Ajax Setup
     $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
 
-        if ( !options.beforeSend) {
+        if (! options.beforeSend) {
             options.beforeSend = function (xhr) {
                 jqXHR.setRequestHeader('Accept', 'application/json charset=utf-8');
                 jqXHR.setRequestHeader('Content-Type', 'application/json');
