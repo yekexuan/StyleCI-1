@@ -613,12 +613,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "53e9b68ddcc31179b01725b082e47c4b908a9b68"
+                "reference": "cb07f9b1d02a6b575319e17c11e1366e5bbd660c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/53e9b68ddcc31179b01725b082e47c4b908a9b68",
-                "reference": "53e9b68ddcc31179b01725b082e47c4b908a9b68",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/cb07f9b1d02a6b575319e17c11e1366e5bbd660c",
+                "reference": "cb07f9b1d02a6b575319e17c11e1366e5bbd660c",
                 "shasum": ""
             },
             "require": {
@@ -668,7 +668,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-05-21 16:29:28"
+            "time": "2015-05-21 18:22:01"
         },
         {
             "name": "graham-campbell/github",
