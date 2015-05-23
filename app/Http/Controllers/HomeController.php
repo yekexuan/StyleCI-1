@@ -3,7 +3,7 @@
 /*
  * This file is part of StyleCI.
  *
- * (c) Graham Campbell <graham@mineuk.com>
+ * (c) Graham Campbell <graham@cachethq.io>
  * (c) Joseph Cohen <joseph.cohen@dinkbit.com>
  *
  * For the full copyright and license information, please view the LICENSE
@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\View;
 /**
  * This is the home controller class.
  *
- * @author Graham Campbell <graham@mineuk.com>
+ * @author Graham Campbell <graham@cachethq.io>
  */
 class HomeController extends AbstractController
 {

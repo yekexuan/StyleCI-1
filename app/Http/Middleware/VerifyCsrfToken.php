@@ -3,7 +3,7 @@
 /*
  * This file is part of StyleCI.
  *
- * (c) Graham Campbell <graham@mineuk.com>
+ * (c) Graham Campbell <graham@cachethq.io>
  * (c) Joseph Cohen <joseph.cohen@dinkbit.com>
  *
  * For the full copyright and license information, please view the LICENSE
@@ -20,7 +20,7 @@ use Symfony\Component\Security\Core\Util\StringUtils;
 /**
  * This is the verify CSRF token middleware class.
  *
- * @author Graham Campbell <graham@mineuk.com>
+ * @author Graham Campbell <graham@cachethq.io>
  */
 class VerifyCsrfToken
 {

@@ -3,7 +3,7 @@
 /*
  * This file is part of StyleCI.
  *
- * (c) Graham Campbell <graham@mineuk.com>
+ * (c) Graham Campbell <graham@cachethq.io>
  * (c) Joseph Cohen <joseph.cohen@dinkbit.com>
  *
  * For the full copyright and license information, please view the LICENSE
@@ -18,7 +18,7 @@ use McCool\LaravelAutoPresenter\BasePresenter;
 /**
  * This is the commit presenter class.
  *
- * @author Graham Campbell <graham@mineuk.com>
+ * @author Graham Campbell <graham@cachethq.io>
  * @author Joseph Cohen <joseph.cohen@dinkbit.com>
  */
 class CommitPresenter extends BasePresenter implements Arrayable

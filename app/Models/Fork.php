@@ -3,7 +3,7 @@
 /*
  * This file is part of StyleCI.
  *
- * (c) Graham Campbell <graham@mineuk.com>
+ * (c) Graham Campbell <graham@cachethq.io>
  * (c) Joseph Cohen <joseph.cohen@dinkbit.com>
  *
  * For the full copyright and license information, please view the LICENSE
@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * This is the fork model class.
  *
- * @author Graham Campbell <graham@mineuk.com>
+ * @author Graham Campbell <graham@cachethq.io>
  */
 class Fork extends Model
 {
