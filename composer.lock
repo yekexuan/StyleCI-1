@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "41e1d26231a727458b2996add7b8eb38",
+    "hash": "46f5ba3cf6ebadea744bbd3837b57be9",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -276,12 +276,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "02c5222e5a37b63dcaf04942f7601d49dc69f3bd"
+                "reference": "019389cfed90a7b88f04bf83b0e079882cd93e5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/02c5222e5a37b63dcaf04942f7601d49dc69f3bd",
-                "reference": "02c5222e5a37b63dcaf04942f7601d49dc69f3bd",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/019389cfed90a7b88f04bf83b0e079882cd93e5f",
+                "reference": "019389cfed90a7b88f04bf83b0e079882cd93e5f",
                 "shasum": ""
             },
             "require": {
@@ -322,7 +322,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-05-19 06:38:00"
+            "time": "2015-05-21 20:11:57"
         },
         {
             "name": "fideloper/proxy",
@@ -609,16 +609,16 @@
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "dev-master",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "cb07f9b1d02a6b575319e17c11e1366e5bbd660c"
+                "reference": "c114242ab593a6693ff96e72aeeb44ce76e27d9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/cb07f9b1d02a6b575319e17c11e1366e5bbd660c",
-                "reference": "cb07f9b1d02a6b575319e17c11e1366e5bbd660c",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/c114242ab593a6693ff96e72aeeb44ce76e27d9b",
+                "reference": "c114242ab593a6693ff96e72aeeb44ce76e27d9b",
                 "shasum": ""
             },
             "require": {
@@ -668,7 +668,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-05-21 18:22:01"
+            "time": "2015-05-21 19:37:10"
         },
         {
             "name": "graham-campbell/github",
@@ -2241,12 +2241,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "40edb30e501377b7385476ac8d34bb52f38559f1"
+                "reference": "4aa1fceb50abc48b70e8552d0c0c015acea41c51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/40edb30e501377b7385476ac8d34bb52f38559f1",
-                "reference": "40edb30e501377b7385476ac8d34bb52f38559f1",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/4aa1fceb50abc48b70e8552d0c0c015acea41c51",
+                "reference": "4aa1fceb50abc48b70e8552d0c0c015acea41c51",
                 "shasum": ""
             },
             "require": {
@@ -2277,7 +2277,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "StyleCI Config Is A Code Style Configuration Manager",
@@ -2289,7 +2289,7 @@
                 "configuration",
                 "cs"
             ],
-            "time": "2015-05-07 15:47:40"
+            "time": "2015-05-23 14:07:54"
         },
         {
             "name": "styleci/fixer",
@@ -2297,12 +2297,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "99a3ae7e7e221a5c247e1d8b0b7873ad1451a91f"
+                "reference": "a8714766cfccb9e1c3eece1635fa54db38f3046f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/99a3ae7e7e221a5c247e1d8b0b7873ad1451a91f",
-                "reference": "99a3ae7e7e221a5c247e1d8b0b7873ad1451a91f",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/a8714766cfccb9e1c3eece1635fa54db38f3046f",
+                "reference": "a8714766cfccb9e1c3eece1635fa54db38f3046f",
                 "shasum": ""
             },
             "require": {
@@ -2335,7 +2335,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "StyleCI Fixer Is A Code Style Report Builder",
@@ -2347,7 +2347,7 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-05-20 17:49:06"
+            "time": "2015-05-23 14:08:44"
         },
         {
             "name": "styleci/git",
