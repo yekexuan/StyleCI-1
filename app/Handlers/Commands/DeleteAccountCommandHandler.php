@@ -12,7 +12,7 @@
 
 namespace StyleCI\StyleCI\Handlers\Commands;
 
-use Illuminate\Foundation\Bus\DispatchesCommands;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 use StyleCI\StyleCI\Commands\DeleteAccountCommand;
 use StyleCI\StyleCI\Commands\DisableRepoCommand;
 use StyleCI\StyleCI\Events\UserHasRageQuitEvent;
@@ -24,7 +24,7 @@ use StyleCI\StyleCI\Events\UserHasRageQuitEvent;
  */
 class DeleteAccountCommandHandler
 {
-    use DispatchesCommands;
+    use DispatchesJobs;
 
     /**
      * Handle the delete account command.

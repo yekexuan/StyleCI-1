@@ -13,7 +13,7 @@
 namespace StyleCI\StyleCI\Console\Commands;
 
 use Illuminate\Console\Command;
-use Illuminate\Foundation\Bus\DispatchesCommands;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
 use StyleCI\StyleCI\Models\Repo;
 
@@ -24,7 +24,7 @@ use StyleCI\StyleCI\Models\Repo;
  */
 class AnalyseAllCommand extends Command
 {
-    use DispatchesCommands;
+    use DispatchesJobs;
 
     /**
      * The console command name.

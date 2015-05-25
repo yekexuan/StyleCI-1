@@ -12,7 +12,7 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
-use Illuminate\Foundation\Bus\DispatchesCommands;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller;
 
@@ -23,7 +23,7 @@ use Illuminate\Routing\Controller;
  */
 abstract class AbstractController extends Controller
 {
-    use DispatchesCommands, ValidatesRequests;
+    use DispatchesJobs, ValidatesRequests;
 
     /**
      * Create a new controller instance.

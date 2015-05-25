@@ -14,7 +14,7 @@ namespace StyleCI\StyleCI\Console\Commands;
 
 use Exception;
 use Illuminate\Console\Command;
-use Illuminate\Foundation\Bus\DispatchesCommands;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
 use StyleCI\StyleCI\Models\Repo;
 use Symfony\Component\Console\Input\InputArgument;
@@ -26,7 +26,7 @@ use Symfony\Component\Console\Input\InputArgument;
  */
 class AnalyseRepoCommand extends Command
 {
-    use DispatchesCommands;
+    use DispatchesJobs;
 
     /**
      * The console command name.
