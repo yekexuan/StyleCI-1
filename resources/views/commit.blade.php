@@ -22,7 +22,6 @@
         </div>
         <p class="js-status" style="@if ($commit->status === 1) color:green; @elseif ($commit->status > 1) color:red; @else color:grey; @endif">
             <i class="{{ $commit->icon }}"></i>
-            @if ($commit->status > 1) {{ $commit->error_message }} @endif
             {{ $commit->description }}
         </p>
         <hr>
@@ -60,6 +59,12 @@
             </div>
         </div>
     </div>
+    @if ($commit->error_message)
+    <div class="alert alert-danger" role="alert">
+        <h4>Error details:</h4>
+        <p>{{ $commit->error_message }}</p>
+    </div>
+    @endif
     @if ($commit->status === 2)
     <hr>
     @foreach ($commit->diffFiles() as $name => $file)
