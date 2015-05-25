@@ -71,6 +71,7 @@ class AnalyseCommitCommandHandler
             $this->saveReport($this->builder->analyse($commit->name(), $commit->id), $commit);
         } catch (ConfigExceptionInterface $e) {
             $commit->status = 4;
+            $commit->error_message = $e->getMessage();
             $commit->save();
         } catch (Exception $e) {
             $commit->status = 3;

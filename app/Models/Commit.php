@@ -43,9 +43,10 @@ class Commit extends Model implements HasPresenter
      * @var string[]
      */
     protected $casts = [
-        'status' => 'int',
-        'time'   => 'float',
-        'memory' => 'float',
+        'status'        => 'int',
+        'error_message' => 'string',
+        'time'          => 'float',
+        'memory'        => 'float',
     ];
 
     /**
