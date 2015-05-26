@@ -7,7 +7,7 @@
                     <li><a href="{{ route('privacy_policy') }}">Privacy</a></li>
                     <li><a href="{{ route('security_policy') }}">Security</a></li>
                     <li><a href="{{ route('about_us') }}">About</a></li>
-                    <li><a href="mailto:team@styleci.io">Contact</a></li>
+                    <li><a href="mailto:support@cachet.io">Contact</a></li>
                 </ul>
             </div>
             <div class="col-sm-2 logo">

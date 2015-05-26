@@ -13,5 +13,5 @@
 
 <h2>Questions</h2>
 
-<p>Any questions about the Terms of Service should be addressed to <a href="mailto:team@styleci.io">team@styleci.io</a>.</p>
+<p>Any questions about the Terms of Service should be addressed to <a href="mailto:support@cachet.io">support@cachet.io</a>.</p>
 @stop
