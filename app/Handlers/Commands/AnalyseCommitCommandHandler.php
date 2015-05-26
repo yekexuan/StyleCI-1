@@ -72,6 +72,7 @@ class AnalyseCommitCommandHandler
             $commit->status = 4;
             $commit->error_message = $e->getMessage();
             $commit->save();
+            $this->logger->notice('Analysis misconfigured.', [$e, $commit->toArray()]);
         } catch (Exception $e) {
             $commit->status = 3;
             $commit->save();
