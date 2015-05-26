@@ -2251,12 +2251,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Bugsnag.git",
-                "reference": "3f305f4bf194759916e60fdf0f694e9dfcad887d"
+                "reference": "788855227200cf0641582d60df5fd8ea9aa82b4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/3f305f4bf194759916e60fdf0f694e9dfcad887d",
-                "reference": "3f305f4bf194759916e60fdf0f694e9dfcad887d",
+                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/788855227200cf0641582d60df5fd8ea9aa82b4c",
+                "reference": "788855227200cf0641582d60df5fd8ea9aa82b4c",
                 "shasum": ""
             },
             "require": {
@@ -2306,7 +2306,7 @@
                 "StyleCI",
                 "bugsnag"
             ],
-            "time": "2015-05-26 22:43:24"
+            "time": "2015-05-26 23:56:29"
         },
         {
             "name": "styleci/config",
