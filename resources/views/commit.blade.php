@@ -71,7 +71,7 @@
         <p>Feel free to contact support at <a href="mailto:support@cachet.io">support@cachet.io</a>.</p>
     </div>
     @elseif ($commit->status === 3)
-    <div class="alert alert-warning commit-alert" role="alert">
+    <div class="alert alert-danger commit-alert" role="alert">
         <h4>Something went wrong on our end.</h4>
         <p>Feel free to contact support at <a href="mailto:support@cachet.io">support@cachet.io</a>.</p>
     </div>
