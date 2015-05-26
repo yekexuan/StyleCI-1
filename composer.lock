@@ -800,12 +800,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Logger.git",
-                "reference": "5efd209d3e75b6aa5502c99b76bb5502967d5a37"
+                "reference": "7fe724f291d1f716b0fbbd3efb0458a074bad6fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/5efd209d3e75b6aa5502c99b76bb5502967d5a37",
-                "reference": "5efd209d3e75b6aa5502c99b76bb5502967d5a37",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/7fe724f291d1f716b0fbbd3efb0458a074bad6fe",
+                "reference": "7fe724f291d1f716b0fbbd3efb0458a074bad6fe",
                 "shasum": ""
             },
             "require": {
@@ -852,7 +852,7 @@
                 "logs",
                 "multiple"
             ],
-            "time": "2015-05-26 20:59:09"
+            "time": "2015-05-26 22:44:28"
         },
         {
             "name": "graham-campbell/manager",
@@ -2268,12 +2268,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Bugsnag.git",
-                "reference": "6567bdad131e0fd9f2b81fc6adb61fa5b04eff45"
+                "reference": "3f305f4bf194759916e60fdf0f694e9dfcad887d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/6567bdad131e0fd9f2b81fc6adb61fa5b04eff45",
-                "reference": "6567bdad131e0fd9f2b81fc6adb61fa5b04eff45",
+                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/3f305f4bf194759916e60fdf0f694e9dfcad887d",
+                "reference": "3f305f4bf194759916e60fdf0f694e9dfcad887d",
                 "shasum": ""
             },
             "require": {
@@ -2323,7 +2323,7 @@
                 "StyleCI",
                 "bugsnag"
             ],
-            "time": "2015-05-26 18:30:21"
+            "time": "2015-05-26 22:43:24"
         },
         {
             "name": "styleci/config",
