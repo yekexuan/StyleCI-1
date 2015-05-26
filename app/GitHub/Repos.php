@@ -93,11 +93,7 @@ class Repos
 
         $list = [];
 
-        foreach ($paginator->fetchAll($client->me(), 'repositories') as $repo) {
-            if ($repo['private']) {
-                continue;
-            }
-
+        foreach ($paginator->fetchAll($client->me(), 'repositories', ['public']) as $repo) {
             // set enabled to false by default
             // we'll mark those that are enabled at a later point
             $list[$repo['id']] = ['name' => $repo['full_name'], 'language' => $repo['language'], 'admin' => $repo['permissions']['admin'], 'enabled' => false];
