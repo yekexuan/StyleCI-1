@@ -1349,16 +1349,16 @@
         },
         {
             "name": "knplabs/github-api",
-            "version": "1.4.10",
+            "version": "1.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/php-github-api.git",
-                "reference": "1a4ccc102cb093b455b4780ddafc4c31b363281c"
+                "reference": "346761bf33ec3af686d304e679d4729f36b0a943"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/1a4ccc102cb093b455b4780ddafc4c31b363281c",
-                "reference": "1a4ccc102cb093b455b4780ddafc4c31b363281c",
+                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/346761bf33ec3af686d304e679d4729f36b0a943",
+                "reference": "346761bf33ec3af686d304e679d4729f36b0a943",
                 "shasum": ""
             },
             "require": {
@@ -1406,7 +1406,7 @@
                 "gist",
                 "github"
             ],
-            "time": "2015-05-25 08:18:31"
+            "time": "2015-05-26 06:11:50"
         },
         {
             "name": "laravel/framework",
@@ -1414,12 +1414,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "a74cf7c953f26bb70d13946105c1a7bb2beeb68f"
+                "reference": "bd433733ae894a33fb4df3dc78fcddcba70faf7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/a74cf7c953f26bb70d13946105c1a7bb2beeb68f",
-                "reference": "a74cf7c953f26bb70d13946105c1a7bb2beeb68f",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/bd433733ae894a33fb4df3dc78fcddcba70faf7b",
+                "reference": "bd433733ae894a33fb4df3dc78fcddcba70faf7b",
                 "shasum": ""
             },
             "require": {
@@ -1537,7 +1537,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-05-25 20:31:06"
+            "time": "2015-05-26 15:14:29"
         },
         {
             "name": "league/flysystem",
@@ -2187,25 +2187,25 @@
         },
         {
             "name": "styleci/bugsnag",
-            "version": "v0.1.0-alpha",
+            "version": "v0.1.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Bugsnag.git",
-                "reference": "3ec9437ad510d03ab47b7e8f8e02360ca4547d9f"
+                "reference": "2ef6c17ef97945a84d1bb19d1f81c66a9400f64e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/3ec9437ad510d03ab47b7e8f8e02360ca4547d9f",
-                "reference": "3ec9437ad510d03ab47b7e8f8e02360ca4547d9f",
+                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/2ef6c17ef97945a84d1bb19d1f81c66a9400f64e",
+                "reference": "2ef6c17ef97945a84d1bb19d1f81c66a9400f64e",
                 "shasum": ""
             },
             "require": {
                 "bugsnag/bugsnag": "~2.5",
-                "illuminate/support": "~5.0",
-                "php": ">=5.5.0"
+                "illuminate/support": "5.0.*|5.1.*",
+                "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.0"
+                "graham-campbell/testbench": "~2.1"
             },
             "type": "library",
             "extra": {
@@ -2224,8 +2224,16 @@
             ],
             "authors": [
                 {
+                    "name": "James Brooks",
+                    "email": "james@cachethq.io"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@cachethq.io"
+                },
+                {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "StyleCI Bugsnag Is A Bugsnag Bridge For Laravel 5",
@@ -2236,7 +2244,7 @@
                 "StyleCI",
                 "bugsnag"
             ],
-            "time": "2015-04-01 21:44:15"
+            "time": "2015-05-26 15:14:57"
         },
         {
             "name": "styleci/config",
@@ -2244,12 +2252,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "2f7000d4cf01afc349f9dd1d9ce9599a5cbfc003"
+                "reference": "41b4f8f7187960be78feae914c588406230dce8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/2f7000d4cf01afc349f9dd1d9ce9599a5cbfc003",
-                "reference": "2f7000d4cf01afc349f9dd1d9ce9599a5cbfc003",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/41b4f8f7187960be78feae914c588406230dce8e",
+                "reference": "41b4f8f7187960be78feae914c588406230dce8e",
                 "shasum": ""
             },
             "require": {
@@ -2300,7 +2308,7 @@
                 "configuration",
                 "cs"
             ],
-            "time": "2015-05-25 22:48:52"
+            "time": "2015-05-26 15:16:34"
         },
         {
             "name": "styleci/fixer",
@@ -2308,12 +2316,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "571351023809413e28c2890844a9f8496604135d"
+                "reference": "d001f160bc06c391245517264369641e7312e9cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/571351023809413e28c2890844a9f8496604135d",
-                "reference": "571351023809413e28c2890844a9f8496604135d",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/d001f160bc06c391245517264369641e7312e9cb",
+                "reference": "d001f160bc06c391245517264369641e7312e9cb",
                 "shasum": ""
             },
             "require": {
@@ -2366,29 +2374,29 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-05-25 22:49:08"
+            "time": "2015-05-26 15:16:45"
         },
         {
             "name": "styleci/git",
-            "version": "v0.1.0-alpha",
+            "version": "v0.1.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "580a30dd1ace29a180cbe94c7f0e0a34167d7b82"
+                "reference": "5eb18ec63ca8060348f09b8a4b1a80c8d8c1104c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/580a30dd1ace29a180cbe94c7f0e0a34167d7b82",
-                "reference": "580a30dd1ace29a180cbe94c7f0e0a34167d7b82",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/5eb18ec63ca8060348f09b8a4b1a80c8d8c1104c",
+                "reference": "5eb18ec63ca8060348f09b8a4b1a80c8d8c1104c",
                 "shasum": ""
             },
             "require": {
                 "gitonomy/gitlib": "~1.0",
-                "php": ">=5.5.0",
+                "php": ">=5.5.9",
                 "symfony/filesystem": "~2.3"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.0"
+                "graham-campbell/testbench": "~2.1"
             },
             "suggest": {
                 "illuminate/support": "Enables Laravel support (~5.0)."
@@ -2410,8 +2418,16 @@
             ],
             "authors": [
                 {
+                    "name": "James Brooks",
+                    "email": "james@cachethq.io"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@cachethq.io"
+                },
+                {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "StyleCI Git Is A Git Repository Manager",
@@ -2423,29 +2439,29 @@
                 "repo",
                 "repository"
             ],
-            "time": "2015-02-17 19:47:12"
+            "time": "2015-05-26 15:10:32"
         },
         {
             "name": "styleci/login",
-            "version": "v0.1.0-alpha",
+            "version": "v0.1.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "d41890bc2e311df54edf9dca507f3449a46cc7ab"
+                "reference": "78617b2ade6bd68b04ec5f61d4c5368cb5988168"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/d41890bc2e311df54edf9dca507f3449a46cc7ab",
-                "reference": "d41890bc2e311df54edf9dca507f3449a46cc7ab",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/78617b2ade6bd68b04ec5f61d4c5368cb5988168",
+                "reference": "78617b2ade6bd68b04ec5f61d4c5368cb5988168",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "~5.0",
                 "illuminate/http": "~5.0",
-                "php": ">=5.5.0"
+                "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.0"
+                "graham-campbell/testbench": "~2.1"
             },
             "suggest": {
                 "illuminate/support": "Enables Laravel support (~5.0)."
@@ -2467,8 +2483,16 @@
             ],
             "authors": [
                 {
+                    "name": "James Brooks",
+                    "email": "james@cachethq.io"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@cachethq.io"
+                },
+                {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "StyleCI Login Is A GitHub Login Provider",
@@ -2479,7 +2503,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-04-09 20:41:21"
+            "time": "2015-05-26 15:13:35"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4238,12 +4262,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "37fdb78ee6cd53458a88a5794920b8e4d83145d2"
+                "reference": "c2c540f8e1bd95aeaf134513bf8186ff25433c70"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/37fdb78ee6cd53458a88a5794920b8e4d83145d2",
-                "reference": "37fdb78ee6cd53458a88a5794920b8e4d83145d2",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/c2c540f8e1bd95aeaf134513bf8186ff25433c70",
+                "reference": "c2c540f8e1bd95aeaf134513bf8186ff25433c70",
                 "shasum": ""
             },
             "require": {
@@ -4292,7 +4316,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2015-05-24 07:43:46"
+            "time": "2015-05-26 08:19:14"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
