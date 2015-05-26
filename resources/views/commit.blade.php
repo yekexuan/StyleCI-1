@@ -65,7 +65,17 @@
         <p>{{ $commit->error_message }}</p>
     </div>
     @endif
-    @if ($commit->status === 2)
+    @if ($commit->status === 4)
+    <div class="alert alert-info" role="alert">
+        <h4>Need a hand?</h4>
+        <p>Feel free to contact support at <a href="mailto:support@cachet.io">support@cachet.io</a>.</p>
+    </div>
+    @elseif ($commit->status === 3)
+    <div class="alert alert-warning" role="alert">
+        <h4>Something went wrong on our end.</h4>
+        <p>Feel free to contact support at <a href="mailto:support@cachet.io">support@cachet.io</a>.</p>
+    </div>
+    @elseif ($commit->status === 2)
     <hr>
     @foreach ($commit->diffFiles() as $name => $file)
     <div class="panel panel-default">
