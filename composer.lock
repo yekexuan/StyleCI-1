@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "24928338da6f9b131bb72aac3007bf73",
+    "hash": "e06269701c2cb86d28cb313fdd784882",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -609,16 +609,16 @@
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "c114242ab593a6693ff96e72aeeb44ce76e27d9b"
+                "reference": "cd12546796b4ccf8820b6059eee38d8fd58baa68"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/c114242ab593a6693ff96e72aeeb44ce76e27d9b",
-                "reference": "c114242ab593a6693ff96e72aeeb44ce76e27d9b",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/cd12546796b4ccf8820b6059eee38d8fd58baa68",
+                "reference": "cd12546796b4ccf8820b6059eee38d8fd58baa68",
                 "shasum": ""
             },
             "require": {
@@ -651,7 +651,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "Provides Pretty Error Pages For Both Development And Production",
@@ -668,7 +668,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-05-21 19:37:10"
+            "time": "2015-05-26 18:16:16"
         },
         {
             "name": "graham-campbell/github",
@@ -793,6 +793,66 @@
                 "minifier"
             ],
             "time": "2015-05-20 22:49:46"
+        },
+        {
+            "name": "graham-campbell/logger",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GrahamCampbell/Laravel-Logger.git",
+                "reference": "aa6b71776f4cad2a7770e76759450e45e99f7a6c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/aa6b71776f4cad2a7770e76759450e45e99f7a6c",
+                "reference": "aa6b71776f4cad2a7770e76759450e45e99f7a6c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "5.0.*|5.1.*",
+                "illuminate/support": "5.0.*|5.1.*",
+                "php": ">=5.5.9",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GrahamCampbell\\Logger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@cachethq.io"
+                }
+            ],
+            "description": "Provides Multiple Loggers At Once",
+            "keywords": [
+                "Graham Campbell",
+                "GrahamCampbell",
+                "Laravel-Logger",
+                "framework",
+                "laravel",
+                "laravel logger",
+                "log",
+                "logger",
+                "logging",
+                "logs",
+                "multiple"
+            ],
+            "time": "2015-05-26 18:33:05"
         },
         {
             "name": "graham-campbell/manager",
@@ -1414,12 +1474,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "bd433733ae894a33fb4df3dc78fcddcba70faf7b"
+                "reference": "f663a7c02dc4b4fc6ded0a939f16556bba4ec686"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/bd433733ae894a33fb4df3dc78fcddcba70faf7b",
-                "reference": "bd433733ae894a33fb4df3dc78fcddcba70faf7b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/f663a7c02dc4b4fc6ded0a939f16556bba4ec686",
+                "reference": "f663a7c02dc4b4fc6ded0a939f16556bba4ec686",
                 "shasum": ""
             },
             "require": {
@@ -1537,7 +1597,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-05-26 15:14:29"
+            "time": "2015-05-26 15:21:05"
         },
         {
             "name": "league/flysystem",
@@ -2187,22 +2247,24 @@
         },
         {
             "name": "styleci/bugsnag",
-            "version": "v0.1.1-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Bugsnag.git",
-                "reference": "2ef6c17ef97945a84d1bb19d1f81c66a9400f64e"
+                "reference": "6567bdad131e0fd9f2b81fc6adb61fa5b04eff45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/2ef6c17ef97945a84d1bb19d1f81c66a9400f64e",
-                "reference": "2ef6c17ef97945a84d1bb19d1f81c66a9400f64e",
+                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/6567bdad131e0fd9f2b81fc6adb61fa5b04eff45",
+                "reference": "6567bdad131e0fd9f2b81fc6adb61fa5b04eff45",
                 "shasum": ""
             },
             "require": {
                 "bugsnag/bugsnag": "~2.5",
+                "illuminate/contracts": "5.0.*|5.1.*",
                 "illuminate/support": "5.0.*|5.1.*",
-                "php": ">=5.5.9"
+                "php": ">=5.5.9",
+                "psr/log": "~1.0"
             },
             "require-dev": {
                 "graham-campbell/testbench": "~2.1"
@@ -2210,7 +2272,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.1-dev"
+                    "dev-master": "0.2-dev"
                 }
             },
             "autoload": {
@@ -2244,7 +2306,7 @@
                 "StyleCI",
                 "bugsnag"
             ],
-            "time": "2015-05-26 15:14:57"
+            "time": "2015-05-26 18:30:21"
         },
         {
             "name": "styleci/config",
