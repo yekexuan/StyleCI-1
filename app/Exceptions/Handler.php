@@ -29,18 +29,4 @@ class Handler extends ExceptionHandler
     protected $dontReport = [
         'Symfony\Component\HttpKernel\Exception\HttpException',
     ];
-
-    /**
-     * Report or log an exception.
-     *
-     * @param \Exception $e
-     *
-     * @return void
-     */
-    public function report(Exception $e)
-    {
-        if ($this->shouldReport($e)) {
-            $this->log->error($e);
-        }
-    }
 }
