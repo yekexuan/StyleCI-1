@@ -18,9 +18,15 @@
             "email": "joe@cachethq.io"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/GrahamForks/framework"
+        }
+    ],
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*",
+        "laravel/framework": "5.1-guzzle-dev as 5.1-dev",
         "fideloper/proxy": "~3.0",
         "graham-campbell/binput": "~3.1",
         "graham-campbell/exceptions": "~2.0",
@@ -28,11 +34,11 @@
         "graham-campbell/github": "~3.2",
         "graham-campbell/htmlmin": "~3.1",
         "graham-campbell/logger": "~1.0",
-        "guzzlehttp/guzzle": "~5.0",
+        "guzzlehttp/guzzle": "~6.0",
         "mccool/laravel-auto-presenter": "~3.0",
         "styleci/bugsnag": "0.2.*",
         "styleci/fixer": "0.4.*",
-        "styleci/login": "0.1.*",
+        "styleci/login": "0.2.*",
         "vinkla/pusher": "~1.1"
     },
     "require-dev": {
