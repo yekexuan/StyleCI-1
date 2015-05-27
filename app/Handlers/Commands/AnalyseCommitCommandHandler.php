@@ -17,6 +17,7 @@ use StyleCI\Fixer\Report;
 use StyleCI\Fixer\ReportBuilder;
 use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
 use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
+use StyleCI\StyleCI\Events\AnalysisHasErroredEvent;
 use StyleCI\StyleCI\Events\AnalysisHasStartedEvent;
 use StyleCI\StyleCI\Models\Commit;
 
