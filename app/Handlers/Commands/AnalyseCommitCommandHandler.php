@@ -12,7 +12,6 @@
 namespace StyleCI\StyleCI\Handlers\Commands;
 
 use Exception;
-use Psr\Log\LoggerInterface;
 use StyleCI\Config\Exceptions\ConfigExceptionInterface;
 use StyleCI\Fixer\Report;
 use StyleCI\Fixer\ReportBuilder;
@@ -36,13 +35,6 @@ class AnalyseCommitCommandHandler
     protected $builder;
 
     /**
-     * The logger instance.
-     *
-     * @var \Psr\Log\LoggerInterface
-     */
-    protected $logger;
-
-    /**
      * Create a new analyse commit command handler instance.
      *
      * @param \StyleCI\Fixer\ReportBuilder $builder
@@ -50,10 +42,9 @@ class AnalyseCommitCommandHandler
      *
      * @return void
      */
-    public function __construct(ReportBuilder $builder, LoggerInterface $logger)
+    public function __construct(ReportBuilder $builder)
     {
         $this->builder = $builder;
-        $this->logger = $logger;
     }
 
     /**
