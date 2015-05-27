@@ -11,8 +11,6 @@
 
 namespace StyleCI\StyleCI\Handlers\Events;
 
-namespace StyleCI\StyleCI\Handlers\Events;
-
 use Psr\Log\LoggerInterface;
 
 /**
