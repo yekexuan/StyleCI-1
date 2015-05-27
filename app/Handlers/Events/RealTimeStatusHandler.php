@@ -69,7 +69,7 @@ class RealTimeStatusHandler
      */
     public function handle($event)
     {
-        $commit = $this->presenter->decorate($event->getCommit());
+        $commit = $this->presenter->decorate($event->commit);
 
         if ($commit->ref !== 'refs/heads/master') {
             return;
@@ -77,7 +77,7 @@ class RealTimeStatusHandler
 
         $this->pusher->trigger('ch-'.$commit->repo_id, 'CommitStatusUpdatedEvent', ['event' => $commit->toArray()]);
 
-        foreach ($this->userRepository->collaborators($event->getCommit()) as $user) {
+        foreach ($this->userRepository->collaborators($event->commit) as $user) {
             $this->pusher->trigger('repos-'.$user->id, 'CommitStatusUpdatedEvent', ['event' => $commit->toArray()]);
         }
     }

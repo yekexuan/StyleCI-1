@@ -49,7 +49,7 @@ class EnableHooksHandler
      */
     public function handle(RepoWasEnabledEvent $event)
     {
-        $repo = $event->getRepo();
+        $repo = $event->repo;
 
         // cleanup existing hooks first
         $this->hooks->disable($repo);

@@ -72,9 +72,9 @@ class RealTimeRepoHandler
     public function handle($event)
     {
         if ($event instanceof RepoWasDisabledEvent) {
-            $this->trigger($event->getRepo(), 'RepoWasDisabledEvent');
+            $this->trigger($event->repo, 'RepoWasDisabledEvent');
         } elseif ($event instanceof RepoWasEnabledEvent) {
-            $this->trigger($event->getRepo(), 'RepoWasEnabledEvent');
+            $this->trigger($event->repo, 'RepoWasEnabledEvent');
         }
     }
 

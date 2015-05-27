@@ -25,21 +25,21 @@ class EnableRepoCommand
      *
      * @var int
      */
-    protected $id;
+    public $id;
 
     /**
      * The repository name.
      *
      * @var string
      */
-    protected $name;
+    public $name;
 
     /**
      * The associated user.
      *
      * @var \StyleCI\StyleCI\Models\User
      */
-    protected $user;
+    public $user;
 
     /**
      * Create a new enable repo command instance.
@@ -55,35 +55,5 @@ class EnableRepoCommand
         $this->id = $id;
         $this->name = $name;
         $this->user = $user;
-    }
-
-    /**
-     * Get the repository id.
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Get the repository name.
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Get the associated user.
-     *
-     * @return \StyleCI\StyleCI\Models\User
-     */
-    public function getUser()
-    {
-        return $this->user;
     }
 }

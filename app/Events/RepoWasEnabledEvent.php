@@ -28,7 +28,7 @@ class RepoWasEnabledEvent
      *
      * @var \StyleCI\StyleCI\Models\Repo
      */
-    protected $repo;
+    public $repo;
 
     /**
      * Create a new repo was enabled event instance.
@@ -40,15 +40,5 @@ class RepoWasEnabledEvent
     public function __construct(Repo $repo)
     {
         $this->repo = $repo;
-    }
-
-    /**
-     * Get the repo that was enabled.
-     *
-     * @return \StyleCI\StyleCI\Models\Repo
-     */
-    public function getRepo()
-    {
-        return $this->repo;
     }
 }

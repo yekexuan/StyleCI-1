@@ -34,7 +34,7 @@ class DeleteAccountCommandHandler
      */
     public function handle(DeleteAccountCommand $command)
     {
-        $user = $command->getUser();
+        $user = $command->user;
 
         foreach ($user->repos as $repo) {
             $this->dispatch(new DisableRepoCommand($repo));

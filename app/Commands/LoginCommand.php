@@ -24,35 +24,35 @@ class LoginCommand
      *
      * @var string
      */
-    protected $id;
+    public $id;
 
     /**
      * The user's name.
      *
      * @var string
      */
-    protected $name;
+    public $name;
 
     /**
      * The user's username.
      *
      * @var string
      */
-    protected $username;
+    public $username;
 
     /**
      * The user's email address.
      *
      * @var string
      */
-    protected $email;
+    public $email;
 
     /**
      * The user's access token.
      *
      * @var string
      */
-    protected $token;
+    public $token;
 
     /**
      * Create a new login command instance.
@@ -72,55 +72,5 @@ class LoginCommand
         $this->username = $username;
         $this->email = $email;
         $this->token = $token;
-    }
-
-    /**
-     * Get the user's id.
-     *
-     * @return string
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Get the user's name.
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * Get the user's username.
-     *
-     * @return string
-     */
-    public function getUsername()
-    {
-        return $this->username;
-    }
-
-    /**
-     * Get the user's email address.
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * Get the user's access token.
-     *
-     * @return string
-     */
-    public function getToken()
-    {
-        return $this->token;
     }
 }

@@ -28,7 +28,7 @@ class UserHasRageQuitEvent
      *
      * @var \StyleCI\StyleCI\Models\User
      */
-    protected $user;
+    public $user;
 
     /**
      * Create a new user has rage quit event instance.
@@ -40,15 +40,5 @@ class UserHasRageQuitEvent
     public function __construct(User $user)
     {
         $this->user = $user;
-    }
-
-    /**
-     * Get the user that has rage quit.
-     *
-     * @return \StyleCI\StyleCI\Models\User
-     */
-    public function getUser()
-    {
-        return $this->user;
     }
 }

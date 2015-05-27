@@ -25,7 +25,7 @@ class DeleteAccountCommand
      *
      * @var \StyleCI\StyleCI\Models\User
      */
-    protected $user;
+    public $user;
 
     /**
      * Create a new delete account command instance.
@@ -37,15 +37,5 @@ class DeleteAccountCommand
     public function __construct(User $user)
     {
         $this->user = $user;
-    }
-
-    /**
-     * Get the user to delete.
-     *
-     * @return \StyleCI\StyleCI\Models\User
-     */
-    public function getUser()
-    {
-        return $this->user;
     }
 }

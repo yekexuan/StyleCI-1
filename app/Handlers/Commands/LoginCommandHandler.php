@@ -53,14 +53,14 @@ class LoginCommandHandler
      */
     public function handle(LoginCommand $command)
     {
-        $user = $this->userRepository->findOrGenerate($command->getId());
+        $user = $this->userRepository->findOrGenerate($command->id);
 
         $new = $user->exists === false;
 
-        $user->name = $command->getName();
-        $user->email = $command->getEmail();
-        $user->username = $command->getUsername();
-        $user->access_token = $command->getToken();
+        $user->name = $command->name;
+        $user->email = $command->email;
+        $user->username = $command->username;
+        $user->access_token = $command->token;
 
         $user->save();
 

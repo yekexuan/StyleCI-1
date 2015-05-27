@@ -30,7 +30,7 @@ class AnalyseCommitCommand implements ShouldBeQueued
      *
      * @var \StyleCI\StyleCI\Models\Commit
      */
-    protected $commit;
+    public $commit;
 
     /**
      * Create a new analyse commit command instance.
@@ -44,15 +44,5 @@ class AnalyseCommitCommand implements ShouldBeQueued
         $this->commit = $commit;
 
         event(new AnalysisWasQueuedEvent($commit));
-    }
-
-    /**
-     * Get the commit to analyse.
-     *
-     * @return \StyleCI\StyleCI\Models\Commit
-     */
-    public function getCommit()
-    {
-        return $this->commit;
     }
 }

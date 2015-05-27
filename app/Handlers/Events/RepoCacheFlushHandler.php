@@ -49,7 +49,7 @@ class RepoCacheFlushHandler
      */
     public function handle(UserHasLoggedInEvent $event)
     {
-        $user = $event->getUser();
+        $user = $event->user;
 
         $this->repos->flush($user);
     }

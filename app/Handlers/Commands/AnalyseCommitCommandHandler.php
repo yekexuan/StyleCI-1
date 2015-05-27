@@ -64,7 +64,7 @@ class AnalyseCommitCommandHandler
      */
     public function handle(AnalyseCommitCommand $command)
     {
-        $commit = $command->getCommit();
+        $commit = $command->commit;
 
         try {
             $this->saveReport($this->builder->analyse($commit->name(), $commit->id), $commit);

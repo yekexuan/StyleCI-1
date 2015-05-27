@@ -28,7 +28,7 @@ class AnalysisHasCompletedEvent
      *
      * @var \StyleCI\StyleCI\Models\Commit
      */
-    protected $commit;
+    public $commit;
 
     /**
      * Create a new analysis has completed event instance.
@@ -40,15 +40,5 @@ class AnalysisHasCompletedEvent
     public function __construct(Commit $commit)
     {
         $this->commit = $commit;
-    }
-
-    /**
-     * Get the commit that was analysed.
-     *
-     * @return \StyleCI\StyleCI\Models\Commit
-     */
-    public function getCommit()
-    {
-        return $this->commit;
     }
 }

@@ -49,7 +49,7 @@ class RevokeTokenHandler
      */
     public function handle(UserHasRageQuitEvent $event)
     {
-        $user = $event->getUser();
+        $user = $event->user;
 
         $this->tokens->revoke($user->access_token);
     }

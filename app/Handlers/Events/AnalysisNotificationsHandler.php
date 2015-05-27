@@ -62,7 +62,7 @@ class AnalysisNotificationsHandler implements ShouldBeQueued
      */
     public function handle(AnalysisHasCompletedEvent $event)
     {
-        $commit = $event->getCommit();
+        $commit = $event->commit;
 
         // if the analysis didn't fail, then we don't need to notify anyone
         if ($commit->status < 2) {

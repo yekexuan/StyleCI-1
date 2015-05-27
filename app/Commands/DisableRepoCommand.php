@@ -25,7 +25,7 @@ class DisableRepoCommand
      *
      * @var \StyleCI\StyleCI\Models\Repo
      */
-    protected $repo;
+    public $repo;
 
     /**
      * Create a new disable repo command instance.
@@ -37,15 +37,5 @@ class DisableRepoCommand
     public function __construct(Repo $repo)
     {
         $this->repo = $repo;
-    }
-
-    /**
-     * Get the repository to delete.
-     *
-     * @return \StyleCI\StyleCI\Models\Repo
-     */
-    public function getRepo()
-    {
-        return $this->repo;
     }
 }

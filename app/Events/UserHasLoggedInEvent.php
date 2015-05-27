@@ -28,7 +28,7 @@ class UserHasLoggedInEvent
      *
      * @var \StyleCI\StyleCI\Models\User
      */
-    protected $user;
+    public $user;
 
     /**
      * Create a new user has logged in event instance.
@@ -40,15 +40,5 @@ class UserHasLoggedInEvent
     public function __construct(User $user)
     {
         $this->user = $user;
-    }
-
-    /**
-     * Get the user that has logged in.
-     *
-     * @return \StyleCI\StyleCI\Models\User
-     */
-    public function getUser()
-    {
-        return $this->user;
     }
 }

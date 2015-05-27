@@ -33,9 +33,9 @@ class EnableRepoCommandHandler
     {
         $repo = new Repo();
 
-        $repo->id = $command->getId();
-        $repo->name = $command->getName();
-        $repo->user_id = $command->getUser()->id;
+        $repo->id = $command->id;
+        $repo->name = $command->name;
+        $repo->user_id = $command->user->id;
 
         $repo->save();
 

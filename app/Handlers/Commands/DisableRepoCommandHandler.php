@@ -30,7 +30,7 @@ class DisableRepoCommandHandler
      */
     public function handle(DisableRepoCommand $command)
     {
-        $repo = $command->getRepo();
+        $repo = $command->repo;
 
         foreach ($repo->commits as $commit) {
             $commit->delete();

@@ -28,7 +28,7 @@ class UserHasSignedUpEvent
      *
      * @var \StyleCI\StyleCI\Models\User
      */
-    protected $user;
+    public $user;
 
     /**
      * Create a new user has signed up event instance.
@@ -40,15 +40,5 @@ class UserHasSignedUpEvent
     public function __construct(User $user)
     {
         $this->user = $user;
-    }
-
-    /**
-     * Get the user that has signed up.
-     *
-     * @return \StyleCI\StyleCI\Models\User
-     */
-    public function getUser()
-    {
-        return $this->user;
     }
 }

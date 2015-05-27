@@ -49,7 +49,7 @@ class CommitStatusHandler implements ShouldBeQueued
      */
     public function handle($event)
     {
-        $commit = $event->getCommit();
+        $commit = $event->commit;
 
         $this->status->push($commit);
     }

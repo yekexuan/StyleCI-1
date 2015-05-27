@@ -28,7 +28,7 @@ class AnalysisWasQueuedEvent
      *
      * @var \StyleCI\StyleCI\Models\Commit
      */
-    protected $commit;
+    public $commit;
 
     /**
      * Create a new analysis was queued event instance.
@@ -40,15 +40,5 @@ class AnalysisWasQueuedEvent
     public function __construct(Commit $commit)
     {
         $this->commit = $commit;
-    }
-
-    /**
-     * Get the commit that will be analysed.
-     *
-     * @return \StyleCI\StyleCI\Models\Commit
-     */
-    public function getCommit()
-    {
-        return $this->commit;
     }
 }

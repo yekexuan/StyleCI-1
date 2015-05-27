@@ -51,7 +51,7 @@ class WelcomeMessageHandler implements ShouldBeQueued
      */
     public function handle(UserHasSignedUpEvent $event)
     {
-        $user = $event->getUser();
+        $user = $event->user;
 
         $mail = [
             'name'    => explode(' ', $user->name)[0],
