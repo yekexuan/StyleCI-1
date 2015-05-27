@@ -11,34 +11,34 @@
 
 namespace StyleCI\StyleCI\Events;
 
+use Exception;
 use Illuminate\Queue\SerializesModels;
-use StyleCI\StyleCI\Models\Commit;
 
 /**
- * This is the analysis has completed event class.
+ * This is the analysis has errored event class.
  *
  * @author Graham Campbell <graham@cachethq.io>
  */
-class AnalysisHasCompletedEvent
+class AnalysisHasErroredEvent
 {
     use SerializesModels;
 
     /**
-     * The commit that was analysed.
+     * The exception that occurred during analysis.
      *
-     * @var \StyleCI\StyleCI\Models\Commit
+     * @var \Exception
      */
-    public $commit;
+    public $exception;
 
     /**
-     * Create a new analysis has completed event instance.
+     * Create a new analysis has errored event instance.
      *
-     * @param \StyleCI\StyleCI\Models\Commit $commit
+     * @param \Exception $exception
      *
      * @return void
      */
-    public function __construct(Commit $commit)
+    public function __construct(Exception $exception)
     {
-        $this->commit = $commit;
+        $this->exception = $exception;
     }
 }

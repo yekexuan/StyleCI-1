@@ -48,8 +48,6 @@ class ExceptionLoggingHandler
      */
     public function handle($event)
     {
-        if ($exception = $event->exception) {
-            $this->logger->notice($exception);
-        }
+        $this->logger->notice($event->exception);
     }
 }

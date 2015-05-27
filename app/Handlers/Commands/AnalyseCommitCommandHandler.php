@@ -72,10 +72,10 @@ class AnalyseCommitCommandHandler
         }
 
         if (isset($e)) {
-            event(new AnalysisHasCompletedEvent($commit, $e));
-        } else {
-            event(new AnalysisHasCompletedEvent($commit));
+            event(new AnalysisHasErroredEvent($e));
         }
+
+        event(new AnalysisHasCompletedEvent($commit));
     }
 
     /**
