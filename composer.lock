@@ -1474,12 +1474,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "7551dd7002c1b4a7493791929d8684e8d1f67686"
+                "reference": "ab7c76ef0b12ef6f4332f2d727922494f39e2647"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/7551dd7002c1b4a7493791929d8684e8d1f67686",
-                "reference": "7551dd7002c1b4a7493791929d8684e8d1f67686",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ab7c76ef0b12ef6f4332f2d727922494f39e2647",
+                "reference": "ab7c76ef0b12ef6f4332f2d727922494f39e2647",
                 "shasum": ""
             },
             "require": {
@@ -1597,7 +1597,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-05-26 20:33:01"
+            "time": "2015-05-27 02:44:24"
         },
         {
             "name": "league/flysystem",
@@ -4324,12 +4324,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "c2c540f8e1bd95aeaf134513bf8186ff25433c70"
+                "reference": "afa37694853629540b15639cb72a025d2144b6ab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/c2c540f8e1bd95aeaf134513bf8186ff25433c70",
-                "reference": "c2c540f8e1bd95aeaf134513bf8186ff25433c70",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/afa37694853629540b15639cb72a025d2144b6ab",
+                "reference": "afa37694853629540b15639cb72a025d2144b6ab",
                 "shasum": ""
             },
             "require": {
@@ -4343,8 +4343,8 @@
                 "phpunit/phpunit": "~4.0"
             },
             "suggest": {
-                "behat/behat": "Allow to use Behat for testing your Laravel Application/Package (~2.5)",
-                "phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package (~4.0)"
+                "behat/behat": "Allow to use Behat for testing your Laravel Application/Package (~2.5).",
+                "phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package (~4.0)."
             },
             "type": "library",
             "extra": {
@@ -4378,7 +4378,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2015-05-26 08:19:14"
+            "time": "2015-05-27 03:46:18"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
