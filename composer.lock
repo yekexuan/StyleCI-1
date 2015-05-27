@@ -2251,12 +2251,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Bugsnag.git",
-                "reference": "b39b2de93a5bd9875a42ab0fcdc9f1541b03ed60"
+                "reference": "902efadb83d7df29e30d18a9bcf3f2b5b2cf6608"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/b39b2de93a5bd9875a42ab0fcdc9f1541b03ed60",
-                "reference": "b39b2de93a5bd9875a42ab0fcdc9f1541b03ed60",
+                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/902efadb83d7df29e30d18a9bcf3f2b5b2cf6608",
+                "reference": "902efadb83d7df29e30d18a9bcf3f2b5b2cf6608",
                 "shasum": ""
             },
             "require": {
@@ -2306,7 +2306,7 @@
                 "StyleCI",
                 "bugsnag"
             ],
-            "time": "2015-05-27 00:17:06"
+            "time": "2015-05-27 00:26:32"
         },
         {
             "name": "styleci/config",
@@ -2844,7 +2844,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.6.7",
+            "version": "v2.6.8",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
@@ -2903,17 +2903,17 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.6.7",
+            "version": "v2.6.8",
             "target-dir": "Symfony/Component/Filesystem",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Filesystem.git",
-                "reference": "f73904bd2dae525c42ea1f0340c7c98480ecacde"
+                "reference": "1f8429f72a5bfa58b33fd96824bea146fc4b3f49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/f73904bd2dae525c42ea1f0340c7c98480ecacde",
-                "reference": "f73904bd2dae525c42ea1f0340c7c98480ecacde",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/1f8429f72a5bfa58b33fd96824bea146fc4b3f49",
+                "reference": "1f8429f72a5bfa58b33fd96824bea146fc4b3f49",
                 "shasum": ""
             },
             "require": {
@@ -2949,7 +2949,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2015-05-08 00:09:07"
+            "time": "2015-05-15 13:32:45"
         },
         {
             "name": "symfony/finder",
@@ -3318,7 +3318,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v2.6.7",
+            "version": "v2.6.8",
             "target-dir": "Symfony/Component/Stopwatch",
             "source": {
                 "type": "git",
@@ -3488,7 +3488,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.6.7",
+            "version": "v2.6.8",
             "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
