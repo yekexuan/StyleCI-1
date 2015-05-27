@@ -27,6 +27,6 @@ class Handler extends ExceptionHandler
      * @var string[]
      */
     protected $dontReport = [
-        'Symfony\Component\HttpKernel\Exception\HttpException',
+        'Symfony\Component\HttpKernel\Exception\NotFoundHttpException',
     ];
 }
