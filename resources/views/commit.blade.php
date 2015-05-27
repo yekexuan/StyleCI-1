@@ -45,12 +45,12 @@
                     </li>
                     @if ($commit->status === 2)
                     <li>
-                        <a class="btn btn-link" href="{{ route('commit_download_path', $commit->id) }}">
+                        <a class="btn" href="{{ route('commit_download_path', $commit->id) }}">
                             <i class="fa fa-cloud-download"></i> Download patch
                         </a>
                     </li>
                     <li>
-                        <a class="btn btn-link" href="{{ route('commit_diff_path', $commit->id) }}">
+                        <a class="btn" href="{{ route('commit_diff_path', $commit->id) }}">
                             <i class="fa fa-code"></i> Open diff file
                         </a>
                     </li>
@@ -77,7 +77,12 @@
     </div>
     @elseif ($commit->status === 2)
     <hr>
-    @foreach ($commit->diffFiles() as $name => $file)
+    <p>
+        <i class="fa fa-file-code-o"></i>
+        <small>Showing <b>{{ $commit->diff->count() }} changed files</b> with <b>{{ $commit->diff->additions() }} additions</b> and <b>{{ $commit->diff->deletions() }} deletions</b>.</small>
+    </p>
+    <br>
+    @foreach ($commit->diff->files() as $name => $file)
     <div class="panel panel-default">
         <div class="panel-heading">
             {{ $name }}
