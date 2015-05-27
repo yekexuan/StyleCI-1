@@ -2271,18 +2271,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Bugsnag.git",
-                "reference": "0f48293980853575463f93dfa7ae033a5b7980a8"
+                "reference": "a6468110882d425945eb3451f1c19d62976cae54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/0f48293980853575463f93dfa7ae033a5b7980a8",
-                "reference": "0f48293980853575463f93dfa7ae033a5b7980a8",
+                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/a6468110882d425945eb3451f1c19d62976cae54",
+                "reference": "a6468110882d425945eb3451f1c19d62976cae54",
                 "shasum": ""
             },
             "require": {
                 "bugsnag/bugsnag": "~2.5",
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
+                "illuminate/contracts": "5.1.*",
+                "illuminate/support": "5.1.*",
                 "php": ">=5.5.9",
                 "psr/log": "~1.0"
             },
@@ -2326,7 +2326,7 @@
                 "StyleCI",
                 "bugsnag"
             ],
-            "time": "2015-05-27 14:52:07"
+            "time": "2015-05-27 21:00:58"
         },
         {
             "name": "styleci/config",
@@ -2529,19 +2529,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "4dabcaa99212a39114d7beddbee3e513725e1cb9"
+                "reference": "5a84d0e8590ed2b18503bc513caac00bad7da889"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/4dabcaa99212a39114d7beddbee3e513725e1cb9",
-                "reference": "4dabcaa99212a39114d7beddbee3e513725e1cb9",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/5a84d0e8590ed2b18503bc513caac00bad7da889",
+                "reference": "5a84d0e8590ed2b18503bc513caac00bad7da889",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "~6.0",
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/http": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
+                "illuminate/contracts": "5.1.*",
+                "illuminate/http": "5.1.*",
+                "illuminate/support": "5.1.*",
                 "php": ">=5.5.9"
             },
             "require-dev": {
@@ -2584,7 +2584,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-05-27 20:06:10"
+            "time": "2015-05-27 21:01:13"
         },
         {
             "name": "swiftmailer/swiftmailer",
