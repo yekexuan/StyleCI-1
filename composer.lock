@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "77bb56084892d60d693192326739cd40",
+    "hash": "0a49eb0bd9da7295d202ca183f7e3d35",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -609,26 +609,26 @@
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "v2.0.1",
+            "version": "dev-test",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "cd12546796b4ccf8820b6059eee38d8fd58baa68"
+                "reference": "b3185c6c94227c85421dd8e5165c2655d1f9a66b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/cd12546796b4ccf8820b6059eee38d8fd58baa68",
-                "reference": "cd12546796b4ccf8820b6059eee38d8fd58baa68",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/b3185c6c94227c85421dd8e5165c2655d1f9a66b",
+                "reference": "b3185c6c94227c85421dd8e5165c2655d1f9a66b",
                 "shasum": ""
             },
             "require": {
                 "filp/whoops": "1.1.*",
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
+                "illuminate/contracts": "5.1.*",
+                "illuminate/support": "5.1.*",
                 "php": ">=5.5.9",
                 "psr/log": "~1.0",
-                "symfony/debug": "2.6.*|2.7.*",
-                "symfony/http-foundation": "2.6.*|2.7.*"
+                "symfony/debug": "2.7.*",
+                "symfony/http-foundation": "2.7.*"
             },
             "require-dev": {
                 "graham-campbell/testbench": "~2.1"
@@ -636,7 +636,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -668,7 +668,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-05-26 18:16:16"
+            "time": "2015-05-27 23:26:45"
         },
         {
             "name": "graham-campbell/github",
@@ -1482,16 +1482,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "dev-5.1-guzzle",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/GrahamForks/framework.git",
-                "reference": "e2b2a23715bbd3f91d870d37153c264f183005c6"
+                "url": "https://github.com/GrahamStuff/framework.git",
+                "reference": "36665b1c624cdef2662153bafac0ef3c5c8ca205"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamForks/framework/zipball/e2b2a23715bbd3f91d870d37153c264f183005c6",
-                "reference": "e2b2a23715bbd3f91d870d37153c264f183005c6",
+                "url": "https://api.github.com/repos/GrahamStuff/framework/zipball/36665b1c624cdef2662153bafac0ef3c5c8ca205",
+                "reference": "36665b1c624cdef2662153bafac0ef3c5c8ca205",
                 "shasum": ""
             },
             "require": {
@@ -1612,7 +1612,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2015-05-27 20:19:28"
+            "time": "2015-05-27 23:23:59"
         },
         {
             "name": "league/flysystem",
@@ -5205,15 +5205,15 @@
     ],
     "aliases": [
         {
-            "alias": "5.1-dev",
-            "alias_normalized": "5.1.0.0-dev",
-            "version": "dev-5.1-guzzle",
-            "package": "laravel/framework"
+            "alias": "3.0-dev",
+            "alias_normalized": "3.0.0.0-dev",
+            "version": "dev-test",
+            "package": "graham-campbell/exceptions"
         }
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "laravel/framework": 20
+        "graham-campbell/exceptions": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
