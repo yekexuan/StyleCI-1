@@ -12,12 +12,12 @@
 namespace StyleCI\StyleCI\Handlers\Commands;
 
 use Exception;
-use Psr\Log\LoggerInterface;
 use StyleCI\Config\Exceptions\ConfigExceptionInterface;
 use StyleCI\Fixer\Report;
 use StyleCI\Fixer\ReportBuilder;
 use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
 use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
+use StyleCI\StyleCI\Events\AnalysisHasStartedEvent;
 use StyleCI\StyleCI\Models\Commit;
 
 /**
@@ -35,13 +35,6 @@ class AnalyseCommitCommandHandler
     protected $builder;
 
     /**
-     * The logger instance.
-     *
-     * @var \Psr\Log\LoggerInterface
-     */
-    protected $logger;
-
-    /**
      * Create a new analyse commit command handler instance.
      *
      * @param \StyleCI\Fixer\ReportBuilder $builder
@@ -49,10 +42,9 @@ class AnalyseCommitCommandHandler
      *
      * @return void
      */
-    public function __construct(ReportBuilder $builder, LoggerInterface $logger)
+    public function __construct(ReportBuilder $builder)
     {
         $this->builder = $builder;
-        $this->logger = $logger;
     }
 
     /**
@@ -66,20 +58,24 @@ class AnalyseCommitCommandHandler
     {
         $commit = $command->commit;
 
+        event(new AnalysisHasStartedEvent($commit));
+
         try {
             $this->saveReport($this->builder->analyse($commit->name(), $commit->id), $commit);
         } catch (ConfigExceptionInterface $e) {
             $commit->status = 4;
             $commit->error_message = $e->getMessage();
             $commit->save();
-            $this->logger->notice('Analysis misconfigured.', [$e, $commit->toArray()]);
         } catch (Exception $e) {
             $commit->status = 3;
             $commit->save();
-            $this->logger->error('Analysis errored.', [$e, $commit->toArray()]);
         }
 
-        event(new AnalysisHasCompletedEvent($commit));
+        if (isset($e)) {
+            event(new AnalysisHasCompletedEvent($commit, $e));
+        } else {
+            event(new AnalysisHasCompletedEvent($commit));
+        }
     }
 
     /**
