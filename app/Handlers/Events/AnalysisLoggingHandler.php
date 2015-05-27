@@ -52,17 +52,17 @@ class AnalysisLoggingHandler
 
         switch ($commit->status) {
             case 0:
-                $this->logger->debug("Analysis of {$commit->id} in {$commit->repo->id} has started.", ['commit' => $commit->toArray()]);
+                $this->logger->debug("Analysis of {$commit->id} in {$commit->repo->id} has started.", ['title' => 'Analysis started.', 'commit' => $commit->toArray()]);
                 break;
             case 1:
             case 2:
-                $this->logger->debug("Analysis of {$commit->id} in {$commit->repo->id} has completed successfully.", ['commit' => $commit->toArray()]);
+                $this->logger->debug("Analysis of {$commit->id} in {$commit->repo->id} has completed successfully.", ['title' => 'Analysis completed.', 'commit' => $commit->toArray()]);
                 break;
             case 3:
-                $this->logger->error("Analysis of {$commit->id} in {$commit->repo->id} has failed due to an internal error.", ['commit' => $commit->toArray()]);
+                $this->logger->error("Analysis of {$commit->id} in {$commit->repo->id} has failed due to an internal error.", ['title' => 'Analysis errored.', 'commit' => $commit->toArray()]);
                 break;
             case 4:
-                $this->logger->notice("Analysis of {$commit->id} in {$commit->repo->id} has failed due to misconfiguration.", ['commit' => $commit->toArray()]);
+                $this->logger->notice("Analysis of {$commit->id} in {$commit->repo->id} has failed due to misconfiguration.", ['title' => 'Analysis misconfigured.', 'commit' => $commit->toArray()]);
                 break;
         }
     }
