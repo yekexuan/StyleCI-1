@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Exceptions;
 
-use Exception;
 use GrahamCampbell\Exceptions\ExceptionHandler;
 
 /**
