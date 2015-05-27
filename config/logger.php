@@ -22,7 +22,7 @@ return [
 
     'loggers' => [
         'Illuminate\Log\Writer',
-        'StyleCI\Bugsnag\Logger',
+        // 'StyleCI\Bugsnag\Logger',
     ],
 
 ];
