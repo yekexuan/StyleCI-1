@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6ab8a086af2429e711a1b35dc07d39a7",
+    "hash": "822487f85a26bbe6dd1ec8072a399b3c",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -2251,12 +2251,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Bugsnag.git",
-                "reference": "ed961f57fb2db8cc26878fa1d0a21f57e641fdec"
+                "reference": "0f48293980853575463f93dfa7ae033a5b7980a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/ed961f57fb2db8cc26878fa1d0a21f57e641fdec",
-                "reference": "ed961f57fb2db8cc26878fa1d0a21f57e641fdec",
+                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/0f48293980853575463f93dfa7ae033a5b7980a8",
+                "reference": "0f48293980853575463f93dfa7ae033a5b7980a8",
                 "shasum": ""
             },
             "require": {
@@ -2306,7 +2306,7 @@
                 "StyleCI",
                 "bugsnag"
             ],
-            "time": "2015-05-27 00:33:19"
+            "time": "2015-05-27 14:52:07"
         },
         {
             "name": "styleci/config",
