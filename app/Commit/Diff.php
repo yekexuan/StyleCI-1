@@ -94,14 +94,14 @@ class Diff implements ArrayAccess
     /**
      * Process a raw diff patch.
      *
-     * @param  string $rawDiff
+     * @param string $rawDiff
      *
      * @return void
      */
     protected function processDiff($rawDiff)
     {
         $diff = ltrim($rawDiff);
-        
+
         // We first get the original and modified file names from the diff.
         preg_match_all('/\-\-\-\sa\/(.*?.*)/i', $diff, $originalNames);
         preg_match_all('/\+\+\+\sb\/(.*?.*)/i', $diff, $modifiedNames);
@@ -136,12 +136,13 @@ class Diff implements ArrayAccess
     /**
      * Set a diff file.
      *
-     * @param  string $offset
-     * @param  mixed  $value
+     * @param string $offset
+     * @param mixed  $value
      *
      * @return void
      */
-    public function offsetSet($offset, $value) {
+    public function offsetSet($offset, $value)
+    {
         if (is_null($offset)) {
             $this->files[] = $value;
         } else {
@@ -152,33 +153,36 @@ class Diff implements ArrayAccess
     /**
      * Determine if the given file exists.
      *
-     * @param  string  $offset
+     * @param string $offset
      *
      * @return bool
      */
-    public function offsetExists($offset) {
+    public function offsetExists($offset)
+    {
         return isset($this->files[$offset]);
     }
 
     /**
      * Unset a diff file.
      *
-     * @param  string  $offset
+     * @param string $offset
      *
      * @return void
      */
-    public function offsetUnset($offset) {
+    public function offsetUnset($offset)
+    {
         unset($this->files[$offset]);
     }
 
     /**
      * Get a diff file.
      *
-     * @param  string  $offset
+     * @param string $offset
      *
      * @return mixed
      */
-    public function offsetGet($offset) {
+    public function offsetGet($offset)
+    {
         return isset($this->files[$offset]) ? $this->files[$offset] : null;
     }
 }
