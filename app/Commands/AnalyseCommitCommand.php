@@ -41,6 +41,11 @@ class AnalyseCommitCommand implements ShouldBeQueued
      */
     public function __construct(Commit $commit)
     {
+        $commit->status = 0;
+        $commit->error_message = null;
+
+        $commit->save();
+
         $this->commit = $commit;
 
         event(new AnalysisWasQueuedEvent($commit));

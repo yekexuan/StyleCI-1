@@ -111,8 +111,6 @@ class GitHubController extends AbstractController
             }
 
             $commit->message = substr(strtok(strtok($input['head_commit']['message'], "\n"), "\r"), 0, 127);
-            $commit->status = 0;
-            $commit->save();
 
             $this->dispatch(new AnalyseCommitCommand($commit));
 
@@ -153,8 +151,6 @@ class GitHubController extends AbstractController
             }
 
             $commit->message = substr('Pull Request: '.strtok(strtok($input['pull_request']['title'], "\n"), "\r"), 0, 127);
-            $commit->status = 0;
-            $commit->save();
 
             $this->dispatch(new AnalyseCommitCommand($commit));
 

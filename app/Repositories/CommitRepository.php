@@ -94,9 +94,6 @@ class CommitRepository
             $commit->ref = "refs/heads/$branch";
         }
 
-        $commit->status = 0;
-        $commit->save();
-
         return $commit;
     }
 }
