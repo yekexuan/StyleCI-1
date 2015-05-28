@@ -12,8 +12,8 @@
 namespace StyleCI\StyleCI\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use StyleCI\StyleCI\Composers\CurrentUserComposer;
 use StyleCI\StyleCI\Composers\CurrentUrlComposer;
+use StyleCI\StyleCI\Composers\CurrentUserComposer;
 
 /**
  * This is the view composer service provider class.
