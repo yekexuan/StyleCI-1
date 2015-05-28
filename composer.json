@@ -67,10 +67,10 @@
             "php artisan clear-compiled"
         ],
         "post-update-cmd": [
-            "php artisan clear-compiled",
             "php artisan optimize --force"
         ],
         "post-create-project-cmd": [
+            "php -r \"copy('.env.example', '.env');\"",
             "php artisan key:generate"
         ]
     },
