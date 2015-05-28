@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "63661d535aaedc82f5c04cc702c11d83",
+    "hash": "33f7ab41c52a58b878ed307c13e94b25",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -550,16 +550,16 @@
         },
         {
             "name": "graham-campbell/core",
-            "version": "v3.0.0",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Core.git",
-                "reference": "38e3b9013eb008e19ebab0c7dd33db0b921101f2"
+                "reference": "b35baced7e78125b8228ba43bf3fb8b5561d3ff9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/38e3b9013eb008e19ebab0c7dd33db0b921101f2",
-                "reference": "38e3b9013eb008e19ebab0c7dd33db0b921101f2",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/b35baced7e78125b8228ba43bf3fb8b5561d3ff9",
+                "reference": "b35baced7e78125b8228ba43bf3fb8b5561d3ff9",
                 "shasum": ""
             },
             "require": {
@@ -569,13 +569,12 @@
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1",
-                "laravelcollective/html": "5.0.*|5.1.*"
+                "graham-campbell/testbench": "~2.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -590,7 +589,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "Core Provides Some Extra Functionality For Laravel 5",
@@ -605,20 +604,20 @@
                 "laravel",
                 "starter"
             ],
-            "time": "2015-05-19 20:30:10"
+            "time": "2015-05-28 22:41:10"
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "dev-test",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "131aac451f0c7bcb84b054f053657137b9180945"
+                "reference": "f081b83c74f59c6422498c2e0c794b7b81633ec7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/131aac451f0c7bcb84b054f053657137b9180945",
-                "reference": "131aac451f0c7bcb84b054f053657137b9180945",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/f081b83c74f59c6422498c2e0c794b7b81633ec7",
+                "reference": "f081b83c74f59c6422498c2e0c794b7b81633ec7",
                 "shasum": ""
             },
             "require": {
@@ -668,7 +667,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-05-28 16:23:29"
+            "time": "2015-05-28 22:51:39"
         },
         {
             "name": "graham-campbell/github",
@@ -1485,13 +1484,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/GrahamStuff/framework.git",
-                "reference": "96fd42c3014dd7a3ff0ba8faf4a1d24c36ff932c"
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "42d4c3477c04577725da035957d209ac1ef251ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamStuff/framework/zipball/96fd42c3014dd7a3ff0ba8faf4a1d24c36ff932c",
-                "reference": "96fd42c3014dd7a3ff0ba8faf4a1d24c36ff932c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/42d4c3477c04577725da035957d209ac1ef251ee",
+                "reference": "42d4c3477c04577725da035957d209ac1ef251ee",
                 "shasum": ""
             },
             "require": {
@@ -1567,7 +1566,7 @@
                 "aws/aws-sdk-php": "Required to use the SQS queue driver and SES mail driver (~2.4).",
                 "doctrine/dbal": "Required to rename columns and drop SQLite columns (~2.4).",
                 "fzaninotto/faker": "Required to use the eloquent factory builder (~1.4).",
-                "guzzlehttp/guzzle": "Required to use the Mailgun and Mandrill mail drivers (~6.0).",
+                "guzzlehttp/guzzle": "Required to use the Mailgun and Mandrill mail drivers (~5.3|~6.0).",
                 "iron-io/iron_mq": "Required to use the iron queue driver (~2.0).",
                 "league/flysystem-aws-s3-v2": "Required to use the Flysystem S3 driver (~1.0).",
                 "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0).",
@@ -1593,6 +1592,7 @@
                     "Illuminate\\": "src/Illuminate/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1608,11 +1608,7 @@
                 "framework",
                 "laravel"
             ],
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
-            "time": "2015-05-28 15:57:28"
+            "time": "2015-05-28 22:43:48"
         },
         {
             "name": "league/flysystem",
@@ -5203,18 +5199,9 @@
             "time": "2015-02-24 06:35:25"
         }
     ],
-    "aliases": [
-        {
-            "alias": "3.0-dev",
-            "alias_normalized": "3.0.0.0-dev",
-            "version": "dev-test",
-            "package": "graham-campbell/exceptions"
-        }
-    ],
+    "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "graham-campbell/exceptions": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

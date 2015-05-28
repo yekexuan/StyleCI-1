@@ -18,18 +18,12 @@
             "email": "joe@cachethq.io"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/GrahamStuff/framework"
-        }
-    ],
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "fideloper/proxy": "~3.0",
         "graham-campbell/binput": "~3.1",
-        "graham-campbell/exceptions": "test-dev as 3.0-dev",
+        "graham-campbell/exceptions": "~3.0",
         "graham-campbell/core": "~4.0",
         "graham-campbell/github": "~3.2",
         "graham-campbell/htmlmin": "~3.1",
