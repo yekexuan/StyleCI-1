@@ -1,4 +1,4 @@
-@extends(Config::get('core.email'))
+@extends('layouts.email')
 
 @section('content')
 <p>Thank you for creating an account on <a href="{{ route('home') }}">StyleCI</a>; we're excited to have you on board!</p>

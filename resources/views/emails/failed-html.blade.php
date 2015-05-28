@@ -1,4 +1,4 @@
-@extends(Config::get('core.email'))
+@extends('layouts.email')
 
 @section('content')
 <p>The coding style analysis of the commit "{{ $commit }}" on "{{ $repo }}" revealed problems.</p>

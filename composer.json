@@ -30,7 +30,7 @@
         "fideloper/proxy": "~3.0",
         "graham-campbell/binput": "~3.1",
         "graham-campbell/exceptions": "test-dev as 3.0-dev",
-        "graham-campbell/core": "~3.0",
+        "graham-campbell/core": "~4.0",
         "graham-campbell/github": "~3.2",
         "graham-campbell/htmlmin": "~3.1",
         "graham-campbell/logger": "~1.0",
