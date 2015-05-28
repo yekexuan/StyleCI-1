@@ -165,7 +165,7 @@ $(function() {
                         });
                     })
                     .fail(function(response) {
-                        (new StyleCI.Notifier()).notify(response.responseJSON.msg);
+                        (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
                     });
             }
         }
@@ -213,7 +213,7 @@ $(function() {
                         $commitsHolder.find('.js-time-ago').timeago();
                     })
                     .fail(function(response) {
-                        (new StyleCI.Notifier()).notify(response.responseJSON.msg);
+                        (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
                     });
             }
         },
@@ -289,12 +289,12 @@ $(function() {
                                 $commitsHolder.find('.js-time-ago').timeago();
                             })
                             .fail(function(response) {
-                                (new StyleCI.Notifier()).notify(response.responseJSON.msg);
+                                (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
                             });
                     }
                 })
                 .fail(function(response) {
-                    (new StyleCI.Notifier()).notify(response.responseJSON.msg);
+                    (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
                 })
                 .always(function() {
                     btn.button('reset').blur();
@@ -331,7 +331,7 @@ $(function() {
                     handleReposList(sortedData);
                 })
                 .fail(function(response) {
-                    (new StyleCI.Notifier()).notify(response.responseJSON.msg);
+                    (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
                 })
                 .always(function() {
                     $loading.hide();
@@ -354,7 +354,7 @@ $(function() {
                     });
                 })
                 .fail(function(response) {
-                    (new StyleCI.Notifier()).notify(response.responseJSON.msg);
+                    (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
                 });
         },
         enableOrDisableRepo: function(btn) {
@@ -376,7 +376,7 @@ $(function() {
                     }
                 })
                 .fail(function(response) {
-                    (new StyleCI.Notifier()).notify(response.responseJSON.msg);
+                    (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
                 })
                 .always(function() {
                     btn.button('reset');
