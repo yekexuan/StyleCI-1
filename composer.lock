@@ -613,12 +613,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "6c12cc0b4fac1919a0501957995b0bd548b0a558"
+                "reference": "131aac451f0c7bcb84b054f053657137b9180945"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/6c12cc0b4fac1919a0501957995b0bd548b0a558",
-                "reference": "6c12cc0b4fac1919a0501957995b0bd548b0a558",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/131aac451f0c7bcb84b054f053657137b9180945",
+                "reference": "131aac451f0c7bcb84b054f053657137b9180945",
                 "shasum": ""
             },
             "require": {
@@ -668,7 +668,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-05-28 12:15:36"
+            "time": "2015-05-28 16:23:29"
         },
         {
             "name": "graham-campbell/github",
@@ -1486,12 +1486,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamStuff/framework.git",
-                "reference": "0618c33b648f6faa7cb0fae05f8b774f48b92d19"
+                "reference": "96fd42c3014dd7a3ff0ba8faf4a1d24c36ff932c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamStuff/framework/zipball/0618c33b648f6faa7cb0fae05f8b774f48b92d19",
-                "reference": "0618c33b648f6faa7cb0fae05f8b774f48b92d19",
+                "url": "https://api.github.com/repos/GrahamStuff/framework/zipball/96fd42c3014dd7a3ff0ba8faf4a1d24c36ff932c",
+                "reference": "96fd42c3014dd7a3ff0ba8faf4a1d24c36ff932c",
                 "shasum": ""
             },
             "require": {
@@ -1612,7 +1612,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2015-05-28 09:32:07"
+            "time": "2015-05-28 15:57:28"
         },
         {
             "name": "league/flysystem",
