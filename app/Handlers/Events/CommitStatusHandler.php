@@ -48,8 +48,6 @@ class CommitStatusHandler
      */
     public function handle($event)
     {
-        $commit = $event->commit;
-
-        $this->status->push($commit);
+        $this->status->push($event->commit);
     }
 }

@@ -49,8 +49,6 @@ class AuthenticationHandler
      */
     public function handle(UserHasLoggedInEvent $event)
     {
-        $user = $event->user;
-
-        $this->auth->login($user);
+        $this->auth->login($event->user);
     }
 }
