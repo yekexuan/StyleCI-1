@@ -51,6 +51,6 @@ class FailedJobLoggingHandler
      */
     public function handle($connection, Job $job, array $data)
     {
-        $this->logger->error('Queue job failed.', ['job' => ['id' => $job->getJobId(), 'attempts' => $job->attempts(), 'connection' => $connection], 'data' => $data]);
+        $this->logger->error('Queue job failed.', ['job' => ['id' => $job->getJobId(), 'connection' => $connection], 'data' => $data]);
     }
 }
