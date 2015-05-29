@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\Handlers\Events;
 
-use McCool\LaravelAutoPresenter\PresenterDecorator;
+use Illuminate\Contracts\Queue\Job;
 use Psr\Log\LoggerInterface;
 
 /**
@@ -43,12 +43,14 @@ class FailedJobLoggingHandler
     /**
      * Handle the failed job event.
      *
-     * @param array $event
+     * @param string                          $connection
+     * @param \Illuminate\Contracts\Queue\Job $job
+     * @param array                           $data
      *
      * @return void
      */
-    public function handle($event)
+    public function handle($connection, Job $job, array $data)
     {
-        $this->logger->error('Queue job failed.', ['event' => $event]);
+        $this->logger->error('Queue job failed.', ['job' => ['id' => $job->getJobId(), 'attempts' => $job->attempts(), 'connection' => $connection], 'data' => $data]);
     }
 }
