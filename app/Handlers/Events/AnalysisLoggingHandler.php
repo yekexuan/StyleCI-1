@@ -59,10 +59,9 @@ class AnalysisLoggingHandler
     public function handle($event)
     {
         $commit = $event->commit;
-        $exception = $event->exception;
 
-        if ($exception) {
-            $this->logger->notice($exception);
+        if (isset($event->exception)) {
+            $this->logger->notice($event->exception);
         }
 
         switch ($commit->status) {
