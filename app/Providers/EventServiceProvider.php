@@ -62,7 +62,7 @@ class EventServiceProvider extends ServiceProvider
             'StyleCI\StyleCI\Handlers\Events\WelcomeMessageHandler',
         ],
         'illuminate.queue.failed' => [
-            'StyleCI\StyleCI\Handlers\Events\FailedJobLoggingHandler'
+            'StyleCI\StyleCI\Handlers\Events\FailedJobLoggingHandler',
         ],
     ];
 }
