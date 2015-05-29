@@ -276,12 +276,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "cf00ec9c7ff7fa341fec841f01806da30f424c66"
+                "reference": "7ef7ea94ccb0d528daa2f428226958e00926b928"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/cf00ec9c7ff7fa341fec841f01806da30f424c66",
-                "reference": "cf00ec9c7ff7fa341fec841f01806da30f424c66",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/7ef7ea94ccb0d528daa2f428226958e00926b928",
+                "reference": "7ef7ea94ccb0d528daa2f428226958e00926b928",
                 "shasum": ""
             },
             "require": {
@@ -322,7 +322,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-05-26 19:12:35"
+            "time": "2015-05-29 06:15:38"
         },
         {
             "name": "fideloper/proxy",
@@ -1233,48 +1233,6 @@
             "time": "2015-05-19 17:58:45"
         },
         {
-            "name": "ircmaxell/password-compat",
-            "version": "v1.0.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/ircmaxell/password_compat.git",
-                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/ircmaxell/password_compat/zipball/5c5cde8822a69545767f7c7f3058cb15ff84614c",
-                "reference": "5c5cde8822a69545767f7c7f3058cb15ff84614c",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "lib/password.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Anthony Ferrara",
-                    "email": "ircmaxell@php.net",
-                    "homepage": "http://blog.ircmaxell.com"
-                }
-            ],
-            "description": "A compatibility library for the proposed simplified password hashing algorithm: https://wiki.php.net/rfc/password_hash",
-            "homepage": "https://github.com/ircmaxell/password_compat",
-            "keywords": [
-                "hashing",
-                "password"
-            ],
-            "time": "2014-11-20 16:49:30"
-        },
-        {
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -1485,12 +1443,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "42d4c3477c04577725da035957d209ac1ef251ee"
+                "reference": "9c440e662bf3d6ddf50dbcccdfa513bc07ab61ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/42d4c3477c04577725da035957d209ac1ef251ee",
-                "reference": "42d4c3477c04577725da035957d209ac1ef251ee",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/9c440e662bf3d6ddf50dbcccdfa513bc07ab61ef",
+                "reference": "9c440e662bf3d6ddf50dbcccdfa513bc07ab61ef",
                 "shasum": ""
             },
             "require": {
@@ -1500,13 +1458,12 @@
                 "ext-mbstring": "*",
                 "ext-mcrypt": "*",
                 "ext-openssl": "*",
-                "ircmaxell/password-compat": "~1.0",
                 "jeremeamia/superclosure": "~2.0",
                 "league/flysystem": "~1.0",
                 "monolog/monolog": "~1.11",
                 "mtdowling/cron-expression": "~1.0",
-                "nesbot/carbon": "~1.0",
-                "php": ">=5.4.0",
+                "nesbot/carbon": "~1.19",
+                "php": ">=5.5.9",
                 "psy/psysh": "0.4.*",
                 "swiftmailer/swiftmailer": "~5.1",
                 "symfony/console": "2.7.*",
@@ -1555,15 +1512,15 @@
                 "illuminate/view": "self.version"
             },
             "require-dev": {
-                "aws/aws-sdk-php": "~2.4",
+                "aws/aws-sdk-php": "~3.0",
                 "iron-io/iron_mq": "~2.0",
-                "mockery/mockery": "~0.9",
+                "mockery/mockery": "~0.9.1",
                 "pda/pheanstalk": "~3.0",
                 "phpunit/phpunit": "~4.0",
                 "predis/predis": "~1.0"
             },
             "suggest": {
-                "aws/aws-sdk-php": "Required to use the SQS queue driver and SES mail driver (~2.4).",
+                "aws/aws-sdk-php": "Required to use the SQS queue driver and SES mail driver (~3.0).",
                 "doctrine/dbal": "Required to rename columns and drop SQLite columns (~2.4).",
                 "fzaninotto/faker": "Required to use the eloquent factory builder (~1.4).",
                 "guzzlehttp/guzzle": "Required to use the Mailgun and Mandrill mail drivers (~5.3|~6.0).",
@@ -1608,7 +1565,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-05-28 22:43:48"
+            "time": "2015-05-29 16:04:41"
         },
         {
             "name": "league/flysystem",
@@ -2522,16 +2479,16 @@
         },
         {
             "name": "styleci/login",
-            "version": "0.2.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "e59ea1cd6e7a5510dfc30f96f9fbbe22bcec5eb6"
+                "reference": "c05afd1d23b5a9c420cbf10d49e2c343f656059f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/e59ea1cd6e7a5510dfc30f96f9fbbe22bcec5eb6",
-                "reference": "e59ea1cd6e7a5510dfc30f96f9fbbe22bcec5eb6",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/c05afd1d23b5a9c420cbf10d49e2c343f656059f",
+                "reference": "c05afd1d23b5a9c420cbf10d49e2c343f656059f",
                 "shasum": ""
             },
             "require": {
@@ -2582,7 +2539,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-05-27 21:29:20"
+            "time": "2015-05-29 12:52:04"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4341,12 +4298,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "afa37694853629540b15639cb72a025d2144b6ab"
+                "reference": "c706027d6d2351713457b2d658597214eb130d4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/afa37694853629540b15639cb72a025d2144b6ab",
-                "reference": "afa37694853629540b15639cb72a025d2144b6ab",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/c706027d6d2351713457b2d658597214eb130d4f",
+                "reference": "c706027d6d2351713457b2d658597214eb130d4f",
                 "shasum": ""
             },
             "require": {
@@ -4395,7 +4352,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2015-05-27 03:46:18"
+            "time": "2015-05-29 15:14:22"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -4754,16 +4711,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.6.8",
+            "version": "4.6.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "a6cd74b523ef7bad7a23a94e4045d72968e8165b"
+                "reference": "816d12536a7a032adc3b68737f82cfbbf98b79c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a6cd74b523ef7bad7a23a94e4045d72968e8165b",
-                "reference": "a6cd74b523ef7bad7a23a94e4045d72968e8165b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/816d12536a7a032adc3b68737f82cfbbf98b79c1",
+                "reference": "816d12536a7a032adc3b68737f82cfbbf98b79c1",
                 "shasum": ""
             },
             "require": {
@@ -4822,20 +4779,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-05-28 09:54:11"
+            "time": "2015-05-29 06:00:03"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.2",
+            "version": "2.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "787e06820578ca103b21e323e27f0e2eb0712ae5"
+                "reference": "253c005852591fd547fc18cd5b7b43a1ec82d8f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/787e06820578ca103b21e323e27f0e2eb0712ae5",
-                "reference": "787e06820578ca103b21e323e27f0e2eb0712ae5",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/253c005852591fd547fc18cd5b7b43a1ec82d8f7",
+                "reference": "253c005852591fd547fc18cd5b7b43a1ec82d8f7",
                 "shasum": ""
             },
             "require": {
@@ -4877,7 +4834,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-05-28 09:50:37"
+            "time": "2015-05-29 05:19:18"
         },
         {
             "name": "sebastian/comparator",
