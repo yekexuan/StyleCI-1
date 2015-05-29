@@ -12,6 +12,7 @@
 namespace StyleCI\StyleCI\Handlers\Events;
 
 use Psr\Log\LoggerInterface;
+use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
 
 /**
  * This is the exception logging handler class.
@@ -40,13 +41,13 @@ class ExceptionLoggingHandler
     }
 
     /**
-     * Handle the event.
+     * Handle the analysis has completed event.
      *
-     * @param object $event
+     * @param \StyleCI\StyleCI\Events\AnalysisHasCompletedEvent $event
      *
      * @return void
      */
-    public function handle($event)
+    public function handle(AnalysisHasCompletedEvent $event)
     {
         $this->logger->notice($event->exception);
     }

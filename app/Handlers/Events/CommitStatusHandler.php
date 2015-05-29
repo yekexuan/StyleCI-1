@@ -19,7 +19,7 @@ use StyleCI\StyleCI\GitHub\Status;
  *
  * @author Graham Campbell <graham@cachethq.io>
  */
-class CommitStatusHandler implements ShouldBeQueued
+class CommitStatusHandler
 {
     /**
      * The status instance.

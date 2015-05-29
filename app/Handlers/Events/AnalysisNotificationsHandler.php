@@ -23,7 +23,7 @@ use StyleCI\StyleCI\Repositories\UserRepository;
  *
  * @author Graham Campbell <graham@cachethq.io>
  */
-class AnalysisNotificationsHandler implements ShouldBeQueued
+class AnalysisNotificationsHandler
 {
     /**
      * The user repository instance.
