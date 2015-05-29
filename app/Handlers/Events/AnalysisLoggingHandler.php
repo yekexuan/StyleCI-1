@@ -59,7 +59,7 @@ class AnalysisLoggingHandler
     public function handle($event)
     {
         $commit = $event->commit;
-        $exception = $event->exception
+        $exception = $event->exception;
 
         if ($exception) {
             $this->logger->notice($exception);
