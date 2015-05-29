@@ -59,21 +59,38 @@ class AnalysisLoggingHandler
     public function handle($event)
     {
         $commit = $event->commit;
+        $exception = $event->exception
+
+        if ($exception) {
+            $this->logger->notice($exception);
+        }
 
         switch ($commit->status) {
             case 0:
-                $this->logger->debug("Analysis of {$commit->id} has started.", ['title' => 'Analysis started.', 'commit' => $this->presenter->decorate($commit)->toArray()]);
+                $this->logger->debug("Analysis of {$commit->id} has started.", $this->getContext('Analysis started.'));
                 break;
             case 1:
             case 2:
-                $this->logger->debug("Analysis of {$commit->id} has completed successfully.", ['title' => 'Analysis completed.', 'commit' => $this->presenter->decorate($commit)->toArray()]);
+                $this->logger->debug("Analysis of {$commit->id} has completed successfully.", $this->getContext('Analysis completed.'));
                 break;
             case 3:
-                $this->logger->error("Analysis of {$commit->id} has failed due to an internal error.", ['title' => 'Analysis errored.', 'commit' => $this->presenter->decorate($commit)->toArray()]);
+                $this->logger->error("Analysis of {$commit->id} has failed due to an internal error.", $this->getContext('Analysis errored.'));
                 break;
             case 4:
-                $this->logger->notice("Analysis of {$commit->id} has failed due to misconfiguration.", ['title' => 'Analysis misconfigured.', 'commit' => $this->presenter->decorate($commit)->toArray()]);
+                $this->logger->notice("Analysis of {$commit->id} has failed due to misconfiguration.", $this->getContext('Analysis misconfigured.'));
                 break;
         }
+    }
+
+    /**
+     * Get the context.
+     *
+     * @param string $title
+     *
+     * @return array
+     */
+    protected function getContext($title)
+    {
+        return ['title' => $title, 'commit' => $this->presenter->decorate($commit)->toArray()];
     }
 }

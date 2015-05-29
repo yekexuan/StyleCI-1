@@ -27,7 +27,6 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         'StyleCI\StyleCI\Events\AnalysisHasCompletedEvent' => [
-            'StyleCI\StyleCI\Handlers\Events\ExceptionLoggingHandler',
             'StyleCI\StyleCI\Handlers\Events\AnalysisLoggingHandler',
             'StyleCI\StyleCI\Handlers\Events\CommitStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\RealTimeStatusHandler',
