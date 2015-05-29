@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "33f7ab41c52a58b878ed307c13e94b25",
+    "hash": "35cb483bc15739cc842364d97dc4a08b",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -1652,16 +1652,16 @@
         },
         {
             "name": "mccool/laravel-auto-presenter",
-            "version": "3.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-auto-presenter/laravel-auto-presenter.git",
-                "reference": "846eee0565bf84d911c1d2cad81e707ec9ac2e9c"
+                "reference": "e2f7f0b1415d2b0e65aa9587fe74d70844ad062d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-auto-presenter/laravel-auto-presenter/zipball/846eee0565bf84d911c1d2cad81e707ec9ac2e9c",
-                "reference": "846eee0565bf84d911c1d2cad81e707ec9ac2e9c",
+                "url": "https://api.github.com/repos/laravel-auto-presenter/laravel-auto-presenter/zipball/e2f7f0b1415d2b0e65aa9587fe74d70844ad062d",
+                "reference": "e2f7f0b1415d2b0e65aa9587fe74d70844ad062d",
                 "shasum": ""
             },
             "require": {
@@ -1679,7 +1679,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -1693,12 +1693,12 @@
             ],
             "authors": [
                 {
-                    "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
-                },
-                {
                     "name": "Shawn McCool",
                     "email": "shawn@heybigname.com"
+                },
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "A system for auto-decorating models with presenter objects.",
@@ -1708,7 +1708,7 @@
                 "lpm",
                 "presenter"
             ],
-            "time": "2015-05-18 10:21:57"
+            "time": "2015-05-29 19:32:13"
         },
         {
             "name": "monolog/monolog",

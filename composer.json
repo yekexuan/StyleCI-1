@@ -29,7 +29,7 @@
         "graham-campbell/htmlmin": "~3.1",
         "graham-campbell/logger": "~1.0",
         "guzzlehttp/guzzle": "~6.0",
-        "mccool/laravel-auto-presenter": "~3.0",
+        "mccool/laravel-auto-presenter": "~3.1",
         "styleci/bugsnag": "0.2.*",
         "styleci/fixer": "0.4.*",
         "styleci/login": "0.2.*",
