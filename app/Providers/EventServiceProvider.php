@@ -61,5 +61,8 @@ class EventServiceProvider extends ServiceProvider
         'StyleCI\StyleCI\Events\UserHasSignedUpEvent' => [
             'StyleCI\StyleCI\Handlers\Events\WelcomeMessageHandler',
         ],
+        'illuminate.queue.failed' => [
+            'StyleCI\StyleCI\Handlers\Events\FailedJobLoggingHandler'
+        ],
     ];
 }
