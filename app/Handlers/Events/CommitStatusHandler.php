@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Handlers\Events;
 
-use Illuminate\Contracts\Queue\ShouldBeQueued;
 use StyleCI\StyleCI\GitHub\Status;
 
 /**
@@ -19,7 +18,7 @@ use StyleCI\StyleCI\GitHub\Status;
  *
  * @author Graham Campbell <graham@cachethq.io>
  */
-class CommitStatusHandler implements ShouldBeQueued
+class CommitStatusHandler
 {
     /**
      * The status instance.

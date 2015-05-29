@@ -17,7 +17,6 @@ use StyleCI\Fixer\Report;
 use StyleCI\Fixer\ReportBuilder;
 use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
 use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
-use StyleCI\StyleCI\Events\AnalysisHasErroredEvent;
 use StyleCI\StyleCI\Events\AnalysisHasStartedEvent;
 use StyleCI\StyleCI\Models\Commit;
 
@@ -73,10 +72,10 @@ class AnalyseCommitCommandHandler
         }
 
         if (isset($e)) {
-            event(new AnalysisHasErroredEvent($e));
+            event(new AnalysisHasCompletedEvent($commit, $e));
+        } else {
+            event(new AnalysisHasCompletedEvent($commit));
         }
-
-        event(new AnalysisHasCompletedEvent($commit));
     }
 
     /**

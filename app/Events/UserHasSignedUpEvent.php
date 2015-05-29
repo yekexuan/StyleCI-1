@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Events;
 
-use Illuminate\Queue\SerializesModels;
 use StyleCI\StyleCI\Models\User;
 
 /**
@@ -21,8 +20,6 @@ use StyleCI\StyleCI\Models\User;
  */
 class UserHasSignedUpEvent
 {
-    use SerializesModels;
-
     /**
      * The user that has signed up.
      *

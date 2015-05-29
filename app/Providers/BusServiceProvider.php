@@ -13,7 +13,6 @@ namespace StyleCI\StyleCI\Providers;
 
 use Illuminate\Bus\Dispatcher;
 use Illuminate\Support\ServiceProvider;
-use StyleCI\StyleCI\Handlers\Middleware\UseDatabaseTransaction;
 
 /**
  * This is the bus service provider class.
@@ -31,8 +30,6 @@ class BusServiceProvider extends ServiceProvider
      */
     public function boot(Dispatcher $dispatcher)
     {
-        $dispatcher->pipeThrough([UseDatabaseTransaction::class]);
-
         $dispatcher->mapUsing(function ($command) {
             return Dispatcher::simpleMapping($command, 'StyleCI\StyleCI\Commands', 'StyleCI\StyleCI\Handlers\Commands');
         });

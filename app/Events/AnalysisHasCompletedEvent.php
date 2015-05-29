@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\Events;
 
-use Illuminate\Queue\SerializesModels;
+use Exception;
 use StyleCI\StyleCI\Models\Commit;
 
 /**
@@ -21,8 +21,6 @@ use StyleCI\StyleCI\Models\Commit;
  */
 class AnalysisHasCompletedEvent
 {
-    use SerializesModels;
-
     /**
      * The commit that was analysed.
      *
@@ -31,14 +29,23 @@ class AnalysisHasCompletedEvent
     public $commit;
 
     /**
+     * The exception that occurred during analysis.
+     *
+     * @var \Exception|null
+     */
+    public $exception;
+
+    /**
      * Create a new analysis has completed event instance.
      *
      * @param \StyleCI\StyleCI\Models\Commit $commit
+     * @param \Exception|null                $exception
      *
      * @return void
      */
-    public function __construct(Commit $commit)
+    public function __construct(Commit $commit, Exception $exception = null)
     {
         $this->commit = $commit;
+        $this->exception = $exception;
     }
 }

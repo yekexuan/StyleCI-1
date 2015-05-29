@@ -11,8 +11,7 @@
 
 namespace StyleCI\StyleCI\Handlers\Events;
 
-use Illuminate\Contracts\Mail\Mailer;
-use Illuminate\Contracts\Queue\ShouldBeQueued;
+use Illuminate\Contracts\Mail\MailQueue;
 use Illuminate\Mail\Message;
 use StyleCI\StyleCI\Events\UserHasSignedUpEvent;
 
@@ -21,23 +20,23 @@ use StyleCI\StyleCI\Events\UserHasSignedUpEvent;
  *
  * @author Graham Campbell <graham@cachethq.io>
  */
-class WelcomeMessageHandler implements ShouldBeQueued
+class WelcomeMessageHandler
 {
     /**
      * The mailer instance.
      *
-     * @var \Illuminate\Contracts\Mail\Mailer
+     * @var \Illuminate\Contracts\Mail\MailQueue
      */
     protected $mailer;
 
     /**
      * Create a new welcome message handler instance.
      *
-     * @param \Illuminate\Contracts\Mail\Mailer $mailer
+     * @param \Illuminate\Contracts\Mail\MailQueue $mailer
      *
      * @return void
      */
-    public function __construct(Mailer $mailer)
+    public function __construct(MailQueue $mailer)
     {
         $this->mailer = $mailer;
     }
@@ -59,7 +58,7 @@ class WelcomeMessageHandler implements ShouldBeQueued
             'subject' => '[StyleCI] Welcome To StyleCI',
         ];
 
-        $this->mailer->send(['html' => 'emails.welcome-html', 'text' => 'emails.welcome-text'], $mail, function (Message $message) use ($mail) {
+        $this->mailer->queue(['html' => 'emails.welcome-html', 'text' => 'emails.welcome-text'], $mail, function (Message $message) use ($mail) {
             $message->to($mail['email'])->subject($mail['subject']);
         });
     }

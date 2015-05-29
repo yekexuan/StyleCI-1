@@ -27,13 +27,11 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         'StyleCI\StyleCI\Events\AnalysisHasCompletedEvent' => [
+            'StyleCI\StyleCI\Handlers\Events\ExceptionLoggingHandler',
+            'StyleCI\StyleCI\Handlers\Events\AnalysisLoggingHandler',
             'StyleCI\StyleCI\Handlers\Events\CommitStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\RealTimeStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\AnalysisNotificationsHandler',
-            'StyleCI\StyleCI\Handlers\Events\AnalysisLoggingHandler',
-        ],
-        'StyleCI\StyleCI\Events\AnalysisHasErroredEvent' => [
-            'StyleCI\StyleCI\Handlers\Events\ExceptionLoggingHandler',
         ],
         'StyleCI\StyleCI\Events\AnalysisHasStartedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\AnalysisLoggingHandler',
