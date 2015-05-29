@@ -107,8 +107,8 @@ class Diff implements ArrayAccess
         preg_match_all('/\+\+\+\sb\/(.*?.*)/i', $diff, $modifiedNames);
 
         // Then we count the additions and deletions from the diff.
-        preg_match_all('/\+ \s/', $diff, $additions);
-        preg_match_all('/\- \s/', $diff, $deletions);
+        preg_match_all('/^\+[^\+]/im', $diff, $additions);
+        preg_match_all('/^\-[^\-]/im', $diff, $deletions);
 
         $this->additions = count($additions[0]);
         $this->deletions = count($deletions[0]);
