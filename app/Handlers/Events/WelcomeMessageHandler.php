@@ -12,7 +12,6 @@
 namespace StyleCI\StyleCI\Handlers\Events;
 
 use Illuminate\Contracts\Mail\MailQueue;
-use Illuminate\Contracts\Queue\ShouldBeQueued;
 use Illuminate\Mail\Message;
 use StyleCI\StyleCI\Events\UserHasSignedUpEvent;
 

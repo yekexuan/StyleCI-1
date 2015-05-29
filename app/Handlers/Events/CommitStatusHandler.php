@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Handlers\Events;
 
-use Illuminate\Contracts\Queue\ShouldBeQueued;
 use StyleCI\StyleCI\GitHub\Status;
 
 /**

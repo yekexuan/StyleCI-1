@@ -12,7 +12,6 @@
 namespace StyleCI\StyleCI\Handlers\Events;
 
 use Illuminate\Contracts\Mail\Mailer;
-use Illuminate\Contracts\Queue\ShouldBeQueued;
 use Illuminate\Mail\Message;
 use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Models\Commit;
