@@ -13,6 +13,7 @@ namespace StyleCI\StyleCI\Handlers\Events;
 
 use McCool\LaravelAutoPresenter\PresenterDecorator;
 use Psr\Log\LoggerInterface;
+use StyleCI\StyleCI\Models\Commit;
 
 /**
  * This is the analysis logging handler class.
@@ -66,17 +67,17 @@ class AnalysisLoggingHandler
 
         switch ($commit->status) {
             case 0:
-                $this->logger->debug("Analysis of {$commit->id} has started.", $this->getContext('Analysis started.'));
+                $this->logger->debug("Analysis of {$commit->id} has started.", $this->getContext('Analysis started.', $commit));
                 break;
             case 1:
             case 2:
-                $this->logger->debug("Analysis of {$commit->id} has completed successfully.", $this->getContext('Analysis completed.'));
+                $this->logger->debug("Analysis of {$commit->id} has completed successfully.", $this->getContext('Analysis completed.', $commit));
                 break;
             case 3:
-                $this->logger->error("Analysis of {$commit->id} has failed due to an internal error.", $this->getContext('Analysis errored.'));
+                $this->logger->error("Analysis of {$commit->id} has failed due to an internal error.", $this->getContext('Analysis errored.', $commit));
                 break;
             case 4:
-                $this->logger->notice("Analysis of {$commit->id} has failed due to misconfiguration.", $this->getContext('Analysis misconfigured.'));
+                $this->logger->notice("Analysis of {$commit->id} has failed due to misconfiguration.", $this->getContext('Analysis misconfigured.', $commit));
                 break;
         }
     }
@@ -84,11 +85,12 @@ class AnalysisLoggingHandler
     /**
      * Get the context.
      *
-     * @param string $title
+     * @param string                         $title
+     * @param \StyleCI\StyleCI\Models\Commit $commit
      *
      * @return array
      */
-    protected function getContext($title)
+    protected function getContext($title, Commit $commit)
     {
         return ['title' => $title, 'commit' => $this->presenter->decorate($commit)->toArray()];
     }
