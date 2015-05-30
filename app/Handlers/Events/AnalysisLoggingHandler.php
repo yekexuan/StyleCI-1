@@ -66,12 +66,12 @@ class AnalysisLoggingHandler
             $this->logger->notice($event->exception);
         }
 
-        // if we've cleaned up a commit, stop here
         if ($event instanceof CleanupHasCompletedEvent) {
-            return $this->logger->error("Analysis of {$commit->id} has failed due to it timing out.", $this->getContext('Analysis timed out.', $commit));
+            $this->logger->error("Analysis of {$commit->id} has failed due to it timing out.", $this->getContext('Analysis timed out.', $commit));
+
+            return; // if we've cleaned up a commit, stop here
         }
 
-        // continue as normal
         switch ($commit->status) {
             case 0:
                 $this->logger->debug("Analysis of {$commit->id} has started.", $this->getContext('Analysis started.', $commit));
