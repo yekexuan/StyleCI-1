@@ -53,7 +53,7 @@ class AnalysisNotificationsHandler
     }
 
     /**
-     * Handle the analysis has completed event.
+     * Handle the event.
      *
      * @param \StyleCI\StyleCI\Events\AnalysisHasCompletedEvent|\StyleCI\StyleCI\Events\CleanupHasCompletedEvent $event
      *

@@ -41,7 +41,7 @@ class EnableHooksHandler
     }
 
     /**
-     * Handle the repo was enabled event.
+     * Handle the event.
      *
      * @param \StyleCI\StyleCI\Events\RepoWasEnabledEvent $event
      *

@@ -42,7 +42,7 @@ class DisableHooksHandler
     }
 
     /**
-     * Handle the repo was disabled event.
+     * Handle the event.
      *
      * @param \StyleCI\StyleCI\Events\RepoWasDisabledEvent $event
      *

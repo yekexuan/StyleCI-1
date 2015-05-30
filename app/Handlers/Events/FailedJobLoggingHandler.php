@@ -41,7 +41,7 @@ class FailedJobLoggingHandler
     }
 
     /**
-     * Handle the failed job event.
+     * Handle the event.
      *
      * @param string                          $connection
      * @param \Illuminate\Contracts\Queue\Job $job

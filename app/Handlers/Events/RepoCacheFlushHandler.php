@@ -41,7 +41,7 @@ class RepoCacheFlushHandler
     }
 
     /**
-     * Handle the user has logged in event.
+     * Handle the event.
      *
      * @param \StyleCI\StyleCI\Events\UserHasLoggedInEvent $event
      *

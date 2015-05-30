@@ -52,9 +52,9 @@ class AnalysisLoggingHandler
     }
 
     /**
-     * Handle the analysis event.
+     * Handle the event.
      *
-     * @param object $event
+     * @param \StyleCI\StyleCI\Events\AnalysisHasStartedEvent|\StyleCI\StyleCI\Events\AnalysisHasCompletedEvent|\StyleCI\StyleCI\Events\CleanupHasCompletedEvent $event
      *
      * @return void
      */
