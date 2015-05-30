@@ -795,16 +795,16 @@
         },
         {
             "name": "graham-campbell/logger",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Logger.git",
-                "reference": "2410695265557fe73270693eddd80f779bab5a5a"
+                "reference": "cc9864a924f12386b43f116c99ca44c24560ec14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/2410695265557fe73270693eddd80f779bab5a5a",
-                "reference": "2410695265557fe73270693eddd80f779bab5a5a",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/cc9864a924f12386b43f116c99ca44c24560ec14",
+                "reference": "cc9864a924f12386b43f116c99ca44c24560ec14",
                 "shasum": ""
             },
             "require": {
@@ -852,20 +852,20 @@
                 "logs",
                 "multiple"
             ],
-            "time": "2015-05-30 13:36:35"
+            "time": "2015-05-30 15:15:55"
         },
         {
             "name": "graham-campbell/logger-core",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Logger-Core.git",
-                "reference": "883d42a301730cc4a43153825f3fd38e88ce0f8f"
+                "reference": "e0c82e9ab3b75155043b080b87ecfc12c9b2dfb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger-Core/zipball/883d42a301730cc4a43153825f3fd38e88ce0f8f",
-                "reference": "883d42a301730cc4a43153825f3fd38e88ce0f8f",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger-Core/zipball/e0c82e9ab3b75155043b080b87ecfc12c9b2dfb8",
+                "reference": "e0c82e9ab3b75155043b080b87ecfc12c9b2dfb8",
                 "shasum": ""
             },
             "require": {
@@ -911,7 +911,7 @@
                 "logging",
                 "logs"
             ],
-            "time": "2015-05-30 13:12:32"
+            "time": "2015-05-30 15:05:52"
         },
         {
             "name": "graham-campbell/manager",
@@ -1503,12 +1503,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c23008a9d95061617e58f0a90af18e07092ce9cf"
+                "reference": "b700ca34de499b951faaa7751ae2f3bacb964084"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c23008a9d95061617e58f0a90af18e07092ce9cf",
-                "reference": "c23008a9d95061617e58f0a90af18e07092ce9cf",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/b700ca34de499b951faaa7751ae2f3bacb964084",
+                "reference": "b700ca34de499b951faaa7751ae2f3bacb964084",
                 "shasum": ""
             },
             "require": {
@@ -1625,7 +1625,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-05-29 18:57:35"
+            "time": "2015-05-30 15:13:45"
         },
         {
             "name": "league/flysystem",
@@ -2280,16 +2280,16 @@
         },
         {
             "name": "styleci/bugsnag",
-            "version": "dev-master",
+            "version": "v0.2.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Bugsnag.git",
-                "reference": "5765c0359457146abf646182a692670bb9d3da0c"
+                "reference": "dd343700add07fc12f9a0e3b7ee55b63e9ab6fa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/5765c0359457146abf646182a692670bb9d3da0c",
-                "reference": "5765c0359457146abf646182a692670bb9d3da0c",
+                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/dd343700add07fc12f9a0e3b7ee55b63e9ab6fa7",
+                "reference": "dd343700add07fc12f9a0e3b7ee55b63e9ab6fa7",
                 "shasum": ""
             },
             "require": {
@@ -2341,20 +2341,20 @@
                 "StyleCI",
                 "bugsnag"
             ],
-            "time": "2015-05-30 13:35:00"
+            "time": "2015-05-30 15:22:35"
         },
         {
             "name": "styleci/config",
-            "version": "dev-master",
+            "version": "v0.3.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "a19ed45401fdb7f458875141a52768e3a9d2fd71"
+                "reference": "bcbfecc65bf0b85be93b30767bad2c4e1a5d7633"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/a19ed45401fdb7f458875141a52768e3a9d2fd71",
-                "reference": "a19ed45401fdb7f458875141a52768e3a9d2fd71",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/bcbfecc65bf0b85be93b30767bad2c4e1a5d7633",
+                "reference": "bcbfecc65bf0b85be93b30767bad2c4e1a5d7633",
                 "shasum": ""
             },
             "require": {
@@ -2405,20 +2405,20 @@
                 "configuration",
                 "cs"
             ],
-            "time": "2015-05-27 21:51:53"
+            "time": "2015-05-30 15:26:15"
         },
         {
             "name": "styleci/fixer",
-            "version": "dev-master",
+            "version": "v0.4.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "b11917b20d39fb428794b336ab378ea6f30338b2"
+                "reference": "32773dea4aa1507c1fbf76d103f6b3b0357d94b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/b11917b20d39fb428794b336ab378ea6f30338b2",
-                "reference": "b11917b20d39fb428794b336ab378ea6f30338b2",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/32773dea4aa1507c1fbf76d103f6b3b0357d94b5",
+                "reference": "32773dea4aa1507c1fbf76d103f6b3b0357d94b5",
                 "shasum": ""
             },
             "require": {
@@ -2471,7 +2471,7 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-05-27 21:54:09"
+            "time": "2015-05-30 15:29:47"
         },
         {
             "name": "styleci/git",
@@ -2540,16 +2540,16 @@
         },
         {
             "name": "styleci/login",
-            "version": "dev-master",
+            "version": "v0.2.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "c05afd1d23b5a9c420cbf10d49e2c343f656059f"
+                "reference": "0320ee3701b246b9d45a1b4d111b8f6335f80115"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/c05afd1d23b5a9c420cbf10d49e2c343f656059f",
-                "reference": "c05afd1d23b5a9c420cbf10d49e2c343f656059f",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/0320ee3701b246b9d45a1b4d111b8f6335f80115",
+                "reference": "0320ee3701b246b9d45a1b4d111b8f6335f80115",
                 "shasum": ""
             },
             "require": {
@@ -2600,7 +2600,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-05-29 12:52:04"
+            "time": "2015-05-30 16:17:55"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3633,16 +3633,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "732d2adb7d916c9593b9d58c3b0d9ebefead07aa"
+                "reference": "0cac554ce06277e33ddf9f0b7ade4b8bbf2af3fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/732d2adb7d916c9593b9d58c3b0d9ebefead07aa",
-                "reference": "732d2adb7d916c9593b9d58c3b0d9ebefead07aa",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/0cac554ce06277e33ddf9f0b7ade4b8bbf2af3fa",
+                "reference": "0cac554ce06277e33ddf9f0b7ade4b8bbf2af3fa",
                 "shasum": ""
             },
             "require": {
@@ -3652,11 +3652,6 @@
                 "phpunit/phpunit": "~4.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                }
-            },
             "autoload": {
                 "psr-0": {
                     "Dotenv": "src/"
@@ -3680,7 +3675,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2014-12-05 15:19:21"
+            "time": "2015-05-30 15:59:26"
         }
     ],
     "packages-dev": [
