@@ -13,7 +13,6 @@ namespace StyleCI\StyleCI\Handlers\Events;
 
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Mail\Message;
-use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Models\Commit;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
