@@ -59,7 +59,7 @@ class AnalysisNotificationsHandler
      *
      * @return void
      */
-    public function handle(AnalysisHasCompletedEvent $event)
+    public function handle($event)
     {
         $commit = $event->commit;
 
