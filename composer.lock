@@ -377,16 +377,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "c982fe62c44798c433229cb0425c61b487cc1883"
+                "reference": "37b5e653c99cbb9113108d7dc59a0ddc306acc46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/c982fe62c44798c433229cb0425c61b487cc1883",
-                "reference": "c982fe62c44798c433229cb0425c61b487cc1883",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/37b5e653c99cbb9113108d7dc59a0ddc306acc46",
+                "reference": "37b5e653c99cbb9113108d7dc59a0ddc306acc46",
                 "shasum": ""
             },
             "require": {
@@ -431,7 +431,7 @@
                 "whoops",
                 "zf2"
             ],
-            "time": "2015-03-30 15:26:59"
+            "time": "2015-05-29 15:12:07"
         },
         {
             "name": "gitonomy/gitlib",
@@ -799,12 +799,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Logger.git",
-                "reference": "7fe724f291d1f716b0fbbd3efb0458a074bad6fe"
+                "reference": "1e327ef7e1cd41b37a5f0e116bf55f3fb849f262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/7fe724f291d1f716b0fbbd3efb0458a074bad6fe",
-                "reference": "7fe724f291d1f716b0fbbd3efb0458a074bad6fe",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/1e327ef7e1cd41b37a5f0e116bf55f3fb849f262",
+                "reference": "1e327ef7e1cd41b37a5f0e116bf55f3fb849f262",
                 "shasum": ""
             },
             "require": {
@@ -851,7 +851,7 @@
                 "logs",
                 "multiple"
             ],
-            "time": "2015-05-26 22:44:28"
+            "time": "2015-05-30 11:30:16"
         },
         {
             "name": "graham-campbell/manager",
@@ -2818,7 +2818,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.6.8",
+            "version": "v2.6.9",
             "target-dir": "Symfony/Component/EventDispatcher",
             "source": {
                 "type": "git",
@@ -2877,7 +2877,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.6.8",
+            "version": "v2.6.9",
             "target-dir": "Symfony/Component/Filesystem",
             "source": {
                 "type": "git",
@@ -3292,7 +3292,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v2.6.8",
+            "version": "v2.6.9",
             "target-dir": "Symfony/Component/Stopwatch",
             "source": {
                 "type": "git",
@@ -3462,7 +3462,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.6.8",
+            "version": "v2.6.9",
             "target-dir": "Symfony/Component/Yaml",
             "source": {
                 "type": "git",
