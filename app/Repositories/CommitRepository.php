@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Repositories;
 
+use Carbon\Carbon;
 use StyleCI\StyleCI\GitHub\Commits;
 use StyleCI\StyleCI\Models\Commit;
 
