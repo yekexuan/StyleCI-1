@@ -13,7 +13,6 @@ namespace StyleCI\StyleCI\Handlers\Commands;
 
 use StyleCI\StyleCI\Commands\CleanupCommitCommand;
 use StyleCI\StyleCI\Events\CleanupHasCompletedEvent;
-use StyleCI\StyleCI\Models\Commit;
 
 /**
  * This is the cleanup commit command handler.
@@ -33,9 +32,9 @@ class CleanupCommitCommandHandler
     {
         $commit = $command->commit;
 
-		$commit->status = 3;
-		$commit->error_message = 'Analysis of this commit has timed out.';
-		$commit->save();
+        $commit->status = 3;
+        $commit->error_message = 'Analysis of this commit has timed out.';
+        $commit->save();
 
         event(new CleanupHasCompletedEvent($commit));
     }
