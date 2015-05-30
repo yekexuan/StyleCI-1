@@ -799,12 +799,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Logger.git",
-                "reference": "8782ed856f8ba5c91685cbe7f07e319a28051525"
+                "reference": "3bd41114dc906135c86a19640cbebef5c1294bf7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/8782ed856f8ba5c91685cbe7f07e319a28051525",
-                "reference": "8782ed856f8ba5c91685cbe7f07e319a28051525",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/3bd41114dc906135c86a19640cbebef5c1294bf7",
+                "reference": "3bd41114dc906135c86a19640cbebef5c1294bf7",
                 "shasum": ""
             },
             "require": {
@@ -851,7 +851,7 @@
                 "logs",
                 "multiple"
             ],
-            "time": "2015-05-30 12:43:24"
+            "time": "2015-05-30 12:55:36"
         },
         {
             "name": "graham-campbell/manager",
