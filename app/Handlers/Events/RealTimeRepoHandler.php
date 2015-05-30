@@ -63,7 +63,7 @@ class RealTimeRepoHandler
     }
 
     /**
-     * Handle the repo has been enabled or disabled event.
+     * Handle the event.
      *
      * @param \StyleCI\StyleCI\Events\RepoWasDisabledEvent|\StyleCI\StyleCI\Events\RepoWasEnabledEvent $event
      *

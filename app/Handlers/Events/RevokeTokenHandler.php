@@ -41,7 +41,7 @@ class RevokeTokenHandler
     }
 
     /**
-     * Handle the user has rage quit event.
+     * Handle the event.
      *
      * @param \StyleCI\StyleCI\Events\UserHasRageQuitEvent $event
      *

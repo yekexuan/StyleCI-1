@@ -42,7 +42,7 @@ class WelcomeMessageHandler
     }
 
     /**
-     * Handle the user has signed up event.
+     * Handle the event.
      *
      * @param \StyleCI\StyleCI\Events\UserHasSignedUpEvent $event
      *
