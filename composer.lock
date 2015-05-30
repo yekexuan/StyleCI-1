@@ -799,15 +799,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Logger.git",
-                "reference": "3bd41114dc906135c86a19640cbebef5c1294bf7"
+                "reference": "2410695265557fe73270693eddd80f779bab5a5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/3bd41114dc906135c86a19640cbebef5c1294bf7",
-                "reference": "3bd41114dc906135c86a19640cbebef5c1294bf7",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/2410695265557fe73270693eddd80f779bab5a5a",
+                "reference": "2410695265557fe73270693eddd80f779bab5a5a",
                 "shasum": ""
             },
             "require": {
+                "graham-campbell/logger-core": "~1.0",
                 "illuminate/contracts": "5.0.*|5.1.*",
                 "illuminate/support": "5.0.*|5.1.*",
                 "php": ">=5.5.9",
@@ -851,7 +852,66 @@
                 "logs",
                 "multiple"
             ],
-            "time": "2015-05-30 12:55:36"
+            "time": "2015-05-30 13:36:35"
+        },
+        {
+            "name": "graham-campbell/logger-core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GrahamCampbell/Laravel-Logger-Core.git",
+                "reference": "883d42a301730cc4a43153825f3fd38e88ce0f8f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger-Core/zipball/883d42a301730cc4a43153825f3fd38e88ce0f8f",
+                "reference": "883d42a301730cc4a43153825f3fd38e88ce0f8f",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "5.0.*|5.1.*",
+                "illuminate/support": "5.0.*|5.1.*",
+                "php": ">=5.5.9",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~2.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GrahamCampbell\\LoggerCore\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@cachethq.io"
+                }
+            ],
+            "description": "Provides A Logger Trait For Reuse",
+            "keywords": [
+                "Graham Campbell",
+                "GrahamCampbell",
+                "Laravel Logger Core",
+                "Laravel-Logger-Core",
+                "framework",
+                "laravel",
+                "log",
+                "logger",
+                "logging",
+                "logs"
+            ],
+            "time": "2015-05-30 13:12:32"
         },
         {
             "name": "graham-campbell/manager",
@@ -1652,7 +1712,7 @@
         },
         {
             "name": "mccool/laravel-auto-presenter",
-            "version": "dev-master",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-auto-presenter/laravel-auto-presenter.git",
@@ -2224,16 +2284,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Bugsnag.git",
-                "reference": "135fa7fe092d7b5c30af7406f5014f4ce51cee53"
+                "reference": "5765c0359457146abf646182a692670bb9d3da0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/135fa7fe092d7b5c30af7406f5014f4ce51cee53",
-                "reference": "135fa7fe092d7b5c30af7406f5014f4ce51cee53",
+                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/5765c0359457146abf646182a692670bb9d3da0c",
+                "reference": "5765c0359457146abf646182a692670bb9d3da0c",
                 "shasum": ""
             },
             "require": {
                 "bugsnag/bugsnag": "~2.5",
+                "graham-campbell/logger-core": "~1.0",
                 "illuminate/contracts": "5.1.*",
                 "illuminate/support": "5.1.*",
                 "php": ">=5.5.9",
@@ -2280,7 +2341,7 @@
                 "StyleCI",
                 "bugsnag"
             ],
-            "time": "2015-05-27 21:29:07"
+            "time": "2015-05-30 13:35:00"
         },
         {
             "name": "styleci/config",
@@ -4465,16 +4526,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.0.17",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "c4e8e7725e351184a76544634855b8a9c405a6e3"
+                "reference": "ba315f46873fd6e86fdb98685a1a900e7379c886"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c4e8e7725e351184a76544634855b8a9c405a6e3",
-                "reference": "c4e8e7725e351184a76544634855b8a9c405a6e3",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ba315f46873fd6e86fdb98685a1a900e7379c886",
+                "reference": "ba315f46873fd6e86fdb98685a1a900e7379c886",
                 "shasum": ""
             },
             "require": {
@@ -4497,7 +4558,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.1.x-dev"
                 }
             },
             "autoload": {
@@ -4523,7 +4584,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-05-25 05:11:59"
+            "time": "2015-05-30 12:58:40"
         },
         {
             "name": "phpunit/php-file-iterator",
