@@ -98,7 +98,7 @@ class CommitRepository
     }
 
     /**
-     * Find a commit by its id.
+     * Find all old pending commits.
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */

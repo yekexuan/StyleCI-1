@@ -26,10 +26,7 @@ class Kernel extends ConsoleKernel
      *
      * @var string[]
      */
-    protected $commands = [
-        Commands\AnalyseAllCommand::class,
-        Commands\AnalyseRepoCommand::class,
-    ];
+    protected $commands = [];
 
     /**
      * Define the application's command schedule.
