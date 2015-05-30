@@ -42,7 +42,7 @@ class CommitStatusHandler
     /**
      * Handle the analysis has completed event.
      *
-     * @param \StyleCI\StyleCI\Events\AnalysisHasCompletedEvent|\StyleCI\StyleCI\Events\AnalysisWasQueuedEvent $event
+     * @param object $event
      *
      * @return void
      */

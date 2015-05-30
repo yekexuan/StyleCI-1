@@ -38,7 +38,6 @@ class AnalyseCommitCommandHandler
      * Create a new analyse commit command handler instance.
      *
      * @param \StyleCI\Fixer\ReportBuilder $builder
-     * @param \Psr\Log\LoggerInterface     $logger
      *
      * @return void
      */
