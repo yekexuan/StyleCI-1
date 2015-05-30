@@ -96,4 +96,14 @@ class CommitRepository
 
         return $commit;
     }
+
+    /**
+     * Find a commit by its id.
+     *
+     * @return \Illuminate\Database\Eloquent\Collection
+     */
+    public function findAllOldPending()
+    {
+        return Commit::where('status', 0)->where('updated_at', '<=', Carbon::now()->subHours(2))->orderBy('created_at', 'desc')->get();
+    }
 }
