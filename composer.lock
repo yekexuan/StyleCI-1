@@ -1503,12 +1503,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "b700ca34de499b951faaa7751ae2f3bacb964084"
+                "reference": "599e7851988ce88aae745847389dcefd3c4cc6f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/b700ca34de499b951faaa7751ae2f3bacb964084",
-                "reference": "b700ca34de499b951faaa7751ae2f3bacb964084",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/599e7851988ce88aae745847389dcefd3c4cc6f6",
+                "reference": "599e7851988ce88aae745847389dcefd3c4cc6f6",
                 "shasum": ""
             },
             "require": {
@@ -1585,7 +1585,7 @@
                 "fzaninotto/faker": "Required to use the eloquent factory builder (~1.4).",
                 "guzzlehttp/guzzle": "Required to use the Mailgun and Mandrill mail drivers (~5.3|~6.0).",
                 "iron-io/iron_mq": "Required to use the iron queue driver (~2.0).",
-                "league/flysystem-aws-s3-v2": "Required to use the Flysystem S3 driver (~1.0).",
+                "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (~1.0).",
                 "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0).",
                 "pda/pheanstalk": "Required to use the beanstalk queue driver (~3.0).",
                 "predis/predis": "Required to use the redis cache and queue drivers (~1.0).",
@@ -1625,7 +1625,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-05-30 15:13:45"
+            "time": "2015-06-01 13:51:13"
         },
         {
             "name": "league/flysystem",
@@ -4350,18 +4350,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "c706027d6d2351713457b2d658597214eb130d4f"
+                "reference": "b07d8bf1ae629e20e566a5d93f7c7fd88246ef45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/c706027d6d2351713457b2d658597214eb130d4f",
-                "reference": "c706027d6d2351713457b2d658597214eb130d4f",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/b07d8bf1ae629e20e566a5d93f7c7fd88246ef45",
+                "reference": "b07d8bf1ae629e20e566a5d93f7c7fd88246ef45",
                 "shasum": ""
             },
             "require": {
                 "laravel/framework": "5.1.*",
                 "orchestra/database": "3.1.*",
-                "php": ">=5.4.0"
+                "php": ">=5.5.0"
             },
             "require-dev": {
                 "behat/behat": "~2.5",
@@ -4404,7 +4404,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2015-05-29 15:14:22"
+            "time": "2015-06-01 11:19:08"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -4517,16 +4517,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.1.0",
+            "version": "2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "ba315f46873fd6e86fdb98685a1a900e7379c886"
+                "reference": "6b7d2094ca2a685a2cad846cb7cd7a30e8b9470f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ba315f46873fd6e86fdb98685a1a900e7379c886",
-                "reference": "ba315f46873fd6e86fdb98685a1a900e7379c886",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/6b7d2094ca2a685a2cad846cb7cd7a30e8b9470f",
+                "reference": "6b7d2094ca2a685a2cad846cb7cd7a30e8b9470f",
                 "shasum": ""
             },
             "require": {
@@ -4575,7 +4575,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-05-30 12:58:40"
+            "time": "2015-06-01 07:35:26"
         },
         {
             "name": "phpunit/php-file-iterator",
