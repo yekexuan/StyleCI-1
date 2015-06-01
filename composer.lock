@@ -2345,16 +2345,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v0.3.0-alpha",
+            "version": "v0.3.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "bcbfecc65bf0b85be93b30767bad2c4e1a5d7633"
+                "reference": "f9c8f15f4d6fb378ad926a67d24a7886b769351c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/bcbfecc65bf0b85be93b30767bad2c4e1a5d7633",
-                "reference": "bcbfecc65bf0b85be93b30767bad2c4e1a5d7633",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/f9c8f15f4d6fb378ad926a67d24a7886b769351c",
+                "reference": "f9c8f15f4d6fb378ad926a67d24a7886b769351c",
                 "shasum": ""
             },
             "require": {
@@ -2405,7 +2405,7 @@
                 "configuration",
                 "cs"
             ],
-            "time": "2015-05-30 15:26:15"
+            "time": "2015-06-01 15:08:14"
         },
         {
             "name": "styleci/fixer",
