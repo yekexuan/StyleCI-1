@@ -66,12 +66,6 @@ class Repos
             return $this->fetchFromGitHub($user);
         });
 
-        if ($admin) {
-            $list = array_filter($list, function ($item) {
-                return $item['admin'];
-            });
-        }
-
         foreach (Repo::whereIn('id', array_keys($list))->get(['id']) as $repo) {
             $list[$repo->id]['enabled'] = true;
 
@@ -79,6 +73,12 @@ class Repos
                 $repo->name = $list[$repo->id]['name'];
                 $repo->save();
             }
+        }
+
+        if ($admin) {
+            $list = array_filter($list, function ($item) {
+                return $item['admin'];
+            });
         }
 
         return $list;
