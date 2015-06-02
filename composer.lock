@@ -2345,16 +2345,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v0.3.1-alpha",
+            "version": "v0.3.2-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "f9c8f15f4d6fb378ad926a67d24a7886b769351c"
+                "reference": "e43223adc64fe9e5f7cf629d7830a424c700d62a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/f9c8f15f4d6fb378ad926a67d24a7886b769351c",
-                "reference": "f9c8f15f4d6fb378ad926a67d24a7886b769351c",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/e43223adc64fe9e5f7cf629d7830a424c700d62a",
+                "reference": "e43223adc64fe9e5f7cf629d7830a424c700d62a",
                 "shasum": ""
             },
             "require": {
@@ -2405,20 +2405,20 @@
                 "configuration",
                 "cs"
             ],
-            "time": "2015-06-01 15:08:14"
+            "time": "2015-06-01 21:43:59"
         },
         {
             "name": "styleci/fixer",
-            "version": "v0.4.0-alpha",
+            "version": "v0.4.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "32773dea4aa1507c1fbf76d103f6b3b0357d94b5"
+                "reference": "dee2a8f5ea440be91d64fd596b3112509b7eb609"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/32773dea4aa1507c1fbf76d103f6b3b0357d94b5",
-                "reference": "32773dea4aa1507c1fbf76d103f6b3b0357d94b5",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/dee2a8f5ea440be91d64fd596b3112509b7eb609",
+                "reference": "dee2a8f5ea440be91d64fd596b3112509b7eb609",
                 "shasum": ""
             },
             "require": {
@@ -2471,7 +2471,7 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-05-30 15:29:47"
+            "time": "2015-06-02 12:30:29"
         },
         {
             "name": "styleci/git",
