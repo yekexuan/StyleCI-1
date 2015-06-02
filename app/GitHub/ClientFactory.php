@@ -47,12 +47,13 @@ class ClientFactory
      * Get the github api client for a model.
      *
      * @param \Illuminate\Database\Eloquent\Model $model
+     * @param array                               $options
      *
      * @throws \InvalidArgumentException
      *
      * @return \Github\Client
      */
-    public function make(Model $model)
+    public function make(Model $model, $options = [])
     {
         switch (get_class($model)) {
             case User::class:
@@ -65,6 +66,6 @@ class ClientFactory
                 throw new InvalidArgumentException('You must provide a user or repo model.');
         }
 
-        return $this->factory->make(['token' => $token, 'method' => 'token', 'version' => 'moondragon']);
+        return $this->factory->make(array_merge(['token' => $token, 'method' => 'token'], $options));
     }
 }

@@ -52,6 +52,8 @@ class Commits
 
         $args = explode('/', $repo->name);
 
-        return $this->factory->make($repo)->repos()->commits()->show($args[0], $args[1], $commit->id);
+        $client = $this->factory->make($repo, ['version' => 'quicksilver-preview']);
+
+        return $client->repos()->commits()->show($args[0], $args[1], $commit->id);
     }
 }
