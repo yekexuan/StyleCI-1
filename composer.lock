@@ -276,12 +276,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "7ef7ea94ccb0d528daa2f428226958e00926b928"
+                "reference": "a950c2fc1e32151b8f7cbdce0af95f2eb959deaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/7ef7ea94ccb0d528daa2f428226958e00926b928",
-                "reference": "7ef7ea94ccb0d528daa2f428226958e00926b928",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/a950c2fc1e32151b8f7cbdce0af95f2eb959deaa",
+                "reference": "a950c2fc1e32151b8f7cbdce0af95f2eb959deaa",
                 "shasum": ""
             },
             "require": {
@@ -322,7 +322,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-05-29 06:15:38"
+            "time": "2015-06-01 18:04:10"
         },
         {
             "name": "fideloper/proxy",
