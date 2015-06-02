@@ -74,6 +74,11 @@ class Repos
 
         foreach (Repo::whereIn('id', array_keys($list))->get(['id']) as $repo) {
             $list[$repo->id]['enabled'] = true;
+
+            if ($repo->name !== $list[$repo->id]['name']) {
+                $repo->name = $list[$repo->id]['name'];
+                $repo->save();
+            }
         }
 
         return $list;
