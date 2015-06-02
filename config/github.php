@@ -42,7 +42,6 @@ return [
             'username' => env('GITHUB_CLIENT_ID'),
             'password' => env('GITHUB_CLIENT_SECRET'),
             'method'   => 'password',
-            'version'  => 'moondragon',
         ],
 
     ],
