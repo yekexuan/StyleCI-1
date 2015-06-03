@@ -13,6 +13,11 @@ namespace StyleCI\StyleCI\Http\Middleware;
 
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
 
+/**
+ * This is the verify csrf token middleware class.
+ *
+ * @author Graham Campbell <graham@cachethq.io>
+ */
 class VerifyCsrfToken extends BaseVerifier
 {
     //
