@@ -12,9 +12,9 @@
 namespace StyleCI\StyleCI\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use Symfony\Component\Security\Core\Util\StringUtils;
 
 /**
  * This is the verify CSRF token middleware class.
@@ -65,6 +65,6 @@ class VerifyCsrfToken
     {
         $token = $request->session()->token();
 
-        return StringUtils::equals($token, $request->input('_token')) || StringUtils::equals($token, $request->header('X-CSRF-TOKEN'));
+        return Str::equals($token, $request->input('_token')) || Str::equals($token, $request->header('X-CSRF-TOKEN'));
     }
 }
