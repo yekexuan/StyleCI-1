@@ -1,5 +1,8 @@
 var elixir = require('laravel-elixir');
 
+// Enabling babel makes elixir really slow
+elixir.config.babel.enabled = false;
+
 elixir(function(mix) {
     mix.sass('app.scss')
         .scripts([
