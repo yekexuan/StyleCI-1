@@ -1503,12 +1503,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "73ad2636ced1219d6170d4352e091a51a885feb7"
+                "reference": "c8ade4de42e8cdb83c3cbffb307a6c4f81e81994"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/73ad2636ced1219d6170d4352e091a51a885feb7",
-                "reference": "73ad2636ced1219d6170d4352e091a51a885feb7",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c8ade4de42e8cdb83c3cbffb307a6c4f81e81994",
+                "reference": "c8ade4de42e8cdb83c3cbffb307a6c4f81e81994",
                 "shasum": ""
             },
             "require": {
@@ -1623,7 +1623,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-06-03 21:29:40"
+            "time": "2015-06-04 21:23:09"
         },
         {
             "name": "league/flysystem",
@@ -4285,12 +4285,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/testbench.git",
-                "reference": "b07d8bf1ae629e20e566a5d93f7c7fd88246ef45"
+                "reference": "098777b46c92e223ba44ff38fb43013d4adee6c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/b07d8bf1ae629e20e566a5d93f7c7fd88246ef45",
-                "reference": "b07d8bf1ae629e20e566a5d93f7c7fd88246ef45",
+                "url": "https://api.github.com/repos/orchestral/testbench/zipball/098777b46c92e223ba44ff38fb43013d4adee6c9",
+                "reference": "098777b46c92e223ba44ff38fb43013d4adee6c9",
                 "shasum": ""
             },
             "require": {
@@ -4339,7 +4339,7 @@
                 "orchestral",
                 "testing"
             ],
-            "time": "2015-06-01 11:19:08"
+            "time": "2015-06-04 13:24:26"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
