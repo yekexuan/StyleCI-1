@@ -34,7 +34,7 @@ class ShieldController extends AbstractController
      */
     public function handle(Repo $repo, Request $request)
     {
-        $commit = $repo->commits()->where('ref', 'refs/heads/master')->orderBy('created_at', 'desc')->first();
+        $commit = $repo->commits()->where('ref', "refs/heads/{$repo->default_branch}")->orderBy('created_at', 'desc')->first();
 
         $shieldUrl = $this->generateShieldUrl($commit, $request->get('style', 'flat-square'));
 

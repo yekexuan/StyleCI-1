@@ -71,7 +71,7 @@ class RealTimeStatusHandler
     {
         $commit = $this->presenter->decorate($event->commit);
 
-        if ($commit->ref !== 'refs/heads/master') {
+        if ($commit->ref !== "refs/heads/{$commit->repo->default_branch}") {
             return;
         }
 

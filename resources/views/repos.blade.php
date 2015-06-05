@@ -24,7 +24,7 @@
                 </p>
                 @else
                 <p class="js-status">
-                    <strong>No commits on the master branch have been analysed yet.</strong>
+                    <strong>No commits on the {{ $repo->default_branch }} branch have been analysed yet.</strong>
                 </p>
                 @endif
             </div>
@@ -53,7 +53,7 @@
                 </p>
                 <% } else { %>
                 <p class="js-status">
-                    <strong>No commits have been pushed to the master yet.</strong>
+                    <strong>No commits have been pushed to the {{ $repo->default_branch }} branch yet.</strong>
                 </p>
                 <% } %>
             </div>
