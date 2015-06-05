@@ -1503,12 +1503,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "89ca41f538bf274228c18c9c6b00402bd22d8a15"
+                "reference": "2d3b48101b3e683a2845fa399aca43af22754aba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/89ca41f538bf274228c18c9c6b00402bd22d8a15",
-                "reference": "89ca41f538bf274228c18c9c6b00402bd22d8a15",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/2d3b48101b3e683a2845fa399aca43af22754aba",
+                "reference": "2d3b48101b3e683a2845fa399aca43af22754aba",
                 "shasum": ""
             },
             "require": {
@@ -1623,7 +1623,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-06-05 13:58:01"
+            "time": "2015-06-05 19:24:41"
         },
         {
             "name": "league/flysystem",
@@ -2477,12 +2477,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "aa9ebe96e1d2f5fcd663217b5e9cf70bddd81989"
+                "reference": "7e896235f45db68b9a1d4b74bb2dc466b1000de1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/aa9ebe96e1d2f5fcd663217b5e9cf70bddd81989",
-                "reference": "aa9ebe96e1d2f5fcd663217b5e9cf70bddd81989",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/7e896235f45db68b9a1d4b74bb2dc466b1000de1",
+                "reference": "7e896235f45db68b9a1d4b74bb2dc466b1000de1",
                 "shasum": ""
             },
             "require": {
@@ -2535,7 +2535,7 @@
                 "repo",
                 "repository"
             ],
-            "time": "2015-06-05 20:17:53"
+            "time": "2015-06-05 20:36:50"
         },
         {
             "name": "styleci/login",
