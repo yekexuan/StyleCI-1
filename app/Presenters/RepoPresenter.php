@@ -26,11 +26,15 @@ class RepoPresenter extends BasePresenter implements Arrayable
     /**
      * Get the last commit.
      *
-     * @return \StyleCI\StyleCI\Models\Commit
+     * @return \StyleCI\StyleCI\Presenters\CommitPresenter|null
      */
     public function lastCommit()
     {
-        return $this->wrappedObject->lastCommit();
+        $commit = $this->wrappedObject->lastCommit;
+
+        if ($commit) {
+            return AutoPresenter::decorate($commit);
+        }
     }
 
     /**
@@ -40,12 +44,10 @@ class RepoPresenter extends BasePresenter implements Arrayable
      */
     public function toArray()
     {
-        $commit = $this->lastCommit();
-
         return [
             'id'          => $this->wrappedObject->id,
             'name'        => $this->wrappedObject->name,
-            'last_commit' => $commit ? AutoPresenter::decorate($commit)->toArray() : null,
+            'last_commit' => $this->lastCommit(),
             'link'        => route('repo_path', $this->wrappedObject->id),
         ];
     }

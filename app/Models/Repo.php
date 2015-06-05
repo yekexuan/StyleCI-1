@@ -70,11 +70,11 @@ class Repo extends Model implements HasPresenter
     /**
      * Get the last commit.
      *
-     * @return \StyleCI\StyleCI\Models\Commit
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function lastCommit()
     {
-        return $this->hasOne(Commit::class)->where('ref', "refs/heads/{$this->default_branch}")->latest()->first();
+        return $this->hasOne(Commit::class)->where('ref', "refs/heads/{$this->default_branch}")->latest();
     }
 
     /**
