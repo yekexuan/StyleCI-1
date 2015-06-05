@@ -1503,12 +1503,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c8ade4de42e8cdb83c3cbffb307a6c4f81e81994"
+                "reference": "89ca41f538bf274228c18c9c6b00402bd22d8a15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c8ade4de42e8cdb83c3cbffb307a6c4f81e81994",
-                "reference": "c8ade4de42e8cdb83c3cbffb307a6c4f81e81994",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/89ca41f538bf274228c18c9c6b00402bd22d8a15",
+                "reference": "89ca41f538bf274228c18c9c6b00402bd22d8a15",
                 "shasum": ""
             },
             "require": {
@@ -1623,7 +1623,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-06-04 21:23:09"
+            "time": "2015-06-05 13:58:01"
         },
         {
             "name": "league/flysystem",
@@ -4698,16 +4698,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.7.0",
+            "version": "4.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c2241b8d3381be3e4c6125ae347687d59f286784"
+                "reference": "bdd15c9ec6e16a307398d5385b3445673608e805"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c2241b8d3381be3e4c6125ae347687d59f286784",
-                "reference": "c2241b8d3381be3e4c6125ae347687d59f286784",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/bdd15c9ec6e16a307398d5385b3445673608e805",
+                "reference": "bdd15c9ec6e16a307398d5385b3445673608e805",
                 "shasum": ""
             },
             "require": {
@@ -4766,7 +4766,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-06-05 04:14:02"
+            "time": "2015-06-05 13:25:13"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
