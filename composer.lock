@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4b64b8958ba13cdd9ae21c95b81f9c3f",
+    "hash": "a4f0f9eee4b129ee55312b50e12d4c41",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -2407,23 +2407,23 @@
         },
         {
             "name": "styleci/fixer",
-            "version": "v0.4.1-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "dee2a8f5ea440be91d64fd596b3112509b7eb609"
+                "reference": "1e4dfd5b4844efdf9fec8fcc9174735039c49037"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/dee2a8f5ea440be91d64fd596b3112509b7eb609",
-                "reference": "dee2a8f5ea440be91d64fd596b3112509b7eb609",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/1e4dfd5b4844efdf9fec8fcc9174735039c49037",
+                "reference": "1e4dfd5b4844efdf9fec8fcc9174735039c49037",
                 "shasum": ""
             },
             "require": {
                 "fabpot/php-cs-fixer": "1.9.*",
                 "php": ">=5.5.9",
                 "styleci/config": "0.3.*",
-                "styleci/git": "0.1.*"
+                "styleci/git": "0.2.*"
             },
             "require-dev": {
                 "graham-campbell/testbench": "~2.1"
@@ -2469,37 +2469,38 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-06-02 12:30:29"
+            "time": "2015-06-05 20:10:17"
         },
         {
             "name": "styleci/git",
-            "version": "v0.1.1-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "5eb18ec63ca8060348f09b8a4b1a80c8d8c1104c"
+                "reference": "aa9ebe96e1d2f5fcd663217b5e9cf70bddd81989"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/5eb18ec63ca8060348f09b8a4b1a80c8d8c1104c",
-                "reference": "5eb18ec63ca8060348f09b8a4b1a80c8d8c1104c",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/aa9ebe96e1d2f5fcd663217b5e9cf70bddd81989",
+                "reference": "aa9ebe96e1d2f5fcd663217b5e9cf70bddd81989",
                 "shasum": ""
             },
             "require": {
                 "gitonomy/gitlib": "~1.0",
                 "php": ">=5.5.9",
-                "symfony/filesystem": "~2.3"
+                "symfony/filesystem": "~2.3",
+                "symfony/finder": "~2.3"
             },
             "require-dev": {
                 "graham-campbell/testbench": "~2.1"
             },
             "suggest": {
-                "illuminate/support": "Enables Laravel support (~5.0)."
+                "illuminate/support": "Enables Laravel support."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.1-dev"
+                    "dev-master": "0.2-dev"
                 }
             },
             "autoload": {
@@ -2534,7 +2535,7 @@
                 "repo",
                 "repository"
             ],
-            "time": "2015-05-26 15:10:32"
+            "time": "2015-06-05 20:17:53"
         },
         {
             "name": "styleci/login",

@@ -14,6 +14,7 @@ namespace StyleCI\StyleCI\Console;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use StyleCI\StyleCI\Console\Commands\CleanupCommand;
+use StyleCI\StyleCI\Console\Commands\GarbageCollectCommand;
 
 /**
  * This is the console kernel class.
@@ -29,6 +30,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         CleanupCommand::class,
+        GarbageCollectCommand::class,
     ];
 
     /**
@@ -41,5 +43,6 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->call('styleci:cleanup')->everyTenMinutes();
+        $schedule->call('styleci:gc')->twiceDaily();
     }
 }

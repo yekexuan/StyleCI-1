@@ -32,6 +32,7 @@
         "mccool/laravel-auto-presenter": "~3.1",
         "styleci/bugsnag": "0.2.*",
         "styleci/fixer": "0.4.*",
+        "styleci/git": "0.2.*",
         "styleci/login": "0.2.*",
         "vinkla/pusher": "~1.1"
     },
