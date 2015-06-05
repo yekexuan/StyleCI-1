@@ -40,6 +40,6 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->call('styleci:cleanup')->everyTenMinutes();
+        $schedule->call('styleci:cleanup')->everyTenMinutes();
     }
 }
