@@ -24,13 +24,23 @@ use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 class RepoPresenter extends BasePresenter implements Arrayable
 {
     /**
+     * Get the last commit.
+     *
+     * @return \StyleCI\StyleCI\Models\Commit
+     */
+    public function lastCommit()
+    {
+        return $this->wrappedObject->lastCommit();
+    }
+
+    /**
      * Convert presented repo to an array.
      *
      * @return array
      */
     public function toArray()
     {
-        $commit = $this->wrappedObject->lastCommit();
+        $commit = $this->lastCommit();
 
         return [
             'id'          => $this->wrappedObject->id,
