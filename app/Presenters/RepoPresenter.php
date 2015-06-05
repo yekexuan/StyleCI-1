@@ -30,10 +30,12 @@ class RepoPresenter extends BasePresenter implements Arrayable
      */
     public function toArray()
     {
+        $commit = $this->wrappedObject->lastCommit();
+
         return [
             'id'          => $this->wrappedObject->id,
             'name'        => $this->wrappedObject->name,
-            'last_commit' => $this->wrappedObject->lastCommit ? AutoPresenter::decorate($this->wrappedObject->lastCommit)->toArray() : null,
+            'last_commit' => $commit ? AutoPresenter::decorate($commit)->toArray() : null,
             'link'        => route('repo_path', $this->wrappedObject->id),
         ];
     }
