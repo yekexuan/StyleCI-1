@@ -1,7 +1,5 @@
 var elixir = require('laravel-elixir');
 
-// Enabling babel makes elixir scripts really slow.
-elixir.config.babel.enabled = false;
 elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
