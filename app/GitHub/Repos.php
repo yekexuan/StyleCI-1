@@ -66,13 +66,9 @@ class Repos
             return $this->fetchFromGitHub($user);
         });
 
-        foreach (Repo::whereIn('id', array_keys($list))->get(['id']) as $repo) {
+        foreach (Repo::whereIn('id', array_keys($list))->get(['id', 'name', 'default_branch']) as $repo) {
             $list[$repo->id]['enabled'] = true;
-
-            if ($repo->name !== $list[$repo->id]['name']) {
-                $repo->name = $list[$repo->id]['name'];
-                $repo->save();
-            }
+            $this->syncWithDatabase($repo, $list[$repo->id]);
         }
 
         if ($admin) {
@@ -101,10 +97,37 @@ class Repos
         foreach ($paginator->fetchAll($client->me(), 'repositories', ['public']) as $repo) {
             // set enabled to false by default
             // we'll mark those that are enabled at a later point
-            $list[$repo['id']] = ['name' => $repo['full_name'], 'language' => $repo['language'], 'admin' => $repo['permissions']['admin'], 'enabled' => false];
+            $list[$repo['id']] = ['name' => $repo['full_name'], 'default_branch' => $repo['default_branch'], 'language' => $repo['language'], 'admin' => $repo['permissions']['admin'], 'enabled' => false];
         }
 
         return $list;
+    }
+
+    /**
+     * Save all downloaded changes to the database for the given repo.
+     *
+     * @param \StyleCI\StyleCI\Models\Repo $repo
+     * @param array                        $data
+     *
+     * @return void
+     */
+    protected function syncWithDatabase(Repo $repo, array $data)
+    {
+        $modifed = false;
+
+        if ($repo->name !== $data['name']) {
+            $repo->name = $data['name'];
+            $modifed = true;
+        }
+
+        if ($repo->default_branch !== $data['default_branch']) {
+            $repo->default_branch = $data['default_branch'];
+            $modifed = true;
+        }
+
+        if ($modifed) {
+            $repo->save();
+        }
     }
 
     /**

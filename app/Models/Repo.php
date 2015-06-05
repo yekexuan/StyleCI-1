@@ -74,7 +74,7 @@ class Repo extends Model implements HasPresenter
      */
     public function lastCommit()
     {
-        return $this->hasOne(Commit::class)->where('ref', 'refs/heads/master')->latest();
+        return $this->hasOne(Commit::class)->where('ref', "refs/heads/{$this->default_branch}")->latest();
     }
 
     /**

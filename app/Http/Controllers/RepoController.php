@@ -76,7 +76,7 @@ class RepoController extends AbstractController
      */
     public function handleShow(Repo $repo, Request $request, Guard $auth, Repos $repos)
     {
-        $commits = $repo->commits()->where('ref', 'refs/heads/master')->orderBy('created_at', 'desc')->paginate(50);
+        $commits = $repo->commits()->where('ref', "refs/heads/{$repo->default_branch}")->orderBy('created_at', 'desc')->paginate(50);
 
         if ($request->ajax()) {
             return new JsonResponse(['data' => AutoPresenter::decorate($commits->getCollection())->toArray()]);
@@ -114,7 +114,7 @@ class RepoController extends AbstractController
         $branches = $branches->get($repo);
 
         foreach ($branches as $branch) {
-            if ($branch['name'] !== 'master') {
+            if ($branch['name'] !== $repo->default_branch) {
                 continue;
             }
 
