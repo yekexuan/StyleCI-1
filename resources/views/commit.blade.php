@@ -13,7 +13,7 @@
 @stop
 
 @section('content')
-<div id="js-commit-{{ $commit->shorthandId }}" class="commit js-channel" data-channel="{{ $commit->repo->id }}">
+<sc-commit id="js-commit-{{ $commit->shorthandId }}" class="commit js-channel" data-channel="{{ $commit->repo->id }}">
     <div class="well">
         <div class="pull-right">
             <a href="#" data-toggle="modal" data-target="#badge-modal">
@@ -95,7 +95,7 @@
     </div>
     @endforeach
     @endif
-</div>
+</sc-commit>
 
 <div class="modal fade" id="badge-modal" tabindex="-1" role="dialog" aria-labelledby="badge-modal-label" aria-hidden="true">
     <div class="modal-dialog">
@@ -124,15 +124,4 @@
         </div>
     </div>
 </div>
-@stop
-
-@section('js')
-<script type="text/javascript">
-    SyntaxHighlighter.defaults['toolbar'] = false;
-    SyntaxHighlighter.defaults['gutter'] = false;
-    SyntaxHighlighter.all();
-    $(function() {
-        StyleCI.Commit.RealTimeStatus();
-    });
-</script>
 @stop

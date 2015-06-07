@@ -63,6 +63,24 @@ class CommitPresenter extends BasePresenter implements Arrayable
     }
 
     /**
+     * Get the commit status color.
+     *
+     * @return string
+     */
+    public function color()
+    {
+        if ($this->wrappedObject->status === 1) {
+            return 'green';
+        }
+
+        if ($this->wrappedObject->status > 1) {
+            return 'red';
+        }
+
+        return 'grey';
+    }
+
+    /**
      * Get the commit's repo shorthand id.
      *
      * @return string
@@ -127,6 +145,7 @@ class CommitPresenter extends BasePresenter implements Arrayable
             'description'    => $this->wrappedObject->description(),
             'error_message'  => $this->wrappedObject->error_message,
             'status'         => $this->wrappedObject->status,
+            'color'          => $this->color(),
             'summary'        => $this->summary(),
             'icon'           => $this->icon(),
             'timeAgo'        => $this->timeAgo(),

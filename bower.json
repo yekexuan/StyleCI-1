@@ -4,11 +4,11 @@
         "animate-sass": "~0.6.3",
         "bootstrap-sass": "~3.3.5",
         "font-awesome": "~4.3.0",
-        "fuse.js": "~1.2.2",
         "jquery": "~2.1.1",
         "jquery-timeago": "~1.4.1",
         "lodash": "~3.6.0",
         "pusher": "~2.2.4",
-        "SyntaxHighlighter": "3.0.9"
+        "SyntaxHighlighter": "3.0.9",
+        "vue": "~0.12.1"
     }
 }

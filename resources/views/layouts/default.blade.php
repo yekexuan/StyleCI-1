@@ -12,7 +12,7 @@
 @include('partials.notifications')
 @section('top')
 @show
-<div class="container">
+<div class="container" id="app">
 @section('content')
 @show
 </div>
