@@ -41,7 +41,7 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'auth'  => 'StyleCI\StyleCI\Http\Middleware\Authenticate',
-        'csrf'  => 'StyleCI\StyleCI\Http\Middleware\VerifyCsrfToken',
+        'csrf'  => 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken',
         'guest' => 'StyleCI\StyleCI\Http\Middleware\RedirectIfAuthenticated',
     ];
 }
