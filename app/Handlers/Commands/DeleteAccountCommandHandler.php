@@ -12,6 +12,7 @@
 namespace StyleCI\StyleCI\Handlers\Commands;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Psr\Log\LoggerInterface;
 use StyleCI\StyleCI\Commands\DeleteAccountCommand;
 use StyleCI\StyleCI\Commands\DisableRepoCommand;
 use StyleCI\StyleCI\Events\UserHasRageQuitEvent;
@@ -26,6 +27,25 @@ class DeleteAccountCommandHandler
     use DispatchesJobs;
 
     /**
+     * The logger instance.
+     *
+     * @var \Psr\Log\LoggerInterface
+     */
+    protected $logger;
+
+    /**
+     * Create a new delete account command handler instance.
+     *
+     * @param \Psr\Log\LoggerInterface $logger
+     *
+     * @return void
+     */
+    public function __construct(LoggerInterface $logger)
+    {
+        $this->logger = $logger;
+    }
+
+    /**
      * Handle the delete account command.
      *
      * @param \StyleCI\StyleCI\Commands\DeleteAccountCommand $command
@@ -37,10 +57,18 @@ class DeleteAccountCommandHandler
         $user = $command->user;
 
         foreach ($user->repos as $repo) {
-            $this->dispatch(new DisableRepoCommand($repo));
+            try {
+                $this->dispatch(new DisableRepoCommand($repo));
+            } catch (Exception $e) {
+                $this->logger->error($e);
+            }
         }
 
-        event(new UserHasRageQuitEvent($user));
+        try {
+            event(new UserHasRageQuitEvent($user));
+        } catch (Exception $e) {
+            $this->logger->error($e);
+        }
 
         $user->delete();
     }
