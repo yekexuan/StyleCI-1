@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Providers;
 
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\ServiceProvider;
 use StyleCI\StyleCI\Composers\CurrentUrlComposer;
 use StyleCI\StyleCI\Composers\CurrentUserComposer;
@@ -18,10 +19,24 @@ use StyleCI\StyleCI\Composers\CurrentUserComposer;
 /**
  * This is the view composer service provider class.
  *
+ * @author Graham Campbell <graham@cachethq.io>
  * @author Joseph Cohen <joseph.cohen@dinkbit.com>
  */
 class ComposerServiceProvider extends ServiceProvider
 {
+    /**
+     * Boot the service provider.
+     *
+     * @param \Illuminate\Contracts\View\Factory $factory
+     *
+     * @return void
+     */
+    public function boot(Factory $factory)
+    {
+        $factory->composer('*', CurrentUserComposer::class);
+        $factory->composer('*', CurrentUrlComposer::class);
+    }
+
     /**
      * Register the service provider.
      *
@@ -29,7 +44,6 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->view->composer('*', CurrentUserComposer::class);
-        $this->app->view->composer('*', CurrentUrlComposer::class);
+        //
     }
 }
