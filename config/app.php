@@ -158,7 +158,6 @@ return [
         'StyleCI\Git\GitServiceProvider',
         'StyleCI\Login\LoginServiceProvider',
         'StyleCI\StyleCI\Providers\AppServiceProvider',
-        'StyleCI\StyleCI\Providers\BusServiceProvider',
         'StyleCI\StyleCI\Providers\ComposerServiceProvider',
         'StyleCI\StyleCI\Providers\EventServiceProvider',
         'StyleCI\StyleCI\Providers\GitHubServiceProvider',

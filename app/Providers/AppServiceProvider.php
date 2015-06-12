@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Providers;
 
+use Illuminate\Bus\Dispatcher;
 use Illuminate\Support\ServiceProvider;
 use StyleCI\StyleCI\Http\Middleware\Authenticate;
 
@@ -21,6 +22,20 @@ use StyleCI\StyleCI\Http\Middleware\Authenticate;
  */
 class AppServiceProvider extends ServiceProvider
 {
+    /**
+     * Boot the service provider.
+     *
+     * @param \Illuminate\Bus\Dispatcher $dispatcher
+     *
+     * @return void
+     */
+    public function boot(Dispatcher $dispatcher)
+    {
+        $dispatcher->mapUsing(function ($command) {
+            return Dispatcher::simpleMapping($command, 'StyleCI\StyleCI\Commands', 'StyleCI\StyleCI\Handlers\Commands');
+        });
+    }
+
     /**
      * Register the service provider.
      *
