@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a4f0f9eee4b129ee55312b50e12d4c41",
+    "hash": "235a8d88964dfa2f07c5f4cdcbfdb67f",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -276,12 +276,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "aee825f4c6bfa7f3c45411e68110276bab494ee3"
+                "reference": "a706e6a0d5c5ef37bbf541495dcbe2114372e624"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/aee825f4c6bfa7f3c45411e68110276bab494ee3",
-                "reference": "aee825f4c6bfa7f3c45411e68110276bab494ee3",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/a706e6a0d5c5ef37bbf541495dcbe2114372e624",
+                "reference": "a706e6a0d5c5ef37bbf541495dcbe2114372e624",
                 "shasum": ""
             },
             "require": {
@@ -322,7 +322,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-06-12 12:04:09"
+            "time": "2015-06-13 09:33:34"
         },
         {
             "name": "fideloper/proxy",
@@ -1337,16 +1337,16 @@
         },
         {
             "name": "jakub-onderka/php-console-highlighter",
-            "version": "v0.3.1",
+            "version": "v0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JakubOnderka/PHP-Console-Highlighter.git",
-                "reference": "05bce997da20acf873e6bf396276798f3cd2c76a"
+                "reference": "7daa75df45242c8d5b75a22c00a201e7954e4fb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Highlighter/zipball/05bce997da20acf873e6bf396276798f3cd2c76a",
-                "reference": "05bce997da20acf873e6bf396276798f3cd2c76a",
+                "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Highlighter/zipball/7daa75df45242c8d5b75a22c00a201e7954e4fb5",
+                "reference": "7daa75df45242c8d5b75a22c00a201e7954e4fb5",
                 "shasum": ""
             },
             "require": {
@@ -1356,6 +1356,7 @@
             "require-dev": {
                 "jakub-onderka/php-code-style": "~1.0",
                 "jakub-onderka/php-parallel-lint": "~0.5",
+                "jakub-onderka/php-var-dump-check": "~0.1",
                 "phpunit/phpunit": "~4.0",
                 "squizlabs/php_codesniffer": "~1.5"
             },
@@ -1376,7 +1377,7 @@
                     "homepage": "http://www.acci.cz/"
                 }
             ],
-            "time": "2014-07-14 20:59:35"
+            "time": "2015-04-20 18:58:01"
         },
         {
             "name": "jeremeamia/SuperClosure",
@@ -1438,16 +1439,16 @@
         },
         {
             "name": "knplabs/github-api",
-            "version": "1.4.11",
+            "version": "1.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/php-github-api.git",
-                "reference": "346761bf33ec3af686d304e679d4729f36b0a943"
+                "reference": "ccf5e49a2454c1b102333586d80ce67012b5080f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/346761bf33ec3af686d304e679d4729f36b0a943",
-                "reference": "346761bf33ec3af686d304e679d4729f36b0a943",
+                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/ccf5e49a2454c1b102333586d80ce67012b5080f",
+                "reference": "ccf5e49a2454c1b102333586d80ce67012b5080f",
                 "shasum": ""
             },
             "require": {
@@ -1495,20 +1496,20 @@
                 "gist",
                 "github"
             ],
-            "time": "2015-05-26 06:11:50"
+            "time": "2015-06-17 08:02:22"
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.1",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "3a44db7e70146dc1282b39887b5faa67c8583015"
+                "reference": "ef371f400b0b331bdde1b79b0b5e1370a5b3399f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/3a44db7e70146dc1282b39887b5faa67c8583015",
-                "reference": "3a44db7e70146dc1282b39887b5faa67c8583015",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ef371f400b0b331bdde1b79b0b5e1370a5b3399f",
+                "reference": "ef371f400b0b331bdde1b79b0b5e1370a5b3399f",
                 "shasum": ""
             },
             "require": {
@@ -1623,7 +1624,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-06-09 14:13:59"
+            "time": "2015-06-17 02:03:04"
         },
         {
             "name": "league/flysystem",
@@ -2279,16 +2280,16 @@
         },
         {
             "name": "styleci/bugsnag",
-            "version": "v0.2.0-alpha",
+            "version": "v0.2.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Bugsnag.git",
-                "reference": "dd343700add07fc12f9a0e3b7ee55b63e9ab6fa7"
+                "reference": "ee3d2c522bf4c70fea6f1f85651f419dbaf80c5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/dd343700add07fc12f9a0e3b7ee55b63e9ab6fa7",
-                "reference": "dd343700add07fc12f9a0e3b7ee55b63e9ab6fa7",
+                "url": "https://api.github.com/repos/StyleCI/Bugsnag/zipball/ee3d2c522bf4c70fea6f1f85651f419dbaf80c5a",
+                "reference": "ee3d2c522bf4c70fea6f1f85651f419dbaf80c5a",
                 "shasum": ""
             },
             "require": {
@@ -2340,7 +2341,7 @@
                 "StyleCI",
                 "bugsnag"
             ],
-            "time": "2015-05-30 15:22:35"
+            "time": "2015-06-12 22:15:02"
         },
         {
             "name": "styleci/config",
@@ -2412,16 +2413,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "1e4dfd5b4844efdf9fec8fcc9174735039c49037"
+                "reference": "8757cc9e9f658b1b1a5a49db5fcc0a2730ce1093"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/1e4dfd5b4844efdf9fec8fcc9174735039c49037",
-                "reference": "1e4dfd5b4844efdf9fec8fcc9174735039c49037",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/8757cc9e9f658b1b1a5a49db5fcc0a2730ce1093",
+                "reference": "8757cc9e9f658b1b1a5a49db5fcc0a2730ce1093",
                 "shasum": ""
             },
             "require": {
-                "fabpot/php-cs-fixer": "1.9.*",
+                "fabpot/php-cs-fixer": "~1.9.1",
                 "php": ">=5.5.9",
                 "styleci/config": "0.3.*",
                 "styleci/git": "0.2.*"
@@ -2470,7 +2471,7 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-06-05 20:10:17"
+            "time": "2015-06-17 09:03:29"
         },
         {
             "name": "styleci/git",
@@ -3963,16 +3964,16 @@
         },
         {
             "name": "doctrine/instantiator",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "f976e5de371104877ebc89bd8fecb0019ed9c119"
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/f976e5de371104877ebc89bd8fecb0019ed9c119",
-                "reference": "f976e5de371104877ebc89bd8fecb0019ed9c119",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
                 "shasum": ""
             },
             "require": {
@@ -3983,7 +3984,7 @@
                 "ext-pdo": "*",
                 "ext-phar": "*",
                 "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "2.0.*@ALPHA"
+                "squizlabs/php_codesniffer": "~2.0"
             },
             "type": "library",
             "extra": {
@@ -3992,8 +3993,8 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\Instantiator\\": "src"
+                "psr-4": {
+                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4013,7 +4014,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2014-10-13 12:58:55"
+            "time": "2015-06-14 21:17:01"
         },
         {
             "name": "doctrine/lexer",
@@ -4207,7 +4208,7 @@
             ],
             "authors": [
                 {
-                    "name": "Pádraic Brady",
+                    "name": "Padraic Brady",
                     "email": "padraic.brady@gmail.com",
                     "homepage": "http://blog.astrumfutura.com"
                 },
@@ -4235,21 +4236,21 @@
         },
         {
             "name": "orchestra/database",
-            "version": "v3.1.0",
+            "version": "v3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orchestral/database.git",
-                "reference": "7c1dd03afbbc9c4ca14b09ab77b3ac386f283acd"
+                "reference": "4ca4f0c1426225259b0b38c6a9fb4c2f7fa504e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/database/zipball/7c1dd03afbbc9c4ca14b09ab77b3ac386f283acd",
-                "reference": "7c1dd03afbbc9c4ca14b09ab77b3ac386f283acd",
+                "url": "https://api.github.com/repos/orchestral/database/zipball/4ca4f0c1426225259b0b38c6a9fb4c2f7fa504e4",
+                "reference": "4ca4f0c1426225259b0b38c6a9fb4c2f7fa504e4",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "5.1.*",
-                "illuminate/database": "5.1.*",
+                "illuminate/contracts": "~5.1.0",
+                "illuminate/database": "~5.1.0",
                 "php": ">=5.5.0"
             },
             "type": "library",
@@ -4285,7 +4286,7 @@
                 "orchestra-platform",
                 "orchestral"
             ],
-            "time": "2015-05-30 10:30:30"
+            "time": "2015-06-16 12:32:04"
         },
         {
             "name": "orchestra/testbench",
@@ -4613,16 +4614,16 @@
         },
         {
             "name": "phpunit/php-timer",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-timer.git",
-                "reference": "19689d4354b295ee3d8c54b4f42c3efb69cbc17c"
+                "reference": "83fe1bdc5d47658b727595c14da140da92b3d66d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/19689d4354b295ee3d8c54b4f42c3efb69cbc17c",
-                "reference": "19689d4354b295ee3d8c54b4f42c3efb69cbc17c",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-timer/zipball/83fe1bdc5d47658b727595c14da140da92b3d66d",
+                "reference": "83fe1bdc5d47658b727595c14da140da92b3d66d",
                 "shasum": ""
             },
             "require": {
@@ -4631,13 +4632,10 @@
             "type": "library",
             "autoload": {
                 "classmap": [
-                    "PHP/"
+                    "src/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                ""
-            ],
             "license": [
                 "BSD-3-Clause"
             ],
@@ -4653,7 +4651,7 @@
             "keywords": [
                 "timer"
             ],
-            "time": "2013-08-02 07:42:54"
+            "time": "2015-06-13 07:35:30"
         },
         {
             "name": "phpunit/php-token-stream",
