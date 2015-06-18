@@ -53,7 +53,7 @@
                 </p>
                 <% } else { %>
                 <p class="js-status">
-                    <strong>No commits have been pushed to the {{ $repo->default_branch }} branch yet.</strong>
+                    <strong>No commits have been pushed to the <%= repo.default_branch %> branch yet.</strong>
                 </p>
                 <% } %>
             </div>
