@@ -1,6 +1,6 @@
 Dear <?php echo e($name); ?>,
 
-We have recieved a request to delete your account from StyleCI. All existing analysis data has been removed from our systems.
+We have received a request to delete your account from StyleCI. All existing analysis data has been removed from our systems.
 
 This request has been fulfilled, your account has been removed from our service. If this was not you then please contact us immediately.
 
