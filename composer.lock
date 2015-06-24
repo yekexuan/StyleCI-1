@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "235a8d88964dfa2f07c5f4cdcbfdb67f",
+    "hash": "2db1bb6b605e57601465c8c326ad23e8",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -276,12 +276,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "e3ccfeeda614b109e7983e70b23c9ac32cca529e"
+                "reference": "213e75a3100253c0af84baee62cf74168f71c178"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/e3ccfeeda614b109e7983e70b23c9ac32cca529e",
-                "reference": "e3ccfeeda614b109e7983e70b23c9ac32cca529e",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/213e75a3100253c0af84baee62cf74168f71c178",
+                "reference": "213e75a3100253c0af84baee62cf74168f71c178",
                 "shasum": ""
             },
             "require": {
@@ -322,7 +322,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-06-17 20:24:34"
+            "time": "2015-06-22 18:55:49"
         },
         {
             "name": "fideloper/proxy",
@@ -489,32 +489,34 @@
         },
         {
             "name": "graham-campbell/binput",
-            "version": "v3.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Binput.git",
-                "reference": "1f4bf545f40ae5b37401f7a8d6d811d9a626f498"
+                "reference": "a723d4bd010a9f5bd13b866398fb7dc68944183c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Binput/zipball/1f4bf545f40ae5b37401f7a8d6d811d9a626f498",
-                "reference": "1f4bf545f40ae5b37401f7a8d6d811d9a626f498",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Binput/zipball/a723d4bd010a9f5bd13b866398fb7dc68944183c",
+                "reference": "a723d4bd010a9f5bd13b866398fb7dc68944183c",
                 "shasum": ""
             },
             "require": {
-                "graham-campbell/security": "~3.1",
+                "graham-campbell/security": "~3.2",
                 "illuminate/contracts": "5.0.*|5.1.*",
                 "illuminate/http": "5.0.*|5.1.*",
                 "illuminate/support": "5.0.*|5.1.*",
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1"
+                "graham-campbell/testbench": "~3.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -529,7 +531,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "Binput Is An Input Protector For Laravel 5",
@@ -546,20 +548,20 @@
                 "laravel",
                 "security"
             ],
-            "time": "2015-05-20 23:26:52"
+            "time": "2015-06-24 11:15:15"
         },
         {
             "name": "graham-campbell/core",
-            "version": "v4.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Core.git",
-                "reference": "b35baced7e78125b8228ba43bf3fb8b5561d3ff9"
+                "reference": "1316e0a1d79d137e2b83a0125ea3b00a5ee81ea6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/b35baced7e78125b8228ba43bf3fb8b5561d3ff9",
-                "reference": "b35baced7e78125b8228ba43bf3fb8b5561d3ff9",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/1316e0a1d79d137e2b83a0125ea3b00a5ee81ea6",
+                "reference": "1316e0a1d79d137e2b83a0125ea3b00a5ee81ea6",
                 "shasum": ""
             },
             "require": {
@@ -569,12 +571,14 @@
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1"
+                "graham-campbell/testbench": "~3.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -604,20 +608,20 @@
                 "laravel",
                 "starter"
             ],
-            "time": "2015-05-28 22:41:10"
+            "time": "2015-06-24 10:53:30"
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "v3.0.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "32ab48e7fda7721e20952f0d7676d888389a21ef"
+                "reference": "f9281dde88080a238823d2a1fc93dc054f9fba43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/32ab48e7fda7721e20952f0d7676d888389a21ef",
-                "reference": "32ab48e7fda7721e20952f0d7676d888389a21ef",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/f9281dde88080a238823d2a1fc93dc054f9fba43",
+                "reference": "f9281dde88080a238823d2a1fc93dc054f9fba43",
                 "shasum": ""
             },
             "require": {
@@ -630,12 +634,14 @@
                 "symfony/http-foundation": "2.7.*"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1"
+                "graham-campbell/testbench": "~3.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -667,36 +673,38 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-06-01 21:52:11"
+            "time": "2015-06-24 10:54:02"
         },
         {
             "name": "graham-campbell/github",
-            "version": "v3.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-GitHub.git",
-                "reference": "df926da04343c8fce3ffd1cc538a44563d96b531"
+                "reference": "e5ec021493a235d18955a40d2ae2d4139e69b380"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-GitHub/zipball/df926da04343c8fce3ffd1cc538a44563d96b531",
-                "reference": "df926da04343c8fce3ffd1cc538a44563d96b531",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-GitHub/zipball/e5ec021493a235d18955a40d2ae2d4139e69b380",
+                "reference": "e5ec021493a235d18955a40d2ae2d4139e69b380",
                 "shasum": ""
             },
             "require": {
-                "graham-campbell/manager": "~2.1",
+                "graham-campbell/manager": "~2.2",
                 "illuminate/contracts": "5.0.*|5.1.*",
                 "illuminate/support": "5.0.*|5.1.*",
                 "knplabs/github-api": "~1.3",
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1"
+                "graham-campbell/testbench": "~3.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -728,20 +736,20 @@
                 "laravel",
                 "php-github-api"
             ],
-            "time": "2015-05-25 14:43:44"
+            "time": "2015-06-24 17:22:30"
         },
         {
             "name": "graham-campbell/htmlmin",
-            "version": "v3.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-HTMLMin.git",
-                "reference": "5804d4a4c60f6caa4bfd8a00e3030a4832d26f88"
+                "reference": "a7cf03b88404cdb08e9e0b46ac0cd919611147c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-HTMLMin/zipball/5804d4a4c60f6caa4bfd8a00e3030a4832d26f88",
-                "reference": "5804d4a4c60f6caa4bfd8a00e3030a4832d26f88",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-HTMLMin/zipball/a7cf03b88404cdb08e9e0b46ac0cd919611147c0",
+                "reference": "a7cf03b88404cdb08e9e0b46ac0cd919611147c0",
                 "shasum": ""
             },
             "require": {
@@ -755,12 +763,14 @@
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1"
+                "graham-campbell/testbench": "~3.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -775,7 +785,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "HTMLMin Is A Simple HTML Minifier For Laravel 5",
@@ -791,36 +801,38 @@
                 "laravel",
                 "minifier"
             ],
-            "time": "2015-05-20 22:49:46"
+            "time": "2015-06-24 10:54:09"
         },
         {
             "name": "graham-campbell/logger",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Logger.git",
-                "reference": "cc9864a924f12386b43f116c99ca44c24560ec14"
+                "reference": "77db14ab5cb2bc88268e20ba3f039d20f7e77730"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/cc9864a924f12386b43f116c99ca44c24560ec14",
-                "reference": "cc9864a924f12386b43f116c99ca44c24560ec14",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/77db14ab5cb2bc88268e20ba3f039d20f7e77730",
+                "reference": "77db14ab5cb2bc88268e20ba3f039d20f7e77730",
                 "shasum": ""
             },
             "require": {
-                "graham-campbell/logger-core": "~1.0",
+                "graham-campbell/logger-core": "~1.1",
                 "illuminate/contracts": "5.0.*|5.1.*",
                 "illuminate/support": "5.0.*|5.1.*",
                 "php": ">=5.5.9",
                 "psr/log": "~1.0"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1"
+                "graham-campbell/testbench": "~3.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -852,35 +864,34 @@
                 "logs",
                 "multiple"
             ],
-            "time": "2015-05-30 15:15:55"
+            "time": "2015-06-24 10:56:01"
         },
         {
             "name": "graham-campbell/logger-core",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Logger-Core.git",
-                "reference": "e0c82e9ab3b75155043b080b87ecfc12c9b2dfb8"
+                "reference": "ac4702ed44208ec9dec5ae40b14040c53a214618"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger-Core/zipball/e0c82e9ab3b75155043b080b87ecfc12c9b2dfb8",
-                "reference": "e0c82e9ab3b75155043b080b87ecfc12c9b2dfb8",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger-Core/zipball/ac4702ed44208ec9dec5ae40b14040c53a214618",
+                "reference": "ac4702ed44208ec9dec5ae40b14040c53a214618",
                 "shasum": ""
             },
             "require": {
                 "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
                 "php": ">=5.5.9",
                 "psr/log": "~1.0"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1"
+                "phpunit/phpunit": "^4.7.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -911,20 +922,20 @@
                 "logging",
                 "logs"
             ],
-            "time": "2015-05-30 15:05:52"
+            "time": "2015-06-24 10:53:42"
         },
         {
             "name": "graham-campbell/manager",
-            "version": "v2.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
-                "reference": "1a99ed46590cac9c524ca5ab54bd8a80aa127c39"
+                "reference": "251974dec03298314dd573a4006c71c783989f97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/1a99ed46590cac9c524ca5ab54bd8a80aa127c39",
-                "reference": "1a99ed46590cac9c524ca5ab54bd8a80aa127c39",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/251974dec03298314dd573a4006c71c783989f97",
+                "reference": "251974dec03298314dd573a4006c71c783989f97",
                 "shasum": ""
             },
             "require": {
@@ -933,12 +944,14 @@
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1"
+                "graham-campbell/testbench-core": "~1.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
@@ -953,7 +966,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "Manager Provides Some Manager Functionality For Laravel 5",
@@ -968,20 +981,20 @@
                 "laravel",
                 "manager"
             ],
-            "time": "2015-05-07 12:37:59"
+            "time": "2015-06-24 12:09:46"
         },
         {
             "name": "graham-campbell/security",
-            "version": "v3.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Security.git",
-                "reference": "9f573002070cfe49f32bf49ca91a415d3220d86e"
+                "reference": "0ec6d584c5f9f8bdd1597368136e669169844764"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Security/zipball/9f573002070cfe49f32bf49ca91a415d3220d86e",
-                "reference": "9f573002070cfe49f32bf49ca91a415d3220d86e",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Security/zipball/0ec6d584c5f9f8bdd1597368136e669169844764",
+                "reference": "0ec6d584c5f9f8bdd1597368136e669169844764",
                 "shasum": ""
             },
             "require": {
@@ -990,12 +1003,14 @@
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1"
+                "graham-campbell/testbench": "~3.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -1010,7 +1025,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
             "description": "Security Is A Port Of The Security Class From Codeigniter 3 For Laravel 5",
@@ -1024,7 +1039,7 @@
                 "laravel",
                 "security"
             ],
-            "time": "2015-05-20 23:18:09"
+            "time": "2015-06-24 11:06:19"
         },
         {
             "name": "guzzle/guzzle",
@@ -1185,23 +1200,23 @@
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "01abc3232138f330d8a1eaa808fcbdf9b4292f47"
+                "reference": "2ee5bc7f1a92efecc90da7f6711a53a7be26b5b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/01abc3232138f330d8a1eaa808fcbdf9b4292f47",
-                "reference": "01abc3232138f330d8a1eaa808fcbdf9b4292f47",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/2ee5bc7f1a92efecc90da7f6711a53a7be26b5b7",
+                "reference": "2ee5bc7f1a92efecc90da7f6711a53a7be26b5b7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.0"
+                "phpunit/phpunit": "~4.0"
             },
             "type": "library",
             "extra": {
@@ -1232,7 +1247,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2015-05-13 05:05:10"
+            "time": "2015-06-24 16:16:25"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -1504,12 +1519,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c5f37ad1cd5890737ad431755e01f29f9b810a34"
+                "reference": "36d50ba04f268fda5ed648320ecbf8f5b4f654de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c5f37ad1cd5890737ad431755e01f29f9b810a34",
-                "reference": "c5f37ad1cd5890737ad431755e01f29f9b810a34",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/36d50ba04f268fda5ed648320ecbf8f5b4f654de",
+                "reference": "36d50ba04f268fda5ed648320ecbf8f5b4f654de",
                 "shasum": ""
             },
             "require": {
@@ -1624,7 +1639,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-06-19 08:17:32"
+            "time": "2015-06-23 17:13:07"
         },
         {
             "name": "league/flysystem",
@@ -4074,34 +4089,39 @@
             "time": "2014-09-09 13:34:57"
         },
         {
-            "name": "graham-campbell/testbench",
-            "version": "v2.1.0",
+            "name": "graham-campbell/testbench-core",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/GrahamCampbell/Laravel-TestBench.git",
-                "reference": "deea0e8cb8f6ee9c4032c24a40365eb334617a60"
+                "url": "https://github.com/GrahamCampbell/Laravel-TestBench-Core.git",
+                "reference": "1279c7057ddc585191c421bd92c7c8be50720739"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-TestBench/zipball/deea0e8cb8f6ee9c4032c24a40365eb334617a60",
-                "reference": "deea0e8cb8f6ee9c4032c24a40365eb334617a60",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-TestBench-Core/zipball/1279c7057ddc585191c421bd92c7c8be50720739",
+                "reference": "1279c7057ddc585191c421bd92c7c8be50720739",
                 "shasum": ""
             },
             "require": {
-                "mockery/mockery": "~0.9.4",
-                "orchestra/testbench": "3.0.*|3.1.*",
-                "php": ">=5.5.9",
-                "phpunit/phpunit": "~4.6"
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7.6"
+            },
+            "suggest": {
+                "illuminate/support": "Required to use the laravel trait.",
+                "mockery/mockery": "Required to use the mockery trait.",
+                "phpunit/phpunit": "Required to use the most of the features."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "GrahamCampbell\\TestBench\\": "src/"
+                    "GrahamCampbell\\TestBenchCore\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -4111,21 +4131,22 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@mineuk.com"
+                    "email": "graham@cachethq.io"
                 }
             ],
-            "description": "TestBench Provides Some Testing Functionality For Laravel 5",
+            "description": "TestBench Core Provides Some Testing Functionality For Laravel 5",
             "keywords": [
                 "Graham Campbell",
                 "GrahamCampbell",
-                "Laravel TestBench",
-                "Laravel-TestBench",
+                "Laravel TestBench Core",
+                "Laravel-TestBench-Core",
                 "TestBench",
                 "framework",
                 "laravel",
+                "testbench-core",
                 "testing"
             ],
-            "time": "2015-04-24 19:37:19"
+            "time": "2015-06-24 16:33:34"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -4211,7 +4232,7 @@
             ],
             "authors": [
                 {
-                    "name": "Padraic Brady",
+                    "name": "Pádraic Brady",
                     "email": "padraic.brady@gmail.com",
                     "homepage": "http://blog.astrumfutura.com"
                 },
@@ -4236,122 +4257,6 @@
                 "testing"
             ],
             "time": "2015-04-02 19:54:00"
-        },
-        {
-            "name": "orchestra/database",
-            "version": "v3.1.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/orchestral/database.git",
-                "reference": "4ca4f0c1426225259b0b38c6a9fb4c2f7fa504e4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/database/zipball/4ca4f0c1426225259b0b38c6a9fb4c2f7fa504e4",
-                "reference": "4ca4f0c1426225259b0b38c6a9fb4c2f7fa504e4",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "~5.1.0",
-                "illuminate/database": "~5.1.0",
-                "php": ">=5.5.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Orchestra\\Database\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mior Muhammad Zaki",
-                    "email": "crynobone@gmail.com",
-                    "homepage": "https://github.com/crynobone"
-                },
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com",
-                    "homepage": "https://github.com/taylorotwell"
-                }
-            ],
-            "description": "Database Component for Orchestra Platform",
-            "keywords": [
-                "database",
-                "orchestra-platform",
-                "orchestral"
-            ],
-            "time": "2015-06-16 12:32:04"
-        },
-        {
-            "name": "orchestra/testbench",
-            "version": "v3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/orchestral/testbench.git",
-                "reference": "a804e4225bf15636d85406c98387641393a85fae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/orchestral/testbench/zipball/a804e4225bf15636d85406c98387641393a85fae",
-                "reference": "a804e4225bf15636d85406c98387641393a85fae",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "5.1.*",
-                "orchestra/database": "3.1.*",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "behat/behat": "~2.5",
-                "mockery/mockery": "0.9.*",
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "behat/behat": "Allow to use Behat for testing your Laravel Application/Package (~2.5).",
-                "phpunit/phpunit": "Allow to use PHPUnit for testing your Laravel Application/Package (~4.0)."
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "3.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Orchestra\\Testbench\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mior Muhammad Zaki",
-                    "email": "crynobone@gmail.com",
-                    "homepage": "https://github.com/crynobone"
-                }
-            ],
-            "description": "Laravel Package Unit Testing Helper",
-            "homepage": "http://orchestraplatform.com/docs/latest/components/testbench/",
-            "keywords": [
-                "BDD",
-                "TDD",
-                "laravel",
-                "orchestra-platform",
-                "orchestral",
-                "testing"
-            ],
-            "time": "2015-06-09 08:45:22"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -4573,16 +4478,16 @@
         },
         {
             "name": "phpunit/php-text-template",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-text-template.git",
-                "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a"
+                "reference": "31f8b717e51d9a2afca6c9f046f5d69fc27c8686"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
-                "reference": "206dfefc0ffe9cebf65c413e3d0e809c82fbf00a",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-text-template/zipball/31f8b717e51d9a2afca6c9f046f5d69fc27c8686",
+                "reference": "31f8b717e51d9a2afca6c9f046f5d69fc27c8686",
                 "shasum": ""
             },
             "require": {
@@ -4591,20 +4496,17 @@
             "type": "library",
             "autoload": {
                 "classmap": [
-                    "Text/"
+                    "src/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
-            "include-path": [
-                ""
-            ],
             "license": [
                 "BSD-3-Clause"
             ],
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sb@sebastian-bergmann.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -4613,7 +4515,7 @@
             "keywords": [
                 "template"
             ],
-            "time": "2014-01-30 17:20:04"
+            "time": "2015-06-21 13:50:34"
         },
         {
             "name": "phpunit/php-timer",
@@ -4707,16 +4609,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.7.4",
+            "version": "4.8.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "e5f851f324f7add846316f39e668e9deac97a103"
+                "reference": "893f3ce946f2b65920b173d831d769ab2f35097e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e5f851f324f7add846316f39e668e9deac97a103",
-                "reference": "e5f851f324f7add846316f39e668e9deac97a103",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/893f3ce946f2b65920b173d831d769ab2f35097e",
+                "reference": "893f3ce946f2b65920b173d831d769ab2f35097e",
                 "shasum": ""
             },
             "require": {
@@ -4749,7 +4651,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.7.x-dev"
+                    "dev-master": "4.8.x-dev"
                 }
             },
             "autoload": {
@@ -4775,7 +4677,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-06-18 13:33:26"
+            "time": "2015-06-23 14:43:58"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5118,16 +5020,16 @@
         },
         {
             "name": "sebastian/version",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/version.git",
-                "reference": "ab931d46cd0d3204a91e1b9a40c4bc13032b58e4"
+                "reference": "58b3a85e7999757d6ad81c787a1fbf5ff6c628c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/ab931d46cd0d3204a91e1b9a40c4bc13032b58e4",
-                "reference": "ab931d46cd0d3204a91e1b9a40c4bc13032b58e4",
+                "url": "https://api.github.com/repos/sebastianbergmann/version/zipball/58b3a85e7999757d6ad81c787a1fbf5ff6c628c6",
+                "reference": "58b3a85e7999757d6ad81c787a1fbf5ff6c628c6",
                 "shasum": ""
             },
             "type": "library",
@@ -5149,7 +5051,7 @@
             ],
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
-            "time": "2015-02-24 06:35:25"
+            "time": "2015-06-21 13:59:46"
         }
     ],
     "aliases": [],

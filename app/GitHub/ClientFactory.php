@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\GitHub;
 
-use GrahamCampbell\GitHub\Factories\GitHubFactory;
+use GrahamCampbell\GitHub\GitHubFactory;
 use Illuminate\Database\Eloquent\Model;
 use InvalidArgumentException;
 use StyleCI\StyleCI\Models\Repo;
@@ -27,14 +27,14 @@ class ClientFactory
     /**
      * The github repo instance.
      *
-     * @var \GrahamCampbell\GitHub\Factories\GitHubFactory
+     * @var \GrahamCampbell\GitHub\GitHubFactory
      */
     protected $factory;
 
     /**
      * Create a new github client factory instance.
      *
-     * @param \GrahamCampbell\GitHub\Factories\GitHubFactory $factory
+     * @param \GrahamCampbell\GitHub\GitHubFactory $factory
      *
      * @return void
      */

@@ -11,24 +11,34 @@
 
 namespace StyleCI\Tests\StyleCI;
 
-use GrahamCampbell\TestBench\AbstractAppTestCase;
+use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Foundation\Testing\TestCase;
 
 /**
  * This is the abstract test case class.
  *
  * @author Graham Campbell <graham@cachethq.io>
  */
-abstract class AbstractTestCase extends AbstractAppTestCase
+abstract class AbstractTestCase extends TestCase
 {
     /**
-     * Get the service provider class.
+     * The base URL to use while testing the application.
      *
-     * @param \Illuminate\Contracts\Foundation\Application $app
-     *
-     * @return string
+     * @var string
      */
-    protected function getServiceProviderClass($app)
+    protected $baseUrl = 'http://localhost';
+
+    /**
+     * Creates the application.
+     *
+     * @return \Illuminate\Foundation\Application
+     */
+    public function createApplication()
     {
-        return 'StyleCI\StyleCI\Providers\AppServiceProvider';
+        $app = require __DIR__.'/../bootstrap/app.php';
+
+        $app->make(Kernel::class)->bootstrap();
+
+        return $app;
     }
 }
