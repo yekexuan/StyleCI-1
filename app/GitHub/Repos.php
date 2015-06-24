@@ -89,7 +89,7 @@ class Repos
      */
     protected function fetchFromGitHub(User $user)
     {
-        $client = $this->factory->make($user, ['version' => 'moondragon']);
+        $client = $this->factory->make($user);
         $paginator = new ResultPager($client);
 
         $list = [];
