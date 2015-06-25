@@ -19,7 +19,7 @@ use Vinkla\Pusher\PusherManager;
  * This is the real time status handler class.
  *
  * @author Graham Campbell <graham@alt-three.com>
- * @author Joseph Cohen <joseph.cohen@dinkbit.com>
+ * @author Joseph Cohen <joe@alt-three.com>
  */
 class RealTimeStatusHandler
 {

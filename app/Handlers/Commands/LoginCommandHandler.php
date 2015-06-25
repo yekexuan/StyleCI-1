@@ -21,7 +21,7 @@ use StyleCI\StyleCI\Repositories\UserRepository;
  * This is the login command handler class.
  *
  * @author Graham Campbell <graham@alt-three.com>
- * @author Joseph Cohen <joseph.cohen@dinkbit.com>
+ * @author Joseph Cohen <joe@alt-three.com>
  */
 class LoginCommandHandler
 {

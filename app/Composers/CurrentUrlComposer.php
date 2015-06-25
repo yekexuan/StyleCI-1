@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\URL;
 /**
  * This is the current user composer class.
  *
- * @author Joseph Cohen <joseph.cohen@dinkbit.com>
+ * @author Joseph Cohen <joe@alt-three.com>
  */
 class CurrentUrlComposer
 {

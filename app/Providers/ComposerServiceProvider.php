@@ -20,7 +20,7 @@ use StyleCI\StyleCI\Composers\CurrentUserComposer;
  * This is the view composer service provider class.
  *
  * @author Graham Campbell <graham@alt-three.com>
- * @author Joseph Cohen <joseph.cohen@dinkbit.com>
+ * @author Joseph Cohen <joe@alt-three.com>
  */
 class ComposerServiceProvider extends ServiceProvider
 {

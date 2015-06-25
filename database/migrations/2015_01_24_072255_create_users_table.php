@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Schema;
 /**
  * This is the create users table migration class.
  *
- * @author Joseph Cohen <joseph.cohen@dinkbit.com>
+ * @author Joseph Cohen <joe@alt-three.com>
  */
 class CreateUsersTable extends Migration
 {

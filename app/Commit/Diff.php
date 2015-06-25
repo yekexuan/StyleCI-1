@@ -16,7 +16,7 @@ use ArrayAccess;
 /**
  * This is the commit diff class.
  *
- * @author Joseph Cohen <joseph.cohen@dinkbit.com>
+ * @author Joseph Cohen <joe@alt-three.com>
  */
 class Diff implements ArrayAccess
 {

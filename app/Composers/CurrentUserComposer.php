@@ -18,7 +18,7 @@ use Illuminate\Contracts\View\View;
  * This is the current user composer class.
  *
  * @author Graham Campbell <graham@alt-three.com>
- * @author Joseph Cohen <joseph.cohen@dinkbit.com>
+ * @author Joseph Cohen <joe@alt-three.com>
  */
 class CurrentUserComposer
 {

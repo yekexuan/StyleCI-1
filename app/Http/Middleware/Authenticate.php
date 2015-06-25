@@ -20,7 +20,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
  * This is the authenticate middleware class.
  *
  * @author Graham Campbell <graham@alt-three.com>
- * @author Joseph Cohen <joseph.cohen@dinkbit.com>
+ * @author Joseph Cohen <joe@alt-three.com>
  */
 class Authenticate
 {

@@ -15,7 +15,7 @@ namespace StyleCI\StyleCI\Commands;
  * This is the login command class.
  *
  * @author Graham Campbell <graham@alt-three.com>
- * @author Joseph Cohen <joseph.cohen@dinkbit.com>
+ * @author Joseph Cohen <joe@alt-three.com>
  */
 class LoginCommand
 {

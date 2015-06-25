@@ -20,7 +20,7 @@ use StyleCI\StyleCI\Commands\LoginCommand;
  * This is the auth controller class.
  *
  * @author Graham Campbell <graham@alt-three.com>
- * @author Joseph Cohen <joseph.cohen@dinkbit.com>
+ * @author Joseph Cohen <joe@alt-three.com>
  */
 class AuthController extends AbstractController
 {
