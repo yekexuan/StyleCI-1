@@ -45,6 +45,6 @@ class GarbageCollectCommand extends Command
 
         $count = $this->laravel['git.factory']->gc();
 
-        $this->info('Removed $count old repos.');
+        $this->info("Removed $count old repos.");
     }
 }
