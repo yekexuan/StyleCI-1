@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\Repo;
 /**
  * This is the enable repo command handler class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class EnableRepoCommandHandler
 {

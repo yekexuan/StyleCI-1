@@ -16,7 +16,7 @@ use McCool\LaravelAutoPresenter\BasePresenter;
 /**
  * This is the user presenter class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joseph.cohen@dinkbit.com>
  */
 class UserPresenter extends BasePresenter

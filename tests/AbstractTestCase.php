@@ -17,7 +17,7 @@ use Illuminate\Foundation\Testing\TestCase;
 /**
  * This is the abstract test case class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 abstract class AbstractTestCase extends TestCase
 {

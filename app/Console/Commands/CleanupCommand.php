@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Commands\CleanupCommitCommand;
 /**
  * This is the cleanup command class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class CleanupCommand extends Command
 {

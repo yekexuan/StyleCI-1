@@ -16,7 +16,7 @@ use StyleCI\StyleCI\Models\Repo;
 /**
  * This is the repo was disabled event class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class RepoWasDisabledEvent
 {

@@ -28,7 +28,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 /**
  * This is the repo controller class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class RepoController extends AbstractController
 {

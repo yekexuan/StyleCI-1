@@ -16,7 +16,7 @@ use StyleCI\StyleCI\Models\User;
 /**
  * This is the enable repo command class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class EnableRepoCommand
 {

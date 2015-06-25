@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Presenters\RepoPresenter;
 /**
  * This is the repo model class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joseph.cohen@dinkbit.com>
  */
 class Repo extends Model implements HasPresenter

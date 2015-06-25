@@ -16,7 +16,7 @@ use StyleCI\StyleCI\Models\Fork;
 /**
  * This is the fork repository class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class ForkRepository
 {

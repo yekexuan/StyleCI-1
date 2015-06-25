@@ -15,7 +15,7 @@ use Illuminate\Database\Seeder;
 /**
  * This is the database seeder class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class DatabaseSeeder extends Seeder
 {

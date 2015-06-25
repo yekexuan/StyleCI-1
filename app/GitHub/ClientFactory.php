@@ -20,7 +20,7 @@ use StyleCI\StyleCI\Models\User;
 /**
  * This is the github client factory class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class ClientFactory
 {

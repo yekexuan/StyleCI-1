@@ -17,7 +17,7 @@ use StyleCI\StyleCI\GitHub\Repos;
 /**
  * This is the repo cache flush handler class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class RepoCacheFlushHandler
 {

@@ -17,7 +17,7 @@ use Illuminate\Routing\Router;
 /**
  * This is the route service provider class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class RouteServiceProvider extends ServiceProvider
 {

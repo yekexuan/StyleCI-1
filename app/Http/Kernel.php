@@ -16,7 +16,7 @@ use Illuminate\Foundation\Http\Kernel as HttpKernel;
 /**
  * This is the http kernel class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class Kernel extends HttpKernel
 {

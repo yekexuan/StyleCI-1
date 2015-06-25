@@ -20,7 +20,7 @@ use Illuminate\Http\Response;
 /**
  * This is the check for maintenance mode middleware class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class CheckForMaintenanceMode
 {

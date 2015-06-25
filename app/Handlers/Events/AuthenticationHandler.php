@@ -17,7 +17,7 @@ use StyleCI\StyleCI\Events\UserHasLoggedInEvent;
 /**
  * This is the authentication handler class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class AuthenticationHandler
 {

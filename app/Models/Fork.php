@@ -16,7 +16,7 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * This is the fork model class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class Fork extends Model
 {

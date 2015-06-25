@@ -18,7 +18,7 @@ use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 /**
  * This is the repo presenter class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joseph.cohen@dinkbit.com>
  */
 class RepoPresenter extends BasePresenter implements Arrayable

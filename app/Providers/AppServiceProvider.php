@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Http\Middleware\Authenticate;
 /**
  * This is the app service provider class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class AppServiceProvider extends ServiceProvider
 {

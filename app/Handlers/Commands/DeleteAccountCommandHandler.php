@@ -20,7 +20,7 @@ use StyleCI\StyleCI\Events\UserHasRageQuitEvent;
 /**
  * This is the delete account command handler class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class DeleteAccountCommandHandler
 {

@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\View;
 /**
  * This is the home controller class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class HomeController extends AbstractController
 {

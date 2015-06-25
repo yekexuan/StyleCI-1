@@ -17,7 +17,7 @@ use StyleCI\StyleCI\Events\RepoWasDisabledEvent;
 /**
  * This is the disable repo command handler class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class DisableRepoCommandHandler
 {

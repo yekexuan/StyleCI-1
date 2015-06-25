@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Schema;
 /**
  * This is the create repos table migration class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class CreateReposTable extends Migration
 {

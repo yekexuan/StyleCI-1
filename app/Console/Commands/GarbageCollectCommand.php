@@ -16,7 +16,7 @@ use Illuminate\Console\Command;
 /**
  * This is the garbage collect command class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class GarbageCollectCommand extends Command
 {

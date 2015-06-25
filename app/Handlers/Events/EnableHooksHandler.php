@@ -17,7 +17,7 @@ use StyleCI\StyleCI\GitHub\Hooks;
 /**
  * This is the enable hooks handler class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class EnableHooksHandler
 {

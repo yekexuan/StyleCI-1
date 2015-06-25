@@ -16,7 +16,7 @@ use Github\Api\Authorizations;
 /**
  * This is the tokens hooks class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class Tokens
 {

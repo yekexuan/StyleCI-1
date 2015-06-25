@@ -21,7 +21,7 @@ use StyleCI\StyleCI\Providers\AppServiceProvider;
 /**
  * This is the service provider test class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class ServiceProviderTest extends AbstractTestCase
 {

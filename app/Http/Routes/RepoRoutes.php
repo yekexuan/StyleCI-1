@@ -16,7 +16,7 @@ use Illuminate\Contracts\Routing\Registrar;
 /**
  * This is the repo routes class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class RepoRoutes
 {

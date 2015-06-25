@@ -16,7 +16,7 @@ use StyleCI\StyleCI\Models\Commit;
 /**
  * This is the github status class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class Status
 {

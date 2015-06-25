@@ -20,7 +20,7 @@ use StyleCI\StyleCI\Presenters\UserPresenter;
 /**
  * This is the user model class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joseph.cohen@dinkbit.com>
  */
 class User extends Model implements AuthenticatableContract, HasPresenter

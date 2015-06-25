@@ -16,7 +16,7 @@ use StyleCI\StyleCI\GitHub\Status;
 /**
  * This is the commit status handler class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class CommitStatusHandler
 {

@@ -16,7 +16,7 @@ use GrahamCampbell\Exceptions\ExceptionHandler;
 /**
  * This is the exception hander class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class Handler extends ExceptionHandler
 {

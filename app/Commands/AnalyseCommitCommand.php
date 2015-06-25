@@ -19,7 +19,7 @@ use StyleCI\StyleCI\Models\Commit;
 /**
  * This is the analyse commit command.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class AnalyseCommitCommand implements ShouldBeQueued
 {

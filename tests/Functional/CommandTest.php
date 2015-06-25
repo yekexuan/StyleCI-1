@@ -17,7 +17,7 @@ use StyleCI\Tests\StyleCI\AbstractTestCase;
 /**
  * This is the command test class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class CommandTest extends AbstractTestCase
 {

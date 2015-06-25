@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\Commit;
 /**
  * This is the commit controller class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class CommitController extends AbstractController
 {

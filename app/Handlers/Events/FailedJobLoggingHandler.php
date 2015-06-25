@@ -17,7 +17,7 @@ use Psr\Log\LoggerInterface;
 /**
  * This is the failed job logging handler class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class FailedJobLoggingHandler
 {

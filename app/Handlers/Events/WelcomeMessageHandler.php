@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Events\UserHasSignedUpEvent;
 /**
  * This is the welcome message handler class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class WelcomeMessageHandler
 {

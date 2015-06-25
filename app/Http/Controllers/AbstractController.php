@@ -18,7 +18,7 @@ use Illuminate\Routing\Controller;
 /**
  * This is the abstract controller class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 abstract class AbstractController extends Controller
 {

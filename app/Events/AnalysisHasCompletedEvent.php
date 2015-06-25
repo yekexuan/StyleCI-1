@@ -17,7 +17,7 @@ use StyleCI\StyleCI\Models\Commit;
 /**
  * This is the analysis has completed event class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class AnalysisHasCompletedEvent
 {

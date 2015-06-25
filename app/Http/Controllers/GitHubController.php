@@ -21,7 +21,7 @@ use StyleCI\StyleCI\Repositories\RepoRepository;
 /**
  * This is the github controller class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class GitHubController extends AbstractController
 {

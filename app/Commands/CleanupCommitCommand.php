@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\Commit;
 /**
  * This is the cleanup commit command.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class CleanupCommitCommand implements ShouldBeQueued
 {

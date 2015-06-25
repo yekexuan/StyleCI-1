@@ -16,7 +16,7 @@ use Illuminate\Contracts\Routing\Registrar;
 /**
  * This is the main routes class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class MainRoutes
 {

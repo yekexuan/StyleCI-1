@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Presenters\CommitPresenter;
 /**
  * This is the commit model class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class Commit extends Model implements HasPresenter
 {

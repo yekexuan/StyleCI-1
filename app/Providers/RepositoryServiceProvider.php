@@ -20,7 +20,7 @@ use StyleCI\StyleCI\Repositories\UserRepository;
 /**
  * This is the repository service provider class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class RepositoryServiceProvider extends ServiceProvider
 {

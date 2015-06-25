@@ -16,7 +16,7 @@ use StyleCI\StyleCI\Models\Commit;
 /**
  * This is the analysis was queued event class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class AnalysisWasQueuedEvent
 {

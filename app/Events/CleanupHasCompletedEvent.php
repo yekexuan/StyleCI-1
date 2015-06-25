@@ -16,7 +16,7 @@ use StyleCI\StyleCI\Models\Commit;
 /**
  * This is the cleanup has completed event class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class CleanupHasCompletedEvent
 {

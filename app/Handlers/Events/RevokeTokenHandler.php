@@ -17,7 +17,7 @@ use StyleCI\StyleCI\GitHub\Tokens;
 /**
  * This is the revoke token handler class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class RevokeTokenHandler
 {

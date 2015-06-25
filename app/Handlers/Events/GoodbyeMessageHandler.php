@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Events\UserHasRageQuitEvent;
 /**
  * This is the goodbye message handler class.
  *
- * @author James Brooks <james@cachethq.io>
+ * @author James Brooks <james@alt-three.com>
  */
 class GoodbyeMessageHandler
 {

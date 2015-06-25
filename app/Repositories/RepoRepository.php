@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\User;
 /**
  * This is the repo repository class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class RepoRepository
 {

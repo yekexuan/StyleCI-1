@@ -17,7 +17,7 @@ use StyleCI\StyleCI\Events\CleanupHasCompletedEvent;
 /**
  * This is the cleanup commit command handler.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class CleanupCommitCommandHandler
 {

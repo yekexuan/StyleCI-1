@@ -16,7 +16,7 @@ use StyleCI\StyleCI\Models\Repo;
 /**
  * This is the disable repo command class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class DisableRepoCommand
 {

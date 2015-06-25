@@ -26,7 +26,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 /**
  * This is the account controller class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class AccountController extends AbstractController
 {

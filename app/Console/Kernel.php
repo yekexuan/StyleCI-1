@@ -19,7 +19,7 @@ use StyleCI\StyleCI\Console\Commands\GarbageCollectCommand;
 /**
  * This is the console kernel class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class Kernel extends ConsoleKernel
 {

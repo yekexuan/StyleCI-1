@@ -19,7 +19,7 @@ use StyleCI\StyleCI\Repositories\UserRepository;
 /**
  * This is the analysis notification handler class.
  *
- * @author Graham Campbell <graham@cachethq.io>
+ * @author Graham Campbell <graham@alt-three.com>
  */
 class AnalysisNotificationsHandler
 {
