@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "56a0dfea0ae9f5778894af926e3fdbf2",
+    "hash": "07bdce4dc29d06bd07a58e0fe64a3a8b",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -493,12 +493,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Binput.git",
-                "reference": "a723d4bd010a9f5bd13b866398fb7dc68944183c"
+                "reference": "7742592d3ea161229978b949d1a04ce9b24a2785"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Binput/zipball/a723d4bd010a9f5bd13b866398fb7dc68944183c",
-                "reference": "a723d4bd010a9f5bd13b866398fb7dc68944183c",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Binput/zipball/7742592d3ea161229978b949d1a04ce9b24a2785",
+                "reference": "7742592d3ea161229978b949d1a04ce9b24a2785",
                 "shasum": ""
             },
             "require": {
@@ -531,7 +531,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "Binput Is An Input Protector For Laravel 5",
@@ -548,7 +548,7 @@
                 "laravel",
                 "security"
             ],
-            "time": "2015-06-24 11:15:15"
+            "time": "2015-06-25 13:36:37"
         },
         {
             "name": "graham-campbell/core",
@@ -556,12 +556,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Core.git",
-                "reference": "1316e0a1d79d137e2b83a0125ea3b00a5ee81ea6"
+                "reference": "ca0162463c3da7464a23a6ce907508e056aa7704"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/1316e0a1d79d137e2b83a0125ea3b00a5ee81ea6",
-                "reference": "1316e0a1d79d137e2b83a0125ea3b00a5ee81ea6",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/ca0162463c3da7464a23a6ce907508e056aa7704",
+                "reference": "ca0162463c3da7464a23a6ce907508e056aa7704",
                 "shasum": ""
             },
             "require": {
@@ -593,7 +593,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "Core Provides Some Extra Functionality For Laravel 5",
@@ -608,7 +608,7 @@
                 "laravel",
                 "starter"
             ],
-            "time": "2015-06-24 10:53:30"
+            "time": "2015-06-25 13:36:43"
         },
         {
             "name": "graham-campbell/exceptions",
@@ -616,12 +616,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "f9281dde88080a238823d2a1fc93dc054f9fba43"
+                "reference": "6e5088dd958324bdea442ba70a86bcf182211221"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/f9281dde88080a238823d2a1fc93dc054f9fba43",
-                "reference": "f9281dde88080a238823d2a1fc93dc054f9fba43",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/6e5088dd958324bdea442ba70a86bcf182211221",
+                "reference": "6e5088dd958324bdea442ba70a86bcf182211221",
                 "shasum": ""
             },
             "require": {
@@ -656,7 +656,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "Provides Pretty Error Pages For Both Development And Production",
@@ -673,7 +673,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-06-24 10:54:02"
+            "time": "2015-06-25 13:37:45"
         },
         {
             "name": "graham-campbell/github",
@@ -681,12 +681,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-GitHub.git",
-                "reference": "e5ec021493a235d18955a40d2ae2d4139e69b380"
+                "reference": "e899f4b3f22fd9a9e5af755db2b214fc8466dbfd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-GitHub/zipball/e5ec021493a235d18955a40d2ae2d4139e69b380",
-                "reference": "e5ec021493a235d18955a40d2ae2d4139e69b380",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-GitHub/zipball/e899f4b3f22fd9a9e5af755db2b214fc8466dbfd",
+                "reference": "e899f4b3f22fd9a9e5af755db2b214fc8466dbfd",
                 "shasum": ""
             },
             "require": {
@@ -719,7 +719,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "GitHub Is A GitHub Bridge For Laravel 5",
@@ -736,7 +736,7 @@
                 "laravel",
                 "php-github-api"
             ],
-            "time": "2015-06-24 17:22:30"
+            "time": "2015-06-25 13:37:57"
         },
         {
             "name": "graham-campbell/htmlmin",
@@ -744,12 +744,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-HTMLMin.git",
-                "reference": "a7cf03b88404cdb08e9e0b46ac0cd919611147c0"
+                "reference": "6b2f085b1ee0569590f030f227a62807013b2ffd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-HTMLMin/zipball/a7cf03b88404cdb08e9e0b46ac0cd919611147c0",
-                "reference": "a7cf03b88404cdb08e9e0b46ac0cd919611147c0",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-HTMLMin/zipball/6b2f085b1ee0569590f030f227a62807013b2ffd",
+                "reference": "6b2f085b1ee0569590f030f227a62807013b2ffd",
                 "shasum": ""
             },
             "require": {
@@ -785,7 +785,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "HTMLMin Is A Simple HTML Minifier For Laravel 5",
@@ -801,7 +801,7 @@
                 "laravel",
                 "minifier"
             ],
-            "time": "2015-06-24 10:54:09"
+            "time": "2015-06-25 13:38:02"
         },
         {
             "name": "graham-campbell/logger",
@@ -809,12 +809,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Logger.git",
-                "reference": "77db14ab5cb2bc88268e20ba3f039d20f7e77730"
+                "reference": "468b8b303957f3caba4f33c8dd12b9cb42a719c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/77db14ab5cb2bc88268e20ba3f039d20f7e77730",
-                "reference": "77db14ab5cb2bc88268e20ba3f039d20f7e77730",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger/zipball/468b8b303957f3caba4f33c8dd12b9cb42a719c0",
+                "reference": "468b8b303957f3caba4f33c8dd12b9cb42a719c0",
                 "shasum": ""
             },
             "require": {
@@ -847,7 +847,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "Provides Multiple Loggers At Once",
@@ -864,7 +864,7 @@
                 "logs",
                 "multiple"
             ],
-            "time": "2015-06-24 10:56:01"
+            "time": "2015-06-25 13:38:07"
         },
         {
             "name": "graham-campbell/logger-core",
@@ -872,12 +872,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Logger-Core.git",
-                "reference": "ac4702ed44208ec9dec5ae40b14040c53a214618"
+                "reference": "068f264c10805d3040a88edf526500dc52b5ec39"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger-Core/zipball/ac4702ed44208ec9dec5ae40b14040c53a214618",
-                "reference": "ac4702ed44208ec9dec5ae40b14040c53a214618",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Logger-Core/zipball/068f264c10805d3040a88edf526500dc52b5ec39",
+                "reference": "068f264c10805d3040a88edf526500dc52b5ec39",
                 "shasum": ""
             },
             "require": {
@@ -906,7 +906,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "Provides A Logger Trait For Reuse",
@@ -922,7 +922,7 @@
                 "logging",
                 "logs"
             ],
-            "time": "2015-06-24 10:53:42"
+            "time": "2015-06-25 13:38:12"
         },
         {
             "name": "graham-campbell/manager",
@@ -930,12 +930,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
-                "reference": "251974dec03298314dd573a4006c71c783989f97"
+                "reference": "e98afa88ce80953951a01b5ba17858e893f98897"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/251974dec03298314dd573a4006c71c783989f97",
-                "reference": "251974dec03298314dd573a4006c71c783989f97",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/e98afa88ce80953951a01b5ba17858e893f98897",
+                "reference": "e98afa88ce80953951a01b5ba17858e893f98897",
                 "shasum": ""
             },
             "require": {
@@ -966,7 +966,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "Manager Provides Some Manager Functionality For Laravel 5",
@@ -981,7 +981,7 @@
                 "laravel",
                 "manager"
             ],
-            "time": "2015-06-24 12:09:46"
+            "time": "2015-06-25 13:38:17"
         },
         {
             "name": "graham-campbell/security",
@@ -989,12 +989,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Security.git",
-                "reference": "0ec6d584c5f9f8bdd1597368136e669169844764"
+                "reference": "950a1b1a711a59b691cf202a1e11354d9d6399e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Security/zipball/0ec6d584c5f9f8bdd1597368136e669169844764",
-                "reference": "0ec6d584c5f9f8bdd1597368136e669169844764",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Security/zipball/950a1b1a711a59b691cf202a1e11354d9d6399e8",
+                "reference": "950a1b1a711a59b691cf202a1e11354d9d6399e8",
                 "shasum": ""
             },
             "require": {
@@ -1025,7 +1025,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "Security Is A Port Of The Security Class From Codeigniter 3 For Laravel 5",
@@ -1039,7 +1039,7 @@
                 "laravel",
                 "security"
             ],
-            "time": "2015-06-24 11:06:19"
+            "time": "2015-06-25 13:38:34"
         },
         {
             "name": "guzzle/guzzle",
@@ -1142,12 +1142,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "811c11a4e8a4aa25b8cba4a611f6d3b8fca6b665"
+                "reference": "9c43893a8e580d8401e4210cebe038d850341012"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/811c11a4e8a4aa25b8cba4a611f6d3b8fca6b665",
-                "reference": "811c11a4e8a4aa25b8cba4a611f6d3b8fca6b665",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/9c43893a8e580d8401e4210cebe038d850341012",
+                "reference": "9c43893a8e580d8401e4210cebe038d850341012",
                 "shasum": ""
             },
             "require": {
@@ -1196,7 +1196,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-06-24 20:06:42"
+            "time": "2015-06-25 01:00:39"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1952,21 +1952,21 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.19.0",
+            "version": "1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "68868e0b02d2d803d0052a59d4e5003cccf87320"
+                "reference": "bfd3eaba109c9a2405c92174c8e17f20c2b9caf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/68868e0b02d2d803d0052a59d4e5003cccf87320",
-                "reference": "68868e0b02d2d803d0052a59d4e5003cccf87320",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bfd3eaba109c9a2405c92174c8e17f20c2b9caf3",
+                "reference": "bfd3eaba109c9a2405c92174c8e17f20c2b9caf3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
-                "symfony/translation": "~2.6"
+                "symfony/translation": "~2.6|~3.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.0"
@@ -1995,7 +1995,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2015-05-09 03:23:44"
+            "time": "2015-06-25 04:19:39"
         },
         {
             "name": "nikic/php-parser",
@@ -2431,12 +2431,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "8757cc9e9f658b1b1a5a49db5fcc0a2730ce1093"
+                "reference": "230fb3cb1a460a986457c7f8e1dd734757a1b8f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/8757cc9e9f658b1b1a5a49db5fcc0a2730ce1093",
-                "reference": "8757cc9e9f658b1b1a5a49db5fcc0a2730ce1093",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/230fb3cb1a460a986457c7f8e1dd734757a1b8f3",
+                "reference": "230fb3cb1a460a986457c7f8e1dd734757a1b8f3",
                 "shasum": ""
             },
             "require": {
@@ -2469,15 +2469,15 @@
             "authors": [
                 {
                     "name": "James Brooks",
-                    "email": "james@cachethq.io"
-                },
-                {
-                    "name": "Joseph Cohen",
-                    "email": "joe@cachethq.io"
+                    "email": "james@alt-three.com"
                 },
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@alt-three.com"
                 }
             ],
             "description": "StyleCI Fixer Is A Code Style Report Builder",
@@ -2489,7 +2489,7 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-06-17 09:03:29"
+            "time": "2015-06-25 13:16:32"
         },
         {
             "name": "styleci/git",
@@ -2497,12 +2497,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "7e896235f45db68b9a1d4b74bb2dc466b1000de1"
+                "reference": "e70b0fb592f6c54229d9199eb5423dd7b87be69b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/7e896235f45db68b9a1d4b74bb2dc466b1000de1",
-                "reference": "7e896235f45db68b9a1d4b74bb2dc466b1000de1",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/e70b0fb592f6c54229d9199eb5423dd7b87be69b",
+                "reference": "e70b0fb592f6c54229d9199eb5423dd7b87be69b",
                 "shasum": ""
             },
             "require": {
@@ -2535,15 +2535,15 @@
             "authors": [
                 {
                     "name": "James Brooks",
-                    "email": "james@cachethq.io"
-                },
-                {
-                    "name": "Joseph Cohen",
-                    "email": "joe@cachethq.io"
+                    "email": "james@alt-three.com"
                 },
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@alt-three.com"
                 }
             ],
             "description": "StyleCI Git Is A Git Repository Manager",
@@ -2555,7 +2555,7 @@
                 "repo",
                 "repository"
             ],
-            "time": "2015-06-05 20:36:50"
+            "time": "2015-06-25 13:16:40"
         },
         {
             "name": "styleci/login",
@@ -4094,12 +4094,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-TestBench-Core.git",
-                "reference": "1279c7057ddc585191c421bd92c7c8be50720739"
+                "reference": "830ac66d8facb7b67c952ff3ed2807ac47f6c4b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-TestBench-Core/zipball/1279c7057ddc585191c421bd92c7c8be50720739",
-                "reference": "1279c7057ddc585191c421bd92c7c8be50720739",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-TestBench-Core/zipball/830ac66d8facb7b67c952ff3ed2807ac47f6c4b1",
+                "reference": "830ac66d8facb7b67c952ff3ed2807ac47f6c4b1",
                 "shasum": ""
             },
             "require": {
@@ -4131,7 +4131,7 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "TestBench Core Provides Some Testing Functionality For Laravel 5",
@@ -4146,7 +4146,7 @@
                 "testbench-core",
                 "testing"
             ],
-            "time": "2015-06-24 16:33:34"
+            "time": "2015-06-25 13:38:53"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -4613,12 +4613,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "893f3ce946f2b65920b173d831d769ab2f35097e"
+                "reference": "21b619c6f0386a06d1646f401a398af3d33fc047"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/893f3ce946f2b65920b173d831d769ab2f35097e",
-                "reference": "893f3ce946f2b65920b173d831d769ab2f35097e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/21b619c6f0386a06d1646f401a398af3d33fc047",
+                "reference": "21b619c6f0386a06d1646f401a398af3d33fc047",
                 "shasum": ""
             },
             "require": {
@@ -4677,7 +4677,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-06-23 14:43:58"
+            "time": "2015-06-25 05:24:49"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
