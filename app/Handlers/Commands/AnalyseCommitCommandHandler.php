@@ -57,6 +57,11 @@ class AnalyseCommitCommandHandler
     {
         $commit = $command->commit;
 
+        // bail out if the repo is already analysed or canceled
+        if ($commit->status > 0) {
+            return;
+        }
+
         event(new AnalysisHasStartedEvent($commit));
 
         try {
