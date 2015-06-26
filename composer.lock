@@ -2437,18 +2437,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "6a4f8feadffaecefe8653596c964c35269aae22b"
+                "reference": "9b0b382bd8b5220a7df4944a5afd226bad71a364"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/6a4f8feadffaecefe8653596c964c35269aae22b",
-                "reference": "6a4f8feadffaecefe8653596c964c35269aae22b",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/9b0b382bd8b5220a7df4944a5afd226bad71a364",
+                "reference": "9b0b382bd8b5220a7df4944a5afd226bad71a364",
                 "shasum": ""
             },
             "require": {
                 "gitonomy/gitlib": "~1.0",
-                "illuminate/filesystem": "~5.0",
                 "php": ">=5.5.9",
+                "symfony/filesystem": "~2.3",
                 "symfony/finder": "~2.3"
             },
             "require-dev": {
@@ -2496,7 +2496,7 @@
                 "repo",
                 "repository"
             ],
-            "time": "2015-06-26 22:35:31"
+            "time": "2015-06-26 22:45:12"
         },
         {
             "name": "styleci/login",
