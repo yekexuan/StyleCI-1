@@ -44,9 +44,6 @@
             <a href="#repositories" aria-controls="repositories" role="tab" data-toggle="tab">Repositories</a>
         </li>
         <li role="presentation">
-            <a href="#notifications" aria-controls="notifications" role="tab" data-toggle="tab">Notifications</a>
-        </li>
-        <li role="presentation">
             <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
         </li>
     </ul>
@@ -103,12 +100,6 @@
                     @endforelse
                 @endif
             </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="notifications">
-            <h2>Notifications</h2>
-            <p class="lead">You will be able to configure your notifications here.</p>
-            <br>
-            <p>Currently StyleCI will send you an email whenever a commit pushed to the "default branch" violates the coding standard rules you have defined for each repo. In the future, we will support many more notification channels and for all kinds of events.</p>
         </div>
         <div role="tabpanel" class="tab-pane" id="profile">
             <h2>Profile</h2>
