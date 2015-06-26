@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fbedb100799f682d321dd17990f96a33",
+    "hash": "540c9b5f22e4a004b2bf6cc386488b47",
     "packages": [
         {
             "name": "bugsnag/bugsnag",
@@ -1725,16 +1725,16 @@
         },
         {
             "name": "mccool/laravel-auto-presenter",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-auto-presenter/laravel-auto-presenter.git",
-                "reference": "e2f7f0b1415d2b0e65aa9587fe74d70844ad062d"
+                "reference": "0f77299f7e4e5e017da175583c85bf24fa85c118"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-auto-presenter/laravel-auto-presenter/zipball/e2f7f0b1415d2b0e65aa9587fe74d70844ad062d",
-                "reference": "e2f7f0b1415d2b0e65aa9587fe74d70844ad062d",
+                "url": "https://api.github.com/repos/laravel-auto-presenter/laravel-auto-presenter/zipball/0f77299f7e4e5e017da175583c85bf24fa85c118",
+                "reference": "0f77299f7e4e5e017da175583c85bf24fa85c118",
                 "shasum": ""
             },
             "require": {
@@ -1771,7 +1771,7 @@
                 },
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
                 }
             ],
             "description": "A system for auto-decorating models with presenter objects.",
@@ -1781,7 +1781,7 @@
                 "lpm",
                 "presenter"
             ],
-            "time": "2015-05-29 19:32:13"
+            "time": "2015-06-26 09:15:40"
         },
         {
             "name": "monolog/monolog",
@@ -2496,12 +2496,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "336b45a35cbfde65c60333ab0588eb9541183d31"
+                "reference": "85bfc3f82bb854f1d4ff931a137aa62fb94a3958"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/336b45a35cbfde65c60333ab0588eb9541183d31",
-                "reference": "336b45a35cbfde65c60333ab0588eb9541183d31",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/85bfc3f82bb854f1d4ff931a137aa62fb94a3958",
+                "reference": "85bfc3f82bb854f1d4ff931a137aa62fb94a3958",
                 "shasum": ""
             },
             "require": {
@@ -2511,7 +2511,8 @@
                 "symfony/finder": "~2.3"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1"
+                "graham-campbell/testbench": "~3.0",
+                "phpunit/phpunit": "^4.7.6"
             },
             "suggest": {
                 "illuminate/support": "Enables Laravel support."
@@ -2554,7 +2555,7 @@
                 "repo",
                 "repository"
             ],
-            "time": "2015-06-25 17:36:38"
+            "time": "2015-06-25 23:45:48"
         },
         {
             "name": "styleci/login",
