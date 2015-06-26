@@ -22,7 +22,7 @@ use McCool\LaravelAutoPresenter\BasePresenter;
 class UserPresenter extends BasePresenter
 {
     /**
-     * Returns a Gravatar URL for the users email address.
+     * Get the user's Gravatar URL.
      *
      * @param int $size
      *
@@ -33,6 +33,11 @@ class UserPresenter extends BasePresenter
         return sprintf('https://www.gravatar.com/avatar/%s?size=%d', md5($this->email), $size);
     }
 
+    /**
+     * Get the user's first name.
+     *
+     * @return string
+     */
     public function firstName()
     {
         return explode(' ', $this->name)[0];
