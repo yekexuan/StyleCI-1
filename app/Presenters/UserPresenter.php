@@ -30,6 +30,11 @@ class UserPresenter extends BasePresenter
      */
     public function gravatar($size = 200)
     {
-        return sprintf('https://www.gravatar.com/avatar/%s?size=%d', md5($this->email), $size);
+        return sprintf('https://www.gravatar.com/avatar/%s?size=%d', md5($this->wrappedObject->email), $size);
+    }
+
+    public function firstName()
+    {
+        return explode(' ', $this->wrappedObject->name)[0];
     }
 }

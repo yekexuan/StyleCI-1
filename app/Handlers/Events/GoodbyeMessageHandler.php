@@ -13,6 +13,7 @@ namespace StyleCI\StyleCI\Handlers\Events;
 
 use Illuminate\Contracts\Mail\MailQueue;
 use Illuminate\Mail\Message;
+use McCool\LaravelAutoPresenter\PresenterDecorator;
 use StyleCI\StyleCI\Events\UserHasRageQuitEvent;
 
 /**
@@ -30,15 +31,24 @@ class GoodbyeMessageHandler
     protected $mailer;
 
     /**
+     * The presenter instance.
+     *
+     * @var \McCool\LaravelAutoPresenter\PresenterDecorator
+     */
+    protected $presenter;
+
+    /**
      * Create a new welcome message handler instance.
      *
-     * @param \Illuminate\Contracts\Mail\MailQueue $mailer
+     * @param \Illuminate\Contracts\Mail\MailQueue            $mailer
+     * @param \McCool\LaravelAutoPresenter\PresenterDecorator $presenter
      *
      * @return void
      */
-    public function __construct(MailQueue $mailer)
+    public function __construct(MailQueue $mailer, PresenterDecorator $presenter)
     {
         $this->mailer = $mailer;
+        $this->presenter = $presenter;
     }
 
     /**
@@ -53,8 +63,8 @@ class GoodbyeMessageHandler
         $user = $event->user;
 
         $mail = [
-            'name'    => explode(' ', $user->name)[0],
             'email'   => $user->email,
+            'name'    => $this->presenter->decorate($user)->firstName;
             'subject' => '[StyleCI] Your account has been removed from StyleCI',
         ];
 
