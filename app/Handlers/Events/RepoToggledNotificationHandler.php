@@ -70,7 +70,7 @@ class RepoToggledNotificationHandler
             $view = 'enabled';
         }
 
-        foreach ($this->userRepository->collaborators($commit) as $user) {
+        foreach ($this->userRepository->collaborators($event->repo) as $user) {
             $mail['email'] = $user->email;
             $mail['name'] = explode(' ', $user->name)[0];
             $this->mailer->send(["emails.{$view}-html", "emails.{$view}-text"], $mail, function (Message $message) use ($mail) {
