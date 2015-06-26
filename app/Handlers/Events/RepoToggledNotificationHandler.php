@@ -12,6 +12,7 @@
 namespace StyleCI\StyleCI\Handlers\Events;
 
 use Illuminate\Contracts\Mail\MailQueue;
+use Illuminate\Mail\Message;
 use StyleCI\StyleCI\Events\RepoWasDisabledEvent;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
