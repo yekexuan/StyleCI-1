@@ -22,11 +22,11 @@ use Psr\Log\LoggerInterface;
 class FailedJobLoggingHandler
 {
     /**
-     * The auto presenter instance.
+     * The logger instance.
      *
-     * @var \McCool\LaravelAutoPresenter\AutoPresenter
+     * @var \Psr\Log\LoggerInterface
      */
-    protected $presenter;
+    protected $logger;
 
     /**
      * Create a new failed job logging handler instance.
