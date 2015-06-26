@@ -4,8 +4,132 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4bb34951329392cf09bcb52b129d96ba",
+    "hash": "a91079427ab3f34704361648be163688",
     "packages": [
+        {
+            "name": "altthree/bugsnag",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AltThree/Bugsnag.git",
+                "reference": "6b8e7c01a7380ec84399bee1bf6c50b0cedb64a5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AltThree/Bugsnag/zipball/6b8e7c01a7380ec84399bee1bf6c50b0cedb64a5",
+                "reference": "6b8e7c01a7380ec84399bee1bf6c50b0cedb64a5",
+                "shasum": ""
+            },
+            "require": {
+                "altthree/logger": "~1.0",
+                "bugsnag/bugsnag": "~2.5",
+                "illuminate/contracts": "5.1.*",
+                "illuminate/support": "5.1.*",
+                "php": ">=5.5.9",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~3.0",
+                "phpunit/phpunit": "^4.7.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AltThree\\Bugsnag\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Brooks",
+                    "email": "james@alt-three.com"
+                },
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@alt-three.com"
+                }
+            ],
+            "description": "A Bugsnag Bridge For Laravel 5",
+            "keywords": [
+                "Alt Three",
+                "Bridge",
+                "bugsnag"
+            ],
+            "time": "2015-06-26 16:33:30"
+        },
+        {
+            "name": "altthree/logger",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AltThree/Logger.git",
+                "reference": "c52284fdeec5f12c5e4bb044f6a7359251156f85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AltThree/Logger/zipball/c52284fdeec5f12c5e4bb044f6a7359251156f85",
+                "reference": "c52284fdeec5f12c5e4bb044f6a7359251156f85",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "5.1.*",
+                "illuminate/support": "5.1.*",
+                "php": ">=5.5.9",
+                "psr/log": "~1.0"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~3.0",
+                "phpunit/phpunit": "^4.7.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "AltThree\\Logger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Brooks",
+                    "email": "james@alt-three.com"
+                },
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@alt-three.com"
+                }
+            ],
+            "description": "A Logger Wrapper For Laravel 5",
+            "keywords": [
+                "Alt Three",
+                "logger",
+                "logging"
+            ],
+            "time": "2015-06-26 16:28:41"
+        },
         {
             "name": "bugsnag/bugsnag",
             "version": "v2.5.4",
@@ -802,128 +926,6 @@
                 "minifier"
             ],
             "time": "2015-06-26 17:18:55"
-        },
-        {
-            "name": "graham-campbell/logger",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GrahamDeprecated/Laravel-Logger.git",
-                "reference": "158ed80e60e3c8d28750ba9c98a25c762f7f48e0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GrahamDeprecated/Laravel-Logger/zipball/158ed80e60e3c8d28750ba9c98a25c762f7f48e0",
-                "reference": "158ed80e60e3c8d28750ba9c98a25c762f7f48e0",
-                "shasum": ""
-            },
-            "require": {
-                "graham-campbell/logger-core": "~1.1",
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
-                "php": ">=5.5.9",
-                "psr/log": "~1.0"
-            },
-            "require-dev": {
-                "graham-campbell/testbench": "~3.0",
-                "phpunit/phpunit": "^4.7.6"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GrahamCampbell\\Logger\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com"
-                }
-            ],
-            "description": "Provides Multiple Loggers At Once",
-            "keywords": [
-                "Graham Campbell",
-                "GrahamCampbell",
-                "Laravel-Logger",
-                "framework",
-                "laravel",
-                "laravel logger",
-                "log",
-                "logger",
-                "logging",
-                "logs",
-                "multiple"
-            ],
-            "abandoned": "altthree/logger",
-            "time": "2015-06-26 17:03:13"
-        },
-        {
-            "name": "graham-campbell/logger-core",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GrahamDeprecated/Laravel-Logger-Core.git",
-                "reference": "11b6c6da48fed270b968098a8c01986f4a63ada7"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GrahamDeprecated/Laravel-Logger-Core/zipball/11b6c6da48fed270b968098a8c01986f4a63ada7",
-                "reference": "11b6c6da48fed270b968098a8c01986f4a63ada7",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "php": ">=5.5.9",
-                "psr/log": "~1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.7.6"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "GrahamCampbell\\LoggerCore\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com"
-                }
-            ],
-            "description": "Provides A Logger Trait For Reuse",
-            "keywords": [
-                "Graham Campbell",
-                "GrahamCampbell",
-                "Laravel Logger Core",
-                "Laravel-Logger-Core",
-                "framework",
-                "laravel",
-                "log",
-                "logger",
-                "logging",
-                "logs"
-            ],
-            "abandoned": "altthree/logger",
-            "time": "2015-06-26 16:57:32"
         },
         {
             "name": "graham-campbell/manager",
@@ -2297,72 +2299,6 @@
                 "diff"
             ],
             "time": "2015-02-22 15:13:53"
-        },
-        {
-            "name": "styleci/bugsnag",
-            "version": "v0.2.2-alpha",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/GrahamDeprecated/Bugsnag.git",
-                "reference": "4c6fd9e671720c3f052868a44778759ff43a2a83"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/GrahamDeprecated/Bugsnag/zipball/4c6fd9e671720c3f052868a44778759ff43a2a83",
-                "reference": "4c6fd9e671720c3f052868a44778759ff43a2a83",
-                "shasum": ""
-            },
-            "require": {
-                "bugsnag/bugsnag": "~2.5",
-                "graham-campbell/logger-core": "~1.0",
-                "illuminate/contracts": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "php": ">=5.5.9",
-                "psr/log": "~1.0"
-            },
-            "require-dev": {
-                "graham-campbell/testbench": "~3.0",
-                "phpunit/phpunit": "^4.7.6"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "StyleCI\\Bugsnag\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "James Brooks",
-                    "email": "james@alt-three.com"
-                },
-                {
-                    "name": "Graham Campbell",
-                    "email": "graham@alt-three.com"
-                },
-                {
-                    "name": "Joseph Cohen",
-                    "email": "joe@alt-three.com"
-                }
-            ],
-            "description": "StyleCI Bugsnag Is A Bugsnag Bridge For Laravel 5",
-            "keywords": [
-                "Bridge",
-                "Graham Campbell",
-                "GrahamCampbell",
-                "StyleCI",
-                "bugsnag"
-            ],
-            "abandoned": "altthree/bugsnag",
-            "time": "2015-06-26 16:50:45"
         },
         {
             "name": "styleci/config",
