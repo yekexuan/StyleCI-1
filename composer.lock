@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a91079427ab3f34704361648be163688",
+    "hash": "0c228fb90ef42a4a01e0d48e6623dc5c",
     "packages": [
         {
-            "name": "altthree/bugsnag",
+            "name": "alt-three/bugsnag",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Bugsnag.git",
-                "reference": "6b8e7c01a7380ec84399bee1bf6c50b0cedb64a5"
+                "reference": "2993e5036484424f2a7f60752b35495a616747ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Bugsnag/zipball/6b8e7c01a7380ec84399bee1bf6c50b0cedb64a5",
-                "reference": "6b8e7c01a7380ec84399bee1bf6c50b0cedb64a5",
+                "url": "https://api.github.com/repos/AltThree/Bugsnag/zipball/2993e5036484424f2a7f60752b35495a616747ff",
+                "reference": "2993e5036484424f2a7f60752b35495a616747ff",
                 "shasum": ""
             },
             "require": {
-                "altthree/logger": "~1.0",
+                "alt-three/logger": "~1.0",
                 "bugsnag/bugsnag": "~2.5",
                 "illuminate/contracts": "5.1.*",
                 "illuminate/support": "5.1.*",
@@ -67,20 +67,20 @@
                 "Bridge",
                 "bugsnag"
             ],
-            "time": "2015-06-26 16:33:30"
+            "time": "2015-06-26 18:48:12"
         },
         {
-            "name": "altthree/logger",
+            "name": "alt-three/logger",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Logger.git",
-                "reference": "c52284fdeec5f12c5e4bb044f6a7359251156f85"
+                "reference": "8a92e00787c590cba797dd43a5e568cee2c0b60b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Logger/zipball/c52284fdeec5f12c5e4bb044f6a7359251156f85",
-                "reference": "c52284fdeec5f12c5e4bb044f6a7359251156f85",
+                "url": "https://api.github.com/repos/AltThree/Logger/zipball/8a92e00787c590cba797dd43a5e568cee2c0b60b",
+                "reference": "8a92e00787c590cba797dd43a5e568cee2c0b60b",
                 "shasum": ""
             },
             "require": {
@@ -128,7 +128,7 @@
                 "logger",
                 "logging"
             ],
-            "time": "2015-06-26 16:28:41"
+            "time": "2015-06-26 18:42:28"
         },
         {
             "name": "bugsnag/bugsnag",
