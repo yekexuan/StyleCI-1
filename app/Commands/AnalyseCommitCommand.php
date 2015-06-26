@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\Commands;
 
-use Illuminate\Contracts\Queue\ShouldBeQueued;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\SerializesModels;
 use StyleCI\StyleCI\Events\AnalysisWasQueuedEvent;
 use StyleCI\StyleCI\Models\Commit;
@@ -21,7 +21,7 @@ use StyleCI\StyleCI\Models\Commit;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalyseCommitCommand implements ShouldBeQueued
+class AnalyseCommitCommand implements ShouldQueue
 {
     use SerializesModels;
 

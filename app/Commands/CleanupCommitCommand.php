@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\Commands;
 
-use Illuminate\Contracts\Queue\ShouldBeQueued;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\SerializesModels;
 use StyleCI\StyleCI\Models\Commit;
 
@@ -20,7 +20,7 @@ use StyleCI\StyleCI\Models\Commit;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class CleanupCommitCommand implements ShouldBeQueued
+class CleanupCommitCommand implements ShouldQueue
 {
     use SerializesModels;
 
