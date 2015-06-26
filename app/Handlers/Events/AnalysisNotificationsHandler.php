@@ -13,7 +13,7 @@ namespace StyleCI\StyleCI\Handlers\Events;
 
 use Illuminate\Contracts\Mail\Mailer;
 use Illuminate\Mail\Message;
-use McCool\LaravelAutoPresenter\PresenterDecorator;
+use McCool\LaravelAutoPresenter\AutoPresenter;
 use StyleCI\StyleCI\Models\Commit;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
@@ -39,22 +39,22 @@ class AnalysisNotificationsHandler
     protected $mailer;
 
     /**
-     * The presenter instance.
+     * The auto presenter instance.
      *
-     * @var \McCool\LaravelAutoPresenter\PresenterDecorator
+     * @var \McCool\LaravelAutoPresenter\AutoPresenter
      */
     protected $presenter;
 
     /**
      * Create a new analysis notifications handler instance.
      *
-     * @param \StyleCI\StyleCI\Repositories\UserRepository    $userRepository
-     * @param \Illuminate\Contracts\Mail\Mailer               $mailer
-     * @param \McCool\LaravelAutoPresenter\PresenterDecorator $presenter
+     * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
+     * @param \Illuminate\Contracts\Mail\Mailer            $mailer
+     * @param \McCool\LaravelAutoPresenter\AutoPresenter   $presenter
      *
      * @return void
      */
-    public function __construct(UserRepository $userRepository, Mailer $mailer, PresenterDecorator $presenter)
+    public function __construct(UserRepository $userRepository, Mailer $mailer, AutoPresenter $presenter)
     {
         $this->userRepository = $userRepository;
         $this->mailer = $mailer;

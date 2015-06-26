@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\Handlers\Events;
 
-use McCool\LaravelAutoPresenter\PresenterDecorator;
+use McCool\LaravelAutoPresenter\AutoPresenter;
 use StyleCI\StyleCI\Events\RepoWasDisabledEvent;
 use StyleCI\StyleCI\Events\RepoWasEnabledEvent;
 use StyleCI\StyleCI\Repositories\UserRepository;
@@ -40,22 +40,22 @@ class RealTimeRepoHandler
     protected $pusher;
 
     /**
-     * The presenter instance.
+     * The auto presenter instance.
      *
-     * @var \McCool\LaravelAutoPresenter\PresenterDecorator
+     * @var \McCool\LaravelAutoPresenter\AutoPresenter
      */
     protected $presenter;
 
     /**
      * Create a new repo notifications handler instance.
      *
-     * @param \StyleCI\StyleCI\Repositories\UserRepository    $userRepository
-     * @param \Vinkla\Pusher\PusherManager                    $pusher
-     * @param \McCool\LaravelAutoPresenter\PresenterDecorator $presenter
+     * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
+     * @param \Vinkla\Pusher\PusherManager                 $pusher
+     * @param \McCool\LaravelAutoPresenter\AutoPresenter   $presenter
      *
      * @return void
      */
-    public function __construct(UserRepository $userRepository, PusherManager $pusher, PresenterDecorator $presenter)
+    public function __construct(UserRepository $userRepository, PusherManager $pusher, AutoPresenter $presenter)
     {
         $this->userRepository = $userRepository;
         $this->pusher = $pusher;

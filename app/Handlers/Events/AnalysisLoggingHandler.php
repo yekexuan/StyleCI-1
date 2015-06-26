@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\Handlers\Events;
 
-use McCool\LaravelAutoPresenter\PresenterDecorator;
+use McCool\LaravelAutoPresenter\AutoPresenter;
 use Psr\Log\LoggerInterface;
 use StyleCI\StyleCI\Events\CleanupHasCompletedEvent;
 use StyleCI\StyleCI\Models\Commit;
@@ -31,21 +31,21 @@ class AnalysisLoggingHandler
     protected $logger;
 
     /**
-     * The presenter instance.
+     * The auto presenter instance.
      *
-     * @var \McCool\LaravelAutoPresenter\PresenterDecorator
+     * @var \McCool\LaravelAutoPresenter\AutoPresenter
      */
     protected $presenter;
 
     /**
      * Create a new analysis logging handler instance.
      *
-     * @param \Psr\Log\LoggerInterface                        $logger
-     * @param \McCool\LaravelAutoPresenter\PresenterDecorator $presenter
+     * @param \Psr\Log\LoggerInterface                   $logger
+     * @param \McCool\LaravelAutoPresenter\AutoPresenter $presenter
      *
      * @return void
      */
-    public function __construct(LoggerInterface $logger, PresenterDecorator $presenter)
+    public function __construct(LoggerInterface $logger, AutoPresenter $presenter)
     {
         $this->logger = $logger;
         $this->presenter = $presenter;

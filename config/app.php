@@ -144,7 +144,7 @@ return [
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
         'Fideloper\Proxy\TrustedProxyServiceProvider',
-        'McCool\LaravelAutoPresenter\LaravelAutoPresenterServiceProvider',
+        'McCool\LaravelAutoPresenter\AutoPresenterServiceProvider',
         'Vinkla\Pusher\PusherServiceProvider',
         'GrahamCampbell\Binput\BinputServiceProvider',
         'GrahamCampbell\Core\CoreServiceProvider',
