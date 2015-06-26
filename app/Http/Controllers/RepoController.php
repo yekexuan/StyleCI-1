@@ -49,7 +49,7 @@ class RepoController extends AbstractController
      *
      * @param \Illuminate\Contracts\Auth\Guard             $auth
      * @param \Illuminate\Http\Request                     $request
-     * @param \StyleCI\StyleCI\Repositories\RepoRepository $repos
+     * @param \StyleCI\StyleCI\Repositories\RepoRepository $repoRepository
      *
      * @return \Illuminate\View\View
      */
