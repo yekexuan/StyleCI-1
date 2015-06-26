@@ -64,7 +64,7 @@ class GoodbyeMessageHandler
 
         $mail = [
             'email'   => $user->email,
-            'name'    => $this->presenter->decorate($user)->firstName;
+            'name'    => $this->presenter->decorate($user)->firstName,
             'subject' => '[StyleCI] Your account has been removed from StyleCI',
         ];
 
