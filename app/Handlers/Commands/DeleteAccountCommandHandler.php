@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Handlers\Commands;
 
+use Exception;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Psr\Log\LoggerInterface;
 use StyleCI\StyleCI\Commands\DeleteAccountCommand;
