@@ -17,7 +17,6 @@
                 <ul class="footer-links">
                     <li><a href="https://status.styleci.io" target="_blank">Status</a></li>
                     <li><a href="https://blog.styleci.io" target="_blank">Blog</a></li>
-                    <li><a href="{{ route('donate') }}">Donate</a></li>
                     <li><a href="https://twitter.com/teamstyleci" target="_blank">Twitter</a></li>
                     <li><a href="https://github.com/StyleCI" target="_blank">GitHub</a></li>
                 </ul>

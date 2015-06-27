@@ -39,21 +39,6 @@ class MainRoutes
             'uses' => 'GitHubController@handle',
         ]);
 
-        $router->get('donate', [
-            'as'   => 'donate',
-            'uses' => 'PaypalController@handleDonate',
-        ]);
-
-        $router->get('donate/thanks', [
-            'as'   => 'donate_thanks',
-            'uses' => 'PaypalController@handleThanks',
-        ]);
-
-        $router->get('donate/cancel', [
-            'as'   => 'donate_cancel',
-            'uses' => 'PaypalController@handleCancel',
-        ]);
-
         $router->get('privacy', [
             'as'   => 'privacy_policy',
             'uses' => 'HomeController@handlePrivacy',
