@@ -2,7 +2,7 @@
     "name": "StyleCI",
     "dependencies": {
         "animate-sass": "~0.6.3",
-        "bootstrap-sass": "3.3.4",
+        "bootstrap-sass": "~3.3.5",
         "font-awesome": "~4.3.0",
         "fuse.js": "~1.2.2",
         "jquery": "~2.1.1",
