@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0c228fb90ef42a4a01e0d48e6623dc5c",
+    "hash": "f59b106f2b479e0fcdb6d2cf2a25f5b2",
     "packages": [
         {
             "name": "alt-three/bugsnag",
@@ -2302,16 +2302,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v0.3.2-alpha",
+            "version": "v0.3.3-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "e43223adc64fe9e5f7cf629d7830a424c700d62a"
+                "reference": "2afa5e4b846348489a1b120cc4133a901ab8eade"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/e43223adc64fe9e5f7cf629d7830a424c700d62a",
-                "reference": "e43223adc64fe9e5f7cf629d7830a424c700d62a",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/2afa5e4b846348489a1b120cc4133a901ab8eade",
+                "reference": "2afa5e4b846348489a1b120cc4133a901ab8eade",
                 "shasum": ""
             },
             "require": {
@@ -2319,7 +2319,8 @@
                 "symfony/yaml": "~2.3"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1"
+                "graham-campbell/testbench": "~3.0",
+                "phpunit/phpunit": "^4.7.6"
             },
             "suggest": {
                 "illuminate/support": "Enables Laravel support."
@@ -2342,15 +2343,15 @@
             "authors": [
                 {
                     "name": "James Brooks",
-                    "email": "james@cachethq.io"
-                },
-                {
-                    "name": "Joseph Cohen",
-                    "email": "joe@cachethq.io"
+                    "email": "james@alt-three.com"
                 },
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@alt-three.com"
                 }
             ],
             "description": "StyleCI Config Is A Code Style Configuration Manager",
@@ -2362,20 +2363,20 @@
                 "configuration",
                 "cs"
             ],
-            "time": "2015-06-01 21:43:59"
+            "time": "2015-06-27 16:07:25"
         },
         {
             "name": "styleci/fixer",
-            "version": "dev-master",
+            "version": "v0.4.2-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "98a7804a332de9157eaf9a6bbfbbec7eb815709c"
+                "reference": "c06da2bd261b25fb0073a5ad74ff9f776ef3f86b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/98a7804a332de9157eaf9a6bbfbbec7eb815709c",
-                "reference": "98a7804a332de9157eaf9a6bbfbbec7eb815709c",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/c06da2bd261b25fb0073a5ad74ff9f776ef3f86b",
+                "reference": "c06da2bd261b25fb0073a5ad74ff9f776ef3f86b",
                 "shasum": ""
             },
             "require": {
@@ -2429,20 +2430,20 @@
                 "fixer",
                 "report"
             ],
-            "time": "2015-06-27 13:38:39"
+            "time": "2015-06-27 16:13:52"
         },
         {
             "name": "styleci/git",
-            "version": "dev-master",
+            "version": "v0.2.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "a175bf11b587d728ed5160bcedb9ca2c8852c09e"
+                "reference": "6a21cb6f8c26a1fac4f22e6b4b6b309f809c5694"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/a175bf11b587d728ed5160bcedb9ca2c8852c09e",
-                "reference": "a175bf11b587d728ed5160bcedb9ca2c8852c09e",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/6a21cb6f8c26a1fac4f22e6b4b6b309f809c5694",
+                "reference": "6a21cb6f8c26a1fac4f22e6b4b6b309f809c5694",
                 "shasum": ""
             },
             "require": {
@@ -2496,20 +2497,20 @@
                 "repo",
                 "repository"
             ],
-            "time": "2015-06-27 13:38:49"
+            "time": "2015-06-27 16:09:09"
         },
         {
             "name": "styleci/login",
-            "version": "v0.2.0-alpha",
+            "version": "v0.2.1-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "0320ee3701b246b9d45a1b4d111b8f6335f80115"
+                "reference": "434170aa749bd1bf15f4bac1837f2435f335491a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/0320ee3701b246b9d45a1b4d111b8f6335f80115",
-                "reference": "0320ee3701b246b9d45a1b4d111b8f6335f80115",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/434170aa749bd1bf15f4bac1837f2435f335491a",
+                "reference": "434170aa749bd1bf15f4bac1837f2435f335491a",
                 "shasum": ""
             },
             "require": {
@@ -2520,8 +2521,8 @@
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~2.1",
-                "laravel/framework": "5.1.*"
+                "graham-campbell/testbench": "~3.0",
+                "phpunit/phpunit": "^4.7.6"
             },
             "type": "library",
             "extra": {
@@ -2541,15 +2542,15 @@
             "authors": [
                 {
                     "name": "James Brooks",
-                    "email": "james@cachethq.io"
-                },
-                {
-                    "name": "Joseph Cohen",
-                    "email": "joe@cachethq.io"
+                    "email": "james@alt-three.com"
                 },
                 {
                     "name": "Graham Campbell",
-                    "email": "graham@cachethq.io"
+                    "email": "graham@alt-three.com"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@alt-three.com"
                 }
             ],
             "description": "StyleCI Login Is A GitHub Login Provider",
@@ -2560,7 +2561,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-05-30 16:17:55"
+            "time": "2015-06-27 16:11:50"
         },
         {
             "name": "swiftmailer/swiftmailer",
