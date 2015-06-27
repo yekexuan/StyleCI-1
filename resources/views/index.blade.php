@@ -9,7 +9,7 @@
         <h3>The PHP Coding Style Continuous Integration Service</h3>
         <h3>Analyse all your <strong>public repos</strong> for <strong>free.</strong></h3>
         <br>
-        <div class="btn-toolbar">
+        <div class="btn-toolbar" role="toolbar" aria-label="Login">
             @if($currentUser)
             <a href="{{ route('repos_path') }}" class="btn navbar-btn btn-dark btn-lg"><i class="fa fa-github"></i> View Repositories</a>
             @else

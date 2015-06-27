@@ -17,6 +17,10 @@
     position: relative;
     width: 100%;
     background: url("/img/header-bg.jpg") no-repeat scroll 0% 0% / cover #36474F;
+
+    .btn-toolbar {
+        display: inline-block;
+    }
 }
 
 .home-logo-img {
