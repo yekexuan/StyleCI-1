@@ -9,7 +9,6 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Our Amazing Team</h2>
-                    <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
                 </div>
             </div>
             <hr>
@@ -55,7 +54,7 @@
             </div>
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 text-center">
-                    <p class="large">StyleCI - The PHP Coding Style Continuous Integration Service</p>
+                    <p class="lead">StyleCI is an <a href="https://alt-three.com/">Alt Three</a> Product.</p>
                 </div>
             </div>
         </div>
