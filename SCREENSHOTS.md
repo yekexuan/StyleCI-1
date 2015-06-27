@@ -1,4 +1,0 @@
-SCREENSHOTS
-===========
-
-Coming soon.
