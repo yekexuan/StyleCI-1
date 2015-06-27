@@ -24,7 +24,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12 copyright">
-                &copy; {{ date('Y') }} StyleCI
+                &copy; {{ date('Y') }} Alt Three LTD
             </div>
         </div>
     </div>
