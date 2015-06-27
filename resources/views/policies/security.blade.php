@@ -9,7 +9,7 @@
 
 <h2>Reporting A security Vulnerability</h2>
 
-<p>If you have spotted a security vulnerability in StyleCI, please contact us directly at <a href="mailto:support@cachet.io">support@cachet.io</a>. We request that you do not publicly disclose a bug before it has been fixed for obvious reasons.</p>
+<p>If you have spotted a security vulnerability in StyleCI, please contact us directly at <a href="mailto:support@alt-three.com">support@alt-three.com</a>. We request that you do not publicly disclose a bug before it has been fixed for obvious reasons.</p>
 
 <h2>Data Storage</h2>
 
@@ -17,5 +17,5 @@
 
 <h2>Questions</h2>
 
-<p>Any questions about the Security Policy should be addressed to <a href="mailto:support@cachet.io">support@cachet.io</a>.</p>
+<p>Any questions about the Security Policy should be addressed to <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
 @stop

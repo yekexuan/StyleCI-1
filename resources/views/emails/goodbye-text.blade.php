@@ -6,7 +6,7 @@ This request has been fulfilled, your account has been removed from our service.
 
 If this was all a mistake, don't fear! You can log back into StyleCI via GitHub and re-enable your repositories.
 
-If you have any questions at all, feel free to reach out to us by emailing support@cachet.io, or by creating an issue on GitHub.
+If you have any questions at all, feel free to reach out to us by emailing support@alt-three.com, or by creating an issue on GitHub.
 
 Thank you,
 StyleCI

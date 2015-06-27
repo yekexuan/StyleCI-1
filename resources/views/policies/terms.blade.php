@@ -13,5 +13,5 @@
 
 <h2>Questions</h2>
 
-<p>Any questions about the Terms of Service should be addressed to <a href="mailto:support@cachet.io">support@cachet.io</a>.</p>
+<p>Any questions about the Terms of Service should be addressed to <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
 @stop

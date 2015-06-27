@@ -68,12 +68,12 @@
     @if ($commit->status === 4)
     <div class="alert alert-info commit-alert" role="alert">
         <h4>Need a hand?</h4>
-        <p>Feel free to contact support at <a href="mailto:support@cachet.io">support@cachet.io</a>.</p>
+        <p>Feel free to contact support at <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
     </div>
     @elseif ($commit->status === 3)
     <div class="alert alert-danger commit-alert" role="alert">
         <h4>Something went wrong on our end.</h4>
-        <p>Feel free to contact support at <a href="mailto:support@cachet.io">support@cachet.io</a>.</p>
+        <p>Feel free to contact support at <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
     </div>
     @elseif ($commit->status === 2)
     <hr>
