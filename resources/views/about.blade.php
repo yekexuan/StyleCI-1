@@ -54,7 +54,7 @@
             </div>
             <div class="row">
                 <div class="col-md-10 col-md-offset-1 text-center">
-                    <p class="lead">StyleCI is an <a href="https://alt-three.com/">Alt Three</a> Product.</p>
+                    <p class="lead">StyleCI is an Alt Three Product.</p>
                 </div>
             </div>
         </div>
