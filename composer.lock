@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "db6089247c3222df5fee378f72486f3d",
+    "hash": "2c1e32ced9cd589be973002315b1c44a",
     "packages": [
         {
             "name": "alt-three/bugsnag",
@@ -400,12 +400,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "213e75a3100253c0af84baee62cf74168f71c178"
+                "reference": "9ec4982baba8d0edefcd84f40a77a466fe30eca8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/213e75a3100253c0af84baee62cf74168f71c178",
-                "reference": "213e75a3100253c0af84baee62cf74168f71c178",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/9ec4982baba8d0edefcd84f40a77a466fe30eca8",
+                "reference": "9ec4982baba8d0edefcd84f40a77a466fe30eca8",
                 "shasum": ""
             },
             "require": {
@@ -446,7 +446,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-06-22 18:55:49"
+            "time": "2015-06-28 16:32:35"
         },
         {
             "name": "fideloper/proxy",
@@ -1517,16 +1517,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.3",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "a7ebd043ca178c05cc7946ece03d3a268a5a3f84"
+                "reference": "cb672f9b5bab645157bda7417d100805c0efc0d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/a7ebd043ca178c05cc7946ece03d3a268a5a3f84",
-                "reference": "a7ebd043ca178c05cc7946ece03d3a268a5a3f84",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/cb672f9b5bab645157bda7417d100805c0efc0d0",
+                "reference": "cb672f9b5bab645157bda7417d100805c0efc0d0",
                 "shasum": ""
             },
             "require": {
@@ -1641,7 +1641,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-06-24 19:38:07"
+            "time": "2015-06-28 22:30:56"
         },
         {
             "name": "league/flysystem",
