@@ -16,7 +16,7 @@ use Illuminate\Contracts\Routing\Registrar;
 /**
  * This is the api routes class.
  *
- * @author Joseph Cohen <joe@cachethq.io>
+ * @author Joseph Cohen <joe@alt-three.com>
  */
 class ApiRoutes
 {
