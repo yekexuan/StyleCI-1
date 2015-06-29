@@ -1,7 +1,7 @@
 {
     "name": "styleci/styleci",
     "description": "StyleCI Is The PHP Coding Style Continuous Integration Service",
-    "keywords": ["laravel", "framework", "styleci", "ci", "cs", "coding standard", "Style CI", "StyleCI", "Alt Three"],
+    "keywords": ["StyleCI", "CS", "Laravel", "Alt Three"],
     "type": "project",
     "license": "MIT",
     "authors": [
