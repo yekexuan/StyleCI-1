@@ -2,14 +2,6 @@
 
 @section('title', 'Your Account')
 
-@section('header')
-@if (isset($repos))
-<script>
-    window.REPOS = {{ json_encode($repos) }}
-</script>
-@endif
-@stop
-
 @section('top')
 <div class="page-heading">
     <div class="container">
@@ -49,57 +41,54 @@
     </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="repositories">
-            <a class="btn btn-default pull-right js-sync-repos" href="{{ route('account_repos_sync_path') }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Loading...">
-                <i class="fa fa-github"></i>
-                Sync with GitHub
-            </a>
-            <h2>Repositories</h2>
-            <p>We're only showing your public repositories below.</p>
-            <form name="search">
-                <div class="form-group">
-                    <label for="query">Filter repositories</label>
-                    <input type="text" name="query" class="form-control" id="query">
+            <sc-account inline-template>
+                <a class="btn btn-default pull-right" v-on="click: syncRepos" href="{{ route('api_account_repos_sync_path') }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Loading...">
+                    <i class="fa fa-github"></i>
+                    Sync with GitHub
+                </a>
+                <h2>Repositories</h2>
+                <p>We're only showing your public repositories below.</p>
+                <form name="search">
+                    <div class="form-group">
+                        <label for="query">Filter repositories</label>
+                        <input v-model="search" type="text" name="query" class="form-control" id="query">
+                    </div>
+                </form>
+                <hr>
+                <div v-show="isLoading" class="loading text-center">
+                    <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repositories...</h3>
                 </div>
-            </form>
-            <hr>
-            <div class="loading text-center">
-                <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repositories...</h3>
-            </div>
-            <div class="repos">
-                @if (isset($repos))
-                    @forelse($repos as $id => $repo)
+                <div class="repos" v-repeat="repo : repos | filterBy search">
                     <div class="row">
                         <div class="col-sm-8">
-                            <h4>{{ $repo['name'] }}</h4>
-                            @if($repo['enabled'])
-                            <h5>StyleCI is currently enabled on this repo.</h5>
-                            @else
-                            <h5>StyleCI is currently disabled on this repo.</h5>
-                            @endif
+                            <h4>@{{ repo.name }}</h4>
+                            <h5>
+                                <span v-if="repo.enabled">StyleCI is currently enabled on this repo.</span>
+                                <span v-if="!repo.enabled">StyleCI is currently disabled on this repo.</span>
+                            </h5>
                         </div>
                         <div class="col-sm-4 list-vcenter">
                             <div class="repo-controls">
-                                @if($repo['enabled'])
-                                <a class="btn btn-primary" href="{{ route('repo_path', $id) }}">
-                                    <i class="fa fa-history"></i> Show Commits
-                                </a>
-                                <a class="btn btn-danger js-confirm-action" href="{{ route('disable_repo_path', $id) }}" data-method="POST" data-id="{{ $id }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Disabling...">
-                                    <i class="fa fa-times"></i> Disable StyleCI
-                                </a>
-                                @else
-                                <a class="btn btn-success" href="{{ route('enable_repo_path', $id) }}" data-method="POST" data-id="{{ $id }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Enabling...">
-                                    <i class="fa fa-check"></i> Enable StyleCI
-                                </a>
-                                @endif
+                                <div v-if="repo.enabled">
+                                    <a class="btn btn-primary" href="{{ route('repo_path', '') }}/@{{ repo.id }}">
+                                        <i class="fa fa-history"></i> Show Commits
+                                    </a>
+                                    <a class="btn btn-danger" v-on="click: toggleEnableDisableRepo(repo, $event)" href="{{ route('api_disable_repo_path', '') }}/@{{ repo.id }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Disabling...">
+                                        <i class="fa fa-times"></i> Disable StyleCI
+                                    </a>
+                                </div>
+                                <div v-if="!repo.enabled">
+                                    <a class="btn btn-success" v-on="click: toggleEnableDisableRepo(repo, $event)" href="{{ route('api_enable_repo_path', '') }}/@{{ repo.id }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Enabling...">
+                                        <i class="fa fa-check"></i> Enable StyleCI
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <hr>
-                    @empty
-                    <p class="lead">You have no public repositories we can access.</p>
-                    @endforelse
-                @endif
-            </div>
+                </div>
+                <p v-if="!repos.length" class="lead">You have no public repositories we can access.</p>
+            </sc-account>
         </div>
         <div role="tabpanel" class="tab-pane" id="profile">
             <h2>Profile</h2>
@@ -125,67 +114,4 @@
         </div>
     </div>
 </div>
-@stop
-
-@section('js')
-<script id="repos-template" type="text/x-lodash-template">
-    <% if (_.size(repos) > 0) { %>
-        <% _.forEach(repos, function(repo) { %>
-        <div class="row" data-repo="<%= repo.name %>">
-            <div class="col-sm-8">
-                <h4><%= repo.name %></h4>
-                <% if (repo.enabled) { %>
-                <h5>StyleCI is currently enabled on this repo.</h5>
-                <% } else if(repo.language == "PHP") { %>
-                <h5>StyleCI is currently disabled on this repo.</h5>
-                <% } else { %>
-                <h5>This repo is not a PHP project and as such, StyleCI may not function correctly.</h5>
-                <% } %>
-            </div>
-            <div class="col-sm-4 list-vcenter">
-                <div class="repo-controls">
-                    <% if (repo.enabled) { %>
-                    <a class="btn btn-primary" href="{{ route('repo_path', '') }}/<%= repo.id %>">
-                        <i class="fa fa-history"></i> Show Commits
-                    </a>
-                    <a class="btn btn-danger js-disable-repo js-confirm-action" href="{{ route('disable_repo_path', '') }}/<%= repo.id %>" data-id="<%= repo.id %>" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Disabling...">
-                        <i class="fa fa-times"></i> Disable StyleCI
-                    </a>
-                    <% } else { %>
-                    <a class="btn btn-success js-enable-repo" href="{{ route('enable_repo_path', '') }}/<%= repo.id %>" data-id="<%= repo.id %>" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Enabling...">
-                        <i class="fa fa-check"></i> Enable StyleCI
-                    </a>
-                    <% } %>
-                </div>
-            </div>
-        </div>
-        <hr>
-        <% }); %>
-    <% } else { %>
-        <p class="lead">You have no public repositories we can access.</p>
-    <% } %>
-</script>
-
-<script id="enabled-repo-template" type="text/x-lodash-template">
-    <a class="btn btn-primary" href="{{ route('repo_path', '') }}/<%= repo.id %>">
-        <i class="fa fa-history"></i> Show Commits
-    </a>
-    <a class="btn btn-danger js-disable-repo js-confirm-action" href="{{ route('disable_repo_path', '') }}/<%= repo.id %>" data-id="<%= repo.id %>" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Disabling...">
-        <i class="fa fa-times"></i> Disable StyleCI
-    </a>
-</script>
-
-<script id="disabled-repo-template" type="text/x-lodash-template">
-    <a class="btn btn-success js-enable-repo" href="{{ route('enable_repo_path', '') }}/<%= repo.id %>" data-id="<%= repo.id %>" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Enabling...">
-        <i class="fa fa-check"></i> Enable StyleCI
-    </a>
-</script>
-
-@if (!isset($repos))
-<script type="text/javascript">
-    $(function() {
-        StyleCI.Account.getRepos();
-    });
-</script>
-@endif
 @stop

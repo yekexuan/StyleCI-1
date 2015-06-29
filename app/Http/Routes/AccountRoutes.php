@@ -54,11 +54,6 @@ class AccountRoutes
             'uses' => 'AccountController@handleDelete',
         ]);
 
-        $router->get('account/repos', [
-            'as'   => 'account_repos_path',
-            'uses' => 'AccountController@handleListRepos',
-        ]);
-
         $router->post('account/repos/sync', [
             'as'   => 'account_repos_sync_path',
             'uses' => 'AccountController@handleSync',
