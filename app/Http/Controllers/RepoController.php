@@ -104,7 +104,7 @@ class RepoController extends AbstractController
             throw new HttpException(403);
         }
 
-        $this->dispatch(new AnalyseBranchCommand($id, $repo->default_branch));
+        $this->dispatch(new AnalyseBranchCommand($id, Request::get('branch')));
 
         if (Request::ajax()) {
             return new JsonResponse(['queued' => true]);
