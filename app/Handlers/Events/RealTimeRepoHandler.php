@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\Handlers\Events;
 
-use McCool\LaravelAutoPresenter\AutoPresenter;
+use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Events\RepoWasDisabledEvent;
 use StyleCI\StyleCI\Events\RepoWasEnabledEvent;
 use StyleCI\StyleCI\Repositories\UserRepository;
@@ -40,26 +40,17 @@ class RealTimeRepoHandler
     protected $pusher;
 
     /**
-     * The auto presenter instance.
-     *
-     * @var \McCool\LaravelAutoPresenter\AutoPresenter
-     */
-    protected $presenter;
-
-    /**
      * Create a new repo notifications handler instance.
      *
      * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
      * @param \Vinkla\Pusher\PusherManager                 $pusher
-     * @param \McCool\LaravelAutoPresenter\AutoPresenter   $presenter
      *
      * @return void
      */
-    public function __construct(UserRepository $userRepository, PusherManager $pusher, AutoPresenter $presenter)
+    public function __construct(UserRepository $userRepository, PusherManager $pusher)
     {
         $this->userRepository = $userRepository;
         $this->pusher = $pusher;
-        $this->presenter = $presenter;
     }
 
     /**
@@ -89,10 +80,10 @@ class RealTimeRepoHandler
     protected function trigger($repo, $event)
     {
         $users = $this->userRepository->collaborators($repo);
-        $data = $this->presenter->decorate($repo);
+        $data = AutoPresenter::decorate($repo)->toArray();
 
         foreach ($users as $user) {
-            $this->pusher->trigger('repos-'.$user->id, $event, ['event' => $data->toArray()]);
+            $this->pusher->trigger('repos-'.$user->id, $event, ['event' => $data]);
         }
     }
 }

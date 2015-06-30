@@ -14,11 +14,11 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 /**
- * This is the create commits table migration class.
+ * This is the create repos table migration class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class CreateCommitsTable extends Migration
+class CreateReposTable extends Migration
 {
     /**
      * Run the migrations.
@@ -27,16 +27,11 @@ class CreateCommitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('commits', function (Blueprint $table) {
-            $table->char('id', 40)->primary();
-            $table->bigInteger('repo_id')->unsigned()->index();
-            $table->bigInteger('fork_id')->unsigned()->nullable();
-            $table->string('ref', 128);
-            $table->string('message', 128);
-            $table->tinyInteger('status')->unsigned()->default(0);
-            $table->float('time')->nullable();
-            $table->float('memory')->nullable();
-            $table->longText('diff')->nullable();
+        Schema::create('repos', function (Blueprint $table) {
+            $table->bigInteger('id')->unsigned()->primary();
+            $table->string('user_id')->index();
+            $table->string('name', 128)->unique();
+            $table->string('default_branch', 128)->default('master');
             $table->timestamps();
         });
     }
@@ -48,6 +43,6 @@ class CreateCommitsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('commits');
+        Schema::drop('repos');
     }
 }

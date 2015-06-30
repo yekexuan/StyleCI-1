@@ -14,11 +14,11 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 /**
- * This is the create forks table migration class.
+ * This is the create analyses table migration class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class CreateForksTable extends Migration
+class CreateAnalysesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -27,10 +27,15 @@ class CreateForksTable extends Migration
      */
     public function up()
     {
-        Schema::create('forks', function (Blueprint $table) {
-            $table->bigInteger('id')->unsigned()->primary();
+        Schema::create('analyses', function (Blueprint $table) {
+            $table->bigIncrements('id');
             $table->bigInteger('repo_id')->unsigned()->index();
-            $table->string('name', 128);
+            $table->string('branch', 128)->nullable();
+            $table->integer('pr')->unsigned()->nullable();
+            $table->char('commit', 40);
+            $table->string('message', 128);
+            $table->text('error_message')->nullable();
+            $table->tinyInteger('status')->unsigned()->default(0);
             $table->timestamps();
         });
     }
@@ -42,6 +47,6 @@ class CreateForksTable extends Migration
      */
     public function down()
     {
-        Schema::drop('forks');
+        Schema::drop('analyses');
     }
 }

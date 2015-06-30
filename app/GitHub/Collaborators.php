@@ -14,7 +14,6 @@ namespace StyleCI\StyleCI\GitHub;
 use Github\ResultPager;
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Database\Eloquent\Model;
-use StyleCI\StyleCI\Models\Commit;
 use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Models\User;
 
@@ -56,20 +55,15 @@ class Collaborators
     /**
      * Get the collaborators for a repo.
      *
-     * This method accepts a commit, fork, or repo model instance.
-     *
-     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param \StyleCI\StyleCI\Model\Repo $repo
      *
      * @return int[]
      */
-    public function get(Model $model)
+    public function get(Repo $repo)
     {
         // cache the collaborator info from github for 12 hours
-        return $this->cache->remember($this->getId($model).'collaborators', 720, function () use ($model) {
-            $user = ($model instanceof Commit) ? $model->repo->user : $model->user;
-            $name = ($model instanceof Repo) ? $model->name : $model->name();
-
-            return $this->fetchFromGitHub($user, $name);
+        return $this->cache->remember("{$repo->id}collaborators", 720, function () use ($repo) {
+            return $this->fetchFromGitHub($repo->user, $repo->name);
         });
     }
 
@@ -98,28 +92,12 @@ class Collaborators
     /**
      * Flush our cache of the repo's collaborators.
      *
-     * This method accepts a commit, fork, or repo model instance.
-     *
-     * @param \Illuminate\Database\Eloquent\Model $model
+     * @param \StyleCI\StyleCI\Model\Repo $repo
      *
      * @return void
      */
-    public function flush(Model $model)
+    public function flush(Model $repo)
     {
-        $this->cache->forget($this->getId($model).'collaborators');
-    }
-
-    /**
-     * Get the github repo id for the given model.
-     *
-     * This method accepts a commit, fork, or repo model instance.
-     *
-     * @param \Illuminate\Database\Eloquent\Model $model
-     *
-     * @return int
-     */
-    protected function getId(Model $model)
-    {
-        return ($model instanceof Repo) ? $model->id : $model->repo->id;
+        $this->cache->forget("{$repo->id}collaborators");
     }
 }

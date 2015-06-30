@@ -13,7 +13,7 @@ namespace StyleCI\StyleCI\Composers;
 
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Contracts\View\View;
-use McCool\LaravelAutoPresenter\AutoPresenter;
+use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 
 /**
  * This is the current user composer class.
@@ -31,24 +31,15 @@ class CurrentUserComposer
     protected $auth;
 
     /**
-     * The auto presenter instance.
-     *
-     * @var \McCool\LaravelAutoPresenter\AutoPresenter
-     */
-    protected $presenter;
-
-    /**
      * Create a new current user composer instance.
      *
-     * @param \Illuminate\Contracts\Auth\Guard           $auth
-     * @param \McCool\LaravelAutoPresenter\AutoPresenter $presenter
+     * @param \Illuminate\Contracts\Auth\Guard $auth
      *
      * @return void
      */
-    public function __construct(Guard $auth, AutoPresenter $presenter)
+    public function __construct(Guard $auth)
     {
         $this->auth = $auth;
-        $this->presenter = $presenter;
     }
 
     /**
@@ -60,6 +51,6 @@ class CurrentUserComposer
      */
     public function compose(View $view)
     {
-        $view->with('currentUser', $this->presenter->decorate($this->auth->user()));
+        $view->with('currentUser', AutoPresenter::decorate($this->auth->user()));
     }
 }

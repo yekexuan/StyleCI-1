@@ -12,11 +12,11 @@
 namespace StyleCI\StyleCI\Commands;
 
 /**
- * This is the analyse commit command.
+ * This is the analyse pull request command.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalyseCommitCommand
+class AnalysePullRequestCommand
 {
     /**
      * The repo to analyse.
@@ -26,11 +26,11 @@ class AnalyseCommitCommand
     public $repo;
 
     /**
-     * The branch to analyse.
+     * The pr to analyse.
      *
-     * @var string
+     * @var int
      */
-    public $branch;
+    public $pr;
 
     /**
      * The commit to analyse.
@@ -50,16 +50,16 @@ class AnalyseCommitCommand
      * Create a new analyse commit command instance.
      *
      * @param int    $repo
-     * @param string $branch
+     * @param int    $pr
      * @param string $commit
      * @param string $message
      *
      * @return void
      */
-    public function __construct($repo, $branch, $commit, $message)
+    public function __construct($repo, $pr, $commit, $message)
     {
         $this->repo = $repo;
-        $this->branch = $branch;
+        $this->pr = $pr;
         $this->commit = $commit;
         $this->message = $message;
     }

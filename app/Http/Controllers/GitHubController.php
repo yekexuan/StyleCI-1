@@ -14,9 +14,7 @@ namespace StyleCI\StyleCI\Http\Controllers;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
-use StyleCI\StyleCI\Repositories\CommitRepository;
-use StyleCI\StyleCI\Repositories\ForkRepository;
-use StyleCI\StyleCI\Repositories\RepoRepository;
+use StyleCI\StyleCI\Commands\AnalysePullRequestCommand;
 
 /**
  * This is the github controller class.
@@ -26,42 +24,13 @@ use StyleCI\StyleCI\Repositories\RepoRepository;
 class GitHubController extends AbstractController
 {
     /**
-     * The commit repository instance.
-     *
-     * @var \StyleCI\StyleCI\Repositories\CommitRepository
-     */
-    protected $commitRepository;
-
-    /**
-     * The fork repository instance.
-     *
-     * @var \StyleCI\StyleCI\Repositories\ForkRepository
-     */
-    protected $forkRepository;
-
-    /**
-     * The repo repository instance.
-     *
-     * @var \StyleCI\StyleCI\Repositories\RepoRepository
-     */
-    protected $repoRepository;
-
-    /**
      * Create a new github controller instance.
-     *
-     * @param \StyleCI\StyleCI\Repositories\CommitRepository $commitRepository
-     * @param \StyleCI\StyleCI\Repositories\ForkRepository   $forkRepository
-     * @param \StyleCI\StyleCI\Repositories\RepoRepository   $repoRepository
      *
      * @return void
      */
-    public function __construct(CommitRepository $commitRepository, ForkRepository $forkRepository, RepoRepository $repoRepository)
+    public function __construct()
     {
         parent::__construct(['except' => ['handle']]);
-
-        $this->commitRepository = $commitRepository;
-        $this->forkRepository = $forkRepository;
-        $this->repoRepository = $repoRepository;
     }
 
     /**
@@ -73,19 +42,16 @@ class GitHubController extends AbstractController
      */
     public function handle(Request $request)
     {
-        if ($request->header('X-GitHub-Event') === 'push') {
-            return $this->handlePush($request->input());
+        switch ($request->header('X-GitHub-Event')) {
+            case 'push':
+                return $this->handlePush($request->input());
+            case 'pull_request':
+                return $this->handlePullRequest($request->input());
+            case 'ping':
+                return $this->handlePing();
+            default:
+                $this->handleOther();
         }
-
-        if ($request->header('X-GitHub-Event') === 'pull_request') {
-            return $this->handlePullRequest($request->input());
-        }
-
-        if ($request->header('X-GitHub-Event') === 'ping') {
-            return $this->handlePing();
-        }
-
-        return $this->handleOther();
     }
 
     /**
@@ -97,22 +63,13 @@ class GitHubController extends AbstractController
      */
     protected function handlePush(array $input)
     {
-        if ($input['head_commit'] && strpos($input['ref'], 'gh-pages') === false) {
-            $repo = $this->repoRepository->find($input['repository']['id']);
+        if ($input['head_commit'] && substr($input['ref'], 0, 11) === 'refs/heads/' && strpos($input['ref'], 'gh-pages') === false) {
+            $repo = $input['repository']['id'];
+            $branch = substr($input['ref'], 11);
+            $commit = $input['head_commit']['id'];
+            $message = substr(strtok(strtok($input['head_commit']['message'], "\n"), "\r"), 0, 128);
 
-            if (!$repo) {
-                return new JsonResponse(['message' => 'StyleCI cannot analyse this repo because it\'s not enabled on our system.'], 403, [], JSON_PRETTY_PRINT);
-            }
-
-            $commit = $this->commitRepository->findOrGenerate($input['head_commit']['id'], ['repo_id' => $repo->id]);
-
-            if (empty($commit->ref)) {
-                $commit->ref = $input['ref'];
-            }
-
-            $commit->message = substr(strtok(strtok($input['head_commit']['message'], "\n"), "\r"), 0, 127);
-
-            $this->dispatch(new AnalyseCommitCommand($commit));
+            $this->dispatch(new AnalyseCommitCommand($repo, $branch, $commit, $message));
 
             return new JsonResponse(['message' => 'StyleCI has successfully scheduled the analysis of this event.'], 202, [], JSON_PRETTY_PRINT);
         }
@@ -134,25 +91,12 @@ class GitHubController extends AbstractController
     protected function handlePullRequest(array $input)
     {
         if (($input['action'] === 'opened' || $input['action'] === 'reopened' || $input['action'] === 'synchronize') && $input['pull_request']['head']['repo']['full_name'] !== $input['pull_request']['base']['repo']['full_name'] && strpos($input['pull_request']['head']['ref'], 'gh-pages') === false) {
-            $repo = $this->repoRepository->find($input['pull_request']['base']['repo']['id']);
+            $repo = $input['pull_request']['base']['repo']['id'];
+            $pr = $input['number'];
+            $commit = $input['pull_request']['head']['sha'];
+            $message = substr('Pull Request: '.strtok(strtok($input['pull_request']['title'], "\n"), "\r"), 0, 128);
 
-            if (!$repo) {
-                return new JsonResponse(['message' => 'StyleCI cannot analyse this repo because it\'s not enabled on our system.'], 403, [], JSON_PRETTY_PRINT);
-            }
-
-            $fork = $this->forkRepository->findOrGenerate($input['pull_request']['head']['repo']['id'], ['repo_id' => $repo->id, 'name' => $input['pull_request']['head']['repo']['full_name']]);
-
-            $fork->save();
-
-            $commit = $this->commitRepository->findOrGenerate($input['pull_request']['head']['sha'], ['repo_id' => $repo->id, 'fork_id' => $fork->id]);
-
-            if (empty($commit->ref)) {
-                $commit->ref = $input['pull_request']['head']['ref'];
-            }
-
-            $commit->message = substr('Pull Request: '.strtok(strtok($input['pull_request']['title'], "\n"), "\r"), 0, 127);
-
-            $this->dispatch(new AnalyseCommitCommand($commit));
+            $this->dispatch(new AnalysePullRequestCommand($repo, $pr, $commit, $message));
 
             return new JsonResponse(['message' => 'StyleCI has successfully scheduled the analysis of this event.'], 202, [], JSON_PRETTY_PRINT);
         }

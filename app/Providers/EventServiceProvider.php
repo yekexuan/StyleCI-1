@@ -28,7 +28,7 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         'StyleCI\StyleCI\Events\AnalysisHasCompletedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\AnalysisLoggingHandler',
-            'StyleCI\StyleCI\Handlers\Events\CommitStatusHandler',
+            'StyleCI\StyleCI\Handlers\Events\AnalysisStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\RealTimeStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\AnalysisNotificationsHandler',
         ],
@@ -36,12 +36,12 @@ class EventServiceProvider extends ServiceProvider
             'StyleCI\StyleCI\Handlers\Events\AnalysisLoggingHandler',
         ],
         'StyleCI\StyleCI\Events\AnalysisWasQueuedEvent' => [
-            'StyleCI\StyleCI\Handlers\Events\CommitStatusHandler',
+            'StyleCI\StyleCI\Handlers\Events\AnalysisStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\RealTimeStatusHandler',
         ],
         'StyleCI\StyleCI\Events\CleanupHasCompletedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\AnalysisLoggingHandler',
-            'StyleCI\StyleCI\Handlers\Events\CommitStatusHandler',
+            'StyleCI\StyleCI\Handlers\Events\AnalysisStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\RealTimeStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\AnalysisNotificationsHandler',
         ],

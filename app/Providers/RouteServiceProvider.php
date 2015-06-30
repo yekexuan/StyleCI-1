@@ -13,6 +13,8 @@ namespace StyleCI\StyleCI\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;
+use StyleCI\StyleCI\Models\Analysis;
+use StyleCI\StyleCI\Models\Repo;
 
 /**
  * This is the route service provider class.
@@ -41,8 +43,8 @@ class RouteServiceProvider extends ServiceProvider
     {
         parent::boot($router);
 
-        $router->model('commit', 'StyleCI\StyleCI\Models\Commit');
-        $router->model('repo', 'StyleCI\StyleCI\Models\Repo');
+        $router->model('analysis', Analysis::class);
+        $router->model('repo', Repo::class);
     }
 
     /**

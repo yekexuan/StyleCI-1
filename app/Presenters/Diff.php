@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Commit;
+namespace StyleCI\StyleCI\Presenters;
 
 use ArrayAccess;
 
@@ -21,7 +21,7 @@ use ArrayAccess;
 class Diff implements ArrayAccess
 {
     /**
-     * The diff splitted files.
+     * The split up diff files.
      *
      * @var string[]
      */
@@ -52,7 +52,7 @@ class Diff implements ArrayAccess
     }
 
     /**
-     * Get the splitted commit diff files.
+     * Get the split up commit diff files.
      *
      * @return string[]
      */
@@ -179,7 +179,7 @@ class Diff implements ArrayAccess
      *
      * @param string $offset
      *
-     * @return mixed
+     * @return string|null
      */
     public function offsetGet($offset)
     {

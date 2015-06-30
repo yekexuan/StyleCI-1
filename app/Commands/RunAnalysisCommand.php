@@ -9,18 +9,22 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Events;
+namespace StyleCI\StyleCI\Commands;
 
-use Exception;
+use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Queue\SerializesModels;
+use StyleCI\StyleCI\Events\AnalysisWasQueuedEvent;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
- * This is the analysis has completed event class.
+ * This is the run analysis command.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalysisHasCompletedEvent
+class RunAnalysisCommand implements ShouldQueue
 {
+    use SerializesModels;
+
     /**
      * The analysis object.
      *
@@ -29,23 +33,14 @@ class AnalysisHasCompletedEvent
     public $analysis;
 
     /**
-     * The exception that occurred during analysis.
-     *
-     * @var \Exception|null
-     */
-    public $exception;
-
-    /**
-     * Create a new analysis has completed event instance.
+     * Create a new run analysis command instance.
      *
      * @param \StyleCI\StyleCI\Models\Analysis $analysis
-     * @param \Exception|null                  $exception
      *
      * @return void
      */
-    public function __construct(Analysis $analysis, Exception $exception = null)
+    public function __construct(Analysis $analysis)
     {
-        $this->analysis = $analysis;
-        $this->exception = $exception;
+        event(new AnalysisWasQueuedEvent($analysis));
     }
 }

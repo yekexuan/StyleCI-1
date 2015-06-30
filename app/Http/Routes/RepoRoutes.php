@@ -49,19 +49,19 @@ class RepoRoutes
             'uses' => 'RepoController@handleAnalyse',
         ]);
 
-        $router->get('commits/{commit}', [
-            'as'   => 'commit_path',
-            'uses' => 'CommitController@handleShow',
+        $router->get('analyses/{analysis}', [
+            'as'   => 'analysis_path',
+            'uses' => 'AnalysisController@handleShow',
         ]);
 
-        $router->get('commits/{commit}/diff', [
-            'as'   => 'commit_diff_path',
-            'uses' => 'CommitController@handleDiff',
+        $router->get('analyses/{analysis}/diff', [
+            'as'   => 'analysis_diff_path',
+            'uses' => 'AnalysisController@handleDiff',
         ]);
 
-        $router->get('commits/{commit}/diff/download', [
-            'as'   => 'commit_download_path',
-            'uses' => 'CommitController@handleDiffDownload',
+        $router->get('analyses/{analysis}/diff/download', [
+            'as'   => 'analysis_download_path',
+            'uses' => 'AnalysisController@handleDiffDownload',
         ]);
     }
 }

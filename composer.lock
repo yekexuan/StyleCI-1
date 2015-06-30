@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d9e5f6ff34d1796d31e2d4f910cd3833",
+    "hash": "a70ac2825fee218fe9ade5628b89cf9e",
     "packages": [
         {
             "name": "alt-three/bugsnag",
@@ -792,6 +792,95 @@
                 "whoops"
             ],
             "time": "2015-06-26 17:05:53"
+        },
+        {
+            "name": "graham-campbell/flysystem",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/GrahamCampbell/Laravel-Flysystem.git",
+                "reference": "7bd8ecef4a20fe7f34530bf1030294c04dcdde57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Flysystem/zipball/7bd8ecef4a20fe7f34530bf1030294c04dcdde57",
+                "reference": "7bd8ecef4a20fe7f34530bf1030294c04dcdde57",
+                "shasum": ""
+            },
+            "require": {
+                "graham-campbell/manager": "~2.2",
+                "illuminate/cache": "5.1.*",
+                "illuminate/contracts": "5.1.*",
+                "illuminate/support": "5.1.*",
+                "league/flysystem": "~1.0",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~3.0",
+                "league/flysystem-aws-s3-v3": "~1.0",
+                "league/flysystem-azure": "~1.0",
+                "league/flysystem-cached-adapter": "~1.0",
+                "league/flysystem-copy": "~1.0",
+                "league/flysystem-dropbox": "~1.0",
+                "league/flysystem-eventable-filesystem": "~1.0",
+                "league/flysystem-gridfs": "~1.0",
+                "league/flysystem-rackspace": "~1.0",
+                "league/flysystem-sftp": "~1.0",
+                "league/flysystem-webdav": "~1.0",
+                "league/flysystem-ziparchive": "~1.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6"
+            },
+            "suggest": {
+                "league/flysystem-aws-s3-v3": "AwsS3 adapter support.",
+                "league/flysystem-azure": "Azure adapter support.",
+                "league/flysystem-cached-adapter": "Adapter caching support.",
+                "league/flysystem-copy": "Copy adapter support.",
+                "league/flysystem-dropbox": "Dropbox adapter support.",
+                "league/flysystem-eventable-filesystem": "Eventable filesystem support.",
+                "league/flysystem-gridfs": "GridFS adapter support.",
+                "league/flysystem-rackspace": "Rackspace adapter support.",
+                "league/flysystem-replicate-adapter": "Replicate adapter support.",
+                "league/flysystem-sftp": "Sftp adapter support.",
+                "league/flysystem-webdav": "WebDav adapter support.",
+                "league/flysystem-ziparchive": "ZipArchive adapter support."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GrahamCampbell\\Flysystem\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com"
+                }
+            ],
+            "description": "Flysystem Is A Flysystem Bridge For Laravel 5",
+            "keywords": [
+                "Flysystem",
+                "Graham Campbell",
+                "GrahamCampbell",
+                "Laravel Flysystem",
+                "Laravel-Flysystem",
+                "aws",
+                "dropbox",
+                "files",
+                "framework",
+                "laravel",
+                "s3"
+            ],
+            "time": "2015-06-26 17:44:41"
         },
         {
             "name": "graham-campbell/github",
@@ -2361,23 +2450,23 @@
         },
         {
             "name": "styleci/fixer",
-            "version": "v0.4.2-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "c06da2bd261b25fb0073a5ad74ff9f776ef3f86b"
+                "reference": "03575dbf119266d6923ea03bec54ea83f66a3f2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/c06da2bd261b25fb0073a5ad74ff9f776ef3f86b",
-                "reference": "c06da2bd261b25fb0073a5ad74ff9f776ef3f86b",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/03575dbf119266d6923ea03bec54ea83f66a3f2c",
+                "reference": "03575dbf119266d6923ea03bec54ea83f66a3f2c",
                 "shasum": ""
             },
             "require": {
                 "fabpot/php-cs-fixer": "~1.9.1",
                 "php": ">=5.5.9",
                 "styleci/config": "0.3.*",
-                "styleci/git": "0.2.*"
+                "styleci/git": "0.3.*"
             },
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
@@ -2389,7 +2478,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4-dev"
+                    "dev-master": "0.5-dev"
                 }
             },
             "autoload": {
@@ -2417,27 +2506,25 @@
             ],
             "description": "StyleCI Fixer Is A Code Style Report Builder",
             "keywords": [
-                "Graham Campbell",
-                "GrahamCampbell",
+                "Alt Three",
                 "StyleCI",
                 "cs",
-                "fixer",
-                "report"
+                "fixer"
             ],
-            "time": "2015-06-27 16:13:52"
+            "time": "2015-06-30 17:25:22"
         },
         {
             "name": "styleci/git",
-            "version": "v0.2.0-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "6a21cb6f8c26a1fac4f22e6b4b6b309f809c5694"
+                "reference": "79a393f9dfdeb52c39c58b0af88e1e9b7c9bc9fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/6a21cb6f8c26a1fac4f22e6b4b6b309f809c5694",
-                "reference": "6a21cb6f8c26a1fac4f22e6b4b6b309f809c5694",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/79a393f9dfdeb52c39c58b0af88e1e9b7c9bc9fc",
+                "reference": "79a393f9dfdeb52c39c58b0af88e1e9b7c9bc9fc",
                 "shasum": ""
             },
             "require": {
@@ -2456,7 +2543,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.2-dev"
+                    "dev-master": "0.3-dev"
                 }
             },
             "autoload": {
@@ -2484,14 +2571,12 @@
             ],
             "description": "StyleCI Git Is A Git Repository Manager",
             "keywords": [
-                "Graham Campbell",
-                "GrahamCampbell",
+                "Alt Three",
+                "GtiHub",
                 "StyleCI",
-                "git",
-                "repo",
-                "repository"
+                "git"
             ],
-            "time": "2015-06-27 16:09:09"
+            "time": "2015-06-30 16:23:21"
         },
         {
             "name": "styleci/login",
@@ -2556,6 +2641,70 @@
                 "login"
             ],
             "time": "2015-06-27 16:11:50"
+        },
+        {
+            "name": "styleci/storage",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StyleCI/Storage.git",
+                "reference": "c244d0812a52976533d6c2aafc09dfe2546e5997"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/c244d0812a52976533d6c2aafc09dfe2546e5997",
+                "reference": "c244d0812a52976533d6c2aafc09dfe2546e5997",
+                "shasum": ""
+            },
+            "require": {
+                "graham-campbell/flysystem": "~3.0",
+                "graham-campbell/manager": "~2.2",
+                "illuminate/contracts": "5.1.*",
+                "illuminate/support": "5.1.*",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~3.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "StyleCI\\Storage\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Brooks",
+                    "email": "james@alt-three.com"
+                },
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@alt-three.com"
+                }
+            ],
+            "description": "StyleCI Storage Is A Cached Secure Storage Provider",
+            "keywords": [
+                "Alt Three",
+                "Flysystem",
+                "StyleCI",
+                "storage"
+            ],
+            "time": "2015-06-29 18:47:21"
         },
         {
             "name": "swiftmailer/swiftmailer",

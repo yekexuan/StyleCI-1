@@ -13,33 +13,33 @@ namespace StyleCI\StyleCI\Commands;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\SerializesModels;
-use StyleCI\StyleCI\Models\Commit;
+use StyleCI\StyleCI\Models\Analysis;
 
 /**
- * This is the cleanup commit command.
+ * This is the cleanup analysis command.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class CleanupCommitCommand implements ShouldQueue
+class CleanupAnalysisCommand implements ShouldQueue
 {
     use SerializesModels;
 
     /**
-     * The commit to cleanup.
+     * The analysis to cleanup.
      *
-     * @var \StyleCI\StyleCI\Models\Commit
+     * @var \StyleCI\StyleCI\Models\Analysis
      */
-    public $commit;
+    public $analysis;
 
     /**
-     * Create a cleanup commit command instance.
+     * Create a new cleanup analysis command instance.
      *
-     * @param \StyleCI\StyleCI\Models\Commit $commit
+     * @param \StyleCI\StyleCI\Models\Analysis $analysis
      *
      * @return void
      */
-    public function __construct(Commit $commit)
+    public function __construct(Analysis $analysis)
     {
-        $this->commit = $commit;
+        $this->analysis = $analysis;
     }
 }

@@ -38,23 +38,13 @@ class Repo extends Model implements HasPresenter
     protected $guarded = ['_token', '_method'];
 
     /**
-     * Get the commits relation.
+     * Get the analyses relation.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
-    public function commits()
+    public function analyses()
     {
-        return $this->hasMany(Commit::class);
-    }
-
-    /**
-     * Get the forks relation.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     */
-    public function forks()
-    {
-        return $this->hasMany(Fork::class);
+        return $this->hasMany(Analysis::class);
     }
 
     /**
@@ -68,13 +58,13 @@ class Repo extends Model implements HasPresenter
     }
 
     /**
-     * Get the last commit.
+     * Get the last analysis of the default branch.
      *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function lastCommit()
+    public function last_analysis()
     {
-        return $this->hasOne(Commit::class)->where('ref', "refs/heads/{$this->default_branch}")->latest();
+        return $this->hasOne(Analysis::class)->where('branch', $this->default_branch)->latest();
     }
 
     /**

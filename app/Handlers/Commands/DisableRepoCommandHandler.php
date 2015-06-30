@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Handlers\Commands;
 
+use StyleCI\Storage\Stores\StoreInterface;
 use StyleCI\StyleCI\Commands\DisableRepoCommand;
 use StyleCI\StyleCI\Events\RepoWasDisabledEvent;
 
@@ -22,6 +23,25 @@ use StyleCI\StyleCI\Events\RepoWasDisabledEvent;
 class DisableRepoCommandHandler
 {
     /**
+     * The diff storage instance.
+     *
+     * @var \StyleCI\Storage\Stores\StoreInterface
+     */
+    protected $storage;
+
+    /**
+     * Create a new disable repo command handler instance.
+     *
+     * @param \StyleCI\Storage\Stores\StoreInterface $storage
+     *
+     * @return void
+     */
+    public function __construct(StoreInterface $storage)
+    {
+        $this->storage = $storage;
+    }
+
+    /**
      * Handle the disable repo command.
      *
      * @param \StyleCI\StyleCI\Commands\DisableRepoCommand $command
@@ -32,12 +52,9 @@ class DisableRepoCommandHandler
     {
         $repo = $command->repo;
 
-        foreach ($repo->commits as $commit) {
-            $commit->delete();
-        }
-
-        foreach ($repo->forks as $fork) {
-            $fork->delete();
+        foreach ($repo->analyses as $analysis) {
+            $this->storage->delete($analysis->id);
+            $analysis->delete();
         }
 
         event(new RepoWasDisabledEvent($repo));

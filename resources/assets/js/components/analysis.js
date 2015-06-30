@@ -1,4 +1,4 @@
-var Commit = Vue.extend({
+var Analysis = Vue.extend({
     created: function() {
         SyntaxHighlighter.defaults.toolbar = false;
         SyntaxHighlighter.defaults.gutter = false;
@@ -8,11 +8,11 @@ var Commit = Vue.extend({
         this.subscribe();
     },
     methods: {
-        CommitStatusChangeEventHandler: function(data) {
-            var $commit = $('#js-commit-' + data.event.shorthandId);
+        AnalysisStatusChangeEventHandler: function(data) {
+            var $analysis = $('#js-analysis-' + data.event.shorthandId);
 
-            // The commit is the one we are looking at.
-            if ($commit.length) {
+            // The analysis is the one we are looking at.
+            if ($analysis.length) {
                 var $status = $('p.js-status');
 
                 $status.html('<i class="' + data.event.icon + '"></i> ' + data.event.description);
@@ -29,8 +29,8 @@ var Commit = Vue.extend({
         subscribe: function() {
             var self = this;
             StyleCI.RealTime.getChannel('ch-' + $('.js-channel').data('channel')).bind(
-                'CommitStatusUpdatedEvent',
-                self.CommitStatusChangeEventHandler
+                'AnalysisStatusUpdatedEvent',
+                self.AnalysisStatusChangeEventHandler
             );
         }
     },
@@ -43,4 +43,4 @@ var Commit = Vue.extend({
      }
 });
 
-Vue.component('sc-commit', Commit);
+Vue.component('sc-analysis', Analysis);

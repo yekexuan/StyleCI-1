@@ -24,16 +24,14 @@ use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 class RepoPresenter extends BasePresenter implements Arrayable
 {
     /**
-     * Get the last commit.
+     * Get the last analysis.
      *
      * @return \StyleCI\StyleCI\Presenters\CommitPresenter|null
      */
-    public function lastCommit()
+    public function last_analysis()
     {
-        $commit = $this->wrappedObject->lastCommit;
-
-        if ($commit) {
-            return AutoPresenter::decorate($commit);
+        if ($analysis = $this->wrappedObject->last_analysis) {
+            return AutoPresenter::decorate($analysis);
         }
     }
 
@@ -45,10 +43,10 @@ class RepoPresenter extends BasePresenter implements Arrayable
     public function toArray()
     {
         return [
-            'id'          => $this->wrappedObject->id,
-            'name'        => $this->wrappedObject->name,
-            'last_commit' => $this->lastCommit(),
-            'link'        => route('repo_path', $this->wrappedObject->id),
+            'id'            => $this->wrappedObject->id,
+            'name'          => $this->wrappedObject->name,
+            'last_analysis' => $this->last_analysis(),
+            'link'          => route('repo_path', $this->wrappedObject->id),
         ];
     }
 }

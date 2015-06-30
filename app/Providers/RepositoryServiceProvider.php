@@ -12,8 +12,6 @@
 namespace StyleCI\StyleCI\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use StyleCI\StyleCI\Repositories\CommitRepository;
-use StyleCI\StyleCI\Repositories\ForkRepository;
 use StyleCI\StyleCI\Repositories\RepoRepository;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
@@ -31,40 +29,8 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerCommitRepository();
-        $this->registerForkRepository();
         $this->registerRepoRepository();
         $this->registerUserRepository();
-    }
-
-    /**
-     * Register the commit repository.
-     *
-     * @return void
-     */
-    protected function registerCommitRepository()
-    {
-        $this->app->singleton('styleci.commitrepository', function ($app) {
-            $commits = $app['styleci.commits'];
-
-            return new CommitRepository($commits);
-        });
-
-        $this->app->alias('styleci.commitrepository', CommitRepository::class);
-    }
-
-    /**
-     * Register the fork repository.
-     *
-     * @return void
-     */
-    protected function registerForkRepository()
-    {
-        $this->app->singleton('styleci.forkrepository', function () {
-            return new ForkRepository();
-        });
-
-        $this->app->alias('styleci.forkrepository', ForkRepository::class);
     }
 
     /**

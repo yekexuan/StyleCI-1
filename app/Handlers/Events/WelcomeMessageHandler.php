@@ -13,7 +13,7 @@ namespace StyleCI\StyleCI\Handlers\Events;
 
 use Illuminate\Contracts\Mail\MailQueue;
 use Illuminate\Mail\Message;
-use McCool\LaravelAutoPresenter\AutoPresenter;
+use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Events\UserHasSignedUpEvent;
 
 /**
@@ -31,24 +31,15 @@ class WelcomeMessageHandler
     protected $mailer;
 
     /**
-     * The auto presenter instance.
-     *
-     * @var \McCool\LaravelAutoPresenter\AutoPresenter
-     */
-    protected $presenter;
-
-    /**
      * Create a new welcome message handler instance.
      *
-     * @param \Illuminate\Contracts\Mail\MailQueue       $mailer
-     * @param \McCool\LaravelAutoPresenter\AutoPresenter $presenter
+     * @param \Illuminate\Contracts\Mail\MailQueue $mailer
      *
      * @return void
      */
-    public function __construct(MailQueue $mailer, AutoPresenter $presenter)
+    public function __construct(MailQueue $mailer)
     {
         $this->mailer = $mailer;
-        $this->presenter = $presenter;
     }
 
     /**
@@ -64,7 +55,7 @@ class WelcomeMessageHandler
 
         $mail = [
             'email'   => $user->email,
-            'name'    => $this->presenter->decorate($user)->firstName,
+            'name'    => AutoPresenter::decorate($user)->firstName,
             'subject' => '[StyleCI] Welcome To StyleCI',
         ];
 

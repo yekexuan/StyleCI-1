@@ -17,11 +17,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\View;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
-use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
-use StyleCI\StyleCI\GitHub\Branches;
+use StyleCI\StyleCI\Commands\AnalyseBranchCommand;
 use StyleCI\StyleCI\GitHub\Repos;
 use StyleCI\StyleCI\Models\Repo;
-use StyleCI\StyleCI\Repositories\CommitRepository;
 use StyleCI\StyleCI\Repositories\RepoRepository;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
@@ -76,10 +74,10 @@ class RepoController extends AbstractController
      */
     public function handleShow(Repo $repo, Request $request, Guard $auth, Repos $repos)
     {
-        $commits = $repo->commits()->where('ref', "refs/heads/{$repo->default_branch}")->orderBy('created_at', 'desc')->paginate(50);
+        $analyses = $repo->analyses()->where('branch', $repo->default_branch)->orderBy('created_at', 'desc')->paginate(50);
 
         if ($request->ajax()) {
-            return new JsonResponse(['data' => AutoPresenter::decorate($commits->getCollection())->toArray()]);
+            return new JsonResponse(['data' => AutoPresenter::decorate($analyses->getCollection())->toArray()]);
         }
 
         if ($auth->user()) {
@@ -88,40 +86,28 @@ class RepoController extends AbstractController
             $canAnalyse = false;
         }
 
-        return View::make('repo', compact('repo', 'commits', 'canAnalyse'));
+        return View::make('repo', compact('repo', 'analyses', 'canAnalyse'));
     }
 
     /**
      * Handles the request to analyse a repo.
      *
-     * @param \Illuminate\Http\Request                       $request
-     * @param \StyleCI\StyleCI\Models\Repo                   $repo
-     * @param \StyleCI\StyleCI\GitHub\Branches               $branches
-     * @param \StyleCI\StyleCI\Repositories\CommitRepository $commitRepository
-     * @param \Illuminate\Contracts\Auth\Guard               $auth
-     * @param \StyleCI\StyleCI\GitHub\Repos                  $repos
+     * @param \Illuminate\Http\Request         $request
+     * @param \StyleCI\StyleCI\Models\Repo     $repo
+     * @param \Illuminate\Contracts\Auth\Guard $auth
+     * @param \StyleCI\StyleCI\GitHub\Repos    $repos
      *
      * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleAnalyse(Request $request, Repo $repo, Branches $branches, CommitRepository $commitRepository, Guard $auth, Repos $repos)
+    public function handleAnalyse(Request $request, Repo $repo, Guard $auth, Repos $repos)
     {
         if (!array_get($repos->get($auth->user()), $repo->id)) {
             throw new HttpException(403);
         }
 
-        $branches = $branches->get($repo);
-
-        foreach ($branches as $branch) {
-            if ($branch['name'] !== $repo->default_branch) {
-                continue;
-            }
-
-            $commit = $commitRepository->findForAnalysis($branch['commit'], $repo->id, $branch['name']);
-            $this->dispatch(new AnalyseCommitCommand($commit));
-            break;
-        }
+        $this->dispatch(new AnalyseBranchCommand($repo, $repo->default_branch));
 
         if ($request->ajax()) {
             return new JsonResponse(['queued' => true]);

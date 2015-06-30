@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\GitHub;
 
-use StyleCI\StyleCI\Models\Commit;
+use StyleCI\StyleCI\Models\Repo;
 
 /**
  * This is the github commits class.
@@ -42,18 +42,17 @@ class Commits
     /**
      * Get information about a specific commit from github.
      *
-     * @param \StyleCI\StyleCI\Models\Commit $commit
+     * @param \StyleCI\StyleCI\Models\Repo $repo
+     * @param string                       $commit
      *
      * @return array
      */
-    public function get(Commit $commit)
+    public function get(Repo $repo, $commit)
     {
-        $repo = $commit->repo;
-
         $args = explode('/', $repo->name);
 
         $client = $this->factory->make($repo, ['version' => 'quicksilver-preview']);
 
-        return $client->repos()->commits()->show($args[0], $args[1], $commit->id);
+        return $client->repos()->commits()->show($args[0], $args[1], $commit);
     }
 }

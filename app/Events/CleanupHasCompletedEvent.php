@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\Events;
 
-use StyleCI\StyleCI\Models\Commit;
+use StyleCI\StyleCI\Models\Analysis;
 
 /**
  * This is the cleanup has completed event class.
@@ -21,21 +21,21 @@ use StyleCI\StyleCI\Models\Commit;
 class CleanupHasCompletedEvent
 {
     /**
-     * The commit that was cleanedup.
+     * The analysis object.
      *
-     * @var \StyleCI\StyleCI\Models\Commit
+     * @var \StyleCI\StyleCI\Models\Analysis
      */
-    public $commit;
+    public $analysis;
 
     /**
      * Create a new cleanup has completed event instance.
      *
-     * @param \StyleCI\StyleCI\Models\Commit $commit
+     * @param \StyleCI\StyleCI\Models\Analysis $analysis
      *
      * @return void
      */
-    public function __construct(Commit $commit)
+    public function __construct(Analysis $analysis)
     {
-        $this->commit = $commit;
+        $this->analysis = $analysis;
     }
 }
