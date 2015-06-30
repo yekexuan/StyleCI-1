@@ -53,7 +53,9 @@ class DisableRepoCommandHandler
         $repo = $command->repo;
 
         foreach ($repo->analyses as $analysis) {
-            $this->storage->delete($analysis->id);
+            if ($analysis->status > 1) {
+                $this->storage->delete($analysis->id);
+            }
             $analysis->delete();
         }
 
