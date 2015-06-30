@@ -60,9 +60,9 @@ class RealTimeStatusHandler
      */
     public function handle($event)
     {
-        $analysis = AutoPresenter::decorate($event->analysis);
+        $repo = $event->analysis->repo;
 
-        $repo = $analysis->repo;
+        $analysis = AutoPresenter::decorate($event->analysis);
 
         if ($analysis->branch !== $repo->default_branch) {
             return;

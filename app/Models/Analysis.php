@@ -11,6 +11,8 @@
 
 namespace StyleCI\StyleCI\Models;
 
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use McCool\LaravelAutoPresenter\HasPresenter;
 use StyleCI\StyleCI\Presenters\AnalysisPresenter;
@@ -42,9 +44,11 @@ class Analysis extends Model implements HasPresenter
     /**
      * Scope the query to only include analyses over 2 hours old.
      *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopeOld()
+    public function scopeOld(Builder $query)
     {
         return $query->where('updated_at', '<=', Carbon::now()->subHours(2));
     }
@@ -52,9 +56,11 @@ class Analysis extends Model implements HasPresenter
     /**
      * Scope the query to only include pending analyses.
      *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     *
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopePending()
+    public function scopePending(Builder $query)
     {
         return $query->where('status', 0);
     }
