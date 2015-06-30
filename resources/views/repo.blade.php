@@ -12,13 +12,13 @@
 @stop
 
 @section('content')
-<sc-repo id="{{ $repo->id }}" inline-template>
+<sc-repo inline-template>
     @if($canAnalyse)
     <button type="button" v-on="click: analyseRepo('{{ route('repo_analyse_path', $repo->id) }}', $event)" class="btn btn-lg btn-danger btn-circle btn-float pull-right" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>" data-toggle="tooltip" data-placement="left" title="Analyse Now">
         <i class="fa fa-undo"></i>
     </button>
     @endif
-    <div class="repo-table">
+    <div class="repo-table" id="repo" data-id="{{ $repo->id }}">
         <div v-if="commits.length" class="repo-table-headers row hidden-xs">
             <div class="col-sm-7">
                 <strong>Commit</strong>
