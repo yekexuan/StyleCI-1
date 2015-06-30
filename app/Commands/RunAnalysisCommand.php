@@ -41,6 +41,8 @@ class RunAnalysisCommand implements ShouldQueue
      */
     public function __construct(Analysis $analysis)
     {
+        $this->analysis = $analysis;
+
         event(new AnalysisWasQueuedEvent($analysis));
     }
 }

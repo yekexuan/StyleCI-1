@@ -104,7 +104,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
             return 'https://github.com/'.$this->wrappedObject->repo->name.'/pull/'.$this->wrappedObject->pr;
         }
 
-        return 'https://github.com/'.$this->wrappedObject->repo->name.'/commits/'.$this->wrappedObject->commit;
+        return 'https://github.com/'.$this->wrappedObject->repo->name.'/commit/'.$this->wrappedObject->commit;
     }
 
     /**
