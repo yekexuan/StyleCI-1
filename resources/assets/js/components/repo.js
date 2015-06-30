@@ -22,9 +22,11 @@ var RepoList = Vue.extend({
                     self.isLoading = false;
                 });
         },
-        analyseRepo: function(url, e) {
+        analyseRepo: function(e) {
+            e.preventDefault();
             var self = this;
             var btn = $(e.target);
+            var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '/analyse';
 
             btn.button('loading');
 
