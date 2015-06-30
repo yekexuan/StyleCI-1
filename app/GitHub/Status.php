@@ -11,6 +11,8 @@
 
 namespace StyleCI\StyleCI\GitHub;
 
+use StyleCI\StyleCI\Models\Analysis;
+
 /**
  * This is the github status class.
  *
