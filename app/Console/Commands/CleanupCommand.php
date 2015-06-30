@@ -13,7 +13,8 @@ namespace StyleCI\StyleCI\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use StyleCI\StyleCI\Commands\CleanupCommitCommand;
+use StyleCI\StyleCI\Commands\CleanupAnalysisCommand;
+use StyleCI\StyleCI\Models\Analysis;
 
 /**
  * This is the cleanup command class.
@@ -45,9 +46,9 @@ class CleanupCommand extends Command
      */
     public function handle()
     {
-        foreach ($this->laravel['styleci.commitrepository']->findAllOldPending() as $commit) {
-            $this->info("Cleaning up commit {$commit->id}.");
-            $this->dispatch(new CleanupCommitCommand($commit));
+        foreach (Analysis::old()->pending()->orderBy('created_at', 'desc')->get() as $analysis) {
+            $this->info("Cleaning up analysis {$analysis->id}.");
+            $this->dispatch(new CleanupAnalysisCommand($analysis));
         }
     }
 }

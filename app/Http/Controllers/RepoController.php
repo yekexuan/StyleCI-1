@@ -13,15 +13,13 @@ namespace StyleCI\StyleCI\Http\Controllers;
 
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\View;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
-use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
-use StyleCI\StyleCI\GitHub\Branches;
+use StyleCI\StyleCI\Commands\AnalyseBranchCommand;
 use StyleCI\StyleCI\GitHub\Repos;
 use StyleCI\StyleCI\Models\Repo;
-use StyleCI\StyleCI\Repositories\CommitRepository;
 use StyleCI\StyleCI\Repositories\RepoRepository;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
@@ -48,16 +46,15 @@ class RepoController extends AbstractController
      * Handles the request to list the repos.
      *
      * @param \Illuminate\Contracts\Auth\Guard             $auth
-     * @param \Illuminate\Http\Request                     $request
      * @param \StyleCI\StyleCI\Repositories\RepoRepository $repoRepository
      *
      * @return \Illuminate\View\View
      */
-    public function handleList(Guard $auth, Request $request, RepoRepository $repoRepository)
+    public function handleList(Guard $auth, RepoRepository $repoRepository)
     {
         $repos = $repoRepository->allByUser($auth->user());
 
-        if ($request->ajax()) {
+        if (Request::ajax()) {
             return new JsonResponse(['data' => AutoPresenter::decorate($repos)->toArray()]);
         }
 
@@ -68,18 +65,17 @@ class RepoController extends AbstractController
      * Handles the request to show a repo.
      *
      * @param \StyleCI\StyleCI\Models\Repo     $repo
-     * @param \Illuminate\Http\Request         $request
      * @param \Illuminate\Contracts\Auth\Guard $auth
      * @param \StyleCI\StyleCI\GitHub\Repos    $repos
      *
      * @return \Illuminate\View\View
      */
-    public function handleShow(Repo $repo, Request $request, Guard $auth, Repos $repos)
+    public function handleShow(Repo $repo, Guard $auth, Repos $repos)
     {
-        $commits = $repo->commits()->where('ref', "refs/heads/{$repo->default_branch}")->orderBy('created_at', 'desc')->paginate(50);
+        $analyses = $repo->analyses()->where('branch', $repo->default_branch)->orderBy('created_at', 'desc')->paginate(50);
 
-        if ($request->ajax()) {
-            return new JsonResponse(['data' => AutoPresenter::decorate($commits->getCollection())->toArray()]);
+        if (Request::ajax()) {
+            return new JsonResponse(['data' => AutoPresenter::decorate($analyses->getCollection())->toArray()]);
         }
 
         if ($auth->user()) {
@@ -88,45 +84,32 @@ class RepoController extends AbstractController
             $canAnalyse = false;
         }
 
-        return View::make('repo', compact('repo', 'commits', 'canAnalyse'));
+        return View::make('repo', compact('repo', 'analyses', 'canAnalyse'));
     }
 
     /**
      * Handles the request to analyse a repo.
      *
-     * @param \Illuminate\Http\Request                       $request
-     * @param \StyleCI\StyleCI\Models\Repo                   $repo
-     * @param \StyleCI\StyleCI\GitHub\Branches               $branches
-     * @param \StyleCI\StyleCI\Repositories\CommitRepository $commitRepository
-     * @param \Illuminate\Contracts\Auth\Guard               $auth
-     * @param \StyleCI\StyleCI\GitHub\Repos                  $repos
+     * @param int                              $id
+     * @param \Illuminate\Contracts\Auth\Guard $auth
+     * @param \StyleCI\StyleCI\GitHub\Repos    $repos
      *
      * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleAnalyse(Request $request, Repo $repo, Branches $branches, CommitRepository $commitRepository, Guard $auth, Repos $repos)
+    public function handleAnalyse($id, Guard $auth, Repos $repos)
     {
-        if (!array_get($repos->get($auth->user()), $repo->id)) {
+        if (!array_get($repos->get($auth->user()), $id)) {
             throw new HttpException(403);
         }
 
-        $branches = $branches->get($repo);
+        $this->dispatch(new AnalyseBranchCommand($id, Request::get('branch')));
 
-        foreach ($branches as $branch) {
-            if ($branch['name'] !== $repo->default_branch) {
-                continue;
-            }
-
-            $commit = $commitRepository->findForAnalysis($branch['commit'], $repo->id, $branch['name']);
-            $this->dispatch(new AnalyseCommitCommand($commit));
-            break;
-        }
-
-        if ($request->ajax()) {
+        if (Request::ajax()) {
             return new JsonResponse(['queued' => true]);
         }
 
-        return Redirect::route('repo_path', $repo->id);
+        return Redirect::route('repo_path', $id);
     }
 }

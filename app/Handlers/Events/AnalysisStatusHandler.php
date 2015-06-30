@@ -14,11 +14,11 @@ namespace StyleCI\StyleCI\Handlers\Events;
 use StyleCI\StyleCI\GitHub\Status;
 
 /**
- * This is the commit status handler class.
+ * This is the analysis status handler class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class CommitStatusHandler
+class AnalysisStatusHandler
 {
     /**
      * The status instance.
@@ -28,7 +28,7 @@ class CommitStatusHandler
     protected $status;
 
     /**
-     * Create a new commit status handler instance.
+     * Create a new analysis status handler instance.
      *
      * @param \StyleCI\StyleCI\GitHub\Status $status
      *
@@ -48,6 +48,6 @@ class CommitStatusHandler
      */
     public function handle($event)
     {
-        $this->status->push($event->commit);
+        $this->status->push($event->analysis);
     }
 }

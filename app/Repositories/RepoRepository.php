@@ -42,16 +42,6 @@ class RepoRepository
     }
 
     /**
-     * Find all repos.
-     *
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
-    public function all()
-    {
-        return Repo::orderBy('name', 'asc')->get();
-    }
-
-    /**
      * Find all repos a user can view.
      *
      * @param \StyleCI\StyleCI\Models\User $user
@@ -62,29 +52,5 @@ class RepoRepository
     public function allByUser(User $user, $admin = false)
     {
         return Repo::whereIn('id', array_keys($this->repos->get($user, $admin)))->orderBy('name', 'asc')->get();
-    }
-
-    /**
-     * Find a repo by its id.
-     *
-     * @param string $id
-     *
-     * @return \StyleCI\StyleCI\Models\Repo|null
-     */
-    public function find($id)
-    {
-        return Repo::find($id);
-    }
-
-    /**
-     * Find a repo by its name.
-     *
-     * @param string $name
-     *
-     * @return \StyleCI\StyleCI\Models\Repo|null
-     */
-    public function findByName($name)
-    {
-        return Repo::where('name', $name)->first();
     }
 }

@@ -13,18 +13,17 @@ namespace StyleCI\StyleCI\Presenters;
 
 use Illuminate\Contracts\Support\Arrayable;
 use McCool\LaravelAutoPresenter\BasePresenter;
-use StyleCI\StyleCI\Commit\Diff;
 
 /**
- * This is the commit presenter class.
+ * This is the analysis presenter class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
  */
-class CommitPresenter extends BasePresenter implements Arrayable
+class AnalysisPresenter extends BasePresenter implements Arrayable
 {
     /**
-     * Get the commit status summary.
+     * Get the analysis status summary.
      *
      * @return string
      */
@@ -45,7 +44,7 @@ class CommitPresenter extends BasePresenter implements Arrayable
     }
 
     /**
-     * Get the commit status icon.
+     * Get the analysis status icon.
      *
      * @return string
      */
@@ -63,7 +62,7 @@ class CommitPresenter extends BasePresenter implements Arrayable
     }
 
     /**
-     * Get the commit status color.
+     * Get the analysis status color.
      *
      * @return string
      */
@@ -81,31 +80,49 @@ class CommitPresenter extends BasePresenter implements Arrayable
     }
 
     /**
-     * Get the commit's repo shorthand id.
+     * Get the github id.
      *
      * @return string
      */
-    public function shorthandId()
+    public function github_id()
     {
-        return substr($this->wrappedObject->id, 0, 6);
+        if ($this->pr) {
+            return '#'.$this->wrappedObject->pr;
+        }
+
+        return substr($this->wrappedObject->commit, 0, 6);
     }
 
     /**
-     * Get the commit's time ago.
+     * Get the github link.
      *
      * @return string
      */
-    public function timeAgo()
+    public function github_link()
+    {
+        if ($this->pr) {
+            return 'https://github.com/'.$this->wrappedObject->repo->name.'/pull/'.$this->wrappedObject->pr;
+        }
+
+        return 'https://github.com/'.$this->wrappedObject->repo->name.'/commits/'.$this->wrappedObject->commit;
+    }
+
+    /**
+     * Get the analysis's time ago.
+     *
+     * @return string
+     */
+    public function time_ago()
     {
         return $this->wrappedObject->created_at->diffForHumans();
     }
 
     /**
-     * Get the commit's created time ISO.
+     * Get the analysis's created time ISO.
      *
      * @return string
      */
-    public function createdAtToISO()
+    public function created_at_iso()
     {
         return $this->wrappedObject->created_at->toIso8601String();
     }
@@ -113,7 +130,7 @@ class CommitPresenter extends BasePresenter implements Arrayable
     /**
      * Get the diff splited to files.
      *
-     * @return \StyleCI\StyleCI\Commit\Diff
+     * @return \StyleCI\StyleCI\Presenters\Diff
      */
     public function diff()
     {
@@ -121,7 +138,7 @@ class CommitPresenter extends BasePresenter implements Arrayable
     }
 
     /**
-     * Get the commit status description.
+     * Get the analysis status description.
      *
      * @return string
      */
@@ -131,7 +148,7 @@ class CommitPresenter extends BasePresenter implements Arrayable
     }
 
     /**
-     * Convert presented commit to an array.
+     * Convert presented analysis to an array.
      *
      * @return array
      */
@@ -139,6 +156,7 @@ class CommitPresenter extends BasePresenter implements Arrayable
     {
         return [
             'id'             => $this->wrappedObject->id,
+            'commit'         => $this->wrappedObject->commit,
             'repo_id'        => $this->wrappedObject->repo_id,
             'repo_name'      => $this->wrappedObject->repo->name,
             'message'        => $this->wrappedObject->message,
@@ -148,10 +166,11 @@ class CommitPresenter extends BasePresenter implements Arrayable
             'color'          => $this->color(),
             'summary'        => $this->summary(),
             'icon'           => $this->icon(),
-            'timeAgo'        => $this->timeAgo(),
-            'shorthandId'    => $this->shorthandId(),
-            'createdAtToISO' => $this->createdAtToISO(),
-            'link'           => route('commit_path', $this->wrappedObject->id),
+            'time_ago'       => $this->time_ago(),
+            'github_id'      => $this->github_id(),
+            'github_link'    => $this->github_link(),
+            'created_at_iso' => $this->created_at_iso(),
+            'link'           => route('analysis_path', $this->wrappedObject->id),
         ];
     }
 }

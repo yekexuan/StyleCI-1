@@ -14,7 +14,7 @@ namespace StyleCI\StyleCI\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
-use StyleCI\StyleCI\Models\Commit;
+use StyleCI\StyleCI\Models\Analysis;
 use StyleCI\StyleCI\Models\Repo;
 
 /**
@@ -34,35 +34,35 @@ class ShieldController extends AbstractController
      */
     public function handle(Repo $repo, Request $request)
     {
-        $commit = $repo->commits()->where('ref', "refs/heads/{$repo->default_branch}")->orderBy('created_at', 'desc')->first();
+        $analysis = $repo->analyses()->where('branch', $repo->default_branch)->orderBy('created_at', 'desc')->first();
 
-        $shieldUrl = $this->generateShieldUrl($commit, $request->get('style', 'flat-square'));
+        $shieldUrl = $this->generateShieldUrl($analysis, $request->get('style', 'flat-square'));
 
         return Redirect::to($shieldUrl);
     }
 
     /**
-     * Generate a shields.io url for the commit status.
+     * Generate a shields.io url for the analysis status.
      *
-     * @param \StyleCI\StyleCI\Models\Commit|null $commit
-     * @param string                              $style
+     * @param \StyleCI\StyleCI\Models\Analysis|null $analysis
+     * @param string                                $style
      *
      * @return string
      */
-    protected function generateShieldUrl(Commit $commit = null, $style = 'flat-square')
+    protected function generateShieldUrl(Analysis $analysis = null, $style = 'flat-square')
     {
-        $colour = 'lightgrey';
+        $color = 'lightgrey';
         $status = 'unknown';
 
-        if ($commit) {
-            $status = strtolower(AutoPresenter::decorate($commit)->summary);
-            if ($commit->status === 1) {
-                $colour = 'brightgreen';
-            } elseif ($commit->status > 1) {
-                $colour = 'red';
+        if ($analysis) {
+            $status = strtolower(AutoPresenter::decorate($analysis)->summary);
+            if ($analysis->status === 1) {
+                $color = 'brightgreen';
+            } elseif ($analysis->status > 1) {
+                $color = 'red';
             }
         }
 
-        return vsprintf('https://img.shields.io/badge/%s-%s-%s.svg?style=%s', ['StyleCI', $status, $colour, $style]);
+        return vsprintf('https://img.shields.io/badge/%s-%s-%s.svg?style=%s', ['StyleCI', $status, $color, $style]);
     }
 }

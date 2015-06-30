@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\Handlers\Events;
 
-use McCool\LaravelAutoPresenter\AutoPresenter;
+use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Repositories\UserRepository;
 use Vinkla\Pusher\PusherManager;
 
@@ -38,26 +38,17 @@ class RealTimeStatusHandler
     protected $pusher;
 
     /**
-     * The auto presenter instance.
-     *
-     * @var \McCool\LaravelAutoPresenter\AutoPresenter
-     */
-    protected $presenter;
-
-    /**
      * Create a new analysis notifications handler instance.
      *
      * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
      * @param \Vinkla\Pusher\PusherManager                 $pusher
-     * @param \McCool\LaravelAutoPresenter\AutoPresenter   $presenter
      *
      * @return void
      */
-    public function __construct(UserRepository $userRepository, PusherManager $pusher, AutoPresenter $presenter)
+    public function __construct(UserRepository $userRepository, PusherManager $pusher)
     {
         $this->userRepository = $userRepository;
         $this->pusher = $pusher;
-        $this->presenter = $presenter;
     }
 
     /**
@@ -69,16 +60,18 @@ class RealTimeStatusHandler
      */
     public function handle($event)
     {
-        $commit = $this->presenter->decorate($event->commit);
+        $repo = $event->analysis->repo;
 
-        if ($commit->ref !== "refs/heads/{$commit->repo->default_branch}") {
+        $analysis = AutoPresenter::decorate($event->analysis);
+
+        if ($analysis->branch !== $repo->default_branch) {
             return;
         }
 
-        $this->pusher->trigger('ch-'.$commit->repo_id, 'CommitStatusUpdatedEvent', ['event' => $commit->toArray()]);
+        $this->pusher->trigger('ch-'.$analysis->repo_id, 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
 
-        foreach ($this->userRepository->collaborators($event->commit) as $user) {
-            $this->pusher->trigger('repos-'.$user->id, 'CommitStatusUpdatedEvent', ['event' => $commit->toArray()]);
+        foreach ($this->userRepository->collaborators($repo) as $user) {
+            $this->pusher->trigger('repos-'.$user->id, 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
         }
     }
 }

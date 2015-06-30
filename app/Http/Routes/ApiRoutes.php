@@ -40,6 +40,11 @@ class ApiRoutes
                 'uses' => 'RepoController@handleShow',
             ]);
 
+            $router->post('repos/{id}/analyse', [
+                'as'   => 'repo_analyse_path',
+                'uses' => 'RepoController@handleAnalyse',
+            ]);
+
             $router->get('account/repos', [
                 'as'   => 'account_repos_path',
                 'uses' => 'AccountController@handleListRepos',

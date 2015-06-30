@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\GitHub;
 
-use StyleCI\StyleCI\Models\Commit;
+use StyleCI\StyleCI\Models\Analysis;
 
 /**
  * This is the github status class.
@@ -49,32 +49,32 @@ class Status
     }
 
     /**
-     * Push the status on the github commit.
+     * Push the status on the github analysis.
      *
-     * @param \StyleCI\StyleCI\Models\Commit $commit
+     * @param \StyleCI\StyleCI\Models\Analysis $analysis
      *
      * @return void
      */
-    public function push(Commit $commit)
+    public function push(Analysis $analysis)
     {
-        $repo = $commit->repo;
+        $repo = $analysis->repo;
 
         $args = explode('/', $repo->name);
 
         $data = [
-            'state'       => $this->getState($commit->status),
-            'description' => $commit->description(),
-            'target_url'  => $this->url.'/'.$commit->id,
+            'state'       => $this->getState($analysis->status),
+            'description' => $analysis->description(),
+            'target_url'  => $this->url.'/'.$analysis->commit,
             'context'     => 'StyleCI',
         ];
 
         $client = $this->factory->make($repo, ['version' => 'quicksilver-preview']);
 
-        $client->repos()->statuses()->create($args[0], $args[1], $commit->id, $data);
+        $client->repos()->statuses()->create($args[0], $args[1], $analysis->commit, $data);
     }
 
     /**
-     * Get the state of the commit by from its status integer.
+     * Get the state of the analysis by from its status integer.
      *
      * @param int $status
      *

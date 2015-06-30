@@ -13,7 +13,7 @@ namespace StyleCI\StyleCI\Handlers\Events;
 
 use Illuminate\Contracts\Mail\MailQueue;
 use Illuminate\Mail\Message;
-use McCool\LaravelAutoPresenter\AutoPresenter;
+use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Events\RepoWasDisabledEvent;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
@@ -39,26 +39,17 @@ class RepoToggledNotificationHandler
     protected $mailer;
 
     /**
-     * The auto presenter instance.
-     *
-     * @var \McCool\LaravelAutoPresenter\AutoPresenter
-     */
-    protected $presenter;
-
-    /**
      * Create a new repo notifications handler instance.
      *
      * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
      * @param \Illuminate\Contracts\Mail\MailQueue         $mailer
-     * @param \McCool\LaravelAutoPresenter\AutoPresenter   $presenter
      *
      * @return void
      */
-    public function __construct(UserRepository $userRepository, MailQueue $mailer, AutoPresenter $presenter)
+    public function __construct(UserRepository $userRepository, MailQueue $mailer)
     {
         $this->userRepository = $userRepository;
         $this->mailer = $mailer;
-        $this->presenter = $presenter;
     }
 
     /**
@@ -83,8 +74,8 @@ class RepoToggledNotificationHandler
 
         foreach ($this->userRepository->collaborators($event->repo) as $user) {
             $mail['email'] = $user->email;
-            $mail['name'] = $this->presenter->decorate($user)->firstName;
-            $this->mailer->send(["emails.{$view}-html", "emails.{$view}-text"], $mail, function (Message $message) use ($mail) {
+            $mail['name'] = AutoPresenter::decorate($user)->firstName;
+            $this->mailer->queue(["emails.{$view}-html", "emails.{$view}-text"], $mail, function (Message $message) use ($mail) {
                 $message->to($mail['email'])->subject($mail['subject']);
             });
         }

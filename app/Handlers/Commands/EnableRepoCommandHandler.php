@@ -31,13 +31,7 @@ class EnableRepoCommandHandler
      */
     public function handle(EnableRepoCommand $command)
     {
-        $repo = new Repo();
-
-        $repo->id = $command->id;
-        $repo->name = $command->name;
-        $repo->user_id = $command->user->id;
-
-        $repo->save();
+        $repo = Repo::create(['id' => $command->id, 'name' => $command->name, 'user_id' => $command->user]);
 
         event(new RepoWasEnabledEvent($repo));
     }

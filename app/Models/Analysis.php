@@ -11,24 +11,19 @@
 
 namespace StyleCI\StyleCI\Models;
 
+use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use McCool\LaravelAutoPresenter\HasPresenter;
-use StyleCI\StyleCI\Presenters\CommitPresenter;
+use StyleCI\StyleCI\Presenters\AnalysisPresenter;
 
 /**
- * This is the commit model class.
+ * This is the analysis model class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class Commit extends Model implements HasPresenter
+class Analysis extends Model implements HasPresenter
 {
-    /**
-     * Indicates if the IDs are auto-incrementing.
-     *
-     * @var bool
-     */
-    public $incrementing = false;
-
     /**
      * A list of methods protected from mass assignment.
      *
@@ -44,9 +39,31 @@ class Commit extends Model implements HasPresenter
     protected $casts = [
         'status'        => 'int',
         'error_message' => 'string',
-        'time'          => 'float',
-        'memory'        => 'float',
     ];
+
+    /**
+     * Scope the query to only include analyses over 2 hours old.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeOld(Builder $query)
+    {
+        return $query->where('updated_at', '<=', Carbon::now()->subHours(2));
+    }
+
+    /**
+     * Scope the query to only include pending analyses.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopePending(Builder $query)
+    {
+        return $query->where('status', 0);
+    }
 
     /**
      * Get the repo relation.
@@ -59,27 +76,17 @@ class Commit extends Model implements HasPresenter
     }
 
     /**
-     * Get the fork relation.
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function fork()
-    {
-        return $this->belongsTo(Fork::class);
-    }
-
-    /**
      * Get the presenter class.
      *
      * @return string
      */
     public function getPresenterClass()
     {
-        return CommitPresenter::class;
+        return AnalysisPresenter::class;
     }
 
     /**
-     * Get the commit status description.
+     * Get the status description.
      *
      * @return string
      */
@@ -96,20 +103,6 @@ class Commit extends Model implements HasPresenter
                 return 'The StyleCI checks were misconfigured';
             default:
                 return 'The StyleCI checks are pending';
-        }
-    }
-
-    /**
-     * Get the commit's repo name.
-     *
-     * @return string
-     */
-    public function name()
-    {
-        if (empty($this->fork_id)) {
-            return $this->repo->name;
-        } else {
-            return $this->fork->name;
         }
     }
 }

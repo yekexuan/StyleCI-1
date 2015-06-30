@@ -37,20 +37,20 @@ class EnableRepoCommand
     /**
      * The associated user.
      *
-     * @var \StyleCI\StyleCI\Models\User
+     * @var int
      */
     public $user;
 
     /**
      * Create a new enable repo command instance.
      *
-     * @param int                          $id
-     * @param string                       $name
-     * @param \StyleCI\StyleCI\Models\User $user
+     * @param int    $id
+     * @param string $name
+     * @param int    $user
      *
      * @return void
      */
-    public function __construct($id, $name, User $user)
+    public function __construct($id, $name, $user)
     {
         $this->id = $id;
         $this->name = $name;

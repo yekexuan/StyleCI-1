@@ -11,10 +11,10 @@
 
 namespace StyleCI\StyleCI\Handlers\Events;
 
-use McCool\LaravelAutoPresenter\AutoPresenter;
+use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use Psr\Log\LoggerInterface;
 use StyleCI\StyleCI\Events\CleanupHasCompletedEvent;
-use StyleCI\StyleCI\Models\Commit;
+use StyleCI\StyleCI\Models\Analysis;
 
 /**
  * This is the analysis logging handler class.
@@ -31,24 +31,15 @@ class AnalysisLoggingHandler
     protected $logger;
 
     /**
-     * The auto presenter instance.
-     *
-     * @var \McCool\LaravelAutoPresenter\AutoPresenter
-     */
-    protected $presenter;
-
-    /**
      * Create a new analysis logging handler instance.
      *
-     * @param \Psr\Log\LoggerInterface                   $logger
-     * @param \McCool\LaravelAutoPresenter\AutoPresenter $presenter
+     * @param \Psr\Log\LoggerInterface $logger
      *
      * @return void
      */
-    public function __construct(LoggerInterface $logger, AutoPresenter $presenter)
+    public function __construct(LoggerInterface $logger)
     {
         $this->logger = $logger;
-        $this->presenter = $presenter;
     }
 
     /**
@@ -60,31 +51,41 @@ class AnalysisLoggingHandler
      */
     public function handle($event)
     {
-        $commit = $event->commit;
+        $analysis = $event->analysis;
 
         if (isset($event->exception)) {
             $this->logger->notice($event->exception);
         }
 
         if ($event instanceof CleanupHasCompletedEvent) {
-            $this->logger->error("Analysis of {$commit->id} has failed due to it timing out.", $this->getContext('Analysis timed out.', $commit));
-
-            return; // if we've cleaned up a commit, stop here
+            $this->logger->error("Analysis of {$analysis->commit} has failed due to it timing out.", $this->getContext('Analysis timed out.', $analysis));
+        } else {
+            $this->logState($analysis);
         }
+    }
 
-        switch ($commit->status) {
+    /**
+     * Log the state of the analysis.
+     *
+     * @param \StyleCI\StyleCI\Models\Analysis
+     *
+     * @return void
+     */
+    protected function logState(Analysis $analysis)
+    {
+        switch ($analysis->status) {
             case 0:
-                $this->logger->debug("Analysis of {$commit->id} has started.", $this->getContext('Analysis started.', $commit));
+                $this->logger->debug("Analysis of {$analysis->commit} has started.", $this->getContext('Analysis started.', $analysis));
                 break;
             case 1:
             case 2:
-                $this->logger->debug("Analysis of {$commit->id} has completed successfully.", $this->getContext('Analysis completed.', $commit));
+                $this->logger->debug("Analysis of {$analysis->commit} has completed successfully.", $this->getContext('Analysis completed.', $analysis));
                 break;
             case 3:
-                $this->logger->error("Analysis of {$commit->id} has failed due to an internal error.", $this->getContext('Analysis errored.', $commit));
+                $this->logger->error("Analysis of {$analysis->commit} has failed due to an internal error.", $this->getContext('Analysis errored.', $analysis));
                 break;
             case 4:
-                $this->logger->notice("Analysis of {$commit->id} has failed due to misconfiguration.", $this->getContext('Analysis misconfigured.', $commit));
+                $this->logger->notice("Analysis of {$analysis->commit} has failed due to misconfiguration.", $this->getContext('Analysis misconfigured.', $analysis));
                 break;
         }
     }
@@ -92,13 +93,13 @@ class AnalysisLoggingHandler
     /**
      * Get the context.
      *
-     * @param string                         $title
-     * @param \StyleCI\StyleCI\Models\Commit $commit
+     * @param string                           $title
+     * @param \StyleCI\StyleCI\Models\Analysis $analysis
      *
      * @return array
      */
-    protected function getContext($title, Commit $commit)
+    protected function getContext($title, Analysis $analysis)
     {
-        return ['title' => $title, 'commit' => $this->presenter->decorate($commit)->toArray()];
+        return ['title' => $title, 'analysis' => AutoPresenter::decorate($analysis)->toArray()];
     }
 }
