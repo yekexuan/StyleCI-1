@@ -65,13 +65,13 @@ class AnalyseBranchCommandHandler
      */
     public function handle(AnalyseBranchCommand $command)
     {
-        $repo = $command->repo;
+        $repo = Repo::findOrFail($command->repo);
         $branch = $command->branch;
-        $commit = $this->branches->getCommit(Repo::findOrFail($repo), $branch);
+        $commit = $this->branches->getCommit($repo, $branch);
         $message = substr($this->commits->get($repo, $commit)['commit']['message'], 0, 128);
 
         $analysis = Analysis::create([
-            'repo'    => $repo,
+            'repo_id'  => $command->repo,
             'branch'  => $branch,
             'commit'  => $commit,
             'message' => $message,

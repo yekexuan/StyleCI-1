@@ -35,7 +35,7 @@ class AnalyseCommitCommandHandler
     public function handle(AnalyseCommitCommand $command)
     {
         $analysis = Analysis::create([
-            'repo'    => $command->repo,
+            'repo_id' => $command->repo,
             'branch'  => $command->branch,
             'commit'  => $command->commit,
             'message' => $command->message,
