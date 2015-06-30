@@ -1,12 +1,13 @@
 var RepoList = Vue.extend({
     ready: function() {
+        this.repoId = $('#repo').data('id');
         this.getCommits();
         this.subscribe();
     },
     methods: {
         getCommits: function() {
             var self = this;
-            var url = StyleCI.globals.base_url + '/api/repos/' + this.$el.id;
+            var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId;
 
             self.isLoading = true;
 
@@ -52,7 +53,7 @@ var RepoList = Vue.extend({
         },
         subscribe: function() {
             var self = this;
-            StyleCI.RealTime.getChannel('ch-' + self.$el.id).bind(
+            StyleCI.RealTime.getChannel('ch-' + self.repoId).bind(
                 'CommitStatusUpdatedEvent',
                 self.CommitsStatusChangeEventHandler
             );
@@ -60,6 +61,7 @@ var RepoList = Vue.extend({
     },
     data: function() {
         return {
+            repoId: null,
             isLoading: false,
             search: '',
             commits: []
