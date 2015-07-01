@@ -55,7 +55,7 @@ class GoodbyeMessageHandler
 
         $mail = [
             'email'   => $user->email,
-            'name'    => AutoPresenter::decorate($user)->firstName,
+            'name'    => AutoPresenter::decorate($user)->first_name,
             'subject' => '[StyleCI] Your account has been removed from StyleCI',
         ];
 

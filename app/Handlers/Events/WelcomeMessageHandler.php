@@ -55,7 +55,7 @@ class WelcomeMessageHandler
 
         $mail = [
             'email'   => $user->email,
-            'name'    => AutoPresenter::decorate($user)->firstName,
+            'name'    => AutoPresenter::decorate($user)->first_name,
             'subject' => '[StyleCI] Welcome To StyleCI',
         ];
 
