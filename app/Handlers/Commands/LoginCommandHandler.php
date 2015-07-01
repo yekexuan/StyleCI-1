@@ -37,10 +37,10 @@ class LoginCommandHandler
         $user = User::find($command->id);
 
         $attributes = [
-            'name'     => $command->name,
-            'email'    => $command->email,
-            'username' => $command->username,
-            'token'    => $command->token,
+            'name'         => $command->name;
+            'email'        => $command->email;
+            'username'     => $command->username;
+            'access_token' => $command->token;
         ];
 
         if ($user) {

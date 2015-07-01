@@ -51,6 +51,6 @@ class RevokeTokenHandler
     {
         $user = $event->user;
 
-        $this->tokens->revoke($user->token);
+        $this->tokens->revoke($user->access_token);
     }
 }

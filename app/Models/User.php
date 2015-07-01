@@ -53,7 +53,7 @@ class User extends Model implements AuthenticatableContract, HasPresenter
      *
      * @var string[]
      */
-    protected $hidden = ['remember_token', 'token'];
+    protected $hidden = ['access_token', 'remember_token'];
 
     /**
      * The attributes that should be casted to native types.
