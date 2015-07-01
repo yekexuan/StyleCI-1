@@ -12,6 +12,7 @@
 namespace StyleCI\StyleCI\Exceptions;
 
 use GrahamCampbell\Exceptions\ExceptionHandler;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * This is the exception hander class.
@@ -26,6 +27,6 @@ class Handler extends ExceptionHandler
      * @var string[]
      */
     protected $dontReport = [
-        'Symfony\Component\HttpKernel\Exception\NotFoundHttpException',
+        NotFoundHttpException::class,
     ];
 }
