@@ -152,9 +152,8 @@ class GitHubServiceProvider extends ServiceProvider
     {
         $this->app->singleton('styleci.status', function ($app) {
             $factory = $app['styleci.clientfactory'];
-            $url = asset('commits');
 
-            return new Status($factory, $url);
+            return new Status($factory);
         });
 
         $this->app->alias('styleci.status', Status::class);

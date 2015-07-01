@@ -29,24 +29,15 @@ class Status
     protected $factory;
 
     /**
-     * The target url.
-     *
-     * @var string
-     */
-    protected $url;
-
-    /**
      * Create a new github status instance.
      *
      * @param \StyleCI\StyleCI\GitHub\ClientFactory $factory
-     * @param string                                $url
      *
      * @return void
      */
-    public function __construct(ClientFactory $factory, $url)
+    public function __construct(ClientFactory $factory)
     {
         $this->factory = $factory;
-        $this->url = $url;
     }
 
     /**
@@ -65,7 +56,7 @@ class Status
         $data = [
             'state'       => $this->getState($analysis->status),
             'description' => AutoPresenter::decorate($analysis)->description,
-            'target_url'  => $this->url.'/'.$analysis->commit,
+            'target_url'  => route('analysis_path', $analysis->id)
             'context'     => 'StyleCI',
         ];
 
