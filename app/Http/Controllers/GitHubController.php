@@ -145,7 +145,7 @@ class GitHubController extends AbstractController
 
         $hash = hash_hmac($algo, Request::getContent(), $token);
 
-        if (!Str::hashEquals($hash, $sig)) {
+        if (!Str::equals($hash, $sig)) {
             return new JsonResponse(['message' => 'StyleCI could not verify the validity of the request.'], 400, [], JSON_PRETTY_PRINT);
         }
     }
