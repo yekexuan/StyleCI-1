@@ -15,7 +15,6 @@ use StyleCI\StyleCI\Commands\LoginCommand;
 use StyleCI\StyleCI\Events\UserHasLoggedInEvent;
 use StyleCI\StyleCI\Events\UserHasSignedUpEvent;
 use StyleCI\StyleCI\Models\User;
-use StyleCI\StyleCI\Repositories\UserRepository;
 
 /**
  * This is the login command handler class.
