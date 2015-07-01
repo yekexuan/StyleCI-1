@@ -20,15 +20,15 @@ use StyleCI\StyleCI\Presenters\AnalysisPresenter;
 /**
  * This is the analysis model class.
  *
- * @property int                          $id
- * @property int                          $repo_id
- * @property \StyleCI\StyleCI\Models\Repo $repo
- * @property string|null                  $branch
- * @property int|null                     $pr
- * @property string                       $commit
- * @property string                       $message
- * @property string|null                  $error
- * @property int                          $status
+ * @property int         $id
+ * @property int         $repo_id
+ * @property Repo        $repo
+ * @property string|null $branch
+ * @property int|null    $pr
+ * @property string      $commit
+ * @property string      $message
+ * @property string|null $error
+ * @property int         $status
  *
  * @author Graham Campbell <graham@alt-three.com>
  */

@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use McCool\LaravelAutoPresenter\HasPresenter;
 use StyleCI\StyleCI\Presenters\RepoPresenter;
@@ -18,13 +19,13 @@ use StyleCI\StyleCI\Presenters\RepoPresenter;
 /**
  * This is the repo model class.
  *
- * @property int                                      $id
- * @property int                                      $user_id
- * @property \StyleCI\StyleCI\Models\User             $user
- * @property \Illuminate\Database\Eloquent\Collection $analyses
- * @property \StyleCI\StyleCI\Models\Analysis|null    $last_analysis
- * @property string                                   $name
- * @property string                                   $default_branch
+ * @property int           $id
+ * @property int           $user_id
+ * @property User          $user
+ * @property Collection    $analyses
+ * @property Analysis|null $last_analysis
+ * @property string        $name
+ * @property string        $default_branch
  *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>

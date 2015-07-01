@@ -13,6 +13,7 @@ namespace StyleCI\StyleCI\Models;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use McCool\LaravelAutoPresenter\HasPresenter;
 use StyleCI\StyleCI\Presenters\UserPresenter;
@@ -20,12 +21,12 @@ use StyleCI\StyleCI\Presenters\UserPresenter;
 /**
  * This is the user model class.
  *
- * @property int                                      $id
- * @property string                                   $name
- * @property string                                   $username
- * @property string                                   $email
- * @property string                                   $token
- * @property \Illuminate\Database\Eloquent\Collection $repos
+ * @property int        $id
+ * @property string     $name
+ * @property string     $username
+ * @property string     $email
+ * @property string     $token
+ * @property Collection $repos
  *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
