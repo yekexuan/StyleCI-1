@@ -46,7 +46,7 @@ class User extends Model implements AuthenticatableContract, HasPresenter
      *
      * @var string[]
      */
-    protected $hidden = ['access_token', 'remember_token'];
+    protected $hidden = ['remember_token', 'token'];
 
     /**
      * Get the repos relation.

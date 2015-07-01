@@ -32,7 +32,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('username')->unique();
             $table->string('email')->unique();
-            $table->string('access_token', 40)->unique();
+            $table->string('token', 40)->unique();
             $table->rememberToken();
             $table->timestamps();
         });
