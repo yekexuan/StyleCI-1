@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b1d5c8d745ae7c1c297068dd36fe75be",
+    "hash": "0dc918b0bbf75d332e41f082f2c30afc",
     "packages": [
         {
             "name": "alt-three/bugsnag",
@@ -1600,16 +1600,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.4",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "ef87627cc3a2ecb866214c5be593781016cd43b1"
+                "reference": "7acc4995c30fcc53389ef3e183e45c76d339e846"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ef87627cc3a2ecb866214c5be593781016cd43b1",
-                "reference": "ef87627cc3a2ecb866214c5be593781016cd43b1",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/7acc4995c30fcc53389ef3e183e45c76d339e846",
+                "reference": "7acc4995c30fcc53389ef3e183e45c76d339e846",
                 "shasum": ""
             },
             "require": {
@@ -1724,7 +1724,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-06-30 20:45:09"
+            "time": "2015-07-01 13:40:02"
         },
         {
             "name": "league/flysystem",
@@ -2519,12 +2519,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "79a393f9dfdeb52c39c58b0af88e1e9b7c9bc9fc"
+                "reference": "29240f4c5868c030e4d07b294888e1387c7fd666"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/79a393f9dfdeb52c39c58b0af88e1e9b7c9bc9fc",
-                "reference": "79a393f9dfdeb52c39c58b0af88e1e9b7c9bc9fc",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/29240f4c5868c030e4d07b294888e1387c7fd666",
+                "reference": "29240f4c5868c030e4d07b294888e1387c7fd666",
                 "shasum": ""
             },
             "require": {
@@ -2576,7 +2576,7 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-06-30 16:23:21"
+            "time": "2015-07-01 15:23:57"
         },
         {
             "name": "styleci/login",
