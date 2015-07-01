@@ -91,7 +91,7 @@ class Collaborators
     /**
      * Flush our cache of the repo's collaborators.
      *
-     * @param \StyleCI\StyleCI\Model\Repo $repo
+     * @param \StyleCI\StyleCI\Models\Repo $repo
      *
      * @return void
      */
