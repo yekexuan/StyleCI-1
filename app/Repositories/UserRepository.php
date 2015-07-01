@@ -11,8 +11,8 @@
 
 namespace StyleCI\StyleCI\Repositories;
 
-use Illuminate\Database\Eloquent\Model;
 use StyleCI\StyleCI\GitHub\Collaborators;
+use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Models\User;
 
 /**
@@ -42,14 +42,14 @@ class UserRepository
     }
 
     /**
-     * Find all users marked as collaborators to the provided model.
+     * Find all users marked as collaborators to the provided repo.
      *
-     * @param \Illuminate\Database\Eloquent\Model
+     * @param \StyleCI\StyleCI\Models\Repo $repo
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function collaborators(Model $model)
+    public function collaborators(Repo $repo)
     {
-        return User::whereIn('id', $this->collaborators->get($model))->get();
+        return User::whereIn('id', $this->collaborators->get($repo))->get();
     }
 }
