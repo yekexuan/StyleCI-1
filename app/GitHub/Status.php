@@ -56,7 +56,7 @@ class Status
         $data = [
             'state'       => $this->getState($analysis->status),
             'description' => AutoPresenter::decorate($analysis)->description,
-            'target_url'  => route('analysis_path', $analysis->id)
+            'target_url'  => route('analysis_path', $analysis->id),
             'context'     => 'StyleCI',
         ];
 
