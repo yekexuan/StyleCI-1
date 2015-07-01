@@ -34,16 +34,12 @@ class EventServiceProvider extends ServiceProvider
         ],
         'StyleCI\StyleCI\Events\AnalysisHasStartedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\AnalysisLoggingHandler',
+            'StyleCI\StyleCI\Handlers\Events\AnalysisStatusHandler',
+            'StyleCI\StyleCI\Handlers\Events\RealTimeStatusHandler',
         ],
         'StyleCI\StyleCI\Events\AnalysisWasQueuedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\AnalysisStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\RealTimeStatusHandler',
-        ],
-        'StyleCI\StyleCI\Events\CleanupHasCompletedEvent' => [
-            'StyleCI\StyleCI\Handlers\Events\AnalysisLoggingHandler',
-            'StyleCI\StyleCI\Handlers\Events\AnalysisStatusHandler',
-            'StyleCI\StyleCI\Handlers\Events\RealTimeStatusHandler',
-            'StyleCI\StyleCI\Handlers\Events\AnalysisNotificationsHandler',
         ],
         'StyleCI\StyleCI\Events\RepoWasDisabledEvent' => [
             'StyleCI\StyleCI\Handlers\Events\DisableHooksHandler',

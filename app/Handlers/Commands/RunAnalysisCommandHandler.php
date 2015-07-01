@@ -68,9 +68,11 @@ class RunAnalysisCommandHandler
         $analysis = $command->analysis;
 
         // bail out if the repo is already analysed or canceled
-        if ($analysis->status > 0) {
+        if ($analysis->status > 1) {
             return;
         }
+
+        $analysis->status = 1;
 
         event(new AnalysisHasStartedEvent($analysis));
 
@@ -79,8 +81,10 @@ class RunAnalysisCommandHandler
         } catch (ConfigExceptionInterface $e) {
             $analysis->status = 4;
             $analysis->error = $e->getMessage();
+        } catch (GitExceptionInterface $e) {
+            $analysis->status = 5;
         } catch (Exception $e) {
-            $analysis->status = 3;
+            $analysis->status = 7;
         }
 
         $analysis->save();
@@ -104,9 +108,9 @@ class RunAnalysisCommandHandler
         $report = $this->builder->analyse($analysis->repo->name, $analysis->repo->id, $analysis->commit);
 
         if ($report->successful()) {
-            $analysis->status = 1;
-        } else {
             $analysis->status = 2;
+        } else {
+            $analysis->status = 3;
             $this->storage->put($analysis->id, $report->diff());
         }
     }

@@ -109,16 +109,18 @@ class Analysis extends Model implements HasPresenter
     public function description()
     {
         switch ($this->status) {
+            case 0:
+                return 'The StyleCI analysis is pending';
             case 1:
-                return 'The StyleCI checks passed';
+                return 'The StyleCI analysis is running';
             case 2:
-                return 'The StyleCI checks failed';
+                return 'The StyleCI analysis has passed';
             case 3:
-                return 'The StyleCI checks have errored';
+                return 'The StyleCI analysis has failed';
             case 4:
-                return 'The StyleCI checks were misconfigured';
+                return 'The StyleCI analysis was misconfigured';
             default:
-                return 'The StyleCI checks are pending';
+                return 'The StyleCI analysis has errored';
         }
     }
 }

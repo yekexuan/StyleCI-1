@@ -30,16 +30,18 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     public function summary()
     {
         switch ($this->wrappedObject->status) {
+            case 0:
+                return 'PENDING';
             case 1:
-                return 'PASSED';
+                return 'RUNNING';
             case 2:
-                return 'FAILED';
+                return 'PASSED';
             case 3:
-                return 'ERRORED';
+                return 'FAILED';
             case 4:
                 return 'MISCONFIGURED';
             default:
-                return 'PENDING';
+                return 'ERRORED';
         }
     }
 
@@ -50,7 +52,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      */
     public function icon()
     {
-        if ($this->wrappedObject->status == 1) {
+        if ($this->wrappedObject->status === 2) {
             return 'fa fa-check-circle';
         }
 
@@ -68,11 +70,11 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      */
     public function color()
     {
-        if ($this->wrappedObject->status === 1) {
+        if ($this->wrappedObject->status === 2) {
             return 'green';
         }
 
-        if ($this->wrappedObject->status > 1) {
+        if ($this->wrappedObject->status > 2) {
             return 'red';
         }
 

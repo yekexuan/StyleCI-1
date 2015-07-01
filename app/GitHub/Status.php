@@ -83,15 +83,15 @@ class Status
     protected function getState($status)
     {
         switch ($status) {
+            case 0:
             case 1:
-                return 'success';
-            case 2:
-                return 'failure';
-            case 3:
-            case 4:
-                return 'error';
-            default:
                 return 'pending';
+            case 2:
+                return 'success';
+            case 3:
+                return 'failure';
+            default:
+                return 'error';
         }
     }
 }
