@@ -44,7 +44,7 @@ class AnalysisController extends AbstractController
      */
     public function handleDiff(Analysis $analysis)
     {
-        $diff = AutoPresenter::decorate($analysis)->diff;
+        $diff = AutoPresenter::decorate($analysis)->raw_diff;
 
         return Response::make($diff)
             ->header('Content-Type', 'text/plain; charset=UTF-8');
@@ -59,7 +59,7 @@ class AnalysisController extends AbstractController
      */
     public function handleDiffDownload(Analysis $analysis)
     {
-        $diff = AutoPresenter::decorate($analysis)->diff;
+        $diff = AutoPresenter::decorate($analysis)->raw_diff;
 
         return Response::make($diff)
             ->header('Content-Type', 'text/plain; charset=UTF-8')

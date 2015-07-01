@@ -13,6 +13,7 @@ namespace StyleCI\StyleCI\Presenters;
 
 use Illuminate\Contracts\Support\Arrayable;
 use McCool\LaravelAutoPresenter\BasePresenter;
+use StyleCI\Storage\Stores\StoreInterface;
 
 /**
  * This is the analysis presenter class.
@@ -34,6 +35,7 @@ use McCool\LaravelAutoPresenter\BasePresenter;
  * @property string        $github_link
  * @property string        $time_ago
  * @property string        $created_at_iso
+ * @property string        $raw_diff
  * @property Diff          $diff
  *
  * @author Graham Campbell <graham@alt-three.com>
@@ -41,6 +43,27 @@ use McCool\LaravelAutoPresenter\BasePresenter;
  */
 class AnalysisPresenter extends BasePresenter implements Arrayable
 {
+    /**
+     * The diff storage instance.
+     *
+     * @var \StyleCI\Storage\Stores\StoreInterface
+     */
+    protected $storage;
+
+    /**
+     * Create a new analysis presenter instance.
+     *
+     * @param \StyleCI\Storage\Stores\StoreInterface $storage
+     * @param \StyleCI\StyleCI\Models\Analysis       $resource
+     *
+     * @return void
+     */
+    public function __construct(StoreInterface $storage, $resource)
+    {
+        $this->storage = $storage;
+        parent::__construct($resource);
+    }
+
     /**
      * Get the analysis status summary.
      *
@@ -172,13 +195,23 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     }
 
     /**
-     * Get the diff splited to files.
+     * Get the raw diff.
+     *
+     * @return \StyleCI\StyleCI\Presenters\Diff
+     */
+    public function raw_diff()
+    {
+        return $this->storage->get($this->wrappedObject->id);
+    }
+
+    /**
+     * Get the diff split up to files.
      *
      * @return \StyleCI\StyleCI\Presenters\Diff
      */
     public function diff()
     {
-        return new Diff($this->wrappedObject->diff);
+        return new Diff($this->raw_diff());
     }
 
     /**
