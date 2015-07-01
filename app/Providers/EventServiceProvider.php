@@ -34,6 +34,8 @@ class EventServiceProvider extends ServiceProvider
         ],
         'StyleCI\StyleCI\Events\AnalysisHasStartedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\AnalysisLoggingHandler',
+            'StyleCI\StyleCI\Handlers\Events\AnalysisStatusHandler',
+            'StyleCI\StyleCI\Handlers\Events\RealTimeStatusHandler',
         ],
         'StyleCI\StyleCI\Events\AnalysisWasQueuedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\AnalysisStatusHandler',

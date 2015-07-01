@@ -54,7 +54,7 @@ class RealTimeStatusHandler
     /**
      * Handle the event.
      *
-     * @param \StyleCI\StyleCI\Events\AnalysisHasStartedEvent|\StyleCI\StyleCI\Events\AnalysisHasCompletedEvent $event
+     * @param \StyleCI\StyleCI\Events\AnalysisHasCompletedEvent|\StyleCI\StyleCI\Events\AnalysisHasStartedEvent|\StyleCI\StyleCI\Events\AnalysisWasQueuedEvent $event
      *
      * @return void
      */
