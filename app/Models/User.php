@@ -24,7 +24,7 @@ use StyleCI\StyleCI\Presenters\UserPresenter;
  * @property string                                   $name
  * @property string                                   $username
  * @property string                                   $email
- * @property string                                   $token
+ * @property string                                   $access_token
  * @property \Illuminate\Database\Eloquent\Collection $repos
  *
  * @author Graham Campbell <graham@alt-three.com>
@@ -61,11 +61,11 @@ class User extends Model implements AuthenticatableContract, HasPresenter
      * @var string[]
      */
     protected $casts = [
-        'id'       => 'int',
-        'name'     => 'string',
-        'username' => 'string',
-        'email'    => 'string',
-        'token'    => 'string',
+        'id'           => 'int',
+        'name'         => 'string',
+        'username'     => 'string',
+        'email'        => 'string',
+        'access_token' => 'string',
     ];
 
     /**
