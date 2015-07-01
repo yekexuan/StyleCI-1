@@ -71,7 +71,7 @@ class AnalysisNotificationsHandler
 
         $mail = [
             'repo'    => $repo->name,
-            'message' => $analysis->message,
+            'commit'  => $analysis->message,
             'link'    => route('analysis_path', $analysis->id),
             'subject' => '[StyleCI] Failed Analysis',
         ];
