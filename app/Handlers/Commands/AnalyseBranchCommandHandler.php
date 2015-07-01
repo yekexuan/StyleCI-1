@@ -17,7 +17,6 @@ use StyleCI\StyleCI\Commands\RunAnalysisCommand;
 use StyleCI\StyleCI\GitHub\Branches;
 use StyleCI\StyleCI\GitHub\Commits;
 use StyleCI\StyleCI\Models\Analysis;
-use StyleCI\StyleCI\Models\Repo;
 
 /**
  * This is the analyse branch command handler.
@@ -65,13 +64,13 @@ class AnalyseBranchCommandHandler
      */
     public function handle(AnalyseBranchCommand $command)
     {
-        $repo = Repo::findOrFail($command->repo);
+        $repo = $command->repo;
         $branch = $command->branch;
         $commit = $this->branches->getCommit($repo, $branch);
         $message = substr($this->commits->get($repo, $commit)['commit']['message'], 0, 128);
 
         $analysis = Analysis::create([
-            'repo_id' => $command->repo,
+            'repo_id' => $repo->id,
             'branch'  => $branch,
             'commit'  => $commit,
             'message' => $message,

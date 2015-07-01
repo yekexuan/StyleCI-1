@@ -35,7 +35,7 @@ class AnalysePullRequestCommandHandler
     public function handle(AnalysePullRequestCommand $command)
     {
         $analysis = Analysis::create([
-            'repo_id' => $command->repo,
+            'repo_id' => $command->repo->id,
             'pr'      => $command->pr,
             'commit'  => $command->commit,
             'message' => $command->message,
