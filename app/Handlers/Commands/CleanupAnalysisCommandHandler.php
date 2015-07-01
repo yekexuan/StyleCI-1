@@ -33,7 +33,6 @@ class CleanupAnalysisCommandHandler
         $analysis = $command->analysis;
 
         $analysis->status = 3;
-        $analysis->error_message = 'The analysis has timed out.';
         $analysis->save();
 
         event(new CleanupHasCompletedEvent($analysis));

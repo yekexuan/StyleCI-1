@@ -78,7 +78,7 @@ class RunAnalysisCommandHandler
             $this->runAnalysis($analysis);
         } catch (ConfigExceptionInterface $e) {
             $analysis->status = 4;
-            $analysis->error_message = $e->getMessage();
+            $analysis->error = $e->getMessage();
         } catch (Exception $e) {
             $analysis->status = 3;
         }

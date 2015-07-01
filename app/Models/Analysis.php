@@ -20,6 +20,16 @@ use StyleCI\StyleCI\Presenters\AnalysisPresenter;
 /**
  * This is the analysis model class.
  *
+ * @property int                          $id
+ * @property int                          $repo_id
+ * @property \StyleCI\StyleCI\Models\Repo $repo
+ * @property string|null                  $branch
+ * @property int|null                     $pr
+ * @property string                       $commit
+ * @property string                       $message
+ * @property string|null                  $error
+ * @property int                          $status
+ *
  * @author Graham Campbell <graham@alt-three.com>
  */
 class Analysis extends Model implements HasPresenter
@@ -37,8 +47,14 @@ class Analysis extends Model implements HasPresenter
      * @var string[]
      */
     protected $casts = [
-        'status'        => 'int',
-        'error_message' => 'string',
+        'id'      => 'int',
+        'repo_id' => 'int',
+        'branch'  => 'string',
+        'pr'      => 'int',
+        'commit'  => 'string',
+        'message' => 'string',
+        'error'   => 'string',
+        'status'  => 'int',
     ];
 
     /**
