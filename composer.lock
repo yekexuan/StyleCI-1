@@ -132,16 +132,16 @@
         },
         {
             "name": "bugsnag/bugsnag",
-            "version": "v2.5.4",
+            "version": "v2.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bugsnag/bugsnag-php.git",
-                "reference": "f013ca96b359a9675358710a52ba1aee6c508925"
+                "reference": "30af9dfc67c42bd3c392c7917b4b35d08a53da74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bugsnag/bugsnag-php/zipball/f013ca96b359a9675358710a52ba1aee6c508925",
-                "reference": "f013ca96b359a9675358710a52ba1aee6c508925",
+                "url": "https://api.github.com/repos/bugsnag/bugsnag-php/zipball/30af9dfc67c42bd3c392c7917b4b35d08a53da74",
+                "reference": "30af9dfc67c42bd3c392c7917b4b35d08a53da74",
                 "shasum": ""
             },
             "require": {
@@ -176,7 +176,7 @@
                 "logging",
                 "tracking"
             ],
-            "time": "2015-04-13 19:09:41"
+            "time": "2015-07-01 02:43:15"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -1227,12 +1227,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "829b40a8dc4637939000d9306978aa708e8460f4"
+                "reference": "66737d2024d49c06bd294f33d60eb369f18b20f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/829b40a8dc4637939000d9306978aa708e8460f4",
-                "reference": "829b40a8dc4637939000d9306978aa708e8460f4",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/66737d2024d49c06bd294f33d60eb369f18b20f2",
+                "reference": "66737d2024d49c06bd294f33d60eb369f18b20f2",
                 "shasum": ""
             },
             "require": {
@@ -1281,7 +1281,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-06-30 17:17:41"
+            "time": "2015-06-30 20:37:09"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1600,16 +1600,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "5.1.x-dev",
+            "version": "v5.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "5a02cdc87a660523d3f9fece2a5a56a66412d9f2"
+                "reference": "ef87627cc3a2ecb866214c5be593781016cd43b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/5a02cdc87a660523d3f9fece2a5a56a66412d9f2",
-                "reference": "5a02cdc87a660523d3f9fece2a5a56a66412d9f2",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/ef87627cc3a2ecb866214c5be593781016cd43b1",
+                "reference": "ef87627cc3a2ecb866214c5be593781016cd43b1",
                 "shasum": ""
             },
             "require": {
@@ -1724,7 +1724,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-06-30 18:26:31"
+            "time": "2015-06-30 20:45:09"
         },
         {
             "name": "league/flysystem",
