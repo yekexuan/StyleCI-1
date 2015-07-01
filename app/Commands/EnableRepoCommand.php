@@ -11,8 +11,6 @@
 
 namespace StyleCI\StyleCI\Commands;
 
-use StyleCI\StyleCI\Models\User;
-
 /**
  * This is the enable repo command class.
  *

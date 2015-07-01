@@ -13,7 +13,6 @@ namespace StyleCI\StyleCI\Handlers\Commands;
 
 use Exception;
 use StyleCI\Config\Exceptions\ConfigExceptionInterface;
-use StyleCI\Fixer\Report;
 use StyleCI\Fixer\ReportBuilder;
 use StyleCI\Git\Exceptions\GitExceptionInterface;
 use StyleCI\Storage\Stores\StoreInterface;
