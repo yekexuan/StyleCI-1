@@ -50,17 +50,16 @@ class Hooks
      */
     public function enable(Repo $repo)
     {
-        $url = route('webhook_callback');
         $args = explode('/', $repo->name);
         $hooks = $this->factory->make($repo, ['version' => 'quicksilver-preview'])->repo()->hooks();
 
         $events = ['pull_request','push'];
 
         $config = [
-            'url'          => $url,
+            'url'          => route('webhook_callback'),
             'content_type' => 'json',
             'insecure_ssl' => 0,
-            'secret'       => '',
+            'secret'       => $repo->token,
         ];
 
         $hooks->create($args[0], $args[1], ['name' => 'web', 'events' => $events, 'config' => $config]);
@@ -75,7 +74,7 @@ class Hooks
      */
     public function disable(Repo $repo)
     {
-        $url = route('home'); // we want to remove all hooks containing the base url
+        $url = route('home');
         $args = explode('/', $repo->name);
         $client = $this->factory->make($repo, ['version' => 'quicksilver-preview']);
         $hooks = $client->repo()->hooks();
