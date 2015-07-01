@@ -43,8 +43,8 @@ return [
         'default' => [
             'flysystem'   => 'local',
             'cache'       => env('CACHE_DRIVER', 'file'),
-            'encryption'  => true,
-            'compression' => true,
+            'encryption'  => false,
+            'compression' => false,
         ],
 
     ],
