@@ -41,9 +41,10 @@ return [
     'connections' => [
 
         'default' => [
-            'flysystem'  => 'local',
-            'cache'      => env('CACHE_DRIVER', 'file'),
-            'encryption' => true,
+            'flysystem'   => 'local',
+            'cache'       => env('CACHE_DRIVER', 'file'),
+            'encryption'  => true,
+            'compression' => true,
         ],
 
     ],

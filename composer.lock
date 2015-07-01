@@ -2648,12 +2648,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Storage.git",
-                "reference": "c244d0812a52976533d6c2aafc09dfe2546e5997"
+                "reference": "a8da19b75349c29eaf9f30083b577208a0410ed2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/c244d0812a52976533d6c2aafc09dfe2546e5997",
-                "reference": "c244d0812a52976533d6c2aafc09dfe2546e5997",
+                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/a8da19b75349c29eaf9f30083b577208a0410ed2",
+                "reference": "a8da19b75349c29eaf9f30083b577208a0410ed2",
                 "shasum": ""
             },
             "require": {
@@ -2704,7 +2704,7 @@
                 "StyleCI",
                 "storage"
             ],
-            "time": "2015-06-29 18:47:21"
+            "time": "2015-07-01 20:42:19"
         },
         {
             "name": "swiftmailer/swiftmailer",
