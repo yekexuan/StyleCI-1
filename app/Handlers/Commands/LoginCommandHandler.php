@@ -26,25 +26,6 @@ use StyleCI\StyleCI\Repositories\UserRepository;
 class LoginCommandHandler
 {
     /**
-     * The user repository instance.
-     *
-     * @var \StyleCI\StyleCI\Repositories\UserRepository
-     */
-    protected $userRepository;
-
-    /**
-     * Create a new login command handler instance.
-     *
-     * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
-     *
-     * @return void
-     */
-    public function __construct(UserRepository $userRepository)
-    {
-        $this->userRepository = $userRepository;
-    }
-
-    /**
      * Handle the login command.
      *
      * @param \StyleCI\StyleCI\Commands\LoginCommand $command
@@ -53,21 +34,21 @@ class LoginCommandHandler
      */
     public function handle(LoginCommand $command)
     {
-        $user = $this->userRepository->findOrGenerate($command->id);
+        $user = User::find($command->id);
 
-        $new = $user->exists === false;
+        $attributes = [
+            'name'         => $command->name;
+            'email'        => $command->email;
+            'username'     => $command->username;
+            'access_token' => $command->token;
+        ];
 
-        $user->name = $command->name;
-        $user->email = $command->email;
-        $user->username = $command->username;
-        $user->access_token = $command->token;
-
-        $user->save();
-
-        if ($new) {
+        if ($user) {
+            $user->forceFill($attributes)->save();
+            event(new UserHasLoggedInEvent($user));
+        } else {
+            $user = User::forceCreate(array_merge(['id' => $command->id], $attributes));
             event(new UserHasSignedUpEvent($user));
         }
-
-        event(new UserHasLoggedInEvent($user));
     }
 }
