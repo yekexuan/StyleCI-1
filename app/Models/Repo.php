@@ -26,6 +26,7 @@ use StyleCI\StyleCI\Presenters\RepoPresenter;
  * @property Analysis|null $last_analysis
  * @property string        $name
  * @property string        $default_branch
+ * @property string        $token
  *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
@@ -47,6 +48,13 @@ class Repo extends Model implements HasPresenter
     protected $guarded = ['_token', '_method'];
 
     /**
+     * The attributes excluded from the model's JSON form.
+     *
+     * @var string[]
+     */
+    protected $hidden = ['token'];
+
+    /**
      * The attributes that should be casted to native types.
      *
      * @var string[]
@@ -56,6 +64,7 @@ class Repo extends Model implements HasPresenter
         'user_id'        => 'int',
         'name'           => 'string',
         'default_branch' => 'string',
+        'token'          => 'string',
     ];
 
     /**

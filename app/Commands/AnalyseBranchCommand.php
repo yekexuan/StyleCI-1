@@ -11,6 +11,8 @@
 
 namespace StyleCI\StyleCI\Commands;
 
+use StyleCI\StyleCI\Models\Repo;
+
 /**
  * This is the analyse branch command.
  *
@@ -21,7 +23,7 @@ class AnalyseBranchCommand
     /**
      * The repo to analyse.
      *
-     * @var int
+     * @var \StyleCI\StyleCI\Models\Repo
      */
     public $repo;
 
@@ -35,12 +37,12 @@ class AnalyseBranchCommand
     /**
      * Create a new analyse branch command instance.
      *
-     * @param int    $repo
-     * @param string $branch
+     * @param \StyleCI\StyleCI\Models\Repo $repo
+     * @param string                       $branch
      *
      * @return void
      */
-    public function __construct($repo, $branch)
+    public function __construct(Repo $repo, $branch)
     {
         $this->repo = $repo;
         $this->branch = $branch;

@@ -117,7 +117,7 @@ class Diff implements ArrayAccess
 
         // If the file name was modified we show the change.
         foreach ($originalNames[1] as $key => $originalName) {
-            if ($originalName != $modifiedNames[1][$key]) {
+            if ($originalName !== $modifiedNames[1][$key]) {
                 $fileNames[] = $originalName.' -> '.$modifiedNames[1][$key];
             } else {
                 $fileNames[] = $originalName;

@@ -32,6 +32,7 @@ class CreateReposTable extends Migration
             $table->string('user_id')->index();
             $table->string('name', 128)->unique();
             $table->string('default_branch', 128)->default('master');
+            $table->string('token', 20);
             $table->timestamps();
         });
     }

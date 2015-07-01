@@ -11,6 +11,8 @@
 
 namespace StyleCI\StyleCI\Commands;
 
+use StyleCI\StyleCI\Models\Repo;
+
 /**
  * This is the analyse commit command.
  *
@@ -21,7 +23,7 @@ class AnalyseCommitCommand
     /**
      * The repo to analyse.
      *
-     * @var int
+     * @var \StyleCI\StyleCI\Models\Repo
      */
     public $repo;
 
@@ -49,14 +51,14 @@ class AnalyseCommitCommand
     /**
      * Create a new analyse commit command instance.
      *
-     * @param int    $repo
-     * @param string $branch
-     * @param string $commit
-     * @param string $message
+     * @param \StyleCI\StyleCI\Models\Repo $repo
+     * @param string                       $branch
+     * @param string                       $commit
+     * @param string                       $message
      *
      * @return void
      */
-    public function __construct($repo, $branch, $commit, $message)
+    public function __construct(Repo $repo, $branch, $commit, $message)
     {
         $this->repo = $repo;
         $this->branch = $branch;
