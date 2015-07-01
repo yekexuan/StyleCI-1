@@ -57,10 +57,10 @@ class ClientFactory
     {
         switch (get_class($model)) {
             case User::class:
-                $token = $model->access_token;
+                $token = $model->token;
                 break;
             case Repo::class:
-                $token = $model->user->access_token;
+                $token = $model->user->token;
                 break;
             default:
                 throw new InvalidArgumentException('You must provide a user or repo model.');
