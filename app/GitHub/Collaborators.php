@@ -13,7 +13,6 @@ namespace StyleCI\StyleCI\GitHub;
 
 use Github\ResultPager;
 use Illuminate\Contracts\Cache\Repository;
-use Illuminate\Database\Eloquent\Model;
 use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Models\User;
 
@@ -55,7 +54,7 @@ class Collaborators
     /**
      * Get the collaborators for a repo.
      *
-     * @param \StyleCI\StyleCI\Model\Repo $repo
+     * @param \StyleCI\StyleCI\Models\Repo $repo
      *
      * @return int[]
      */
@@ -96,7 +95,7 @@ class Collaborators
      *
      * @return void
      */
-    public function flush(Model $repo)
+    public function flush(Repo $repo)
     {
         $this->cache->forget("{$repo->id}collaborators");
     }

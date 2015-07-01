@@ -34,7 +34,7 @@ class AnalysisNotificationsHandler
     /**
      * The mailer instance.
      *
-     * @var \Illuminate\Contracts\Mail\Mailer
+     * @var \Illuminate\Contracts\Mail\MailQueue
      */
     protected $mailer;
 

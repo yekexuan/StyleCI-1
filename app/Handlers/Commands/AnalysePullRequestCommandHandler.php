@@ -28,7 +28,7 @@ class AnalysePullRequestCommandHandler
     /**
      * Handle the analyse pull request command.
      *
-     * @param \StyleCI\StyleCI\Commands\AnalyseCommitCommand $command
+     * @param \StyleCI\StyleCI\Commands\AnalysePullRequestCommand $command
      *
      * @return void
      */
