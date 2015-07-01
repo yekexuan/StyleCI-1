@@ -13,7 +13,6 @@ namespace StyleCI\StyleCI\Handlers\Events;
 
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use Psr\Log\LoggerInterface;
-use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
@@ -45,7 +44,7 @@ class AnalysisLoggingHandler
     /**
      * Handle the event.
      *
-     * @param \StyleCI\StyleCI\Events\AnalysisHasStartedEvent|\StyleCI\StyleCI\Events\AnalysisHasCompletedEvent $event
+     * @param \StyleCI\StyleCI\Events\AnalysisHasCompletedEvent|\StyleCI\StyleCI\Events\AnalysisHasStartedEvent|\StyleCI\StyleCI\Events\AnalysisWasQueuedEvent $event
      *
      * @return void
      */
@@ -71,18 +70,20 @@ class AnalysisLoggingHandler
     {
         switch ($analysis->status) {
             case 0:
-                $this->logger->debug("Analysis of {$analysis->commit} has started.", $this->getContext('Analysis started.', $analysis));
+                $this->logger->debug("Analysis of {$analysis->commit} has been queued.", $this->getContext('Analysis queued.', $analysis));
                 break;
             case 1:
-            case 2:
-                $this->logger->debug("Analysis of {$analysis->commit} has completed successfully.", $this->getContext('Analysis completed.', $analysis));
+                $this->logger->debug("Analysis of {$analysis->commit} has started running.", $this->getContext('Analysis started.', $analysis));
                 break;
+            case 2:
             case 3:
-                $this->logger->error("Analysis of {$analysis->commit} has failed due to an internal error.", $this->getContext('Analysis errored.', $analysis));
+                $this->logger->debug("Analysis of {$analysis->commit} has completed successfully.", $this->getContext('Analysis completed.', $analysis));
                 break;
             case 4:
                 $this->logger->notice("Analysis of {$analysis->commit} has failed due to misconfiguration.", $this->getContext('Analysis misconfigured.', $analysis));
                 break;
+            default:
+                $this->logger->error("Analysis of {$analysis->commit} has failed due to an internal error.", $this->getContext('Analysis errored.', $analysis));
         }
     }
 
