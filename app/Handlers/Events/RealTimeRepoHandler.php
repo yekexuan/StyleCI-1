@@ -12,10 +12,10 @@
 namespace StyleCI\StyleCI\Handlers\Events;
 
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
+use Pusher;
 use StyleCI\StyleCI\Events\RepoWasDisabledEvent;
 use StyleCI\StyleCI\Events\RepoWasEnabledEvent;
 use StyleCI\StyleCI\Repositories\UserRepository;
-use Vinkla\Pusher\PusherManager;
 
 /**
  * This is the real time repo handler class.
@@ -35,7 +35,7 @@ class RealTimeRepoHandler
     /**
      * The pusher instance.
      *
-     * @var \Vinkla\Pusher\PusherManager
+     * @var \Pusher
      */
     protected $pusher;
 
@@ -43,11 +43,11 @@ class RealTimeRepoHandler
      * Create a new repo notifications handler instance.
      *
      * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
-     * @param \Vinkla\Pusher\PusherManager                 $pusher
+     * @param \Pusher                                      $pusher
      *
      * @return void
      */
-    public function __construct(UserRepository $userRepository, PusherManager $pusher)
+    public function __construct(UserRepository $userRepository, Pusher $pusher)
     {
         $this->userRepository = $userRepository;
         $this->pusher = $pusher;

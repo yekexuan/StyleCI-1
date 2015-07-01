@@ -12,8 +12,8 @@
 namespace StyleCI\StyleCI\Handlers\Events;
 
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
+use Pusher;
 use StyleCI\StyleCI\Repositories\UserRepository;
-use Vinkla\Pusher\PusherManager;
 
 /**
  * This is the real time status handler class.
@@ -33,7 +33,7 @@ class RealTimeStatusHandler
     /**
      * The pusher instance.
      *
-     * @var \Vinkla\Pusher\PusherManager
+     * @var \Pusher
      */
     protected $pusher;
 
@@ -41,11 +41,11 @@ class RealTimeStatusHandler
      * Create a new analysis notifications handler instance.
      *
      * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
-     * @param \Vinkla\Pusher\PusherManager                 $pusher
+     * @param \Pusher                                      $pusher
      *
      * @return void
      */
-    public function __construct(UserRepository $userRepository, PusherManager $pusher)
+    public function __construct(UserRepository $userRepository, Pusher $pusher)
     {
         $this->userRepository = $userRepository;
         $this->pusher = $pusher;
