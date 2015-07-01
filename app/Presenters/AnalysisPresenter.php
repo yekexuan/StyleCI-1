@@ -35,7 +35,7 @@ use StyleCI\Storage\Stores\StoreInterface;
  * @property string        $github_link
  * @property string        $time_ago
  * @property string        $created_at_iso
- * @property string        $raw_diff
+ * @property string|null   $raw_diff
  * @property Diff          $diff
  *
  * @author Graham Campbell <graham@alt-three.com>
@@ -197,7 +197,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     /**
      * Get the raw diff.
      *
-     * @return \StyleCI\StyleCI\Presenters\Diff
+     * @return string|null
      */
     public function raw_diff()
     {
@@ -211,7 +211,9 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      */
     public function diff()
     {
-        return new Diff($this->raw_diff());
+        $diff = (string) $this->raw_diff();
+
+        return new Diff(ltrim($diff));
     }
 
     /**
