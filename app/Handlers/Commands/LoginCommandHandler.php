@@ -15,6 +15,7 @@ use StyleCI\StyleCI\Commands\LoginCommand;
 use StyleCI\StyleCI\Events\UserHasLoggedInEvent;
 use StyleCI\StyleCI\Events\UserHasSignedUpEvent;
 use StyleCI\StyleCI\Models\User;
+use StyleCI\StyleCI\Repositories\UserRepository;
 
 /**
  * This is the login command handler class.
@@ -36,10 +37,10 @@ class LoginCommandHandler
         $user = User::find($command->id);
 
         $attributes = [
-            'name'         => $command->name,
-            'email'        => $command->email,
-            'username'     => $command->username,
-            'access_token' => $command->token,
+            'name'         => $command->name;
+            'email'        => $command->email;
+            'username'     => $command->username;
+            'access_token' => $command->token;
         ];
 
         if ($user) {
