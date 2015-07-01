@@ -20,6 +20,13 @@ use StyleCI\StyleCI\Presenters\UserPresenter;
 /**
  * This is the user model class.
  *
+ * @property int                                      $id
+ * @property string                                   $name
+ * @property string                                   $username
+ * @property string                                   $email
+ * @property string                                   $token
+ * @property \Illuminate\Database\Eloquent\Collection $repos
+ *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
  */
@@ -35,11 +42,11 @@ class User extends Model implements AuthenticatableContract, HasPresenter
     public $incrementing = false;
 
     /**
-     * The attributes that are mass assignable.
+     * A list of methods protected from mass assignment.
      *
      * @var string[]
      */
-    protected $fillable = ['name', 'email'];
+    protected $guarded = ['_token', '_method'];
 
     /**
      * The attributes excluded from the model's JSON form.
@@ -47,6 +54,19 @@ class User extends Model implements AuthenticatableContract, HasPresenter
      * @var string[]
      */
     protected $hidden = ['remember_token', 'token'];
+
+    /**
+     * The attributes that should be casted to native types.
+     *
+     * @var string[]
+     */
+    protected $casts = [
+        'id'       => 'int',
+        'name'     => 'string',
+        'username' => 'string',
+        'email'    => 'string',
+        'token'    => 'string',
+    ];
 
     /**
      * Get the repos relation.

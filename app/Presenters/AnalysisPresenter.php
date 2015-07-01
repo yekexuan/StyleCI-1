@@ -161,7 +161,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
             'repo_name'      => $this->wrappedObject->repo->name,
             'message'        => $this->wrappedObject->message,
             'description'    => $this->wrappedObject->description(),
-            'error_message'  => $this->wrappedObject->error_message,
+            'error'          => $this->wrappedObject->error,
             'status'         => $this->wrappedObject->status,
             'color'          => $this->color(),
             'summary'        => $this->summary(),

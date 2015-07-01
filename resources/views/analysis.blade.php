@@ -59,10 +59,10 @@
             </div>
         </div>
     </div>
-    @if ($analysis->error_message)
+    @if ($analysis->error)
     <div class="alert alert-danger analysis-alert" role="alert">
         <h4>Error details:</h4>
-        <p>{{ $analysis->error_message }}</p>
+        <p>{{ $analysis->error }}</p>
     </div>
     @endif
     @if ($analysis->status === 4)

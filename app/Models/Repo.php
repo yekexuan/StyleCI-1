@@ -18,6 +18,14 @@ use StyleCI\StyleCI\Presenters\RepoPresenter;
 /**
  * This is the repo model class.
  *
+ * @property int                                      $id
+ * @property int                                      $user_id
+ * @property \StyleCI\StyleCI\Models\User             $user
+ * @property \Illuminate\Database\Eloquent\Collection $analyses
+ * @property \StyleCI\StyleCI\Models\Analysis|null    $last_analysis
+ * @property string                                   $name
+ * @property string                                   $default_branch
+ *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
  */
@@ -38,14 +46,16 @@ class Repo extends Model implements HasPresenter
     protected $guarded = ['_token', '_method'];
 
     /**
-     * Get the analyses relation.
+     * The attributes that should be casted to native types.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @var string[]
      */
-    public function analyses()
-    {
-        return $this->hasMany(Analysis::class);
-    }
+    protected $casts = [
+        'id'             => 'int',
+        'user_id'        => 'int',
+        'name'           => 'string',
+        'default_branch' => 'string',
+    ];
 
     /**
      * Get the user relation.
@@ -55,6 +65,16 @@ class Repo extends Model implements HasPresenter
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    /**
+     * Get the analyses relation.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function analyses()
+    {
+        return $this->hasMany(Analysis::class);
     }
 
     /**
