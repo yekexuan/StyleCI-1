@@ -40,7 +40,7 @@ class ApiRoutes
                 'uses' => 'RepoController@handleShow',
             ]);
 
-            $router->post('repos/{id}/analyse', [
+            $router->post('repos/{repo}/analyse', [
                 'as'   => 'repo_analyse_path',
                 'uses' => 'RepoController@handleAnalyse',
             ]);
