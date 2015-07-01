@@ -12,7 +12,8 @@
 namespace StyleCI\StyleCI\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Str;
 use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
 use StyleCI\StyleCI\Commands\AnalysePullRequestCommand;
 
@@ -36,17 +37,15 @@ class GitHubController extends AbstractController
     /**
      * Handles the request made to StyleCI by the GitHub API.
      *
-     * @param \Illuminate\Http\Request $request
-     *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function handle(Request $request)
+    public function handle()
     {
-        switch ($request->header('X-GitHub-Event')) {
+        switch (Request::header('X-GitHub-Event')) {
             case 'push':
-                return $this->handlePush($request->input());
+                return $this->handlePush();
             case 'pull_request':
-                return $this->handlePullRequest($request->input());
+                return $this->handlePullRequest();
             case 'ping':
                 return $this->handlePing();
             default:
@@ -57,14 +56,18 @@ class GitHubController extends AbstractController
     /**
      * Handle pushing of a branch.
      *
-     * @param array $input
-     *
      * @return \Illuminate\Http\JsonResponse
      */
-    protected function handlePush(array $input)
+    protected function handlePush()
     {
+        $input = Request::input();
+        $repo = Repo::findOrFail($input['repository']['id']);
+
+        if ($val = $this->handleValidation($repo->token)) {
+            return $val;
+        }
+
         if ($input['head_commit'] && substr($input['ref'], 0, 11) === 'refs/heads/' && strpos($input['ref'], 'gh-pages') === false) {
-            $repo = $input['repository']['id'];
             $branch = substr($input['ref'], 11);
             $commit = $input['head_commit']['id'];
             $message = substr(strtok(strtok($input['head_commit']['message'], "\n"), "\r"), 0, 128);
@@ -84,14 +87,18 @@ class GitHubController extends AbstractController
      * repos that are not the original. Commits pushed to the original will be
      * analaysed via the push hook instead.
      *
-     * @param array $input
-     *
      * @return \Illuminate\Http\JsonResponse
      */
-    protected function handlePullRequest(array $input)
+    protected function handlePullRequest()
     {
+        $input = Request::input();
+        $repo = Repo::findOrFail($input['pull_request']['base']['repo']['id']);
+
+        if ($val = $this->handleValidation($repo->token)) {
+            return $val;
+        }
+
         if (($input['action'] === 'opened' || $input['action'] === 'reopened' || $input['action'] === 'synchronize') && $input['pull_request']['head']['repo']['full_name'] !== $input['pull_request']['base']['repo']['full_name'] && strpos($input['pull_request']['head']['ref'], 'gh-pages') === false) {
-            $repo = $input['pull_request']['base']['repo']['id'];
             $pr = $input['number'];
             $commit = $input['pull_request']['head']['sha'];
             $message = substr('Pull Request: '.strtok(strtok($input['pull_request']['title'], "\n"), "\r"), 0, 128);
@@ -122,5 +129,23 @@ class GitHubController extends AbstractController
     protected function handleOther()
     {
         return new JsonResponse(['message' => 'StyleCI does not support this type of event.'], 400, [], JSON_PRETTY_PRINT);
+    }
+
+    /**
+     * Handle the request validation.
+     *
+     * @param string $token
+     *
+     * @return \Illuminate\Http\JsonResponse|null
+     */
+    protected function handleValidation($token)
+    {
+        list($algo, $sig) = explode('=', Request::header('X-Hub-Signature'));
+
+        $hash = hash_hmac($algo, Request::getContent(), $token);
+
+        if (!Str::hashEquals($hash, $sig)) {
+            return new JsonResponse(['message' => 'StyleCI could not verify the validity of the request.'], 400, [], JSON_PRETTY_PRINT);
+        }
     }
 }

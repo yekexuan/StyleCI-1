@@ -11,6 +11,8 @@
 
 namespace StyleCI\StyleCI\Commands;
 
+use StyleCI\StyleCI\Models\Repo;
+
 /**
  * This is the analyse pull request command.
  *
@@ -21,7 +23,7 @@ class AnalysePullRequestCommand
     /**
      * The repo to analyse.
      *
-     * @var int
+     * @var \StyleCI\StyleCI\Models\Repo
      */
     public $repo;
 
@@ -49,14 +51,14 @@ class AnalysePullRequestCommand
     /**
      * Create a new analyse commit command instance.
      *
-     * @param int    $repo
-     * @param int    $pr
-     * @param string $commit
-     * @param string $message
+     * @param \StyleCI\StyleCI\Models\Repo $repo
+     * @param int                          $pr
+     * @param string                       $commit
+     * @param string                       $message
      *
      * @return void
      */
-    public function __construct($repo, $pr, $commit, $message)
+    public function __construct(Repo $repo, $pr, $commit, $message)
     {
         $this->repo = $repo;
         $this->pr = $pr;

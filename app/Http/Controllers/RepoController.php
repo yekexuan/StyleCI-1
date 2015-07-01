@@ -90,7 +90,7 @@ class RepoController extends AbstractController
     /**
      * Handles the request to analyse a repo.
      *
-     * @param int                              $id
+     * @param \StyleCI\StyleCI\Models\Repo     $repo
      * @param \Illuminate\Contracts\Auth\Guard $auth
      * @param \StyleCI\StyleCI\GitHub\Repos    $repos
      *
@@ -98,18 +98,18 @@ class RepoController extends AbstractController
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleAnalyse($id, Guard $auth, Repos $repos)
+    public function handleAnalyse(Repo $repo, Guard $auth, Repos $repos)
     {
-        if (!array_get($repos->get($auth->user()), $id)) {
+        if (!array_get($repos->get($auth->user()), $repo->id)) {
             throw new HttpException(403);
         }
 
-        $this->dispatch(new AnalyseBranchCommand($id, Request::get('branch')));
+        $this->dispatch(new AnalyseBranchCommand($repo, Request::get('branch')));
 
         if (Request::ajax()) {
             return new JsonResponse(['queued' => true]);
         }
 
-        return Redirect::route('repo_path', $id);
+        return Redirect::route('repo_path', $repo->id);
     }
 }

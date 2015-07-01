@@ -25,6 +25,7 @@ use McCool\LaravelAutoPresenter\BasePresenter;
  * @property AnalysisPresenter|null $last_analysis
  * @property string                 $name
  * @property string                 $default_branch
+ * @property string                 $token
  *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
