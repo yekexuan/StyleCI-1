@@ -2454,12 +2454,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "03575dbf119266d6923ea03bec54ea83f66a3f2c"
+                "reference": "2e2bcfbd765aedbd07d11e4e1368bf9adcea78f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/03575dbf119266d6923ea03bec54ea83f66a3f2c",
-                "reference": "03575dbf119266d6923ea03bec54ea83f66a3f2c",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/2e2bcfbd765aedbd07d11e4e1368bf9adcea78f9",
+                "reference": "2e2bcfbd765aedbd07d11e4e1368bf9adcea78f9",
                 "shasum": ""
             },
             "require": {
@@ -2511,7 +2511,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-06-30 17:25:22"
+            "time": "2015-07-01 23:16:56"
         },
         {
             "name": "styleci/git",

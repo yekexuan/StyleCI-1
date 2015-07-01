@@ -105,7 +105,7 @@ class RunAnalysisCommandHandler
      */
     protected function runAnalysis(Analysis $analysis)
     {
-        $report = $this->builder->analyse($analysis->repo->name, $analysis->repo->id, $analysis->commit);
+        $report = $this->builder->analyse($analysis->repo->name, $analysis->repo->id, $analysis->commit, $analysis->branch, $analysis->pr);
 
         if ($report->successful()) {
             $analysis->status = 2;
