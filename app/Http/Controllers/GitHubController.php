@@ -119,6 +119,13 @@ class GitHubController extends AbstractController
      */
     protected function handlePing()
     {
+        $input = Request::input();
+        $repo = Repo::findOrFail($input['repository']['id']);
+
+        if ($val = $this->handleValidation($repo->token)) {
+            return $val;
+        }
+
         return new JsonResponse(['message' => 'StyleCI successfully received your ping.'], 200, [], JSON_PRETTY_PRINT);
     }
 
