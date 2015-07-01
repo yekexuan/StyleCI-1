@@ -35,8 +35,8 @@
             <div v-repeat="analyses : analyses"
                  class="row"
                  v-class="
-                   bg-success: analyses.status === 1,
-                   bg-danger: analyses.status === 2
+                   bg-success: analyses.status === 2,
+                   bg-danger: analyses.status === 3
                  ">
                 <div class="col-sm-7">
                     <strong>@{{ analyses.message }}</strong>

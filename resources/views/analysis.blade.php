@@ -20,7 +20,7 @@
                 <img src="{{ route('repo_shield_path', $analysis->repo->id) }}" alt="StyleCI Shield">
             </a>
         </div>
-        <p class="js-status" style="@if ($analysis->status === 1) color:green; @elseif ($analysis->status > 1) color:red; @else color:grey; @endif">
+        <p class="js-status" style="@if ($analysis->status === 2) color:green; @elseif ($analysis->status > 2) color:red; @else color:grey; @endif">
             <i class="{{ $analysis->icon }}"></i>
             {{ $analysis->description }}
         </p>
@@ -43,7 +43,7 @@
                             {{ $analysis->github_id }}
                         </a>
                     </li>
-                    @if ($analysis->status === 2)
+                    @if ($analysis->status === 3)
                     <li>
                         <a class="btn" href="{{ route('analysis_download_path', $analysis->id) }}">
                             <i class="fa fa-cloud-download"></i> Download patch
@@ -65,17 +65,7 @@
         <p>{{ $analysis->error }}</p>
     </div>
     @endif
-    @if ($analysis->status === 4)
-    <div class="alert alert-info analysis-alert" role="alert">
-        <h4>Need a hand?</h4>
-        <p>Feel free to contact support at <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
-    </div>
-    @elseif ($analysis->status === 3)
-    <div class="alert alert-danger analysis-alert" role="alert">
-        <h4>Something went wrong on our end.</h4>
-        <p>Feel free to contact support at <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
-    </div>
-    @elseif ($analysis->status === 2)
+    @if ($analysis->status === 3)
     <hr>
     <p>
         <i class="fa fa-file-code-o"></i>
@@ -94,6 +84,26 @@
         </div>
     </div>
     @endforeach
+    @elseif ($analysis->status === 4)
+    <div class="alert alert-info analysis-alert" role="alert">
+        <h4>Need a hand?</h4>
+        <p>Feel free to contact support at <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
+    </div>
+    @elseif ($analysis->status === 5)
+    <div class="alert alert-danger analysis-alert" role="alert">
+        <h4>We were unable to access the repository or commit to analyse it.</h4>
+        <p>Feel free to contact support at <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
+    </div>
+    @elseif ($analysis->status === 6)
+    <div class="alert alert-danger analysis-alert" role="alert">
+        <h4>Unfortunately, the analysis timed out on our platform.</h4>
+        <p>Feel free to contact support at <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
+    </div>
+    @elseif ($analysis->status === 7)
+    <div class="alert alert-danger analysis-alert" role="alert">
+        <h4>Unfortunately, something went wrong on our platform.</h4>
+        <p>Feel free to contact support at <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
+    </div>
     @endif
 </sc-analysis>
 

@@ -14,6 +14,7 @@ namespace StyleCI\StyleCI\Handlers\Events;
 use Illuminate\Contracts\Mail\MailQueue;
 use Illuminate\Mail\Message;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
+use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
 /**
@@ -54,15 +55,15 @@ class AnalysisNotificationsHandler
     /**
      * Handle the event.
      *
-     * @param \StyleCI\StyleCI\Events\AnalysisHasCompletedEvent|\StyleCI\StyleCI\Events\CleanupHasCompletedEvent $event
+     * @param \StyleCI\StyleCI\Events\AnalysisHasCompletedEvent $event
      *
      * @return void
      */
-    public function handle($event)
+    public function handle(AnalysisHasCompletedEvent $event)
     {
         $analysis = $event->analysis;
 
-        if ($analysis->status < 2 || $analysis->pr) {
+        if ($analysis->status < 3 || $analysis->pr) {
             return;
         }
 
@@ -76,11 +77,11 @@ class AnalysisNotificationsHandler
         ];
 
         if ($analysis->status === 3) {
-            $status = 'errored';
+            $status = 'failed';
         } elseif ($analysis->status === 4) {
             $status = 'misconfigured';
         } else {
-            $status = 'failed';
+            $status = 'errored';
         }
 
         foreach ($this->userRepository->collaborators($repo) as $user) {

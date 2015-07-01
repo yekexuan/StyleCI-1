@@ -13,7 +13,7 @@ namespace StyleCI\StyleCI\Handlers\Events;
 
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use Psr\Log\LoggerInterface;
-use StyleCI\StyleCI\Events\CleanupHasCompletedEvent;
+use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
@@ -45,7 +45,7 @@ class AnalysisLoggingHandler
     /**
      * Handle the event.
      *
-     * @param \StyleCI\StyleCI\Events\AnalysisHasStartedEvent|\StyleCI\StyleCI\Events\AnalysisHasCompletedEvent|\StyleCI\StyleCI\Events\CleanupHasCompletedEvent $event
+     * @param \StyleCI\StyleCI\Events\AnalysisHasStartedEvent|\StyleCI\StyleCI\Events\AnalysisHasCompletedEvent $event
      *
      * @return void
      */
@@ -57,11 +57,7 @@ class AnalysisLoggingHandler
             $this->logger->notice($event->exception);
         }
 
-        if ($event instanceof CleanupHasCompletedEvent) {
-            $this->logger->error("Analysis of {$analysis->commit} has failed due to it timing out.", $this->getContext('Analysis timed out.', $analysis));
-        } else {
-            $this->logState($analysis);
-        }
+        $this->logState($analysis);
     }
 
     /**

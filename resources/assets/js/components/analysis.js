@@ -17,9 +17,9 @@ var Analysis = Vue.extend({
 
                 $status.html('<i class="' + data.event.icon + '"></i> ' + data.event.description);
 
-                if (data.event.status === 1) {
+                if (data.event.status === 2) {
                     $status.css('color', 'green');
-                } else if (data.event.status > 1) {
+                } else if (data.event.status > 2) {
                     $status.css('color', 'red');
                 } else {
                     $status.css('color', 'grey');

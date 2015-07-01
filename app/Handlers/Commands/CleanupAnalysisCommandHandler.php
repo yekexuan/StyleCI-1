@@ -12,7 +12,7 @@
 namespace StyleCI\StyleCI\Handlers\Commands;
 
 use StyleCI\StyleCI\Commands\CleanupAnalysisCommand;
-use StyleCI\StyleCI\Events\CleanupHasCompletedEvent;
+use StyleCI\StyleCI\Events\AnalysisHasCompletedEvent;
 
 /**
  * This is the cleanup analysis command handler.
@@ -32,9 +32,9 @@ class CleanupAnalysisCommandHandler
     {
         $analysis = $command->analysis;
 
-        $analysis->status = 3;
+        $analysis->status = 6;
         $analysis->save();
 
-        event(new CleanupHasCompletedEvent($analysis));
+        event(new AnalysisHasCompletedEvent($analysis));
     }
 }
