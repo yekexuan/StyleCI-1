@@ -50,7 +50,7 @@ class GitHubController extends AbstractController
             case 'ping':
                 return $this->handlePing();
             default:
-                $this->handleOther();
+                return $this->handleOther();
         }
     }
 
