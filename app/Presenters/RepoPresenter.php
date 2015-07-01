@@ -12,29 +12,25 @@
 namespace StyleCI\StyleCI\Presenters;
 
 use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Database\Eloquent\Collection;
 use McCool\LaravelAutoPresenter\BasePresenter;
-use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 
 /**
  * This is the repo presenter class.
+ *
+ * @property int                    $id
+ * @property int                    $user_id
+ * @property UserPresenter          $user
+ * @property Collection             $analyses
+ * @property AnalysisPresenter|null $last_analysis
+ * @property string                 $name
+ * @property string                 $default_branch
  *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
  */
 class RepoPresenter extends BasePresenter implements Arrayable
 {
-    /**
-     * Get the last analysis.
-     *
-     * @return \StyleCI\StyleCI\Presenters\CommitPresenter|null
-     */
-    public function last_analysis()
-    {
-        if ($analysis = $this->wrappedObject->last_analysis) {
-            return AutoPresenter::decorate($analysis);
-        }
-    }
-
     /**
      * Convert presented repo to an array.
      *
@@ -45,7 +41,7 @@ class RepoPresenter extends BasePresenter implements Arrayable
         return [
             'id'            => $this->wrappedObject->id,
             'name'          => $this->wrappedObject->name,
-            'last_analysis' => $this->last_analysis(),
+            'last_analysis' => $this->wrappedObject->last_analysis,
             'link'          => route('repo_path', $this->wrappedObject->id),
         ];
     }

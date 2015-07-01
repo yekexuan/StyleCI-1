@@ -17,6 +17,25 @@ use McCool\LaravelAutoPresenter\BasePresenter;
 /**
  * This is the analysis presenter class.
  *
+ * @property int           $id
+ * @property int           $repo_id
+ * @property RepoPresenter $repo
+ * @property string|null   $branch
+ * @property int|null      $pr
+ * @property string        $commit
+ * @property string        $message
+ * @property string|null   $error
+ * @property int           $status
+ * @property string        $summary
+ * @property string        $description
+ * @property string        $icon
+ * @property string        $color
+ * @property string        $github_id
+ * @property string        $github_link
+ * @property string        $time_ago
+ * @property string        $created_at_iso
+ * @property Diff          $diff
+ *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
  */
@@ -42,6 +61,29 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
                 return 'MISCONFIGURED';
             default:
                 return 'ERRORED';
+        }
+    }
+
+    /**
+     * Get the status description.
+     *
+     * @return string
+     */
+    public function description()
+    {
+        switch ($this->wrappedObject->status) {
+            case 0:
+                return 'The StyleCI analysis is pending';
+            case 1:
+                return 'The StyleCI analysis is running';
+            case 2:
+                return 'The StyleCI analysis has passed';
+            case 3:
+                return 'The StyleCI analysis has failed';
+            case 4:
+                return 'The StyleCI analysis was misconfigured';
+            default:
+                return 'The StyleCI analysis has errored';
         }
     }
 
@@ -140,16 +182,6 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     }
 
     /**
-     * Get the analysis status description.
-     *
-     * @return string
-     */
-    public function description()
-    {
-        return $this->wrappedObject->description();
-    }
-
-    /**
      * Convert presented analysis to an array.
      *
      * @return array
@@ -162,11 +194,11 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
             'repo_id'        => $this->wrappedObject->repo_id,
             'repo_name'      => $this->wrappedObject->repo->name,
             'message'        => $this->wrappedObject->message,
-            'description'    => $this->wrappedObject->description(),
             'error'          => $this->wrappedObject->error,
             'status'         => $this->wrappedObject->status,
             'color'          => $this->color(),
             'summary'        => $this->summary(),
+            'description'    => $this->description(),
             'icon'           => $this->icon(),
             'time_ago'       => $this->time_ago(),
             'github_id'      => $this->github_id(),

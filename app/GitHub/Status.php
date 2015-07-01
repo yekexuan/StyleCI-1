@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\GitHub;
 
+use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
@@ -63,7 +64,7 @@ class Status
 
         $data = [
             'state'       => $this->getState($analysis->status),
-            'description' => $analysis->description(),
+            'description' => AutoPresenter::decorate($analysis)->description,
             'target_url'  => $this->url.'/'.$analysis->commit,
             'context'     => 'StyleCI',
         ];

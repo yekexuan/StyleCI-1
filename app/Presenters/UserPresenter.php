@@ -11,10 +11,20 @@
 
 namespace StyleCI\StyleCI\Presenters;
 
+use Illuminate\Database\Eloquent\Collection;
 use McCool\LaravelAutoPresenter\BasePresenter;
 
 /**
  * This is the user presenter class.
+ *
+ * @property int        $id
+ * @property string     $name
+ * @property string     $username
+ * @property string     $email
+ * @property string     $token
+ * @property Collection $repos
+ * @property string     $gravatar
+ * @property string     $first_name
  *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
@@ -38,7 +48,7 @@ class UserPresenter extends BasePresenter
      *
      * @return string
      */
-    public function firstName()
+    public function first_name()
     {
         return explode(' ', $this->wrappedObject->name)[0];
     }

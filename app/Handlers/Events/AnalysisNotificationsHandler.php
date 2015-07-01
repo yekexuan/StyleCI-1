@@ -86,7 +86,7 @@ class AnalysisNotificationsHandler
 
         foreach ($this->userRepository->collaborators($repo) as $user) {
             $mail['email'] = $user->email;
-            $mail['name'] = AutoPresenter::decorate($user)->firstName;
+            $mail['name'] = AutoPresenter::decorate($user)->first_name;
             $this->mailer->queue(["emails.{$status}-html", "emails.{$status}-text"], $mail, function (Message $message) use ($mail) {
                 $message->to($mail['email'])->subject($mail['subject']);
             });
