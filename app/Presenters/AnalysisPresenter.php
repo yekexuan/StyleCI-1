@@ -80,8 +80,10 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
             case 2:
                 return 'PASSED';
             case 3:
-                return 'FAILED';
             case 4:
+            case 5:
+                return 'FAILED';
+            case 6:
                 return 'MISCONFIGURED';
             default:
                 return 'ERRORED';
@@ -103,8 +105,10 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
             case 2:
                 return 'The StyleCI analysis has passed';
             case 3:
-                return 'The StyleCI analysis has failed';
             case 4:
+            case 5:
+                return 'The StyleCI analysis has failed';
+            case 6:
                 return 'The StyleCI analysis was misconfigured';
             default:
                 return 'The StyleCI analysis has errored';
