@@ -44,7 +44,7 @@
                                 {{ $analysis->github_id }}
                             </a>
                         </li>
-                        @if ($analysis->status === 3 || $analysis->status === 5)
+                        @if ($analysis->raw_diff)
                         <li>
                             <a class="btn" href="{{ route('analysis_download_path', $analysis->id) }}">
                                 <i class="fa fa-cloud-download"></i> Download patch
@@ -99,7 +99,7 @@
         @endforeach
         @endif
 
-        @if ($analysis->status === 3 || $analysis->status === 5)
+        @if ($analysis->raw_diff)
         <hr>
         <p>
             <i class="fa fa-file-code-o"></i>
