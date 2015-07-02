@@ -34,16 +34,30 @@ use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 class RepoPresenter extends BasePresenter implements Arrayable
 {
     /**
+     * Get the last analysis.
+     *
+     * @return \StyleCI\StyleCI\Presenters\AnalysisPresenter|null
+     */
+    public function last_analysis()
+    {
+        if ($analysis = $this->wrappedObject->last_analysis) {
+            return AutoPresenter::decorate($analysis);
+        }
+    }
+
+    /**
      * Convert presented repo to an array.
      *
      * @return array
      */
     public function toArray()
     {
+        $analysis = $this->last_analysis();
+
         return [
             'id'            => $this->wrappedObject->id,
             'name'          => $this->wrappedObject->name,
-            'last_analysis' => AutoPresenter::decorate($this->wrappedObject->last_analysis)->toArray(),
+            'last_analysis' => $analysis ? $analysis->toArray() : null,
             'link'          => route('repo_path', $this->wrappedObject->id),
         ];
     }
