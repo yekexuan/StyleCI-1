@@ -26,6 +26,7 @@ use StyleCI\Storage\Stores\StoreInterface;
  * @property string        $commit
  * @property string        $message
  * @property string|null   $error
+ * @property array|null    $errors
  * @property int           $status
  * @property string        $summary
  * @property string        $description
@@ -230,6 +231,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
             'repo_name'      => $this->wrappedObject->repo->name,
             'message'        => $this->wrappedObject->message,
             'error'          => $this->wrappedObject->error,
+            'errors'         => $this->wrappedObject->errors,
             'status'         => $this->wrappedObject->status,
             'color'          => $this->color(),
             'summary'        => $this->summary(),

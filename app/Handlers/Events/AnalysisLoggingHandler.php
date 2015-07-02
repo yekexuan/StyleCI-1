@@ -77,9 +77,11 @@ class AnalysisLoggingHandler
                 break;
             case 2:
             case 3:
+            case 4:
+            case 5:
                 $this->logger->debug("Analysis of {$analysis->commit} has completed successfully.", $this->getContext('Analysis completed.', $analysis));
                 break;
-            case 4:
+            case 6:
                 $this->logger->notice("Analysis of {$analysis->commit} has failed due to misconfiguration.", $this->getContext('Analysis misconfigured.', $analysis));
                 break;
             default:
