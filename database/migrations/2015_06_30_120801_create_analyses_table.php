@@ -34,7 +34,8 @@ class CreateAnalysesTable extends Migration
             $table->integer('pr')->unsigned()->nullable();
             $table->char('commit', 40);
             $table->string('message', 128);
-            $table->text('error')->nullable();
+            $table->string('error', 128)->nullable();
+            $table->text('errors')->nullable();
             $table->tinyInteger('status')->unsigned()->default(0);
             $table->timestamps();
         });

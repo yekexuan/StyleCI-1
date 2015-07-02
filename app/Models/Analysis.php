@@ -28,6 +28,7 @@ use StyleCI\StyleCI\Presenters\AnalysisPresenter;
  * @property string      $commit
  * @property string      $message
  * @property string|null $error
+ * @property array|null  $errors
  * @property int         $status
  *
  * @author Graham Campbell <graham@alt-three.com>
@@ -54,6 +55,7 @@ class Analysis extends Model implements HasPresenter
         'commit'  => 'string',
         'message' => 'string',
         'error'   => 'string',
+        'errors'  => 'array',
         'status'  => 'int',
     ];
 

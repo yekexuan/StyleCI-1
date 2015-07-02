@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0dc918b0bbf75d332e41f082f2c30afc",
+    "hash": "3f9a45e7b5743c30a4e28343e23862be",
     "packages": [
         {
             "name": "alt-three/bugsnag",
@@ -390,21 +390,21 @@
         },
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "1.9.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "9ec4982baba8d0edefcd84f40a77a466fe30eca8"
+                "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
+                "reference": "14ca8068bfa9ddc436ac1c400307b07cd9a2aa30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/9ec4982baba8d0edefcd84f40a77a466fe30eca8",
-                "reference": "9ec4982baba8d0edefcd84f40a77a466fe30eca8",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/14ca8068bfa9ddc436ac1c400307b07cd9a2aa30",
+                "reference": "14ca8068bfa9ddc436ac1c400307b07cd9a2aa30",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
-                "php": ">=5.3.6",
+                "php": ">=5.5.9",
                 "sebastian/diff": "~1.1",
                 "symfony/console": "~2.3",
                 "symfony/event-dispatcher": "~2.1",
@@ -414,33 +414,40 @@
                 "symfony/stopwatch": "~2.5"
             },
             "require-dev": {
-                "satooshi/php-coveralls": "0.7.*@dev"
+                "phpunit/phpunit": "^4.7.6"
             },
             "bin": [
                 "php-cs-fixer"
             ],
             "type": "application",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Symfony\\CS\\": "Symfony/CS/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "authors": [
                 {
-                    "name": "Dariusz Rumiński",
-                    "email": "dariusz.ruminski@gmail.com"
-                },
-                {
                     "name": "Fabien Potencier",
                     "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Dariusz Rumiński",
+                    "email": "dariusz.ruminski@gmail.com"
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-06-28 16:32:35"
+            "support": {
+                "source": "https://github.com/StyleCI/PHP-CS-Fixer/tree/master"
+            },
+            "time": "2015-07-02 19:57:49"
         },
         {
             "name": "fideloper/proxy",
@@ -2385,16 +2392,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v0.3.3-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "2afa5e4b846348489a1b120cc4133a901ab8eade"
+                "reference": "43cd42f3205f7c6fd02ed64d4a67eb87c4e858c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/2afa5e4b846348489a1b120cc4133a901ab8eade",
-                "reference": "2afa5e4b846348489a1b120cc4133a901ab8eade",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/43cd42f3205f7c6fd02ed64d4a67eb87c4e858c2",
+                "reference": "43cd42f3205f7c6fd02ed64d4a67eb87c4e858c2",
                 "shasum": ""
             },
             "require": {
@@ -2411,7 +2418,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.3-dev"
+                    "dev-master": "0.4-dev"
                 }
             },
             "autoload": {
@@ -2439,14 +2446,11 @@
             ],
             "description": "StyleCI Config Is A Code Style Configuration Manager",
             "keywords": [
-                "Graham Campbell",
-                "GrahamCampbell",
+                "Alt Three",
                 "StyleCI",
-                "config",
-                "configuration",
-                "cs"
+                "config"
             ],
-            "time": "2015-06-27 16:07:25"
+            "time": "2015-07-02 14:27:16"
         },
         {
             "name": "styleci/fixer",
@@ -2454,18 +2458,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "d8bde3ab2eef7614b75eb995ac03747f8d6fb662"
+                "reference": "ad121ac0ba5fa8b635f3de393005651a55570203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/d8bde3ab2eef7614b75eb995ac03747f8d6fb662",
-                "reference": "d8bde3ab2eef7614b75eb995ac03747f8d6fb662",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/ad121ac0ba5fa8b635f3de393005651a55570203",
+                "reference": "ad121ac0ba5fa8b635f3de393005651a55570203",
                 "shasum": ""
             },
             "require": {
-                "fabpot/php-cs-fixer": "~1.9.1",
+                "fabpot/php-cs-fixer": "~2.0.0",
                 "php": ">=5.5.9",
-                "styleci/config": "0.3.*",
+                "styleci/config": "0.4.*",
                 "styleci/git": "0.3.*"
             },
             "require-dev": {
@@ -2511,7 +2515,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-01 23:42:47"
+            "time": "2015-07-02 20:28:19"
         },
         {
             "name": "styleci/git",
@@ -2519,12 +2523,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "9714f948e0cd5c6bbe46537e88cc50b50be0cfe3"
+                "reference": "cff99677d6637d12b41e1c144f8d4477b459b4f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/9714f948e0cd5c6bbe46537e88cc50b50be0cfe3",
-                "reference": "9714f948e0cd5c6bbe46537e88cc50b50be0cfe3",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/cff99677d6637d12b41e1c144f8d4477b459b4f4",
+                "reference": "cff99677d6637d12b41e1c144f8d4477b459b4f4",
                 "shasum": ""
             },
             "require": {
@@ -2576,7 +2580,7 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-07-01 23:41:41"
+            "time": "2015-07-02 18:18:46"
         },
         {
             "name": "styleci/login",

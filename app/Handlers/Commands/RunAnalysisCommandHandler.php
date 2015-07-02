@@ -79,12 +79,12 @@ class RunAnalysisCommandHandler
         try {
             $this->runAnalysis($analysis);
         } catch (ConfigExceptionInterface $e) {
-            $analysis->status = 4;
+            $analysis->status = 6;
             $analysis->error = $e->getMessage();
         } catch (GitExceptionInterface $e) {
-            $analysis->status = 5;
-        } catch (Exception $e) {
             $analysis->status = 7;
+        } catch (Exception $e) {
+            $analysis->status = 9;
         }
 
         $analysis->save();
@@ -105,12 +105,38 @@ class RunAnalysisCommandHandler
      */
     protected function runAnalysis(Analysis $analysis)
     {
-        $report = $this->builder->analyse($analysis->repo->name, $analysis->repo->id, $analysis->commit, $analysis->branch, $analysis->pr);
+        $report = $this->builder->analyse(
+            $analysis->repo->name,
+            $analysis->repo->id,
+            $analysis->commit,
+            $analysis->branch,
+            $analysis->pr,
+            $analysis->repo->default_branch
+        );
 
-        if ($report->successful()) {
+        if ($errors = $report->errors()) {
+            $analysis->status = 9;
+            $analysis->errors = $errors;
+
+            return;
+        }
+
+        $successful = $report->successful();
+        $lints = $report->lints();
+
+        if ($successful && $lints) {
+            $analysis->status = 4;
+            $analysis->errors = $lints;
+        } elseif (!$successful && $lints) {
+            $analysis->status = 5;
+            $analysis->errors = $lints;
+        } elseif ($successful && !$lints) {
             $analysis->status = 2;
         } else {
             $analysis->status = 3;
+        }
+
+        if (!$successful) {
             $this->storage->put($analysis->id, $report->diff());
         }
     }

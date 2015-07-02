@@ -81,6 +81,8 @@ class Status
             case 2:
                 return 'success';
             case 3:
+            case 4:
+            case 5:
                 return 'failure';
             default:
                 return 'error';

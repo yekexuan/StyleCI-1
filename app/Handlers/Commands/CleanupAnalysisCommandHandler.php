@@ -32,7 +32,7 @@ class CleanupAnalysisCommandHandler
     {
         $analysis = $command->analysis;
 
-        $analysis->status = 6;
+        $analysis->status = 8;
         $analysis->save();
 
         event(new AnalysisHasCompletedEvent($analysis));

@@ -76,12 +76,17 @@ class AnalysisNotificationsHandler
             'subject' => '[StyleCI] Failed Analysis',
         ];
 
-        if ($analysis->status === 3) {
-            $status = 'failed';
-        } elseif ($analysis->status === 4) {
-            $status = 'misconfigured';
-        } else {
-            $status = 'errored';
+        switch ($analysis->status) {
+            case 3:
+            case 4:
+            case 5:
+                $status = 'failed';
+                break;
+            case 6:
+                $status = 'misconfigured';
+                break;
+            default:
+                $status = 'errored';
         }
 
         foreach ($this->userRepository->collaborators($repo) as $user) {
