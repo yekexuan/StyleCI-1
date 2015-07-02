@@ -44,11 +44,6 @@ class RepoRoutes
             'uses' => 'ShieldController@handle',
         ]);
 
-        $router->post('repos/{repo}/analyse', [
-            'as'   => 'repo_analyse_path',
-            'uses' => 'RepoController@handleAnalyse',
-        ]);
-
         $router->get('analyses/{analysis}', [
             'as'   => 'analysis_path',
             'uses' => 'AnalysisController@handleShow',
