@@ -52,6 +52,13 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     protected $storage;
 
     /**
+     * The cached diff.
+     *
+     * @var string|null|false
+     */
+    protected $cache = false;
+
+    /**
      * Create a new analysis presenter instance.
      *
      * @param \StyleCI\Storage\Stores\StoreInterface $storage
@@ -206,9 +213,15 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      */
     public function raw_diff()
     {
-        if ($this->wrappedObject->status === 3 || $this->wrappedObject->status === 5) {
-            return $this->storage->get($this->wrappedObject->id);
+        if ($this->cache !== false) {
+            return $this->cache;
         }
+
+        if ($this->wrappedObject->status === 3 || $this->wrappedObject->status === 5) {
+            return $this->cache = $this->storage->get($this->wrappedObject->id);
+        }
+
+        return $this->cache = null;
     }
 
     /**
