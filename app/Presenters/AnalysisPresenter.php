@@ -206,7 +206,9 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      */
     public function raw_diff()
     {
-        return $this->storage->get($this->wrappedObject->id);
+        if ($this->wrappedObject->status === 3 || $this->wrappedObject->status === 5) {
+            return $this->storage->get($this->wrappedObject->id);
+        }
     }
 
     /**
