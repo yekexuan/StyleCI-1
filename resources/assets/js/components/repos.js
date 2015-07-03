@@ -39,7 +39,7 @@ var ReposList = Vue.extend({
                 return;
             }
             var self = this;
-            StyleCI.RealTime.getChannel('repos-' + StyleCI.globals.user)
+            StyleCI.RealTime.getChannel('user-' + StyleCI.globals.user)
                 .bind('AnalysisStatusUpdatedEvent',
                     self.RepoStatusChangeEventHandler
                 )

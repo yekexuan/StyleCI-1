@@ -83,7 +83,7 @@ class RealTimeRepoHandler
         $data = AutoPresenter::decorate($repo)->toArray();
 
         foreach ($users as $user) {
-            $this->pusher->trigger('repos-'.$user->id, $event, ['event' => $data]);
+            $this->pusher->trigger("user-{$user->id}", $event, ['event' => $data]);
         }
     }
 }

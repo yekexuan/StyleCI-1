@@ -15,6 +15,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Routing\Router;
 use StyleCI\StyleCI\Models\Analysis;
 use StyleCI\StyleCI\Models\Repo;
+use Vinkla\Hashids\Facades\Hashids;
 
 /**
  * This is the route service provider class.
@@ -43,8 +44,13 @@ class RouteServiceProvider extends ServiceProvider
     {
         parent::boot($router);
 
-        $router->model('analysis', Analysis::class);
-        $router->model('repo', Repo::class);
+        $router->bind('analysis', function ($value) {
+            return Analysis::findOrFail(Hashids::connection('analyses')->decode($value)[0]);
+        });
+
+        $router->bind('repo', function ($value) {
+            return Repo::findOrFail($value);
+        });
     }
 
     /**

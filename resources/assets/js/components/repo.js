@@ -1,6 +1,7 @@
 var RepoList = Vue.extend({
     ready: function() {
         this.repoId = $('#repo').data('id');
+        this.repoBranch = $('#repo').data('branch');
         this.getAnalyses();
         this.subscribe();
     },
@@ -22,11 +23,11 @@ var RepoList = Vue.extend({
                     self.isLoading = false;
                 });
         },
-        analyseRepo: function(branch, e) {
+        analyseRepo: function(e) {
             e.preventDefault();
             var self = this;
             var btn = $(e.target);
-            var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '/analyse?branch=' + branch;
+            var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '/analyse?branch=' + self.repoBranch;
 
             btn.button('loading');
 
@@ -44,7 +45,7 @@ var RepoList = Vue.extend({
                     btn.button('reset').blur();
                 });
         },
-        AnalysisStatusChangeEventHandler: function() {
+        AnalysisStatusChangeEventHandler: function(data) {
             var repo = _.findWhere(this.repos, { 'id': data.event.id });
 
             if (repo) {
@@ -55,7 +56,7 @@ var RepoList = Vue.extend({
         },
         subscribe: function() {
             var self = this;
-            StyleCI.RealTime.getChannel('ch-' + self.repoId).bind(
+            StyleCI.RealTime.getChannel('repo-' + self.repoId + '-' + self.repoBranch).bind(
                 'AnalysisStatusUpdatedEvent',
                 self.AnalysisStatusChangeEventHandler
             );
@@ -64,6 +65,7 @@ var RepoList = Vue.extend({
     data: function() {
         return {
             repoId: null,
+            repoBranch: null,
             isLoading: false,
             search: '',
             analyses: []
