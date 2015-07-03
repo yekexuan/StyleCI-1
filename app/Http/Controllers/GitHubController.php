@@ -71,7 +71,7 @@ class GitHubController extends AbstractController
         if ($input['head_commit'] && substr($input['ref'], 0, 11) === 'refs/heads/' && strpos($input['ref'], 'gh-pages') === false) {
             $branch = substr($input['ref'], 11);
             $commit = $input['head_commit']['id'];
-            $message = substr(strtok(strtok($input['head_commit']['message'], "\n"), "\r"), 0, 128);
+            $message = substr(strtok(strtok($input['head_commit']['message'], "\n"), "\r"), 0, 255);
 
             $this->dispatch(new AnalyseCommitCommand($repo, $branch, $commit, $message));
 
@@ -104,7 +104,7 @@ class GitHubController extends AbstractController
         if ($this->isValidBranch($input) && ((in_array($input['action'], ['opened', 'synchronize'], true) && !$this->isOriginRepo($input)) || $input['action'] === 'reopened')) {
             $pr = $input['number'];
             $commit = $input['pull_request']['head']['sha'];
-            $message = substr('Pull Request: '.strtok(strtok($input['pull_request']['title'], "\n"), "\r"), 0, 128);
+            $message = substr('Pull Request: '.strtok(strtok($input['pull_request']['title'], "\n"), "\r"), 0, 255);
 
             $this->dispatch(new AnalysePullRequestCommand($repo, $pr, $commit, $message));
 

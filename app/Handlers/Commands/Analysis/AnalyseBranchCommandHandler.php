@@ -67,7 +67,7 @@ class AnalyseBranchCommandHandler
         $repo = $command->repo;
         $branch = $command->branch;
         $commit = $this->branches->getCommit($repo, $branch);
-        $message = substr($this->commits->get($repo, $commit)['commit']['message'], 0, 128);
+        $message = substr($this->commits->get($repo, $commit)['commit']['message'], 0, 255);
 
         $analysis = Analysis::create([
             'repo_id' => $repo->id,
