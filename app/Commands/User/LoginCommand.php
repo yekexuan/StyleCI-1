@@ -22,7 +22,7 @@ class LoginCommand
     /**
      * The user's id.
      *
-     * @var string
+     * @var int
      */
     public $id;
 
@@ -55,9 +55,22 @@ class LoginCommand
     public $token;
 
     /**
+     * The validation rules.
+     *
+     * @var array
+     */
+    public $rules = [
+        'id'       => 'required|integer|min:1',
+        'name'     => 'required|string|between:1,255',
+        'username' => 'required|string|between:1,255',
+        'email'    => 'required|string|email|between:3,254',
+        'token'    => 'required|string|size:40',
+    ];
+
+    /**
      * Create a new login command instance.
      *
-     * @param string $id
+     * @param int    $id
      * @param string $name
      * @param string $username
      * @param string $email

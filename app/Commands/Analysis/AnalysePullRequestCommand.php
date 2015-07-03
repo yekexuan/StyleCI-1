@@ -49,6 +49,17 @@ class AnalysePullRequestCommand
     public $message;
 
     /**
+     * The validation rules.
+     *
+     * @var array
+     */
+    public $rules = [
+        'pr'      => 'required|integer|min:1',
+        'commit'  => 'required|string|size:40',
+        'message' => 'required|string|between:1,255',
+    ];
+
+    /**
      * Create a new analyse commit command instance.
      *
      * @param \StyleCI\StyleCI\Models\Repo $repo

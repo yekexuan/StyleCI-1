@@ -35,6 +35,15 @@ class AnalyseBranchCommand
     public $branch;
 
     /**
+     * The validation rules.
+     *
+     * @var array
+     */
+    public $rules = [
+        'branch' => 'required|string|between:1,255',
+    ];
+
+    /**
      * Create a new analyse branch command instance.
      *
      * @param \StyleCI\StyleCI\Models\Repo $repo

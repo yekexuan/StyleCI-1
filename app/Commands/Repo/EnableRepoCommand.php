@@ -40,6 +40,17 @@ class EnableRepoCommand
     public $user;
 
     /**
+     * The validation rules.
+     *
+     * @var array
+     */
+    public $rules = [
+        'id'   => 'required|integer|min:1',
+        'name' => 'required|string|between:3,255',
+        'user' => 'required|integer|min:1',
+    ];
+
+    /**
      * Create a new enable repo command instance.
      *
      * @param int    $id
