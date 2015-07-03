@@ -13,9 +13,9 @@ namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use StyleCI\StyleCI\Commands\Analysis\AnalyseBranchCommand;
-use StyleCI\StyleCI\Commands\Analysis\RunAnalysisCommand;
 use StyleCI\StyleCI\GitHub\Branches;
 use StyleCI\StyleCI\GitHub\Commits;
+use StyleCI\StyleCI\Jobs\Analysis\RunAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
@@ -76,6 +76,6 @@ class AnalyseBranchCommandHandler
             'message' => $message,
         ]);
 
-        $this->dispatch(new RunAnalysisCommand($analysis));
+        $this->dispatch(new RunAnalysisJob($analysis));
     }
 }

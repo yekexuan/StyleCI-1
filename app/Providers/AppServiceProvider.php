@@ -13,6 +13,7 @@ namespace StyleCI\StyleCI\Providers;
 
 use Illuminate\Bus\Dispatcher;
 use Illuminate\Support\ServiceProvider;
+use StyleCI\StyleCI\Handlers\Middleware\CommandValidatingMiddleware;
 use StyleCI\StyleCI\Http\Middleware\Authenticate;
 
 /**
@@ -32,8 +33,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot(Dispatcher $dispatcher)
     {
         $dispatcher->mapUsing(function ($command) {
-            return Dispatcher::simpleMapping($command, 'StyleCI\StyleCI\Commands', 'StyleCI\StyleCI\Handlers\Commands');
+            return Dispatcher::simpleMapping($command, 'StyleCI\StyleCI', 'StyleCI\StyleCI\Handlers');
         });
+
+        $dispatcher->pipeThrough([CommandValidatingMiddleware::class]);
     }
 
     /**

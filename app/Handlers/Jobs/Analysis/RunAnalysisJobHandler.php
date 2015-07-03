@@ -9,24 +9,24 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
+namespace StyleCI\StyleCI\Handlers\Jobs\Analysis;
 
 use Exception;
 use StyleCI\Config\Exceptions\ConfigExceptionInterface;
 use StyleCI\Fixer\ReportBuilder;
 use StyleCI\Git\Exceptions\GitExceptionInterface;
 use StyleCI\Storage\Stores\StoreInterface;
-use StyleCI\StyleCI\Commands\Analysis\RunAnalysisCommand;
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasStartedEvent;
+use StyleCI\StyleCI\Jobs\Analysis\RunAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
- * This is the run analysis command handler.
+ * This is the run analysis job handler.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class RunAnalysisCommandHandler
+class RunAnalysisJobHandler
 {
     /**
      * The report builder instance.
@@ -43,7 +43,7 @@ class RunAnalysisCommandHandler
     protected $storage;
 
     /**
-     * Create a new run analysis command handler instance.
+     * Create a new run analysis job handler instance.
      *
      * @param \StyleCI\Fixer\ReportBuilder           $builder
      * @param \StyleCI\Storage\Stores\StoreInterface $storage
@@ -57,15 +57,15 @@ class RunAnalysisCommandHandler
     }
 
     /**
-     * Handle the run analysis command.
+     * Handle the run analysis job.
      *
-     * @param \StyleCI\StyleCI\Commands\Analysis\RunAnalysisCommand $command
+     * @param \StyleCI\StyleCI\Jobs\Analysis\RunAnalysisJob $job
      *
      * @return void
      */
-    public function handle(RunAnalysisCommand $command)
+    public function handle(RunAnalysisJob $job)
     {
-        $analysis = $command->analysis;
+        $analysis = $job->analysis;
 
         // bail out if the repo is already analysed or canceled
         if ($analysis->status > 1) {

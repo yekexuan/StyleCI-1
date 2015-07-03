@@ -9,28 +9,28 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
+namespace StyleCI\StyleCI\Handlers\Jobs\Analysis;
 
-use StyleCI\StyleCI\Commands\Analysis\CleanupAnalysisCommand;
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
+use StyleCI\StyleCI\Jobs\Analysis\CleanupAnalysisJob;
 
 /**
- * This is the cleanup analysis command handler.
+ * This is the cleanup analysis job handler.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class CleanupAnalysisCommandHandler
+class CleanupAnalysisJobHandler
 {
     /**
-     * Handle the cleanup analysis command.
+     * Handle the cleanup analysis job.
      *
-     * @param \StyleCI\StyleCI\Commands\Analysis\CleanupAnalysisCommand $command
+     * @param \StyleCI\StyleCI\Jobs\Analysis\CleanupAnalysisJobs $job
      *
      * @return void
      */
-    public function handle(CleanupAnalysisCommand $command)
+    public function handle(CleanupAnalysisJob $job)
     {
-        $analysis = $command->analysis;
+        $analysis = $job->analysis;
 
         $analysis->status = 8;
         $analysis->save();
