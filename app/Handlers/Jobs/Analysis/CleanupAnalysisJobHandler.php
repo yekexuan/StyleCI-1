@@ -24,7 +24,7 @@ class CleanupAnalysisJobHandler
     /**
      * Handle the cleanup analysis job.
      *
-     * @param \StyleCI\StyleCI\Jobs\Analysis\CleanupAnalysisJobs $job
+     * @param \StyleCI\StyleCI\Jobs\Analysis\CleanupAnalysisJob $job
      *
      * @return void
      */
