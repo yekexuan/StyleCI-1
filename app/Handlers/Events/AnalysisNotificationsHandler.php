@@ -72,7 +72,7 @@ class AnalysisNotificationsHandler
         $mail = [
             'repo'    => $repo->name,
             'commit'  => $analysis->message,
-            'link'    => route('analysis_path', $analysis->id),
+            'link'    => route('analysis_path', AutoPresenter::decorate($analysis)->id),
             'subject' => '[StyleCI] Failed Analysis',
         ];
 

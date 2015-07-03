@@ -14,11 +14,12 @@ namespace StyleCI\StyleCI\Presenters;
 use Illuminate\Contracts\Support\Arrayable;
 use McCool\LaravelAutoPresenter\BasePresenter;
 use StyleCI\Storage\Stores\StoreInterface;
+use Vinkla\Hashids\Facades\Hashids;
 
 /**
  * This is the analysis presenter class.
  *
- * @property int           $id
+ * @property string        $id
  * @property int           $repo_id
  * @property RepoPresenter $repo
  * @property string|null   $branch
@@ -70,6 +71,16 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     {
         $this->storage = $storage;
         parent::__construct($resource);
+    }
+
+    /**
+     * Get the analysis status summary.
+     *
+     * @return string
+     */
+    public function id()
+    {
+        return Hashids::connection('analyses')->encode($this->wrappedObject->id);
     }
 
     /**
@@ -244,7 +255,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     public function toArray()
     {
         return [
-            'id'             => $this->wrappedObject->id,
+            'id'             => $this->id(),
             'commit'         => $this->wrappedObject->commit,
             'repo_id'        => $this->wrappedObject->repo_id,
             'repo_name'      => $this->wrappedObject->repo->name,
@@ -260,7 +271,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
             'github_id'      => $this->github_id(),
             'github_link'    => $this->github_link(),
             'created_at_iso' => $this->created_at_iso(),
-            'link'           => route('analysis_path', $this->wrappedObject->id),
+            'link'           => route('analysis_path', $this->id()),
         ];
     }
 }

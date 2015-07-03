@@ -145,6 +145,7 @@ return [
         'Illuminate\View\ViewServiceProvider',
         'Fideloper\Proxy\TrustedProxyServiceProvider',
         'McCool\LaravelAutoPresenter\AutoPresenterServiceProvider',
+        'Vinkla\Hashids\HashidsServiceProvider',
         'Vinkla\Pusher\PusherServiceProvider',
         'AltThree\Bugsnag\BugsnagServiceProvider',
         'AltThree\Logger\LoggerServiceProvider',

@@ -5,14 +5,13 @@ var Analysis = Vue.extend({
         SyntaxHighlighter.all();
     },
     ready: function() {
+        this.analysisId = $('#analysis').data('id');
         this.subscribe();
     },
     methods: {
         AnalysisStatusChangeEventHandler: function(data) {
-            var $analysis = $('#js-analysis-' + data.event.shorthandId);
-
             // The analysis is the one we are looking at.
-            if ($analysis.length) {
+            if ($('#analysis').length) {
                 var $status = $('p.js-status');
 
                 $status.html('<i class="' + data.event.icon + '"></i> ' + data.event.description);
@@ -28,7 +27,7 @@ var Analysis = Vue.extend({
         },
         subscribe: function() {
             var self = this;
-            StyleCI.RealTime.getChannel('ch-' + $('.js-channel').data('channel')).bind(
+            StyleCI.RealTime.getChannel('analysis-' + self.analysisId).bind(
                 'AnalysisStatusUpdatedEvent',
                 self.AnalysisStatusChangeEventHandler
             );
@@ -36,6 +35,7 @@ var Analysis = Vue.extend({
     },
     data: function() {
         return {
+            analysisId: false,
             isLoading: false,
             search: '',
             repos: []

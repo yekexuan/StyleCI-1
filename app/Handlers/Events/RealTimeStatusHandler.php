@@ -64,14 +64,14 @@ class RealTimeStatusHandler
 
         $analysis = AutoPresenter::decorate($event->analysis);
 
-        if ($analysis->branch !== $repo->default_branch) {
-            return;
-        }
+        $this->pusher->trigger("analysis-{$analysis->id}", 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
 
-        $this->pusher->trigger('ch-'.$analysis->repo_id, 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
+        $this->pusher->trigger("repo-{$analysis->repo_id}-{$analysis->branch}", 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
 
-        foreach ($this->userRepository->collaborators($repo) as $user) {
-            $this->pusher->trigger('repos-'.$user->id, 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
+        if ($analysis->branch === $repo->default_branch) {
+            foreach ($this->userRepository->collaborators($repo) as $user) {
+                $this->pusher->trigger("user-{$user->id}", 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
+            }
         }
     }
 }

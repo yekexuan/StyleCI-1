@@ -14,7 +14,7 @@
 
 @section('content')
 <sc-analysis>
-    <div id="js-analysis-{{ $analysis->shorthandId }}" class="analysis js-channel" data-channel="{{ $analysis->repo->id }}">
+    <div id="analysis" class="analysis" data-id="{{ $analysis->id }}">
         <div class="well">
             <div class="pull-right">
                 <a href="#" data-toggle="modal" data-target="#badge-modal">
