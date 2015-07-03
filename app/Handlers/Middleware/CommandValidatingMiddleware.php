@@ -40,15 +40,14 @@ class CommandValidatingMiddleware
      */
     public function __construct(Factory $factory)
     {
-        $this->builder = $builder;
-        $this->storage = $storage;
+        $this->factory = $factory;
     }
 
     /**
      * Validate the command before execution.
      *
-     * @param object  $command
-     * @param Closure $next
+     * @param object   $command
+     * @param \Closure $next
      *
      * @throws \Watson\Validating\ValidationException
      *
