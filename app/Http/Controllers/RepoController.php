@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\View;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
-use StyleCI\StyleCI\Commands\AnalyseBranchCommand;
+use StyleCI\StyleCI\Commands\Analysis\AnalyseBranchCommand;
 use StyleCI\StyleCI\GitHub\Repos;
 use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Repositories\RepoRepository;

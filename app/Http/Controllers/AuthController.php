@@ -14,7 +14,7 @@ namespace StyleCI\StyleCI\Http\Controllers;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Support\Facades\Redirect;
 use StyleCI\Login\LoginProvider;
-use StyleCI\StyleCI\Commands\LoginCommand;
+use StyleCI\StyleCI\Commands\User\LoginCommand;
 
 /**
  * This is the auth controller class.

@@ -14,8 +14,8 @@ namespace StyleCI\StyleCI\Http\Controllers;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Str;
-use StyleCI\StyleCI\Commands\AnalyseCommitCommand;
-use StyleCI\StyleCI\Commands\AnalysePullRequestCommand;
+use StyleCI\StyleCI\Commands\Analysis\AnalyseCommitCommand;
+use StyleCI\StyleCI\Commands\Analysis\AnalysePullRequestCommand;
 use StyleCI\StyleCI\Models\Repo;
 
 /**
