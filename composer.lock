@@ -394,12 +394,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "14ca8068bfa9ddc436ac1c400307b07cd9a2aa30"
+                "reference": "84e88c53abb4e2b9f04e11440c6b037d678ea3b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/14ca8068bfa9ddc436ac1c400307b07cd9a2aa30",
-                "reference": "14ca8068bfa9ddc436ac1c400307b07cd9a2aa30",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/84e88c53abb4e2b9f04e11440c6b037d678ea3b6",
+                "reference": "84e88c53abb4e2b9f04e11440c6b037d678ea3b6",
                 "shasum": ""
             },
             "require": {
@@ -447,7 +447,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/PHP-CS-Fixer/tree/master"
             },
-            "time": "2015-07-02 19:57:49"
+            "time": "2015-07-03 00:00:20"
         },
         {
             "name": "fideloper/proxy",
@@ -1546,16 +1546,16 @@
         },
         {
             "name": "knplabs/github-api",
-            "version": "1.4.12",
+            "version": "1.4.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/php-github-api.git",
-                "reference": "ccf5e49a2454c1b102333586d80ce67012b5080f"
+                "reference": "989549acaaf060756f5e3e29dc9a37321bad9f00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/ccf5e49a2454c1b102333586d80ce67012b5080f",
-                "reference": "ccf5e49a2454c1b102333586d80ce67012b5080f",
+                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/989549acaaf060756f5e3e29dc9a37321bad9f00",
+                "reference": "989549acaaf060756f5e3e29dc9a37321bad9f00",
                 "shasum": ""
             },
             "require": {
@@ -1603,7 +1603,7 @@
                 "gist",
                 "github"
             ],
-            "time": "2015-06-17 08:02:22"
+            "time": "2015-07-02 22:26:20"
         },
         {
             "name": "laravel/framework",
@@ -2396,12 +2396,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "43cd42f3205f7c6fd02ed64d4a67eb87c4e858c2"
+                "reference": "0b211384cf88ef7d16216f9928566a2ecafca298"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/43cd42f3205f7c6fd02ed64d4a67eb87c4e858c2",
-                "reference": "43cd42f3205f7c6fd02ed64d4a67eb87c4e858c2",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/0b211384cf88ef7d16216f9928566a2ecafca298",
+                "reference": "0b211384cf88ef7d16216f9928566a2ecafca298",
                 "shasum": ""
             },
             "require": {
@@ -2450,7 +2450,7 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-02 14:27:16"
+            "time": "2015-07-03 00:02:26"
         },
         {
             "name": "styleci/fixer",
@@ -2458,12 +2458,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "ad121ac0ba5fa8b635f3de393005651a55570203"
+                "reference": "25b31882c98503e2e11a52ab1c5fc48d2493f4f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/ad121ac0ba5fa8b635f3de393005651a55570203",
-                "reference": "ad121ac0ba5fa8b635f3de393005651a55570203",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/25b31882c98503e2e11a52ab1c5fc48d2493f4f8",
+                "reference": "25b31882c98503e2e11a52ab1c5fc48d2493f4f8",
                 "shasum": ""
             },
             "require": {
@@ -2515,7 +2515,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-02 20:28:19"
+            "time": "2015-07-02 23:43:31"
         },
         {
             "name": "styleci/git",
