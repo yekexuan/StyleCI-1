@@ -14,6 +14,7 @@ namespace StyleCI\StyleCI\Providers;
 use Illuminate\Bus\Dispatcher;
 use Illuminate\Support\ServiceProvider;
 use StyleCI\StyleCI\Http\Middleware\Authenticate;
+use StyleCI\StyleCI\Handlers\Middleware\CommandValidatingMiddleware;
 
 /**
  * This is the app service provider class.
@@ -34,6 +35,8 @@ class AppServiceProvider extends ServiceProvider
         $dispatcher->mapUsing(function ($command) {
             return Dispatcher::simpleMapping($command, 'StyleCI\StyleCI', 'StyleCI\StyleCI\Handlers');
         });
+
+        $dispatcher->pipeThrough([CommandValidatingMiddleware::class]);
     }
 
     /**

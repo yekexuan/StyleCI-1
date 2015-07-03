@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8264b732e3a72c60776824d7a667e9f9",
+    "hash": "276e4cf8fc86c19a9b8e1690ff38aa91",
     "packages": [
         {
             "name": "alt-three/bugsnag",
@@ -3556,12 +3556,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/vinkla/hashids.git",
-                "reference": "5872b69ff21ead364a34add79f9cf201d68b3627"
+                "reference": "e2383352dec23ae0343252a52f57e2a391d654ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinkla/hashids/zipball/5872b69ff21ead364a34add79f9cf201d68b3627",
-                "reference": "5872b69ff21ead364a34add79f9cf201d68b3627",
+                "url": "https://api.github.com/repos/vinkla/hashids/zipball/e2383352dec23ae0343252a52f57e2a391d654ac",
+                "reference": "e2383352dec23ae0343252a52f57e2a391d654ac",
                 "shasum": ""
             },
             "require": {
@@ -3579,7 +3579,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -3610,7 +3610,7 @@
                 "obfuscate",
                 "youtube"
             ],
-            "time": "2015-07-02 08:56:08"
+            "time": "2015-07-03 18:16:48"
         },
         {
             "name": "vinkla/pusher",
@@ -3719,6 +3719,61 @@
                 "environment"
             ],
             "time": "2015-05-30 15:59:26"
+        },
+        {
+            "name": "watson/validating",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dwightwatson/validating.git",
+                "reference": "c32912f760b456c043657951683ed6c468ab83e7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dwightwatson/validating/zipball/c32912f760b456c043657951683ed6c468ab83e7",
+                "reference": "c32912f760b456c043657951683ed6c468ab83e7",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "5.0.*|5.1.*",
+                "illuminate/database": "5.0.*|5.1.*",
+                "illuminate/events": "5.0.*|5.1.*",
+                "illuminate/support": "5.0.*|5.1.*",
+                "illuminate/validation": "5.0.*|5.1.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Watson\\Validating\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dwight Watson",
+                    "email": "dwight@studiousapp.com"
+                }
+            ],
+            "description": "Eloquent model validating trait.",
+            "keywords": [
+                "eloquent",
+                "laravel",
+                "validation"
+            ],
+            "time": "2015-06-03 02:25:38"
         }
     ],
     "packages-dev": [
@@ -5036,9 +5091,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "vinkla/hashids": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
