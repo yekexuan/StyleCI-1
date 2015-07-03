@@ -16,6 +16,7 @@ use Illuminate\Contracts\Routing\Registrar;
 /**
  * This is the api routes class.
  *
+ * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
  */
 class ApiRoutes
@@ -43,6 +44,11 @@ class ApiRoutes
             $router->post('repos/{repo}/analyse', [
                 'as'   => 'repo_analyse_path',
                 'uses' => 'RepoController@handleAnalyse',
+            ]);
+
+            $router->get('analyses/{analysis}', [
+                'as'   => 'analysis_path',
+                'uses' => 'AnalysisController@handleShow',
             ]);
 
             $router->get('account/repos', [

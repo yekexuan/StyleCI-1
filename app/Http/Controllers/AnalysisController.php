@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
@@ -32,6 +33,10 @@ class AnalysisController extends AbstractController
      */
     public function handleShow(Analysis $analysis)
     {
+        if (Request::ajax()) {
+            return View::make('results', compact('analysis'));
+        }
+
         return View::make('analysis', compact('analysis'));
     }
 
