@@ -13,7 +13,7 @@ namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use StyleCI\StyleCI\Commands\Analysis\AnalyseCommitCommand;
-use StyleCI\StyleCI\Commands\Analysis\RunAnalysisCommand;
+use StyleCI\StyleCI\Jobs\Analysis\RunAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
@@ -41,6 +41,6 @@ class AnalyseCommitCommandHandler
             'message' => $command->message,
         ]);
 
-        $this->dispatch(new RunAnalysisCommand($analysis));
+        $this->dispatch(new RunAnalysisJob($analysis));
     }
 }

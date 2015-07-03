@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Commands\Analysis;
+namespace StyleCI\StyleCI\Jobs\Analysis;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\SerializesModels;
@@ -17,11 +17,11 @@ use StyleCI\StyleCI\Events\Analysis\AnalysisWasQueuedEvent;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
- * This is the run analysis command.
+ * This is the run analysis job.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class RunAnalysisCommand implements ShouldQueue
+class RunAnalysisJob implements ShouldQueue
 {
     use SerializesModels;
 
@@ -33,7 +33,7 @@ class RunAnalysisCommand implements ShouldQueue
     public $analysis;
 
     /**
-     * Create a new run analysis command instance.
+     * Create a new run analysis job instance.
      *
      * @param \StyleCI\StyleCI\Models\Analysis $analysis
      *

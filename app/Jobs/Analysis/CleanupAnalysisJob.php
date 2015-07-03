@@ -9,18 +9,18 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Commands\Analysis;
+namespace StyleCI\StyleCI\Jobs\Analysis;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\SerializesModels;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
- * This is the cleanup analysis command.
+ * This is the cleanup analysis job.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class CleanupAnalysisCommand implements ShouldQueue
+class CleanupAnalysisJob implements ShouldQueue
 {
     use SerializesModels;
 
@@ -32,7 +32,7 @@ class CleanupAnalysisCommand implements ShouldQueue
     public $analysis;
 
     /**
-     * Create a new cleanup analysis command instance.
+     * Create a new cleanup analysis job instance.
      *
      * @param \StyleCI\StyleCI\Models\Analysis $analysis
      *

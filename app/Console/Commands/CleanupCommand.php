@@ -13,7 +13,7 @@ namespace StyleCI\StyleCI\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use StyleCI\StyleCI\Commands\Analysis\CleanupAnalysisCommand;
+use StyleCI\StyleCI\Jobs\Analysis\CleanupAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
@@ -48,7 +48,7 @@ class CleanupCommand extends Command
     {
         foreach (Analysis::old()->pending()->orderBy('created_at', 'desc')->get() as $analysis) {
             $this->info("Cleaning up analysis {$analysis->id}.");
-            $this->dispatch(new CleanupAnalysisCommand($analysis));
+            $this->dispatch(new CleanupAnalysisJob($analysis));
         }
     }
 }
