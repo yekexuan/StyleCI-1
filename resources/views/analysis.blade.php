@@ -44,7 +44,7 @@
                                 {{ $analysis->github_id }}
                             </a>
                         </li>
-                        @if ($analysis->raw_diff)
+                        @if ($analysis->has_diff)
                         <li>
                             <a class="btn" href="{{ route('analysis_download_path', $analysis->id) }}">
                                 <i class="fa fa-cloud-download"></i> Download patch

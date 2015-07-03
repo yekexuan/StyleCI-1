@@ -38,6 +38,7 @@ use Vinkla\Hashids\Facades\Hashids;
  * @property string        $time_ago
  * @property string        $created_at_iso
  * @property string|null   $raw_diff
+ * @property bool          $has_diff
  * @property Diff          $diff
  *
  * @author Graham Campbell <graham@alt-three.com>
@@ -51,13 +52,6 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      * @var \StyleCI\Storage\Stores\StoreInterface
      */
     protected $storage;
-
-    /**
-     * The cached diff.
-     *
-     * @var string|null|false
-     */
-    protected $cache = false;
 
     /**
      * Create a new analysis presenter instance.
@@ -218,21 +212,25 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     }
 
     /**
+     * Is a diff present.
+     *
+     * @return bool
+     */
+    public function has_diff()
+    {
+        return $this->wrappedObject->status === 3 || $this->wrappedObject->status === 5;
+    }
+
+    /**
      * Get the raw diff.
      *
      * @return string|null
      */
     public function raw_diff()
     {
-        if ($this->cache !== false) {
-            return $this->cache;
+        if ($this->has_diff()) {
+            return $this->storage->get($this->wrappedObject->id);
         }
-
-        if ($this->wrappedObject->status === 3 || $this->wrappedObject->status === 5) {
-            return $this->cache = $this->storage->get($this->wrappedObject->id);
-        }
-
-        return $this->cache = null;
     }
 
     /**
@@ -242,9 +240,15 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      */
     public function diff()
     {
-        $diff = (string) $this->raw_diff();
+        $diff = $this->raw_diff()
 
-        return new Diff(ltrim($diff));
+        if (!is_string($diff)) {
+            $diff = '';
+        } else {
+            $diff = ltrim($diff);
+        }
+
+        return new Diff($diff);
     }
 
     /**
@@ -260,9 +264,8 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
             'repo_id'        => $this->wrappedObject->repo_id,
             'repo_name'      => $this->wrappedObject->repo->name,
             'message'        => $this->wrappedObject->message,
-            'error'          => $this->wrappedObject->error,
-            'errors'         => $this->wrappedObject->errors,
             'status'         => $this->wrappedObject->status,
+            'has_diff'       => $this->has_diff(),
             'color'          => $this->color(),
             'summary'        => $this->summary(),
             'description'    => $this->description(),
