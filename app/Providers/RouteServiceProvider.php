@@ -15,6 +15,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Routing\Router;
 use StyleCI\StyleCI\Models\Analysis;
 use StyleCI\StyleCI\Models\Repo;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Vinkla\Hashids\Facades\Hashids;
 
 /**
@@ -45,11 +46,21 @@ class RouteServiceProvider extends ServiceProvider
         parent::boot($router);
 
         $router->bind('analysis', function ($value) {
-            return Analysis::findOrFail(Hashids::connection('analyses')->decode($value)[0]);
+            $decoded = Hashids::connection('analyses')->decode($value);
+
+            if (isset($decoded[0]) && $analysis = Analysis::find($decoded[0])) {
+                return $analysis;
+            }
+
+            throw new NotFoundHttpException('Analysis not found.');
         });
 
         $router->bind('repo', function ($value) {
-            return Repo::findOrFail($value);
+            if ($repo = Repo::find($value)) {
+                return $repo;
+            }
+
+            throw new NotFoundHttpException('Repo not found.');
         });
     }
 
