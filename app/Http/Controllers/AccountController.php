@@ -11,10 +11,10 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
-use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\View;
 use StyleCI\StyleCI\Commands\Repo\DisableRepoCommand;
 use StyleCI\StyleCI\Commands\Repo\EnableRepoCommand;
@@ -31,13 +31,6 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 class AccountController extends AbstractController
 {
     /**
-     * The authentication guard instance.
-     *
-     * @var \Illuminate\Contracts\Auth\Guard
-     */
-    protected $auth;
-
-    /**
      * The github repos instance.
      *
      * @var \StyleCI\StyleCI\GitHub\Repos
@@ -47,16 +40,14 @@ class AccountController extends AbstractController
     /**
      * Create a new account controller instance.
      *
-     * @param \Illuminate\Contracts\Auth\Guard $auth
-     * @param \StyleCI\StyleCI\GitHub\Repos    $repos
+     * @param \StyleCI\StyleCI\GitHub\Repos $repos
      *
      * @return void
      */
-    public function __construct(Guard $auth, Repos $repos)
+    public function __construct(Repos $repos)
     {
         parent::__construct();
 
-        $this->auth = $auth;
         $this->repos = $repos;
 
         $this->middleware('auth');
@@ -75,15 +66,13 @@ class AccountController extends AbstractController
     /**
      * Show the user's public repositories.
      *
-     * @param \Illuminate\Http\Request $request
-     *
-     * @return \Illuminate\View\View|\Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Response|\Illuminate\View\View
      */
-    public function handleListRepos(Request $request)
+    public function handleListRepos()
     {
-        $repos = $this->repos->get($this->auth->user(), true);
+        $repos = $this->repos->get(Auth::user(), true);
 
-        if ($request->ajax()) {
+        if (Request::ajax()) {
             return new JsonResponse(['data' => $repos]);
         }
 
@@ -93,15 +82,13 @@ class AccountController extends AbstractController
     /**
      * Sync the user's public repositories.
      *
-     * @param \Illuminate\Http\Request $request
-     *
-     * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Response
      */
-    public function handleSync(Request $request)
+    public function handleSync()
     {
-        $this->repos->flush($this->auth->user());
+        $this->repos->flush(Auth::user());
 
-        if ($request->ajax()) {
+        if (Request::ajax()) {
             return new JsonResponse(['flushed' => true]);
         }
 
@@ -111,24 +98,23 @@ class AccountController extends AbstractController
     /**
      * Enable StyleCI for a repo.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param int                      $id
+     * @param int $id
      *
      * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      *
-     * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Response
      */
-    public function handleEnable(Request $request, $id)
+    public function handleEnable($id)
     {
-        $repo = array_get($this->repos->get($this->auth->user(), true), $id);
+        $repo = array_get($this->repos->get(Auth::user(), true), $id);
 
         if (!$repo) {
             throw new HttpException(403);
         }
 
-        $this->dispatch(new EnableRepoCommand($id, $repo['name'], $this->auth->user()->id));
+        $this->dispatch(new EnableRepoCommand($id, $repo['name'], Auth::user()->id));
 
-        if ($request->ajax()) {
+        if (Request::ajax()) {
             return new JsonResponse(['enabled' => true]);
         }
 
@@ -138,22 +124,21 @@ class AccountController extends AbstractController
     /**
      * Disable StyleCI for a repo.
      *
-     * @param \Illuminate\Http\Request     $request
      * @param \StyleCI\StyleCI\Models\Repo $repo
      *
      * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      *
-     * @return \Illuminate\Http\Response|\Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Response
      */
-    public function handleDisable(Request $request, Repo $repo)
+    public function handleDisable(Repo $repo)
     {
-        if (!array_get($this->repos->get($this->auth->user(), true), $repo->id)) {
+        if (!array_get($this->repos->get(Auth::user(), true), $repo->id)) {
             throw new HttpException(403);
         }
 
         $this->dispatch(new DisableRepoCommand($repo));
 
-        if ($request->ajax()) {
+        if (Request::ajax()) {
             return new JsonResponse(['enabled' => false]);
         }
 
@@ -167,7 +152,7 @@ class AccountController extends AbstractController
      */
     public function handleDelete()
     {
-        $this->dispatch(new DeleteAccountCommand($this->auth->user()));
+        $this->dispatch(new DeleteAccountCommand(Auth::user()));
 
         return Redirect::route('home')->with('success', 'Your account has been successfully deleted!');
     }

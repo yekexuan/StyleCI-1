@@ -11,8 +11,8 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Request;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Models\Analysis;
 use StyleCI\StyleCI\Models\Repo;
@@ -20,6 +20,7 @@ use StyleCI\StyleCI\Models\Repo;
 /**
  * This is the shield controller class.
  *
+ * @author Graham Campbell <graham@alt-three.com>
  * @author James Brooks <jbrooksuk@me.com>
  */
 class ShieldController extends AbstractController
@@ -28,15 +29,14 @@ class ShieldController extends AbstractController
      * Handles a request to serve a shield.
      *
      * @param \StyleCI\StyleCI\Models\Repo $repo
-     * @param \Illuminate\Http\Request     $request
      *
      * @return \Illuminate\Http\Response
      */
-    public function handle(Repo $repo, Request $request)
+    public function handle(Repo $repo)
     {
         $analysis = $repo->analyses()->where('branch', $repo->default_branch)->orderBy('created_at', 'desc')->first();
 
-        $shieldUrl = $this->generateShieldUrl($analysis, $request->get('style', 'flat-square'));
+        $shieldUrl = $this->generateShieldUrl($analysis, Request::get('style', 'flat-square'));
 
         return Redirect::to($shieldUrl);
     }

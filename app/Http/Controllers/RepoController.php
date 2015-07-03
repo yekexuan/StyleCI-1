@@ -11,8 +11,8 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
-use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\View;
@@ -45,32 +45,30 @@ class RepoController extends AbstractController
     /**
      * Handles the request to list the repos.
      *
-     * @param \Illuminate\Contracts\Auth\Guard             $auth
      * @param \StyleCI\StyleCI\Repositories\RepoRepository $repoRepository
      *
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Http\Response|\Illuminate\View\View
      */
-    public function handleList(Guard $auth, RepoRepository $repoRepository)
+    public function handleList(RepoRepository $repoRepository)
     {
-        $repos = $repoRepository->allByUser($auth->user());
+        $repos = $repoRepository->allByUser(Auth::user());
 
         if (Request::ajax()) {
             return new JsonResponse(['data' => AutoPresenter::decorate($repos)->toArray()]);
         }
 
-        return View::make('repos', compact('repos'));
+        return View::make('repos')->withRepos($repos);
     }
 
     /**
      * Handles the request to show a repo.
      *
-     * @param \StyleCI\StyleCI\Models\Repo     $repo
-     * @param \Illuminate\Contracts\Auth\Guard $auth
-     * @param \StyleCI\StyleCI\GitHub\Repos    $repos
+     * @param \StyleCI\StyleCI\Models\Repo  $repo
+     * @param \StyleCI\StyleCI\GitHub\Repos $repos
      *
-     * @return \Illuminate\View\View
+     * @return \Illuminate\Http\Response|\Illuminate\View\View
      */
-    public function handleShow(Repo $repo, Guard $auth, Repos $repos)
+    public function handleShow(Repo $repo, Repos $repos)
     {
         $analyses = $repo->analyses()->where('branch', $repo->default_branch)->orderBy('created_at', 'desc')->paginate(50);
 
@@ -78,29 +76,28 @@ class RepoController extends AbstractController
             return new JsonResponse(['data' => AutoPresenter::decorate($analyses->getCollection())->toArray()]);
         }
 
-        if ($auth->user()) {
-            $canAnalyse = (bool) array_get($repos->get($auth->user()), $repo->id);
+        if (Auth::user()) {
+            $canAnalyse = (bool) array_get($repos->get(Auth::user()), $repo->id);
         } else {
             $canAnalyse = false;
         }
 
-        return View::make('repo', compact('repo', 'analyses', 'canAnalyse'));
+        return View::make('repo')->withRepo($repo)->withAnalysis($analyses)->withCanAnalyse($canAnalyse);
     }
 
     /**
      * Handles the request to analyse a repo.
      *
-     * @param \StyleCI\StyleCI\Models\Repo     $repo
-     * @param \Illuminate\Contracts\Auth\Guard $auth
-     * @param \StyleCI\StyleCI\GitHub\Repos    $repos
+     * @param \StyleCI\StyleCI\Models\Repo  $repo
+     * @param \StyleCI\StyleCI\GitHub\Repos $repos
      *
      * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleAnalyse(Repo $repo, Guard $auth, Repos $repos)
+    public function handleAnalyse(Repo $repo, Repos $repos)
     {
-        if (!array_get($repos->get($auth->user()), $repo->id)) {
+        if (!array_get($repos->get(Auth::user()), $repo->id)) {
             throw new HttpException(403);
         }
 

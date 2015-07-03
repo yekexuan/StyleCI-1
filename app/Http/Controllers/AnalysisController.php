@@ -34,10 +34,10 @@ class AnalysisController extends AbstractController
     public function handleShow(Analysis $analysis)
     {
         if (Request::ajax()) {
-            return View::make('results', compact('analysis'));
+            return View::make('results')->withAnalysis($analysis);
         }
 
-        return View::make('analysis', compact('analysis'));
+        return View::make('analysis')->withAnalysis($analysis);
     }
 
     /**
@@ -49,9 +49,7 @@ class AnalysisController extends AbstractController
      */
     public function handleDiff(Analysis $analysis)
     {
-        $diff = AutoPresenter::decorate($analysis)->raw_diff;
-
-        return Response::make($diff)
+        return Response::make(AutoPresenter::decorate($analysis)->raw_diff)
             ->header('Content-Type', 'text/plain; charset=UTF-8');
     }
 
@@ -64,9 +62,7 @@ class AnalysisController extends AbstractController
      */
     public function handleDiffDownload(Analysis $analysis)
     {
-        $diff = AutoPresenter::decorate($analysis)->raw_diff;
-
-        return Response::make($diff)
+        return Response::make(AutoPresenter::decorate($analysis)->raw_diff)
             ->header('Content-Type', 'text/plain; charset=UTF-8')
             ->header('Content-Disposition', 'attachment; filename=patch.txt');
     }

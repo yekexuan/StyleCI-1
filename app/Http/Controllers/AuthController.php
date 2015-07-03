@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
-use Illuminate\Contracts\Auth\Guard;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use StyleCI\Login\LoginProvider;
 use StyleCI\StyleCI\Commands\User\LoginCommand;
@@ -41,7 +41,7 @@ class AuthController extends AbstractController
      *
      * @param \StyleCI\Login\LoginProvider $login
      *
-     * @return \Illuminate\Http\RedirectResponse
+     * @return \Illuminate\Http\Response
      */
     public function handleLogin(LoginProvider $login)
     {
@@ -70,13 +70,11 @@ class AuthController extends AbstractController
     /**
      * Logout a user account.
      *
-     * @param \Illuminate\Contracts\Auth\Guard $auth
-     *
      * @return \Illuminate\Http\Response
      */
-    public function handleLogout(Guard $auth)
+    public function handleLogout()
     {
-        $auth->logout();
+        Auth::logout();
 
         return Redirect::route('home');
     }

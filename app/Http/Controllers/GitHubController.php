@@ -38,7 +38,7 @@ class GitHubController extends AbstractController
     /**
      * Handles the request made to StyleCI by the GitHub API.
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return \Illuminate\Http\Response
      */
     public function handle()
     {

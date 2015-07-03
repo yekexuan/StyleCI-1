@@ -30,7 +30,6 @@
         "alt-three/bugsnag": "^1.0",
         "alt-three/logger": "^1.0",
         "fideloper/proxy": "^3.0",
-        "graham-campbell/binput": "^3.2",
         "graham-campbell/exceptions": "^3.1",
         "graham-campbell/core": "^4.1",
         "graham-campbell/github": "^4.0",
