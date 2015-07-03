@@ -38,15 +38,13 @@ return [
     'connections' => [
 
         'main' => [
-            'salt'     => 'salt',
-            'length'   => 0,
-            'alphabet' => '',
+            'salt'   => 'salt',
+            'length' => 0,
         ],
 
         'analyses' => [
-            'salt'     => env('ANALYSIS_SALT', 'salt'),
-            'length'   => 6,
-            'alphabet' => 'abcdefghijklmnopqrstuvwxyz',
+            'salt'   => env('ANALYSIS_SALT', 'salt'),
+            'length' => 6,
         ],
 
     ],
