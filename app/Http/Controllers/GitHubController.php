@@ -62,9 +62,9 @@ class GitHubController extends AbstractController
     protected function handlePush()
     {
         $input = Request::input();
-        $repo = Repo::findOrFail($input['repository']['id']);
+        $repo = Repo::find($input['repository']['id']);
 
-        if ($val = $this->handleValidation($repo->token)) {
+        if ($val = $this->handleValidation($repo)) {
             return $val;
         }
 
@@ -86,20 +86,22 @@ class GitHubController extends AbstractController
      *
      * Here's we analysing all new commits pushed a pull request ONLY from
      * repos that are not the original. Commits pushed to the original will be
-     * analaysed via the push hook instead.
+     * analaysed via the push hook instead. If the PR has been closed and
+     * reopened, we'll then analyse the commit again, regardless if it was from
+     * the original repo or not.
      *
      * @return \Illuminate\Http\JsonResponse
      */
     protected function handlePullRequest()
     {
         $input = Request::input();
-        $repo = Repo::findOrFail($input['pull_request']['base']['repo']['id']);
+        $repo = Repo::find($input['pull_request']['base']['repo']['id']);
 
-        if ($val = $this->handleValidation($repo->token)) {
+        if ($val = $this->handleValidation($repo)) {
             return $val;
         }
 
-        if (($input['action'] === 'opened' || $input['action'] === 'reopened' || $input['action'] === 'synchronize') && $input['pull_request']['head']['repo']['full_name'] !== $input['pull_request']['base']['repo']['full_name'] && strpos($input['pull_request']['head']['ref'], 'gh-pages') === false) {
+        if ($this->isValidBranch($input) && ((in_array($input['action'], ['opened', 'synchronize'], true) && !$this->isOriginRepo($input)) || $input['action'] === 'reopened')) {
             $pr = $input['number'];
             $commit = $input['pull_request']['head']['sha'];
             $message = substr('Pull Request: '.strtok(strtok($input['pull_request']['title'], "\n"), "\r"), 0, 128);
@@ -113,6 +115,30 @@ class GitHubController extends AbstractController
     }
 
     /**
+     * Was the PR sent to a valid branch.
+     *
+     * @param array $input
+     *
+     * @return bool
+     */
+    protected function isValidBranch(array $input)
+    {
+        return strpos($input['pull_request']['base']['ref'], 'gh-pages') === false;
+    }
+
+    /**
+     * Was the PR sent from the origin repo.
+     *
+     * @param array $input
+     *
+     * @return bool
+     */
+    protected function isOriginRepo(array $input)
+    {
+        return $input['pull_request']['head']['repo']['full_name'] === $input['pull_request']['base']['repo']['full_name'];
+    }
+
+    /**
      * Handle GitHub setup ping.
      *
      * @return \Illuminate\Http\JsonResponse
@@ -120,9 +146,9 @@ class GitHubController extends AbstractController
     protected function handlePing()
     {
         $input = Request::input();
-        $repo = Repo::findOrFail($input['repository']['id']);
+        $repo = Repo::find($input['repository']['id']);
 
-        if ($val = $this->handleValidation($repo->token)) {
+        if ($val = $this->handleValidation($repo)) {
             return $val;
         }
 
@@ -142,15 +168,19 @@ class GitHubController extends AbstractController
     /**
      * Handle the request validation.
      *
-     * @param string $token
+     * @param \StyleCI\StyleCI\Models\Repo|null $repo
      *
      * @return \Illuminate\Http\JsonResponse|null
      */
-    protected function handleValidation($token)
+    protected function handleValidation($repo)
     {
+        if (!$repo) {
+            return new JsonResponse(['message' => 'StyleCI could not verify the validity of the request.'], 400, [], JSON_PRETTY_PRINT);
+        }
+
         list($algo, $sig) = explode('=', Request::header('X-Hub-Signature'));
 
-        $hash = hash_hmac($algo, Request::getContent(), $token);
+        $hash = hash_hmac($algo, Request::getContent(), $repo->token);
 
         if (!Str::equals($hash, $sig)) {
             return new JsonResponse(['message' => 'StyleCI could not verify the validity of the request.'], 400, [], JSON_PRETTY_PRINT);
