@@ -59,7 +59,7 @@ class WebHooksHandler
             //
         }
 
-        if ($repo instanceof RepoWasEnabledEvent) {
+        if ($event instanceof RepoWasEnabledEvent) {
             $this->hooks->enable($repo);
         }
     }
