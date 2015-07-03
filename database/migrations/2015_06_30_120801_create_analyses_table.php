@@ -30,11 +30,11 @@ class CreateAnalysesTable extends Migration
         Schema::create('analyses', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('repo_id')->unsigned()->index();
-            $table->string('branch', 128)->nullable();
+            $table->string('branch', 255)->nullable();
             $table->integer('pr')->unsigned()->nullable();
             $table->char('commit', 40);
-            $table->string('message', 128);
-            $table->string('error', 128)->nullable();
+            $table->string('message', 255);
+            $table->string('error', 255)->nullable();
             $table->text('errors')->nullable();
             $table->tinyInteger('status')->unsigned()->default(0);
             $table->timestamps();
