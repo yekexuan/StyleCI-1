@@ -13,7 +13,7 @@ namespace StyleCI\StyleCI\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use StyleCI\StyleCI\Commands\CleanupAnalysisCommand;
+use StyleCI\StyleCI\Commands\Analysis\CleanupAnalysisCommand;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
