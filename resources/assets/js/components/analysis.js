@@ -4,6 +4,9 @@ var Analysis = Vue.extend({
         SyntaxHighlighter.defaults.gutter = false;
     },
     ready: function() {
+        $('#download-diff').hide();
+        $('#view-diff').hide();
+        $('#status-buttons').removeClass('hide');
         this.analysisId = $('#analysis').data('id');
         this.getResults();
         this.subscribe();
@@ -20,8 +23,15 @@ var Analysis = Vue.extend({
 
             return $.get(url)
                 .done(function(response) {
-                    $('#results').html(response);
-                    SyntaxHighlighter.all();
+                    if (response.toString().indexOf('changed files') >= 0) {
+                        $('#download-diff').show();
+                        $('#view-diff').show();
+                        $('#results').html(response);
+                        SyntaxHighlighter.all();
+                    } else {
+                        $('#download-diff').hide();
+                        $('#view-diff').hide();
+                    }
                 })
                 .fail(function(response) {
                     (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);

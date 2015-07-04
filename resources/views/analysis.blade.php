@@ -31,31 +31,31 @@
                     <h3>{{ $analysis->message }}</h3>
                     <p>{{ $analysis->commit }}</p>
                     <br>
-                    <ul class="list-inline">
-                        <li>
+                    <ul class="list-inline hide" id="status-buttons">
+                        <li id="view-time">
                             <span>
                                 <i class="fa fa-calendar"></i>
                                 <span class="js-time-ago" title="{{ $analysis->created_at_iso }}">{{ $analysis->time_ago }}</span>
                             </span>
                         </li>
-                        <li>
+                        <li id="view-github">
                             <a class="btn" href="{{ $analysis->github_link }}">
                                 <i class="fa fa-github"></i>
                                 {{ $analysis->github_id }}
                             </a>
                         </li>
-                        @if ($analysis->has_diff)
-                        <li>
+                        <li id="download-diff">
                             <a class="btn" href="{{ route('analysis_download_path', $analysis->id) }}">
-                                <i class="fa fa-cloud-download"></i> Download patch
+                                <i class="fa fa-cloud-download"></i>
+                                Download patch
                             </a>
                         </li>
-                        <li>
+                        <li id="view-diff">
                             <a class="btn" href="{{ route('analysis_diff_path', $analysis->id) }}">
-                                <i class="fa fa-code"></i> Open diff file
+                                <i class="fa fa-code"></i>
+                                Open diff file
                             </a>
                         </li>
-                        @endif
                     </ul>
                 </div>
             </div>
