@@ -10,8 +10,6 @@ var RepoList = Vue.extend({
             var self = this;
             var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId;
 
-            self.isLoading = true;
-
             return $.get(url)
                 .done(function(response) {
                     self.$set('analyses', response.data);
@@ -60,7 +58,7 @@ var RepoList = Vue.extend({
         return {
             repoId: null,
             repoBranch: null,
-            isLoading: false,
+            isLoading: true,
             search: '',
             analyses: []
         };

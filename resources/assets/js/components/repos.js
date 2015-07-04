@@ -8,8 +8,6 @@ var ReposList = Vue.extend({
             var self = this;
             var url = StyleCI.globals.base_url + '/api/repos';
 
-            self.isLoading = true;
-
             return $.get(url)
                 .done(function(response) {
                     self.$set('repos', response.data);
@@ -50,7 +48,7 @@ var ReposList = Vue.extend({
     },
     data: function() {
         return {
-            isLoading: false,
+            isLoading: true,
             search: '',
             repos: []
         };
