@@ -74,6 +74,8 @@ class RunAnalysisJobHandler
 
         $analysis->status = 1;
 
+        $analysis->save();
+
         event(new AnalysisHasStartedEvent($analysis));
 
         try {

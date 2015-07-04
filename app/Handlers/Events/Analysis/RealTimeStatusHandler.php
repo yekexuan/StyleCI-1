@@ -70,9 +70,24 @@ class RealTimeStatusHandler
         $this->pusher->trigger("repo-{$analysis->repo_id}-{$analysis->branch}", 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
 
         if ($analysis->branch === $repo->default_branch) {
-            foreach ($this->userRepository->collaborators($repo) as $user) {
-                $this->pusher->trigger("user-{$user->id}", 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
-            }
+            $this->trigger($repo);
+        }
+    }
+
+    /**
+     * Trigger the notification.
+     *
+     * @param \StyleCI\StyleCI\Models\Repo $repo
+     *
+     * @return void
+     */
+    protected function trigger($repo)
+    {
+        $users = $this->userRepository->collaborators($repo);
+        $data = AutoPresenter::decorate($repo)->toArray();
+
+        foreach ($users as $user) {
+            $this->pusher->trigger("user-{$user->id}", 'RepoStatusUpdatedEvent', ['event' => $data]);
         }
     }
 }

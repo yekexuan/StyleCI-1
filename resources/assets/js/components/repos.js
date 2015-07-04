@@ -19,14 +19,13 @@ var ReposList = Vue.extend({
                     self.isLoading = false;
                 });
         },
-        RepoStatusChangeEventHandler: function(data) {
-            var repo = _.findWhere(this.repos, { 'id': data.event.id });
-
-            repo = data.event;
+        RepoStatusUpdatedEventHandler: function(data) {
+            this.getRepos(); // TODO - remove this and fix the original
+            // var repo = _.findWhere(this.repos, { 'id': data.event.id });
+            // repo = data.event;
         },
         RepoWasDisabledEventHandler: function(data) {
             var repo = _.findWhere(this.repos, { 'id': data.event.id });
-
             this.repos.$remove(repo);
         },
         RepoWasEnabledEventHandler: function(data) {
@@ -35,8 +34,8 @@ var ReposList = Vue.extend({
         subscribe: function() {
             var self = this;
             StyleCI.RealTime.getChannel('user-' + StyleCI.globals.user)
-                .bind('AnalysisStatusUpdatedEvent',
-                    self.RepoStatusChangeEventHandler
+                .bind('RepoStatusUpdatedEvent',
+                    self.RepoStatusUpdatedEventHandler
                 )
                 .bind('RepoWasDisabledEvent',
                     self.RepoWasDisabledEventHandler
