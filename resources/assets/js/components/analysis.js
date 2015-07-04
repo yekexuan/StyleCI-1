@@ -19,8 +19,6 @@ var Analysis = Vue.extend({
 
             self.isLoading = true;
 
-            self.isLoading = true;
-
             return $.get(url)
                 .done(function(response) {
                     $('#results').html(response);
