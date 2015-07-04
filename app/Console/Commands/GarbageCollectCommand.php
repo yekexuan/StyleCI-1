@@ -41,6 +41,8 @@ class GarbageCollectCommand extends Command
      */
     public function handle()
     {
+        touch($this->laravel->storagePath().'/framework/down');
+
         $this->info('Running the garbage collector.');
 
         $path = $this->laravel['path.storage'];
@@ -50,5 +52,7 @@ class GarbageCollectCommand extends Command
         $count = $factory->gc("{$path}/repos", 14) + $factory->gc("{$path}/fixers", 28);
 
         $this->info("Removed $count old repos.");
+
+        @unlink($this->laravel->storagePath().'/framework/down');
     }
 }

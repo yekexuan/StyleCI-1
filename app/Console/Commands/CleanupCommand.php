@@ -46,9 +46,13 @@ class CleanupCommand extends Command
      */
     public function handle()
     {
+        touch($this->laravel->storagePath().'/framework/down');
+
         foreach (Analysis::old()->pending()->orderBy('created_at', 'desc')->get() as $analysis) {
             $this->info("Cleaning up analysis {$analysis->id}.");
             $this->dispatch(new CleanupAnalysisJob($analysis));
         }
+
+        @unlink($this->laravel->storagePath().'/framework/down');
     }
 }
