@@ -32,12 +32,6 @@ var RepoList = Vue.extend({
             btn.button('loading');
 
             return $.post(url)
-                .done(function(response) {
-                    if (response.queued) {
-                        (new StyleCI.Notifier()).notify('The repository has been queued for analysis.', 'success');
-                        self.getAnalyses();
-                    }
-                })
                 .fail(function(response) {
                     (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
                 })
