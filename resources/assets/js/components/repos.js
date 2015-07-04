@@ -35,9 +35,6 @@ var ReposList = Vue.extend({
             this.getRepos();
         },
         subscribe: function() {
-            if (typeof StyleCI.globals.user === 'undefined') {
-                return;
-            }
             var self = this;
             StyleCI.RealTime.getChannel('user-' + StyleCI.globals.user)
                 .bind('AnalysisStatusUpdatedEvent',
