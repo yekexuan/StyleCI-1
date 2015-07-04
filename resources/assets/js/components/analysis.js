@@ -23,10 +23,10 @@ var Analysis = Vue.extend({
 
             return $.get(url)
                 .done(function(response) {
+                    $('#results').html(response);
                     if (response.toString().indexOf('changed files') >= 0) {
                         $('#download-diff').show();
                         $('#view-diff').show();
-                        $('#results').html(response);
                         SyntaxHighlighter.all();
                     } else {
                         $('#download-diff').hide();
