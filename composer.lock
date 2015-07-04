@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Validator.git",
-                "reference": "e0364611c1d40b85d45b4d95fdb33e6108b40d91"
+                "reference": "d68aa9abdae98a3026413f54fd999ed5e477f0e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Validator/zipball/e0364611c1d40b85d45b4d95fdb33e6108b40d91",
-                "reference": "e0364611c1d40b85d45b4d95fdb33e6108b40d91",
+                "url": "https://api.github.com/repos/AltThree/Validator/zipball/d68aa9abdae98a3026413f54fd999ed5e477f0e9",
+                "reference": "d68aa9abdae98a3026413f54fd999ed5e477f0e9",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +188,7 @@
                 "logging",
                 "validator"
             ],
-            "time": "2015-07-03 22:54:52"
+            "time": "2015-07-04 07:30:44"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -4721,16 +4721,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "2.3.4",
+            "version": "2.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "92408bb1968a81b3217a6fdf6c1a198da83caa35"
+                "reference": "1c330b1b6e1ea8fd15f2fbea46770576e366855c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/92408bb1968a81b3217a6fdf6c1a198da83caa35",
-                "reference": "92408bb1968a81b3217a6fdf6c1a198da83caa35",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/1c330b1b6e1ea8fd15f2fbea46770576e366855c",
+                "reference": "1c330b1b6e1ea8fd15f2fbea46770576e366855c",
                 "shasum": ""
             },
             "require": {
@@ -4772,7 +4772,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-06-11 15:55:48"
+            "time": "2015-07-04 05:41:32"
         },
         {
             "name": "sebastian/comparator",
