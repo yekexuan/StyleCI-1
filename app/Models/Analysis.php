@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Models;
 
+use AltThree\Validator\ValidatingTrait;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
@@ -35,6 +36,8 @@ use StyleCI\StyleCI\Presenters\AnalysisPresenter;
  */
 class Analysis extends Model implements HasPresenter
 {
+    use ValidatingTrait;
+
     /**
      * A list of methods protected from mass assignment.
      *
@@ -57,6 +60,23 @@ class Analysis extends Model implements HasPresenter
         'error'   => 'string',
         'errors'  => 'array',
         'status'  => 'int',
+    ];
+
+    /**
+     * The validation rules.
+     *
+     * @var string[]
+     */
+    public $rules = [
+        'id'      => 'integer|min:1',
+        'repo_id' => 'required|integer|min:1',
+        'branch'  => 'string|between:1,255',
+        'pr'      => 'integer|min:1',
+        'commit'  => 'required|string|size:40',
+        'message' => 'required|string|between:1,255',
+        'error'   => 'string|max:255',
+        'errors'  => 'string',
+        'status'  => 'integer|between:0,9',
     ];
 
     /**

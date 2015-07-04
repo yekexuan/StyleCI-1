@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Models;
 
+use AltThree\Validator\ValidatingTrait;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use McCool\LaravelAutoPresenter\HasPresenter;
@@ -33,6 +34,8 @@ use StyleCI\StyleCI\Presenters\RepoPresenter;
  */
 class Repo extends Model implements HasPresenter
 {
+    use ValidatingTrait;
+
     /**
      * Indicates if the IDs are auto-incrementing.
      *
@@ -65,6 +68,19 @@ class Repo extends Model implements HasPresenter
         'name'           => 'string',
         'default_branch' => 'string',
         'token'          => 'string',
+    ];
+
+    /**
+     * The validation rules.
+     *
+     * @var string[]
+     */
+    public $rules = [
+        'id'             => 'required|integer|min:1',
+        'user_id'        => 'required|integer|min:1',
+        'name'           => 'required|string|between:3,255',
+        'default_branch' => 'string|between:1,255',
+        'token'          => 'required|string|size:20',
     ];
 
     /**

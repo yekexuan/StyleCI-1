@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Models;
 
+use AltThree\Validator\ValidatingTrait;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Database\Eloquent\Collection;
@@ -33,7 +34,7 @@ use StyleCI\StyleCI\Presenters\UserPresenter;
  */
 class User extends Model implements AuthenticatableContract, HasPresenter
 {
-    use Authenticatable;
+    use Authenticatable, ValidatingTrait;
 
     /**
      * Indicates if the IDs are auto-incrementing.
@@ -67,6 +68,19 @@ class User extends Model implements AuthenticatableContract, HasPresenter
         'username' => 'string',
         'email'    => 'string',
         'token'    => 'string',
+    ];
+
+    /**
+     * The validation rules.
+     *
+     * @var string[]
+     */
+    public $rules = [
+        'id'       => 'required|integer|min:1',
+        'name'     => 'required|string|between:1,255',
+        'username' => 'required|string|between:1,255',
+        'email'    => 'required|string|email|between:3,254',
+        'token'    => 'required|string|size:40',
     ];
 
     /**
