@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Validator.git",
-                "reference": "d68aa9abdae98a3026413f54fd999ed5e477f0e9"
+                "reference": "ebdbd41c8243469cf19e5648bd156ed18e5cd89f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Validator/zipball/d68aa9abdae98a3026413f54fd999ed5e477f0e9",
-                "reference": "d68aa9abdae98a3026413f54fd999ed5e477f0e9",
+                "url": "https://api.github.com/repos/AltThree/Validator/zipball/ebdbd41c8243469cf19e5648bd156ed18e5cd89f",
+                "reference": "ebdbd41c8243469cf19e5648bd156ed18e5cd89f",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +188,7 @@
                 "logging",
                 "validator"
             ],
-            "time": "2015-07-04 07:30:44"
+            "time": "2015-07-04 09:02:58"
         },
         {
             "name": "bugsnag/bugsnag",
