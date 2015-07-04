@@ -25,6 +25,7 @@ use StyleCI\StyleCI\Presenters\RepoPresenter;
  * @property User          $user
  * @property Collection    $analyses
  * @property Analysis|null $last_analysis
+ * @property Analysis|null $last_completed
  * @property string        $name
  * @property string        $default_branch
  * @property string        $token
@@ -110,7 +111,17 @@ class Repo extends Model implements HasPresenter
      */
     public function last_analysis()
     {
-        return $this->hasOne(Analysis::class)->where('branch', $this->default_branch)->latest();
+        return $this->hasOne(Analysis::class)->latest()->where('branch', $this->default_branch);
+    }
+
+    /**
+     * Get the last completed analysis of the default branch.
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function last_completed()
+    {
+        return $this->last_analysis()->completed();
     }
 
     /**

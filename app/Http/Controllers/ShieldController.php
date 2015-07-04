@@ -34,11 +34,7 @@ class ShieldController extends AbstractController
      */
     public function handle(Repo $repo)
     {
-        $analysis = $repo->analyses()->where('branch', $repo->default_branch)->orderBy('created_at', 'desc')->first();
-
-        $shieldUrl = $this->generateShieldUrl($analysis, Request::get('style', 'flat-square'));
-
-        return Redirect::to($shieldUrl);
+        return Redirect::to($this->generateShieldUrl($repo->last_completed, Request::get('style', 'flat-square')));
     }
 
     /**

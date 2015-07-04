@@ -100,7 +100,19 @@ class Analysis extends Model implements HasPresenter
      */
     public function scopePending(Builder $query)
     {
-        return $query->where('status', 0);
+        return $query->where('status', '<', 2);
+    }
+
+    /**
+     * Scope the query to only include pending completed.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeCompleted(Builder $query)
+    {
+        return $query->where('status', '>', 1);
     }
 
     /**

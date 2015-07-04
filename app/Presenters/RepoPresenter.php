@@ -36,11 +36,25 @@ class RepoPresenter extends BasePresenter implements Arrayable
     /**
      * Get the last analysis.
      *
+     * This includes pending analyses too.
+     *
      * @return \StyleCI\StyleCI\Presenters\AnalysisPresenter|null
      */
     public function last_analysis()
     {
         if ($analysis = $this->wrappedObject->last_analysis) {
+            return AutoPresenter::decorate($analysis);
+        }
+    }
+
+    /**
+     * Get the last analysis that's actually been completed.
+     *
+     * @return \StyleCI\StyleCI\Presenters\AnalysisPresenter|null
+     */
+    public function last_completed()
+    {
+        if ($analysis = $this->wrappedObject->last_completed) {
             return AutoPresenter::decorate($analysis);
         }
     }
@@ -53,12 +67,14 @@ class RepoPresenter extends BasePresenter implements Arrayable
     public function toArray()
     {
         $analysis = $this->last_analysis();
+        $completed = $this->last_completed();
 
         return [
-            'id'            => $this->wrappedObject->id,
-            'name'          => $this->wrappedObject->name,
-            'last_analysis' => $analysis ? $analysis->toArray() : null,
-            'link'          => route('repo_path', $this->wrappedObject->id),
+            'id'             => $this->wrappedObject->id,
+            'name'           => $this->wrappedObject->name,
+            'last_analysis'  => $analysis ? $analysis->toArray() : null,
+            'last_completed' => $completed ? $completed->toArray() : null,
+            'link'           => route('repo_path', $this->wrappedObject->id),
         ];
     }
 }
