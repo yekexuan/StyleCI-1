@@ -33,7 +33,7 @@
                             <strong style="color: @{{ repo.last_analysis.color }}">@{{ repo.last_analysis.summary }}</strong>
                         </span>
                         <span v-if="!repo.last_analysis">
-                            <strong>Nothing on the @{{ repo.default_branch }} branch have been analysed yet.</strong>
+                            <strong>Nothing on the @{{ repo.default_branch }} branch has been analysed yet.</strong>
                         </span>
                     </p>
                 </div>
