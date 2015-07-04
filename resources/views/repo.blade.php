@@ -19,7 +19,10 @@
     </button>
     @endif
     <div class="repo-table" id="repo" data-id="{{ $repo->id }}" data-branch="{{ $repo->default_branch }}">
-        <div v-if="analyses.length" class="repo-table-headers row hidden-xs">
+        <div v-show="isLoading" class="loading text-center">
+            <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your analyses...</h3>
+        </div>
+        <div v-show="!isLoading && analyses.length" class="repo-table-headers row hidden-xs">
             <div class="col-sm-7">
                 <strong>Commit</strong>
             </div>
@@ -30,14 +33,10 @@
                 <!-- Actions -->
             </div>
         </div>
-        <p v-show="!analyses.length" class="lead">We haven't analysed anything yet.</p>
         <div class="analyses">
             <div v-repeat="analyses : analyses"
                  class="row"
-                 v-class="
-                   bg-success: analyses.status === 2,
-                   bg-danger: analyses.status === 3
-                 ">
+                 v-class="bg-success: analyses.status === 2, bg-danger: analyses.status > 2">
                 <div class="col-sm-7">
                     <strong>@{{ analyses.message }}</strong>
                     <br>
@@ -56,6 +55,7 @@
                 </div>
             </div>
         </div>
+        <p v-show="!isLoading && !analyses.length" class="lead">We haven't analysed anything yet.</p>
     </div>
 </sc-repo>
 @stop

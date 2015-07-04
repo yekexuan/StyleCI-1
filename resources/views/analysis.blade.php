@@ -60,10 +60,10 @@
                 </div>
             </div>
         </div>
-        <div id="results">
-            @if($analysis->status > 2)
-            <p class="lead"><i class='fa fa-circle-o-notch fa-spin'></i> Loading...</p>
-            @endif
+        <div v-show="isLoading" class="loading text-center">
+            <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching results...</h3>
+        </div>
+        <div v-show="!isLoading" id="results">
         </div>
     </div>
 </sc-analysis>

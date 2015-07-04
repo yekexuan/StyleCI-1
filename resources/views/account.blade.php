@@ -47,29 +47,29 @@
                     Sync with GitHub
                 </a>
                 <h2>Repositories</h2>
-                <p>We're only showing your public repositories below.</p>
-                <form name="search">
+                <p>We're only showing your public repositories below.</p><br>
+                <div v-show="isLoading" class="loading text-center">
+                    <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repositories...</h3>
+                </div>
+                <form v-show="!isLoading && repos.length" name="search">
                     <div class="form-group">
                         <label for="query">Filter repositories</label>
                         <input v-model="search" type="text" name="query" class="form-control" id="query">
                     </div>
                 </form>
-                <hr>
-                <div v-show="isLoading" class="loading text-center">
-                    <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repositories...</h3>
-                </div>
                 <div class="repos" v-repeat="repo : repos | filterBy search">
+                    <hr>
                     <div class="row">
                         <div class="col-sm-8">
                             <h4>@{{ repo.name }}</h4>
                             <h5>
-                                <span v-if="repo.enabled">StyleCI is currently enabled on this repo.</span>
-                                <span v-if="!repo.enabled">StyleCI is currently disabled on this repo.</span>
+                                <span v-show="repo.enabled">StyleCI is currently enabled on this repo.</span>
+                                <span v-show="!repo.enabled">StyleCI is currently disabled on this repo.</span>
                             </h5>
                         </div>
                         <div class="col-sm-4 list-vcenter">
                             <div class="repo-controls">
-                                <div v-if="repo.enabled">
+                                <div v-show="repo.enabled">
                                     <a class="btn btn-primary" href="{{ route('repo_path', '') }}/@{{ repo.id }}">
                                         <i class="fa fa-history"></i> Show Analyses
                                     </a>
@@ -77,7 +77,7 @@
                                         <i class="fa fa-times"></i> Disable StyleCI
                                     </a>
                                 </div>
-                                <div v-if="!repo.enabled">
+                                <div v-show="!repo.enabled">
                                     <a class="btn btn-success" v-on="click: toggleEnableDisableRepo(repo, $event)" href="{{ route('api_enable_repo_path', '') }}/@{{ repo.id }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Enabling...">
                                         <i class="fa fa-check"></i> Enable StyleCI
                                     </a>
@@ -85,9 +85,8 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
                 </div>
-                <p v-if="!repos.length" class="lead">You have no public repositories we can access.</p>
+                <p v-show="!isLoading && !repos.length" class="lead">You have no public repositories we can access.</p>
             </sc-account>
         </div>
         <div role="tabpanel" class="tab-pane" id="profile">
