@@ -67,7 +67,6 @@ class RepoPresenter extends BasePresenter implements Arrayable
     public function toArray()
     {
         $analysis = $this->last_analysis();
-        $completed = $this->last_completed();
 
         return [
             'id'             => $this->wrappedObject->id,
