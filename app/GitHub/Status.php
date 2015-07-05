@@ -50,13 +50,13 @@ class Status
     public function push(Analysis $analysis)
     {
         $repo = $analysis->repo;
-
         $args = explode('/', $repo->name);
+        $decorated = AutoPresenter::decorate($analysis);
 
         $data = [
-            'state'       => $this->getState($analysis->status),
-            'description' => AutoPresenter::decorate($analysis)->description,
-            'target_url'  => route('analysis_path', $analysis->id),
+            'state'       => $this->getState($decorated->status),
+            'description' => $decorated->description,
+            'target_url'  => route('analysis_path', $decorated->id),
             'context'     => 'StyleCI',
         ];
 
