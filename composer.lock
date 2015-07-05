@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Validator.git",
-                "reference": "ebdbd41c8243469cf19e5648bd156ed18e5cd89f"
+                "reference": "b5f711d9916b2d96e012cbcd79b0c01519aa4513"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Validator/zipball/ebdbd41c8243469cf19e5648bd156ed18e5cd89f",
-                "reference": "ebdbd41c8243469cf19e5648bd156ed18e5cd89f",
+                "url": "https://api.github.com/repos/AltThree/Validator/zipball/b5f711d9916b2d96e012cbcd79b0c01519aa4513",
+                "reference": "b5f711d9916b2d96e012cbcd79b0c01519aa4513",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +188,7 @@
                 "logging",
                 "validator"
             ],
-            "time": "2015-07-04 09:02:58"
+            "time": "2015-07-05 22:44:37"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -2393,12 +2393,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "0b211384cf88ef7d16216f9928566a2ecafca298"
+                "reference": "e102deb403d00e0270351d9c0d32c8cabbe3b17a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/0b211384cf88ef7d16216f9928566a2ecafca298",
-                "reference": "0b211384cf88ef7d16216f9928566a2ecafca298",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/e102deb403d00e0270351d9c0d32c8cabbe3b17a",
+                "reference": "e102deb403d00e0270351d9c0d32c8cabbe3b17a",
                 "shasum": ""
             },
             "require": {
@@ -2447,7 +2447,7 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-03 00:02:26"
+            "time": "2015-07-05 22:40:00"
         },
         {
             "name": "styleci/fixer",
