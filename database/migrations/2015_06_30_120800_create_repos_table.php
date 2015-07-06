@@ -30,9 +30,9 @@ class CreateReposTable extends Migration
         Schema::create('repos', function (Blueprint $table) {
             $table->bigInteger('id')->unsigned()->primary();
             $table->bigInteger('user_id')->unsigned()->index();
-            $table->string('name', 255)->unique();
-            $table->string('default_branch', 255)->default('master');
-            $table->string('token', 20);
+            $table->string('name')->unique();
+            $table->string('default_branch')->default('master');
+            $table->char('token', 20);
             $table->timestamps();
         });
     }

@@ -29,10 +29,10 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigInteger('id')->unsigned()->primary();
-            $table->string('name', 255);
-            $table->string('username', 255)->unique();
-            $table->string('email', 255)->unique();
-            $table->string('token', 40)->unique();
+            $table->string('name');
+            $table->string('username')->unique();
+            $table->string('email', 254)->unique();
+            $table->char('token', 40)->unique();
             $table->rememberToken();
             $table->timestamps();
         });

@@ -29,8 +29,8 @@ class CreateFailedJobsTable extends Migration
     {
         Schema::create('failed_jobs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('connection', 255);
-            $table->string('queue', 255);
+            $table->string('connection');
+            $table->string('queue');
             $table->text('payload');
             $table->timestamp('failed_at');
         });
