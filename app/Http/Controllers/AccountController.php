@@ -112,7 +112,7 @@ class AccountController extends AbstractController
             throw new HttpException(403);
         }
 
-        $this->dispatch(new EnableRepoCommand($id, $repo['name'], Auth::user()->id));
+        $this->dispatch(new EnableRepoCommand($id, $repo['name'], $repo['default_branch'], Auth::user()));
 
         if (Request::ajax()) {
             return new JsonResponse(['enabled' => true]);

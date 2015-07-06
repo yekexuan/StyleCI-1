@@ -33,10 +33,11 @@ class EnableRepoCommandHandler
     public function handle(EnableRepoCommand $command)
     {
         $repo = Repo::create([
-            'id'      => $command->id,
-            'name'    => $command->name,
-            'user_id' => $command->user,
-            'token'   => bin2hex(Str::randomBytes(10)),
+            'id'             => $command->id,
+            'name'           => $command->name,
+            'user_id'        => $command->user->id,
+            'default_branch' => $command->branch,
+            'token'          => bin2hex(Str::randomBytes(10)),
         ]);
 
         event(new RepoWasEnabledEvent($repo));

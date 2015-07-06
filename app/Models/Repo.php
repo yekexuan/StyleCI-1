@@ -80,7 +80,7 @@ class Repo extends Model implements HasPresenter
         'id'             => 'required|integer|min:1',
         'user_id'        => 'required|integer|min:1',
         'name'           => 'required|string|between:3,255',
-        'default_branch' => 'string|between:1,255',
+        'default_branch' => 'required|string|between:1,255',
         'token'          => 'required|string|size:20',
     ];
 

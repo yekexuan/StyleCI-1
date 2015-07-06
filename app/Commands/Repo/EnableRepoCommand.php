@@ -11,6 +11,8 @@
 
 namespace StyleCI\StyleCI\Commands\Repo;
 
+use StyleCI\StyleCI\Models\User;
+
 /**
  * This is the enable repo command class.
  *
@@ -33,9 +35,16 @@ class EnableRepoCommand
     public $name;
 
     /**
+     * The default branch.
+     *
+     * @var string
+     */
+    public $branch;
+
+    /**
      * The associated user.
      *
-     * @var int
+     * @var \StyleCI\StyleCI\Models\User
      */
     public $user;
 
@@ -45,24 +54,26 @@ class EnableRepoCommand
      * @var array
      */
     public $rules = [
-        'id'   => 'required|integer|min:1',
-        'name' => 'required|string|between:3,255',
-        'user' => 'required|integer|min:1',
+        'id'     => 'required|integer|min:1',
+        'name'   => 'required|string|between:3,255',
+        'branch' => 'required|string|between:1,255',
     ];
 
     /**
      * Create a new enable repo command instance.
      *
-     * @param int    $id
-     * @param string $name
-     * @param int    $user
+     * @param int                          $id
+     * @param string                       $name
+     * @param string                       $branch
+     * @param \StyleCI\StyleCI\Models\User $user
      *
      * @return void
      */
-    public function __construct($id, $name, $user)
+    public function __construct($id, $name, $branch, User $user)
     {
         $this->id = $id;
         $this->name = $name;
+        $this->branch = $branch;
         $this->user = $user;
     }
 }
