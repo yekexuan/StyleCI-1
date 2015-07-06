@@ -64,7 +64,7 @@ class AccountController extends AbstractController
     }
 
     /**
-     * Show the user's public repositories.
+     * Show the user's repositories.
      *
      * @return \Illuminate\Http\Response|\Illuminate\View\View
      */
@@ -80,7 +80,7 @@ class AccountController extends AbstractController
     }
 
     /**
-     * Sync the user's public repositories.
+     * Sync the user's repositories.
      *
      * @return \Illuminate\Http\Response
      */

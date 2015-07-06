@@ -52,7 +52,7 @@ class Repos
     }
 
     /**
-     * Get a user's public repos.
+     * Get a user's repos.
      *
      * @param \StyleCI\StyleCI\Models\User $user
      * @param bool                         $admin
@@ -81,7 +81,7 @@ class Repos
     }
 
     /**
-     * Fetch a user's public repos from github.
+     * Fetch a user's repos from github.
      *
      * @param \StyleCI\StyleCI\Models\User $user
      *
@@ -130,7 +130,7 @@ class Repos
     }
 
     /**
-     * Flush our cache of the user's public repos.
+     * Flush our cache of the user's repos.
      *
      * @param \StyleCI\StyleCI\Models\User $user
      *
