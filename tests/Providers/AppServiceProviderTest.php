@@ -9,21 +9,21 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\Tests\StyleCI;
+namespace StyleCI\Tests\StyleCI\Providers;
 
 use GrahamCampbell\TestBenchCore\LaravelTrait;
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
-use StyleCI\StyleCI\GitHub\Branches;
-use StyleCI\StyleCI\GitHub\ClientFactory;
-use StyleCI\StyleCI\GitHub\Status;
+use Illuminate\Support\Str;
+use StyleCI\StyleCI\Http\Middleware\Authenticate;
 use StyleCI\StyleCI\Providers\AppServiceProvider;
+use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
- * This is the service provider test class.
+ * This is the app service provider test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class ServiceProviderTest extends AbstractTestCase
+class AppServiceProviderTest extends AbstractTestCase
 {
     use LaravelTrait, ServiceProviderTrait;
 
@@ -32,18 +32,8 @@ class ServiceProviderTest extends AbstractTestCase
         return AppServiceProvider::class;
     }
 
-    public function testClientFactoryIsInjectable()
+    public function testAuthenticateMiddlewareIsInjectable()
     {
-        $this->assertIsInjectable(ClientFactory::class);
-    }
-
-    public function testGitHubBranchesIsInjectable()
-    {
-        $this->assertIsInjectable(Branches::class);
-    }
-
-    public function testGitHubStatusIsInjectable()
-    {
-        $this->assertIsInjectable(Status::class);
+        $this->assertIsInjectable(Authenticate::class);
     }
 }
