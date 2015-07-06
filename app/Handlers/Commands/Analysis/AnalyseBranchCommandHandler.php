@@ -74,6 +74,7 @@ class AnalyseBranchCommandHandler
             'branch'  => $branch,
             'commit'  => $commit,
             'message' => $message,
+            'status'  => 0,
         ]);
 
         $this->dispatch(new RunAnalysisJob($analysis));

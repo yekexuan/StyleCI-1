@@ -36,7 +36,7 @@ class CreateAnalysesTable extends Migration
             $table->string('message');
             $table->string('error')->nullable();
             $table->text('errors')->nullable();
-            $table->tinyInteger('status')->unsigned()->default(0)->index();
+            $table->tinyInteger('status')->unsigned()->index();
             $table->timestamps();
         });
     }

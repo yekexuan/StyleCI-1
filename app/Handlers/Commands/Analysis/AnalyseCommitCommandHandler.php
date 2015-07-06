@@ -39,6 +39,7 @@ class AnalyseCommitCommandHandler
             'branch'  => $command->branch,
             'commit'  => $command->commit,
             'message' => $command->message,
+            'status'  => 0,
         ]);
 
         $this->dispatch(new RunAnalysisJob($analysis));

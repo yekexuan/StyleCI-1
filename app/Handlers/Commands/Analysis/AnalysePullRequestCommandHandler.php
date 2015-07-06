@@ -39,6 +39,7 @@ class AnalysePullRequestCommandHandler
             'pr'      => $command->pr,
             'commit'  => $command->commit,
             'message' => $command->message,
+            'status'  => 0,
         ]);
 
         $this->dispatch(new RunAnalysisJob($analysis));

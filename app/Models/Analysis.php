@@ -76,7 +76,7 @@ class Analysis extends Model implements HasPresenter
         'message' => 'required|string|between:1,255',
         'error'   => 'string|max:255',
         'errors'  => 'string',
-        'status'  => 'integer|between:0,9',
+        'status'  => 'required|integer|between:0,9',
     ];
 
     /**
