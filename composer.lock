@@ -799,16 +799,16 @@
         },
         {
             "name": "graham-campbell/flysystem",
-            "version": "v3.0.0",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Flysystem.git",
-                "reference": "7bd8ecef4a20fe7f34530bf1030294c04dcdde57"
+                "reference": "e5eaf46e5acab7f068dc1ba6d81bf9f97016eede"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Flysystem/zipball/7bd8ecef4a20fe7f34530bf1030294c04dcdde57",
-                "reference": "7bd8ecef4a20fe7f34530bf1030294c04dcdde57",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Flysystem/zipball/e5eaf46e5acab7f068dc1ba6d81bf9f97016eede",
+                "reference": "e5eaf46e5acab7f068dc1ba6d81bf9f97016eede",
                 "shasum": ""
             },
             "require": {
@@ -852,7 +852,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -884,7 +884,7 @@
                 "laravel",
                 "s3"
             ],
-            "time": "2015-06-26 17:44:41"
+            "time": "2015-07-06 15:57:15"
         },
         {
             "name": "graham-campbell/github",
