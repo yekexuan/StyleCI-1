@@ -14,6 +14,7 @@ namespace StyleCI\StyleCI\Providers;
 use AltThree\Validator\ValidatingMiddleware;
 use Illuminate\Bus\Dispatcher;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Str;
 use StyleCI\StyleCI\Http\Middleware\Authenticate;
 
 /**

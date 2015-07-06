@@ -13,6 +13,7 @@ namespace StyleCI\StyleCI\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Str;
 use StyleCI\Login\LoginProvider;
 use StyleCI\StyleCI\Commands\User\LoginCommand;
 
