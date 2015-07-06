@@ -734,16 +734,16 @@
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "dev-master",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "2846c4ddb225ad4d6c7e928b72afec1939d074f9"
+                "reference": "9362bf621e13b543694964a6adad728d57e9201b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/2846c4ddb225ad4d6c7e928b72afec1939d074f9",
-                "reference": "2846c4ddb225ad4d6c7e928b72afec1939d074f9",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/9362bf621e13b543694964a6adad728d57e9201b",
+                "reference": "9362bf621e13b543694964a6adad728d57e9201b",
                 "shasum": ""
             },
             "require": {
@@ -795,7 +795,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-07-06 09:29:11"
+            "time": "2015-07-06 14:52:42"
         },
         {
             "name": "graham-campbell/flysystem",
@@ -3612,16 +3612,16 @@
         },
         {
             "name": "vinkla/hashids",
-            "version": "dev-master",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vinkla/hashids.git",
-                "reference": "e2383352dec23ae0343252a52f57e2a391d654ac"
+                "reference": "a2269b026b4bd8deffab9ac1536570d14f76b352"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinkla/hashids/zipball/e2383352dec23ae0343252a52f57e2a391d654ac",
-                "reference": "e2383352dec23ae0343252a52f57e2a391d654ac",
+                "url": "https://api.github.com/repos/vinkla/hashids/zipball/a2269b026b4bd8deffab9ac1536570d14f76b352",
+                "reference": "a2269b026b4bd8deffab9ac1536570d14f76b352",
                 "shasum": ""
             },
             "require": {
@@ -3670,7 +3670,7 @@
                 "obfuscate",
                 "youtube"
             ],
-            "time": "2015-07-03 18:16:48"
+            "time": "2015-07-06 10:56:44"
         },
         {
             "name": "vinkla/pusher",
