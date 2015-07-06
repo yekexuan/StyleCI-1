@@ -34,8 +34,8 @@ class EnableRepoCommandHandler
     {
         $repo = Repo::create([
             'id'             => $command->id,
-            'name'           => $command->name,
             'user_id'        => $command->user->id,
+            'name'           => $command->name,
             'default_branch' => $command->branch,
             'token'          => bin2hex(Str::randomBytes(10)),
         ]);
