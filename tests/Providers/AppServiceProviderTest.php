@@ -13,7 +13,6 @@ namespace StyleCI\Tests\StyleCI\Providers;
 
 use GrahamCampbell\TestBenchCore\LaravelTrait;
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
-use Illuminate\Support\Str;
 use StyleCI\StyleCI\Http\Middleware\Authenticate;
 use StyleCI\StyleCI\Providers\AppServiceProvider;
 use StyleCI\Tests\StyleCI\AbstractTestCase;
