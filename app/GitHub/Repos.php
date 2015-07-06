@@ -115,13 +115,12 @@ class Repos
     {
         $modifed = false;
 
-        if ($repo->name !== $data['name']) {
-            $repo->name = $data['name'];
-            $modifed = true;
-        }
+        foreach (['name', 'default_branch'] as $property) {
+            if ($repo->{$property} === $data[$property]) {
+                continue;
+            }
 
-        if ($repo->default_branch !== $data['default_branch']) {
-            $repo->default_branch = $data['default_branch'];
+            $repo->{$property} = $data[$property];
             $modifed = true;
         }
 
