@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Bugsnag.git",
-                "reference": "2993e5036484424f2a7f60752b35495a616747ff"
+                "reference": "be4ba29f01e2cf314caf2f999dc322ccafb7790e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Bugsnag/zipball/2993e5036484424f2a7f60752b35495a616747ff",
-                "reference": "2993e5036484424f2a7f60752b35495a616747ff",
+                "url": "https://api.github.com/repos/AltThree/Bugsnag/zipball/be4ba29f01e2cf314caf2f999dc322ccafb7790e",
+                "reference": "be4ba29f01e2cf314caf2f999dc322ccafb7790e",
                 "shasum": ""
             },
             "require": {
@@ -67,7 +67,7 @@
                 "Bridge",
                 "bugsnag"
             ],
-            "time": "2015-06-26 18:48:12"
+            "time": "2015-07-06 16:34:33"
         },
         {
             "name": "alt-three/logger",
@@ -75,12 +75,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Logger.git",
-                "reference": "8a92e00787c590cba797dd43a5e568cee2c0b60b"
+                "reference": "2456ec8e0ddee1d140c7cedcc04fabdcc47cc34a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Logger/zipball/8a92e00787c590cba797dd43a5e568cee2c0b60b",
-                "reference": "8a92e00787c590cba797dd43a5e568cee2c0b60b",
+                "url": "https://api.github.com/repos/AltThree/Logger/zipball/2456ec8e0ddee1d140c7cedcc04fabdcc47cc34a",
+                "reference": "2456ec8e0ddee1d140c7cedcc04fabdcc47cc34a",
                 "shasum": ""
             },
             "require": {
@@ -128,7 +128,7 @@
                 "logger",
                 "logging"
             ],
-            "time": "2015-06-26 18:42:28"
+            "time": "2015-07-06 16:40:27"
         },
         {
             "name": "alt-three/validator",
@@ -136,12 +136,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Validator.git",
-                "reference": "b5f711d9916b2d96e012cbcd79b0c01519aa4513"
+                "reference": "618c4d7d3d69c2acda4a742f129a4848d2fc6690"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Validator/zipball/b5f711d9916b2d96e012cbcd79b0c01519aa4513",
-                "reference": "b5f711d9916b2d96e012cbcd79b0c01519aa4513",
+                "url": "https://api.github.com/repos/AltThree/Validator/zipball/618c4d7d3d69c2acda4a742f129a4848d2fc6690",
+                "reference": "618c4d7d3d69c2acda4a742f129a4848d2fc6690",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +188,7 @@
                 "logging",
                 "validator"
             ],
-            "time": "2015-07-05 22:44:37"
+            "time": "2015-07-06 16:42:56"
         },
         {
             "name": "bugsnag/bugsnag",
@@ -2393,12 +2393,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "e102deb403d00e0270351d9c0d32c8cabbe3b17a"
+                "reference": "313b92b6fab2e561790b0942ca949470e3af0ab4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/e102deb403d00e0270351d9c0d32c8cabbe3b17a",
-                "reference": "e102deb403d00e0270351d9c0d32c8cabbe3b17a",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/313b92b6fab2e561790b0942ca949470e3af0ab4",
+                "reference": "313b92b6fab2e561790b0942ca949470e3af0ab4",
                 "shasum": ""
             },
             "require": {
@@ -2447,7 +2447,7 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-05 22:40:00"
+            "time": "2015-07-06 16:37:32"
         },
         {
             "name": "styleci/fixer",
@@ -2455,12 +2455,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "25b31882c98503e2e11a52ab1c5fc48d2493f4f8"
+                "reference": "022098399caff388b743eb8a4840152bef4b2785"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/25b31882c98503e2e11a52ab1c5fc48d2493f4f8",
-                "reference": "25b31882c98503e2e11a52ab1c5fc48d2493f4f8",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/022098399caff388b743eb8a4840152bef4b2785",
+                "reference": "022098399caff388b743eb8a4840152bef4b2785",
                 "shasum": ""
             },
             "require": {
@@ -2512,7 +2512,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-02 23:43:31"
+            "time": "2015-07-06 16:38:50"
         },
         {
             "name": "styleci/git",
@@ -2520,12 +2520,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "cff99677d6637d12b41e1c144f8d4477b459b4f4"
+                "reference": "ca03c124192d9900b9b13786efb93c76c30e8384"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/cff99677d6637d12b41e1c144f8d4477b459b4f4",
-                "reference": "cff99677d6637d12b41e1c144f8d4477b459b4f4",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/ca03c124192d9900b9b13786efb93c76c30e8384",
+                "reference": "ca03c124192d9900b9b13786efb93c76c30e8384",
                 "shasum": ""
             },
             "require": {
@@ -2577,7 +2577,7 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-07-02 18:18:46"
+            "time": "2015-07-06 16:39:47"
         },
         {
             "name": "styleci/login",
@@ -2649,12 +2649,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Storage.git",
-                "reference": "d28102093db60f3999c3fe1125bcf6a1803ce191"
+                "reference": "c86358a039d719188ca1fc059ec8941660590cf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/d28102093db60f3999c3fe1125bcf6a1803ce191",
-                "reference": "d28102093db60f3999c3fe1125bcf6a1803ce191",
+                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/c86358a039d719188ca1fc059ec8941660590cf5",
+                "reference": "c86358a039d719188ca1fc059ec8941660590cf5",
                 "shasum": ""
             },
             "require": {
@@ -2705,7 +2705,7 @@
                 "StyleCI",
                 "storage"
             ],
-            "time": "2015-07-01 21:47:49"
+            "time": "2015-07-06 16:42:28"
         },
         {
             "name": "swiftmailer/swiftmailer",
