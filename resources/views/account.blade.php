@@ -47,7 +47,7 @@
                     Sync with GitHub
                 </a>
                 <h2>Repositories</h2>
-                <p>We're only showing your public repositories below.</p><br>
+                <p>We're showing all your <i>public</i> repositories we have access to.</p><br>
                 <div v-show="isLoading" class="loading text-center">
                     <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repositories...</h3>
                 </div>
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                 </div>
-                <p v-show="!isLoading && !repos.length" class="lead">You have no public repositories we can access.</p>
+                <p v-show="!isLoading && !repos.length" class="lead">You have no repositories we can access.</p>
             </sc-account>
         </div>
         <div role="tabpanel" class="tab-pane" id="profile">
