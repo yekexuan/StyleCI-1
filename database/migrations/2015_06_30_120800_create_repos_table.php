@@ -31,7 +31,7 @@ class CreateReposTable extends Migration
             $table->bigInteger('id')->unsigned()->primary();
             $table->bigInteger('user_id')->unsigned()->index();
             $table->string('name')->unique();
-            $table->string('default_branch')->default('master');
+            $table->string('default_branch');
             $table->char('token', 20);
             $table->timestamps();
         });
