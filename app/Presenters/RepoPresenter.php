@@ -24,6 +24,7 @@ use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
  * @property UserPresenter          $user
  * @property Collection             $analyses
  * @property AnalysisPresenter|null $last_analysis
+ * @property AnalysisPresenter|null $last_completed
  * @property string                 $name
  * @property string                 $default_branch
  * @property string                 $token
