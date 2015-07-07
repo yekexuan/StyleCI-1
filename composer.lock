@@ -293,6 +293,61 @@
             "time": "2015-06-28 21:39:13"
         },
         {
+            "name": "cpliakas/git-wrapper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cpliakas/git-wrapper.git",
+                "reference": "e20edffaceec2f3ef8701b1fe08597fb469a81ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cpliakas/git-wrapper/zipball/e20edffaceec2f3ef8701b1fe08597fb469a81ab",
+                "reference": "e20edffaceec2f3ef8701b1fe08597fb469a81ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/event-dispatcher": ">=2.3",
+                "symfony/process": ">=2.3"
+            },
+            "require-dev": {
+                "pdepend/pdepend": "~1.0",
+                "phploc/phploc": "~2.0",
+                "phpmd/phpmd": "~1.0",
+                "phpunit/phpunit": "~3.0",
+                "psr/log": "~1.0",
+                "scrutinizer/ocular": "~1.0",
+                "sebastian/phpcpd": "~2.0",
+                "symfony/filesystem": "~2.0"
+            },
+            "suggest": {
+                "monolog/monolog": "Enables logging of executed git commands"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "GitWrapper": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Pliakas",
+                    "email": "opensource@chrispliakas.com"
+                }
+            ],
+            "description": "A PHP wrapper around the Git command line utility.",
+            "homepage": "https://github.com/cpliakas/git-wrapper",
+            "keywords": [
+                "git"
+            ],
+            "time": "2015-04-10 14:30:27"
+        },
+        {
             "name": "danielstjules/stringy",
             "version": "1.9.0",
             "source": {
@@ -2455,12 +2510,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "2741ba8e584c32d3b380e78351b62443295dd18b"
+                "reference": "a57c41a79c32bf237095be95249d0c8e34590cfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/2741ba8e584c32d3b380e78351b62443295dd18b",
-                "reference": "2741ba8e584c32d3b380e78351b62443295dd18b",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/a57c41a79c32bf237095be95249d0c8e34590cfb",
+                "reference": "a57c41a79c32bf237095be95249d0c8e34590cfb",
                 "shasum": ""
             },
             "require": {
@@ -2512,7 +2567,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-07 10:48:05"
+            "time": "2015-07-07 14:40:34"
         },
         {
             "name": "styleci/git",
@@ -2520,15 +2575,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "ca03c124192d9900b9b13786efb93c76c30e8384"
+                "reference": "32f2c242f85110689fa940b56e5a6b44e5b1bfaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/ca03c124192d9900b9b13786efb93c76c30e8384",
-                "reference": "ca03c124192d9900b9b13786efb93c76c30e8384",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/32f2c242f85110689fa940b56e5a6b44e5b1bfaa",
+                "reference": "32f2c242f85110689fa940b56e5a6b44e5b1bfaa",
                 "shasum": ""
             },
             "require": {
+                "cpliakas/git-wrapper": "dev-master as 1.4.2",
                 "gitonomy/gitlib": "~1.0",
                 "php": ">=5.5.9",
                 "symfony/filesystem": "~2.3",
@@ -2577,7 +2633,7 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-07-06 16:39:47"
+            "time": "2015-07-07 14:10:47"
         },
         {
             "name": "styleci/login",
