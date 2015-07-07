@@ -21,12 +21,16 @@
     "repositories": [
         {
             "type": "vcs",
+            "url":  "https://github.com/StyleCI/framework"
+        },
+        {
+            "type": "vcs",
             "url":  "https://github.com/StyleCI/PHP-CS-Fixer"
         }
     ],
     "require": {
         "php": "^5.5.9",
-        "laravel/framework": "~5.1.6",
+        "laravel/framework": "~5.1.7",
         "alt-three/bugsnag": "^1.0",
         "alt-three/logger": "^1.0",
         "alt-three/validator": "^1.0",

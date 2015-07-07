@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8186752fed40f86fe81e6fe988b0c1e3",
+    "hash": "3605b45cbe0aa1a99600bb9437d3b8e6",
     "packages": [
         {
             "name": "alt-three/bugsnag",
@@ -1659,16 +1659,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.6",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "356418f315e4f6bf55d2f4bd451606e45a7595df"
+                "url": "https://github.com/StyleCI/framework.git",
+                "reference": "a24c2ecc366afed1920f082569616b4b8a7849e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/356418f315e4f6bf55d2f4bd451606e45a7595df",
-                "reference": "356418f315e4f6bf55d2f4bd451606e45a7595df",
+                "url": "https://api.github.com/repos/StyleCI/framework/zipball/a24c2ecc366afed1920f082569616b4b8a7849e5",
+                "reference": "a24c2ecc366afed1920f082569616b4b8a7849e5",
                 "shasum": ""
             },
             "require": {
@@ -1683,7 +1683,7 @@
                 "mtdowling/cron-expression": "~1.0",
                 "nesbot/carbon": "~1.19",
                 "php": ">=5.5.9",
-                "psy/psysh": "0.4.*",
+                "psy/psysh": "~0.5.1",
                 "swiftmailer/swiftmailer": "~5.1",
                 "symfony/console": "2.7.*",
                 "symfony/css-selector": "2.7.*",
@@ -1767,7 +1767,6 @@
                     "Illuminate\\": "src/Illuminate/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1783,7 +1782,11 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-07-03 13:48:44"
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2015-07-07 18:56:22"
         },
         {
             "name": "league/flysystem",
@@ -2277,24 +2280,25 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.4.4",
+            "version": "v0.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "489816db71649bd95b416e3ed9062d40528ab0ac"
+                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/489816db71649bd95b416e3ed9062d40528ab0ac",
-                "reference": "489816db71649bd95b416e3ed9062d40528ab0ac",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/e5a46a767928e85f1f47dda654beda8c680ddd94",
+                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94",
                 "shasum": ""
             },
             "require": {
                 "dnoegel/php-xdg-base-dir": "0.1",
                 "jakub-onderka/php-console-highlighter": "0.3.*",
-                "nikic/php-parser": "~1.0",
-                "php": ">=5.3.0",
-                "symfony/console": "~2.3.10|~2.4.2|~2.5"
+                "nikic/php-parser": "^1.2.1",
+                "php": ">=5.3.9",
+                "symfony/console": "~2.3.10|^2.4.2|~3.0",
+                "symfony/var-dumper": "~2.7|~3.0"
             },
             "require-dev": {
                 "fabpot/php-cs-fixer": "~1.5",
@@ -2314,7 +2318,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "0.4.x-dev"
+                    "dev-develop": "0.6.x-dev"
                 }
             },
             "autoload": {
@@ -2344,7 +2348,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2015-03-26 18:43:54"
+            "time": "2015-07-03 16:48:00"
         },
         {
             "name": "pusher/pusher-php-server",
@@ -2510,12 +2514,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "a57c41a79c32bf237095be95249d0c8e34590cfb"
+                "reference": "0d1b95048380ac488962067262ca2c2ca6a30cca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/a57c41a79c32bf237095be95249d0c8e34590cfb",
-                "reference": "a57c41a79c32bf237095be95249d0c8e34590cfb",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/0d1b95048380ac488962067262ca2c2ca6a30cca",
+                "reference": "0d1b95048380ac488962067262ca2c2ca6a30cca",
                 "shasum": ""
             },
             "require": {
@@ -2567,7 +2571,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-07 14:40:34"
+            "time": "2015-07-07 18:24:01"
         },
         {
             "name": "styleci/git",
