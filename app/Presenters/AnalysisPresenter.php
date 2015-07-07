@@ -68,7 +68,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     }
 
     /**
-     * Get the analysis status summary.
+     * Get the analysis hashids id.
      *
      * @return string
      */
