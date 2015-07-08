@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\Analysis;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalysisWasQueuedEvent implements AnalysisEventInterface
+final class AnalysisWasQueuedEvent implements AnalysisEventInterface
 {
     /**
      * The analysis object.

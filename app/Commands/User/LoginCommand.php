@@ -17,7 +17,7 @@ namespace StyleCI\StyleCI\Commands\User;
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
  */
-class LoginCommand
+final class LoginCommand
 {
     /**
      * The user's id.

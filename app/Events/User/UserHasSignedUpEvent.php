@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\User;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class UserHasSignedUpEvent implements UserEventInterface
+final class UserHasSignedUpEvent implements UserEventInterface
 {
     /**
      * The user that has signed up.

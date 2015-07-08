@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\User;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class UserHasLoggedInEvent implements UserEventInterface
+final class UserHasLoggedInEvent implements UserEventInterface
 {
     /**
      * The user that has logged in.

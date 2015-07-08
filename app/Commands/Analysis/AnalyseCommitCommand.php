@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\Repo;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalyseCommitCommand
+final class AnalyseCommitCommand
 {
     /**
      * The repo to analyse.
