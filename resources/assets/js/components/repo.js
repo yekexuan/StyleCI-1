@@ -8,11 +8,15 @@ var RepoList = Vue.extend({
     methods: {
         getAnalyses: function() {
             var self = this;
-            var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '?branch=' + self.repoBranch;
+            var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '?branch=' + self.repoBranch + '&page=' + self.currentPage;
+
+            self.isLoading = true;
 
             return $.get(url)
                 .done(function(response) {
                     self.$set('analyses', response.data);
+                    self.$set('currentPage', response.pagination.current_page);
+                    self.$set('totalPages', response.pagination.total_pages);
                 })
                 .fail(function(response) {
                     (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
@@ -45,6 +49,22 @@ var RepoList = Vue.extend({
             this.repoBranch = branch;
             this.getAnalyses();
         },
+        pageForward: function() {
+            if (this.totalPages <= this.currentPage) {
+                return;
+            }
+
+            this.currentPage++;
+            this.getAnalyses();
+        },
+        pageBackward: function() {
+            if (this.totalPages > this.currentPage) {
+                return;
+            }
+
+            this.currentPage--;
+            this.getAnalyses();
+        },
         AnalysisStatusChangeEventHandler: function(data) {
             var repo = _.findWhere(this.repos, { 'id': data.event.id });
 
@@ -67,6 +87,8 @@ var RepoList = Vue.extend({
             repoId: null,
             repoBranch: null,
             isLoading: true,
+            currentPage: 1,
+            totalPages: 1,
             search: '',
             analyses: []
         };
