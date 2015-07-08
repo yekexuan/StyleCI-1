@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "24a92c55f8a57445669f7697be2d8285",
+    "hash": "056da2a5b57c8b574eea5087d033f51e",
     "packages": [
         {
             "name": "alt-three/bugsnag",
@@ -294,22 +294,22 @@
         },
         {
             "name": "cpliakas/git-wrapper",
-            "version": "dev-master",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cpliakas/git-wrapper.git",
-                "reference": "e20edffaceec2f3ef8701b1fe08597fb469a81ab"
+                "reference": "0f8c4a4dcdd6ca5b46330ab12be3a439eea16d46"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cpliakas/git-wrapper/zipball/e20edffaceec2f3ef8701b1fe08597fb469a81ab",
-                "reference": "e20edffaceec2f3ef8701b1fe08597fb469a81ab",
+                "url": "https://api.github.com/repos/cpliakas/git-wrapper/zipball/0f8c4a4dcdd6ca5b46330ab12be3a439eea16d46",
+                "reference": "0f8c4a4dcdd6ca5b46330ab12be3a439eea16d46",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
-                "symfony/event-dispatcher": ">=2.3",
-                "symfony/process": ">=2.3"
+                "symfony/event-dispatcher": "~2.3|~3.0",
+                "symfony/process": "~2.3|~3.0"
             },
             "require-dev": {
                 "pdepend/pdepend": "~1.0",
@@ -345,7 +345,7 @@
             "keywords": [
                 "git"
             ],
-            "time": "2015-04-10 14:30:27"
+            "time": "2015-07-08 14:28:09"
         },
         {
             "name": "danielstjules/stringy",
@@ -1787,31 +1787,27 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "56862959b45131ad33e5a7727a25db19f2cf090b"
+                "reference": "f70cf7d229b9f96a076b74b20c31f1762c8ef9dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/56862959b45131ad33e5a7727a25db19f2cf090b",
-                "reference": "56862959b45131ad33e5a7727a25db19f2cf090b",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f70cf7d229b9f96a076b74b20c31f1762c8ef9dc",
+                "reference": "f70cf7d229b9f96a076b74b20c31f1762c8ef9dc",
                 "shasum": ""
             },
             "require": {
-                "ext-mbstring": "*",
                 "php": ">=5.4.0"
             },
             "require-dev": {
                 "ext-fileinfo": "*",
-                "league/phpunit-coverage-listener": "~1.1",
                 "mockery/mockery": "~0.9",
-                "phpspec/phpspec": "~2.0",
+                "phpspec/phpspec": "^2.2",
                 "phpspec/prophecy-phpunit": "~1.0",
-                "phpunit/phpunit": "~4.1",
-                "predis/predis": "~1.0",
-                "tedivm/stash": "~0.12.0"
+                "phpunit/phpunit": "~4.1"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
@@ -1825,8 +1821,7 @@
                 "league/flysystem-rackspace": "Allows you to use Rackspace Cloud Files",
                 "league/flysystem-sftp": "Allows you to use SFTP server storage via phpseclib",
                 "league/flysystem-webdav": "Allows you to use WebDAV storage",
-                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter",
-                "predis/predis": "Allows you to use Predis for caching"
+                "league/flysystem-ziparchive": "Allows you to use ZipArchive adapter"
             },
             "type": "library",
             "extra": {
@@ -1849,10 +1844,11 @@
                     "email": "info@frenky.net"
                 }
             ],
-            "description": "Many filesystems, one API.",
+            "description": "Filesystem abstraction: Many filesystems, one API.",
             "keywords": [
                 "Cloud Files",
                 "WebDAV",
+                "abstraction",
                 "aws",
                 "cloud",
                 "copy.com",
@@ -1860,6 +1856,7 @@
                 "file systems",
                 "files",
                 "filesystem",
+                "filesystems",
                 "ftp",
                 "rackspace",
                 "remote",
@@ -1867,7 +1864,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2015-06-07 21:27:37"
+            "time": "2015-07-08 12:45:24"
         },
         {
             "name": "mccool/laravel-auto-presenter",
@@ -2576,16 +2573,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "32f2c242f85110689fa940b56e5a6b44e5b1bfaa"
+                "reference": "24e1215b5383c8a2997e2f3230ba5d507154def1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/32f2c242f85110689fa940b56e5a6b44e5b1bfaa",
-                "reference": "32f2c242f85110689fa940b56e5a6b44e5b1bfaa",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/24e1215b5383c8a2997e2f3230ba5d507154def1",
+                "reference": "24e1215b5383c8a2997e2f3230ba5d507154def1",
                 "shasum": ""
             },
             "require": {
-                "cpliakas/git-wrapper": "dev-master as 1.4.2",
+                "cpliakas/git-wrapper": "~1.5",
                 "gitonomy/gitlib": "~1.0",
                 "php": ">=5.5.9",
                 "symfony/filesystem": "~2.3",
@@ -2634,24 +2631,24 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-07-07 14:10:47"
+            "time": "2015-07-08 17:33:45"
         },
         {
             "name": "styleci/login",
-            "version": "v0.2.1-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "434170aa749bd1bf15f4bac1837f2435f335491a"
+                "reference": "e64cf680ff7703b063470df164d890c59e90d4b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/434170aa749bd1bf15f4bac1837f2435f335491a",
-                "reference": "434170aa749bd1bf15f4bac1837f2435f335491a",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/e64cf680ff7703b063470df164d890c59e90d4b9",
+                "reference": "e64cf680ff7703b063470df164d890c59e90d4b9",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "~6.0",
+                "guzzlehttp/guzzle": "~5.3|~6.0",
                 "illuminate/contracts": "5.1.*",
                 "illuminate/http": "5.1.*",
                 "illuminate/support": "5.1.*",
@@ -2664,7 +2661,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.2-dev"
+                    "dev-master": "0.3-dev"
                 }
             },
             "autoload": {
@@ -2692,13 +2689,12 @@
             ],
             "description": "StyleCI Login Is A GitHub Login Provider",
             "keywords": [
-                "Graham Campbell",
-                "GrahamCampbell",
+                "Alt Three",
                 "StyleCI",
                 "github",
                 "login"
             ],
-            "time": "2015-06-27 16:11:50"
+            "time": "2015-07-08 17:14:55"
         },
         {
             "name": "styleci/storage",
