@@ -20,7 +20,7 @@ use StyleCI\StyleCI\Models\Analysis;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class CleanupAnalysisJob implements ShouldQueue
+final class CleanupAnalysisJob implements ShouldQueue
 {
     use SerializesModels;
 

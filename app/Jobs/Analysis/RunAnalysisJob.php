@@ -21,7 +21,7 @@ use StyleCI\StyleCI\Models\Analysis;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class RunAnalysisJob implements ShouldQueue
+final class RunAnalysisJob implements ShouldQueue
 {
     use SerializesModels;
 
