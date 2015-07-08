@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3605b45cbe0aa1a99600bb9437d3b8e6",
+    "hash": "24a92c55f8a57445669f7697be2d8285",
     "packages": [
         {
             "name": "alt-three/bugsnag",
@@ -1662,13 +1662,13 @@
             "version": "5.1.x-dev",
             "source": {
                 "type": "git",
-                "url": "https://github.com/StyleCI/framework.git",
-                "reference": "a24c2ecc366afed1920f082569616b4b8a7849e5"
+                "url": "https://github.com/laravel/framework.git",
+                "reference": "e0402e7dadf46e6f15a4fcfe039155fe36ff100f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/framework/zipball/a24c2ecc366afed1920f082569616b4b8a7849e5",
-                "reference": "a24c2ecc366afed1920f082569616b4b8a7849e5",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/e0402e7dadf46e6f15a4fcfe039155fe36ff100f",
+                "reference": "e0402e7dadf46e6f15a4fcfe039155fe36ff100f",
                 "shasum": ""
             },
             "require": {
@@ -1767,6 +1767,7 @@
                     "Illuminate\\": "src/Illuminate/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1782,11 +1783,7 @@
                 "framework",
                 "laravel"
             ],
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
-            "time": "2015-07-07 18:56:22"
+            "time": "2015-07-08 02:09:54"
         },
         {
             "name": "league/flysystem",
