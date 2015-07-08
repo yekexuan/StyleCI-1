@@ -75,7 +75,22 @@ class RepoController extends AbstractController
         $analyses = $repo->analyses()->where('branch', Request::get('branch', $repo->default_branch))->orderBy('created_at', 'desc')->paginate(50);
 
         if (Request::ajax()) {
-            return new JsonResponse(['data' => AutoPresenter::decorate($analyses->getCollection())->toArray()]);
+            $pagination = [
+                'total'        => $analyses->total(),
+                'count'        => count($analyses->items()),
+                'per_page'     => $analyses->perPage(),
+                'current_page' => $analyses->currentPage(),
+                'total_pages'  => $analyses->lastPage(),
+                'links'        => [
+                    'next_page'     => $analyses->nextPageUrl(),
+                    'previous_page' => $analyses->previousPageUrl(),
+                ],
+            ];
+
+            return new JsonResponse([
+                'data'       => AutoPresenter::decorate($analyses->getCollection())->toArray(),
+                'pagination' => $pagination,
+            ]);
         }
 
         if (Auth::user()) {
