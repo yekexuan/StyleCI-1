@@ -12,6 +12,7 @@
 namespace StyleCI\StyleCI\GitHub;
 
 use Github\ResultPager;
+use Illuminate\Contracts\Cache\Repository;
 use InvalidArugmentException;
 use StyleCI\StyleCI\Models\Repo;
 
@@ -30,15 +31,24 @@ class Branches
     protected $factory;
 
     /**
+     * The illuminate cache repository instance.
+     *
+     * @var \Illuminate\Contracts\Cache\Repository
+     */
+    protected $cache;
+
+    /**
      * Create a new github branches instance.
      *
-     * @param \StyleCI\StyleCI\GitHub\ClientFactory $factory
+     * @param \StyleCI\StyleCI\GitHub\ClientFactory  $factory
+     * @param \Illuminate\Contracts\Cache\Repository $cache
      *
      * @return void
      */
-    public function __construct(ClientFactory $factory)
+    public function __construct(ClientFactory $factory, Repository $cache)
     {
         $this->factory = $factory;
+        $this->cache = $cache;
     }
 
     /**
@@ -83,7 +93,7 @@ class Branches
     }
 
     /**
-     * Get the raw branch list from github.
+     * Get the raw branch list.
      *
      * @param \StyleCI\StyleCI\Models\Repo $repo
      *
@@ -91,9 +101,36 @@ class Branches
      */
     protected function getRaw(Repo $repo)
     {
+        // cache the branch info from github for 12 hours
+        return $this->cache->remember($repo->id.'branches', 720, function () use ($repo) {
+            return $this->fetchFromGitHub($repo);
+        });
+    }
+
+    /**
+     * Fetch the raw branch list from github.
+     *
+     * @param \StyleCI\StyleCI\Models\Repo $repo
+     *
+     * @return array
+     */
+    protected function fetchFromGitHub(Repo $repo)
+    {
         $client = $this->factory->make($repo, ['version' => 'quicksilver-preview']);
         $paginator = new ResultPager($client);
 
         return $paginator->fetchAll($client->repos(), 'branches', explode('/', $repo->name));
+    }
+
+    /**
+     * Flush our cache of the repo's branches.
+     *
+     * @param \StyleCI\StyleCI\Models\Repo $repo
+     *
+     * @return void
+     */
+    public function flush(Repo $repo)
+    {
+        $this->cache->forget($repo->id.'branches');
     }
 }

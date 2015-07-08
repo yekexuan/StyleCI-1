@@ -54,8 +54,9 @@ class GitHubServiceProvider extends ServiceProvider
     {
         $this->app->singleton('styleci.branches', function ($app) {
             $factory = $app['styleci.clientfactory'];
+            $cache = $app['cache.store'];
 
-            return new Branches($factory);
+            return new Branches($factory, $cache);
         });
 
         $this->app->alias('styleci.branches', Branches::class);
