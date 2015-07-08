@@ -21,11 +21,12 @@ var Analysis = Vue.extend({
 
             return $.get(url)
                 .done(function(response) {
-                    $('#results').html(response);
+                    $('#results').html(response).promise().done(function(){
+                        SyntaxHighlighter.all();
+                    });
                     if (response.toString().indexOf('changed files') >= 0) {
                         $('#download-diff').show();
                         $('#view-diff').show();
-                        SyntaxHighlighter.all();
                     } else {
                         $('#download-diff').hide();
                         $('#view-diff').hide();
