@@ -23,9 +23,7 @@
             @{{ repoBranch }} <span class="caret"></span>
         </button>
         <ul class="dropdown-menu">
-            @foreach ($branches as $branch)
-            <li><a v-on="click: filterBranch('{{ $branch['name'] }}')">{{ $branch['name'] }}</a></li>
-            @endforeach
+            <li v-repeat="branch : branches"><a v-on="click: filterBranch(branch)">@{{ branch }}</a></li>
         </ul>
     </div>
     <hr>
