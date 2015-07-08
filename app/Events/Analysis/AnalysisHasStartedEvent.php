@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\Analysis;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalysisHasStartedEvent implements AnalysisEventInterface
+final class AnalysisHasStartedEvent implements AnalysisEventInterface
 {
     /**
      * The analysis object.

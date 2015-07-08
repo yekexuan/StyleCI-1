@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\User;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class UserHasRageQuitEvent implements UserEventInterface
+final class UserHasRageQuitEvent implements UserEventInterface
 {
     /**
      * The user that has rage quit.

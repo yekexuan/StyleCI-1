@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\Repo;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class RepoWasEnabledEvent implements RepoEventInterface
+final class RepoWasEnabledEvent implements RepoEventInterface
 {
     /**
      * The repo that was enabled.

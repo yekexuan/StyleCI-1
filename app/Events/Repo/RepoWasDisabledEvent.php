@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\Repo;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class RepoWasDisabledEvent implements RepoEventInterface
+final class RepoWasDisabledEvent implements RepoEventInterface
 {
     /**
      * The repo that was disabled.
