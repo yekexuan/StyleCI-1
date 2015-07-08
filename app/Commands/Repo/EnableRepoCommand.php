@@ -18,7 +18,7 @@ use StyleCI\StyleCI\Models\User;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class EnableRepoCommand
+final class EnableRepoCommand
 {
     /**
      * The repository id.
