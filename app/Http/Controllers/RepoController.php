@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\View;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Commands\Analysis\AnalyseBranchCommand;
+use StyleCI\StyleCI\GitHub\Branches;
 use StyleCI\StyleCI\GitHub\Repos;
 use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Repositories\RepoRepository;
@@ -63,14 +64,15 @@ class RepoController extends AbstractController
     /**
      * Handles the request to show a repo.
      *
-     * @param \StyleCI\StyleCI\Models\Repo  $repo
-     * @param \StyleCI\StyleCI\GitHub\Repos $repos
+     * @param \StyleCI\StyleCI\Models\Repo     $repo
+     * @param \StyleCI\StyleCI\GitHub\Repos    $repos
+     * @param \StyleCI\StyleCI\GitHub\Branches $branches
      *
      * @return \Illuminate\Http\Response|\Illuminate\View\View
      */
-    public function handleShow(Repo $repo, Repos $repos)
+    public function handleShow(Repo $repo, Repos $repos, Branches $branches)
     {
-        $analyses = $repo->analyses()->where('branch', $repo->default_branch)->orderBy('created_at', 'desc')->paginate(50);
+        $analyses = $repo->analyses()->where('branch', Request::get('branch', $repo->default_branch))->orderBy('created_at', 'desc')->paginate(50);
 
         if (Request::ajax()) {
             return new JsonResponse(['data' => AutoPresenter::decorate($analyses->getCollection())->toArray()]);
@@ -82,7 +84,7 @@ class RepoController extends AbstractController
             $canAnalyse = false;
         }
 
-        return View::make('repo')->withRepo($repo)->withAnalysis($analyses)->withCanAnalyse($canAnalyse);
+        return View::make('repo')->withRepo($repo)->withAnalysis($analyses)->withCanAnalyse($canAnalyse)->withBranches($branches->get($repo));
     }
 
     /**

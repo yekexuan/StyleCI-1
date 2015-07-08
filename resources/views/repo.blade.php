@@ -18,6 +18,17 @@
         <i class="fa fa-undo"></i>
     </button>
     @endif
+    <div class="btn-group">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            @{{ repoBranch }} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            @foreach ($branches as $branch)
+            <li><a v-on="click: filterBranch('{{ $branch['name'] }}')">{{ $branch['name'] }}</a></li>
+            @endforeach
+        </ul>
+    </div>
+    <hr>
     <div class="repo-table" id="repo" data-id="{{ $repo->id }}" data-branch="{{ $repo->default_branch }}">
         <div v-show="isLoading" class="loading text-center">
             <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your analyses...</h3>

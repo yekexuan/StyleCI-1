@@ -8,7 +8,7 @@ var RepoList = Vue.extend({
     methods: {
         getAnalyses: function() {
             var self = this;
-            var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId;
+            var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '?branch=' + self.repoBranch;
 
             return $.get(url)
                 .done(function(response) {
@@ -36,6 +36,14 @@ var RepoList = Vue.extend({
                 .always(function() {
                     btn.button('reset').blur();
                 });
+        },
+        filterBranch: function(branch) {
+            if (this.repoBranch == branch) {
+                return;
+            }
+
+            this.repoBranch = branch;
+            this.getAnalyses();
         },
         AnalysisStatusChangeEventHandler: function(data) {
             var repo = _.findWhere(this.repos, { 'id': data.event.id });
