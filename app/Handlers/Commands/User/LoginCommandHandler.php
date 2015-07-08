@@ -43,11 +43,14 @@ class LoginCommandHandler
         ];
 
         if ($user) {
-            $user->forceFill($attributes)->save();
-            event(new UserHasLoggedInEvent($user));
+            $user->fill($attributes);
         } else {
-            $user = User::forceCreate(array_merge(['id' => $command->id], $attributes));
+            $user = new User(array_merge(['id' => $command->id], $attributes));
             event(new UserHasSignedUpEvent($user));
         }
+
+        $user->save();
+
+        event(new UserHasLoggedInEvent($user));
     }
 }
