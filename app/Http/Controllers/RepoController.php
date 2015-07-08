@@ -64,13 +64,12 @@ class RepoController extends AbstractController
     /**
      * Handles the request to show a repo.
      *
-     * @param \StyleCI\StyleCI\Models\Repo     $repo
-     * @param \StyleCI\StyleCI\GitHub\Repos    $repos
-     * @param \StyleCI\StyleCI\GitHub\Branches $branches
+     * @param \StyleCI\StyleCI\Models\Repo  $repo
+     * @param \StyleCI\StyleCI\GitHub\Repos $repos
      *
      * @return \Illuminate\Http\Response|\Illuminate\View\View
      */
-    public function handleShow(Repo $repo, Repos $repos, Branches $branches)
+    public function handleShow(Repo $repo, Repos $repos)
     {
         $analyses = $repo->analyses()->where('branch', Request::get('branch', $repo->default_branch))->orderBy('created_at', 'desc')->paginate(50);
 
@@ -99,7 +98,7 @@ class RepoController extends AbstractController
             $canAnalyse = false;
         }
 
-        return View::make('repo')->withRepo($repo)->withAnalysis($analyses)->withCanAnalyse($canAnalyse)->withBranches($branches->get($repo));
+        return View::make('repo')->withRepo($repo)->withAnalysis($analyses)->withCanAnalyse($canAnalyse);
     }
 
     /**
@@ -125,5 +124,31 @@ class RepoController extends AbstractController
         }
 
         return Redirect::route('repo_path', $repo->id);
+    }
+
+    /**
+     * Handles the request to list a repo branches.
+     *
+     * @param \StyleCI\StyleCI\Models\Repo     $repo
+     * @param \StyleCI\StyleCI\GitHub\Repos    $repos
+     * @param \StyleCI\StyleCI\GitHub\Branches $branches
+     *
+     * @throws \Symfony\Component\HttpKernel\Exception\HttpException
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleBranches(Repo $repo, Repos $repos, Branches $branches)
+    {
+        if (!array_get($repos->get(Auth::user()), $repo->id)) {
+            throw new HttpException(403);
+        }
+
+        $branches = collect($branches->get($repo))->lists('name')->all();
+
+        if (Request::ajax()) {
+            return new JsonResponse(['data' => $branches]);
+        }
+
+        throw new HttpException(404);
     }
 }

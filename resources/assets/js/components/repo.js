@@ -3,9 +3,25 @@ var RepoList = Vue.extend({
         this.repoId = $('#repo').data('id');
         this.repoBranch = $('#repo').data('branch');
         this.getAnalyses();
+        this.getBranches();
         this.subscribe();
     },
     methods: {
+        getBranches: function() {
+            var self = this;
+            var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '/branches';
+
+            return $.get(url)
+                .done(function(response) {
+                    self.$set('branches', response.data);
+                })
+                .fail(function(response) {
+                    (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
+                })
+                .always(function() {
+                    self.isLoading = false;
+                });
+        },
         getAnalyses: function() {
             var self = this;
             var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '?branch=' + self.repoBranch + '&page=' + self.currentPage;
@@ -91,7 +107,8 @@ var RepoList = Vue.extend({
             currentPage: 1,
             totalPages: 1,
             search: '',
-            analyses: []
+            analyses: [],
+            branches: []
         };
      }
 });
