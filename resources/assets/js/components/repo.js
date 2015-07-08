@@ -10,8 +10,6 @@ var RepoList = Vue.extend({
             var self = this;
             var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '?branch=' + self.repoBranch + '&page=' + self.currentPage;
 
-            self.isLoading = true;
-
             return $.get(url)
                 .done(function(response) {
                     self.$set('analyses', response.data);
@@ -47,6 +45,7 @@ var RepoList = Vue.extend({
             }
 
             this.repoBranch = branch;
+            this.isLoading = true;
             this.getAnalyses();
         },
         pageForward: function() {
@@ -55,6 +54,7 @@ var RepoList = Vue.extend({
             }
 
             this.currentPage++;
+            this.isLoading = true;
             this.getAnalyses();
         },
         pageBackward: function() {
@@ -63,6 +63,7 @@ var RepoList = Vue.extend({
             }
 
             this.currentPage--;
+            this.isLoading = true;
             this.getAnalyses();
         },
         AnalysisStatusChangeEventHandler: function(data) {
