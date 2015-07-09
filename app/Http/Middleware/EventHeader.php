@@ -36,7 +36,7 @@ class EventHeader
     {
         // the header must be made from lower case letters and underscores
         // the header must also be between 4 and 27 characters long
-        if (!preg_match('/^[a-z-]{4,27}$/', $request->header('X-GitHub-Event'))) {
+        if (!preg_match('/^[a-z_]{4,27}$/', $request->header('X-GitHub-Event'))) {
             throw new BadRequestHttpException('Bad event header rejected.');
         }
 
