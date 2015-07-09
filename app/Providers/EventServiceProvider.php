@@ -41,10 +41,31 @@ class EventServiceProvider extends ServiceProvider
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\Analysis\RealTimeStatusHandler',
         ],
+        'StyleCI\StyleCI\Events\Repo\GitHub\GitHubCreateEvent' => [
+            'StyleCI\StyleCI\Handlers\Events\Repo\BranchCacheFlushHandler',
+        ],
+        'StyleCI\StyleCI\Events\Repo\GitHub\GitHubDeleteEvent' => [
+            'StyleCI\StyleCI\Handlers\Events\Repo\BranchCacheFlushHandler',
+        ],
+        'StyleCI\StyleCI\Events\Repo\GitHub\GitHubMemberEvent' => [
+            'StyleCI\StyleCI\Handlers\Events\Repo\CollaboratorCacheFlushHandler',
+        ],
+        'StyleCI\StyleCI\Events\Repo\GitHub\GitHubPullRequestEvent' => [
+            'StyleCI\StyleCI\Handlers\Events\Repo\GitHub\GitHubPullRequestHandler',
+        ],
+        'StyleCI\StyleCI\Events\Repo\GitHub\GitHubPushRequestEvent' => [
+            'StyleCI\StyleCI\Handlers\Events\Repo\BranchCacheFlushHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\GitHub\GitHubPushHandler',
+        ],
+        'StyleCI\StyleCI\Events\Repo\GitHub\GitHubTeamAddEvent' => [
+            'StyleCI\StyleCI\Handlers\Events\Repo\CollaboratorCacheFlushHandler',
+        ],
         'StyleCI\StyleCI\Events\Repo\RepoWasDisabledEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\WebHooksHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\RealTimeRepoHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\RepoNotificationHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\BranchCacheFlushHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\CollaboratorCacheFlushHandler',
         ],
         'StyleCI\StyleCI\Events\Repo\RepoWasEnabledEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\WebHooksHandler',
