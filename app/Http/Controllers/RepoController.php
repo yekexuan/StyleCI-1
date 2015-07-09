@@ -40,7 +40,7 @@ class RepoController extends AbstractController
     {
         parent::__construct();
 
-        $this->middleware('auth', ['except' => 'handleShow']);
+        $this->middleware('auth', ['except' => ['handleShow', 'handleBranches']]);
     }
 
     /**
