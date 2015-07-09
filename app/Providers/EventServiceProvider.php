@@ -53,7 +53,7 @@ class EventServiceProvider extends ServiceProvider
         'StyleCI\StyleCI\Events\Repo\GitHub\GitHubPullRequestEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\GitHub\GitHubPullRequestHandler',
         ],
-        'StyleCI\StyleCI\Events\Repo\GitHub\GitHubPushRequestEvent' => [
+        'StyleCI\StyleCI\Events\Repo\GitHub\GitHubPushEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\BranchCacheFlushHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\GitHub\GitHubPushHandler',
         ],
