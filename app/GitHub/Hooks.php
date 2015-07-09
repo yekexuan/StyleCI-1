@@ -53,7 +53,7 @@ class Hooks
         $args = explode('/', $repo->name);
         $hooks = $this->factory->make($repo, ['version' => 'quicksilver-preview'])->repo()->hooks();
 
-        $events = ['pull_request','push'];
+        $events = ['create', 'delete', 'member', 'pull_request', 'push', 'team_add'];
 
         $config = [
             'url'          => route('webhook_callback'),
