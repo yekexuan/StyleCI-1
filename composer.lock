@@ -2573,12 +2573,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "24e1215b5383c8a2997e2f3230ba5d507154def1"
+                "reference": "0867110e1697489b1634815391a609351c8620fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/24e1215b5383c8a2997e2f3230ba5d507154def1",
-                "reference": "24e1215b5383c8a2997e2f3230ba5d507154def1",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/0867110e1697489b1634815391a609351c8620fb",
+                "reference": "0867110e1697489b1634815391a609351c8620fb",
                 "shasum": ""
             },
             "require": {
@@ -2631,7 +2631,7 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-07-08 17:33:45"
+            "time": "2015-07-09 12:50:30"
         },
         {
             "name": "styleci/login",
