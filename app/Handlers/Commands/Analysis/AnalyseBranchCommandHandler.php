@@ -12,6 +12,7 @@
 namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Support\Str;
 use StyleCI\StyleCI\Commands\Analysis\AnalyseBranchCommand;
 use StyleCI\StyleCI\GitHub\Branches;
 use StyleCI\StyleCI\GitHub\Commits;
@@ -67,7 +68,7 @@ class AnalyseBranchCommandHandler
         $repo = $command->repo;
         $branch = $command->branch;
         $commit = $this->branches->getCommit($repo, $branch);
-        $message = substr($this->commits->get($repo, $commit)['commit']['message'], 0, 255);
+        $message = Str::commit($this->commits->get($repo, $commit)['commit']['message']);
 
         $analysis = Analysis::create([
             'repo_id' => $repo->id,
