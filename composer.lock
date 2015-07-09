@@ -509,12 +509,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "84e88c53abb4e2b9f04e11440c6b037d678ea3b6"
+                "reference": "a5ffbe1092599f236c1a041a06a22dd8f6c8c268"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/84e88c53abb4e2b9f04e11440c6b037d678ea3b6",
-                "reference": "84e88c53abb4e2b9f04e11440c6b037d678ea3b6",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/a5ffbe1092599f236c1a041a06a22dd8f6c8c268",
+                "reference": "a5ffbe1092599f236c1a041a06a22dd8f6c8c268",
                 "shasum": ""
             },
             "require": {
@@ -562,7 +562,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/PHP-CS-Fixer/tree/master"
             },
-            "time": "2015-07-03 00:00:20"
+            "time": "2015-07-09 10:25:10"
         },
         {
             "name": "fideloper/proxy",
@@ -1663,12 +1663,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "e0402e7dadf46e6f15a4fcfe039155fe36ff100f"
+                "reference": "0f637ee6e7f94028dd6a828af09a99e724cbc651"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/e0402e7dadf46e6f15a4fcfe039155fe36ff100f",
-                "reference": "e0402e7dadf46e6f15a4fcfe039155fe36ff100f",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/0f637ee6e7f94028dd6a828af09a99e724cbc651",
+                "reference": "0f637ee6e7f94028dd6a828af09a99e724cbc651",
                 "shasum": ""
             },
             "require": {
@@ -1783,7 +1783,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-07-08 02:09:54"
+            "time": "2015-07-09 03:05:38"
         },
         {
             "name": "league/flysystem",
