@@ -83,6 +83,10 @@ var RepoList = Vue.extend({
             this.getAnalyses();
         },
         AnalysisStatusChangeEventHandler: function(data) {
+            if (data.event.branch != self.repoBranch) {
+                return;
+            }
+
             var repo = _.findWhere(this.repos, { 'id': data.event.id });
 
             if (repo) {
@@ -93,7 +97,7 @@ var RepoList = Vue.extend({
         },
         subscribe: function() {
             var self = this;
-            StyleCI.RealTime.getChannel('repo-' + self.repoId + '-' + self.repoBranch).bind(
+            StyleCI.RealTime.getChannel('repo-' + self.repoId).bind(
                 'AnalysisStatusUpdatedEvent',
                 self.AnalysisStatusChangeEventHandler
             );

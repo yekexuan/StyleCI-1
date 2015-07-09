@@ -67,7 +67,7 @@ class RealTimeStatusHandler
 
         $this->pusher->trigger("analysis-{$analysis->id}", 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
 
-        $this->pusher->trigger("repo-{$analysis->repo_id}-{$analysis->branch}", 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
+        $this->pusher->trigger("repo-{$analysis->repo_id}", 'AnalysisStatusUpdatedEvent', ['event' => $analysis->toArray()]);
 
         if ($analysis->branch === $repo->default_branch) {
             $this->trigger($repo);
