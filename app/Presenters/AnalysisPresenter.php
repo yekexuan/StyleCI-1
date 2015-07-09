@@ -263,6 +263,8 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
             'commit'         => $this->wrappedObject->commit,
             'repo_id'        => $this->wrappedObject->repo_id,
             'repo_name'      => $this->wrappedObject->repo->name,
+            'branch'         => $this->wrappedObject->branch,
+            'pr'             => $this->wrappedObject->pr,
             'message'        => $this->wrappedObject->message,
             'status'         => $this->wrappedObject->status,
             'has_diff'       => $this->has_diff(),
