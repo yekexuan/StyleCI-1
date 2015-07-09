@@ -51,7 +51,11 @@ class GitHubController extends AbstractController
         }
 
         $data = Request::input();
-        $repo = Repo::findOrFail($data['repository']['id']);
+        $repo = Repo::find($data['repository']['id']);
+
+        if (!$repo) {
+            throw new BadRequestHttpException('Request integrity validation failed.');
+        }
 
         list($algo, $sig) = explode('=', Request::header('X-Hub-Signature'));
 
