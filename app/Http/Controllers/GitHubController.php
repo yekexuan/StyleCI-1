@@ -44,7 +44,7 @@ class GitHubController extends AbstractController
      */
     public function handle()
     {
-        $class = 'StyleCI\StyleCI\Events\Repo\GitHub\GitHub'.ucfirst(Request::header('X-GitHub-Event')).'Event';
+        $class = 'StyleCI\StyleCI\Events\Repo\GitHub\GitHub'.ucfirst(camel_case(Request::header('X-GitHub-Event'))).'Event';
 
         if (!class_exists($class)) {
             throw new BadRequestHttpException('Event not supported.');
