@@ -83,6 +83,7 @@ var RepoList = Vue.extend({
             this.getAnalyses();
         },
         AnalysisStatusChangeEventHandler: function(data) {
+            var self = this;
             if (data.event.branch != self.repoBranch) {
                 return;
             }
