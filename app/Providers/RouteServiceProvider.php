@@ -13,6 +13,7 @@ namespace StyleCI\StyleCI\Providers;
 
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;
 use Illuminate\Session\Middleware\StartSession;
@@ -104,6 +105,7 @@ class RouteServiceProvider extends ServiceProvider
             AddQueuedCookiesToResponse::class,
             StartSession::class,
             ShareErrorsFromSession::class,
+            VerifyCsrfToken::class,
         ]], function (Router $router) use ($routes) {
             $routes->map($router);
         });

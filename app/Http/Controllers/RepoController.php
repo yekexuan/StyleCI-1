@@ -39,8 +39,6 @@ class RepoController extends AbstractController
      */
     public function __construct()
     {
-        parent::__construct();
-
         $this->middleware(Authenticate::class, ['except' => ['handleShow', 'handleBranches']]);
     }
 

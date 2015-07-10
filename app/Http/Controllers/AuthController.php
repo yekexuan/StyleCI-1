@@ -33,8 +33,6 @@ class AuthController extends AbstractController
      */
     public function __construct()
     {
-        parent::__construct();
-
         $this->middleware(RedirectIfAuthenticated::class, ['except' => ['handleLogout']]);
     }
 

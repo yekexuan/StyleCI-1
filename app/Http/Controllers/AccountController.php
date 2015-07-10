@@ -47,8 +47,6 @@ class AccountController extends AbstractController
      */
     public function __construct(Repos $repos)
     {
-        parent::__construct();
-
         $this->repos = $repos;
 
         $this->middleware(Authenticate::class);

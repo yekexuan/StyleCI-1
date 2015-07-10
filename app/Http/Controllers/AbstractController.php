@@ -12,7 +12,6 @@
 namespace StyleCI\StyleCI\Http\Controllers;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Controller;
 
 /**
@@ -23,16 +22,4 @@ use Illuminate\Routing\Controller;
 abstract class AbstractController extends Controller
 {
     use DispatchesJobs;
-
-    /**
-     * Create a new controller instance.
-     *
-     * @param array $csrf
-     *
-     * @return void
-     */
-    public function __construct(array $csrf = [])
-    {
-        $this->middleware(VerifyCsrfToken::class, $csrf);
-    }
 }
