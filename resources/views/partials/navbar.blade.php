@@ -8,9 +8,9 @@
                 <span class="icon-bar"></span>
             </button>
             @if($currentUser)
-            <a class="navbar-brand" href="{{ route('home') }}">StyleCI</a>
-            @else
             <a class="navbar-brand" href="{{ route('repos_path') }}">StyleCI</a>
+            @else
+            <a class="navbar-brand" href="{{ route('home') }}">StyleCI</a>
             @endif
         </div>
         <div id="navbar" class="navbar-collapse collapse">
