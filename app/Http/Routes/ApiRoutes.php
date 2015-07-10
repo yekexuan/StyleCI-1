@@ -22,6 +22,13 @@ use Illuminate\Contracts\Routing\Registrar;
 class ApiRoutes
 {
     /**
+     * Defines if these routes are for the browser.
+     *
+     * @var bool
+     */
+    public static $browser = true;
+
+    /**
      * Define the account routes.
      *
      * @param \Illuminate\Contracts\Routing\Registrar $router

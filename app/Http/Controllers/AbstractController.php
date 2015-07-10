@@ -11,14 +11,9 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
-use Illuminate\Cookie\Middleware\EncryptCookies;
-use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
-use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller;
-use Illuminate\Session\Middleware\StartSession;
-use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 /**
  * This is the abstract controller class.
@@ -27,7 +22,7 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
  */
 abstract class AbstractController extends Controller
 {
-    use DispatchesJobs, ValidatesRequests;
+    use DispatchesJobs;
 
     /**
      * Create a new controller instance.
@@ -38,10 +33,6 @@ abstract class AbstractController extends Controller
      */
     public function __construct(array $csrf = [])
     {
-        $this->middleware(EncryptCookies::class);
-        $this->middleware(AddQueuedCookiesToResponse::class);
-        $this->middleware(StartSession::class);
-        $this->middleware(ShareErrorsFromSession::class);
         $this->middleware(VerifyCsrfToken::class, $csrf);
     }
 }

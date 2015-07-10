@@ -21,6 +21,13 @@ use Illuminate\Contracts\Routing\Registrar;
 class RepoRoutes
 {
     /**
+     * Defines if these routes are for the browser.
+     *
+     * @var bool
+     */
+    public static $browser = true;
+
+    /**
      * Define the repo routes.
      *
      * @param \Illuminate\Contracts\Routing\Registrar $router

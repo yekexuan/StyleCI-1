@@ -21,6 +21,13 @@ use Illuminate\Contracts\Routing\Registrar;
 class MainRoutes
 {
     /**
+     * Defines if these routes are for the browser.
+     *
+     * @var bool
+     */
+    public static $browser = true;
+
+    /**
      * Define the main routes.
      *
      * @param \Illuminate\Contracts\Routing\Registrar $router
@@ -32,11 +39,6 @@ class MainRoutes
         $router->get('/', [
             'as'   => 'home',
             'uses' => 'HomeController@handle',
-        ]);
-
-        $router->post('github-callback', [
-            'as'   => 'webhook_callback',
-            'uses' => 'GitHubController@handle',
         ]);
 
         $router->get('privacy', [
