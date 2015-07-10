@@ -56,7 +56,7 @@ class GoodbyeMessageHandler
         $mail = [
             'email'   => $user->email,
             'name'    => AutoPresenter::decorate($user)->first_name,
-            'subject' => '[StyleCI] Your account has been removed from StyleCI',
+            'subject' => 'Your account has been removed from StyleCI',
         ];
 
         $this->mailer->queue(['html' => 'emails.goodbye-html', 'text' => 'emails.goodbye-text'], $mail, function (Message $message) use ($mail) {
