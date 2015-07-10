@@ -7,18 +7,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            @if($currentUser)
             <a class="navbar-brand" href="{{ route('home') }}">StyleCI</a>
+            @else
+            <a class="navbar-brand" href="{{ route('repos_path') }}">StyleCI</a>
+            @endif
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li>
-                    @if($currentUser)
-                    <a href="{{ route('repos_path') }}">Repositories</a>
-                    @else
-                    <a href="{{ route('auth_login_path') }}" data-method="POST">Repositories</a>
-                    @endif
-                </li>
-            </ul>
             @if($currentUser)
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="{{ route('account_path') }}">{{ $currentUser->name }}</a></li>
