@@ -65,10 +65,10 @@ class RepoNotificationHandler
         $mail = ['repo' => $event->repo->name];
 
         if ($event instanceof RepoWasDisabledEvent) {
-            $mail['subject'] = '[StyleCI] Repo Disabled';
+            $mail['subject'] = 'Repo Disabled';
             $view = 'disabled';
         } else {
-            $mail['subject'] = '[StyleCI] Repo Enabled';
+            $mail['subject'] = 'Repo Enabled';
             $mail['link'] = route('repo_path', $event->repo->id);
             $view = 'enabled';
         }

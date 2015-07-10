@@ -73,7 +73,7 @@ class AnalysisNotificationsHandler
             'repo'    => $repo->name,
             'commit'  => $analysis->message,
             'link'    => route('analysis_path', AutoPresenter::decorate($analysis)->id),
-            'subject' => '[StyleCI] Failed Analysis',
+            'subject' => 'Failed Analysis',
         ];
 
         switch ($analysis->status) {
