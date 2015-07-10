@@ -11,7 +11,9 @@
 
 namespace StyleCI\StyleCI\Http;
 
+use Fideloper\Proxy\TrustProxies;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use StyleCI\StyleCI\Http\Middleware\CheckForMaintenanceMode;
 
 /**
  * This is the http kernel class.
@@ -25,23 +27,5 @@ class Kernel extends HttpKernel
      *
      * @var string[]
      */
-    protected $middleware = [
-        'Fideloper\Proxy\TrustProxies',
-        'StyleCI\StyleCI\Http\Middleware\CheckForMaintenanceMode',
-        'Illuminate\Cookie\Middleware\EncryptCookies',
-        'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
-        'Illuminate\Session\Middleware\StartSession',
-        'Illuminate\View\Middleware\ShareErrorsFromSession',
-    ];
-
-    /**
-     * The application's route middleware.
-     *
-     * @var string[]
-     */
-    protected $routeMiddleware = [
-        'auth'  => 'StyleCI\StyleCI\Http\Middleware\Authenticate',
-        'csrf'  => 'Illuminate\Foundation\Http\Middleware\VerifyCsrfToken',
-        'guest' => 'StyleCI\StyleCI\Http\Middleware\RedirectIfAuthenticated',
-    ];
+    protected $middleware = [TrustProxies::class, CheckForMaintenanceMode::class];
 }

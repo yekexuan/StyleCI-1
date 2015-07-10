@@ -20,6 +20,7 @@ use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Commands\Analysis\AnalyseBranchCommand;
 use StyleCI\StyleCI\GitHub\Branches;
 use StyleCI\StyleCI\GitHub\Repos;
+use StyleCI\StyleCI\Http\Middleware\Authenticate;
 use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Repositories\RepoRepository;
 use Symfony\Component\HttpKernel\Exception\HttpException;
@@ -40,7 +41,7 @@ class RepoController extends AbstractController
     {
         parent::__construct();
 
-        $this->middleware('auth', ['except' => ['handleShow', 'handleBranches']]);
+        $this->middleware(Authenticate::class, ['except' => ['handleShow', 'handleBranches']]);
     }
 
     /**

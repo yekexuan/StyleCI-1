@@ -20,6 +20,7 @@ use StyleCI\StyleCI\Commands\Repo\DisableRepoCommand;
 use StyleCI\StyleCI\Commands\Repo\EnableRepoCommand;
 use StyleCI\StyleCI\Commands\User\DeleteAccountCommand;
 use StyleCI\StyleCI\GitHub\Repos;
+use StyleCI\StyleCI\Http\Middleware\Authenticate;
 use StyleCI\StyleCI\Models\Repo;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
@@ -50,7 +51,7 @@ class AccountController extends AbstractController
 
         $this->repos = $repos;
 
-        $this->middleware('auth');
+        $this->middleware(Authenticate::class);
     }
 
     /**

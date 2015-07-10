@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Str;
 use StyleCI\Login\LoginProvider;
 use StyleCI\StyleCI\Commands\User\LoginCommand;
+use StyleCI\StyleCI\Http\Middleware\RedirectIfAuthenticated;
 
 /**
  * This is the auth controller class.
@@ -34,7 +35,7 @@ class AuthController extends AbstractController
     {
         parent::__construct();
 
-        $this->middleware('guest', ['except' => ['handleLogout']]);
+        $this->middleware(RedirectIfAuthenticated::class, ['except' => ['handleLogout']]);
     }
 
     /**
