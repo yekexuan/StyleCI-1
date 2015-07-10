@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
@@ -22,7 +23,7 @@ use StyleCI\StyleCI\Models\Analysis;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalysisController extends AbstractController
+class AnalysisController extends Controller
 {
     /**
      * Handles the request to show an analysis.

@@ -11,6 +11,8 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Str;
@@ -24,8 +26,10 @@ use StyleCI\StyleCI\Http\Middleware\RedirectIfAuthenticated;
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
  */
-class AuthController extends AbstractController
+class AuthController extends Controller
 {
+    use DispatchesJobs;
+
     /**
      * Create a new authentication controller instance.
      *

@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\View;
 
 /**
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\View;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class HomeController extends AbstractController
+class HomeController extends Controller
 {
     /**
      * Handles the request to view the homepage.

@@ -12,6 +12,7 @@
 namespace StyleCI\StyleCI\Http\Controllers;
 
 use Illuminate\Http\JsonResponse;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Str;
 use StyleCI\StyleCI\Http\Middleware\BodySize;
@@ -24,7 +25,7 @@ use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class GitHubController extends AbstractController
+class GitHubController extends Controller
 {
     /**
      * Create a new github controller instance.

@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
@@ -23,7 +24,7 @@ use StyleCI\StyleCI\Models\Repo;
  * @author Graham Campbell <graham@alt-three.com>
  * @author James Brooks <jbrooksuk@me.com>
  */
-class ShieldController extends AbstractController
+class ShieldController extends Controller
 {
     /**
      * Handles a request to serve a shield.

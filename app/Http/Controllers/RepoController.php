@@ -11,7 +11,9 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
+use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Request;
@@ -30,8 +32,10 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class RepoController extends AbstractController
+class RepoController extends Controller
 {
+    use DispatchesJobs;
+
     /**
      * Create a new account controller instance.
      *
