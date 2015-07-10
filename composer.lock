@@ -1580,7 +1580,7 @@
                     "name": "Jeremy Lindblom",
                     "email": "jeremeamia@gmail.com",
                     "homepage": "https://github.com/jeremeamia",
-                    "role": "Developer"
+                    "role": "developer"
                 }
             ],
             "description": "Serialize Closure objects, including their context and binding",
@@ -1663,12 +1663,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0f637ee6e7f94028dd6a828af09a99e724cbc651"
+                "reference": "30289108d78709896747d41c7bff045505c9634b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0f637ee6e7f94028dd6a828af09a99e724cbc651",
-                "reference": "0f637ee6e7f94028dd6a828af09a99e724cbc651",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/30289108d78709896747d41c7bff045505c9634b",
+                "reference": "30289108d78709896747d41c7bff045505c9634b",
                 "shasum": ""
             },
             "require": {
@@ -1783,7 +1783,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-07-09 03:05:38"
+            "time": "2015-07-10 04:05:54"
         },
         {
             "name": "league/flysystem",
