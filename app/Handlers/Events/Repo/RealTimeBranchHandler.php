@@ -12,8 +12,8 @@
 namespace StyleCI\StyleCI\Handlers\Events\Repo;
 
 use Pusher;
-use StyleCI\StyleCI\Events\Repo\GitHub\GitHubEventInterface;
 use StyleCI\StyleCI\Events\Repo\GitHub\GitHubCreateEvent;
+use StyleCI\StyleCI\Events\Repo\GitHub\GitHubEventInterface;
 use StyleCI\StyleCI\GitHub\Branches;
 
 /**
