@@ -108,18 +108,11 @@ class RepoController extends Controller
      * Handles the request to analyse a repo.
      *
      * @param \StyleCI\StyleCI\Models\Repo  $repo
-     * @param \StyleCI\StyleCI\GitHub\Repos $repos
-     *
-     * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleAnalyse(Repo $repo, Repos $repos)
+    public function handleAnalyse(Repo $repo)
     {
-        if (!array_get($repos->get(Auth::user()), $repo->id)) {
-            throw new HttpException(403);
-        }
-
         $this->dispatch(new AnalyseBranchCommand($repo, Request::get('branch')));
 
         if (Request::ajax()) {
