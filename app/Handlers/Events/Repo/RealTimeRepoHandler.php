@@ -15,6 +15,7 @@ use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use Pusher;
 use StyleCI\StyleCI\Events\Repo\RepoEventInterface;
 use StyleCI\StyleCI\Events\Repo\RepoWasDisabledEvent;
+use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
 /**
@@ -77,7 +78,7 @@ class RealTimeRepoHandler
      *
      * @return void
      */
-    protected function trigger($repo, $event)
+    protected function trigger(Repo $repo, $event)
     {
         $users = $this->userRepository->collaborators($repo);
         $data = AutoPresenter::decorate($repo)->toArray();

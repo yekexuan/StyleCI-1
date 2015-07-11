@@ -15,6 +15,7 @@ use Pusher;
 use StyleCI\StyleCI\Events\Repo\GitHub\GitHubCreateEvent;
 use StyleCI\StyleCI\Events\Repo\GitHub\GitHubEventInterface;
 use StyleCI\StyleCI\GitHub\Branches;
+use StyleCI\StyleCI\Models\Repo;
 
 /**
  * This is the real time branch handler class.
@@ -79,7 +80,7 @@ class RealTimeBranchHandler
      *
      * @return void
      */
-    protected function trigger($repo, $event)
+    protected function trigger(Repo $repo, $event)
     {
         $branches = $this->branches->get($repo);
 
