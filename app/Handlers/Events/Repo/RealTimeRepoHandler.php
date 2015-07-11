@@ -40,7 +40,7 @@ class RealTimeRepoHandler
     protected $pusher;
 
     /**
-     * Create a new repo notifications handler instance.
+     * Create a new real time repo handler instance.
      *
      * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
      * @param \Pusher                                      $pusher
