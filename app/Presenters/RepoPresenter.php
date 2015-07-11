@@ -41,7 +41,7 @@ class RepoPresenter extends BasePresenter implements Arrayable
      *
      * @return \StyleCI\StyleCI\Presenters\AnalysisPresenter|null
      */
-    public function last_analysis()
+    protected function last_analysis()
     {
         if ($analysis = $this->wrappedObject->last_analysis) {
             return AutoPresenter::decorate($analysis);
@@ -53,7 +53,7 @@ class RepoPresenter extends BasePresenter implements Arrayable
      *
      * @return \StyleCI\StyleCI\Presenters\AnalysisPresenter|null
      */
-    public function last_completed()
+    protected function last_completed()
     {
         if ($analysis = $this->wrappedObject->last_completed) {
             return AutoPresenter::decorate($analysis);
@@ -65,7 +65,7 @@ class RepoPresenter extends BasePresenter implements Arrayable
      *
      * @return string
      */
-    public function github_link()
+    protected function github_link()
     {
         return 'https://github.com/'.$this->wrappedObject->name;
     }
