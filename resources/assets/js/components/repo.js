@@ -17,9 +17,6 @@ var RepoList = Vue.extend({
                 })
                 .fail(function(response) {
                     (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
-                })
-                .always(function() {
-                    self.isLoading = false;
                 });
         },
         getAnalyses: function() {
