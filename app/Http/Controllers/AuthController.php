@@ -70,7 +70,7 @@ class AuthController extends Controller
 
         $this->dispatch(new LoginCommand((int) $user['id'], $name, $username, array_get($user, 'email'), array_get($user, 'token')));
 
-        if (count($repoRepository->allByUser($user)) > 0) {
+        if (count($repoRepository->allByUser(Auth::user())) > 0) {
             return Redirect::route('repos_path');
         }
 
