@@ -19,6 +19,7 @@ use Illuminate\Support\Str;
 use StyleCI\Login\LoginProvider;
 use StyleCI\StyleCI\Commands\User\LoginCommand;
 use StyleCI\StyleCI\Http\Middleware\RedirectIfAuthenticated;
+use StyleCI\StyleCI\Repositories\RepoRepository;
 
 /**
  * This is the auth controller class.
@@ -55,11 +56,12 @@ class AuthController extends Controller
     /**
      * Get the user access token to save notifications.
      *
-     * @param \StyleCI\Login\LoginProvider $login
+     * @param \StyleCI\Login\LoginProvider                 $login
+     * @param \StyleCI\StyleCI\Repositories\RepoRepository $repoRepository
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleCallback(LoginProvider $login)
+    public function handleCallback(LoginProvider $login, RepoRepository $repoRepository)
     {
         $user = $login->user();
 
@@ -68,7 +70,11 @@ class AuthController extends Controller
 
         $this->dispatch(new LoginCommand((int) $user['id'], $name, $username, array_get($user, 'email'), array_get($user, 'token')));
 
-        return Redirect::route('repos_path');
+        if (count($repoRepository->allByUser(Auth::user())) > 0) {
+            return Redirect::route('repos_path');
+        }
+
+        return Redirect::route('account_path');
     }
 
     /**
