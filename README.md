@@ -3,7 +3,7 @@
 
 StyleCI was created by, and is maintained by [Graham Campbell](https://github.com/GrahamCampbell), and is a PHP Coding Style Continuous Integration Service powered by [Laravel 5.1](http://laravel.com). Feel free to check out the [releases](https://github.com/StyleCI/StyleCI/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
 
-![StyleCI](https://cloud.githubusercontent.com/assets/2829600/6279509/3f4bc35a-b89a-11e4-84c4-6d52c42ac496.jpg)
+![StyleCI](https://cloud.githubusercontent.com/assets/11048387/8635622/6bf2af9c-2823-11e5-861c-91370e888943.png)
 
 <p align="center">
 <a href="https://travis-ci.org/StyleCI/StyleCI"><img src="https://img.shields.io/travis/StyleCI/StyleCI/master.svg?style=flat-square" alt="Build Status"></img></a>
