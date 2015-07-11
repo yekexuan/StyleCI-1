@@ -19,7 +19,7 @@
     </button>
     @endif
     <div class="btn-group">
-        <button type="button" v-show="branches.length" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" v-class="disabled: !branches.length" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             @{{ repoBranch }} <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" v-show="branches.length">
