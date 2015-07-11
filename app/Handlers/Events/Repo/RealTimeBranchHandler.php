@@ -41,8 +41,8 @@ class RealTimeBranchHandler
     /**
      * Create a new real time branch handler instance.
      *
-     * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
-     * @param \Pusher                                      $pusher
+     * @param \StyleCI\StyleCI\GitHub\Branches $branches
+     * @param \Pusher                          $pusher
      *
      * @return void
      */
