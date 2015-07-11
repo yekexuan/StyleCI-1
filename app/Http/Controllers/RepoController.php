@@ -107,7 +107,7 @@ class RepoController extends Controller
     /**
      * Handles the request to analyse a repo.
      *
-     * @param \StyleCI\StyleCI\Models\Repo  $repo
+     * @param \StyleCI\StyleCI\Models\Repo $repo
      *
      * @return \Illuminate\Http\Response
      */
