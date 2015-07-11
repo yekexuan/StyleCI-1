@@ -72,7 +72,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return string
      */
-    public function id()
+    protected function id()
     {
         return Hashids::connection('analyses')->encode($this->wrappedObject->id);
     }
@@ -82,7 +82,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return string
      */
-    public function summary()
+    protected function summary()
     {
         switch ($this->wrappedObject->status) {
             case 0:
@@ -107,7 +107,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return string
      */
-    public function description()
+    protected function description()
     {
         switch ($this->wrappedObject->status) {
             case 0:
@@ -132,7 +132,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return string
      */
-    public function icon()
+    protected function icon()
     {
         if ($this->wrappedObject->status === 2) {
             return 'fa fa-check-circle';
@@ -150,7 +150,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return string
      */
-    public function color()
+    protected function color()
     {
         if ($this->wrappedObject->status === 2) {
             return 'green';
@@ -168,7 +168,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return string
      */
-    public function github_id()
+    protected function github_id()
     {
         if ($this->pr) {
             return '#'.$this->wrappedObject->pr;
@@ -182,7 +182,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return string
      */
-    public function github_link()
+    protected function github_link()
     {
         if ($this->pr) {
             return 'https://github.com/'.$this->wrappedObject->repo->name.'/pull/'.$this->wrappedObject->pr;
@@ -196,7 +196,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return string
      */
-    public function time_ago()
+    protected function time_ago()
     {
         return $this->wrappedObject->created_at->diffForHumans();
     }
@@ -206,7 +206,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return string
      */
-    public function created_at_iso()
+    protected function created_at_iso()
     {
         return $this->wrappedObject->created_at->toIso8601String();
     }
@@ -216,7 +216,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return bool
      */
-    public function has_diff()
+    protected function has_diff()
     {
         return $this->wrappedObject->status === 3 || $this->wrappedObject->status === 5;
     }
@@ -226,7 +226,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return string|null
      */
-    public function raw_diff()
+    protected function raw_diff()
     {
         if ($this->has_diff()) {
             return $this->storage->get($this->wrappedObject->id);
@@ -238,7 +238,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      *
      * @return \StyleCI\StyleCI\Presenters\Diff
      */
-    public function diff()
+    protected function diff()
     {
         $diff = $this->raw_diff();
 
