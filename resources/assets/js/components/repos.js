@@ -34,15 +34,9 @@ var ReposList = Vue.extend({
         subscribe: function() {
             var self = this;
             StyleCI.RealTime.getChannel('user-' + StyleCI.globals.user)
-                .bind('RepoStatusUpdatedEvent',
-                    self.RepoStatusUpdatedEventHandler
-                )
-                .bind('RepoWasDisabledEvent',
-                    self.RepoWasDisabledEventHandler
-                )
-                .bind('RepoWasEnabledEvent',
-                    self.RepoWasEnabledEventHandler
-                );
+                .bind('RepoStatusUpdatedEvent', self.RepoStatusUpdatedEventHandler)
+                .bind('RepoWasDisabledEvent', self.RepoWasDisabledEventHandler)
+                .bind('RepoWasEnabledEvent', self.RepoWasEnabledEventHandler);
         }
     },
     data: function() {

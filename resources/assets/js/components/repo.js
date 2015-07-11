@@ -98,10 +98,8 @@ var RepoList = Vue.extend({
         },
         subscribe: function() {
             var self = this;
-            StyleCI.RealTime.getChannel('repo-' + self.repoId).bind(
-                'AnalysisStatusUpdatedEvent',
-                self.AnalysisStatusChangeEventHandler
-            );
+            StyleCI.RealTime.getChannel('repo-' + self.repoId)
+                .bind('AnalysisStatusUpdatedEvent', self.AnalysisStatusChangeEventHandler);
         }
     },
     data: function() {
