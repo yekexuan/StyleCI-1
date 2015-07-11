@@ -18,6 +18,7 @@ use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvi
 use Illuminate\Routing\Router;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use StyleCI\StyleCI\Http\Middleware\RepoProtection;
 use StyleCI\StyleCI\Models\Analysis;
 use StyleCI\StyleCI\Models\Repo;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
@@ -84,7 +85,7 @@ class RouteServiceProvider extends ServiceProvider
                 if ($routes::$browser) {
                     $this->mapForBrowser($router, $routes);
                 } else {
-                    $routes->map($router);
+                    $this->mapOtherwise($router, $routes);
                 }
             }
         });
@@ -106,6 +107,24 @@ class RouteServiceProvider extends ServiceProvider
             StartSession::class,
             ShareErrorsFromSession::class,
             VerifyCsrfToken::class,
+            RepoProtection::class,
+        ]], function (Router $router) use ($routes) {
+            $routes->map($router);
+        });
+    }
+
+    /**
+     * Wrap the routes in the basic middleware.
+     *
+     * @param \Illuminate\Routing\Router $router
+     * @param object                     $router
+     *
+     * @return void
+     */
+    protected function mapOtherwise(Router $router, $routes)
+    {
+        $router->group(['middleware' => [
+            RepoProtection::class,
         ]], function (Router $router) use ($routes) {
             $routes->map($router);
         });
