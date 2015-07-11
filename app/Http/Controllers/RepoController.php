@@ -142,10 +142,6 @@ class RepoController extends Controller
      */
     public function handleBranches(Repo $repo, Repos $repos, Branches $branches)
     {
-        if (!array_get($repos->get(Auth::user()), $repo->id)) {
-            throw new HttpException(403);
-        }
-
         $branches = collect($branches->get($repo))->lists('name')->all();
 
         if (Request::ajax()) {
