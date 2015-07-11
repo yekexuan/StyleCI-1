@@ -24,7 +24,7 @@
             </div>
         </form>
         <div v-show="repos.length" v-repeat="repo : repos | filterBy search" id="js-repo-@{{ repo.id }}">
-            <hr>
+            <hr v-show="$index > 0">
             <div class="row">
                 <div class="col-sm-8">
                     <h3>@{{ repo.name }}</h3>
