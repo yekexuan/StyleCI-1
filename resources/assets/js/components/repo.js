@@ -17,9 +17,6 @@ var RepoList = Vue.extend({
                 })
                 .fail(function(response) {
                     (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
-                })
-                .always(function() {
-                    self.isLoading = false;
                 });
         },
         getAnalyses: function() {
@@ -96,12 +93,16 @@ var RepoList = Vue.extend({
                 this.getAnalyses();
             }
         },
+        BranchChangeEventHandler: function(data) {
+            var self = this;
+            self.$set('branches', data.event.branches);
+        },
         subscribe: function() {
             var self = this;
-            StyleCI.RealTime.getChannel('repo-' + self.repoId).bind(
-                'AnalysisStatusUpdatedEvent',
-                self.AnalysisStatusChangeEventHandler
-            );
+            StyleCI.RealTime.getChannel('repo-' + self.repoId)
+                .bind('AnalysisStatusUpdatedEvent', self.AnalysisStatusChangeEventHandler)
+                .bind('BranchWasCreatedEvent', self.BranchChangeEventHandler)
+                .bind('BranchWasDeletedEvent', self.BranchChangeEventHandler);
         }
     },
     data: function() {

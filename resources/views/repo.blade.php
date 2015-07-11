@@ -14,15 +14,15 @@
 @section('content')
 <sc-repo inline-template>
     @if($can_analyse)
-    <button type="button" v-on="click: analyseRepo($event)" class="btn btn-lg btn-danger btn-circle btn-float pull-right" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>" data-toggle="tooltip" data-placement="left" title="Analyse Now">
+    <button type="button" v-class="disabled: !branches.length" v-on="click: analyseRepo($event)" class="btn btn-lg btn-danger btn-circle btn-float pull-right" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>" data-toggle="tooltip" data-placement="left" title="Analyse Now">
         <i class="fa fa-undo"></i>
     </button>
     @endif
     <div class="btn-group">
-        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <button type="button" v-show="branches.length" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             @{{ repoBranch }} <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu" v-show="branches.length">
             <li v-repeat="branch : branches"><a v-on="click: filterBranch(branch)">@{{ branch }}</a></li>
         </ul>
     </div>
