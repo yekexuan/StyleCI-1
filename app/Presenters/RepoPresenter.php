@@ -61,6 +61,16 @@ class RepoPresenter extends BasePresenter implements Arrayable
     }
 
     /**
+     * Get the github link.
+     *
+     * @return string
+     */
+    public function github_link()
+    {
+        return 'https://github.com/'.$this->wrappedObject->name;
+    }
+
+    /**
      * Convert presented repo to an array.
      *
      * @return array
