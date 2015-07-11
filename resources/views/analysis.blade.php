@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('title', 'Analysis - '.$analysis->message)
+@section('title', "{$analysis->repo->name} - Analysis")
 @section('description', $analysis->message)
 
 @section('top')
