@@ -5,7 +5,7 @@
 @section('top')
 <div class="page-heading">
     <div class="container">
-        <h1><a class="github-link" href="{{ $repo->github_link() }}"><i class="fa fa-github"></i></a> {{ $repo->name }}</h1>
+        <h1><a class="github-link" href="{{ $repo->github_link }}"><i class="fa fa-github"></i></a> {{ $repo->name }}</h1>
         <p>Here you can see all the analyses for this repository.</p>
     </div>
 </div>
