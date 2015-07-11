@@ -22,7 +22,7 @@
         <button type="button" v-class="disabled: !branches.length" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             @{{ repoBranch }} <span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" v-show="branches.length">
+        <ul class="dropdown-menu branch-list" v-show="branches.length">
             <li v-repeat="branch : branches"><a v-on="click: filterBranch(branch)">@{{ branch }}</a></li>
         </ul>
     </div>
