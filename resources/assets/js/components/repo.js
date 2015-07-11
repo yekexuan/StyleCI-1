@@ -39,6 +39,11 @@ var RepoList = Vue.extend({
         analyseRepo: function(e) {
             e.preventDefault();
             var self = this;
+
+            if (self.branches.length == 0) {
+                return;
+            }
+
             var btn = $(e.target);
             var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '/analyse?branch=' + self.repoBranch;
 
