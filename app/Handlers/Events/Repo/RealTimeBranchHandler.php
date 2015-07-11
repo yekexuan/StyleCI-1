@@ -82,7 +82,7 @@ class RealTimeBranchHandler
      */
     protected function trigger(Repo $repo, $event)
     {
-        $branches = $this->branches->get($repo);
+        $branches = collect($this->branches->get($repo))->lists('name')->all();
 
         $this->pusher->trigger("repo-{$repo->id}", $event, ['event' => ['branches' => $branches]]);
     }
