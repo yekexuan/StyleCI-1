@@ -133,14 +133,13 @@ class RepoController extends Controller
      * Handles the request to list a repo branches.
      *
      * @param \StyleCI\StyleCI\Models\Repo     $repo
-     * @param \StyleCI\StyleCI\GitHub\Repos    $repos
      * @param \StyleCI\StyleCI\GitHub\Branches $branches
      *
      * @throws \Symfony\Component\HttpKernel\Exception\HttpException
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleBranches(Repo $repo, Repos $repos, Branches $branches)
+    public function handleBranches(Repo $repo, Branches $branches)
     {
         $branches = collect($branches->get($repo))->lists('name')->all();
 
