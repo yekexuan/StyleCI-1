@@ -44,34 +44,29 @@ class AuthController extends Controller
     /**
      * Connect to the GitHub provider using OAuth.
      *
-     * @param \StyleCI\Login\LoginProvider $login
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function handleLogin(LoginProvider $login)
+    public function handleLogin()
     {
-        return $login->redirect();
+        return app(LoginProvider::class)->redirect();
     }
 
     /**
      * Get the user access token to save notifications.
      *
-     * @param \StyleCI\Login\LoginProvider                 $login
-     * @param \StyleCI\StyleCI\Repositories\RepoRepository $repoRepository
-     *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function handleCallback(LoginProvider $login, RepoRepository $repoRepository)
+    public function handleCallback()
     {
-        $user = $login->user();
+        $user = app(LoginProvider::class)->user();
 
         $username = array_get($user, 'login');
         $name = Str::name(array_get($user, 'name') ?: $username);
 
         $this->dispatch(new LoginCommand((int) $user['id'], $name, $username, array_get($user, 'email'), array_get($user, 'token')));
 
-        if (count($repoRepository->allByUser(Auth::user())) > 0) {
-            return Redirect::route('repos_path');
+        if (count(app(RepoRepository::class)->allByUser(Auth::user())) > 0) {
+            return Redirect::route('home');
         }
 
         return Redirect::route('account_path');
@@ -80,7 +75,7 @@ class AuthController extends Controller
     /**
      * Logout a user account.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function handleLogout()
     {

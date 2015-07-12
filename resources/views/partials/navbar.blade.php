@@ -7,7 +7,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ $currentUser ? route('repos_path') : route('home') }}">StyleCI</a>
+            <a class="navbar-brand" href="{{ route('home') }}">StyleCI</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             @if($currentUser)
