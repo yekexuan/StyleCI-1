@@ -31,7 +31,7 @@
         "alt-three/logger": "^1.0",
         "alt-three/validator": "^1.0",
         "fideloper/proxy": "^3.0",
-        "graham-campbell/exceptions": "^3.2",
+        "graham-campbell/exceptions": "^4.0",
         "graham-campbell/core": "^4.1",
         "graham-campbell/github": "^4.0",
         "graham-campbell/htmlmin": "^4.0",

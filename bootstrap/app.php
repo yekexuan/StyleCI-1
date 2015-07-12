@@ -37,7 +37,7 @@ $app->singleton('Illuminate\Contracts\Http\Kernel', 'StyleCI\StyleCI\Http\Kernel
 
 $app->singleton('Illuminate\Contracts\Console\Kernel', 'StyleCI\StyleCI\Console\Kernel');
 
-$app->singleton('Illuminate\Contracts\Debug\ExceptionHandler', 'StyleCI\StyleCI\Exceptions\Handler');
+$app->singleton('Illuminate\Contracts\Debug\ExceptionHandler', 'GrahamCampbell\Exceptions\ExceptionHandler');
 
 /*
 |--------------------------------------------------------------------------

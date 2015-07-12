@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "056da2a5b57c8b574eea5087d033f51e",
+    "hash": "ae76bad6428fec3b44fb846f56d073f1",
     "packages": [
         {
             "name": "alt-three/bugsnag",
@@ -789,16 +789,16 @@
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "v3.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "9362bf621e13b543694964a6adad728d57e9201b"
+                "reference": "481305bf3b3ecdb67671a16606942eb74b91febd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/9362bf621e13b543694964a6adad728d57e9201b",
-                "reference": "9362bf621e13b543694964a6adad728d57e9201b",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/481305bf3b3ecdb67671a16606942eb74b91febd",
+                "reference": "481305bf3b3ecdb67671a16606942eb74b91febd",
                 "shasum": ""
             },
             "require": {
@@ -818,7 +818,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -850,7 +850,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-07-06 14:52:42"
+            "time": "2015-07-12 18:13:51"
         },
         {
             "name": "graham-campbell/flysystem",
