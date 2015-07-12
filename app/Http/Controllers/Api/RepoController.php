@@ -16,6 +16,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
+use Illuminate\Support\Facades\View;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Commands\Analysis\AnalyseBranchCommand;
 use StyleCI\StyleCI\GitHub\Branches;
