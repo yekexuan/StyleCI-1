@@ -1,5 +1,13 @@
 var ReposList = Vue.extend({
+    data: function() {
+        return {
+            isLoading: true,
+            search: '',
+            repos: []
+        };
+    },
     ready: function() {
+        $('#analysis').removeClass('hide');
         this.getRepos();
         this.subscribe();
     },
@@ -38,14 +46,7 @@ var ReposList = Vue.extend({
                 .bind('RepoWasDisabledEvent', self.RepoWasDisabledEventHandler)
                 .bind('RepoWasEnabledEvent', self.RepoWasEnabledEventHandler);
         }
-    },
-    data: function() {
-        return {
-            isLoading: true,
-            search: '',
-            repos: []
-        };
-     }
+    }
 });
 
 Vue.component('sc-repos', ReposList);
