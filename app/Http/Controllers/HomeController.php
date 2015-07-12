@@ -12,6 +12,7 @@
 namespace StyleCI\StyleCI\Http\Controllers;
 
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
 
 /**
@@ -28,7 +29,7 @@ class HomeController extends Controller
      */
     public function handle()
     {
-        if (Auth::user()) {
+        if (Auth::check()) {
             return View::make('repos');
         }
 
