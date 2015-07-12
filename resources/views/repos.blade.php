@@ -13,7 +13,7 @@
 
 @section('content')
 <sc-repos inline-template>
-    <div id="repos" class="repos">
+    <div id="repos" class="repos hide">
         <div v-show="isLoading" class="loading text-center">
             <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repositories...</h3>
         </div>
