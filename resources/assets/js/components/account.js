@@ -1,4 +1,11 @@
 var AccountList = Vue.extend({
+    data: function() {
+        return {
+            isLoading: false,
+            search: '',
+            repos: []
+        };
+    },
     ready: function() {
         this.getRepos();
     },
@@ -70,14 +77,7 @@ var AccountList = Vue.extend({
                     (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
                 });
         }
-    },
-    data: function() {
-        return {
-            isLoading: false,
-            search: '',
-            repos: []
-        };
-     }
+    }
 });
 
 Vue.component('sc-account', AccountList);
