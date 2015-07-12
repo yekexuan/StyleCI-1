@@ -28,6 +28,10 @@ class HomeController extends Controller
      */
     public function handle()
     {
+        if (Auth::user()) {
+            return View::make('repos');
+        }
+
         return View::make('index');
     }
 

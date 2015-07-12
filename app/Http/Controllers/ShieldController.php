@@ -31,7 +31,7 @@ class ShieldController extends Controller
      *
      * @param \StyleCI\StyleCI\Models\Repo $repo
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function handle(Repo $repo)
     {

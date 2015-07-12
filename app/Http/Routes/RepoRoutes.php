@@ -36,11 +36,6 @@ class RepoRoutes
      */
     public function map(Registrar $router)
     {
-        $router->get('repos', [
-            'as'   => 'repos_path',
-            'uses' => 'RepoController@handleList',
-        ]);
-
         $router->get('repos/{repo}', [
             'as'   => 'repo_path',
             'uses' => 'RepoController@handleShow',
@@ -53,17 +48,17 @@ class RepoRoutes
 
         $router->get('analyses/{analysis}', [
             'as'   => 'analysis_path',
-            'uses' => 'AnalysisController@handleShow',
+            'uses' => 'RepoController@handleAnalysis',
         ]);
 
         $router->get('analyses/{analysis}/diff', [
             'as'   => 'analysis_diff_path',
-            'uses' => 'AnalysisController@handleDiff',
+            'uses' => 'RepoController@handleDiff',
         ]);
 
         $router->get('analyses/{analysis}/diff/download', [
             'as'   => 'analysis_download_path',
-            'uses' => 'AnalysisController@handleDiffDownload',
+            'uses' => 'RepoController@handleDiffDownload',
         ]);
     }
 }

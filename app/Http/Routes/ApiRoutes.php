@@ -40,47 +40,47 @@ class ApiRoutes
         $router->group(['prefix' => 'api', 'as' => 'api_'], function (Registrar $router) {
             $router->get('repos', [
                 'as'   => 'repos_path',
-                'uses' => 'RepoController@handleList',
+                'uses' => 'Api\RepoController@handleList',
             ]);
 
             $router->get('repos/{repo}', [
                 'as'   => 'repo_path',
-                'uses' => 'RepoController@handleShow',
+                'uses' => 'Api\RepoController@handleShow',
             ]);
 
             $router->get('repos/{repo}/branches', [
                 'as'   => 'repo_path',
-                'uses' => 'RepoController@handleBranches',
+                'uses' => 'Api\RepoController@handleBranches',
             ]);
 
             $router->post('repos/{repo}/analyse', [
                 'as'   => 'repo_analyse_path',
-                'uses' => 'RepoController@handleAnalyse',
+                'uses' => 'Api\RepoController@handleAnalyse',
             ]);
 
             $router->get('analyses/{analysis}', [
                 'as'   => 'analysis_path',
-                'uses' => 'AnalysisController@handleShow',
+                'uses' => 'Api\RepoController@handleAnalysis',
             ]);
 
             $router->get('account/repos', [
                 'as'   => 'account_repos_path',
-                'uses' => 'AccountController@handleListRepos',
+                'uses' => 'Api\AccountController@handleListRepos',
             ]);
 
             $router->post('account/repos/sync', [
                 'as'   => 'account_repos_sync_path',
-                'uses' => 'AccountController@handleSync',
+                'uses' => 'Api\AccountController@handleSync',
             ]);
 
             $router->post('account/enable/{id}', [
                 'as'   => 'enable_repo_path',
-                'uses' => 'AccountController@handleEnable',
+                'uses' => 'Api\AccountController@handleEnable',
             ]);
 
             $router->post('account/disable/{repo}', [
                 'as'   => 'disable_repo_path',
-                'uses' => 'AccountController@handleDisable',
+                'uses' => 'Api\AccountController@handleDisable',
             ]);
         });
     }

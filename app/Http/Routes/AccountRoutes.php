@@ -60,20 +60,5 @@ class AccountRoutes
             'as'   => 'account_delete_path',
             'uses' => 'AccountController@handleDelete',
         ]);
-
-        $router->post('account/repos/sync', [
-            'as'   => 'account_repos_sync_path',
-            'uses' => 'AccountController@handleSync',
-        ]);
-
-        $router->post('account/enable/{id}', [
-            'as'   => 'enable_repo_path',
-            'uses' => 'AccountController@handleEnable',
-        ]);
-
-        $router->post('account/disable/{repo}', [
-            'as'   => 'disable_repo_path',
-            'uses' => 'AccountController@handleDisable',
-        ]);
     }
 }
