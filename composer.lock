@@ -1659,16 +1659,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "5.1.x-dev",
+            "version": "v5.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "851d20225e781286fb6d92e51d40987ae065d0cb"
+                "reference": "5e942882319845f71c681ce6e85831129bf66426"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/851d20225e781286fb6d92e51d40987ae065d0cb",
-                "reference": "851d20225e781286fb6d92e51d40987ae065d0cb",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/5e942882319845f71c681ce6e85831129bf66426",
+                "reference": "5e942882319845f71c681ce6e85831129bf66426",
                 "shasum": ""
             },
             "require": {
@@ -1783,7 +1783,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-07-11 13:40:37"
+            "time": "2015-07-12 02:27:36"
         },
         {
             "name": "league/flysystem",
@@ -1930,16 +1930,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.14.0",
+            "version": "1.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "b287fbbe1ca27847064beff2bad7fb6920bf08cc"
+                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/b287fbbe1ca27847064beff2bad7fb6920bf08cc",
-                "reference": "b287fbbe1ca27847064beff2bad7fb6920bf08cc",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/dc5150cc608f2334c72c3b6a553ec9668a4156b0",
+                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0",
                 "shasum": ""
             },
             "require": {
@@ -1976,7 +1976,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.14.x-dev"
+                    "dev-master": "1.15.x-dev"
                 }
             },
             "autoload": {
@@ -2002,7 +2002,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-06-19 13:29:54"
+            "time": "2015-07-12 13:54:09"
         },
         {
             "name": "mrclay/minify",
@@ -2446,12 +2446,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "313b92b6fab2e561790b0942ca949470e3af0ab4"
+                "reference": "9a7432e264bffcbc687faa5daa0ac9665d0d35a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/313b92b6fab2e561790b0942ca949470e3af0ab4",
-                "reference": "313b92b6fab2e561790b0942ca949470e3af0ab4",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/9a7432e264bffcbc687faa5daa0ac9665d0d35a0",
+                "reference": "9a7432e264bffcbc687faa5daa0ac9665d0d35a0",
                 "shasum": ""
             },
             "require": {
@@ -2500,7 +2500,7 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-06 16:37:32"
+            "time": "2015-07-12 13:57:19"
         },
         {
             "name": "styleci/fixer",
@@ -2508,12 +2508,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "b41d552bca1c34240f486b6372d93b426b2201e6"
+                "reference": "dc650d3ed6b7c7ced72c2df658d10396ecc216fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/b41d552bca1c34240f486b6372d93b426b2201e6",
-                "reference": "b41d552bca1c34240f486b6372d93b426b2201e6",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/dc650d3ed6b7c7ced72c2df658d10396ecc216fd",
+                "reference": "dc650d3ed6b7c7ced72c2df658d10396ecc216fd",
                 "shasum": ""
             },
             "require": {
@@ -2565,7 +2565,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-09 12:23:10"
+            "time": "2015-07-12 14:18:08"
         },
         {
             "name": "styleci/git",
