@@ -7,7 +7,7 @@ var ReposList = Vue.extend({
         };
     },
     ready: function() {
-        $('#analysis').removeClass('hide');
+        $('#repos').removeClass('hide');
         this.getRepos();
         this.subscribe();
     },
