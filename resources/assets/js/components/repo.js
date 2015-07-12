@@ -12,7 +12,7 @@ var RepoList = Vue.extend({
         };
     },
     ready: function() {
-        $('#repo').removeClass('hide')
+        $('#repo').removeClass('hide');
         this.repoId = $('#repo').data('id');
         this.repoBranch = $('#repo').data('branch');
         this.getAnalyses();
