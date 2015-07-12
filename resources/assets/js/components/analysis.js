@@ -1,9 +1,18 @@
 var Analysis = Vue.extend({
+    data: function() {
+        return {
+            analysisId: false,
+            isLoading: false,
+            search: '',
+            repos: []
+        };
+    },
     created: function() {
         SyntaxHighlighter.defaults.toolbar = false;
         SyntaxHighlighter.defaults.gutter = false;
     },
     ready: function() {
+        $('#analysis').removeClass('hide');
         $('#download-diff').hide();
         $('#view-diff').hide();
         $('#status-buttons').removeClass('hide');
@@ -60,15 +69,7 @@ var Analysis = Vue.extend({
             StyleCI.RealTime.getChannel('analysis-' + self.analysisId)
                 .bind('AnalysisStatusUpdatedEvent', self.AnalysisStatusChangeEventHandler);
         }
-    },
-    data: function() {
-        return {
-            analysisId: false,
-            isLoading: false,
-            search: '',
-            repos: []
-        };
-     }
+    }
 });
 
 Vue.component('sc-analysis', Analysis);

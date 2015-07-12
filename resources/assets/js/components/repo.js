@@ -1,5 +1,18 @@
 var RepoList = Vue.extend({
+    data: function() {
+        return {
+            repoId: null,
+            repoBranch: null,
+            isLoading: true,
+            currentPage: 1,
+            totalPages: 1,
+            search: '',
+            analyses: [],
+            branches: []
+        };
+    },
     ready: function() {
+        $('#repo').removeClass('hide')
         this.repoId = $('#repo').data('id');
         this.repoBranch = $('#repo').data('branch');
         this.getAnalyses();
@@ -109,19 +122,7 @@ var RepoList = Vue.extend({
                 .bind('BranchWasCreatedEvent', self.BranchChangeEventHandler)
                 .bind('BranchWasDeletedEvent', self.BranchChangeEventHandler);
         }
-    },
-    data: function() {
-        return {
-            repoId: null,
-            repoBranch: null,
-            isLoading: true,
-            currentPage: 1,
-            totalPages: 1,
-            search: '',
-            analyses: [],
-            branches: []
-        };
-     }
+    }
 });
 
 Vue.component('sc-repo', RepoList);
