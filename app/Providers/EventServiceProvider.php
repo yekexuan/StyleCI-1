@@ -29,25 +29,25 @@ class EventServiceProvider extends ServiceProvider
         'StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisLoggingHandler',
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisStatusHandler',
-            'StyleCI\StyleCI\Handlers\Events\Analysis\RealTimeStatusHandler',
+            'StyleCI\StyleCI\Handlers\Events\Analysis\PusherStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisNotificationsHandler',
         ],
         'StyleCI\StyleCI\Events\Analysis\AnalysisHasStartedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisLoggingHandler',
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisStatusHandler',
-            'StyleCI\StyleCI\Handlers\Events\Analysis\RealTimeStatusHandler',
+            'StyleCI\StyleCI\Handlers\Events\Analysis\PusherStatusHandler',
         ],
         'StyleCI\StyleCI\Events\Analysis\AnalysisWasQueuedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisStatusHandler',
-            'StyleCI\StyleCI\Handlers\Events\Analysis\RealTimeStatusHandler',
+            'StyleCI\StyleCI\Handlers\Events\Analysis\PusherStatusHandler',
         ],
         'StyleCI\StyleCI\Events\Repo\GitHub\GitHubCreateEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\BranchCacheFlushHandler',
-            'StyleCI\StyleCI\Handlers\Events\Repo\RealTimeBranchHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\PusherBranchHandler',
         ],
         'StyleCI\StyleCI\Events\Repo\GitHub\GitHubDeleteEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\BranchCacheFlushHandler',
-            'StyleCI\StyleCI\Handlers\Events\Repo\RealTimeBranchHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\PusherBranchHandler',
         ],
         'StyleCI\StyleCI\Events\Repo\GitHub\GitHubMemberEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\CollaboratorCacheFlushHandler',
@@ -64,14 +64,14 @@ class EventServiceProvider extends ServiceProvider
         ],
         'StyleCI\StyleCI\Events\Repo\RepoWasDisabledEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\WebHooksHandler',
-            'StyleCI\StyleCI\Handlers\Events\Repo\RealTimeRepoHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\PusherRepoHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\RepoNotificationHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\BranchCacheFlushHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\CollaboratorCacheFlushHandler',
         ],
         'StyleCI\StyleCI\Events\Repo\RepoWasEnabledEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\WebHooksHandler',
-            'StyleCI\StyleCI\Handlers\Events\Repo\RealTimeRepoHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\PusherRepoHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\RepoNotificationHandler',
         ],
         'StyleCI\StyleCI\Events\User\UserHasLoggedInEvent' => [

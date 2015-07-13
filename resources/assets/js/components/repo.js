@@ -117,7 +117,7 @@ var RepoList = Vue.extend({
         },
         subscribe: function() {
             var self = this;
-            StyleCI.RealTime.getChannel('repo-' + self.repoId)
+            StyleCI.Pusher.getChannel('repo-' + self.repoId)
                 .bind('AnalysisStatusUpdatedEvent', self.AnalysisStatusChangeEventHandler)
                 .bind('BranchWasCreatedEvent', self.BranchChangeEventHandler)
                 .bind('BranchWasDeletedEvent', self.BranchChangeEventHandler);

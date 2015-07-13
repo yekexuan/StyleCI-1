@@ -19,12 +19,12 @@ use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
 /**
- * This is the real time repo handler class.
+ * This is the pusher repo handler class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
  */
-class RealTimeRepoHandler
+class PusherRepoHandler
 {
     /**
      * The user repository instance.
@@ -41,7 +41,7 @@ class RealTimeRepoHandler
     protected $pusher;
 
     /**
-     * Create a new real time repo handler instance.
+     * Create a new pusher repo handler instance.
      *
      * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
      * @param \Pusher                                      $pusher

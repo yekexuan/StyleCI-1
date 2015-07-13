@@ -66,7 +66,7 @@ var Analysis = Vue.extend({
         },
         subscribe: function() {
             var self = this;
-            StyleCI.RealTime.getChannel('analysis-' + self.analysisId)
+            StyleCI.Pusher.getChannel('analysis-' + self.analysisId)
                 .bind('AnalysisStatusUpdatedEvent', self.AnalysisStatusChangeEventHandler);
         }
     }
