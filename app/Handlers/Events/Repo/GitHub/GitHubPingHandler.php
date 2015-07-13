@@ -51,8 +51,7 @@ class GitHubPingHandler
     public function handle(GitHubPingEvent $event)
     {
         $repo = $event->repo;
-        $message = $event->data['zen'];
 
-        $this->logger->info('Received ping to {$repo->name} from GitHub.', ['message' => $message, 'repo' => AutoPresenter::decorate($repo)->toArray()]);
+        $this->logger->info("Received ping to {$repo->name} from GitHub.", ['data' => $event->data, 'repo' => AutoPresenter::decorate($repo)->toArray()]);
     }
 }
