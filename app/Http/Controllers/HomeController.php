@@ -30,7 +30,7 @@ class HomeController extends Controller
     public function handle()
     {
         if (Auth::check()) {
-            return View::make('repos');
+            return View::make('repos.index');
         }
 
         return View::make('index');

@@ -120,6 +120,6 @@ class RepoController extends Controller
      */
     public function handleAnalysis(Analysis $analysis)
     {
-        return View::make('results')->withAnalysis($analysis);
+        return View::make('analysis.results')->withAnalysis($analysis);
     }
 }

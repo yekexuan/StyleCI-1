@@ -42,7 +42,7 @@ class RepoController extends Controller
             $canAnalyse = false;
         }
 
-        return View::make('repo')->withRepo($repo)->withCanAnalyse($canAnalyse);
+        return View::make('repos.repo')->withRepo($repo)->withCanAnalyse($canAnalyse);
     }
 
     /**
@@ -54,7 +54,7 @@ class RepoController extends Controller
      */
     public function handleAnalysis(Analysis $analysis)
     {
-        return View::make('analysis')->withAnalysis($analysis);
+        return View::make('analysis.index')->withAnalysis($analysis);
     }
 
     /**

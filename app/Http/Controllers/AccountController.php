@@ -45,7 +45,7 @@ class AccountController extends Controller
      */
     public function handleShow()
     {
-        return View::make('account');
+        return View::make('account.index');
     }
 
     /**
