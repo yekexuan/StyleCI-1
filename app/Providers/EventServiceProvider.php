@@ -63,14 +63,14 @@ class EventServiceProvider extends ServiceProvider
             'StyleCI\StyleCI\Handlers\Events\Repo\CollaboratorCacheFlushHandler',
         ],
         'StyleCI\StyleCI\Events\Repo\RepoWasDisabledEvent' => [
-            'StyleCI\StyleCI\Handlers\Events\Repo\WebHooksHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\WebhookHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\PusherRepoHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\RepoMailHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\BranchCacheFlushHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\CollaboratorCacheFlushHandler',
         ],
         'StyleCI\StyleCI\Events\Repo\RepoWasEnabledEvent' => [
-            'StyleCI\StyleCI\Handlers\Events\Repo\WebHooksHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\WebhookHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\PusherRepoHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\RepoMailHandler',
         ],
