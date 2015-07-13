@@ -1,7 +1,6 @@
 @extends('layouts.default')
 
 @section('title', $analysis->repo->name)
-@section('description', $analysis->message)
 
 @section('top')
 <div class="page-heading">
