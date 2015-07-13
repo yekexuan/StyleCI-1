@@ -103,7 +103,7 @@ $(function() {
         };
     };
 
-    StyleCI.RealTime = (function () {
+    StyleCI.Pusher = (function () {
         var instance;
 
         function createInstance() {

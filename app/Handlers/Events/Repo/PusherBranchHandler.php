@@ -18,11 +18,11 @@ use StyleCI\StyleCI\GitHub\Branches;
 use StyleCI\StyleCI\Models\Repo;
 
 /**
- * This is the real time branch handler class.
+ * This is the pusher branch handler class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class RealTimeBranchHandler
+class PusherBranchHandler
 {
     /**
      * The github branches instance.
@@ -39,7 +39,7 @@ class RealTimeBranchHandler
     protected $pusher;
 
     /**
-     * Create a new real time branch handler instance.
+     * Create a new pusher branch handler instance.
      *
      * @param \StyleCI\StyleCI\GitHub\Branches $branches
      * @param \Pusher                          $pusher

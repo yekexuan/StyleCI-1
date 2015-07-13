@@ -17,12 +17,12 @@ use StyleCI\StyleCI\Events\Analysis\AnalysisEventInterface;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
 /**
- * This is the real time status handler class.
+ * This is the pusher status handler class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
  */
-class RealTimeStatusHandler
+class PusherStatusHandler
 {
     /**
      * The user repository instance.
@@ -39,7 +39,7 @@ class RealTimeStatusHandler
     protected $pusher;
 
     /**
-     * Create a new analysis notifications handler instance.
+     * Create a new pusher status handler instance.
      *
      * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
      * @param \Pusher                                      $pusher
