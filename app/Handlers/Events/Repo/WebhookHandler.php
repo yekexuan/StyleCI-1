@@ -17,11 +17,11 @@ use StyleCI\StyleCI\Events\Repo\RepoWasEnabledEvent;
 use StyleCI\StyleCI\GitHub\Hooks;
 
 /**
- * This is the web hooks handler class.
+ * This is the webhook handler class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class WebHooksHandler
+class WebhookHandler
 {
     /**
      * The hooks instance.
@@ -31,7 +31,7 @@ class WebHooksHandler
     protected $hooks;
 
     /**
-     * Create a new web hooks handler instance.
+     * Create a new webhook handler instance.
      *
      * @param \StyleCI\StyleCI\GitHub\Hooks $hooks
      *
