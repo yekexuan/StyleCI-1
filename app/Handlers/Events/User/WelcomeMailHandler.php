@@ -14,14 +14,14 @@ namespace StyleCI\StyleCI\Handlers\Events\User;
 use Illuminate\Contracts\Mail\MailQueue;
 use Illuminate\Mail\Message;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
-use StyleCI\StyleCI\Events\User\UserHasRageQuitEvent;
+use StyleCI\StyleCI\Events\User\UserHasSignedUpEvent;
 
 /**
- * This is the goodbye message handler class.
+ * This is the welcome mail handler class.
  *
- * @author James Brooks <james@alt-three.com>
+ * @author Graham Campbell <graham@alt-three.com>
  */
-class GoodbyeMessageHandler
+class WelcomeMailHandler
 {
     /**
      * The mailer instance.
@@ -31,7 +31,7 @@ class GoodbyeMessageHandler
     protected $mailer;
 
     /**
-     * Create a new welcome message handler instance.
+     * Create a new welcome mail handler instance.
      *
      * @param \Illuminate\Contracts\Mail\MailQueue $mailer
      *
@@ -43,23 +43,23 @@ class GoodbyeMessageHandler
     }
 
     /**
-     * Handle the user has rage quit event.
+     * Handle the user has signed up event.
      *
-     * @param \StyleCI\StyleCI\Events\User\UserHasRageQuitEvent $event
+     * @param \StyleCI\StyleCI\Events\User\UserHasSignedUpEvent $event
      *
      * @return void
      */
-    public function handle(UserHasRageQuitEvent $event)
+    public function handle(UserHasSignedUpEvent $event)
     {
         $user = $event->user;
 
         $mail = [
             'email'   => $user->email,
             'name'    => AutoPresenter::decorate($user)->first_name,
-            'subject' => 'Your account has been removed from StyleCI',
+            'subject' => 'Welcome To StyleCI',
         ];
 
-        $this->mailer->queue(['html' => 'emails.goodbye-html', 'text' => 'emails.goodbye-text'], $mail, function (Message $message) use ($mail) {
+        $this->mailer->queue(['html' => 'emails.welcome-html', 'text' => 'emails.welcome-text'], $mail, function (Message $message) use ($mail) {
             $message->to($mail['email'])->subject($mail['subject']);
         });
     }

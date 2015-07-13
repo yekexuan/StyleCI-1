@@ -9,20 +9,21 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Handlers\Events\Analysis;
+namespace StyleCI\StyleCI\Handlers\Events\Repo;
 
 use Illuminate\Contracts\Mail\MailQueue;
 use Illuminate\Mail\Message;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
-use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
+use StyleCI\StyleCI\Events\Repo\RepoEventInterface;
+use StyleCI\StyleCI\Events\Repo\RepoWasDisabledEvent;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
 /**
- * This is the analysis notification handler class.
+ * This is the repo mail handler class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalysisNotificationsHandler
+class RepoMailHandler
 {
     /**
      * The user repository instance.
@@ -39,7 +40,7 @@ class AnalysisNotificationsHandler
     protected $mailer;
 
     /**
-     * Create a new analysis notifications handler instance.
+     * Create a new repo mail handler instance.
      *
      * @param \StyleCI\StyleCI\Repositories\UserRepository $userRepository
      * @param \Illuminate\Contracts\Mail\MailQueue         $mailer
@@ -53,46 +54,29 @@ class AnalysisNotificationsHandler
     }
 
     /**
-     * Handle the analysis has completed event.
+     * Handle the repo event.
      *
-     * @param \StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent $event
+     * @param \StyleCI\StyleCI\Events\Repo\RepoEventInterface $event
      *
      * @return void
      */
-    public function handle(AnalysisHasCompletedEvent $event)
+    public function handle(RepoEventInterface $event)
     {
-        $analysis = $event->analysis;
+        $mail = ['repo' => $event->repo->name];
 
-        if ($analysis->status < 3 || $analysis->pr) {
-            return;
+        if ($event instanceof RepoWasDisabledEvent) {
+            $mail['subject'] = 'Repo Disabled';
+            $view = 'disabled';
+        } else {
+            $mail['subject'] = 'Repo Enabled';
+            $mail['link'] = route('repo_path', $event->repo->id);
+            $view = 'enabled';
         }
 
-        $repo = $analysis->repo;
-
-        $mail = [
-            'repo'    => $repo->name,
-            'commit'  => $analysis->message,
-            'link'    => route('analysis_path', AutoPresenter::decorate($analysis)->id),
-            'subject' => 'Failed Analysis',
-        ];
-
-        switch ($analysis->status) {
-            case 3:
-            case 4:
-            case 5:
-                $status = 'failed';
-                break;
-            case 6:
-                $status = 'misconfigured';
-                break;
-            default:
-                $status = 'errored';
-        }
-
-        foreach ($this->userRepository->collaborators($repo) as $user) {
+        foreach ($this->userRepository->collaborators($event->repo) as $user) {
             $mail['email'] = $user->email;
             $mail['name'] = AutoPresenter::decorate($user)->first_name;
-            $this->mailer->queue(["emails.{$status}-html", "emails.{$status}-text"], $mail, function (Message $message) use ($mail) {
+            $this->mailer->queue(["emails.{$view}-html", "emails.{$view}-text"], $mail, function (Message $message) use ($mail) {
                 $message->to($mail['email'])->subject($mail['subject']);
             });
         }

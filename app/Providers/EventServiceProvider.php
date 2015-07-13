@@ -30,7 +30,7 @@ class EventServiceProvider extends ServiceProvider
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisLoggingHandler',
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\Analysis\PusherStatusHandler',
-            'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisNotificationsHandler',
+            'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisMailHandler',
         ],
         'StyleCI\StyleCI\Events\Analysis\AnalysisHasStartedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisLoggingHandler',
@@ -65,14 +65,14 @@ class EventServiceProvider extends ServiceProvider
         'StyleCI\StyleCI\Events\Repo\RepoWasDisabledEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\WebHooksHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\PusherRepoHandler',
-            'StyleCI\StyleCI\Handlers\Events\Repo\RepoNotificationHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\RepoMailHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\BranchCacheFlushHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\CollaboratorCacheFlushHandler',
         ],
         'StyleCI\StyleCI\Events\Repo\RepoWasEnabledEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\WebHooksHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\PusherRepoHandler',
-            'StyleCI\StyleCI\Handlers\Events\Repo\RepoNotificationHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\RepoMailHandler',
         ],
         'StyleCI\StyleCI\Events\User\UserHasLoggedInEvent' => [
             'StyleCI\StyleCI\Handlers\Events\User\AuthenticationHandler',
@@ -80,10 +80,10 @@ class EventServiceProvider extends ServiceProvider
         ],
         'StyleCI\StyleCI\Events\User\UserHasRageQuitEvent' => [
             'StyleCI\StyleCI\Handlers\Events\User\RevokeTokenHandler',
-            'StyleCI\StyleCI\Handlers\Events\User\GoodbyeMessageHandler',
+            'StyleCI\StyleCI\Handlers\Events\User\GoodbyeMailHandler',
         ],
         'StyleCI\StyleCI\Events\User\UserHasSignedUpEvent' => [
-            'StyleCI\StyleCI\Handlers\Events\User\WelcomeMessageHandler',
+            'StyleCI\StyleCI\Handlers\Events\User\WelcomeMailHandler',
         ],
     ];
 }
