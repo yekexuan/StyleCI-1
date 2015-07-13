@@ -60,7 +60,7 @@ class GoodbyeMailHandler
             'subject' => 'Your account has been removed from StyleCI',
         ];
 
-        $this->mailer->queue(['html' => 'emails.goodbye-html', 'text' => 'emails.goodbye-text'], $mail, function (Message $message) use ($mail) {
+        $this->mailer->queue(['html' => 'emails.html.goodbye', 'text' => 'emails.text.goodbye'], $mail, function (Message $message) use ($mail) {
             $message->to($mail['email'])->subject($mail['subject']);
         });
     }
