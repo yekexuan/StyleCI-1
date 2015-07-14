@@ -52,7 +52,7 @@ class AuthController extends Controller
     }
 
     /**
-     * Get the user access token to save notifications.
+     * Handle the callback from GitHub.
      *
      * @return \Illuminate\Http\RedirectResponse
      */
