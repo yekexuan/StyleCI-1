@@ -8,7 +8,7 @@
     "packages": [
         {
             "name": "alt-three/bugsnag",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Bugsnag.git",
@@ -71,7 +71,7 @@
         },
         {
             "name": "alt-three/logger",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Logger.git",
@@ -132,7 +132,7 @@
         },
         {
             "name": "alt-three/validator",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Validator.git",
@@ -2442,7 +2442,7 @@
         },
         {
             "name": "styleci/config",
-            "version": "dev-master",
+            "version": "v0.4.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
@@ -2504,7 +2504,7 @@
         },
         {
             "name": "styleci/fixer",
-            "version": "dev-master",
+            "version": "v0.5.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
@@ -2569,7 +2569,7 @@
         },
         {
             "name": "styleci/git",
-            "version": "dev-master",
+            "version": "v0.3.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
@@ -2635,7 +2635,7 @@
         },
         {
             "name": "styleci/login",
-            "version": "dev-master",
+            "version": "v0.3.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
@@ -2698,7 +2698,7 @@
         },
         {
             "name": "styleci/storage",
-            "version": "dev-master",
+            "version": "v0.1.0-alpha",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Storage.git",
