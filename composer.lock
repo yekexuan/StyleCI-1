@@ -2142,16 +2142,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "dff239267fd1befa1cd40430c9ed12591aa720ca"
+                "reference": "196f177cfefa0f1f7166c0a05d8255889be12418"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/dff239267fd1befa1cd40430c9ed12591aa720ca",
-                "reference": "dff239267fd1befa1cd40430c9ed12591aa720ca",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/196f177cfefa0f1f7166c0a05d8255889be12418",
+                "reference": "196f177cfefa0f1f7166c0a05d8255889be12418",
                 "shasum": ""
             },
             "require": {
@@ -2161,7 +2161,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -2183,7 +2183,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2015-05-02 15:40:40"
+            "time": "2015-07-14 17:31:05"
         },
         {
             "name": "psr/http-message",
@@ -2639,12 +2639,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "009375097393e9cf063bb10a49e56298fd5550b0"
+                "reference": "8eb6b29b2176e29a84e2018e266b928729238a62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/009375097393e9cf063bb10a49e56298fd5550b0",
-                "reference": "009375097393e9cf063bb10a49e56298fd5550b0",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/8eb6b29b2176e29a84e2018e266b928729238a62",
+                "reference": "8eb6b29b2176e29a84e2018e266b928729238a62",
                 "shasum": ""
             },
             "require": {
@@ -2694,7 +2694,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-07-14 14:08:55"
+            "time": "2015-07-14 17:55:46"
         },
         {
             "name": "styleci/storage",
