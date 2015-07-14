@@ -48,7 +48,7 @@ class AuthController extends Controller
      */
     public function handleLogin()
     {
-        return app(LoginProvider::class)->redirect();
+        return app(LoginProvider::class)->redirect(['admin:repo_hook', 'public_repo', 'read:org', 'user:email']);
     }
 
     /**
