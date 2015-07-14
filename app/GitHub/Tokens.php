@@ -49,6 +49,18 @@ class Tokens
     }
 
     /**
+     * Get the scopes for the given token.
+     *
+     * @param string $token
+     *
+     * @return string[]
+     */
+    public function scopes($token)
+    {
+        return $this->auth->check($this->clientId, $token)['scopes'];
+    }
+
+    /**
      * Revoke the given token.
      *
      * @param string $token
