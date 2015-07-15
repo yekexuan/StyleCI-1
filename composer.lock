@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ae76bad6428fec3b44fb846f56d073f1",
+    "hash": "86c8ea176d02850e282fe452469b39b2",
     "packages": [
         {
             "name": "alt-three/bugsnag",
@@ -2442,16 +2442,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v0.4.0-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "1ef2644858cc534a7e3a810076d1fdcf210fd134"
+                "reference": "0f6c3e3cebe0f65dc07fd7d076c509f3a02d590a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/1ef2644858cc534a7e3a810076d1fdcf210fd134",
-                "reference": "1ef2644858cc534a7e3a810076d1fdcf210fd134",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/0f6c3e3cebe0f65dc07fd7d076c509f3a02d590a",
+                "reference": "0f6c3e3cebe0f65dc07fd7d076c509f3a02d590a",
                 "shasum": ""
             },
             "require": {
@@ -2468,7 +2468,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.4-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
@@ -2500,27 +2500,27 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-14 00:11:22"
+            "time": "2015-07-15 17:51:22"
         },
         {
             "name": "styleci/fixer",
-            "version": "v0.5.0-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "da3b1d4242803cc536f4c5eef9446837af688fa6"
+                "reference": "0be24ccc9ab2c6017b38432a21cd3de1e8d20ea8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/da3b1d4242803cc536f4c5eef9446837af688fa6",
-                "reference": "da3b1d4242803cc536f4c5eef9446837af688fa6",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/0be24ccc9ab2c6017b38432a21cd3de1e8d20ea8",
+                "reference": "0be24ccc9ab2c6017b38432a21cd3de1e8d20ea8",
                 "shasum": ""
             },
             "require": {
                 "fabpot/php-cs-fixer": "~2.0.0",
                 "php": ">=5.5.9",
-                "styleci/config": "0.4.*",
-                "styleci/git": "0.3.*"
+                "styleci/config": "~1.0",
+                "styleci/git": "~1.0"
             },
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
@@ -2532,7 +2532,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.5-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
@@ -2565,20 +2565,20 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-12 15:12:14"
+            "time": "2015-07-15 17:54:47"
         },
         {
             "name": "styleci/git",
-            "version": "v0.3.0-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "0867110e1697489b1634815391a609351c8620fb"
+                "reference": "0f3746de2a16c2fc6aa152e9a4442c1aa675b8d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/0867110e1697489b1634815391a609351c8620fb",
-                "reference": "0867110e1697489b1634815391a609351c8620fb",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/0f3746de2a16c2fc6aa152e9a4442c1aa675b8d2",
+                "reference": "0f3746de2a16c2fc6aa152e9a4442c1aa675b8d2",
                 "shasum": ""
             },
             "require": {
@@ -2598,7 +2598,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.3-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
@@ -2631,20 +2631,20 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-07-09 12:50:30"
+            "time": "2015-07-15 17:51:44"
         },
         {
             "name": "styleci/login",
-            "version": "v0.3.0-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "8eb6b29b2176e29a84e2018e266b928729238a62"
+                "reference": "7a0c41883a0a157c88747b0c04c3e9fd30158093"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/8eb6b29b2176e29a84e2018e266b928729238a62",
-                "reference": "8eb6b29b2176e29a84e2018e266b928729238a62",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/7a0c41883a0a157c88747b0c04c3e9fd30158093",
+                "reference": "7a0c41883a0a157c88747b0c04c3e9fd30158093",
                 "shasum": ""
             },
             "require": {
@@ -2661,7 +2661,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.3-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
@@ -2694,20 +2694,20 @@
                 "github",
                 "login"
             ],
-            "time": "2015-07-14 17:55:46"
+            "time": "2015-07-15 17:57:22"
         },
         {
             "name": "styleci/storage",
-            "version": "v0.1.0-alpha",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Storage.git",
-                "reference": "c86358a039d719188ca1fc059ec8941660590cf5"
+                "reference": "ec7f943c157071d731558d40734af58b1ba71b21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/c86358a039d719188ca1fc059ec8941660590cf5",
-                "reference": "c86358a039d719188ca1fc059ec8941660590cf5",
+                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/ec7f943c157071d731558d40734af58b1ba71b21",
+                "reference": "ec7f943c157071d731558d40734af58b1ba71b21",
                 "shasum": ""
             },
             "require": {
@@ -2725,7 +2725,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "0.1-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
@@ -2758,7 +2758,7 @@
                 "StyleCI",
                 "storage"
             ],
-            "time": "2015-07-06 16:42:28"
+            "time": "2015-07-15 17:54:05"
         },
         {
             "name": "swiftmailer/swiftmailer",

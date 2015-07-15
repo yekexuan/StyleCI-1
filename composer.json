@@ -37,10 +37,10 @@
         "graham-campbell/htmlmin": "^4.0",
         "guzzlehttp/guzzle": "^6.0.2",
         "mccool/laravel-auto-presenter": "^4.0",
-        "styleci/fixer": "^0.5",
-        "styleci/git": "^0.3",
-        "styleci/login": "^0.3",
-        "styleci/storage": "^0.1",
+        "styleci/fixer": "^1.0",
+        "styleci/git": "^1.0",
+        "styleci/login": "^1.0",
+        "styleci/storage": "^1.0",
         "vinkla/hashids": "^2.0.1",
         "vinkla/pusher": "^2.0"
     },
@@ -89,7 +89,7 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "0.4-dev"
+            "dev-master": "1.0-dev"
         }
     },
     "minimum-stability": "dev",
