@@ -47,6 +47,7 @@ class EventServiceProvider extends ServiceProvider
         ],
         'StyleCI\StyleCI\Events\Repo\GitHub\GitHubDeleteEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Repo\BranchCacheFlushHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\AnalysisCacheFlushHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\PusherBranchHandler',
         ],
         'StyleCI\StyleCI\Events\Repo\GitHub\GitHubMemberEvent' => [
@@ -56,6 +57,7 @@ class EventServiceProvider extends ServiceProvider
             'StyleCI\StyleCI\Handlers\Events\Repo\GitHub\GitHubPingHandler',
         ],
         'StyleCI\StyleCI\Events\Repo\GitHub\GitHubPullRequestEvent' => [
+            'StyleCI\StyleCI\Handlers\Events\Repo\AnalysisCacheFlushHandler',
             'StyleCI\StyleCI\Handlers\Events\Repo\GitHub\GitHubPullRequestHandler',
         ],
         'StyleCI\StyleCI\Events\Repo\GitHub\GitHubPushEvent' => [
