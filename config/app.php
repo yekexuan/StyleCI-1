@@ -153,6 +153,7 @@ return [
         'GrahamCampbell\Flysystem\FlysystemServiceProvider',
         'GrahamCampbell\GitHub\GitHubServiceProvider',
         'GrahamCampbell\HTMLMin\HTMLMinServiceProvider',
+        'StyleCI\Cache\CacheServiceProvider',
         'StyleCI\Config\ConfigServiceProvider',
         'StyleCI\Fixer\FixerServiceProvider',
         'StyleCI\Git\GitServiceProvider',

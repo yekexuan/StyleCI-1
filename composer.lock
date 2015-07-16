@@ -2274,16 +2274,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.5.1",
+            "version": "v0.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94"
+                "reference": "aaf8772ade08b5f0f6830774a5d5c2f800415975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/e5a46a767928e85f1f47dda654beda8c680ddd94",
-                "reference": "e5a46a767928e85f1f47dda654beda8c680ddd94",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/aaf8772ade08b5f0f6830774a5d5c2f800415975",
+                "reference": "aaf8772ade08b5f0f6830774a5d5c2f800415975",
                 "shasum": ""
             },
             "require": {
@@ -2342,7 +2342,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2015-07-03 16:48:00"
+            "time": "2015-07-16 15:26:57"
         },
         {
             "name": "pusher/pusher-php-server",
@@ -2441,17 +2441,81 @@
             "time": "2015-02-22 15:13:53"
         },
         {
+            "name": "styleci/cache",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StyleCI/Cache.git",
+                "reference": "9bb7dea8ac0f979e6cc886436549923165596e16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StyleCI/Cache/zipball/9bb7dea8ac0f979e6cc886436549923165596e16",
+                "reference": "9bb7dea8ac0f979e6cc886436549923165596e16",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "graham-campbell/testbench": "~3.0",
+                "mockery/mockery": "^0.9.4",
+                "phpunit/phpunit": "^4.7.6"
+            },
+            "suggest": {
+                "illuminate/contracts": "Required to use the illuminate adapter.",
+                "illuminate/support": "Enables Laravel support."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "StyleCI\\Cache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "James Brooks",
+                    "email": "james@alt-three.com"
+                },
+                {
+                    "name": "Graham Campbell",
+                    "email": "graham@alt-three.com"
+                },
+                {
+                    "name": "Joseph Cohen",
+                    "email": "joe@alt-three.com"
+                }
+            ],
+            "description": "StyleCI Cache Is An Analysis Cache System",
+            "keywords": [
+                "Alt Three",
+                "StyleCI",
+                "cache",
+                "cs"
+            ],
+            "time": "2015-07-16 17:07:01"
+        },
+        {
             "name": "styleci/config",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "0f6c3e3cebe0f65dc07fd7d076c509f3a02d590a"
+                "reference": "b5651ffaf1e65e439aa3f85fd6519748cc737a02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/0f6c3e3cebe0f65dc07fd7d076c509f3a02d590a",
-                "reference": "0f6c3e3cebe0f65dc07fd7d076c509f3a02d590a",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/b5651ffaf1e65e439aa3f85fd6519748cc737a02",
+                "reference": "b5651ffaf1e65e439aa3f85fd6519748cc737a02",
                 "shasum": ""
             },
             "require": {
@@ -2500,7 +2564,7 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-15 17:51:22"
+            "time": "2015-07-16 15:57:07"
         },
         {
             "name": "styleci/fixer",
@@ -2508,17 +2572,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "0be24ccc9ab2c6017b38432a21cd3de1e8d20ea8"
+                "reference": "ff254ad33e1be1fcf67203f6fd57c50ca4ad6b2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/0be24ccc9ab2c6017b38432a21cd3de1e8d20ea8",
-                "reference": "0be24ccc9ab2c6017b38432a21cd3de1e8d20ea8",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/ff254ad33e1be1fcf67203f6fd57c50ca4ad6b2d",
+                "reference": "ff254ad33e1be1fcf67203f6fd57c50ca4ad6b2d",
                 "shasum": ""
             },
             "require": {
                 "fabpot/php-cs-fixer": "~2.0.0",
                 "php": ">=5.5.9",
+                "styleci/cache": "~1.0",
                 "styleci/config": "~1.0",
                 "styleci/git": "~1.0"
             },
@@ -2565,7 +2630,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-15 17:54:47"
+            "time": "2015-07-16 20:00:29"
         },
         {
             "name": "styleci/git",
