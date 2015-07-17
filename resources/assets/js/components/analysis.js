@@ -32,10 +32,10 @@ var Analysis = Vue.extend({
                 .done(function(response) {
                     $('#results').html(response).promise().done(function(){
                         SyntaxHighlighter.all();
-                        setTimeout(function () {
+                        setTimeout(function() {
                             SyntaxHighlighter.all();
                         }, 200);
-                        setTimeout(function () {
+                        setTimeout(function() {
                             SyntaxHighlighter.all();
                         }, 5000);
                     });

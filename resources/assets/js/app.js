@@ -6,7 +6,7 @@ $(function() {
     $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
 
         if (! options.beforeSend) {
-            options.beforeSend = function (xhr) {
+            options.beforeSend = function(xhr) {
                 jqXHR.setRequestHeader('Accept', 'application/json; charset=utf-8');
                 jqXHR.setRequestHeader('Content-Type', 'application/json');
             };
@@ -25,10 +25,10 @@ $(function() {
 
     $.ajaxSetup({
         statusCode: {
-            401: function () {
+            401: function() {
                 (new StyleCI.Notifier()).notify('Your session has expired, please login.');
             },
-            403: function () {
+            403: function() {
                 (new StyleCI.Notifier()).notify('Your session has expired, please login.');
             }
         }
@@ -83,8 +83,8 @@ $(function() {
     StyleCI.Events = {};
     StyleCI.Listeners = {};
 
-    StyleCI.Notifier = function () {
-        this.notify = function (message, type, options) {
+    StyleCI.Notifier = function() {
+        this.notify = function(message, type, options) {
             type = (typeof type === 'undefined' || type === 'error') ? 'danger' : type;
             var $alertsHolder = $('.alerts');
 
@@ -103,7 +103,7 @@ $(function() {
         };
     };
 
-    StyleCI.Pusher = (function () {
+    StyleCI.Pusher = (function() {
         var instance;
 
         function createInstance() {
@@ -111,7 +111,7 @@ $(function() {
         }
 
         return {
-            getInstance: function () {
+            getInstance: function() {
                 if (! instance) {
                     instance = createInstance();
                 }
