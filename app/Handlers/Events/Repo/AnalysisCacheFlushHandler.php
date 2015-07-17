@@ -51,9 +51,9 @@ class AnalysisCacheFlushHandler
      */
     public function handle(GitHubEventInterface $event)
     {
-        if ($event instanceof GitHubDeleteEvent && $this->event->data['ref_type'] === 'branch') {
+        if ($event instanceof GitHubDeleteEvent && $event->data['ref_type'] === 'branch') {
             $this->cache->flush($event->repo->id, 'branch.'.$event->data['ref']);
-        } elseif ($event instanceof GitHubPullRequestEvent && $this->event->data['pull_request']['merged']) {
+        } elseif ($event instanceof GitHubPullRequestEvent && $event->data['pull_request']['merged']) {
             $this->cache->flush($event->repo->id, 'pr.'.$event->data['number']);
         }
     }
