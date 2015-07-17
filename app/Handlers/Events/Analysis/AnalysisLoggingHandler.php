@@ -71,22 +71,22 @@ class AnalysisLoggingHandler
     {
         switch ($analysis->status) {
             case 0:
-                $this->logger->debug("Analysis has been queued.", $this->getContext($analysis));
+                $this->logger->debug('Analysis has been queued.', $this->getContext($analysis));
                 break;
             case 1:
-                $this->logger->debug("Analysis has started running.", $this->getContext($analysis));
+                $this->logger->debug('Analysis has started running.', $this->getContext($analysis));
                 break;
             case 2:
             case 3:
             case 4:
             case 5:
-                $this->logger->debug("Analysis has completed successfully.", $this->getContext($analysis));
+                $this->logger->debug('Analysis has completed successfully.', $this->getContext($analysis));
                 break;
             case 6:
-                $this->logger->notice("Analysis has failed due to misconfiguration.", $this->getContext($analysis));
+                $this->logger->notice('Analysis has failed due to misconfiguration.', $this->getContext($analysis));
                 break;
             default:
-                $this->logger->error("Analysis has failed due to an internal error.", $this->getContext($analysis));
+                $this->logger->error('Analysis has failed due to an internal error.', $this->getContext($analysis));
         }
     }
 
