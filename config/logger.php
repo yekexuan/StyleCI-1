@@ -22,7 +22,6 @@ return [
 
     'loggers' => [
         'Illuminate\Log\Writer'   => ['*'],
-        // 'AltThree\Bugsnag\Logger' => ['*'],
     ],
 
 ];
