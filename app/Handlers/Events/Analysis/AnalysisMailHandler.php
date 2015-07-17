@@ -91,9 +91,9 @@ class AnalysisMailHandler
      */
     public function notifySuccess(Analysis $analysis, Repo $repo)
     {
-        $previous = $repo->analyses()->where('branch', $analysis->branch)->where('id', '<', $analysis->id)->recent()->latest()->first();
+        $previous = $repo->analyses()->where('branch', $analysis->branch)->where('id', '<', $analysis->id)->visible()->latest()->first();
 
-        if (!$previous && $analysis->branch !== $repo->default_branch) {
+        if (!$previous) {
             $status = 'first';
         } elseif ($previous->status > 2) {
             $status = 'passed';
