@@ -32,6 +32,12 @@ var Analysis = Vue.extend({
                 .done(function(response) {
                     $('#results').html(response).promise().done(function(){
                         SyntaxHighlighter.all();
+                        setTimeout(function () {
+                            SyntaxHighlighter.all();
+                        }, 200);
+                        setTimeout(function () {
+                            SyntaxHighlighter.all();
+                        }, 5000);
                     });
                     if (response.toString().indexOf('changed files') >= 0) {
                         $('#download-diff').show();
