@@ -11,7 +11,7 @@
 
 namespace StyleCI\StyleCI\Handlers\Events\Repo;
 
-use StyleCI\StyleCI\Events\Repo\RepoEventInterface;
+use StyleCI\StyleCI\Events\Repo\GitHub\GitHubDeleteEvent;
 
 /**
  * This is the analysis visibility handler class.
@@ -23,7 +23,7 @@ class AnalysisVisibilityHandler
     /**
      * Handle the github delete event.
      *
-     * @param \StyleCI\StyleCI\Events\Repo\GitHub\GitHubDeleteEvent  $event
+     * @param \StyleCI\StyleCI\Events\Repo\GitHub\GitHubDeleteEvent $event
      *
      * @return void
      */

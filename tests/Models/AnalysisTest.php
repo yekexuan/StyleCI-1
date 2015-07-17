@@ -59,7 +59,7 @@ class AnalysisTest extends AbstractTestCase
             'The repo id field is required.',
             'The commit must be 40 characters.',
             'The status must be between 0 and 9.',
-            'The hidden field must be true or false.'
+            'The hidden field must be true or false.',
         ];
 
         try {
