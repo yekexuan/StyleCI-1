@@ -15,6 +15,8 @@ use Illuminate\Contracts\Mail\MailQueue;
 use Illuminate\Mail\Message;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
+use StyleCI\StyleCI\Models\Analysis;
+use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
 /**
@@ -62,17 +64,72 @@ class AnalysisMailHandler
     public function handle(AnalysisHasCompletedEvent $event)
     {
         $analysis = $event->analysis;
+        $repo = $analysis->repo;
 
-        if ($analysis->status < 3 || $analysis->pr) {
+        if (!$analysis->branch) {
             return;
         }
 
-        $repo = $analysis->repo;
+        if ($analysis->status === 2) {
+            $this->notifySuccess($analysis, $repo);
+        } elseif ($analysis->status > 2 && !$analysis->pr) {
+            $this->notifyNotSuccess($analysis, $repo);
+        }
+    }
+
+    /**
+     * Notify collaborators of successful analyses.
+     *
+     * We only notify them if the previous analysis of this branch failed, or
+     * if this was the first analysis of this branch.
+     *
+     * @param \StyleCI\StyleCI\Models\Analysis $analysis
+     * @param \StyleCI\StyleCI\Models\Repo     $repo
+     *
+     * @return void
+     */
+    public function notifySuccess(Analysis $analysis, Repo $repo)
+    {
+        $previous = Repo::analyses()->where('branch', $repo->branch)->where('id', '<', $analysis->id)->latest()->first();
+
+        if (!$previous) {
+            $status = 'first';
+        } elseif ($previous->status < 3) {
+            $status = 'passed';
+        }
 
         $mail = [
-            'repo'    => $repo->name,
-            'commit'  => $analysis->message,
-            'link'    => route('analysis_path', AutoPresenter::decorate($analysis)->id),
+            'repo'   => $repo->name,
+            'commit' => $analysis->message,
+            'branch' => $analysis->branch,
+            'link'   => route('analysis_path', AutoPresenter::decorate($analysis)->id),
+            'status' => 'Analysis Passed';
+        ];
+
+        foreach ($this->userRepository->collaborators($repo) as $user) {
+            $mail['email'] = $user->email;
+            $mail['name'] = AutoPresenter::decorate($user)->first_name;
+            $this->mailer->queue(["emails.html.{$status}", "emails.text.{$status}"], $mail, function (Message $message) use ($mail) {
+                $message->to($mail['email'])->subject($mail['subject']);
+            });
+        }
+    }
+
+    /**
+     * Notify collaborators of unsuccessful analyses.
+     *
+     * @param \StyleCI\StyleCI\Models\Analysis $analysis
+     * @param \StyleCI\StyleCI\Models\Repo     $repo
+     *
+     * @return void
+     */
+    public function notifyNotSuccess(Analysis $analysis, Repo $repo)
+    {
+        $mail = [
+            'repo'   => $repo->name,
+            'commit' => $analysis->message,
+            'branch' => $analysis->branch,
+            'link'   => route('analysis_path', AutoPresenter::decorate($analysis)->id),
         ];
 
         switch ($analysis->status) {
