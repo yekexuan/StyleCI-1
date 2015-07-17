@@ -103,7 +103,7 @@ class AnalysisMailHandler
             'commit' => $analysis->message,
             'branch' => $analysis->branch,
             'link'   => route('analysis_path', AutoPresenter::decorate($analysis)->id),
-            'status' => 'Analysis Passed';
+            'status' => 'Analysis Passed',
         ];
 
         foreach ($this->userRepository->collaborators($repo) as $user) {
