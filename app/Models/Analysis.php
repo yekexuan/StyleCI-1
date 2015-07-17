@@ -92,7 +92,7 @@ class Analysis extends Model implements HasPresenter
     }
 
     /**
-     * Scope the query to only include analyses created in the last 2 weeks.
+     * Scope the query to only include analyses created in the last month.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
      *
@@ -100,7 +100,7 @@ class Analysis extends Model implements HasPresenter
      */
     public function scopeRecent(Builder $query)
     {
-        return $query->where('created_at', '>', Carbon::now()->subWeeks(2));
+        return $query->where('created_at', '>', Carbon::now()->subMonth());
     }
 
     /**
