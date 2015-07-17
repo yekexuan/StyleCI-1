@@ -71,35 +71,34 @@ class AnalysisLoggingHandler
     {
         switch ($analysis->status) {
             case 0:
-                $this->logger->debug("Analysis of {$analysis->commit} has been queued.", $this->getContext('Analysis queued.', $analysis));
+                $this->logger->debug("Analysis has been queued.", $this->getContext($analysis));
                 break;
             case 1:
-                $this->logger->debug("Analysis of {$analysis->commit} has started running.", $this->getContext('Analysis started.', $analysis));
+                $this->logger->debug("Analysis has started running.", $this->getContext($analysis));
                 break;
             case 2:
             case 3:
             case 4:
             case 5:
-                $this->logger->debug("Analysis of {$analysis->commit} has completed successfully.", $this->getContext('Analysis completed.', $analysis));
+                $this->logger->debug("Analysis has completed successfully.", $this->getContext($analysis));
                 break;
             case 6:
-                $this->logger->notice("Analysis of {$analysis->commit} has failed due to misconfiguration.", $this->getContext('Analysis misconfigured.', $analysis));
+                $this->logger->notice("Analysis has failed due to misconfiguration.", $this->getContext($analysis));
                 break;
             default:
-                $this->logger->error("Analysis of {$analysis->commit} has failed due to an internal error.", $this->getContext('Analysis errored.', $analysis));
+                $this->logger->error("Analysis has failed due to an internal error.", $this->getContext($analysis));
         }
     }
 
     /**
      * Get the context.
      *
-     * @param string                           $title
      * @param \StyleCI\StyleCI\Models\Analysis $analysis
      *
      * @return array
      */
-    protected function getContext($title, Analysis $analysis)
+    protected function getContext(Analysis $analysis)
     {
-        return ['title' => $title, 'analysis' => AutoPresenter::decorate($analysis)->toArray()];
+        return ['analysis' => AutoPresenter::decorate($analysis)->toArray()];
     }
 }
