@@ -62,7 +62,7 @@
         <div v-show="isLoading" class="loading text-center">
             <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching results...</h3>
         </div>
-        <div v-show="!isLoading" id="results">
+        <div id="results">
         </div>
     </div>
 </sc-analysis>
