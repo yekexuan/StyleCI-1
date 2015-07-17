@@ -96,6 +96,8 @@ class AnalysisMailHandler
             $status = 'first';
         } elseif ($previous->status < 3) {
             $status = 'passed';
+        } else {
+            return;
         }
 
         $mail = [
