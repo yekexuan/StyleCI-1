@@ -90,7 +90,7 @@ class AnalysisMailHandler
      */
     public function notifySuccess(Analysis $analysis, Repo $repo)
     {
-        $previous = Repo::analyses()->where('branch', $repo->branch)->where('id', '<', $analysis->id)->latest()->first();
+        $previous = $repo->analyses()->where('branch', $analysis->branch)->where('id', '<', $analysis->id)->recent()->latest()->first();
 
         if (!$previous) {
             $status = 'first';
