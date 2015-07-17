@@ -73,7 +73,6 @@ class AnalysisMailHandler
             'repo'    => $repo->name,
             'commit'  => $analysis->message,
             'link'    => route('analysis_path', AutoPresenter::decorate($analysis)->id),
-            'subject' => 'Failed Analysis',
         ];
 
         switch ($analysis->status) {
@@ -81,12 +80,23 @@ class AnalysisMailHandler
             case 4:
             case 5:
                 $status = 'failed';
+                $mail['status'] = 'Analysis Failed';
                 break;
             case 6:
                 $status = 'misconfigured';
+                $mail['status'] = 'Analysis Misconfigured';
+                break;
+            case 7:
+                $status = 'access';
+                $mail['status'] = 'Analysis Errored';
+                break;
+            case 8:
+                $status = 'timeout';
+                $mail['status'] = 'Analysis Timed Out';
                 break;
             default:
                 $status = 'errored';
+                $mail['status'] = 'Analysis Errored';
         }
 
         foreach ($this->userRepository->collaborators($repo) as $user) {
