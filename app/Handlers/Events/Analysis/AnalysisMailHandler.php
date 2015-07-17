@@ -94,7 +94,7 @@ class AnalysisMailHandler
 
         if (!$previous && $analysis->branch !== $repo->default_branch) {
             $status = 'first';
-        } elseif ($previous->status < 3) {
+        } elseif ($previous->status > 2) {
             $status = 'passed';
         } else {
             return;
