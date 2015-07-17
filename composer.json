@@ -21,12 +21,16 @@
     "repositories": [
         {
             "type": "vcs",
+            "url":  "https://github.com/GrahamForks/framework"
+        },
+        {
+            "type": "vcs",
             "url":  "https://github.com/StyleCI/PHP-CS-Fixer"
         }
     ],
     "require": {
         "php": "^5.5.9",
-        "laravel/framework": "~5.1.7",
+        "laravel/framework": "dev-5.1-boot-fix as 5.1.8",
         "alt-three/logger": "^1.0",
         "alt-three/validator": "^1.0",
         "fideloper/proxy": "^3.0",

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "40252f1b354c8e9e754cac44fffd260f",
+    "hash": "d9c2991b4173f128625eaa2b8290f37b",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -1548,16 +1548,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.7",
+            "version": "dev-5.1-boot-fix",
             "source": {
                 "type": "git",
-                "url": "https://github.com/laravel/framework.git",
-                "reference": "5e942882319845f71c681ce6e85831129bf66426"
+                "url": "https://github.com/GrahamForks/framework.git",
+                "reference": "8439424742c29eb83b64d2cf89db29ad565db2e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/5e942882319845f71c681ce6e85831129bf66426",
-                "reference": "5e942882319845f71c681ce6e85831129bf66426",
+                "url": "https://api.github.com/repos/GrahamForks/framework/zipball/8439424742c29eb83b64d2cf89db29ad565db2e3",
+                "reference": "8439424742c29eb83b64d2cf89db29ad565db2e3",
                 "shasum": ""
             },
             "require": {
@@ -1656,7 +1656,6 @@
                     "Illuminate\\": "src/Illuminate/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1672,7 +1671,11 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-07-12 02:27:36"
+            "support": {
+                "issues": "https://github.com/laravel/framework/issues",
+                "source": "https://github.com/laravel/framework"
+            },
+            "time": "2015-07-17 18:13:38"
         },
         {
             "name": "league/flysystem",
@@ -5101,9 +5104,18 @@
             "time": "2015-06-21 13:59:46"
         }
     ],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "5.1.8",
+            "alias_normalized": "5.1.8.0",
+            "version": "dev-5.1-boot-fix",
+            "package": "laravel/framework"
+        }
+    ],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "laravel/framework": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
