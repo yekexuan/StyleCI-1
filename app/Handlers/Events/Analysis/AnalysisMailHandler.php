@@ -99,11 +99,11 @@ class AnalysisMailHandler
         }
 
         $mail = [
-            'repo'   => $repo->name,
-            'commit' => $analysis->message,
-            'branch' => $analysis->branch,
-            'link'   => route('analysis_path', AutoPresenter::decorate($analysis)->id),
-            'status' => 'Analysis Passed',
+            'repo'    => $repo->name,
+            'commit'  => $analysis->message,
+            'branch'  => $analysis->branch,
+            'link'    => route('analysis_path', AutoPresenter::decorate($analysis)->id),
+            'subject' => 'Analysis Passed',
         ];
 
         foreach ($this->userRepository->collaborators($repo) as $user) {
@@ -137,23 +137,23 @@ class AnalysisMailHandler
             case 4:
             case 5:
                 $status = 'failed';
-                $mail['status'] = 'Analysis Failed';
+                $mail['subject'] = 'Analysis Failed';
                 break;
             case 6:
                 $status = 'misconfigured';
-                $mail['status'] = 'Analysis Misconfigured';
+                $mail['subject'] = 'Analysis Misconfigured';
                 break;
             case 7:
                 $status = 'access';
-                $mail['status'] = 'Analysis Errored';
+                $mail['subject'] = 'Analysis Errored';
                 break;
             case 8:
                 $status = 'timeout';
-                $mail['status'] = 'Analysis Timed Out';
+                $mail['subject'] = 'Analysis Timed Out';
                 break;
             default:
                 $status = 'errored';
-                $mail['status'] = 'Analysis Errored';
+                $mail['subject'] = 'Analysis Errored';
         }
 
         foreach ($this->userRepository->collaborators($repo) as $user) {
