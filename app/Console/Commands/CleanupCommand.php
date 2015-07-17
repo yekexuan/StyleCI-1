@@ -37,7 +37,7 @@ class CleanupCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Marks all timed out analyses as errored';
+    protected $description = 'Marks all timed out analyses as errored and delete old hidden analyses';
 
     /**
      * Execute the console command.
@@ -51,6 +51,15 @@ class CleanupCommand extends Command
         foreach (Analysis::old()->pending()->orderBy('created_at', 'desc')->get() as $analysis) {
             $this->info("Cleaning up analysis {$analysis->id}.");
             $this->dispatch(new CleanupAnalysisJob($analysis));
+        }
+
+        $storage = $app['storage.connection'];
+
+        foreach (Analysis::hidden()->veryOld()->get() as $analysis) {
+            if ($analysis->status === 3 || $analysis->status === 5) {
+                $storage->delete($analysis->id);
+            }
+            $analysis->delete();
         }
 
         @unlink($this->laravel->storagePath().'/framework/down');

@@ -67,7 +67,7 @@ class RepoController extends Controller
     public function handleShow(Repo $repo)
     {
         $branch = Request::get('branch', $repo->default_branch);
-        $analyses = $repo->analyses()->where('branch', $branch)->orderBy('created_at', 'desc')->paginate(50);
+        $analyses = $repo->analyses()->visible()->where('branch', $branch)->orderBy('created_at', 'desc')->paginate(50);
 
         $pagination = [
             'total'        => $analyses->total(),

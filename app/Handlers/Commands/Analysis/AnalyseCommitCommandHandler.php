@@ -40,6 +40,7 @@ class AnalyseCommitCommandHandler
             'commit'  => $command->commit,
             'message' => $command->message,
             'status'  => 0,
+            'hidden'  => 0,
         ]);
 
         $this->dispatch(new RunAnalysisJob($analysis));

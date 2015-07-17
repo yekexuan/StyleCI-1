@@ -111,7 +111,7 @@ class Repo extends Model implements HasPresenter
      */
     public function last_analysis()
     {
-        return $this->hasOne(Analysis::class)->latest()->where('branch', $this->default_branch);
+        return $this->hasOne(Analysis::class)->visible()->latest()->where('branch', $this->default_branch);
     }
 
     /**

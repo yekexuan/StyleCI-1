@@ -38,6 +38,7 @@ class AnalysisTest extends AbstractTestCase
             'The commit field is required.',
             'The message field is required.',
             'The status field is required.',
+            'The hidden field is required.',
         ];
 
         try {
@@ -58,10 +59,11 @@ class AnalysisTest extends AbstractTestCase
             'The repo id field is required.',
             'The commit must be 40 characters.',
             'The status must be between 0 and 9.',
+            'The hidden field must be true or false.',
         ];
 
         try {
-            Analysis::create(['branch' => 'test', 'commit' => 'trololol', 'message' => 'lol', 'status' => -100]);
+            Analysis::create(['branch' => 'test', 'commit' => 'trololol', 'message' => 'lol', 'status' => -100, 'hidden' => 12]);
         } catch (ValidationException $e) {
             $this->assertSame($expected, $e->getMessageBag()->all());
 
@@ -80,12 +82,13 @@ class AnalysisTest extends AbstractTestCase
             'commit'     => str_repeat('a', 40),
             'message'    => 'Test 123!',
             'status'     => 2,
+            'hidden'     => false,
             'updated_at' => (string) $c,
             'created_at' => (string) $c,
             'id'         => 1,
         ];
 
-        $analysis = Analysis::create(['repo_id' => 12345, 'branch' => 'test', 'commit' => str_repeat('a', 40), 'message' => 'Test 123!', 'status' => 2]);
+        $analysis = Analysis::create(['repo_id' => 12345, 'branch' => 'test', 'commit' => str_repeat('a', 40), 'message' => 'Test 123!', 'status' => 2, 'hidden' => 0]);
 
         $this->assertInstanceOf(Analysis::class, $analysis);
         $this->assertSame($expected, $analysis->toArray());
@@ -93,7 +96,7 @@ class AnalysisTest extends AbstractTestCase
 
     public function testPresentation()
     {
-        $analysis = Analysis::create(['repo_id' => 12345, 'branch' => 'test', 'commit' => str_repeat('a', 40), 'message' => 'Test 123!', 'status' => 2]);
+        $analysis = Analysis::create(['repo_id' => 12345, 'branch' => 'test', 'commit' => str_repeat('a', 40), 'message' => 'Test 123!', 'status' => 2, 'hidden' => 1]);
 
         $presented = AutoPresenter::decorate($analysis);
 

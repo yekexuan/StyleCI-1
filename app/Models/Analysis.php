@@ -60,6 +60,7 @@ class Analysis extends Model implements HasPresenter
         'error'   => 'string',
         'errors'  => 'array',
         'status'  => 'int',
+        'hidden'  => 'bool',
     ];
 
     /**
@@ -77,6 +78,7 @@ class Analysis extends Model implements HasPresenter
         'error'   => 'string|max:255',
         'errors'  => 'string',
         'status'  => 'required|integer|between:0,9',
+        'hidden'  => 'required|boolean',
     ];
 
     /**
@@ -92,15 +94,39 @@ class Analysis extends Model implements HasPresenter
     }
 
     /**
-     * Scope the query to only include analyses created in the last month.
+     * Scope the query to only include analyses over 2 hours old.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
      *
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopeRecent(Builder $query)
+    public function scopeVeryOld(Builder $query)
     {
-        return $query->where('created_at', '>', Carbon::now()->subMonth());
+        return $query->where('updated_at', '<=', Carbon::now()->subYear());
+    }
+
+    /**
+     * Scope the query to only include visible analyses.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeVisible(Builder $query)
+    {
+        return $query->where('hidden', 0);
+    }
+
+    /**
+     * Scope the query to only include hidden analyses.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeHidden(Builder $query)
+    {
+        return $query->where('hidden', 1);
     }
 
     /**
