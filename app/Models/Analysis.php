@@ -92,6 +92,18 @@ class Analysis extends Model implements HasPresenter
     }
 
     /**
+     * Scope the query to only include analyses created in the last 2 weeks.
+     *
+     * @param \Illuminate\Database\Eloquent\Builder $query
+     *
+     * @return \Illuminate\Database\Eloquent\Builder
+     */
+    public function scopeRecent(Builder $query)
+    {
+        return $query->where('created_at', '>', Carbon::now()->subWeeks(2));
+    }
+
+    /**
      * Scope the query to only include pending analyses.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
