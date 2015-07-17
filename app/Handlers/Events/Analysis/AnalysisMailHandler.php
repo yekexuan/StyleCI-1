@@ -64,15 +64,16 @@ class AnalysisMailHandler
     public function handle(AnalysisHasCompletedEvent $event)
     {
         $analysis = $event->analysis;
-        $repo = $analysis->repo;
 
         if (!$analysis->branch) {
             return;
         }
 
+        $repo = $analysis->repo;
+
         if ($analysis->status === 2) {
             $this->notifySuccess($analysis, $repo);
-        } elseif ($analysis->status > 2 && !$analysis->pr) {
+        } elseif ($analysis->status > 2) {
             $this->notifyNotSuccess($analysis, $repo);
         }
     }
