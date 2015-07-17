@@ -92,7 +92,7 @@ class AnalysisMailHandler
     {
         $previous = $repo->analyses()->where('branch', $analysis->branch)->where('id', '<', $analysis->id)->recent()->latest()->first();
 
-        if (!$previous) {
+        if (!$previous && $analysis->branch !== $repo->default_branch) {
             $status = 'first';
         } elseif ($previous->status < 3) {
             $status = 'passed';
