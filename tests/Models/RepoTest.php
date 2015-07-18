@@ -99,6 +99,6 @@ class RepoTest extends AbstractTestCase
         $this->assertInstanceOf(RepoPresenter::class, $presented);
         $this->assertSame(12345, $presented->id);
 
-        $this->assertSame(['id' => 12345, 'last_analysis' => null, 'name' => 'Foo/Baz', 'default_branch' => 'lol', 'link' => 'http://localhost/repos/12345'], $presented->toArray());
+        $this->assertSame(['id' => 12345, 'last_analysis' => null, 'name' => 'Foo/Baz', 'default_branch' => 'lol', 'link' => 'https://styleci.io/repos/12345'], $presented->toArray());
     }
 }
