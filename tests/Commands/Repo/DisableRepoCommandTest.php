@@ -11,7 +11,6 @@
 
 namespace StyleCI\Tests\StyleCI\Commands\Repo;
 
-use Mockery;
 use StyleCI\StyleCI\Commands\Repo\DisableRepoCommand;
 use StyleCI\StyleCI\Handlers\Commands\Repo\DisableRepoCommandHandler;
 use StyleCI\StyleCI\Models\Repo;

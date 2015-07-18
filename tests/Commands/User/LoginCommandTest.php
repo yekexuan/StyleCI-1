@@ -11,7 +11,6 @@
 
 namespace StyleCI\Tests\StyleCI\Commands\User;
 
-use Mockery;
 use StyleCI\StyleCI\Commands\User\LoginCommand;
 use StyleCI\StyleCI\Handlers\Commands\User\LoginCommandHandler;
 use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;

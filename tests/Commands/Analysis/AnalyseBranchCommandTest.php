@@ -11,7 +11,6 @@
 
 namespace StyleCI\Tests\StyleCI\Commands\Analysis;
 
-use Mockery;
 use StyleCI\StyleCI\Commands\Analysis\AnalyseBranchCommand;
 use StyleCI\StyleCI\Handlers\Commands\Analysis\AnalyseBranchCommandHandler;
 use StyleCI\StyleCI\Models\Repo;

@@ -11,7 +11,6 @@
 
 namespace StyleCI\Tests\StyleCI\Commands\User;
 
-use Mockery;
 use StyleCI\StyleCI\Commands\User\DeleteAccountCommand;
 use StyleCI\StyleCI\Handlers\Commands\User\DeleteAccountCommandHandler;
 use StyleCI\StyleCI\Models\User;
