@@ -66,10 +66,10 @@ class AuthController extends Controller
         $this->dispatch(new LoginCommand((int) $user['id'], $name, $username, array_get($user, 'email'), array_get($user, 'token')));
 
         if (count(app(RepoRepository::class)->allByUser(Auth::user())) > 0) {
-            return Redirect::route('home');
+            return Redirect::intended(route('home'));
         }
 
-        return Redirect::route('account_path');
+        return Redirect::intended(route('account_path'));
     }
 
     /**
