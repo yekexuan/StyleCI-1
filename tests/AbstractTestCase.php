@@ -29,6 +29,14 @@ abstract class AbstractTestCase extends TestCase
     protected $baseUrl = 'http://localhost';
 
     /**
+     * @before
+     */
+    public function disableLogging()
+    {
+        $this->app->config->set('logger.loggers', []);
+    }
+
+    /**
      * Creates the application.
      *
      * @return \Illuminate\Foundation\Application
