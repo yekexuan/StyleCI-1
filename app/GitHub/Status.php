@@ -13,6 +13,7 @@ namespace StyleCI\StyleCI\GitHub;
 
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use StyleCI\StyleCI\Models\Analysis;
+use StyleCI\StyleCI\Presenters\AnalysisPresenter;
 
 /**
  * This is the github status class.
@@ -55,7 +56,7 @@ class Status
 
         $data = [
             'state'       => $this->getState($decorated->status),
-            'description' => $decorated->description,
+            'description' => $this->getDescription($decorated),
             'target_url'  => route('analysis_path', $decorated->id),
             'context'     => 'StyleCI',
         ];
@@ -63,6 +64,24 @@ class Status
         $client = $this->factory->make($repo, ['version' => 'quicksilver-preview']);
 
         $client->repos()->statuses()->create($args[0], $args[1], $analysis->commit, $data);
+    }
+
+    /**
+     * Get the description of the analysis for GitHub.
+     *
+     * @param \StyleCI\StyleCI\Presenters\AnalysisPresenter $decorated
+     *
+     * @return string
+     */
+    protected function getDescription(AnalysisPresenter $decorated)
+    {
+        $description = $decorated->description;
+
+        if ($decorated->has_diff) {
+            $description .= ' - '.$decorated->diff->count().' files need addressing';
+        }
+
+        return $description;
     }
 
     /**
