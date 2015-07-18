@@ -53,7 +53,7 @@ class CleanupCommand extends Command
             $this->dispatch(new CleanupAnalysisJob($analysis));
         }
 
-        $storage = $app['storage.connection'];
+        $storage = $this->laravel['storage.connection'];
 
         foreach (Analysis::hidden()->veryOld()->get() as $analysis) {
             if ($analysis->status === 3 || $analysis->status === 5) {
