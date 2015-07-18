@@ -398,12 +398,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "a5ffbe1092599f236c1a041a06a22dd8f6c8c268"
+                "reference": "e3f99e0ef7eaa04c70d3ba50f09425464275f54d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/a5ffbe1092599f236c1a041a06a22dd8f6c8c268",
-                "reference": "a5ffbe1092599f236c1a041a06a22dd8f6c8c268",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/e3f99e0ef7eaa04c70d3ba50f09425464275f54d",
+                "reference": "e3f99e0ef7eaa04c70d3ba50f09425464275f54d",
                 "shasum": ""
             },
             "require": {
@@ -451,7 +451,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/PHP-CS-Fixer/tree/master"
             },
-            "time": "2015-07-09 10:25:10"
+            "time": "2015-07-18 19:26:15"
         },
         {
             "name": "fideloper/proxy",
@@ -1552,12 +1552,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamForks/framework.git",
-                "reference": "8439424742c29eb83b64d2cf89db29ad565db2e3"
+                "reference": "dbdd5efcbbdf859e26d5d61b1d1d6311d9d54a3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamForks/framework/zipball/8439424742c29eb83b64d2cf89db29ad565db2e3",
-                "reference": "8439424742c29eb83b64d2cf89db29ad565db2e3",
+                "url": "https://api.github.com/repos/GrahamForks/framework/zipball/dbdd5efcbbdf859e26d5d61b1d1d6311d9d54a3b",
+                "reference": "dbdd5efcbbdf859e26d5d61b1d1d6311d9d54a3b",
                 "shasum": ""
             },
             "require": {
@@ -1675,7 +1675,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2015-07-17 18:13:38"
+            "time": "2015-07-18 19:20:20"
         },
         {
             "name": "league/flysystem",
@@ -2464,12 +2464,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "ff254ad33e1be1fcf67203f6fd57c50ca4ad6b2d"
+                "reference": "89bd5897f1638e2a230c5616f0440e6bfe5d9a3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/ff254ad33e1be1fcf67203f6fd57c50ca4ad6b2d",
-                "reference": "ff254ad33e1be1fcf67203f6fd57c50ca4ad6b2d",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/89bd5897f1638e2a230c5616f0440e6bfe5d9a3a",
+                "reference": "89bd5897f1638e2a230c5616f0440e6bfe5d9a3a",
                 "shasum": ""
             },
             "require": {
@@ -2522,7 +2522,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-16 20:00:29"
+            "time": "2015-07-18 19:25:50"
         },
         {
             "name": "styleci/git",
