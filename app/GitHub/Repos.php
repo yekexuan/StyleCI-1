@@ -113,7 +113,7 @@ class Repos
      */
     protected function syncWithDatabase(Repo $repo, array $data)
     {
-        $modifed = false;
+        $modified = false;
 
         foreach (['name', 'default_branch'] as $property) {
             if ($repo->{$property} === $data[$property]) {
@@ -121,10 +121,10 @@ class Repos
             }
 
             $repo->{$property} = $data[$property];
-            $modifed = true;
+            $modified = true;
         }
 
-        if ($modifed) {
+        if ($modified) {
             $repo->save();
         }
     }
