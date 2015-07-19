@@ -78,7 +78,8 @@ class Status
         $description = $decorated->description;
 
         if ($decorated->has_diff) {
-            $description .= ' - '.$decorated->diff->count().' files need addressing';
+            $count = $decorated->diff->count();
+            $description .= " - {$count} ".($count === 1 ? 'file needs' : 'files need').' addressing';
         }
 
         return $description;
