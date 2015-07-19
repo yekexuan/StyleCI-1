@@ -682,12 +682,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "faaadcfc8b1f0101f57f4f72ea6b48569219722c"
+                "reference": "5266b1b7a141a33234bdd28a939cb837894e6186"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/faaadcfc8b1f0101f57f4f72ea6b48569219722c",
-                "reference": "faaadcfc8b1f0101f57f4f72ea6b48569219722c",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/5266b1b7a141a33234bdd28a939cb837894e6186",
+                "reference": "5266b1b7a141a33234bdd28a939cb837894e6186",
                 "shasum": ""
             },
             "require": {
@@ -739,7 +739,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-07-18 15:26:41"
+            "time": "2015-07-19 10:38:27"
         },
         {
             "name": "graham-campbell/flysystem",
@@ -2596,12 +2596,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "7a0c41883a0a157c88747b0c04c3e9fd30158093"
+                "reference": "81a97921da6706c638a04092a5827061131e99f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/7a0c41883a0a157c88747b0c04c3e9fd30158093",
-                "reference": "7a0c41883a0a157c88747b0c04c3e9fd30158093",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/81a97921da6706c638a04092a5827061131e99f2",
+                "reference": "81a97921da6706c638a04092a5827061131e99f2",
                 "shasum": ""
             },
             "require": {
@@ -2651,7 +2651,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-07-15 17:57:22"
+            "time": "2015-07-19 19:14:13"
         },
         {
             "name": "styleci/storage",
