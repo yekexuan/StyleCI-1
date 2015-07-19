@@ -116,7 +116,7 @@ class Branches
      */
     protected function fetchFromGitHub(Repo $repo)
     {
-        $client = $this->factory->make($repo, ['version' => 'quicksilver-preview']);
+        $client = $this->factory->make($repo);
         $paginator = new ResultPager($client);
 
         return $paginator->fetchAll($client->repos(), 'branches', explode('/', $repo->name));
