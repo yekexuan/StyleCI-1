@@ -23,7 +23,7 @@ use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
  */
 class AnalysePullRequestCommandTest extends AbstractCommandTestCase
 {
-    protected function getCommandObjectAndParams()
+    protected function getObjectAndParams()
     {
         $params = ['repo' => new Repo(), 'pr' => 123, 'commit' => 'trololol', 'message' => 'SUP!'];
         $object = new AnalysePullRequestCommand($params['repo'], $params['pr'], $params['commit'], $params['message']);
@@ -31,7 +31,7 @@ class AnalysePullRequestCommandTest extends AbstractCommandTestCase
         return compact('params', 'object');
     }
 
-    protected function commandHasRules()
+    protected function objectHasRules()
     {
         return true;
     }

@@ -23,7 +23,7 @@ use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
  */
 class EnableRepoCommandTest extends AbstractCommandTestCase
 {
-    protected function getCommandObjectAndParams()
+    protected function getObjectAndParams()
     {
         $params = ['id' => 12345, 'name' => 'Foo/Bar', 'branch' => 'master', 'user' => new User()];
         $object = new EnableRepoCommand($params['id'], $params['name'], $params['branch'], $params['user']);
@@ -31,7 +31,7 @@ class EnableRepoCommandTest extends AbstractCommandTestCase
         return compact('params', 'object');
     }
 
-    protected function commandHasRules()
+    protected function objectHasRules()
     {
         return true;
     }

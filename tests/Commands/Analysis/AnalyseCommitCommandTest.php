@@ -23,7 +23,7 @@ use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
  */
 class AnalyseCommitCommandTest extends AbstractCommandTestCase
 {
-    protected function getCommandObjectAndParams()
+    protected function getObjectAndParams()
     {
         $params = ['repo' => new Repo(), 'branch' => 'foo', 'commit' => 'sha1 goes here', 'message' => 'Hi there!'];
         $object = new AnalyseCommitCommand($params['repo'], $params['branch'], $params['commit'], $params['message']);
@@ -31,7 +31,7 @@ class AnalyseCommitCommandTest extends AbstractCommandTestCase
         return compact('params', 'object');
     }
 
-    protected function commandHasRules()
+    protected function objectHasRules()
     {
         return true;
     }

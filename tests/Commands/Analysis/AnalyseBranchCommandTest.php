@@ -23,7 +23,7 @@ use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
  */
 class AnalyseBranchCommandTest extends AbstractCommandTestCase
 {
-    protected function getCommandObjectAndParams()
+    protected function getObjectAndParams()
     {
         $params = ['repo' => new Repo(), 'branch' => 'master'];
         $object = new AnalyseBranchCommand($params['repo'], $params['branch']);
@@ -31,7 +31,7 @@ class AnalyseBranchCommandTest extends AbstractCommandTestCase
         return compact('params', 'object');
     }
 
-    protected function commandHasRules()
+    protected function objectHasRules()
     {
         return true;
     }

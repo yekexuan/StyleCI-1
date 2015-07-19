@@ -23,7 +23,7 @@ use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
  */
 class DisableRepoCommandTest extends AbstractCommandTestCase
 {
-    protected function getCommandObjectAndParams()
+    protected function getObjectAndParams()
     {
         $params = ['repo' => new Repo()];
         $object = new DisableRepoCommand($params['repo']);
@@ -31,7 +31,7 @@ class DisableRepoCommandTest extends AbstractCommandTestCase
         return compact('params', 'object');
     }
 
-    protected function commandHasRules()
+    protected function objectHasRules()
     {
         return false;
     }

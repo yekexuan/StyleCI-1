@@ -22,7 +22,7 @@ use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
  */
 class LoginCommandTest extends AbstractCommandTestCase
 {
-    protected function getCommandObjectAndParams()
+    protected function getObjectAndParams()
     {
         $params = ['id' => 12345, 'name' => 'Foo Bar', 'username' => 'foo', 'email' => 'foo@bar.com', 'token' => str_repeat('A', 40)];
         $object = new LoginCommand($params['id'], $params['name'], $params['username'], $params['email'], $params['token']);
@@ -30,7 +30,7 @@ class LoginCommandTest extends AbstractCommandTestCase
         return compact('params', 'object');
     }
 
-    protected function commandHasRules()
+    protected function objectHasRules()
     {
         return true;
     }
