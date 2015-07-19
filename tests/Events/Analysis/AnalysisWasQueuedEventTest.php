@@ -11,17 +11,15 @@
 
 namespace StyleCI\Tests\StyleCI\Events\Analysis;
 
-use StyleCI\StyleCI\Events\Analysis\AnalysisEventInterface;
 use StyleCI\StyleCI\Events\Analysis\AnalysisWasQueuedEvent;
 use StyleCI\StyleCI\Models\Analysis;
-use StyleCI\Tests\StyleCI\Events\AbstractEventTestCase;
 
 /**
  * This is the analyse was queued event test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalysisWasQueuedEventTest extends AbstractEventTestCase
+class AnalysisWasQueuedEventTest extends AbstractAnalysisEventTestCase
 {
     protected function getObjectAndParams()
     {
@@ -29,10 +27,5 @@ class AnalysisWasQueuedEventTest extends AbstractEventTestCase
         $object = new AnalysisWasQueuedEvent($params['analysis']);
 
         return compact('params', 'object');
-    }
-
-    protected function getEventInterfaces()
-    {
-        return [AnalysisEventInterface::class];
     }
 }

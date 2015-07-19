@@ -11,17 +11,15 @@
 
 namespace StyleCI\Tests\StyleCI\Events\Analysis;
 
-use StyleCI\StyleCI\Events\Analysis\AnalysisEventInterface;
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasStartedEvent;
 use StyleCI\StyleCI\Models\Analysis;
-use StyleCI\Tests\StyleCI\Events\AbstractEventTestCase;
 
 /**
  * This is the analyse has started event test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalysisHasStartedEventTest extends AbstractEventTestCase
+class AnalysisHasStartedEventTest extends AbstractAnalysisEventTestCase
 {
     protected function getObjectAndParams()
     {
@@ -29,10 +27,5 @@ class AnalysisHasStartedEventTest extends AbstractEventTestCase
         $object = new AnalysisHasStartedEvent($params['analysis']);
 
         return compact('params', 'object');
-    }
-
-    protected function getEventInterfaces()
-    {
-        return [AnalysisEventInterface::class];
     }
 }

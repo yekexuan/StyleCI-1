@@ -12,17 +12,15 @@
 namespace StyleCI\Tests\StyleCI\Events\Analysis;
 
 use Exception;
-use StyleCI\StyleCI\Events\Analysis\AnalysisEventInterface;
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Models\Analysis;
-use StyleCI\Tests\StyleCI\Events\AbstractEventTestCase;
 
 /**
  * This is the analyse has completed event test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalysisHasCompletedEventTest extends AbstractEventTestCase
+class AnalysisHasCompletedEventTest extends AbstractAnalysisEventTestCase
 {
     protected function getObjectAndParams()
     {
@@ -30,10 +28,5 @@ class AnalysisHasCompletedEventTest extends AbstractEventTestCase
         $object = new AnalysisHasCompletedEvent($params['analysis'], $params['exception']);
 
         return compact('params', 'object');
-    }
-
-    protected function getEventInterfaces()
-    {
-        return [AnalysisEventInterface::class];
     }
 }
