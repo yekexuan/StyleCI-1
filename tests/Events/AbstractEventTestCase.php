@@ -11,6 +11,8 @@
 
 namespace StyleCI\Tests\StyleCI\Events;
 
+use ReflectionClass;
+use StyleCI\StyleCI\Providers\EventServiceProvider;
 use StyleCI\Tests\StyleCI\AbstractAnemicTestCase;
 
 /**
@@ -31,6 +33,22 @@ abstract class AbstractEventTestCase extends AbstractAnemicTestCase
 
         foreach ($this->getEventInterfaces() as $interface) {
             $this->assertInstanceOf($interface, $event);
+        }
+    }
+
+    public function testEventHasRegisteredHandlers()
+    {
+        $property = (new ReflectionClass(EventServiceProvider::class))->getProperty('listen');
+        $property->setAccessible(true);
+
+        $class = get_class($this->getObjectAndParams()['object']);
+        $mappings = $property->getValue(new EventServiceProvider($this->app));
+
+        $this->assertTrue(isset($mappings[$class]));
+        $this->assertGreaterThan(0, count($mappings[$class]));
+
+        foreach ($mappings[$class] as $handler) {
+            $this->assertInstanceOf($handler, $this->app->make($handler));
         }
     }
 }
