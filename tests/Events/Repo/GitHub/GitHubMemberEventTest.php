@@ -22,6 +22,6 @@ class GitHubMemberEventTest extends AbstractGitHubEventTestCase
 {
     protected function getEventClass()
     {
-    	return GitHubMemberEvent::class;
+        return GitHubMemberEvent::class;
     }
 }

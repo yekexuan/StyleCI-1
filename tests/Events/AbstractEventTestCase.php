@@ -11,7 +11,6 @@
 
 namespace StyleCI\Tests\StyleCI\Events;
 
-use Illuminate\Contracts\Bus\Dispatcher;
 use StyleCI\Tests\StyleCI\AbstractAnemicTestCase;
 
 /**
@@ -31,7 +30,7 @@ abstract class AbstractEventTestCase extends AbstractAnemicTestCase
         $event = $this->getObjectAndParams()['object'];
 
         foreach ($this->getEventInterfaces() as $interface) {
-        	$this->assertInstanceOf($interface, $event);
+            $this->assertInstanceOf($interface, $event);
         }
     }
 }

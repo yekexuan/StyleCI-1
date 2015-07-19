@@ -22,6 +22,6 @@ class GitHubDeleteEventTest extends AbstractGitHubEventTestCase
 {
     protected function getEventClass()
     {
-    	return GitHubDeleteEvent::class;
+        return GitHubDeleteEvent::class;
     }
 }

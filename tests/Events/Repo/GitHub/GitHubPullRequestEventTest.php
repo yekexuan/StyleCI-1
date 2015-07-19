@@ -22,6 +22,6 @@ class GitHubPullRequestEventTest extends AbstractGitHubEventTestCase
 {
     protected function getEventClass()
     {
-    	return GitHubPullRequestEvent::class;
+        return GitHubPullRequestEvent::class;
     }
 }

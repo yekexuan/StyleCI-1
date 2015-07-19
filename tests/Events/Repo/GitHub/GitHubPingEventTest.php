@@ -22,6 +22,6 @@ class GitHubPingEventTest extends AbstractGitHubEventTestCase
 {
     protected function getEventClass()
     {
-    	return GitHubPingEvent::class;
+        return GitHubPingEvent::class;
     }
 }
