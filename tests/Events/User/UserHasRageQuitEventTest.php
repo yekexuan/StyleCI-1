@@ -11,7 +11,6 @@
 
 namespace StyleCI\Tests\StyleCI\Events\User;
 
-use Exception;
 use StyleCI\StyleCI\Events\User\UserHasRageQuitEvent;
 use StyleCI\StyleCI\Models\User;
 

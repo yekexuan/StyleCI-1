@@ -11,7 +11,6 @@
 
 namespace StyleCI\Tests\StyleCI\Events\Repo;
 
-use Exception;
 use StyleCI\StyleCI\Events\Repo\RepoWasDisabledEvent;
 use StyleCI\StyleCI\Models\Repo;
 
