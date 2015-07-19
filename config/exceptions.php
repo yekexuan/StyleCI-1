@@ -46,7 +46,6 @@ return [
 
     'displayers' => [
         'StyleCI\StyleCI\Exceptions\Displayers\GitHubDisplayer',
-        'StyleCI\StyleCI\Exceptions\Displayers\RedirectDisplayer',
         'GrahamCampbell\Exceptions\Displayers\DebugDisplayer',
         'GrahamCampbell\Exceptions\Displayers\HtmlDisplayer',
         'GrahamCampbell\Exceptions\Displayers\JsonDisplayer',
