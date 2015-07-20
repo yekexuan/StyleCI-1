@@ -14,7 +14,6 @@ namespace StyleCI\StyleCI\Http;
 use Fideloper\Proxy\TrustProxies;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 use StyleCI\StyleCI\Http\Middleware\CheckForMaintenanceMode;
-use StyleCI\StyleCI\Http\Middleware\EtagMiddleware;
 
 /**
  * This is the http kernel class.
@@ -28,5 +27,5 @@ class Kernel extends HttpKernel
      *
      * @var string[]
      */
-    protected $middleware = [TrustProxies::class, CheckForMaintenanceMode::class, EtagMiddleware::class];
+    protected $middleware = [TrustProxies::class, CheckForMaintenanceMode::class];
 }
