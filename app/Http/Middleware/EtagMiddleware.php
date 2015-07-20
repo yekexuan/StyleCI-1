@@ -38,6 +38,7 @@ class EtagMiddleware
         // set etags for json responses
         if (in_array($response->getStatusCode(), [200, 201], true) && $response->headers->get('Content-Type') === 'application/json') {
             $response->setEtag(md5($response->getContent()));
+            $response->setPublic();
         }
 
         // symfony turns the response into 304 for us just by us asking isNotModified
