@@ -1552,12 +1552,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c42ef4845fcd3f36555ecf30c054845374a93e54"
+                "reference": "12b81d895bb927c5aeffd40828afbcf2468ee385"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c42ef4845fcd3f36555ecf30c054845374a93e54",
-                "reference": "c42ef4845fcd3f36555ecf30c054845374a93e54",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/12b81d895bb927c5aeffd40828afbcf2468ee385",
+                "reference": "12b81d895bb927c5aeffd40828afbcf2468ee385",
                 "shasum": ""
             },
             "require": {
@@ -1672,7 +1672,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-07-20 16:50:34"
+            "time": "2015-07-20 17:37:49"
         },
         {
             "name": "league/flysystem",
@@ -2399,12 +2399,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "b5651ffaf1e65e439aa3f85fd6519748cc737a02"
+                "reference": "78b3a02ba761450182f3a1678cfa01a504c45e2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/b5651ffaf1e65e439aa3f85fd6519748cc737a02",
-                "reference": "b5651ffaf1e65e439aa3f85fd6519748cc737a02",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/78b3a02ba761450182f3a1678cfa01a504c45e2b",
+                "reference": "78b3a02ba761450182f3a1678cfa01a504c45e2b",
                 "shasum": ""
             },
             "require": {
@@ -2453,7 +2453,7 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-16 15:57:07"
+            "time": "2015-07-20 19:02:44"
         },
         {
             "name": "styleci/fixer",
@@ -2656,12 +2656,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Storage.git",
-                "reference": "ec7f943c157071d731558d40734af58b1ba71b21"
+                "reference": "653973e31552ed6f094f843368d8724f41c4fe19"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/ec7f943c157071d731558d40734af58b1ba71b21",
-                "reference": "ec7f943c157071d731558d40734af58b1ba71b21",
+                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/653973e31552ed6f094f843368d8724f41c4fe19",
+                "reference": "653973e31552ed6f094f843368d8724f41c4fe19",
                 "shasum": ""
             },
             "require": {
@@ -2712,7 +2712,7 @@
                 "StyleCI",
                 "storage"
             ],
-            "time": "2015-07-15 17:54:05"
+            "time": "2015-07-20 19:21:38"
         },
         {
             "name": "swiftmailer/swiftmailer",
