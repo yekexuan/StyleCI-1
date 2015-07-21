@@ -45,24 +45,24 @@
                     </div>
                 </div>
                 <div class="analyses">
-                    <div v-repeat="analyses : analyses"
+                    <div v-repeat="analysis : analyses"
                          class="row"
-                         v-class="bg-success: analyses.status === 2, bg-danger: analyses.status > 2">
+                         v-class="bg-success: analysis.status === 2, bg-danger: analysis.status > 2">
                         <div class="col-sm-7">
-                            <strong>@{{ analyses.message }}</strong>
+                            <strong>@{{ analysis.message }}</strong>
                             <br>
-                            <small class="js-time-ago" title="@{{ analyses.created_at_iso }}">@{{ analyses.time_ago }}</small>
+                            <small class="js-time-ago" title="@{{ analysis.created_at_iso }}">@{{ analysis.time_ago }}</small>
                         </div>
                         <div class="col-sm-1">
-                            <p class="status-@{{ analyses.color }}">
-                                <strong>@{{ analyses.summary }}</strong>
+                            <p class="status-@{{ analysis.color }}">
+                                <strong>@{{ analysis.summary }}</strong>
                             </p>
                         </div>
                         <div class="col-sm-4 repo-buttons">
-                            <a class="badge-id" href="@{{ analyses.github_link }}">
-                                @{{ analyses.github_id }}
+                            <a class="badge-id" href="@{{ analysis.github_link }}">
+                                @{{ analysis.github_id }}
                             </a>
-                            <a class="btn btn-sm btn-default" href="@{{ analyses.link }}">Show Details</a>
+                            <a class="btn btn-sm btn-default" href="@{{ analysis.link }}">Show Details</a>
                         </div>
                     </div>
                 </div>
