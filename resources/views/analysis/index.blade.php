@@ -20,7 +20,7 @@
                     <img src="{{ route('repo_shield', $analysis->repo->id) }}" alt="StyleCI Shield">
                 </a>
             </div>
-            <p class="js-status @if ($analysis->status === 2) status-green; @elseif ($analysis->status > 2) status-red; @else status-grey; @endif">
+            <p class="js-status @if ($analysis->status === 2) status-green @elseif ($analysis->status > 2) status-red @else status-grey @endif">
                 <i class="{{ $analysis->icon }}"></i>
                 {{ $analysis->description }}
             </p>
