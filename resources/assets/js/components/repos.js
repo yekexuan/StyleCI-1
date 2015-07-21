@@ -28,9 +28,13 @@ var ReposList = Vue.extend({
                 });
         },
         RepoStatusUpdatedEventHandler: function(data) {
-            this.getRepos(); // TODO - remove this and fix the original
-            // var repo = _.findWhere(this.repos, { 'id': data.event.id });
-            // repo = data.event;
+            var repo = _.findWhere(this.repos, { 'id': data.event.id });
+
+            if (repo) {
+                repo = data.event;
+            } else {
+                this.getRepos();
+            }
         },
         RepoWasDisabledEventHandler: function(data) {
             var repo = _.findWhere(this.repos, { 'id': data.event.id });

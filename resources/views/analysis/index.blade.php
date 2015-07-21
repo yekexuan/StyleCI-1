@@ -12,8 +12,8 @@
 @stop
 
 @section('content')
-<sc-analysis>
-    <div id="analysis" class="analysis hide" data-id="{{ $analysis->id }}">
+<sc-analysis inline-template>
+    <div id="analysis" class="analysis hide" data-id="{{ $analysis->id }}" data-has-result="{{ $analysis->status > 2 }}" data-has-diff="{{ $analysis->has_diff }}">
         <div class="well">
             <div class="pull-right">
                 <a href="#" data-toggle="modal" data-target="#badge-modal">
@@ -43,13 +43,13 @@
                                 {{ $analysis->github_id }}
                             </a>
                         </li>
-                        <li id="download-diff">
+                        <li v-show="hasDiff" id="download-diff">
                             <a class="btn" href="{{ route('analysis_download', $analysis->id) }}">
                                 <i class="fa fa-cloud-download"></i>
                                 Download patch
                             </a>
                         </li>
-                        <li id="view-diff">
+                        <li v-show="hasDiff" id="view-diff">
                             <a class="btn" href="{{ route('analysis_diff', $analysis->id) }}">
                                 <i class="fa fa-code"></i>
                                 Open diff file

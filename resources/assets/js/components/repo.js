@@ -12,7 +12,7 @@ var RepoList = Vue.extend({
         };
     },
     ready: function() {
-        $('#repo').removeClass('hide');
+        $('#repo-list').removeClass('hide');
         this.repoId = $('#repo').data('id');
         this.repoBranch = $('#repo').data('branch');
         this.getAnalyses();
@@ -53,7 +53,7 @@ var RepoList = Vue.extend({
             e.preventDefault();
             var self = this;
 
-            if (self.branches.length == 0) {
+            if (self.branches.length === 0) {
                 return;
             }
 
