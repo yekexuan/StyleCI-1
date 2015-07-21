@@ -156,15 +156,15 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      */
     protected function color()
     {
-        if ($this->wrappedObject->status === 2) {
-            return 'green';
+        switch ($this->wrappedObject->status) {
+            case 0:
+            case 1:
+                return 'grey';
+            case 2:
+                return 'green';
+            default:
+                return 'red';
         }
-
-        if ($this->wrappedObject->status > 2) {
-            return 'red';
-        }
-
-        return 'grey';
     }
 
     /**
