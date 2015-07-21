@@ -104,7 +104,7 @@ class AnalysisTest extends AbstractTestCase
         $this->assertSame('xkXG8Z', $presented->id);
         $this->assertSame('PASSED', $presented->summary);
         $this->assertSame('The StyleCI analysis has passed', $presented->description);
-        $this->assertSame('fa fa-check', $presented->icon);
+        $this->assertSame('fa fa-check-circle', $presented->icon);
         $this->assertSame('green', $presented->color);
         $this->assertFalse($presented->has_diff);
     }
