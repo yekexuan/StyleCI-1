@@ -28,10 +28,10 @@ var ReposList = Vue.extend({
                 });
         },
         RepoStatusUpdatedEventHandler: function(data) {
-            var repo = _.findWhere(this.repos, { 'id': data.event.id });
+            var index = _.findIndex(this.repos, { 'id': data.event.id });
 
-            if (repo) {
-                repo = data.event;
+            if (index) {
+                this.repos.$set(index, data.event);
             } else {
                 this.getRepos();
             }
