@@ -1,6 +1,6 @@
 @extends('layouts.email')
 
 @section('content')
-<p>The coding style analysis of "{{ $commit }}" on the "{{ $branch }}" branch of "{{ $repo }}" couldn't be completed because we couldn't access the code.</p>
+<p>The coding style analysis of <b>{{ $commit }}</b> on the <b>{{ $branch }}</b> branch of <b>{{ $repo }}</b> couldn't be completed due to an error accessing the repo.</p>
 <p>Click <a href="{{ $link }}">here</a> to see the details.</p>
 @stop
