@@ -134,15 +134,19 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      */
     protected function icon()
     {
-        if ($this->wrappedObject->status === 2) {
-            return 'fa fa-check-circle';
+        switch ($this->wrappedObject->status) {
+            case 0:
+            case 1:
+                return 'fa fa-cog fa-spin';
+            case 2:
+                return 'fa fa-check';
+            case 3:
+            case 4:
+            case 5:
+                return 'fa fa-times';
+            default:
+                return 'fa fa-exclamation';
         }
-
-        if ($this->wrappedObject->status > 2) {
-            return 'fa fa-times-circle';
-        }
-
-        return 'fa fa-exclamation-circle';
     }
 
     /**
