@@ -3,8 +3,7 @@ var Analysis = Vue.extend({
         return {
             analysisId: false,
             isLoading: false,
-            search: '',
-            repos: []
+            hasDiff: false
         };
     },
     created: function() {
@@ -12,12 +11,14 @@ var Analysis = Vue.extend({
         SyntaxHighlighter.defaults.gutter = false;
     },
     ready: function() {
-        $('#analysis').removeClass('hide');
-        $('#download-diff').hide();
-        $('#view-diff').hide();
+        var $analysis = $('#analysis');
+        $analysis.removeClass('hide');
         $('#status-buttons').removeClass('hide');
-        this.analysisId = $('#analysis').data('id');
-        this.getResults();
+        this.analysisId = $analysis.data('id');
+        this.hasDiff = Boolean($analysis.data('has-diff'));
+        if (this.hasDiff) {
+            this.getResults();
+        }
         this.subscribe();
     },
     methods: {
@@ -30,16 +31,9 @@ var Analysis = Vue.extend({
 
             return $.get(url)
                 .done(function(response) {
-                    $('#results').html(response).promise().done(function() {
+                    results.html(response).promise().done(function() {
                         SyntaxHighlighter.highlight();
                     });
-                    if (response.toString().indexOf('changed files') >= 0) {
-                        $('#download-diff').show();
-                        $('#view-diff').show();
-                    } else {
-                        $('#download-diff').hide();
-                        $('#view-diff').hide();
-                    }
                 })
                 .fail(function(response) {
                     (new StyleCI.Notifier()).notify(response.responseJSON.errors[0].title);
@@ -58,6 +52,7 @@ var Analysis = Vue.extend({
                     status.attr('class', 'js-status status-green');
                 } else if (data.event.status > 2) {
                     status.attr('class', 'js-status status-red');
+                    this.hasDiff = true;
                     this.getResults();
                 } else {
                     status.attr('class', 'js-status status-grey');
