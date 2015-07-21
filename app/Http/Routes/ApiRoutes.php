@@ -49,7 +49,7 @@ class ApiRoutes
             ]);
 
             $router->get('repos/{repo}/branches', [
-                'as'   => 'repo',
+                'as'   => 'repo_branches',
                 'uses' => 'Api\RepoController@handleBranches',
             ]);
 
