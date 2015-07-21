@@ -54,7 +54,7 @@
                             <small class="js-time-ago" title="@{{ analyses.created_at_iso }}">@{{ analyses.time_ago }}</small>
                         </div>
                         <div class="col-sm-1">
-                            <p style="color: @{{ analyses.color }}">
+                            <p class="status-@{{ analyses.color }}">
                                 <strong>@{{ analyses.summary }}</strong>
                             </p>
                         </div>

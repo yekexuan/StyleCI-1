@@ -55,12 +55,12 @@ var Analysis = Vue.extend({
                 status.html('<i class="' + data.event.icon + '"></i> ' + data.event.description);
 
                 if (data.event.status === 2) {
-                    status.css('color', 'green');
+                    status.attr('class', 'js-status status-green');
                 } else if (data.event.status > 2) {
-                    status.css('color', 'red');
+                    status.attr('class', 'js-status status-red');
                     this.getResults();
                 } else {
-                    status.css('color', 'grey');
+                    status.attr('class', 'js-status status-grey');
                 }
             }
         },

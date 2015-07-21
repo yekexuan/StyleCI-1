@@ -30,7 +30,7 @@
                     <h3>@{{ repo.name }}</h3>
                     <p class="js-status">
                         <span v-if="repo.last_analysis">
-                            <strong style="color: @{{ repo.last_analysis.color }}">@{{ repo.last_analysis.summary }}</strong>
+                            <strong class="status-@{{ repo.last_analysis.color }}">@{{ repo.last_analysis.summary }}</strong>
                         </span>
                         <span v-if="!repo.last_analysis">
                             <strong>Nothing on the @{{ repo.default_branch }} branch has been analysed yet.</strong>
