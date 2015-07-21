@@ -84,7 +84,7 @@ class RepoPresenter extends BasePresenter implements Arrayable
             'last_analysis'  => $analysis ? $analysis->toArray() : null,
             'name'           => $this->wrappedObject->name,
             'default_branch' => $this->wrappedObject->default_branch,
-            'link'           => route('repo_path', $this->wrappedObject->id),
+            'link'           => route('repo', $this->wrappedObject->id),
         ];
     }
 }

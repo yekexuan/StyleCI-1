@@ -24,7 +24,7 @@
                 <p>Are you sure you wish to continue?</p>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-success" href="{{ route('account_delete_path') }}" data-method="DELETE">Yes</a>
+                <a class="btn btn-success" href="{{ route('account_delete') }}" data-method="DELETE">Yes</a>
                 <button class="btn btn-danger" data-dismiss="modal">No</button>
             </div>
         </div>
@@ -42,7 +42,7 @@
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="repositories">
             <sc-account inline-template>
-                <a class="btn btn-default pull-right" v-on="click: syncRepos" href="{{ route('api_account_repos_sync_path') }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Loading...">
+                <a class="btn btn-default pull-right" v-on="click: syncRepos" href="{{ route('api_account_repos_sync') }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Loading...">
                     <i class="fa fa-github"></i>
                     Sync with GitHub
                 </a>
@@ -70,15 +70,15 @@
                         <div class="col-sm-4 list-vcenter">
                             <div class="repo-controls">
                                 <div v-show="repo.enabled">
-                                    <a class="btn btn-primary" href="{{ route('repo_path', '') }}/@{{ repo.id }}">
+                                    <a class="btn btn-primary" href="{{ route('repo', '') }}/@{{ repo.id }}">
                                         <i class="fa fa-history"></i> Show Analyses
                                     </a>
-                                    <a class="btn btn-danger" v-on="click: toggleEnableDisableRepo(repo, $event)" href="{{ route('api_disable_repo_path', '') }}/@{{ repo.id }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Disabling...">
+                                    <a class="btn btn-danger" v-on="click: toggleEnableDisableRepo(repo, $event)" href="{{ route('api_disable_repo', '') }}/@{{ repo.id }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Disabling...">
                                         <i class="fa fa-times"></i> Disable StyleCI
                                     </a>
                                 </div>
                                 <div v-show="!repo.enabled">
-                                    <a class="btn btn-success" v-on="click: toggleEnableDisableRepo(repo, $event)" href="{{ route('api_enable_repo_path', '') }}/@{{ repo.id }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Enabling...">
+                                    <a class="btn btn-success" v-on="click: toggleEnableDisableRepo(repo, $event)" href="{{ route('api_enable_repo', '') }}/@{{ repo.id }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Enabling...">
                                         <i class="fa fa-check"></i> Enable StyleCI
                                     </a>
                                 </div>

@@ -38,13 +38,13 @@
                     </p>
                 </div>
                 <div class="col-sm-4 list-vcenter">
-                    <a class="btn btn-primary" href="{{ route('repo_path', '') }}/@{{ repo.id }}"><i class="fa fa-history"></i> Show Analyses</a>
+                    <a class="btn btn-primary" href="{{ route('repo', '') }}/@{{ repo.id }}"><i class="fa fa-history"></i> Show Analyses</a>
                 </div>
             </div>
         </div>
         <div v-show="!isLoading && !repos.length">
             <p class="lead">We haven't analysed anything yet.</p>
-            <p>You can enable repos on your <a href="{{ route('account_path') }}">account page</a>.</p>
+            <p>You can enable repos on your <a href="{{ route('account') }}">account page</a>.</p>
         </div>
     </div>
 </sc-repos>

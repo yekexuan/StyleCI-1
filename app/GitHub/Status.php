@@ -57,7 +57,7 @@ class Status
         $data = [
             'state'       => $this->getState($decorated->status),
             'description' => $this->getDescription($decorated),
-            'target_url'  => route('analysis_path', $decorated->id),
+            'target_url'  => route('analysis', $decorated->id),
             'context'     => 'StyleCI',
         ];
 

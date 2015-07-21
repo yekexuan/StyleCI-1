@@ -69,7 +69,7 @@ class AuthController extends Controller
             return Redirect::route('home');
         }
 
-        return Redirect::route('account_path');
+        return Redirect::route('account');
     }
 
     /**

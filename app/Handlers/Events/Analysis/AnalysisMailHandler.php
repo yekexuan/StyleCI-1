@@ -105,7 +105,7 @@ class AnalysisMailHandler
             'repo'    => $repo->name,
             'commit'  => $analysis->message,
             'branch'  => $analysis->branch,
-            'link'    => route('analysis_path', AutoPresenter::decorate($analysis)->id),
+            'link'    => route('analysis', AutoPresenter::decorate($analysis)->id),
             'subject' => 'Analysis Passed',
         ];
 
@@ -132,7 +132,7 @@ class AnalysisMailHandler
             'repo'   => $repo->name,
             'commit' => $analysis->message,
             'branch' => $analysis->branch,
-            'link'   => route('analysis_path', AutoPresenter::decorate($analysis)->id),
+            'link'   => route('analysis', AutoPresenter::decorate($analysis)->id),
         ];
 
         switch ($analysis->status) {

@@ -69,7 +69,7 @@ class RepoMailHandler
             $view = 'disabled';
         } else {
             $mail['subject'] = 'Repo Enabled';
-            $mail['link'] = route('repo_path', $event->repo->id);
+            $mail['link'] = route('repo', $event->repo->id);
             $view = 'enabled';
         }
 

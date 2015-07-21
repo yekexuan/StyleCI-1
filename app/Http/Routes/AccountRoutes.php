@@ -37,27 +37,27 @@ class AccountRoutes
     public function map(Registrar $router)
     {
         $router->post('auth/login', [
-            'as'   => 'auth_login_path',
+            'as'   => 'auth_login',
             'uses' => 'AuthController@handleLogin',
         ]);
 
         $router->get('auth/github-callback', [
-            'as'   => 'auth_callback_path',
+            'as'   => 'auth_callback',
             'uses' => 'AuthController@handleCallback',
         ]);
 
         $router->post('auth/logout', [
-            'as'   => 'auth_logout_path',
+            'as'   => 'auth_logout',
             'uses' => 'AuthController@handleLogout',
         ]);
 
         $router->get('account', [
-            'as'   => 'account_path',
+            'as'   => 'account',
             'uses' => 'AccountController@handleShow',
         ]);
 
         $router->delete('account/delete', [
-            'as'   => 'account_delete_path',
+            'as'   => 'account_delete',
             'uses' => 'AccountController@handleDelete',
         ]);
     }

@@ -5,7 +5,7 @@
 @section('top')
 <div class="page-heading">
     <div class="container">
-        <h1><a class="github-link" href="{{ route('repo_path', $analysis->repo->id) }}"><i class="fa fa-chevron-circle-left"></i></a> {{ $analysis->repo->name }}</h1>
+        <h1><a class="github-link" href="{{ route('repo', $analysis->repo->id) }}"><i class="fa fa-chevron-circle-left"></i></a> {{ $analysis->repo->name }}</h1>
         <p>Here you can see the results of the analysis.</p>
     </div>
 </div>
@@ -17,7 +17,7 @@
         <div class="well">
             <div class="pull-right">
                 <a href="#" data-toggle="modal" data-target="#badge-modal">
-                    <img src="{{ route('repo_shield_path', $analysis->repo->id) }}" alt="StyleCI Shield">
+                    <img src="{{ route('repo_shield', $analysis->repo->id) }}" alt="StyleCI Shield">
                 </a>
             </div>
             <p class="js-status" style="@if ($analysis->status === 2) color:green; @elseif ($analysis->status > 2) color:red; @else color:grey; @endif">
@@ -44,13 +44,13 @@
                             </a>
                         </li>
                         <li id="download-diff">
-                            <a class="btn" href="{{ route('analysis_download_path', $analysis->id) }}">
+                            <a class="btn" href="{{ route('analysis_download', $analysis->id) }}">
                                 <i class="fa fa-cloud-download"></i>
                                 Download patch
                             </a>
                         </li>
                         <li id="view-diff">
-                            <a class="btn" href="{{ route('analysis_diff_path', $analysis->id) }}">
+                            <a class="btn" href="{{ route('analysis_diff', $analysis->id) }}">
                                 <i class="fa fa-code"></i>
                                 Open diff file
                             </a>
@@ -77,15 +77,15 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="image-url">Raw Image</label>
-                    <textarea class="form-control" rows="3" cols="40" id="image-url" readonly>{{ route('repo_shield_path', $analysis->repo->id) }}</textarea>
+                    <textarea class="form-control" rows="3" cols="40" id="image-url" readonly>{{ route('repo_shield', $analysis->repo->id) }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="markdown-url">Markdown</label>
-                    <textarea class="form-control" rows="3" cols="40" id="markdown-url" readonly>[![StyleCI]({{ route('repo_shield_path', $analysis->repo->id) }})]({{ route('repo_path', $analysis->repo->id) }})</textarea>
+                    <textarea class="form-control" rows="3" cols="40" id="markdown-url" readonly>[![StyleCI]({{ route('repo_shield', $analysis->repo->id) }})]({{ route('repo', $analysis->repo->id) }})</textarea>
                 </div>
                 <div class="form-group">
                     <label for="html-url">HTML</label>
-                    <textarea class="form-control" rows="3" cols="40" id="html-url" readonly><a href="{{ route('repo_path', $analysis->repo->id) }}"><img src="{{ route('repo_shield_path', $analysis->repo->id) }}" alt="StyleCI"></a></textarea>
+                    <textarea class="form-control" rows="3" cols="40" id="html-url" readonly><a href="{{ route('repo', $analysis->repo->id) }}"><img src="{{ route('repo_shield', $analysis->repo->id) }}" alt="StyleCI"></a></textarea>
                 </div>
             </div>
             <div class="modal-footer">

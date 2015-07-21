@@ -276,7 +276,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
             'github_id'      => $this->github_id(),
             'github_link'    => $this->github_link(),
             'created_at_iso' => $this->created_at_iso(),
-            'link'           => route('analysis_path', $this->id()),
+            'link'           => route('analysis', $this->id()),
         ];
     }
 }

@@ -37,27 +37,27 @@ class RepoRoutes
     public function map(Registrar $router)
     {
         $router->get('repos/{repo}', [
-            'as'   => 'repo_path',
+            'as'   => 'repo',
             'uses' => 'RepoController@handleShow',
         ]);
 
         $router->get('repos/{repo}/shield', [
-            'as'   => 'repo_shield_path',
+            'as'   => 'repo_shield',
             'uses' => 'ShieldController@handle',
         ]);
 
         $router->get('analyses/{analysis}', [
-            'as'   => 'analysis_path',
+            'as'   => 'analysis',
             'uses' => 'RepoController@handleAnalysis',
         ]);
 
         $router->get('analyses/{analysis}/diff', [
-            'as'   => 'analysis_diff_path',
+            'as'   => 'analysis_diff',
             'uses' => 'RepoController@handleDiff',
         ]);
 
         $router->get('analyses/{analysis}/diff/download', [
-            'as'   => 'analysis_download_path',
+            'as'   => 'analysis_download',
             'uses' => 'RepoController@handleDiffDownload',
         ]);
     }
