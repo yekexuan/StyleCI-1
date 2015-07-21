@@ -15,10 +15,8 @@ var Analysis = Vue.extend({
         $analysis.removeClass('hide');
         $('#status-buttons').removeClass('hide');
         this.analysisId = $analysis.data('id');
-        this.hasDiff = Boolean($analysis.data('has-diff'));
-        if (this.hasDiff) {
-            this.getResults();
-        }
+        this.hasDiff = $analysis.data('has-diff');
+        this.getResults();
         this.subscribe();
     },
     methods: {
@@ -48,11 +46,12 @@ var Analysis = Vue.extend({
 
                 status.html('<i class="' + data.event.icon + '"></i> ' + data.event.description);
 
+                this.hasDiff = data.event.has_diff;
+
                 if (data.event.status === 2) {
                     status.attr('class', 'js-status status-green');
                 } else if (data.event.status > 2) {
                     status.attr('class', 'js-status status-red');
-                    this.hasDiff = true;
                     this.getResults();
                 } else {
                     status.attr('class', 'js-status status-grey');
