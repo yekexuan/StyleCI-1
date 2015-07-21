@@ -51,7 +51,7 @@ class Hooks
     public function enable(Repo $repo)
     {
         $args = explode('/', $repo->name);
-        $hooks = $this->factory->make($repo, ['version' => 'quicksilver-preview'])->repo()->hooks();
+        $hooks = $this->factory->make($repo)->repo()->hooks();
 
         $events = ['create', 'delete', 'member', 'pull_request', 'push', 'team_add'];
 
@@ -76,7 +76,7 @@ class Hooks
     {
         $url = route('home');
         $args = explode('/', $repo->name);
-        $client = $this->factory->make($repo, ['version' => 'quicksilver-preview']);
+        $client = $this->factory->make($repo);
         $hooks = $client->repo()->hooks();
         $paginator = new ResultPager($client);
 
