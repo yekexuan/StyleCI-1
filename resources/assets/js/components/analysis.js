@@ -16,7 +16,9 @@ var Analysis = Vue.extend({
         $('#status-buttons').removeClass('hide');
         this.analysisId = $analysis.data('id');
         this.hasDiff = $analysis.data('has-diff');
-        this.getResults();
+        if ($analysis.data('has-result')) {
+            this.getResults();
+        }
         this.subscribe();
     },
     methods: {
