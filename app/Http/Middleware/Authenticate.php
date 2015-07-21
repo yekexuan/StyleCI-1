@@ -12,8 +12,8 @@
 namespace StyleCI\StyleCI\Http\Middleware;
 
 use Closure;
-use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
@@ -26,13 +26,6 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 class Authenticate
 {
     /**
-     * The authentication guard instance.
-     *
-     * @var \Illuminate\Contracts\Auth\Guard
-     */
-    protected $auth;
-
-    /**
      * The allowed user ids.
      *
      * @var array
@@ -40,16 +33,14 @@ class Authenticate
     protected $allowed;
 
     /**
-     * Create a new filter instance.
+     * Create a new authenticate middleware instance.
      *
-     * @param \Illuminate\Contracts\Auth\Guard $auth
-     * @param array                            $allowed
+     * @param int[] $allowed
      *
      * @return void
      */
-    public function __construct(Guard $auth, array $allowed)
+    public function __construct(array $allowed)
     {
-        $this->auth = $auth;
         $this->allowed = $allowed;
     }
 
@@ -65,12 +56,12 @@ class Authenticate
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($this->auth->guest()) {
+        if (Auth::guest()) {
             throw new HttpException(401);
         }
 
-        if (count($this->allowed) > 0 && !in_array($this->auth->user()->id, $this->allowed)) {
-            $this->auth->logout();
+        if (count($this->allowed) > 0 && !in_array(Auth::user()->id, $this->allowed)) {
+            Auth::logout();
 
             return Redirect::route('home')->with('error', 'Your account has not been whitelisted.');
         }

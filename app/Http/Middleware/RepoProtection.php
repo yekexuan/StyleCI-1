@@ -12,8 +12,8 @@
 namespace StyleCI\StyleCI\Http\Middleware;
 
 use Closure;
-use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use StyleCI\StyleCI\GitHub\Repos;
 use StyleCI\StyleCI\Models\Repo;
 use Symfony\Component\HttpKernel\Exception\HttpException;
@@ -25,25 +25,6 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
  */
 class RepoProtection
 {
-    /**
-     * The authentication guard instance.
-     *
-     * @var \Illuminate\Contracts\Auth\Guard
-     */
-    protected $auth;
-
-    /**
-     * Create a new filter instance.
-     *
-     * @param \Illuminate\Contracts\Auth\Guard $auth
-     *
-     * @return void
-     */
-    public function __construct(Guard $auth)
-    {
-        $this->auth = $auth;
-    }
-
     /**
      * Handle an incoming request.
      *
@@ -82,11 +63,11 @@ class RepoProtection
             return;
         }
 
-        if ($this->auth->guest()) {
+        if (Auth::guest()) {
             throw new HttpException(401);
         }
 
-        if (!array_get(app(Repos::class)->get($this->auth->user()), $repo->id)) {
+        if (!array_get(app(Repos::class)->get(Auth::user()), $repo->id)) {
             throw new HttpException(403);
         }
     }

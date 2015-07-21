@@ -12,8 +12,8 @@
 namespace StyleCI\StyleCI\Http\Middleware;
 
 use Closure;
-use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
@@ -24,25 +24,6 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 class CheckForMaintenanceMode
 {
     /**
-     * The application instance.
-     *
-     * @var \Illuminate\Contracts\Foundation\Application
-     */
-    protected $app;
-
-    /**
-     * Create a new check for maintenance mode instance.
-     *
-     * @param \Illuminate\Contracts\Foundation\Application $app
-     *
-     * @return void
-     */
-    public function __construct(Application $app)
-    {
-        $this->app = $app;
-    }
-
-    /**
      * Handle an incoming request.
      *
      * @param \Illuminate\Http\Request $request
@@ -52,7 +33,7 @@ class CheckForMaintenanceMode
      */
     public function handle(Request $request, Closure $next)
     {
-        if ($this->app->isDownForMaintenance()) {
+        if (App::isDownForMaintenance()) {
             throw new HttpException(503);
         }
 

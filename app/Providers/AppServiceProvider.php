@@ -66,10 +66,9 @@ class AppServiceProvider extends ServiceProvider
     protected function registerAuthenticate()
     {
         $this->app->singleton(Authenticate::class, function ($app) {
-            $auth = $app['auth.driver'];
             $allowed = $app->config->get('login.allowed', []);
 
-            return new Authenticate($auth, $allowed);
+            return new Authenticate($allowed);
         });
     }
 }
