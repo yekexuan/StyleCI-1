@@ -14,6 +14,7 @@ namespace StyleCI\StyleCI\Http\Middleware;
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
@@ -69,7 +70,9 @@ class Authenticate
         }
 
         if (count($this->allowed) > 0 && !in_array($this->auth->user()->id, $this->allowed)) {
-            throw new HttpException(403, 'You are not whitelisted.');
+            $this->auth->logout();
+
+            return Redirect::route('home')->with('error', 'Your account has not been whitelisted.');
         }
 
         return $next($request);
