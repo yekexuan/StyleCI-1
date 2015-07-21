@@ -5,7 +5,7 @@
 @section('top')
 <div class="page-heading">
     <div class="container">
-        <h1><a class="github-link" href="{{ route('repo', $analysis->repo->id) }}"><i class="fa fa-chevron-circle-left"></i></a> {{ $analysis->repo->name }}</h1>
+        <h1><a class="header-link" href="{{ route('repo', $analysis->repo->id) }}"><i class="fa fa-chevron-circle-left"></i></a> {{ $analysis->repo->name }}</h1>
         <p>Here you can see the results of the analysis.</p>
     </div>
 </div>
