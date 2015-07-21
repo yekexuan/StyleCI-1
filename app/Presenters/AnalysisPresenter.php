@@ -139,13 +139,13 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
             case 1:
                 return 'fa fa-cog fa-spin';
             case 2:
-                return 'fa fa-check';
+                return 'fa fa-check-circle';
             case 3:
             case 4:
             case 5:
-                return 'fa fa-times';
+                return 'fa fa-times-circle';
             default:
-                return 'fa fa-exclamation';
+                return 'fa fa-exclamation-circle';
         }
     }
 
