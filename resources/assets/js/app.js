@@ -34,7 +34,7 @@ $(function() {
         }
     });
 
-    $('[data-toggle="tooltip"]').tooltip();
+    $('body').tooltip({ selector: '[data-toggle="tooltip"]' });
     $('.js-time-ago').timeago();
 
     function makeRequest (method, target) {
