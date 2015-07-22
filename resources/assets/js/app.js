@@ -54,24 +54,13 @@ $(function() {
         $(methodForm).appendTo('body').submit();
     }
 
-    $('[data-method]')
-        .not('.disabled')
-        .click(function(e) {
-            e.preventDefault();
+    $('body').on('click', '[data-method]', function(e) {
+        e.preventDefault();
 
-            var $a = $(this);
+        var $a = $(this);
 
-            if ($a.data('method') === undefined) return;
-
-            if ($a.hasClass('js-confirm-action')) {
-                if (confirm('Are you sure you want to do this?')) {
-                    makeRequest($a.data('method'), $a.attr('href'));
-                }
-            } else {
-                makeRequest($a.data('method'), $a.attr('href'));
-            }
-
-        });
+        makeRequest($a.data('method'), $a.attr('href'));
+    });
 
     StyleCI.globals = {
         host: window.location.host,
