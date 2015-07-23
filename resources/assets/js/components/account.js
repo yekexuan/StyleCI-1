@@ -35,7 +35,7 @@ var AccountList = Vue.extend({
             e.preventDefault();
 
             if (repo.enabled) {
-                if (confirm('Are you sure you want to disable this repository, all analysed data will be lost?')) {
+                if (confirm('Are you sure you want to disable this repo? All analyses will be removed from our system.')) {
                     this.enableOrDisableRepo(repo, e);
                 }
             } else {
