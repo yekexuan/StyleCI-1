@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c4e79fc9380e06777663934f435a8ff0",
+    "hash": "b684703e684659f5a2cda92db10d8595",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -69,16 +69,16 @@
         },
         {
             "name": "alt-three/validator",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Validator.git",
-                "reference": "618c4d7d3d69c2acda4a742f129a4848d2fc6690"
+                "reference": "3ff4670ef66cb4228d12ff94b3322174810656c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Validator/zipball/618c4d7d3d69c2acda4a742f129a4848d2fc6690",
-                "reference": "618c4d7d3d69c2acda4a742f129a4848d2fc6690",
+                "url": "https://api.github.com/repos/AltThree/Validator/zipball/3ff4670ef66cb4228d12ff94b3322174810656c3",
+                "reference": "3ff4670ef66cb4228d12ff94b3322174810656c3",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +93,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -125,7 +125,7 @@
                 "logging",
                 "validator"
             ],
-            "time": "2015-07-06 16:42:56"
+            "time": "2015-07-23 16:32:21"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -238,16 +238,16 @@
         },
         {
             "name": "danielstjules/stringy",
-            "version": "1.9.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/danielstjules/Stringy.git",
-                "reference": "3cf18e9e424a6dedc38b7eb7ef580edb0929461b"
+                "reference": "4749c205db47ee5b32e8d1adf6d9aff8db6caf3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/danielstjules/Stringy/zipball/3cf18e9e424a6dedc38b7eb7ef580edb0929461b",
-                "reference": "3cf18e9e424a6dedc38b7eb7ef580edb0929461b",
+                "url": "https://api.github.com/repos/danielstjules/Stringy/zipball/4749c205db47ee5b32e8d1adf6d9aff8db6caf3b",
+                "reference": "4749c205db47ee5b32e8d1adf6d9aff8db6caf3b",
                 "shasum": ""
             },
             "require": {
@@ -290,7 +290,7 @@
                 "utility",
                 "utils"
             ],
-            "time": "2015-02-10 06:19:18"
+            "time": "2015-07-23 00:54:12"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
