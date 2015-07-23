@@ -63,7 +63,7 @@ class ClientFactory
                 $token = $model->user->token;
                 break;
             default:
-                throw new InvalidArgumentException('You must provide a user or repo model.');
+                throw new InvalidArgumentException('You must provide a user or repo.');
         }
 
         return $this->factory->make(array_merge(['token' => $token, 'method' => 'token'], $options));
