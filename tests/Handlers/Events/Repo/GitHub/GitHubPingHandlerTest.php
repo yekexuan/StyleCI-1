@@ -28,7 +28,7 @@ class GitHubPingHandlerTest extends AbstractTestCase
 {
     public function testHandle()
     {
-    	$data = json_decode(file_get_contents(__DIR__.'/stubs/ping.json'), true);
+        $data = json_decode(file_get_contents(__DIR__.'/stubs/ping.json'), true);
         $handler = new GitHubPingHandler($log = Mockery::mock(LoggerInterface::class));
 
         AutoPresenter::shouldReceive('decorate')->once()->with($repo = new Repo())->andReturn($presenter = Mockery::mock(RepoPresenter::class));
