@@ -11,8 +11,8 @@
 
 namespace StyleCI\Tests\StyleCI\Jobs;
 
-use ReflectionClass;
 use Illuminate\Queue\SerializesModels;
+use ReflectionClass;
 use StyleCI\Tests\StyleCI\AbstractAnemicTestCase;
 
 /**
