@@ -20,6 +20,14 @@ use ReflectionClass;
  */
 abstract class AbstractAnemicTestCase extends AbstractTestCase
 {
+    /**
+     * @before
+     */
+    public function disableEvents()
+    {
+        $this->withoutEvents();
+    }
+
     public function testClassIsFinal()
     {
         $rc = new ReflectionClass($this->getObjectAndParams()['object']);
