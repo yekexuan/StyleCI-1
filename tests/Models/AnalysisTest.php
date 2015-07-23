@@ -118,7 +118,7 @@ class AnalysisTest extends AbstractTestCase
         ];
 
         try {
-            Analysis::create(['repo_id' => 12345, 'branch' => 'test', 'pr' => 42, 'commit' => str_repeat('a', 40), 'message' => 'Test 123!', 'status' => 2, 'errors' => 'Bar', 'hidden' => 0]);
+            Analysis::create(['repo_id' => 12345, 'commit' => str_repeat('a', 40), 'message' => 'Test 123!', 'status' => 2, 'errors' => 'Bar', 'hidden' => 0]);
         } catch (ValidationException $e) {
             $this->assertSame($expected, $e->getMessageBag()->all());
 
