@@ -1,8 +1,6 @@
 # StyleCI ![Analytics](https://ga-beacon.appspot.com/UA-60053271-6/StyleCI/StyleCI?pixel)
 
 
-StyleCI was created by, and is maintained by [Graham Campbell](https://github.com/GrahamCampbell), and is a PHP Coding Style Continuous Integration Service powered by [Laravel 5.1](http://laravel.com). Feel free to check out the [releases](https://github.com/StyleCI/StyleCI/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
-
 ![StyleCI](https://cloud.githubusercontent.com/assets/11048387/8635622/6bf2af9c-2823-11e5-861c-91370e888943.png)
 
 <p align="center">
@@ -16,12 +14,9 @@ StyleCI was created by, and is maintained by [Graham Campbell](https://github.co
 
 ## Documentation
 
-We currently have essentially no documentation at the moment, but are working on it, and are open to pull requests.
+Full documentation for our hosted service https://styleci.io/ is available at https://styleci.readme.io/.
 
-
-## Free Hosted Service
-
-Our free hosted service is available at https://styleci.io/. Enjoy!
+Feel free to check out the [releases](https://github.com/StyleCI/Config/releases), [license](LICENSE), and [contribution guidelines](CONTRIBUTING.md).
 
 
 ## License
