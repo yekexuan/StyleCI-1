@@ -1,5 +1,5 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="@yield('description', 'StyleCI is the PHP Coding Style Continuous Integration Service. Sign up with your GitHub account and analyse all your public PHP repositories for free!')">
+<meta name="description" content="@yield('description', 'StyleCI is the PHP Coding Style Continuous Integration Service. Sign up with your GitHub account and analyse all your public PHP repos for free!')">
 <meta name="author" content="Alt Three Services Limited">
 
 <meta name="styleci:token" content="{{ csrf_token() }}">

@@ -15,11 +15,11 @@
 <sc-repos inline-template>
     <div id="repos" class="repos hide">
         <div v-show="isLoading" class="loading text-center">
-            <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repositories...</h3>
+            <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repos...</h3>
         </div>
         <form v-show="!isLoading && repos.length" name="search">
             <div class="form-group">
-                <label for="query">Filter your repositories</label>
+                <label for="query">Filter your repos</label>
                 <input v-model="search" type="text" name="query" class="form-control" id="query">
             </div>
         </form>
