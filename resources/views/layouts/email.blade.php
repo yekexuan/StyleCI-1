@@ -9,7 +9,6 @@
 @section('content')
 @show
 <br>
-<br>
 <p>
 Thank you, <br>
 StyleCI
