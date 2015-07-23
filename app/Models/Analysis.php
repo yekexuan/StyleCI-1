@@ -12,9 +12,11 @@
 namespace StyleCI\StyleCI\Models;
 
 use AltThree\Validator\ValidatingTrait;
+use AltThree\Validator\ValidationException;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\MessageBag;
 use McCool\LaravelAutoPresenter\HasPresenter;
 use StyleCI\StyleCI\Presenters\AnalysisPresenter;
 
@@ -80,6 +82,32 @@ class Analysis extends Model implements HasPresenter
         'status'  => 'required|integer|between:0,9',
         'hidden'  => 'required|boolean',
     ];
+
+    /**
+     * Validate the model before save.
+     *
+     * That this method in addition to checking the first set of rules are met.
+     *
+     * @throws \AltThree\Validator\ValidationException
+     *
+     * @return void
+     */
+    public function validate()
+    {
+        $messages = [];
+
+        if ((bool) $this->branch === (bool) $this->pr) {
+            $messages[] = 'You must provide either a branch or a pr.';
+        }
+
+        if (($this->error || $this->errors) && $this->status < 3) {
+            $messages[] = 'Errors are only allowed if the status is non-passing.';
+        }
+
+        if ($messages) {
+            throw new ValidationException(new MessageBag($messages));
+        }
+    }
 
     /**
      * Scope the query to only include analyses over 2 hours old.
