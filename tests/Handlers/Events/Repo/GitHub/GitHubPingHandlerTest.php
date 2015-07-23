@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\Tests\StyleCI;
+namespace StyleCI\Tests\StyleCI\Handlers\Events\Repo\GitHub;
 
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use Mockery;
@@ -32,7 +32,7 @@ class GitHubPingHandlerTest extends AbstractTestCase
         $handler = new GitHubPingHandler($log = Mockery::mock(LoggerInterface::class));
 
         AutoPresenter::shouldReceive('decorate')->once()->with($repo = new Repo())->andReturn($presenter = Mockery::mock(RepoPresenter::class));
-        $presenter->shouldReceive('toArray')->once()->andReturn($presented = ['id' => '26929642', 'name' => 'StyleCI/StyleCI']);
+        $presenter->shouldReceive('toArray')->once()->andReturn($presented = ['id' => 26929642, 'name' => 'StyleCI/StyleCI']);
         $log->shouldReceive('info')->once()->with('Received ping from GitHub.', ['data' => $data, 'repo' => $presented]);
 
         $this->assertNull($handler->handle(new GitHubPingEvent($repo, $data)));
