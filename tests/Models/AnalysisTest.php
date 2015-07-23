@@ -107,6 +107,25 @@ class AnalysisTest extends AbstractTestCase
         }
     }
 
+    /**
+     * @expectedException \AltThree\Validator\ValidationException
+     */
+    public function testSaveWithBadDataYetAgain()
+    {
+        $expected = [
+            'You must provide either a branch or a pr.',
+            'Errors are only allowed if the status is non-passing.',
+        ];
+
+        try {
+            Analysis::create(['repo_id' => 12345, 'branch' => 'test', 'pr' => 42, 'commit' => str_repeat('a', 40), 'message' => 'Test 123!', 'status' => 2, 'errors' => 'Bar', 'hidden' => 0]);
+        } catch (ValidationException $e) {
+            $this->assertSame($expected, $e->getMessageBag()->all());
+
+            throw $e;
+        }
+    }
+
     public function testSaveWithGoodData()
     {
         // prevent tests breaking due to rolling into the next second
