@@ -33,27 +33,27 @@
 <div role="tabpanel">
     <ul class="nav nav-tabs nav-justified" role="tablist">
         <li role="presentation" class="active">
-            <a href="#repositories" aria-controls="repositories" role="tab" data-toggle="tab">Repositories</a>
+            <a href="#repos" aria-controls="repos" role="tab" data-toggle="tab">Repos</a>
         </li>
         <li role="presentation">
             <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a>
         </li>
     </ul>
     <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="repositories">
+        <div role="tabpanel" class="tab-pane active" id="repos">
             <sc-account inline-template>
                 <a class="btn btn-default pull-right" v-on="click: syncRepos" href="{{ route('api_account_repos_sync') }}" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Loading...">
                     <i class="fa fa-github"></i>
                     Sync with GitHub
                 </a>
-                <h2>Repositories</h2>
-                <p>We're showing all your <i>public</i> repositories we have access to.</p><br>
+                <h2>Repos</h2>
+                <p>We're showing all your <i>public</i> repos we have access to.</p><br>
                 <div v-show="isLoading" class="loading text-center">
-                    <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repositories...</h3>
+                    <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repos...</h3>
                 </div>
                 <form v-show="!isLoading && repos.length" name="search">
                     <div class="form-group">
-                        <label for="query">Filter repositories</label>
+                        <label for="query">Filter repos</label>
                         <input v-model="search" type="text" name="query" class="form-control" id="query">
                     </div>
                 </form>
@@ -86,7 +86,7 @@
                         </div>
                     </div>
                 </div>
-                <p v-show="!isLoading && !repos.length" class="lead">You have no repositories we can access.</p>
+                <p v-show="!isLoading && !repos.length" class="lead">You have no repos we can access.</p>
             </sc-account>
         </div>
         <div role="tabpanel" class="tab-pane" id="profile">
