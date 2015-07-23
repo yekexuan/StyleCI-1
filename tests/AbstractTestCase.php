@@ -11,8 +11,10 @@
 
 namespace StyleCI\Tests\StyleCI;
 
+use GrahamCampbell\TestBenchCore\MockeryTrait;
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Testing\TestCase;
+use Illuminate\Foundation\Testing\WithoutEvents;
 
 /**
  * This is the abstract test case class.
@@ -21,6 +23,8 @@ use Illuminate\Foundation\Testing\TestCase;
  */
 abstract class AbstractTestCase extends TestCase
 {
+    use MockeryTrait, WithoutEvents;
+
     /**
      * The base URL to use while testing the application.
      *
