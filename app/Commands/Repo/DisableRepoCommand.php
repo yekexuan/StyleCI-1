@@ -21,7 +21,7 @@ use StyleCI\StyleCI\Models\Repo;
 final class DisableRepoCommand
 {
     /**
-     * The repository to delete.
+     * The repo to delete.
      *
      * @var \StyleCI\StyleCI\Models\Repo
      */

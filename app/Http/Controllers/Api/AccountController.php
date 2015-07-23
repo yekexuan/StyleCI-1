@@ -42,7 +42,7 @@ class AccountController extends Controller
     }
 
     /**
-     * Show the user's repositories.
+     * Show the user's repos.
      *
      * @return \Illuminate\Http\JsonResponse
      */
@@ -54,7 +54,7 @@ class AccountController extends Controller
     }
 
     /**
-     * Sync the user's repositories.
+     * Sync the user's repos.
      *
      * @return \Illuminate\Http\JsonResponse
      */

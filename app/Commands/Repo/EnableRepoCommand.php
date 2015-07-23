@@ -21,14 +21,14 @@ use StyleCI\StyleCI\Models\User;
 final class EnableRepoCommand
 {
     /**
-     * The repository id.
+     * The repo id.
      *
      * @var int
      */
     public $id;
 
     /**
-     * The repository name.
+     * The repo name.
      *
      * @var string
      */
