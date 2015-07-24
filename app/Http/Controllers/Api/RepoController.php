@@ -91,7 +91,7 @@ class RepoController extends Controller
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function handleAnalzse(Repo $repo)
+    public function handleAnalyze(Repo $repo)
     {
         $this->dispatch(new AnalyzeBranchCommand($repo, Request::get('branch')));
 
