@@ -44,7 +44,7 @@
                             </a>
                         </li>
                         <li v-show="hasDiff" id="download-diff">
-                            <a class="btn" href="{{ route('analysis_download', $analysis->id) }}" target="_blank">
+                            <a class="btn" href="{{ route('analysis_download', $analysis->id) }}">
                                 <i class="fa fa-cloud-download"></i>
                                 Download patch
                             </a>
