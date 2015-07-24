@@ -140,23 +140,23 @@ class AnalysisMailHandler
             case 4:
             case 5:
                 $status = 'failed';
-                $mail['subject'] = 'Analysis Failed';
+                $mail['subject'] = "[$repo->name] Analysis Failed";
                 break;
             case 6:
                 $status = 'misconfigured';
-                $mail['subject'] = 'Analysis Misconfigured';
+                $mail['subject'] = "[$repo->name] Analysis Misconfigured";
                 break;
             case 7:
                 $status = 'access';
-                $mail['subject'] = 'Analysis Errored';
+                $mail['subject'] = "[$repo->name] Analysis Errored";
                 break;
             case 8:
                 $status = 'timeout';
-                $mail['subject'] = 'Analysis Timed Out';
+                $mail['subject'] = "[$repo->name] Analysis Timed Out";
                 break;
             default:
                 $status = 'errored';
-                $mail['subject'] = 'Analysis Errored';
+                $mail['subject'] = "[$repo->name] Analysis Errored";
         }
 
         foreach ($this->userRepository->collaborators($repo) as $user) {

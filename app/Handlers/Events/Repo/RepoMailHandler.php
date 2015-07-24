@@ -62,18 +62,19 @@ class RepoMailHandler
      */
     public function handle(RepoEventInterface $event)
     {
-        $mail = ['repo' => $event->repo->name];
+        $repo = $event->repo;
+        $mail = ['repo' => $repo->name];
 
         if ($event instanceof RepoWasDisabledEvent) {
-            $mail['subject'] = 'Repo Disabled';
+            $mail['subject'] = "[$repo->name] Disabled";
             $view = 'disabled';
         } else {
-            $mail['subject'] = 'Repo Enabled';
-            $mail['link'] = route('repo', $event->repo->id);
+            $mail['subject'] = "[$repo->name] Enabled";
+            $mail['link'] = route('repo', $repo->id);
             $view = 'enabled';
         }
 
-        foreach ($this->userRepository->collaborators($event->repo) as $user) {
+        foreach ($this->userRepository->collaborators($repo) as $user) {
             $mail['email'] = $user->email;
             $mail['name'] = AutoPresenter::decorate($user)->first_name;
             $this->mailer->queue(["emails.html.{$view}", "emails.html.{$view}"], $mail, function (Message $message) use ($mail) {
