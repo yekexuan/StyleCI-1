@@ -56,7 +56,7 @@ class WelcomeMailHandler
         $mail = [
             'email'   => $user->email,
             'name'    => AutoPresenter::decorate($user)->first_name,
-            'subject' => 'Welcome To StyleCI',
+            'subject' => 'Welcome',
         ];
 
         $this->mailer->queue(['html' => 'emails.html.welcome', 'text' => 'emails.text.welcome'], $mail, function (Message $message) use ($mail) {
