@@ -53,9 +53,9 @@ class ApiRoutes
                 'uses' => 'Api\RepoController@handleBranches',
             ]);
 
-            $router->post('repos/{repo}/analyse', [
-                'as'   => 'repo_analyse',
-                'uses' => 'Api\RepoController@handleAnalyse',
+            $router->post('repos/{repo}/analyze', [
+                'as'   => 'repo_analyze',
+                'uses' => 'Api\RepoController@handleAnalyze',
             ]);
 
             $router->get('analyses/{analysis}', [

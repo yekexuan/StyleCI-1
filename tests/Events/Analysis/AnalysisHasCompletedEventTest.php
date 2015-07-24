@@ -16,7 +16,7 @@ use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
- * This is the analyse has completed event test class.
+ * This is the analysis has completed event test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */

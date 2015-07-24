@@ -11,7 +11,7 @@
 
 namespace StyleCI\Tests\StyleCI\Handlers\Events\Repo\GitHub;
 
-use StyleCI\StyleCI\Commands\Analysis\AnalyseCommitCommand;
+use StyleCI\StyleCI\Commands\Analysis\AnalyzeCommitCommand;
 use StyleCI\StyleCI\Events\Repo\GitHub\GitHubPushEvent;
 use StyleCI\StyleCI\Handlers\Events\Repo\GitHub\GitHubPushHandler;
 use StyleCI\StyleCI\Models\Repo;
@@ -26,7 +26,7 @@ class GitHubPushHandlerTest extends AbstractTestCase
 {
     public function testHandlePushCommit()
     {
-        $this->expectsJobs(AnalyseCommitCommand::class);
+        $this->expectsJobs(AnalyzeCommitCommand::class);
 
         $data = json_decode(file_get_contents(__DIR__.'/stubs/push-1.json'), true);
         $handler = new GitHubPushHandler();

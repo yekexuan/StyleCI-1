@@ -43,7 +43,7 @@
 
 <h3>Support Boundries</h3>
 
-<p>StyleCI, provides technical support to our subscribers via our e-mail support system. The following are our guidelines when providing support: StyleCI provides support related to your repos being analysed for given standards. StyleCI does not offer technical support for application specific issues such as application configuration, programming, web or mail server configuration, or any other such issue.</p>
+<p>StyleCI, provides technical support to our subscribers via our e-mail support system. The following are our guidelines when providing support: StyleCI provides support related to your repos being analyzed for given standards. StyleCI does not offer technical support for application specific issues such as application configuration, programming, web or mail server configuration, or any other such issue.</p>
 
 <h3>Account Cancellation Or Suspension</h3>
 

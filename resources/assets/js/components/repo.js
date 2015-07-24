@@ -49,7 +49,7 @@ var RepoList = Vue.extend({
                     self.isLoading = false;
                 });
         },
-        analyseRepo: function(e) {
+        analyzeRepo: function(e) {
             e.preventDefault();
             var self = this;
 
@@ -58,7 +58,7 @@ var RepoList = Vue.extend({
             }
 
             var btn = $(e.target);
-            var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '/analyse?branch=' + self.repoBranch;
+            var url = StyleCI.globals.base_url + '/api/repos/' + self.repoId + '/analyze?branch=' + self.repoBranch;
 
             btn.button('loading');
 
