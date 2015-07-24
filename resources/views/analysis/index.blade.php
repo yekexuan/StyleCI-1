@@ -38,19 +38,19 @@
                             </span>
                         </li>
                         <li id="view-github">
-                            <a class="btn" href="{{ $analysis->github_link }}">
+                            <a class="btn" href="{{ $analysis->github_link }} target="_blank"">
                                 <i class="fa fa-github"></i>
                                 {{ $analysis->github_id }}
                             </a>
                         </li>
                         <li v-show="hasDiff" id="download-diff">
-                            <a class="btn" href="{{ route('analysis_download', $analysis->id) }}">
+                            <a class="btn" href="{{ route('analysis_download', $analysis->id) }}" target="_blank">
                                 <i class="fa fa-cloud-download"></i>
                                 Download patch
                             </a>
                         </li>
                         <li v-show="hasDiff" id="view-diff">
-                            <a class="btn" href="{{ route('analysis_diff', $analysis->id) }}">
+                            <a class="btn" href="{{ route('analysis_diff', $analysis->id) }}" target="_blank">
                                 <i class="fa fa-code"></i>
                                 Open diff file
                             </a>

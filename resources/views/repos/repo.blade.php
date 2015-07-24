@@ -5,7 +5,7 @@
 @section('top')
 <div class="page-heading">
     <div class="container">
-        <h1><a class="header-link" href="{{ $repo->github_link }}"><i class="fa fa-github"></i></a> {{ $repo->name }}</h1>
+        <h1><a class="header-link" href="{{ $repo->github_link }}" target="_blank"><i class="fa fa-github"></i></a> {{ $repo->name }}</h1>
         <p>Here you can see all the analyses for this repo.</p>
     </div>
 </div>
@@ -59,7 +59,7 @@
                             </p>
                         </div>
                         <div class="col-sm-4 repo-buttons">
-                            <a class="badge-id" href="@{{ analysis.github_link }}">
+                            <a class="badge-id" href="@{{ analysis.github_link }}" target="_blank">
                                 @{{ analysis.github_id }}
                             </a>
                             <a class="btn btn-sm btn-default" href="@{{ analysis.link }}">Show Details</a>
