@@ -38,7 +38,7 @@
                             </span>
                         </li>
                         <li id="view-github">
-                            <a class="btn" href="{{ $analysis->github_link }} target="_blank"">
+                            <a class="btn" href="{{ $analysis->github_link }}" target="_blank">
                                 <i class="fa fa-github"></i>
                                 {{ $analysis->github_id }}
                             </a>
