@@ -106,7 +106,7 @@ class AnalysisMailHandler
             'commit'  => $analysis->message,
             'branch'  => $analysis->branch,
             'link'    => route('analysis', AutoPresenter::decorate($analysis)->id),
-            'subject' => 'Analysis Passed',
+            'subject' => "[$repo->name] Analysis Passed",
         ];
 
         foreach ($this->userRepository->collaborators($repo) as $user) {
