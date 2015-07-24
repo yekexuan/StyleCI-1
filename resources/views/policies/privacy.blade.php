@@ -9,7 +9,7 @@
 
 <h2>General Information</h2>
 
-<p>StyleCI is owned and run by <a href="https://alt-three.com/">Alt Three Services Limited</a>.</p>
+<p>StyleCI is owned and run by <a href="https://alt-three.com" target="_blank">Alt Three Services Limited</a>.</p>
 <p>We collect the e-mail addresses of those who sign up to StyleCI, aggregate information on what pages consumers access or visit, and information volunteered by the consumer. The information we collect is used to improve the content of our web pages and the quality of our service, and is not shared with or sold to other organisations for commercial purposes, except to provide products or services you've requested, when we have your permission, or under the following circumstances:</p>
 
 <ul>

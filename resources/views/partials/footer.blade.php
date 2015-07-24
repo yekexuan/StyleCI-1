@@ -3,10 +3,10 @@
         <div class="row">
             <div class="col-sm-5 platform-links">
                 <ul class="footer-links">
-                    <li><a href="https://styleci.readme.io">Docs</a></li>
+                    <li><a href="https://styleci.readme.io" target="_blank">Docs</a></li>
                     <li><a href="{{ route('terms_of_service') }}">Terms</a></li>
                     <li><a href="{{ route('privacy_policy') }}">Privacy</a></li>
-                    <li><a href="https://alt-three.com">About</a></li>
+                    <li><a href="https://alt-three.com" target="_blank">About</a></li>
                 </ul>
             </div>
             <div class="col-sm-2 logo">
