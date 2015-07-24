@@ -15,7 +15,7 @@ use StyleCI\StyleCI\Events\Analysis\AnalysisWasQueuedEvent;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
- * This is the analyse was queued event test class.
+ * This is the analysis was queued event test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */

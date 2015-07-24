@@ -11,22 +11,22 @@
 
 namespace StyleCI\Tests\StyleCI\Commands\Analysis;
 
-use StyleCI\StyleCI\Commands\Analysis\AnalyseCommitCommand;
-use StyleCI\StyleCI\Handlers\Commands\Analysis\AnalyseCommitCommandHandler;
+use StyleCI\StyleCI\Commands\Analysis\AnalyzePullRequestCommand;
+use StyleCI\StyleCI\Handlers\Commands\Analysis\AnalyzePullRequestCommandHandler;
 use StyleCI\StyleCI\Models\Repo;
 use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
 
 /**
- * This is the analyse commit command test class.
+ * This is the analyze pull request command test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalyseCommitCommandTest extends AbstractCommandTestCase
+class AnalyzePullRequestCommandTest extends AbstractCommandTestCase
 {
     protected function getObjectAndParams()
     {
-        $params = ['repo' => new Repo(), 'branch' => 'foo', 'commit' => 'sha1 goes here', 'message' => 'Hi there!'];
-        $object = new AnalyseCommitCommand($params['repo'], $params['branch'], $params['commit'], $params['message']);
+        $params = ['repo' => new Repo(), 'pr' => 123, 'commit' => 'trololol', 'message' => 'SUP!'];
+        $object = new AnalyzePullRequestCommand($params['repo'], $params['pr'], $params['commit'], $params['message']);
 
         return compact('params', 'object');
     }
@@ -38,6 +38,6 @@ class AnalyseCommitCommandTest extends AbstractCommandTestCase
 
     protected function getHandlerClass()
     {
-        return AnalyseCommitCommandHandler::class;
+        return AnalyzePullRequestCommandHandler::class;
     }
 }

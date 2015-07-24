@@ -13,7 +13,7 @@ namespace StyleCI\StyleCI\Handlers\Events\Repo\GitHub;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Support\Str;
-use StyleCI\StyleCI\Commands\Analysis\AnalyseCommitCommand;
+use StyleCI\StyleCI\Commands\Analysis\AnalyzeCommitCommand;
 use StyleCI\StyleCI\Events\Repo\GitHub\GitHubPushEvent;
 
 /**
@@ -36,7 +36,7 @@ class GitHubPushHandler
     {
         $data = $event->data;
 
-        if (!$this->shouldAnalyse($data)) {
+        if (!$this->shouldAnalyze($data)) {
             return;
         }
 
@@ -44,17 +44,17 @@ class GitHubPushHandler
         $commit = $data['head_commit']['id'];
         $message = Str::commit($data['head_commit']['message']);
 
-        $this->dispatch(new AnalyseCommitCommand($event->repo, $branch, $commit, $message));
+        $this->dispatch(new AnalyzeCommitCommand($event->repo, $branch, $commit, $message));
     }
 
     /**
-     * Should we analyse the commit.
+     * Should we analyze the commit.
      *
      * @param array $data
      *
      * @return bool
      */
-    protected function shouldAnalyse(array $data)
+    protected function shouldAnalyze(array $data)
     {
         return $data['head_commit'] && substr($data['ref'], 0, 11) === 'refs/heads/' && strpos($data['ref'], 'gh-pages') === false;
     }

@@ -12,7 +12,7 @@
 </div>
 @elseif ($analysis->status === 7)
 <div class="alert alert-danger analysis-alert" role="alert">
-    <h4>We were unable to access the repo or commit to analyse it.</h4>
+    <h4>We were unable to access the repo or commit to analyze it.</h4>
     <p>Feel free to contact support at <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
 </div>
 @elseif ($analysis->status === 8)

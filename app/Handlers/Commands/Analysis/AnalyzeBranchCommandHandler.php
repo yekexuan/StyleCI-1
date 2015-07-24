@@ -13,18 +13,18 @@ namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Support\Str;
-use StyleCI\StyleCI\Commands\Analysis\AnalyseBranchCommand;
+use StyleCI\StyleCI\Commands\Analysis\AnalyzeBranchCommand;
 use StyleCI\StyleCI\GitHub\Branches;
 use StyleCI\StyleCI\GitHub\Commits;
 use StyleCI\StyleCI\Jobs\Analysis\RunAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
- * This is the analyse branch command handler.
+ * This is the analyze branch command handler.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalyseBranchCommandHandler
+class AnalyzeBranchCommandHandler
 {
     use DispatchesJobs;
 
@@ -43,7 +43,7 @@ class AnalyseBranchCommandHandler
     protected $commits;
 
     /**
-     * Create a new analyse branch command instance.
+     * Create a new analyze branch command handler instance.
      *
      * @param \StyleCI\StyleCI\GitHub\Branches $branches
      * @param \StyleCI\StyleCI\GitHub\Commits  $commits
@@ -57,13 +57,13 @@ class AnalyseBranchCommandHandler
     }
 
     /**
-     * Handle the analyse branch command.
+     * Handle the analyze branch command.
      *
-     * @param \StyleCI\StyleCI\Commands\Analysis\AnalyseBranchCommand $command
+     * @param \StyleCI\StyleCI\Commands\Analysis\AnalyzeBranchCommand $command
      *
      * @return void
      */
-    public function handle(AnalyseBranchCommand $command)
+    public function handle(AnalyzeBranchCommand $command)
     {
         $repo = $command->repo;
         $branch = $command->branch;

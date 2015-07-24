@@ -12,27 +12,27 @@
 namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use StyleCI\StyleCI\Commands\Analysis\AnalysePullRequestCommand;
+use StyleCI\StyleCI\Commands\Analysis\AnalyzePullRequestCommand;
 use StyleCI\StyleCI\Jobs\Analysis\RunAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
- * This is the analyse pull request command handler.
+ * This is the analyze pull request command handler.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalysePullRequestCommandHandler
+class AnalyzePullRequestCommandHandler
 {
     use DispatchesJobs;
 
     /**
-     * Handle the analyse pull request command.
+     * Handle the analyze pull request command.
      *
-     * @param \StyleCI\StyleCI\Commands\Analysis\AnalysePullRequestCommand $command
+     * @param \StyleCI\StyleCI\Commands\Analysis\AnalyzePullRequestCommand $command
      *
      * @return void
      */
-    public function handle(AnalysePullRequestCommand $command)
+    public function handle(AnalyzePullRequestCommand $command)
     {
         $analysis = Analysis::create([
             'repo_id' => $command->repo->id,

@@ -14,8 +14,8 @@
 @section('content')
 <sc-repo inline-template>
     <div id="repo-list" class="hide">
-        @if($can_analyse)
-        <button type="button" v-class="disabled: !branches.length" v-on="click: analyseRepo($event)" class="btn btn-lg btn-danger btn-circle btn-float pull-right" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>" data-toggle="tooltip" data-placement="left" title="Analyse Now">
+        @if($can_analyze)
+        <button type="button" v-class="disabled: !branches.length" v-on="click: analyzeRepo($event)" class="btn btn-lg btn-danger btn-circle btn-float pull-right" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i>" data-toggle="tooltip" data-placement="left" title="Analyze Now">
             <i class="fa fa-undo"></i>
         </button>
         @endif

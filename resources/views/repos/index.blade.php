@@ -1,12 +1,12 @@
 @extends('layouts.default')
 
-@section('title', 'Analysed Repos')
+@section('title', 'Analyzed Repos')
 
 @section('top')
 <div class="page-heading">
     <div class="container">
-        <h1>Analysed Repos</h1>
-        <p>Here you can see all your analysed repos.</p>
+        <h1>Analyzed Repos</h1>
+        <p>Here you can see all your analyzed repos.</p>
     </div>
 </div>
 @stop
@@ -33,7 +33,7 @@
                             <strong class="status-@{{ repo.last_analysis.color }}">@{{ repo.last_analysis.summary }}</strong>
                         </span>
                         <span v-if="!repo.last_analysis">
-                            <strong>Nothing on the @{{ repo.default_branch }} branch has been analysed yet.</strong>
+                            <strong>Nothing on the @{{ repo.default_branch }} branch has been analyzed yet.</strong>
                         </span>
                     </p>
                 </div>
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div v-show="!isLoading && !repos.length">
-            <p class="lead">We haven't analysed anything yet.</p>
+            <p class="lead">We haven't analyzed anything yet.</p>
             <p>You can enable repos on your <a href="{{ route('account') }}">account page</a>.</p>
         </div>
     </div>

@@ -67,7 +67,7 @@ class RunAnalysisJobHandler
     {
         $analysis = $job->analysis;
 
-        // bail out if the repo is already analysed or canceled
+        // bail out if the repo is already analyzed or canceled
         if ($analysis->status > 1) {
             return;
         }
@@ -107,7 +107,7 @@ class RunAnalysisJobHandler
      */
     protected function runAnalysis(Analysis $analysis)
     {
-        $report = $this->builder->analyse(
+        $report = $this->builder->analyze(
             $analysis->repo->name,
             $analysis->repo->id,
             $analysis->commit,

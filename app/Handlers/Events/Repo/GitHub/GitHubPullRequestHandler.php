@@ -13,7 +13,7 @@ namespace StyleCI\StyleCI\Handlers\Events\Repo\GitHub;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Support\Str;
-use StyleCI\StyleCI\Commands\Analysis\AnalysePullRequestCommand;
+use StyleCI\StyleCI\Commands\Analysis\AnalyzePullRequestCommand;
 use StyleCI\StyleCI\Events\Repo\GitHub\GitHubPullRequestEvent;
 
 /**
@@ -36,7 +36,7 @@ class GitHubPullRequestHandler
     {
         $data = $event->data;
 
-        if (!$this->isValidBranch($data) || !$this->shouldAnalyse($data)) {
+        if (!$this->isValidBranch($data) || !$this->shouldAnalyze($data)) {
             return;
         }
 
@@ -44,7 +44,7 @@ class GitHubPullRequestHandler
         $commit = $data['pull_request']['head']['sha'];
         $message = Str::commit('Pull Request: '.$data['pull_request']['title']);
 
-        $this->dispatch(new AnalysePullRequestCommand($event->repo, $pr, $commit, $message));
+        $this->dispatch(new AnalyzePullRequestCommand($event->repo, $pr, $commit, $message));
     }
 
     /**
@@ -60,13 +60,13 @@ class GitHubPullRequestHandler
     }
 
     /**
-     * Should we analyse the PR.
+     * Should we analyze the PR.
      *
      * @param array $data
      *
      * @return bool
      */
-    protected function shouldAnalyse(array $data)
+    protected function shouldAnalyze(array $data)
     {
         return (in_array($data['action'], ['opened', 'synchronize'], true) && !$this->isOriginRepo($data)) || $data['action'] === 'reopened';
     }

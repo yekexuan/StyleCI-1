@@ -37,12 +37,12 @@ class RepoController extends Controller
     public function handleShow(Repo $repo)
     {
         if ($user = Auth::user()) {
-            $canAnalyse = (bool) array_get(app(Repos::class)->get($user), $repo->id);
+            $canAnalyze = (bool) array_get(app(Repos::class)->get($user), $repo->id);
         } else {
-            $canAnalyse = false;
+            $canAnalyze = false;
         }
 
-        return View::make('repos.repo')->withRepo($repo)->withCanAnalyse($canAnalyse);
+        return View::make('repos.repo')->withRepo($repo)->withCanAnalyze($canAnalyze);
     }
 
     /**

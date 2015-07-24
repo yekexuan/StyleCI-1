@@ -12,27 +12,27 @@
 namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use StyleCI\StyleCI\Commands\Analysis\AnalyseCommitCommand;
+use StyleCI\StyleCI\Commands\Analysis\AnalyzeCommitCommand;
 use StyleCI\StyleCI\Jobs\Analysis\RunAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
- * This is the analyse commit command handler.
+ * This is the analyze commit command handler.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalyseCommitCommandHandler
+class AnalyzeCommitCommandHandler
 {
     use DispatchesJobs;
 
     /**
-     * Handle the analyse commit command.
+     * Handle the analyze commit command.
      *
-     * @param \StyleCI\StyleCI\Commands\Analysis\AnalyseCommitCommand $command
+     * @param \StyleCI\StyleCI\Commands\Analysis\AnalyzeCommitCommand $command
      *
      * @return void
      */
-    public function handle(AnalyseCommitCommand $command)
+    public function handle(AnalyzeCommitCommand $command)
     {
         $analysis = Analysis::create([
             'repo_id' => $command->repo->id,

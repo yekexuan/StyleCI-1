@@ -7,7 +7,7 @@
     <div class="text-vertical-center">
         <div class="home-logo-wrapper"><img class="home-logo-img" src="{{ asset('img/logo.png') }}" alt="StyleCI"></div>
         <h3>The PHP Coding Style Continuous Integration Service</h3>
-        <h3>Analyse all your <strong>public repos</strong> for <strong>free.</strong></h3>
+        <h3>Analyze all your <strong>public repos</strong> for <strong>free.</strong></h3>
         <br>
         <div class="btn-toolbar" role="toolbar" aria-label="Login">
             <a href="{{ route('auth_login') }}" class="btn navbar-btn btn-dark btn-lg" data-method="POST"><i class="fa fa-github"></i> Login with GitHub</a>
@@ -35,8 +35,8 @@
                         <i class="fa fa-5x fa-code-fork"></i>
                     </div>
                     <div class="panel-body">
-                        <h3 class="featurette-heading">Analyse</h3>
-                        <p>We watch all of your pull requests and automatically analyse them.</p>
+                        <h3 class="featurette-heading">Analyze</h3>
+                        <p>We watch all of your pull requests and automatically analyze them.</p>
                     </div>
                 </div>
             </div>
@@ -66,12 +66,12 @@
                     <span></span>
                     <span></span>
                 </div>
-                <img class="featurette-image img-responsive" src="{{ asset('img/analyse-repo.jpg') }}" alt="Analyse">
+                <img class="featurette-image img-responsive" src="{{ asset('img/analyze-repo.jpg') }}" alt="Analyze">
             </div>
         </div>
         <div class="col-sm-6">
             <h2 class="featurette-heading">Analysis of pull requests</h2>
-            <p class="lead">StyleCI automatically analyses all of your pull requests and will display a build status within GitHub before you merge.</p>
+            <p class="lead">StyleCI automatically analyzes all of your pull requests and will display a build status within GitHub before you merge.</p>
         </div>
     </div>
     <hr class="featurette-divider">

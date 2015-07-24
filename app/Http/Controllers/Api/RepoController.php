@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\View;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
-use StyleCI\StyleCI\Commands\Analysis\AnalyseBranchCommand;
+use StyleCI\StyleCI\Commands\Analysis\AnalyzeBranchCommand;
 use StyleCI\StyleCI\GitHub\Branches;
 use StyleCI\StyleCI\Http\Middleware\Authenticate;
 use StyleCI\StyleCI\Models\Analysis;
@@ -85,15 +85,15 @@ class RepoController extends Controller
     }
 
     /**
-     * Handles the request to analyse a repo.
+     * Handles the request to analyze a repo.
      *
      * @param \StyleCI\StyleCI\Models\Repo $repo
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function handleAnalyse(Repo $repo)
+    public function handleAnalzse(Repo $repo)
     {
-        $this->dispatch(new AnalyseBranchCommand($repo, Request::get('branch')));
+        $this->dispatch(new AnalyzeBranchCommand($repo, Request::get('branch')));
 
         return new JsonResponse(['queued' => true], 202);
     }

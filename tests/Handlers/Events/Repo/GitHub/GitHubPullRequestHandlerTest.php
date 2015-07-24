@@ -11,7 +11,7 @@
 
 namespace StyleCI\Tests\StyleCI\Handlers\Events\Repo\GitHub;
 
-use StyleCI\StyleCI\Commands\Analysis\AnalysePullRequestCommand;
+use StyleCI\StyleCI\Commands\Analysis\AnalyzePullRequestCommand;
 use StyleCI\StyleCI\Events\Repo\GitHub\GitHubPullRequestEvent;
 use StyleCI\StyleCI\Handlers\Events\Repo\GitHub\GitHubPullRequestHandler;
 use StyleCI\StyleCI\Models\Repo;
@@ -46,7 +46,7 @@ class GitHubPullRequestHandlerTest extends AbstractTestCase
 
     public function testHandleOriginReopen()
     {
-        $this->expectsJobs(AnalysePullRequestCommand::class);
+        $this->expectsJobs(AnalyzePullRequestCommand::class);
 
         $data = json_decode(file_get_contents(__DIR__.'/stubs/pull-request-3.json'), true);
         $handler = new GitHubPullRequestHandler();
@@ -76,7 +76,7 @@ class GitHubPullRequestHandlerTest extends AbstractTestCase
 
     public function testHandleRemoteOpen()
     {
-        $this->expectsJobs(AnalysePullRequestCommand::class);
+        $this->expectsJobs(AnalyzePullRequestCommand::class);
 
         $data = json_decode(file_get_contents(__DIR__.'/stubs/pull-request-6.json'), true);
         $handler = new GitHubPullRequestHandler();
@@ -96,7 +96,7 @@ class GitHubPullRequestHandlerTest extends AbstractTestCase
 
     public function testHandleRemoteReopen()
     {
-        $this->expectsJobs(AnalysePullRequestCommand::class);
+        $this->expectsJobs(AnalyzePullRequestCommand::class);
 
         $data = json_decode(file_get_contents(__DIR__.'/stubs/pull-request-8.json'), true);
         $handler = new GitHubPullRequestHandler();
