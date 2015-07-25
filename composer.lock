@@ -398,12 +398,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "f824dc0ffbe179306f8380087c1e22528d592bce"
+                "reference": "2ccfcdb0f7a0d0a5f3474af61d7393feebaa8c1b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/f824dc0ffbe179306f8380087c1e22528d592bce",
-                "reference": "f824dc0ffbe179306f8380087c1e22528d592bce",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/2ccfcdb0f7a0d0a5f3474af61d7393feebaa8c1b",
+                "reference": "2ccfcdb0f7a0d0a5f3474af61d7393feebaa8c1b",
                 "shasum": ""
             },
             "require": {
@@ -451,7 +451,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/PHP-CS-Fixer/tree/master"
             },
-            "time": "2015-07-25 18:45:57"
+            "time": "2015-07-25 21:18:13"
         },
         {
             "name": "fideloper/proxy",
@@ -2399,12 +2399,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "0fafdfa4981be388e6856fe482e6af53ca8a0ed9"
+                "reference": "3bbd7535740de236c9eaad294d6e421e6d044d26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/0fafdfa4981be388e6856fe482e6af53ca8a0ed9",
-                "reference": "0fafdfa4981be388e6856fe482e6af53ca8a0ed9",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/3bbd7535740de236c9eaad294d6e421e6d044d26",
+                "reference": "3bbd7535740de236c9eaad294d6e421e6d044d26",
                 "shasum": ""
             },
             "require": {
@@ -2453,7 +2453,7 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-25 11:12:29"
+            "time": "2015-07-25 21:34:34"
         },
         {
             "name": "styleci/fixer",
