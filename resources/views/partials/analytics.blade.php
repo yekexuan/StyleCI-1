@@ -17,14 +17,3 @@ insertBefore(d,q)}(window,document,'script','_gs');
 _gs('{{ Config::get('analytics.gosquared') }}');
 </script>
 @endif
-@if(Config::get('analytics.userreport'))
-<script>
-var _urq = _urq || [];
-_urq.push(['initSite', '{{ Config::get('analytics.userreport') }}']);
-(function() {
-var ur = document.createElement('script'); ur.type = 'text/javascript'; ur.async = true;
-ur.src = ('https:' == document.location.protocol ? 'https://cdn.userreport.com/userreport.js' : 'http://cdn.userreport.com/userreport.js');
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ur, s);
-})();
-</script>
-@endif
