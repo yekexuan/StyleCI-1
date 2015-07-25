@@ -2331,7 +2331,7 @@
         },
         {
             "name": "styleci/cache",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Cache.git",
@@ -2399,12 +2399,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "3bbd7535740de236c9eaad294d6e421e6d044d26"
+                "reference": "e70b8334f91054375a94fdb580d19e701641de3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/3bbd7535740de236c9eaad294d6e421e6d044d26",
-                "reference": "3bbd7535740de236c9eaad294d6e421e6d044d26",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/e70b8334f91054375a94fdb580d19e701641de3d",
+                "reference": "e70b8334f91054375a94fdb580d19e701641de3d",
                 "shasum": ""
             },
             "require": {
@@ -2453,7 +2453,7 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-25 21:34:34"
+            "time": "2015-07-25 21:51:33"
         },
         {
             "name": "styleci/fixer",
@@ -2523,7 +2523,7 @@
         },
         {
             "name": "styleci/git",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
@@ -2589,7 +2589,7 @@
         },
         {
             "name": "styleci/login",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
@@ -2652,7 +2652,7 @@
         },
         {
             "name": "styleci/storage",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Storage.git",
