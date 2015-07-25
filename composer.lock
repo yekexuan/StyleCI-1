@@ -398,12 +398,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "9d5afbec6836b5d9933768f125938247c16e270d"
+                "reference": "f824dc0ffbe179306f8380087c1e22528d592bce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/9d5afbec6836b5d9933768f125938247c16e270d",
-                "reference": "9d5afbec6836b5d9933768f125938247c16e270d",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/f824dc0ffbe179306f8380087c1e22528d592bce",
+                "reference": "f824dc0ffbe179306f8380087c1e22528d592bce",
                 "shasum": ""
             },
             "require": {
@@ -451,7 +451,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/PHP-CS-Fixer/tree/master"
             },
-            "time": "2015-07-25 16:10:50"
+            "time": "2015-07-25 18:45:57"
         },
         {
             "name": "fideloper/proxy",
