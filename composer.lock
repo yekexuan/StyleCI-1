@@ -682,12 +682,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "5266b1b7a141a33234bdd28a939cb837894e6186"
+                "reference": "001880bbc03195a279b73d988e23d6446517c8d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/5266b1b7a141a33234bdd28a939cb837894e6186",
-                "reference": "5266b1b7a141a33234bdd28a939cb837894e6186",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/001880bbc03195a279b73d988e23d6446517c8d4",
+                "reference": "001880bbc03195a279b73d988e23d6446517c8d4",
                 "shasum": ""
             },
             "require": {
@@ -739,7 +739,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-07-19 10:38:27"
+            "time": "2015-07-25 10:25:02"
         },
         {
             "name": "graham-campbell/flysystem",
