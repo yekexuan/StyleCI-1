@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "171afd180afcd43ce7ce6c85efcbe8d9",
+    "hash": "e0577d5f088042765bf58394832db43a",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -678,16 +678,16 @@
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "dev-master",
+            "version": "v4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "001880bbc03195a279b73d988e23d6446517c8d4"
+                "reference": "4a722d06c47dda498bc79edf67b04e285285dd5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/001880bbc03195a279b73d988e23d6446517c8d4",
-                "reference": "001880bbc03195a279b73d988e23d6446517c8d4",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/4a722d06c47dda498bc79edf67b04e285285dd5e",
+                "reference": "4a722d06c47dda498bc79edf67b04e285285dd5e",
                 "shasum": ""
             },
             "require": {
@@ -739,7 +739,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-07-25 10:25:02"
+            "time": "2015-07-25 10:39:01"
         },
         {
             "name": "graham-campbell/flysystem",
@@ -2335,16 +2335,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Cache.git",
-                "reference": "c1f805c04b606c84f9885a019503dde857c54d28"
+                "reference": "4375dca1df8f55187ee88765431ca7f59d9e290c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Cache/zipball/c1f805c04b606c84f9885a019503dde857c54d28",
-                "reference": "c1f805c04b606c84f9885a019503dde857c54d28",
+                "url": "https://api.github.com/repos/StyleCI/Cache/zipball/4375dca1df8f55187ee88765431ca7f59d9e290c",
+                "reference": "4375dca1df8f55187ee88765431ca7f59d9e290c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9"
+                "php": ">=5.6.4"
             },
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
@@ -2391,7 +2391,7 @@
                 "cache",
                 "cs"
             ],
-            "time": "2015-07-24 12:14:31"
+            "time": "2015-07-25 11:12:20"
         },
         {
             "name": "styleci/config",
@@ -2399,16 +2399,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "d86dee80f1cbe64258866394a0d24a33f1bacc7b"
+                "reference": "0fafdfa4981be388e6856fe482e6af53ca8a0ed9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/d86dee80f1cbe64258866394a0d24a33f1bacc7b",
-                "reference": "d86dee80f1cbe64258866394a0d24a33f1bacc7b",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/0fafdfa4981be388e6856fe482e6af53ca8a0ed9",
+                "reference": "0fafdfa4981be388e6856fe482e6af53ca8a0ed9",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": ">=5.6.4",
                 "symfony/yaml": "~2.3"
             },
             "require-dev": {
@@ -2453,7 +2453,7 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-24 12:14:50"
+            "time": "2015-07-25 11:12:29"
         },
         {
             "name": "styleci/fixer",
@@ -2461,17 +2461,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "f6bcc023e75154408a60b5f372e294f0d728d305"
+                "reference": "081daeb9bebef8a956db4872a0a5032dea3ebb3d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/f6bcc023e75154408a60b5f372e294f0d728d305",
-                "reference": "f6bcc023e75154408a60b5f372e294f0d728d305",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/081daeb9bebef8a956db4872a0a5032dea3ebb3d",
+                "reference": "081daeb9bebef8a956db4872a0a5032dea3ebb3d",
                 "shasum": ""
             },
             "require": {
                 "fabpot/php-cs-fixer": "~2.0.0",
-                "php": ">=5.5.9",
+                "php": ">=5.6.4",
                 "styleci/cache": "~1.0",
                 "styleci/config": "~1.0",
                 "styleci/git": "~1.0"
@@ -2519,7 +2519,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-24 12:16:04"
+            "time": "2015-07-25 11:13:25"
         },
         {
             "name": "styleci/git",
@@ -2527,18 +2527,18 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "498f8041d47c18752571f9bcfdb2c04f1e875c45"
+                "reference": "c42f8bf5924f2acf57f1cf0f373c8a1032632abd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/498f8041d47c18752571f9bcfdb2c04f1e875c45",
-                "reference": "498f8041d47c18752571f9bcfdb2c04f1e875c45",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/c42f8bf5924f2acf57f1cf0f373c8a1032632abd",
+                "reference": "c42f8bf5924f2acf57f1cf0f373c8a1032632abd",
                 "shasum": ""
             },
             "require": {
                 "cpliakas/git-wrapper": "~1.5",
                 "gitonomy/gitlib": "~1.0",
-                "php": ">=5.5.9",
+                "php": ">=5.6.4",
                 "symfony/filesystem": "~2.3",
                 "symfony/finder": "~2.3"
             },
@@ -2585,7 +2585,7 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-07-24 12:17:14"
+            "time": "2015-07-25 11:13:03"
         },
         {
             "name": "styleci/login",
@@ -2593,12 +2593,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "d3bbd1f2dafc488b06c437a17c6aad75e7901ccd"
+                "reference": "37a376d1e37b862a74df5eefe6f39b544cde92e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/d3bbd1f2dafc488b06c437a17c6aad75e7901ccd",
-                "reference": "d3bbd1f2dafc488b06c437a17c6aad75e7901ccd",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/37a376d1e37b862a74df5eefe6f39b544cde92e7",
+                "reference": "37a376d1e37b862a74df5eefe6f39b544cde92e7",
                 "shasum": ""
             },
             "require": {
@@ -2606,7 +2606,7 @@
                 "illuminate/contracts": "5.1.*",
                 "illuminate/http": "5.1.*",
                 "illuminate/support": "5.1.*",
-                "php": ">=5.5.9"
+                "php": ">=5.6.4"
             },
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
@@ -2648,7 +2648,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-07-24 12:19:08"
+            "time": "2015-07-25 11:13:40"
         },
         {
             "name": "styleci/storage",
@@ -2656,12 +2656,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Storage.git",
-                "reference": "967c457b46155740c685ad074ef0f9f086f61a76"
+                "reference": "81df298f27d8ed84117499ebdc8c03fbc6f8391a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/967c457b46155740c685ad074ef0f9f086f61a76",
-                "reference": "967c457b46155740c685ad074ef0f9f086f61a76",
+                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/81df298f27d8ed84117499ebdc8c03fbc6f8391a",
+                "reference": "81df298f27d8ed84117499ebdc8c03fbc6f8391a",
                 "shasum": ""
             },
             "require": {
@@ -2669,7 +2669,7 @@
                 "graham-campbell/manager": "~2.2",
                 "illuminate/contracts": "5.1.*",
                 "illuminate/support": "5.1.*",
-                "php": ">=5.5.9"
+                "php": ">=5.6.4"
             },
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
@@ -2712,7 +2712,7 @@
                 "StyleCI",
                 "storage"
             ],
-            "time": "2015-07-24 12:19:38"
+            "time": "2015-07-25 11:13:50"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -5217,7 +5217,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^5.5.9"
+        "php": "^5.6.4"
     },
     "platform-dev": []
 }
