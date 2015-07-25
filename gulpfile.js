@@ -3,7 +3,7 @@ var elixir = require('laravel-elixir');
 elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
-    mix.sass('app.scss')
+    mix.sass('app.scss', 'public/dist/css/app.css')
         .scripts([
             'vendor/bower_components/jquery/dist/jquery.js',
             'vendor/bower_components/vue/dist/vue.js',
