@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "alt-three/logger",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Logger.git",
-                "reference": "2456ec8e0ddee1d140c7cedcc04fabdcc47cc34a"
+                "reference": "5f54aae25e8a91ff8f30fec65f619c70ec9db27c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Logger/zipball/2456ec8e0ddee1d140c7cedcc04fabdcc47cc34a",
-                "reference": "2456ec8e0ddee1d140c7cedcc04fabdcc47cc34a",
+                "url": "https://api.github.com/repos/AltThree/Logger/zipball/5f54aae25e8a91ff8f30fec65f619c70ec9db27c",
+                "reference": "5f54aae25e8a91ff8f30fec65f619c70ec9db27c",
                 "shasum": ""
             },
             "require": {
@@ -65,11 +65,11 @@
                 "logger",
                 "logging"
             ],
-            "time": "2015-07-06 16:40:27"
+            "time": "2015-07-24 12:19:09"
         },
         {
             "name": "alt-three/validator",
-            "version": "dev-master",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Validator.git",
@@ -398,12 +398,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "e3f99e0ef7eaa04c70d3ba50f09425464275f54d"
+                "reference": "9d5afbec6836b5d9933768f125938247c16e270d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/e3f99e0ef7eaa04c70d3ba50f09425464275f54d",
-                "reference": "e3f99e0ef7eaa04c70d3ba50f09425464275f54d",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/9d5afbec6836b5d9933768f125938247c16e270d",
+                "reference": "9d5afbec6836b5d9933768f125938247c16e270d",
                 "shasum": ""
             },
             "require": {
@@ -451,7 +451,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/PHP-CS-Fixer/tree/master"
             },
-            "time": "2015-07-18 19:26:15"
+            "time": "2015-07-25 16:10:50"
         },
         {
             "name": "fideloper/proxy",
