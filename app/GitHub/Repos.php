@@ -66,7 +66,7 @@ class Repos
             return $this->fetchFromGitHub($user);
         });
 
-        foreach (Repo::whereIn('id', array_keys($list))->get(['id', 'name', 'default_branch']) as $repo) {
+        foreach (Repo::whereIn('id', array_keys($list))->get() as $repo) {
             $list[$repo->id]['enabled'] = true;
             $this->syncWithDatabase($repo, $list[$repo->id]);
         }
