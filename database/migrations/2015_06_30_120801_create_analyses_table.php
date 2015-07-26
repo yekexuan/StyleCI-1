@@ -37,7 +37,7 @@ class CreateAnalysesTable extends Migration
             $table->string('error')->nullable();
             $table->text('errors')->nullable();
             $table->tinyInteger('status')->unsigned()->index();
-            $table->tinyInteger('hidden')->unsigned()->index();
+            $table->boolean('hidden')->index();
             $table->timestamps();
         });
     }
