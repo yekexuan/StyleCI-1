@@ -2395,16 +2395,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "9fab8b38c07108fd102e20db1ec5c8dfdad74b2f"
+                "reference": "3905ed0e7828744ddebf0ae0955f4c41fcbb16b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/9fab8b38c07108fd102e20db1ec5c8dfdad74b2f",
-                "reference": "9fab8b38c07108fd102e20db1ec5c8dfdad74b2f",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/3905ed0e7828744ddebf0ae0955f4c41fcbb16b6",
+                "reference": "3905ed0e7828744ddebf0ae0955f4c41fcbb16b6",
                 "shasum": ""
             },
             "require": {
@@ -2453,11 +2453,11 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-25 23:42:20"
+            "time": "2015-07-26 09:53:17"
         },
         {
             "name": "styleci/fixer",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
@@ -4957,16 +4957,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "1.2.2",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "5a8c7d31914337b69923db26c4221b81ff5a196e"
+                "reference": "4fe0a44cddd8cc19583a024bdc7374eb2fef0b87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/5a8c7d31914337b69923db26c4221b81ff5a196e",
-                "reference": "5a8c7d31914337b69923db26c4221b81ff5a196e",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/4fe0a44cddd8cc19583a024bdc7374eb2fef0b87",
+                "reference": "4fe0a44cddd8cc19583a024bdc7374eb2fef0b87",
                 "shasum": ""
             },
             "require": {
@@ -5003,7 +5003,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2015-01-01 10:01:08"
+            "time": "2015-07-26 06:42:57"
         },
         {
             "name": "sebastian/exporter",
