@@ -17,6 +17,7 @@ use StyleCI\Login\Exceptions\InvalidStateException;
 use StyleCI\Login\Exceptions\NoAccessTokenException;
 use StyleCI\Login\Exceptions\NoEmailException;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
  * This is the login transformer class.
