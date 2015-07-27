@@ -54,7 +54,7 @@ class RouteServiceProvider extends ServiceProvider
         $router->bind('analysis', function ($value) {
             $decoded = Hashids::connection('analyses')->decode($value);
 
-            if (isset($decoded[0]) && $analysis = Analysis::find($decoded[0])) {
+            if (isset($decoded[0]) && is_numeric($decoded[0]) && $analysis = Analysis::find($decoded[0])) {
                 return $analysis;
             }
 
@@ -62,7 +62,7 @@ class RouteServiceProvider extends ServiceProvider
         });
 
         $router->bind('repo', function ($value) {
-            if ($repo = Repo::find($value)) {
+            if (is_numeric($value) && $repo = Repo::find($value)) {
                 return $repo;
             }
 
