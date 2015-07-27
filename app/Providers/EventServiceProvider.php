@@ -31,6 +31,8 @@ class EventServiceProvider extends ServiceProvider
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\Analysis\PusherStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisMailHandler',
+            'StyleCI\StyleCI\Handlers\Events\Analysis\CleanupHandler',
+            'StyleCI\StyleCI\Handlers\Events\Repo\CleanupHandler',
         ],
         'StyleCI\StyleCI\Events\Analysis\AnalysisHasStartedEvent' => [
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisLoggingHandler',
