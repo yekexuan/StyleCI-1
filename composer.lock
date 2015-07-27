@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "432902ccf2c8ce5596086bd4063ca2e6",
+    "hash": "2a0e1ebc83f24a09fc9f51a1c8ea1f8c",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -398,12 +398,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "2ccfcdb0f7a0d0a5f3474af61d7393feebaa8c1b"
+                "reference": "7aa461103942d332c93ddca12ec3c90f1bf6fe96"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/2ccfcdb0f7a0d0a5f3474af61d7393feebaa8c1b",
-                "reference": "2ccfcdb0f7a0d0a5f3474af61d7393feebaa8c1b",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/7aa461103942d332c93ddca12ec3c90f1bf6fe96",
+                "reference": "7aa461103942d332c93ddca12ec3c90f1bf6fe96",
                 "shasum": ""
             },
             "require": {
@@ -451,7 +451,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/PHP-CS-Fixer/tree/master"
             },
-            "time": "2015-07-25 21:18:13"
+            "time": "2015-07-27 12:46:10"
         },
         {
             "name": "fideloper/proxy",
@@ -2589,16 +2589,16 @@
         },
         {
             "name": "styleci/login",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "37a376d1e37b862a74df5eefe6f39b544cde92e7"
+                "reference": "3932eef5634f6569d51c3ae5061aa3e84786ee27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/37a376d1e37b862a74df5eefe6f39b544cde92e7",
-                "reference": "37a376d1e37b862a74df5eefe6f39b544cde92e7",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/3932eef5634f6569d51c3ae5061aa3e84786ee27",
+                "reference": "3932eef5634f6569d51c3ae5061aa3e84786ee27",
                 "shasum": ""
             },
             "require": {
@@ -2615,7 +2615,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -2648,7 +2648,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-07-25 11:13:40"
+            "time": "2015-07-27 12:55:52"
         },
         {
             "name": "styleci/storage",
