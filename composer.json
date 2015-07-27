@@ -38,7 +38,7 @@
         "mccool/laravel-auto-presenter": "^4.0",
         "styleci/fixer": "^1.0.2",
         "styleci/git": "^1.0",
-        "styleci/login": "^1.0",
+        "styleci/login": "^1.1",
         "styleci/storage": "^1.0",
         "vinkla/hashids": "^2.0.1",
         "vinkla/pusher": "^2.0"
