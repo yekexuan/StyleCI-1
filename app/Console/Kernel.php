@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Console;
 
-use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use StyleCI\StyleCI\Console\Commands\RepoCommand;
 use StyleCI\StyleCI\Console\Commands\UserCommand;

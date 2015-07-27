@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Handlers\Events\Analysis;
+namespace StyleCI\StyleCI\Handlers\Events\Repo;
 
 use Illuminate\Contracts\Foundation\Application;
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
@@ -19,7 +19,7 @@ use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class CleanupHandlerHandler
+class CleanupHandler
 {
     /**
      * The application instance.
@@ -62,6 +62,6 @@ class CleanupHandlerHandler
         $path = $this->app->make('path.storage');
         $factory = $this->app->make('git.factory');
 
-        $factory->gc("{$path}/repos", 14));
+        $factory->gc("{$path}/repos", 14);
     }
 }

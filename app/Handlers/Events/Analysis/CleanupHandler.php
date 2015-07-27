@@ -12,7 +12,6 @@
 namespace StyleCI\StyleCI\Handlers\Events\Analysis;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
-use StyleCI\StyleCI\Commands\Analysis\DeleteAnalysisCommand;
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Jobs\Analysis\CleanupAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
