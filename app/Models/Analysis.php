@@ -122,18 +122,6 @@ class Analysis extends Model implements HasPresenter
     }
 
     /**
-     * Scope the query to only include analyses over 2 hours old.
-     *
-     * @param \Illuminate\Database\Eloquent\Builder $query
-     *
-     * @return \Illuminate\Database\Eloquent\Builder
-     */
-    public function scopeVeryOld(Builder $query)
-    {
-        return $query->where('updated_at', '<=', Carbon::now()->subYear());
-    }
-
-    /**
      * Scope the query to only include visible analyses.
      *
      * @param \Illuminate\Database\Eloquent\Builder $query
