@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e0577d5f088042765bf58394832db43a",
+    "hash": "432902ccf2c8ce5596086bd4063ca2e6",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -2457,16 +2457,16 @@
         },
         {
             "name": "styleci/fixer",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "d54f5b0d8daa230848df61fb1ac64e1cc8dd7f0b"
+                "reference": "cacdee19fb894ee8a7b1e959636e3c43e42d5ea4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/d54f5b0d8daa230848df61fb1ac64e1cc8dd7f0b",
-                "reference": "d54f5b0d8daa230848df61fb1ac64e1cc8dd7f0b",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/cacdee19fb894ee8a7b1e959636e3c43e42d5ea4",
+                "reference": "cacdee19fb894ee8a7b1e959636e3c43e42d5ea4",
                 "shasum": ""
             },
             "require": {
@@ -2519,7 +2519,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-27 06:42:53"
+            "time": "2015-07-27 10:16:11"
         },
         {
             "name": "styleci/git",
