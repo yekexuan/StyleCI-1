@@ -27,6 +27,7 @@ return [
 
     'transformers' => [
         'GrahamCampbell\Exceptions\Transformers\CsrfTransformer',
+        'StyleCI\StyleCI\Exceptions\Transformers\InvalidStateTransformer',
         'StyleCI\StyleCI\Exceptions\Transformers\ValidationTransformer',
     ],
 
