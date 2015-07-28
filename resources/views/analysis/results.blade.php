@@ -7,7 +7,11 @@
 
 @if ($analysis->status === 6)
 <div class="alert alert-info analysis-alert" role="alert">
-    <h4>Need a hand?</h4>
+    <h4>Want to check out our docs?</h4>
+    <p>We have detailed configuration documentation available at <a href="https://styleci.readme.io/docs/configuration" target="_blank">https://styleci.readme.io/docs/configuration</a>.</p>
+</div>
+<div class="alert alert-info analysis-alert" role="alert">
+    <h4>Still not sure?</h4>
     <p>Feel free to contact support at <a href="mailto:support@alt-three.com">support@alt-three.com</a>.</p>
 </div>
 @elseif ($analysis->status === 7)
