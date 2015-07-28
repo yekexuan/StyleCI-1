@@ -24,7 +24,9 @@
     </ul>
     <div class="tab-content">
         <div role="tabpanel" class="tab-pane active" id="repos">
-            @include('account.repos')
+            <sc-account inline-template>
+                @include('account.repos')
+            </sc-account>
         </div>
         <div role="tabpanel" class="tab-pane" id="profile">
             @include('account.profile')
