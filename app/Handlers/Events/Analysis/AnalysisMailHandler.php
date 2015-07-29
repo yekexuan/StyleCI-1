@@ -71,9 +71,9 @@ class AnalysisMailHandler
 
         $repo = $analysis->repo;
 
-        if ($analysis->status === 2) {
+        if ($analysis->status === Analysis::PASSED) {
             $this->notifySuccess($analysis, $repo);
-        } elseif ($analysis->status > 2) {
+        } elseif ($analysis->status > Analysis::PASSED) {
             $this->notifyNotSuccess($analysis, $repo);
         }
     }
@@ -95,7 +95,7 @@ class AnalysisMailHandler
 
         if (!$previous) {
             $status = 'first';
-        } elseif ($previous->status > 2) {
+        } elseif ($previous->status > Analysis::PASSED) {
             $status = 'passed';
         } else {
             return;
@@ -135,28 +135,27 @@ class AnalysisMailHandler
             'link'   => route('analysis', AutoPresenter::decorate($analysis)->id),
         ];
 
-        switch ($analysis->status) {
-            case 3:
-            case 4:
-            case 5:
-                $status = 'failed';
-                $mail['subject'] = "[$repo->name] Analysis Failed";
-                break;
-            case 6:
-                $status = 'misconfigured';
-                $mail['subject'] = "[$repo->name] Analysis Misconfigured";
-                break;
-            case 7:
-                $status = 'access';
-                $mail['subject'] = "[$repo->name] Analysis Errored";
-                break;
-            case 8:
-                $status = 'timeout';
-                $mail['subject'] = "[$repo->name] Analysis Timed Out";
-                break;
-            default:
-                $status = 'errored';
-                $mail['subject'] = "[$repo->name] Analysis Errored";
+        if (in_array($analysis->status, Analysis::HAS_FAILED, true)) {
+            $status = 'failed';
+            $mail['subject'] = "[$repo->name] Analysis Failed";
+        } else {
+            switch ($analysis->status) {
+                case Analysis::CONFIG_ISSUES:
+                    $status = 'misconfigured';
+                    $mail['subject'] = "[$repo->name] Analysis Misconfigured";
+                    break;
+                case Analysis::ACCESS_ISSUES:
+                    $status = 'access';
+                    $mail['subject'] = "[$repo->name] Analysis Errored";
+                    break;
+                case Analysis::TIMEOUT:
+                    $status = 'timeout';
+                    $mail['subject'] = "[$repo->name] Analysis Timed Out";
+                    break;
+                default:
+                    $status = 'errored';
+                    $mail['subject'] = "[$repo->name] Analysis Errored";
+            }
         }
 
         foreach ($this->userRepository->collaborators($repo) as $user) {

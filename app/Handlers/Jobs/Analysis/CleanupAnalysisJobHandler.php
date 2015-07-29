@@ -13,6 +13,7 @@ namespace StyleCI\StyleCI\Handlers\Jobs\Analysis;
 
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Jobs\Analysis\CleanupAnalysisJob;
+use StyleCI\StyleCI\Models\Analysis;
 
 /**
  * This is the cleanup analysis job handler.
@@ -32,7 +33,7 @@ class CleanupAnalysisJobHandler
     {
         $analysis = $job->analysis;
 
-        $analysis->status = 8;
+        $analysis->status = Analysis::TIMEOUT;
         $analysis->save();
 
         event(new AnalysisHasCompletedEvent($analysis));

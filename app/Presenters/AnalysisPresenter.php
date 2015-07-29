@@ -14,6 +14,7 @@ namespace StyleCI\StyleCI\Presenters;
 use Illuminate\Contracts\Support\Arrayable;
 use McCool\LaravelAutoPresenter\BasePresenter;
 use StyleCI\Storage\Stores\StoreInterface;
+use StyleCI\StyleCI\Models\Analysis;
 use Vinkla\Hashids\Facades\Hashids;
 
 /**
@@ -85,17 +86,17 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     protected function summary()
     {
         switch ($this->wrappedObject->status) {
-            case 0:
+            case Analysis::PENDING:
                 return 'PENDING';
-            case 1:
+            case Analysis::RUNNING:
                 return 'RUNNING';
-            case 2:
+            case Analysis::PASSED:
                 return 'PASSED';
-            case 3:
-            case 4:
-            case 5:
+            case Analysis::CS_ISSUES:
+            case Analysis::SYNTAX_ISSUES:
+            case Analysis::BOTH_ISSUES:
                 return 'FAILED';
-            case 6:
+            case Analysis::CONFIG_ISSUES:
                 return 'MISCONFIGURED';
             default:
                 return 'ERRORED';
@@ -110,17 +111,17 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     protected function description()
     {
         switch ($this->wrappedObject->status) {
-            case 0:
+            case Analysis::PENDING:
                 return 'The StyleCI analysis is pending';
-            case 1:
+            case Analysis::RUNNING:
                 return 'The StyleCI analysis is running';
-            case 2:
+            case Analysis::PASSED:
                 return 'The StyleCI analysis has passed';
-            case 3:
-            case 4:
-            case 5:
+            case Analysis::CS_ISSUES:
+            case Analysis::SYNTAX_ISSUES:
+            case Analysis::BOTH_ISSUES:
                 return 'The StyleCI analysis has failed';
-            case 6:
+            case Analysis::CONFIG_ISSUES:
                 return 'The StyleCI analysis was misconfigured';
             default:
                 return 'The StyleCI analysis has errored';
@@ -135,14 +136,14 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     protected function icon()
     {
         switch ($this->wrappedObject->status) {
-            case 0:
-            case 1:
+            case Analysis::PENDING:
+            case Analysis::RUNNING:
                 return 'fa fa-cog fa-spin';
-            case 2:
+            case Analysis::PASSED:
                 return 'fa fa-check-circle';
-            case 3:
-            case 4:
-            case 5:
+            case Analysis::CS_ISSUES:
+            case Analysis::SYNTAX_ISSUES:
+            case Analysis::BOTH_ISSUES:
                 return 'fa fa-times-circle';
             default:
                 return 'fa fa-exclamation-circle';
@@ -157,10 +158,10 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     protected function color()
     {
         switch ($this->wrappedObject->status) {
-            case 0:
-            case 1:
+            case Analysis::PENDING:
+            case Analysis::RUNNING:
                 return 'grey';
-            case 2:
+            case Analysis::PASSED:
                 return 'green';
             default:
                 return 'red';
@@ -222,7 +223,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
      */
     protected function has_diff()
     {
-        return $this->wrappedObject->status === 3 || $this->wrappedObject->status === 5;
+        return in_array($this->wrappedObject->status, Analysis::HAS_DIFF, true);
     }
 
     /**

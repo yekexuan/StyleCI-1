@@ -41,6 +41,90 @@ class Analysis extends Model implements HasPresenter
     use ValidatingTrait;
 
     /**
+     * The pending status code.
+     *
+     * @var int
+     */
+    const PENDING = 0;
+
+    /**
+     * The running status code.
+     *
+     * @var int
+     */
+    const RUNNING = 1;
+
+    /**
+     * The passed status code.
+     *
+     * @var int
+     */
+    const PASSED = 2;
+
+    /**
+     * The cs issues status code.
+     *
+     * @var int
+     */
+    const CS_ISSUES = 3;
+
+    /**
+     * The syntax issues status code.
+     *
+     * @var int
+     */
+    const SYNTAX_ISSUES = 4;
+
+    /**
+     * The both cs and syntax issues status code.
+     *
+     * @var int
+     */
+    const BOTH_ISSUES = 5;
+
+    /**
+     * The configuration issues status code.
+     *
+     * @var int
+     */
+    const CONFIG_ISSUES = 6;
+
+    /**
+     * The git access issues status code.
+     *
+     * @var int
+     */
+    const ACCESS_ISSUES = 7;
+
+    /**
+     * The analysis timeout status code.
+     *
+     * @var int
+     */
+    const TIMEOUT = 8;
+
+    /**
+     * The other internal issues status code.
+     *
+     * @var int
+     */
+    const INTERNAL = 9;
+
+    /**
+     * The status codes that mean the analysis has a diff.
+     *
+     * @var int[]
+     */
+    const HAS_DIFF = [self::CS_ISSUES, self::BOTH_ISSUES];
+
+    /**
+     * The status codes that mean the analysis has failed.
+     *
+     * @var int[]
+     */
+    const HAS_FAILED = [self::CS_ISSUES, self::SYNTAX_ISSUES, self::BOTH_ISSUES];
+
+    /**
      * A list of methods protected from mass assignment.
      *
      * @var string[]
@@ -100,8 +184,8 @@ class Analysis extends Model implements HasPresenter
             $messages[] = 'You must provide either a branch or a pr.';
         }
 
-        if (($this->error || $this->errors) && $this->status < 3) {
-            $messages[] = 'Errors are only allowed if the status is non-passing.';
+        if (($this->error || $this->errors) && $this->status < self::CS_ISSUES) {
+            $messages[] = 'Errors are only allowed for some status codes.';
         }
 
         if ($messages) {

@@ -67,12 +67,11 @@ class RunAnalysisJobHandler
     {
         $analysis = $job->analysis;
 
-        // bail out if the repo is already analyzed or canceled
-        if ($analysis->status > 1) {
+        if ($analysis->status > Analysis::PENDING) {
             return;
         }
 
-        $analysis->status = 1;
+        $analysis->status = Analysis::RUNNING;
 
         $analysis->save();
 
@@ -81,12 +80,12 @@ class RunAnalysisJobHandler
         try {
             $this->runAnalysis($analysis);
         } catch (ConfigExceptionInterface $e) {
-            $analysis->status = 6;
+            $analysis->status = Analysis::CONFIG_ISSUES;
             $analysis->error = $e->getMessage();
         } catch (GitExceptionInterface $e) {
-            $analysis->status = 7;
+            $analysis->status = Analysis::ACCESS_ISSUES;
         } catch (Exception $e) {
-            $analysis->status = 9;
+            $analysis->status = Analysis::INTERNAL;
         }
 
         $analysis->save();
@@ -117,7 +116,7 @@ class RunAnalysisJobHandler
         );
 
         if ($errors = $report->errors()) {
-            $analysis->status = 9;
+            $analysis->status = Analysis::INTERNAL;
             $analysis->errors = $errors;
 
             return;
@@ -127,15 +126,15 @@ class RunAnalysisJobHandler
         $lints = $report->lints();
 
         if ($successful && $lints) {
-            $analysis->status = 4;
+            $analysis->status = Analysis::SYNTAX_ISSUES;
             $analysis->errors = $lints;
         } elseif (!$successful && $lints) {
-            $analysis->status = 5;
+            $analysis->status = Analysis::BOTH_ISSUES5;
             $analysis->errors = $lints;
         } elseif ($successful && !$lints) {
-            $analysis->status = 2;
+            $analysis->status = Analysis::PASSED;
         } else {
-            $analysis->status = 3;
+            $analysis->status = Analysis::CS_ISSUES;
         }
 
         if (!$successful) {

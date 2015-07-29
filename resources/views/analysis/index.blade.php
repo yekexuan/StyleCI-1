@@ -13,7 +13,7 @@
 
 @section('content')
 <sc-analysis inline-template>
-    <div id="analysis" class="analysis hide" data-id="{{ $analysis->id }}" data-has-result="{{ $analysis->status > 2 }}" data-has-diff="{{ $analysis->has_diff }}">
+    <div id="analysis" class="analysis hide" data-id="{{ $analysis->id }}" data-has-result="{{ $analysis->status > $analysis::PASSED }}" data-has-diff="{{ $analysis->has_diff }}">
         <div class="well">
             <div class="pull-right">
                 <a href="#" data-toggle="modal" data-target="#badge-modal">
