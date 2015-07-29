@@ -23,7 +23,7 @@
 
 <p>Access to Other Computers or Networks without Authorization: Attempting unauthorized and/or illegal access of computers, networks and/or accounts not belonging to party seeking access. Any act which interferes with the services of another user or network. Any act relating to the circumvention of security measures.</p>
 
-<p>StyleCI and the services it provides may only be used for lawful purposes. Transmission, distribution, or storage of any information, data or material in violation of United States or state regulation or law, or by the common law, is prohibited. This includes, but is not limited to, material protected by copyright, trademark, trade secret, or other intellectual property rights. StyleCI's services may not be used to facilitate infringement of these laws in any way.</p>
+<p>StyleCI and the services it provides may only be used for lawful purposes. Transmission, distribution, or storage of any information, data or material in violation of United States or state regulation or law, or by the common law, is prohibited. This includes, but is not limited to, material protected by copyright, trademark, trade secret, or other intellectual property rights. Content associated with content of an adult or pornographic nature, forgery, identity theft, wire fraud, money laundering, or terrorist activities is also prohibited. StyleCI's services may not be used to facilitate infringement of these laws in any way.</p>
 
 <p>Other Activities viewed as Illegal or Harmful: Engaging in illegal activities or engaging in activities harmful to the operations of StyleCI or StyleCI's customers.</p>
 
