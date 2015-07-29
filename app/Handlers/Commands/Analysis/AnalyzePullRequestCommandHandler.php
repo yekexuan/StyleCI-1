@@ -39,8 +39,8 @@ class AnalyzePullRequestCommandHandler
             'pr'      => $command->pr,
             'commit'  => $command->commit,
             'message' => $command->message,
-            'status'  => 0,
-            'hidden'  => 0,
+            'status'  => Analysis::PENDING,
+            'hidden'  => false,
         ]);
 
         $this->dispatch(new RunAnalysisJob($analysis));

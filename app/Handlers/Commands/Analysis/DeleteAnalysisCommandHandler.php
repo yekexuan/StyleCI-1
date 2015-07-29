@@ -13,6 +13,7 @@ namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
 
 use StyleCI\Storage\Stores\StoreInterface;
 use StyleCI\StyleCI\Commands\Analysis\DeleteAnalysisCommand;
+use StyleCI\StyleCI\Models\Analysis;
 
 /**
  * This is the delete analysis command handler.
@@ -51,7 +52,7 @@ class DeleteAnalysisCommandHandler
     {
         $analysis = $command->analysis;
 
-        if ($analysis->status === 3 || $analysis->status === 5) {
+        if (in_array($analysis->status, Analysis::HAS_DIFF, true)) {
             $this->storage->delete($analysis->id);
         }
 

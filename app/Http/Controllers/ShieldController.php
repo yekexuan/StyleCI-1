@@ -53,9 +53,9 @@ class ShieldController extends Controller
 
         if ($analysis) {
             $status = strtolower(AutoPresenter::decorate($analysis)->summary);
-            if ($analysis->status === 2) {
+            if ($analysis->status === Analysis::PASSED) {
                 $color = 'brightgreen';
-            } elseif ($analysis->status > 2) {
+            } elseif ($analysis->status > Analysis::PASSED) {
                 $color = 'red';
             }
         }

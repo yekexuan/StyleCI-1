@@ -95,7 +95,7 @@ class AnalysisTest extends AbstractTestCase
     public function testSaveWithBadDataAnotherTime()
     {
         $expected = [
-            'Errors are only allowed if the status is non-passing.',
+            'Errors are only allowed for some status codes.',
         ];
 
         try {
@@ -114,7 +114,7 @@ class AnalysisTest extends AbstractTestCase
     {
         $expected = [
             'You must provide either a branch or a pr.',
-            'Errors are only allowed if the status is non-passing.',
+            'Errors are only allowed for some status codes.',
         ];
 
         try {

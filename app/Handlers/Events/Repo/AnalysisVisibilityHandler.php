@@ -33,6 +33,6 @@ class AnalysisVisibilityHandler
             return;
         }
 
-        $event->repo->analyses()->visible()->where('branch', $event->data['ref'])->update(['hidden' => 1]);
+        $event->repo->analyses()->visible()->where('branch', $event->data['ref'])->update(['hidden' => true]);
     }
 }
