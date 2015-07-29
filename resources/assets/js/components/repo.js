@@ -79,21 +79,21 @@ var RepoList = Vue.extend({
             this.isLoading = true;
             this.getAnalyses();
         },
+        pageBackward: function() {
+            if (this.currentPage == 1) {
+                return;
+            }
+
+            this.currentPage--;
+            this.isLoading = true;
+            this.getAnalyses();
+        },
         pageForward: function() {
             if (this.totalPages <= this.currentPage) {
                 return;
             }
 
             this.currentPage++;
-            this.isLoading = true;
-            this.getAnalyses();
-        },
-        pageBackward: function() {
-            if (this.totalPages > this.currentPage) {
-                return;
-            }
-
-            this.currentPage--;
             this.isLoading = true;
             this.getAnalyses();
         },
