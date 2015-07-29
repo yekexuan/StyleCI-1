@@ -12,6 +12,8 @@
 namespace StyleCI\StyleCI\Handlers\Jobs\Analysis;
 
 use Exception;
+use Gitonomy\Git\Exception\GitExceptionInterface as GitonomyException;
+use GitWrapper\GitException as GitWrapperException;
 use StyleCI\Config\Exceptions\ConfigExceptionInterface;
 use StyleCI\Fixer\ReportBuilder;
 use StyleCI\Git\Exceptions\GitExceptionInterface;
@@ -83,6 +85,10 @@ class RunAnalysisJobHandler
             $analysis->status = Analysis::CONFIG_ISSUES;
             $analysis->error = $e->getMessage();
         } catch (GitExceptionInterface $e) {
+            $analysis->status = Analysis::ACCESS_ISSUES;
+        } catch (GitonomyException $e) {
+            $analysis->status = Analysis::ACCESS_ISSUES;
+        } catch (GitWrapperException $e) {
             $analysis->status = Analysis::ACCESS_ISSUES;
         } catch (Exception $e) {
             $analysis->status = Analysis::INTERNAL;
