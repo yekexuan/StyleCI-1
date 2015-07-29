@@ -129,7 +129,7 @@ class RunAnalysisJobHandler
             $analysis->status = Analysis::SYNTAX_ISSUES;
             $analysis->errors = $lints;
         } elseif (!$successful && $lints) {
-            $analysis->status = Analysis::BOTH_ISSUES5;
+            $analysis->status = Analysis::BOTH_ISSUES;
             $analysis->errors = $lints;
         } elseif ($successful && !$lints) {
             $analysis->status = Analysis::PASSED;
