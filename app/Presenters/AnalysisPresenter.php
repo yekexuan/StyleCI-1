@@ -11,6 +11,7 @@
 
 namespace StyleCI\StyleCI\Presenters;
 
+use Gitonomy\Git\Parser\DiffParser;
 use Illuminate\Contracts\Support\Arrayable;
 use McCool\LaravelAutoPresenter\BasePresenter;
 use StyleCI\Storage\Stores\StoreInterface;
@@ -38,8 +39,8 @@ use Vinkla\Hashids\Facades\Hashids;
  * @property string        $github_link
  * @property string        $time_ago
  * @property string        $created_at_iso
- * @property string|null   $raw_diff
  * @property bool          $has_diff
+ * @property string|null   $raw_diff
  * @property Diff          $diff
  *
  * @author Graham Campbell <graham@alt-three.com>
@@ -239,7 +240,7 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     }
 
     /**
-     * Get the diff split up to files.
+     * Get the diff in a usable form.
      *
      * @return \StyleCI\StyleCI\Presenters\Diff
      */
@@ -247,13 +248,15 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     {
         $diff = $this->raw_diff();
 
-        if (!is_string($diff)) {
-            $diff = '';
-        } else {
-            $diff = ltrim($diff);
+        if (!$diff) {
+            return [];
         }
 
-        return new Diff($diff);
+        $parser = new DiffParser();
+
+        $parser->parse($diff);
+
+        return new Diff($parser->files);
     }
 
     /**

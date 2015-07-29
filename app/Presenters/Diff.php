@@ -13,9 +13,10 @@ namespace StyleCI\StyleCI\Presenters;
 
 use ArrayAccess;
 use Countable;
+use Gitonomy\Git\Diff\FileChange;
 
 /**
- * This is the commit diff class.
+ * This is the diff class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
@@ -23,7 +24,7 @@ use Countable;
 class Diff implements ArrayAccess, Countable
 {
     /**
-     * The split up diff files.
+     * The diff files.
      *
      * @var string[]
      */
@@ -46,45 +47,55 @@ class Diff implements ArrayAccess, Countable
     /**
      * Creates a new diff instance.
      *
-     * @param string $diff
+     * @param \Gitonomy\Git\Diff\File[] $files
      *
      * @return void
      */
-    public function __construct($diff)
+    public function __construct(array $files)
     {
-        // We first get the original and modified file names from the diff.
-        preg_match_all('/\-\-\-\sa\/(.*?.*)/i', $diff, $originalNames);
-        preg_match_all('/\+\+\+\sb\/(.*?.*)/i', $diff, $modifiedNames);
+        $files = array_filter($files, function ($file) {
+            return !$file->isBinary();
+        });
 
-        // Then we count the additions and deletions from the diff.
-        preg_match_all('/^\+[^\+]/im', $diff, $additions);
-        preg_match_all('/^\-[^\-]/im', $diff, $deletions);
+        foreach ($files as $file) {
+            $this->additions += $file->getAdditions();
+            $this->deletions += $file->getDeletions();
 
-        $this->additions = count($additions[0]);
-        $this->deletions = count($deletions[0]);
-
-        $fileNames = [];
-
-        // If the file name was modified we show the change.
-        foreach ($originalNames[1] as $key => $originalName) {
-            if ($originalName !== $modifiedNames[1][$key]) {
-                $fileNames[] = $originalName.' -> '.$modifiedNames[1][$key];
+            if ($file->isRename()) {
+                $name = $file->getOldName().' -> '.$file->getNewName();
+            } elseif ($file->isDeletion()) {
+                $name = $file->getOldName();
             } else {
-                $fileNames[] = $originalName;
+                $name = $file->getNewName();
             }
-        }
 
-        // Then we split the diff into files.
-        $extractedFiles = preg_split("/(^\s*?diff --git)/m", $diff, -1, PREG_SPLIT_NO_EMPTY);
+            $all = [];
 
-        // Match file names with files.
-        foreach ($extractedFiles as $index => $file) {
-            $this->files[$fileNames[$index]] = 'diff --git '.$file;
+            foreach ($file->getChanges() as $change) {
+                foreach ($change->getLines() as $line) {
+                    switch ($line[0]) {
+                        case FileChange::LINE_REMOVE:
+                            $content = '-';
+                            break;
+                        case FileChange::LINE_ADD:
+                            $content = '+';
+                            break;
+                        default:
+                            $content = ' ';
+                    }
+
+                    $all[] = $content.$line[1];
+                }
+
+                $all[] = '';
+            }
+
+            $this->files[$name] = ltrim(implode("\n", $all), "\n");
         }
     }
 
     /**
-     * Get the split up commit diff files.
+     * Get the diff files.
      *
      * @return string[]
      */
@@ -94,7 +105,7 @@ class Diff implements ArrayAccess, Countable
     }
 
     /**
-     * Get the count of additions on the commit diff.
+     * Get the count of additions on the diff.
      *
      * @return int
      */
@@ -104,7 +115,7 @@ class Diff implements ArrayAccess, Countable
     }
 
     /**
-     * Get the count of deletions on the commit diff.
+     * Get the count of deletions on the diff.
      *
      * @return int
      */
@@ -114,7 +125,7 @@ class Diff implements ArrayAccess, Countable
     }
 
     /**
-     * Get the count of files on the commit diff.
+     * Get the count of files on the diff.
      *
      * @return int
      */
