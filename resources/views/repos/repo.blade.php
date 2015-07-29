@@ -71,7 +71,7 @@
         </div>
         <nav v-show="totalPages > 1">
             <ul class="pager">
-                <li class="previous" v-class="disabled: currentPage < totalPages"><a v-on="click: pageBackward()"><span aria-hidden="true">&larr;</span> Previous</a></li>
+                <li class="previous" v-class="disabled: currentPage == 1"><a v-on="click: pageBackward()"><span aria-hidden="true">&larr;</span> Previous</a></li>
                 <li class="next" v-class="disabled: currentPage >= totalPages"><a v-on="click: pageForward()">Next <span aria-hidden="true">&rarr;</span></a></li>
             </ul>
         </nav>
