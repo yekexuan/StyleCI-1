@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ec691f10b0f1be6b189cff6e96273885",
+    "hash": "d1d7679bd2be2dc0471f183090a70acd",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -69,16 +69,16 @@
         },
         {
             "name": "alt-three/validator",
-            "version": "v1.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Validator.git",
-                "reference": "ba3918cab93bf2dfe7b18c7cd789c1251784c975"
+                "reference": "01fc9ab865df38254d03c749f6a266529a2df392"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Validator/zipball/ba3918cab93bf2dfe7b18c7cd789c1251784c975",
-                "reference": "ba3918cab93bf2dfe7b18c7cd789c1251784c975",
+                "url": "https://api.github.com/repos/AltThree/Validator/zipball/01fc9ab865df38254d03c749f6a266529a2df392",
+                "reference": "01fc9ab865df38254d03c749f6a266529a2df392",
                 "shasum": ""
             },
             "require": {
@@ -93,7 +93,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -125,7 +125,7 @@
                 "logging",
                 "validator"
             ],
-            "time": "2015-07-24 12:20:30"
+            "time": "2015-07-28 23:55:40"
         },
         {
             "name": "classpreloader/classpreloader",
