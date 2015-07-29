@@ -68,3 +68,4 @@
 </sc-analysis>
 
 @include('analysis.badge')
+@stop
