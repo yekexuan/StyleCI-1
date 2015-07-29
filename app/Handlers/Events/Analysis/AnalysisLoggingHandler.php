@@ -70,19 +70,19 @@ class AnalysisLoggingHandler
     protected function logState(Analysis $analysis)
     {
         switch ($analysis->status) {
-            case Anaysis::PENDING:
+            case Analysis::PENDING:
                 $this->logger->debug('Analysis has been queued.', $this->getContext($analysis));
                 break;
-            case Anaysis::RUNNING:
+            case Analysis::RUNNING:
                 $this->logger->debug('Analysis has started running.', $this->getContext($analysis));
                 break;
-            case Anaysis::PASSED:
-            case Anaysis::CS_ISSUES:
-            case Anaysis::SYNTAX_ISSUES:
-            case Anaysis::BOTH_ISSUES:
+            case Analysis::PASSED:
+            case Analysis::CS_ISSUES:
+            case Analysis::SYNTAX_ISSUES:
+            case Analysis::BOTH_ISSUES:
                 $this->logger->debug('Analysis has completed successfully.', $this->getContext($analysis));
                 break;
-            case Anaysis::CONFIG_ISSUES:
+            case Analysis::CONFIG_ISSUES:
                 $this->logger->notice('Analysis has failed due to misconfiguration.', $this->getContext($analysis));
                 break;
             default:

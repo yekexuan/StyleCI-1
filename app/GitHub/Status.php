@@ -95,14 +95,14 @@ class Status
     protected function getState($status)
     {
         switch ($status) {
-            case Anaysis::PENDING:
-            case Anaysis::RUNNING:
+            case Analysis::PENDING:
+            case Analysis::RUNNING:
                 return 'pending';
-            case Anaysis::PASSED:
+            case Analysis::PASSED:
                 return 'success';
-            case Anaysis::CS_ISSUES:
-            case Anaysis::SYNTAX_ISSUES:
-            case Anaysis::BOTH_ISSUES:
+            case Analysis::CS_ISSUES:
+            case Analysis::SYNTAX_ISSUES:
+            case Analysis::BOTH_ISSUES:
                 return 'failure';
             default:
                 return 'error';
