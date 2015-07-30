@@ -14,6 +14,7 @@ namespace StyleCI\StyleCI\Handlers\Events\Analysis;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
 use Pusher;
 use StyleCI\StyleCI\Events\Analysis\AnalysisEventInterface;
+use StyleCI\StyleCI\Models\Repo;
 use StyleCI\StyleCI\Repositories\UserRepository;
 
 /**
@@ -81,7 +82,7 @@ class PusherStatusHandler
      *
      * @return void
      */
-    protected function trigger($repo)
+    protected function trigger(Repo $repo)
     {
         $users = $this->userRepository->collaborators($repo);
         $data = AutoPresenter::decorate($repo)->toArray();
