@@ -20,6 +20,10 @@ $code_color3: $styleci-dark-primary !default;
     padding: 2px .5em 2px 1em !important;
 }
 
+.syntaxhighlighter .nogutter .diff {
+    margin-top: 0px;
+}
+
 .syntaxhighlighter code {
     padding: 3px 0 !important;
 }
