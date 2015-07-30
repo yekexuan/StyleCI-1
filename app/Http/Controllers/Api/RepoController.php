@@ -111,6 +111,7 @@ class RepoController extends Controller
 
         return new JsonResponse(['data' => $branches]);
     }
+
     /**
      * Handles the request to show an analysis.
      *
