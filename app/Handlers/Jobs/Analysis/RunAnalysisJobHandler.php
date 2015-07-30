@@ -128,7 +128,8 @@ class RunAnalysisJobHandler
             return;
         }
 
-        $successful = $report->successful();
+        $diff = $report->diff();
+        $successful = $diff === null;
         $lints = $report->lints();
 
         if ($successful && $lints) {
@@ -144,7 +145,7 @@ class RunAnalysisJobHandler
         }
 
         if (!$successful) {
-            $this->storage->put($analysis->id, $report->diff());
+            $this->storage->put($analysis->id, $diff);
         }
     }
 }
