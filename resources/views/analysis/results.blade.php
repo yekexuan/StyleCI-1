@@ -54,7 +54,7 @@
     </div>
     <div class="panel-body">
         <pre class="brush: diff">
-            {{ $file }}
+{{ $file }}
         </pre>
     </div>
 </div>
