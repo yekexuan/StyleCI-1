@@ -40,6 +40,7 @@ class EventServiceProvider extends ServiceProvider
             'StyleCI\StyleCI\Handlers\Events\Analysis\PusherStatusHandler',
         ],
         'StyleCI\StyleCI\Events\Analysis\AnalysisWasQueuedEvent' => [
+            'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisLoggingHandler',
             'StyleCI\StyleCI\Handlers\Events\Analysis\AnalysisStatusHandler',
             'StyleCI\StyleCI\Handlers\Events\Analysis\PusherStatusHandler',
         ],
