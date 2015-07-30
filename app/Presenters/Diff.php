@@ -84,7 +84,7 @@ class Diff implements ArrayAccess, Countable
                             $content = ' ';
                     }
 
-                    $all[] = $content.($line[1] ?: ' ');
+                    $all[] = $content.$line[1];
                 }
 
                 $all[] = '  ';
