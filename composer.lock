@@ -2593,12 +2593,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "b5e2c3c904558a37751c436e2653333775d8bcc8"
+                "reference": "c31a21795ac1c148bfea101c10b97cbbce8cc01a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/b5e2c3c904558a37751c436e2653333775d8bcc8",
-                "reference": "b5e2c3c904558a37751c436e2653333775d8bcc8",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/c31a21795ac1c148bfea101c10b97cbbce8cc01a",
+                "reference": "c31a21795ac1c148bfea101c10b97cbbce8cc01a",
                 "shasum": ""
             },
             "require": {
@@ -2648,7 +2648,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-07-29 19:44:10"
+            "time": "2015-07-30 09:10:29"
         },
         {
             "name": "styleci/storage",
