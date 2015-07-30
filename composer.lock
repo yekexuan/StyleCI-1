@@ -2399,12 +2399,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "aeb56cfef45ca6b3bcf235c2b4337fcb73209008"
+                "reference": "4c1bae20eeee3de19a59f06f641c7c382be8b5bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/aeb56cfef45ca6b3bcf235c2b4337fcb73209008",
-                "reference": "aeb56cfef45ca6b3bcf235c2b4337fcb73209008",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/4c1bae20eeee3de19a59f06f641c7c382be8b5bc",
+                "reference": "4c1bae20eeee3de19a59f06f641c7c382be8b5bc",
                 "shasum": ""
             },
             "require": {
@@ -2421,7 +2421,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -2453,7 +2453,7 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-07-29 19:44:53"
+            "time": "2015-07-30 23:08:03"
         },
         {
             "name": "styleci/fixer",
@@ -2461,19 +2461,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "f8ab827ac0839fad158fd72607a2f5bc6a259ba9"
+                "reference": "1e5107ac41e77b42f40eaa186f8cbb9f16deaba9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/f8ab827ac0839fad158fd72607a2f5bc6a259ba9",
-                "reference": "f8ab827ac0839fad158fd72607a2f5bc6a259ba9",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/1e5107ac41e77b42f40eaa186f8cbb9f16deaba9",
+                "reference": "1e5107ac41e77b42f40eaa186f8cbb9f16deaba9",
                 "shasum": ""
             },
             "require": {
                 "fabpot/php-cs-fixer": "~2.0.0",
                 "php": ">=5.6.4",
                 "styleci/cache": "~1.0",
-                "styleci/config": "~1.1",
+                "styleci/config": "~2.0",
                 "styleci/git": "~2.0"
             },
             "require-dev": {
@@ -2519,7 +2519,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-30 20:49:08"
+            "time": "2015-07-30 23:08:58"
         },
         {
             "name": "styleci/git",
@@ -2527,12 +2527,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "3fb38b9c2c82bd018448b8e48be1a357dc64d13c"
+                "reference": "fb25e442015ae7a28031e74920313588b2a6ccb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/3fb38b9c2c82bd018448b8e48be1a357dc64d13c",
-                "reference": "3fb38b9c2c82bd018448b8e48be1a357dc64d13c",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/fb25e442015ae7a28031e74920313588b2a6ccb8",
+                "reference": "fb25e442015ae7a28031e74920313588b2a6ccb8",
                 "shasum": ""
             },
             "require": {
@@ -2585,7 +2585,7 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-07-30 20:48:14"
+            "time": "2015-07-30 22:33:11"
         },
         {
             "name": "styleci/login",
