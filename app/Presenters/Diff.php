@@ -87,10 +87,10 @@ class Diff implements ArrayAccess, Countable
                     $all[] = $content.$line[1];
                 }
 
-                $all[] = '  ';
+                $all[] = ' ';
             }
 
-            $this->files[$name] = "  \n".trim(implode("\n", $all), "\n\r");
+            $this->files[$name] = trim(implode("\n", $all), "\n\r");
         }
     }
 
