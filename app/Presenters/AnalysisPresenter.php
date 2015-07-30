@@ -31,6 +31,7 @@ use Vinkla\Hashids\Facades\Hashids;
  * @property string|null   $error
  * @property array|null    $errors
  * @property int           $status
+ * @property bool          $hidden
  * @property string        $summary
  * @property string        $description
  * @property string        $icon

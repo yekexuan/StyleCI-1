@@ -33,6 +33,7 @@ use StyleCI\StyleCI\Presenters\AnalysisPresenter;
  * @property string|null $error
  * @property array|null  $errors
  * @property int         $status
+ * @property bool        $hidden
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
