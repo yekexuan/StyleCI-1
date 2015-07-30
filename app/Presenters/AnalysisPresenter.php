@@ -249,8 +249,8 @@ class AnalysisPresenter extends BasePresenter implements Arrayable
     {
         $diff = $this->raw_diff();
 
-        if (!$diff) {
-            return [];
+        if (!is_string($diff)) {
+            $diff = '';
         }
 
         $parser = new DiffParser();
