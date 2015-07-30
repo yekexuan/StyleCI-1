@@ -2461,12 +2461,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "a9e428a13b24b8f8d6d0c742ce15168c9f08688c"
+                "reference": "5a7c6ee3d9aa8baed873ac0bb170dd3a20690ca3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/a9e428a13b24b8f8d6d0c742ce15168c9f08688c",
-                "reference": "a9e428a13b24b8f8d6d0c742ce15168c9f08688c",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/5a7c6ee3d9aa8baed873ac0bb170dd3a20690ca3",
+                "reference": "5a7c6ee3d9aa8baed873ac0bb170dd3a20690ca3",
                 "shasum": ""
             },
             "require": {
@@ -2519,7 +2519,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-07-29 21:10:03"
+            "time": "2015-07-30 13:36:44"
         },
         {
             "name": "styleci/git",
@@ -2593,12 +2593,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "c31a21795ac1c148bfea101c10b97cbbce8cc01a"
+                "reference": "aac26f29483c467fc456b34e2d2c656748681e17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/c31a21795ac1c148bfea101c10b97cbbce8cc01a",
-                "reference": "c31a21795ac1c148bfea101c10b97cbbce8cc01a",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/aac26f29483c467fc456b34e2d2c656748681e17",
+                "reference": "aac26f29483c467fc456b34e2d2c656748681e17",
                 "shasum": ""
             },
             "require": {
@@ -2648,7 +2648,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-07-30 09:10:29"
+            "time": "2015-07-30 13:55:57"
         },
         {
             "name": "styleci/storage",
