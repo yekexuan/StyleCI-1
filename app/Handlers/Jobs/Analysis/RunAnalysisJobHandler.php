@@ -121,6 +121,13 @@ class RunAnalysisJobHandler
             $analysis->repo->default_branch
         );
 
+        if ($report->binary()) {
+            $analysis->status = Analysis::CONFIG_ISSUES;
+            $analysis->error = 'We cannot analyze binary files. The finder config needs adjusting to exclude such files.';
+
+            return;
+        }
+
         if ($errors = $report->errors()) {
             $analysis->status = Analysis::INTERNAL;
             $analysis->errors = $errors;
