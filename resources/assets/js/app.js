@@ -26,10 +26,10 @@ $(function() {
     $.ajaxSetup({
         statusCode: {
             401: function() {
-                (new StyleCI.Notifier()).notify('Your session has expired, please login.');
+                (new StyleCI.Notifier()).notify('You need to be logged in to perform that action. Perhaps your session has expired.');
             },
             403: function() {
-                (new StyleCI.Notifier()).notify('Your session has expired, please login.');
+                (new StyleCI.Notifier()).notify('Sorry, but you don\'t have permission to perform that action.');
             }
         }
     });
