@@ -16,7 +16,7 @@
 <meta content="object" property="og:type">
 <meta content="{{ asset('img/styleci-og.png') }}" property="og:image">
 <meta content="@yield('title', 'StyleCI')" property="og:title">
-<meta content="{{ $currentUrl }}" property="og:url">
+<meta content="{{ $current_url }}" property="og:url">
 <meta content="@yield('description', 'StyleCI - The PHP Coding Style Continuous Integration Service')" property="og:description">
 
 <link href="//fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css">
