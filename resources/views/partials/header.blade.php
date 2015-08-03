@@ -4,8 +4,8 @@
 
 <meta name="styleci:token" content="{{ csrf_token() }}">
 <meta name="styleci:pusher" content="{{ env('PUSHER_APP_KEY') }}">
-@if ($currentUser)
-<meta name="styleci:user" content="{{ $currentUser->id }}">
+@if ($current_user)
+<meta name="styleci:user" content="{{ $current_user->id }}">
 @endif
 
 <meta content="summary" name="twitter:card">

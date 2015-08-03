@@ -30,6 +30,6 @@ class CurrentUrlComposer
      */
     public function compose(View $view)
     {
-        $view->with('currentUrl', URL::full());
+        $view->withCurrentUrl(URL::full());
     }
 }

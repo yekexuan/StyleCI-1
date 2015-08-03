@@ -10,9 +10,9 @@
             <a class="navbar-brand" href="{{ route('home') }}">StyleCI</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            @if($currentUser)
+            @if($current_user)
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="{{ route('account') }}">{{ $currentUser->name }}</a></li>
+                <li><a href="{{ route('account') }}">{{ $current_user->name }}</a></li>
                 <li><a href="{{ route('auth_logout') }}" data-method="POST">Logout <span class="sr-only">(current)</span></a></li>
             </ul>
             @else

@@ -1,14 +1,14 @@
 <h2>Profile</h2>
 <div class="row">
     <div class="col-md-3">
-        <img src="{{ $currentUser->gravatar }}" alt="{{ $currentUser->name }}">
+        <img src="{{ $current_user->gravatar }}" alt="{{ $current_user->name }}">
     </div>
     <div class="col-md-9">
         <dl class="profile">
             <dt>GitHub</dt>
-            <dd><a href="https://github.com/{{ $currentUser->username }}" target="_blank">{{ $currentUser->username }}</a></dd>
+            <dd><a href="https://github.com/{{ $current_user->username }}" target="_blank">{{ $current_user->username }}</a></dd>
             <dt>Email</dt>
-            <dd>{{ $currentUser->email }}</dd>
+            <dd>{{ $current_user->email }}</dd>
         </dl>
     </div>
 </div>
