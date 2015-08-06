@@ -6,9 +6,9 @@
         "font-awesome": "~4.4.0",
         "jquery": "~2.1.4",
         "jquery-timeago": "~1.4.1",
-        "lodash": "~3.10.0",
+        "lodash": "~3.10.1",
         "pusher": "~2.2.4",
         "SyntaxHighlighter": "3.0.9",
-        "vue": "~0.12.8"
+        "vue": "~0.12.9"
     }
 }
