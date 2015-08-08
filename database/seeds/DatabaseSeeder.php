@@ -9,7 +9,6 @@
  * file that was distributed with this source code.
  */
 
-use Illuminate\Database\Eloquent\Model as Eloquent;
 use Illuminate\Database\Seeder;
 
 /**
