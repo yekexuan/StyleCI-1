@@ -13,6 +13,7 @@ namespace StyleCI\StyleCI\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\View;
 use McCool\LaravelAutoPresenter\Facades\AutoPresenter;
@@ -43,6 +44,30 @@ class RepoController extends Controller
         }
 
         return View::make('repos.repo')->withRepo($repo)->withCanAnalyze($canAnalyze);
+    }
+
+    /**
+     * Handles a request to serve a shield.
+     *
+     * @param \StyleCI\StyleCI\Models\Repo $repo
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function handleShield(Repo $repo)
+    {
+        $style = Request::get('style');
+
+        if (!in_array($style, ['flat', 'flat-square', 'plastic'], true)) {
+            $style = 'flat-square';
+        }
+
+        $analysis = $repo->last_completed;
+
+        $status = $analysis ? strtolower(AutoPresenter::decorate($analysis)->summary) : 'unknown';
+
+        $data = file_get_contents(base_path("resources/assets/svg/shields/{$style}/{$status}.svg"));
+
+        return Response::make($data, 200, ['Content-Type' => 'image/svg+xml']);
     }
 
     /**

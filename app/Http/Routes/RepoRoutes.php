@@ -43,7 +43,7 @@ class RepoRoutes
 
         $router->get('repos/{repo}/shield', [
             'as'   => 'repo_shield',
-            'uses' => 'ShieldController@handle',
+            'uses' => 'RepoController@handleShield',
         ]);
 
         $router->get('analyses/{analysis}', [
