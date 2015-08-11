@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "831268f3c73bb412fb5f6c4c24f88643",
+    "hash": "ecc0421cb615def34bd0dc9c35c10c71",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -1548,16 +1548,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.9",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "2f1e0b8d7c24bb783d3a8d4fe4120ef82e5da648"
+                "reference": "dd5ec4ae1a849a86a81b0472a2d22cd1fdc5023d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/2f1e0b8d7c24bb783d3a8d4fe4120ef82e5da648",
-                "reference": "2f1e0b8d7c24bb783d3a8d4fe4120ef82e5da648",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/dd5ec4ae1a849a86a81b0472a2d22cd1fdc5023d",
+                "reference": "dd5ec4ae1a849a86a81b0472a2d22cd1fdc5023d",
                 "shasum": ""
             },
             "require": {
@@ -1672,7 +1672,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-08-05 12:51:18"
+            "time": "2015-08-09 16:57:44"
         },
         {
             "name": "league/flysystem",
@@ -1819,16 +1819,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.15.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0"
+                "reference": "c0c0b4bee3aabce7182876b0d912ef2595563db7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/dc5150cc608f2334c72c3b6a553ec9668a4156b0",
-                "reference": "dc5150cc608f2334c72c3b6a553ec9668a4156b0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c0c0b4bee3aabce7182876b0d912ef2595563db7",
+                "reference": "c0c0b4bee3aabce7182876b0d912ef2595563db7",
                 "shasum": ""
             },
             "require": {
@@ -1865,7 +1865,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.15.x-dev"
+                    "dev-master": "1.16.x-dev"
                 }
             },
             "autoload": {
@@ -1891,7 +1891,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2015-07-12 13:54:09"
+            "time": "2015-08-09 17:44:44"
         },
         {
             "name": "mrclay/minify",
@@ -4766,16 +4766,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.8.2",
+            "version": "4.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "748c6963c0a8c983fa69ee8884c885d0e98209bf"
+                "reference": "fd3050e26e3105f416d74c4d33aea659b406c59d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/748c6963c0a8c983fa69ee8884c885d0e98209bf",
-                "reference": "748c6963c0a8c983fa69ee8884c885d0e98209bf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/fd3050e26e3105f416d74c4d33aea659b406c59d",
+                "reference": "fd3050e26e3105f416d74c4d33aea659b406c59d",
                 "shasum": ""
             },
             "require": {
@@ -4834,7 +4834,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-08-07 12:56:50"
+            "time": "2015-08-10 09:16:56"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
