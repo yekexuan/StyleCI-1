@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ecc0421cb615def34bd0dc9c35c10c71",
+    "hash": "2d07bab879d13cfc0c13a71b5e5d8fab",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -398,12 +398,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "4c9ab01470549a1f559f628f569ddf24fc785e02"
+                "reference": "e270728b53ee620dcc59b0b9468f7779b48e0e9f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/4c9ab01470549a1f559f628f569ddf24fc785e02",
-                "reference": "4c9ab01470549a1f559f628f569ddf24fc785e02",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/e270728b53ee620dcc59b0b9468f7779b48e0e9f",
+                "reference": "e270728b53ee620dcc59b0b9468f7779b48e0e9f",
                 "shasum": ""
             },
             "require": {
@@ -451,7 +451,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/PHP-CS-Fixer/tree/master"
             },
-            "time": "2015-07-31 23:09:16"
+            "time": "2015-09-04 10:40:03"
         },
         {
             "name": "fideloper/proxy",
@@ -1548,16 +1548,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.15",
+            "version": "v5.1.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "231b5ee6d8439edb5f7d45da00fd31d915bdf6f0"
+                "reference": "76a9816f37a58383f6ba093ccf08f253e5488555"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/231b5ee6d8439edb5f7d45da00fd31d915bdf6f0",
-                "reference": "231b5ee6d8439edb5f7d45da00fd31d915bdf6f0",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/76a9816f37a58383f6ba093ccf08f253e5488555",
+                "reference": "76a9816f37a58383f6ba093ccf08f253e5488555",
                 "shasum": ""
             },
             "require": {
@@ -1672,7 +1672,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-09-03 16:00:33"
+            "time": "2015-08-30 23:25:48"
         },
         {
             "name": "league/flysystem",
@@ -2396,16 +2396,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v2.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "b0696d1ca5374bc56ee0da2c9b00ccc17c3763eb"
+                "reference": "bba90104106fd94326578ab6bf83bbf90eb2b2d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/b0696d1ca5374bc56ee0da2c9b00ccc17c3763eb",
-                "reference": "b0696d1ca5374bc56ee0da2c9b00ccc17c3763eb",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/bba90104106fd94326578ab6bf83bbf90eb2b2d3",
+                "reference": "bba90104106fd94326578ab6bf83bbf90eb2b2d3",
                 "shasum": ""
             },
             "require": {
@@ -2422,7 +2422,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
@@ -2454,27 +2454,27 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-08-01 12:50:08"
+            "time": "2015-09-04 10:44:46"
         },
         {
             "name": "styleci/fixer",
-            "version": "v2.0.2",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "3d67458452dd58330d605651fe6469b3b4718d74"
+                "reference": "98c2a41e6c44b1fe09ea9143a0512ea85df400d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/3d67458452dd58330d605651fe6469b3b4718d74",
-                "reference": "3d67458452dd58330d605651fe6469b3b4718d74",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/98c2a41e6c44b1fe09ea9143a0512ea85df400d2",
+                "reference": "98c2a41e6c44b1fe09ea9143a0512ea85df400d2",
                 "shasum": ""
             },
             "require": {
                 "fabpot/php-cs-fixer": "~2.0.0",
                 "php": ">=5.6.4",
                 "styleci/cache": "~1.1",
-                "styleci/config": "~2.0",
+                "styleci/config": "~2.1",
                 "styleci/git": "~2.0"
             },
             "require-dev": {
@@ -2487,7 +2487,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
@@ -2520,7 +2520,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-08-26 15:30:44"
+            "time": "2015-09-04 10:57:04"
         },
         {
             "name": "styleci/git",
