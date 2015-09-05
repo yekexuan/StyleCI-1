@@ -62,6 +62,7 @@ class DeleteAccountCommandHandler
                 $this->dispatch(new DisableRepoCommand($repo));
             } catch (Exception $e) {
                 $this->logger->error($e);
+                $repo->delete();
             }
         }
 
