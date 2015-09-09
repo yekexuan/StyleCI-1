@@ -9,13 +9,13 @@
 @endif
 
 <meta content="summary" name="twitter:card">
-<meta content="@yield('title', 'StyleCI')" name="twitter:title">
+<meta content="{{ $__env->yieldContent('title') }}" name="twitter:title">
 <meta content="@yield('description', 'StyleCI - The PHP Coding Style Continuous Integration Service')" name="twitter:description">
 <meta content="{{ asset('img/styleci-og.png') }}" name="twitter:image:src">
 <meta content="StyleCI" property="og:site_name">
 <meta content="object" property="og:type">
 <meta content="{{ asset('img/styleci-og.png') }}" property="og:image">
-<meta content="@yield('title', 'StyleCI')" property="og:title">
+<meta content="{{ $__env->yieldContent('title') }}" property="og:title">
 <meta content="{{ $current_url }}" property="og:url">
 <meta content="@yield('description', 'StyleCI - The PHP Coding Style Continuous Integration Service')" property="og:description">
 
