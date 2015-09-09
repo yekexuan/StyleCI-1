@@ -61,7 +61,7 @@
 
 <p>Subscriber is solely responsible for maintaining the security of Subscriber's servers that are created via the StyleCI service.</p>
 
-<p>Any security vulnerabilities that you may find must be immediately reported to <a href="mailto:support@alt-three.com?subject=Security">support@alt-three.com</a></p>
+<p>Any security vulnerabilities that you may find must be immediately reported to <a href="mailto:support@alt-three.com?subject=StyleCI%20Security">support@alt-three.com</a></p>
 
 <h3>Warranty Disclaimer</h3>
 
