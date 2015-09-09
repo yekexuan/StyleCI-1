@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c55f3ef7d1e65208e59464a89f24cbe0",
+    "hash": "ec335e70271b81007e9e297832cdd0f6",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -2590,16 +2590,16 @@
         },
         {
             "name": "styleci/login",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "aac26f29483c467fc456b34e2d2c656748681e17"
+                "reference": "4355de688ce507b92f1046b92fb5bda000c28878"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/aac26f29483c467fc456b34e2d2c656748681e17",
-                "reference": "aac26f29483c467fc456b34e2d2c656748681e17",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/4355de688ce507b92f1046b92fb5bda000c28878",
+                "reference": "4355de688ce507b92f1046b92fb5bda000c28878",
                 "shasum": ""
             },
             "require": {
@@ -2649,7 +2649,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-07-30 13:55:57"
+            "time": "2015-09-09 16:52:12"
         },
         {
             "name": "styleci/storage",
