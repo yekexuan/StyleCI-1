@@ -3,7 +3,7 @@
     Sync with GitHub
 </a>
 <h2>Repos</h2>
-<p>We're showing all your <i>public</i> repos we have access to.</p><br>
+<p class="separate">We're showing all your <i>public</i> repos we have access to.</p>
 <div v-show="isLoading" class="loading text-center">
     <h3><i class="fa fa-circle-o-notch fa-spin"></i> Fetching your repos...</h3>
 </div>

@@ -27,9 +27,10 @@
             <hr>
             <div class="row">
                 <div class="col-sm-12">
-                    <h3>{{ $analysis->message }}</h3>
-                    <p>{{ $analysis->commit }}</p>
-                    <br>
+                    <div class="analysis-result-message">
+                        <h3>{{ $analysis->message }}</h3>
+                        <p>{{ $analysis->commit }}</p>
+                    </div>
                     <ul class="list-inline hide" id="status-buttons">
                         <li id="view-time">
                             <span>

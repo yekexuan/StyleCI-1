@@ -8,8 +8,12 @@
     }
 }
 
-.analysis-alert {
-    margin-bottom: 20px
+.analysis-result-message, .analysis-alert {
+    margin-bottom: 20px;
+}
+
+.analysis-diff-summary {
+    margin: 20px 0;
 }
 
 .status-green {
