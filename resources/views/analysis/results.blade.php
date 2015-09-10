@@ -42,11 +42,10 @@
 
 @if ($analysis->has_diff)
 <hr>
-<p>
+<div class="analysis-diff-summary">
     <i class="fa fa-file-code-o"></i>
     <small>Showing <b>{{ $analysis->diff->count() }} changed files</b> with <b>{{ $analysis->diff->additions() }} additions</b> and <b>{{ $analysis->diff->deletions() }} deletions</b>.</small>
-</p>
-<br>
+</div>
 @foreach ($analysis->diff->files() as $name => $file)
 <div class="panel panel-default">
     <div class="panel-heading">
