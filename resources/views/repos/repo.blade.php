@@ -50,7 +50,6 @@
                          v-class="bg-success: analysis.status === 2, bg-danger: analysis.status > 2">
                         <div class="col-sm-7">
                             <strong class="separate">@{{ analysis.message }}</strong>
-                            <br>
                             <small class="js-time-ago" title="@{{ analysis.created_at_iso }}">@{{ analysis.time_ago }}</small>
                         </div>
                         <div class="col-sm-1">
