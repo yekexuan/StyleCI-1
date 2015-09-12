@@ -54,8 +54,6 @@ class RepoController extends Controller
     {
         $repos = app(RepoRepository::class)->allByUser(Auth::user());
 
-        $repos->load('last_analysis');
-
         return new JsonResponse(['data' => AutoPresenter::decorate($repos)->toArray()]);
     }
 
