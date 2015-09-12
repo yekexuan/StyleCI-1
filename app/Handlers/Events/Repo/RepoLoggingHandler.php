@@ -32,7 +32,7 @@ class RepoLoggingHandler
     protected $logger;
 
     /**
-     * Create a new analysis logging handler instance.
+     * Create a new repo logging handler instance.
      *
      * @param \Psr\Log\LoggerInterface $logger
      *
