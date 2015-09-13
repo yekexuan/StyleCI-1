@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ec335e70271b81007e9e297832cdd0f6",
+    "hash": "1b6ac5461e270e1feef8cf24e03a6c66",
+    "content-hash": "2f8d60141e0350e1501c30271dcc9c6c",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -398,12 +399,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "e270728b53ee620dcc59b0b9468f7779b48e0e9f"
+                "reference": "ce27ebdf957e62fd03b51626d45231102dbfd802"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/e270728b53ee620dcc59b0b9468f7779b48e0e9f",
-                "reference": "e270728b53ee620dcc59b0b9468f7779b48e0e9f",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/ce27ebdf957e62fd03b51626d45231102dbfd802",
+                "reference": "ce27ebdf957e62fd03b51626d45231102dbfd802",
                 "shasum": ""
             },
             "require": {
@@ -451,7 +452,7 @@
             "support": {
                 "source": "https://github.com/StyleCI/PHP-CS-Fixer/tree/master"
             },
-            "time": "2015-09-04 10:40:03"
+            "time": "2015-09-13 10:37:09"
         },
         {
             "name": "fideloper/proxy",
@@ -2396,16 +2397,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "dev-master",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "bba90104106fd94326578ab6bf83bbf90eb2b2d3"
+                "reference": "9d2a9a9077d49ce9409868577f3e7e704fc8fda5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/bba90104106fd94326578ab6bf83bbf90eb2b2d3",
-                "reference": "bba90104106fd94326578ab6bf83bbf90eb2b2d3",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/9d2a9a9077d49ce9409868577f3e7e704fc8fda5",
+                "reference": "9d2a9a9077d49ce9409868577f3e7e704fc8fda5",
                 "shasum": ""
             },
             "require": {
@@ -2454,20 +2455,20 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-09-04 10:44:46"
+            "time": "2015-09-13 11:51:35"
         },
         {
             "name": "styleci/fixer",
-            "version": "dev-master",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "98c2a41e6c44b1fe09ea9143a0512ea85df400d2"
+                "reference": "1343fd398f27a42c907a6cf5113fb90e0ca131f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/98c2a41e6c44b1fe09ea9143a0512ea85df400d2",
-                "reference": "98c2a41e6c44b1fe09ea9143a0512ea85df400d2",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/1343fd398f27a42c907a6cf5113fb90e0ca131f2",
+                "reference": "1343fd398f27a42c907a6cf5113fb90e0ca131f2",
                 "shasum": ""
             },
             "require": {
@@ -2520,7 +2521,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-09-04 10:57:04"
+            "time": "2015-09-13 12:03:07"
         },
         {
             "name": "styleci/git",
@@ -2590,16 +2591,16 @@
         },
         {
             "name": "styleci/login",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "4355de688ce507b92f1046b92fb5bda000c28878"
+                "reference": "a33097d1e40c90a334185596bfc61aa433575df8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/4355de688ce507b92f1046b92fb5bda000c28878",
-                "reference": "4355de688ce507b92f1046b92fb5bda000c28878",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/a33097d1e40c90a334185596bfc61aa433575df8",
+                "reference": "a33097d1e40c90a334185596bfc61aa433575df8",
                 "shasum": ""
             },
             "require": {
@@ -2616,7 +2617,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -2649,7 +2650,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-09-09 16:52:12"
+            "time": "2015-09-13 11:45:46"
         },
         {
             "name": "styleci/storage",
@@ -2773,13 +2774,13 @@
             "version": "v2.7.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Console.git",
-                "reference": "9ff9032151186bd66ecee727d728f1319f52d1d8"
+                "url": "git@github.com:symfony/Console.git",
+                "reference": "f1f7376766394f409b9b33a57a5675a52f8aad93"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/9ff9032151186bd66ecee727d728f1319f52d1d8",
-                "reference": "9ff9032151186bd66ecee727d728f1319f52d1d8",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/f1f7376766394f409b9b33a57a5675a52f8aad93",
+                "reference": "f1f7376766394f409b9b33a57a5675a52f8aad93",
                 "shasum": ""
             },
             "require": {
@@ -5214,7 +5215,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^5.6.4"
+        "php": ">=5.6.4"
     },
     "platform-dev": []
 }
