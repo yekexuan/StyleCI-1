@@ -17,14 +17,15 @@ use McCool\LaravelAutoPresenter\BasePresenter;
 /**
  * This is the user presenter class.
  *
- * @property int        $id
- * @property string     $name
- * @property string     $username
- * @property string     $email
- * @property string     $token
- * @property Collection $repos
- * @property string     $gravatar
- * @property string     $first_name
+ * @property int         $id
+ * @property string      $name
+ * @property string      $username
+ * @property string      $email
+ * @property string      $token
+ * @property Collection  $repos
+ * @property string      $gravatar
+ * @property string      $first_name
+ * @property string|null $last_name
  *
  * @author Graham Campbell <graham@alt-three.com>
  * @author Joseph Cohen <joe@alt-three.com>
@@ -50,6 +51,20 @@ class UserPresenter extends BasePresenter
      */
     protected function first_name()
     {
-        return explode(' ', $this->wrappedObject->name)[0];
+        $names = preg_split('/\s+/', $this->wrappedObject->name, 2);
+
+        return $names[0];
+    }
+
+    /**
+     * Get the user's last name(s).
+     *
+     * @return string|null
+     */
+    protected function last_name()
+    {
+        $names = preg_split('/\s+/', $this->wrappedObject->name, 2);
+
+        return isset($names[1]) ? $names[1] : null;
     }
 }
