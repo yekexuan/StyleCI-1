@@ -34,7 +34,7 @@
         "graham-campbell/core": "^4.1",
         "graham-campbell/github": "^4.0",
         "graham-campbell/htmlmin": "^4.0",
-        "guzzlehttp/guzzle": "^6.0.2",
+        "guzzlehttp/guzzle": "^6.1",
         "mccool/laravel-auto-presenter": "^4.0",
         "styleci/fixer": "^2.2",
         "styleci/login": "^1.2",
