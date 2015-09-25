@@ -12,6 +12,13 @@
 </p>
 
 
+## Notice
+
+In order for us to provide a free hosted service for open source repos, https://styleci.io/, we had to make a private vesion of this repo in order to add private repo support, billing, and other new features. This repo itself isn't actually used in production anymore. The last vesion of this repo to be used in production was v0.3.2-alpha.
+
+This repo will remain somewhat maintained, but will not be receiving any new features as of v1.1.0. All other repositories in the StyleCI organization on GitHub are used in production, and will remain actively maintained and will continue to receive new features.
+
+
 ## Documentation
 
 Full documentation for our hosted service https://styleci.io/ is available at https://styleci.readme.io/.
