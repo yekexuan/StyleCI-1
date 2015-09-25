@@ -27,6 +27,7 @@ class WebTest extends AbstractTestCase
         $this->assertResponseOk();
 
         $this->see('The PHP Coding Style Continuous Integration Service');
+        $this->see('Login with GitHub');
     }
 
     public function testCanLoadPrivacy()
@@ -47,12 +48,44 @@ class WebTest extends AbstractTestCase
         $this->see('Terms of Service');
     }
 
-    public function testCanLoadNotFound()
+    public function testCanLoadGenericNotFound()
     {
         $this->get('/foo');
 
         $this->assertResponseStatus(404);
 
         $this->see('Error 404');
+        $this->see('Houston, We Have A Problem.');
+    }
+
+    public function testAuthLoginWithBadMethod()
+    {
+        $this->get('/auth/login');
+
+        $this->assertResponseStatus(405);
+
+        $this->see('Error 405');
+        $this->see('Houston, We Have A Problem.');
+    }
+
+    public function testAuthLoginWithBadToken()
+    {
+        $this->post('/auth/login');
+
+        $this->assertResponseStatus(400);
+
+        $this->see('Error 400');
+        $this->see('CSRF token validation failed.');
+        $this->dontSee('Houston, We Have A Problem.');
+    }
+
+    public function testAccountPageWithoutAuth()
+    {
+        $this->get('/account');
+
+        $this->assertResponseStatus(401);
+
+        $this->see('Error 401');
+        $this->see('Houston, We Have A Problem.');
     }
 }
