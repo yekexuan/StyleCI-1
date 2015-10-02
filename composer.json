@@ -78,6 +78,9 @@
         ]
     },
     "config": {
+        "platform": {
+            "php": "5.6.4"
+        },
         "preferred-install": "dist"
     },
     "extra": {

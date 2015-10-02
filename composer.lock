@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e1488507580df36b7c2304fbcc5f1c6d",
-    "content-hash": "31f3c4b98e0ca57873ffa5635e03490f",
+    "hash": "6be0099d52f2bdc2ff9c231dceff127d",
+    "content-hash": "3bebda0803882cf0be4e1af5c32c5f77",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -1616,16 +1616,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.14",
+            "version": "1.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "202c7775d959f377e2e302d93e7127c47604438a"
+                "reference": "31525caf9e8772683672fefd8a1ca0c0736020f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/202c7775d959f377e2e302d93e7127c47604438a",
-                "reference": "202c7775d959f377e2e302d93e7127c47604438a",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/31525caf9e8772683672fefd8a1ca0c0736020f4",
+                "reference": "31525caf9e8772683672fefd8a1ca0c0736020f4",
                 "shasum": ""
             },
             "require": {
@@ -1696,7 +1696,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2015-09-22 19:18:28"
+            "time": "2015-09-30 22:26:59"
         },
         {
             "name": "mccool/laravel-auto-presenter",
@@ -4566,16 +4566,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "dev-master",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "12259bb1352612df9ec24048714a3bedafe79674"
+                "reference": "86e0dafb0e6c5165cce7b3b6892807d07504baa0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/12259bb1352612df9ec24048714a3bedafe79674",
-                "reference": "12259bb1352612df9ec24048714a3bedafe79674",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/86e0dafb0e6c5165cce7b3b6892807d07504baa0",
+                "reference": "86e0dafb0e6c5165cce7b3b6892807d07504baa0",
                 "shasum": ""
             },
             "require": {
@@ -4624,7 +4624,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-09-24 07:56:07"
+            "time": "2015-10-01 06:48:20"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -4806,16 +4806,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.1.x-dev",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "f5a53874bacceb3c865fd05fe0c86c52a774a44a"
+                "reference": "6ecca4cb735fd3b65061c168bbbaa185f7f4d133"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f5a53874bacceb3c865fd05fe0c86c52a774a44a",
-                "reference": "f5a53874bacceb3c865fd05fe0c86c52a774a44a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6ecca4cb735fd3b65061c168bbbaa185f7f4d133",
+                "reference": "6ecca4cb735fd3b65061c168bbbaa185f7f4d133",
                 "shasum": ""
             },
             "require": {
@@ -4850,7 +4850,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.1.x-dev"
+                    "dev-master": "5.0.x-dev"
                 }
             },
             "autoload": {
@@ -4876,20 +4876,20 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-09-24 07:27:12"
+            "time": "2015-10-02 09:39:09"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "dev-master",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "4f526b7e2c42cacf32c86e1e0c9ab9d3b24273cf"
+                "reference": "b66bfd55201aa33e8096d8c9bcb762361521c301"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/4f526b7e2c42cacf32c86e1e0c9ab9d3b24273cf",
-                "reference": "4f526b7e2c42cacf32c86e1e0c9ab9d3b24273cf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/b66bfd55201aa33e8096d8c9bcb762361521c301",
+                "reference": "b66bfd55201aa33e8096d8c9bcb762361521c301",
                 "shasum": ""
             },
             "require": {
@@ -4932,7 +4932,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-09-02 07:30:58"
+            "time": "2015-10-01 06:43:55"
         },
         {
             "name": "sebastian/comparator",
@@ -5220,7 +5220,7 @@
         },
         {
             "name": "sebastian/resource-operations",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/resource-operations.git",
@@ -5304,5 +5304,8 @@
     "platform": {
         "php": ">=5.6.4"
     },
-    "platform-dev": []
+    "platform-dev": [],
+    "platform-overrides": {
+        "php": "5.6.4"
+    }
 }
