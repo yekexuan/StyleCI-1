@@ -1,5 +1,0 @@
-{
-    "cssOutput": "public/dist/css",
-    "jsOutput": "public/dist/js",
-    "production": true
-}
