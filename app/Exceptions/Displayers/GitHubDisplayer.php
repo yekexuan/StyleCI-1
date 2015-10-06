@@ -49,10 +49,11 @@ class GitHubDisplayer extends JsonDisplayer
      *
      * @param \Exception $original
      * @param \Exception $transformed
+     * @param int        $code
      *
      * @return bool
      */
-    public function canDisplay(Exception $original, Exception $transformed)
+    public function canDisplay(Exception $original, Exception $transformed, $code)
     {
         return $this->request->is('github-callback');
     }
