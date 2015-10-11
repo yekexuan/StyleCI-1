@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3107c15c610939a44acd6b3e2199d5d0",
-    "content-hash": "5010ef4316b62e4bbc255bf4f4cd2855",
+    "hash": "3e8c98f02a4b957905892da60817c22f",
+    "content-hash": "f55ef71ac8fc9d7b33fe40ab3b03805a",
     "packages": [
         {
             "name": "alt-three/logger",
-            "version": "v1.0.1",
+            "version": "v1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Logger.git",
-                "reference": "5f54aae25e8a91ff8f30fec65f619c70ec9db27c"
+                "reference": "2a8ded9e4f8f03be0da3f30ac439a02be9ce6528"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Logger/zipball/5f54aae25e8a91ff8f30fec65f619c70ec9db27c",
-                "reference": "5f54aae25e8a91ff8f30fec65f619c70ec9db27c",
+                "url": "https://api.github.com/repos/AltThree/Logger/zipball/2a8ded9e4f8f03be0da3f30ac439a02be9ce6528",
+                "reference": "2a8ded9e4f8f03be0da3f30ac439a02be9ce6528",
                 "shasum": ""
             },
             "require": {
@@ -66,20 +66,20 @@
                 "logger",
                 "logging"
             ],
-            "time": "2015-07-24 12:19:09"
+            "time": "2015-10-06 18:42:42"
         },
         {
             "name": "alt-three/validator",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Validator.git",
-                "reference": "01fc9ab865df38254d03c749f6a266529a2df392"
+                "reference": "58445d8ecde58b781df65add69d7fec432c89738"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Validator/zipball/01fc9ab865df38254d03c749f6a266529a2df392",
-                "reference": "01fc9ab865df38254d03c749f6a266529a2df392",
+                "url": "https://api.github.com/repos/AltThree/Validator/zipball/58445d8ecde58b781df65add69d7fec432c89738",
+                "reference": "58445d8ecde58b781df65add69d7fec432c89738",
                 "shasum": ""
             },
             "require": {
@@ -126,7 +126,7 @@
                 "logging",
                 "validator"
             ],
-            "time": "2015-07-28 23:55:40"
+            "time": "2015-10-06 18:08:56"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -558,16 +558,16 @@
         },
         {
             "name": "graham-campbell/core",
-            "version": "v4.1.0",
+            "version": "v4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Core.git",
-                "reference": "5ca2ff7049be5058a1cbcf027f5f70b31892ab18"
+                "reference": "8a399ac87aa90b064859cfa56e80e874fb910c85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/5ca2ff7049be5058a1cbcf027f5f70b31892ab18",
-                "reference": "5ca2ff7049be5058a1cbcf027f5f70b31892ab18",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/8a399ac87aa90b064859cfa56e80e874fb910c85",
+                "reference": "8a399ac87aa90b064859cfa56e80e874fb910c85",
                 "shasum": ""
             },
             "require": {
@@ -579,7 +579,7 @@
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "~4.8|~5.0"
             },
             "type": "library",
             "extra": {
@@ -614,20 +614,20 @@
                 "laravel",
                 "starter"
             ],
-            "time": "2015-06-26 16:44:58"
+            "time": "2015-10-06 16:45:46"
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "v4.0.0",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "4a722d06c47dda498bc79edf67b04e285285dd5e"
+                "reference": "a62d5d189032f71e1cd97914ebb59c9a7f4b4767"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/4a722d06c47dda498bc79edf67b04e285285dd5e",
-                "reference": "4a722d06c47dda498bc79edf67b04e285285dd5e",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/a62d5d189032f71e1cd97914ebb59c9a7f4b4767",
+                "reference": "a62d5d189032f71e1cd97914ebb59c9a7f4b4767",
                 "shasum": ""
             },
             "require": {
@@ -642,12 +642,12 @@
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "~4.8|~5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "5.0-dev"
                 }
             },
             "autoload": {
@@ -679,20 +679,20 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-07-25 10:39:01"
+            "time": "2015-10-06 16:49:41"
         },
         {
             "name": "graham-campbell/flysystem",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Flysystem.git",
-                "reference": "e5eaf46e5acab7f068dc1ba6d81bf9f97016eede"
+                "reference": "98b819f284a64ec3a0f073d517b18d4ed5355170"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Flysystem/zipball/e5eaf46e5acab7f068dc1ba6d81bf9f97016eede",
-                "reference": "e5eaf46e5acab7f068dc1ba6d81bf9f97016eede",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Flysystem/zipball/98b819f284a64ec3a0f073d517b18d4ed5355170",
+                "reference": "98b819f284a64ec3a0f073d517b18d4ed5355170",
                 "shasum": ""
             },
             "require": {
@@ -717,7 +717,7 @@
                 "league/flysystem-webdav": "~1.0",
                 "league/flysystem-ziparchive": "~1.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "~4.8|~5.0"
             },
             "suggest": {
                 "league/flysystem-aws-s3-v3": "AwsS3 adapter support.",
@@ -736,7 +736,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -768,20 +768,20 @@
                 "laravel",
                 "s3"
             ],
-            "time": "2015-07-06 15:57:15"
+            "time": "2015-10-06 16:50:17"
         },
         {
             "name": "graham-campbell/github",
-            "version": "v4.0.0",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-GitHub.git",
-                "reference": "936c59babeca6fb6ff641691893f43913b1cb24c"
+                "reference": "9974d2faf78d2aa683aa716a8418686d913ebf99"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-GitHub/zipball/936c59babeca6fb6ff641691893f43913b1cb24c",
-                "reference": "936c59babeca6fb6ff641691893f43913b1cb24c",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-GitHub/zipball/9974d2faf78d2aa683aa716a8418686d913ebf99",
+                "reference": "9974d2faf78d2aa683aa716a8418686d913ebf99",
                 "shasum": ""
             },
             "require": {
@@ -794,12 +794,12 @@
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "~4.8|~5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -831,20 +831,20 @@
                 "laravel",
                 "php-github-api"
             ],
-            "time": "2015-06-26 17:47:16"
+            "time": "2015-10-06 16:52:26"
         },
         {
             "name": "graham-campbell/htmlmin",
-            "version": "v4.0.1",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-HTMLMin.git",
-                "reference": "f6d67c77f2380c9de428b501f75da8233b4bee25"
+                "reference": "870fdc0ecd36969a6752024d3642c0a3fcb4bcec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-HTMLMin/zipball/f6d67c77f2380c9de428b501f75da8233b4bee25",
-                "reference": "f6d67c77f2380c9de428b501f75da8233b4bee25",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-HTMLMin/zipball/870fdc0ecd36969a6752024d3642c0a3fcb4bcec",
+                "reference": "870fdc0ecd36969a6752024d3642c0a3fcb4bcec",
                 "shasum": ""
             },
             "require": {
@@ -860,12 +860,12 @@
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "~4.8|~5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -896,20 +896,20 @@
                 "laravel",
                 "minifier"
             ],
-            "time": "2015-08-03 13:40:32"
+            "time": "2015-10-06 16:52:44"
         },
         {
             "name": "graham-campbell/manager",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
-                "reference": "b386c08594a3e1ff7d0f3401d545460f609c6c1e"
+                "reference": "2fb1898f21107d94a30f4660e5147c5bad04c7b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/b386c08594a3e1ff7d0f3401d545460f609c6c1e",
-                "reference": "b386c08594a3e1ff7d0f3401d545460f609c6c1e",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/2fb1898f21107d94a30f4660e5147c5bad04c7b9",
+                "reference": "2fb1898f21107d94a30f4660e5147c5bad04c7b9",
                 "shasum": ""
             },
             "require": {
@@ -920,7 +920,7 @@
             "require-dev": {
                 "graham-campbell/testbench-core": "~1.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "~4.8|~5.0"
             },
             "type": "library",
             "extra": {
@@ -955,7 +955,7 @@
                 "laravel",
                 "manager"
             ],
-            "time": "2015-06-26 17:39:20"
+            "time": "2015-10-06 16:53:10"
         },
         {
             "name": "guzzle/guzzle",
@@ -1427,16 +1427,16 @@
         },
         {
             "name": "knplabs/github-api",
-            "version": "1.5.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/php-github-api.git",
-                "reference": "313d7ed61494f525ab93cfd8595ec2d398533220"
+                "reference": "832b7be695ed2733741cd5c79166b4a88fb50786"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/313d7ed61494f525ab93cfd8595ec2d398533220",
-                "reference": "313d7ed61494f525ab93cfd8595ec2d398533220",
+                "url": "https://api.github.com/repos/KnpLabs/php-github-api/zipball/832b7be695ed2733741cd5c79166b4a88fb50786",
+                "reference": "832b7be695ed2733741cd5c79166b4a88fb50786",
                 "shasum": ""
             },
             "require": {
@@ -1484,7 +1484,7 @@
                 "gist",
                 "github"
             ],
-            "time": "2015-08-20 09:44:33"
+            "time": "2015-10-11 02:38:28"
         },
         {
             "name": "laravel/framework",
@@ -1700,16 +1700,16 @@
         },
         {
             "name": "mccool/laravel-auto-presenter",
-            "version": "4.0.0",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-auto-presenter/laravel-auto-presenter.git",
-                "reference": "62078f0779436e3cc9106f84e1c9cf1e02188af9"
+                "reference": "3f1c9d3ef8a1cc5d78dea2654058145c2920f25e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-auto-presenter/laravel-auto-presenter/zipball/62078f0779436e3cc9106f84e1c9cf1e02188af9",
-                "reference": "62078f0779436e3cc9106f84e1c9cf1e02188af9",
+                "url": "https://api.github.com/repos/laravel-auto-presenter/laravel-auto-presenter/zipball/3f1c9d3ef8a1cc5d78dea2654058145c2920f25e",
+                "reference": "3f1c9d3ef8a1cc5d78dea2654058145c2920f25e",
                 "shasum": ""
             },
             "require": {
@@ -1724,12 +1724,12 @@
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "~4.8|~5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -1758,7 +1758,7 @@
                 "lpm",
                 "presenter"
             ],
-            "time": "2015-06-26 18:05:45"
+            "time": "2015-10-04 11:19:41"
         },
         {
             "name": "monolog/monolog",
@@ -3617,16 +3617,16 @@
         },
         {
             "name": "vinkla/hashids",
-            "version": "2.0.1",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vinkla/hashids.git",
-                "reference": "a2269b026b4bd8deffab9ac1536570d14f76b352"
+                "reference": "524843f5c287032573daef3273efaebdce96104f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinkla/hashids/zipball/a2269b026b4bd8deffab9ac1536570d14f76b352",
-                "reference": "a2269b026b4bd8deffab9ac1536570d14f76b352",
+                "url": "https://api.github.com/repos/vinkla/hashids/zipball/524843f5c287032573daef3273efaebdce96104f",
+                "reference": "524843f5c287032573daef3273efaebdce96104f",
                 "shasum": ""
             },
             "require": {
@@ -3639,12 +3639,12 @@
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
@@ -3675,20 +3675,20 @@
                 "obfuscate",
                 "youtube"
             ],
-            "time": "2015-07-06 10:56:44"
+            "time": "2015-10-07 06:22:42"
         },
         {
             "name": "vinkla/pusher",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vinkla/pusher.git",
-                "reference": "6267504c6ccc1aa2ff3cccd2905a91c36759fd1a"
+                "reference": "608757c2199fc00ded9c95642ad83dbff362a1c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinkla/pusher/zipball/6267504c6ccc1aa2ff3cccd2905a91c36759fd1a",
-                "reference": "6267504c6ccc1aa2ff3cccd2905a91c36759fd1a",
+                "url": "https://api.github.com/repos/vinkla/pusher/zipball/608757c2199fc00ded9c95642ad83dbff362a1c9",
+                "reference": "608757c2199fc00ded9c95642ad83dbff362a1c9",
                 "shasum": ""
             },
             "require": {
@@ -3701,12 +3701,12 @@
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
@@ -3737,7 +3737,7 @@
                 "rest",
                 "trigger"
             ],
-            "time": "2015-07-01 06:38:03"
+            "time": "2015-10-07 06:23:03"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -4245,23 +4245,23 @@
         },
         {
             "name": "graham-campbell/testbench-core",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-TestBench-Core.git",
-                "reference": "caa22f1bfdd2197443d1f74b2a607c117daa1d23"
+                "reference": "ef25bf4c8f71713a7c072aafe951b6a8d643702c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-TestBench-Core/zipball/caa22f1bfdd2197443d1f74b2a607c117daa1d23",
-                "reference": "caa22f1bfdd2197443d1f74b2a607c117daa1d23",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-TestBench-Core/zipball/ef25bf4c8f71713a7c072aafe951b6a8d643702c",
+                "reference": "ef25bf4c8f71713a7c072aafe951b6a8d643702c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "~4.8|~5.0"
             },
             "suggest": {
                 "illuminate/support": "Required to use the laravel trait.",
@@ -4301,7 +4301,7 @@
                 "testbench-core",
                 "testing"
             ],
-            "time": "2015-06-26 16:35:19"
+            "time": "2015-10-06 16:56:21"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -4415,16 +4415,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.3.1",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "95d662954e06000cdf63ec9c9f0a6c598d9c5eb9"
+                "reference": "d8093b631a31628342d0703764935f8bac2c56b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/95d662954e06000cdf63ec9c9f0a6c598d9c5eb9",
-                "reference": "95d662954e06000cdf63ec9c9f0a6c598d9c5eb9",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/d8093b631a31628342d0703764935f8bac2c56b1",
+                "reference": "d8093b631a31628342d0703764935f8bac2c56b1",
                 "shasum": ""
             },
             "require": {
@@ -4453,7 +4453,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2015-07-19 19:57:13"
+            "time": "2015-10-05 15:07:09"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -4566,16 +4566,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "86e0dafb0e6c5165cce7b3b6892807d07504baa0"
+                "reference": "c84f05be256cd7c9d2340b26f7995b4afbf8787b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/86e0dafb0e6c5165cce7b3b6892807d07504baa0",
-                "reference": "86e0dafb0e6c5165cce7b3b6892807d07504baa0",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c84f05be256cd7c9d2340b26f7995b4afbf8787b",
+                "reference": "c84f05be256cd7c9d2340b26f7995b4afbf8787b",
                 "shasum": ""
             },
             "require": {
@@ -4624,7 +4624,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-01 06:48:20"
+            "time": "2015-10-06 15:51:05"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -4806,16 +4806,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.0.2",
+            "version": "5.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "6ecca4cb735fd3b65061c168bbbaa185f7f4d133"
+                "reference": "6b3a71e90026801f6bcfd1d72cce4a06685c2637"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6ecca4cb735fd3b65061c168bbbaa185f7f4d133",
-                "reference": "6ecca4cb735fd3b65061c168bbbaa185f7f4d133",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6b3a71e90026801f6bcfd1d72cce4a06685c2637",
+                "reference": "6b3a71e90026801f6bcfd1d72cce4a06685c2637",
                 "shasum": ""
             },
             "require": {
@@ -4876,7 +4876,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-10-02 09:39:09"
+            "time": "2015-10-07 10:45:35"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5116,16 +5116,16 @@
         },
         {
             "name": "sebastian/global-state",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/global-state.git",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01"
+                "reference": "23af31f402993cfd94e99cbc4b782e9a78eb0e97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
-                "reference": "c7428acdb62ece0a45e6306f1ae85e1c05b09c01",
+                "url": "https://api.github.com/repos/sebastianbergmann/global-state/zipball/23af31f402993cfd94e99cbc4b782e9a78eb0e97",
+                "reference": "23af31f402993cfd94e99cbc4b782e9a78eb0e97",
                 "shasum": ""
             },
             "require": {
@@ -5163,7 +5163,7 @@
             "keywords": [
                 "global state"
             ],
-            "time": "2014-10-06 09:23:50"
+            "time": "2015-06-21 15:11:22"
         },
         {
             "name": "sebastian/recursion-context",
