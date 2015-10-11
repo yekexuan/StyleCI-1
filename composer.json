@@ -24,17 +24,17 @@
         "alt-three/logger": "^1.0",
         "alt-three/validator": "^1.2",
         "fideloper/proxy": "^3.0",
-        "graham-campbell/exceptions": "^4.0",
+        "graham-campbell/exceptions": "^5.0",
         "graham-campbell/core": "^4.1",
-        "graham-campbell/github": "^4.0",
-        "graham-campbell/htmlmin": "^4.0",
+        "graham-campbell/github": "^4.1",
+        "graham-campbell/htmlmin": "^4.1",
         "guzzlehttp/guzzle": "^6.1",
-        "mccool/laravel-auto-presenter": "^4.0",
+        "mccool/laravel-auto-presenter": "^4.1",
         "styleci/fixer": "^2.2",
         "styleci/login": "^1.2",
         "styleci/storage": "^1.0",
-        "vinkla/hashids": "^2.0.1",
-        "vinkla/pusher": "^2.0"
+        "vinkla/hashids": "^2.1",
+        "vinkla/pusher": "^2.1"
     },
     "require-dev": {
         "doctrine/dbal": "^2.5",
