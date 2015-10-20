@@ -76,7 +76,7 @@ class User extends Model implements AuthenticatableContract, HasPresenter
      * @var string[]
      */
     public $rules = [
-        'id'       => 'required|integer|min:1',
+        'id'       => 'required|int|min:1',
         'name'     => 'required|string|between:1,255',
         'username' => 'required|string|between:1,255',
         'email'    => 'required|string|email|between:3,254',

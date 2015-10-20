@@ -60,7 +60,7 @@ final class LoginCommand
      * @var array
      */
     public $rules = [
-        'id'       => 'required|integer|min:1',
+        'id'       => 'required|int|min:1',
         'name'     => 'required|string|between:1,255',
         'username' => 'required|string|between:1,255',
         'email'    => 'required|string|email|between:3,254',

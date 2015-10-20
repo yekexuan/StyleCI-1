@@ -54,7 +54,7 @@ final class EnableRepoCommand
      * @var array
      */
     public $rules = [
-        'id'     => 'required|integer|min:1',
+        'id'     => 'required|int|min:1',
         'name'   => 'required|string|between:3,255',
         'branch' => 'required|string|between:1,255',
     ];

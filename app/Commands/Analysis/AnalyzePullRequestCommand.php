@@ -54,7 +54,7 @@ final class AnalyzePullRequestCommand
      * @var array
      */
     public $rules = [
-        'pr'      => 'required|integer|min:1',
+        'pr'      => 'required|int|min:1',
         'commit'  => 'required|string|size:40',
         'message' => 'required|string|between:1,255',
     ];

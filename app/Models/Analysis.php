@@ -156,15 +156,15 @@ class Analysis extends Model implements HasPresenter
      * @var string[]
      */
     public $rules = [
-        'id'      => 'integer|min:1',
-        'repo_id' => 'required|integer|min:1',
+        'id'      => 'int|min:1',
+        'repo_id' => 'required|int|min:1',
         'branch'  => 'string|between:1,255',
-        'pr'      => 'integer|min:1',
+        'pr'      => 'int|min:1',
         'commit'  => 'required|string|size:40',
         'message' => 'required|string|between:1,255',
         'error'   => 'string|max:255',
         'errors'  => 'string',
-        'status'  => 'required|integer|between:0,9',
+        'status'  => 'required|int|between:0,9',
         'hidden'  => 'required|bool',
     ];
 
