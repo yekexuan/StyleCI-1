@@ -165,7 +165,7 @@ class Analysis extends Model implements HasPresenter
         'error'   => 'string|max:255',
         'errors'  => 'string',
         'status'  => 'required|integer|between:0,9',
-        'hidden'  => 'required|boolean',
+        'hidden'  => 'required|bool',
     ];
 
     /**
