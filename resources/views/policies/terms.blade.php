@@ -37,10 +37,6 @@
 
 <p>StyleCI is not responsible for any additional bank fees, interest charges, finance charges, over draft charges, or other fees resulting from charges billed by StyleCI. Currency exchange settlements will be based on agreements between you and the provider of your credit card. Pro-rated credits will not be issued for unused services when customer retains any active service.</p>
 
-<h3>Server Provider Fees</h3>
-
-<p>You agree that StyleCI is not responsible for any additional fees charged to your credit card by third-party server providers such as Laravel Forge/Envoyer, DigitalOcean, Linode, Amazon, or Rackspace.</p>
-
 <h3>Support Boundries</h3>
 
 <p>StyleCI, provides technical support to our subscribers via our e-mail support system. The following are our guidelines when providing support: StyleCI provides support related to your repos being analyzed for given standards. StyleCI does not offer technical support for application specific issues such as application configuration, programming, web or mail server configuration, or any other such issue.</p>
