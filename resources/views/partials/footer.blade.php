@@ -15,7 +15,7 @@
             <div class="col-sm-5 social-links">
                 <ul class="footer-links">
                     <li><a href="https://status.styleci.io" target="_blank">Status</a></li>
-                    <li><a href="https://twitter.com/teamstyleci" target="_blank">Twitter</a></li>
+                    <li><a href="https://twitter.com/TeamStyleCI" target="_blank">Twitter</a></li>
                     <li><a href="https://github.com/StyleCI" target="_blank">GitHub</a></li>
                     <li><a href="mailto:support@alt-three.com">Contact</a></li>
                 </ul>
