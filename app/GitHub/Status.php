@@ -86,7 +86,7 @@ class Status
     }
 
     /**
-     * Get the state of the analysis by from its status int.
+     * Get the state of the analysis by from its status integer.
      *
      * @param int $status
      *
