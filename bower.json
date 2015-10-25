@@ -9,6 +9,6 @@
         "lodash": "~3.10.1",
         "pusher": "~3.0.0",
         "SyntaxHighlighter": "3.0.9",
-        "vue": "~0.12.13"
+        "vue": "~0.12.16"
     }
 }
