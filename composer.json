@@ -30,7 +30,7 @@
         "graham-campbell/htmlmin": "^4.1",
         "guzzlehttp/guzzle": "^6.1",
         "mccool/laravel-auto-presenter": "^4.1",
-        "styleci/fixer": "^2.2",
+        "styleci/fixer": "^3.0",
         "styleci/login": "^1.2",
         "styleci/storage": "^1.0",
         "vinkla/hashids": "^2.1",
