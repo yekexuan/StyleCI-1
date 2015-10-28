@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "17249c58a22436bbd2fc7d83abc85dfd",
-    "content-hash": "e5b6988fe86ca35ccae6125aeb57b9a6",
+    "hash": "ff63cd6967e16bde1dd513004bac7f05",
+    "content-hash": "5548e39a65e343375593d3a7487b7d49",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -1488,16 +1488,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.21",
+            "version": "v5.1.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "21a3f2023c2f59dcd5dc3a0ec5d8ab4c9c2f52a9"
+                "reference": "11d9627c7cd4d12b6e884b87daa7a2f898cf54cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/21a3f2023c2f59dcd5dc3a0ec5d8ab4c9c2f52a9",
-                "reference": "21a3f2023c2f59dcd5dc3a0ec5d8ab4c9c2f52a9",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/11d9627c7cd4d12b6e884b87daa7a2f898cf54cb",
+                "reference": "11d9627c7cd4d12b6e884b87daa7a2f898cf54cb",
                 "shasum": ""
             },
             "require": {
@@ -1613,7 +1613,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-10-28 03:48:55"
+            "time": "2015-10-28 21:58:18"
         },
         {
             "name": "league/flysystem",
@@ -2448,16 +2448,16 @@
         },
         {
             "name": "styleci/fixer",
-            "version": "dev-master",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "e80af367120f025d393247f626050f0df4d33b1d"
+                "reference": "18759a7b1e042a4a4a56018921e053de8cf45e1f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/e80af367120f025d393247f626050f0df4d33b1d",
-                "reference": "e80af367120f025d393247f626050f0df4d33b1d",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/18759a7b1e042a4a4a56018921e053de8cf45e1f",
+                "reference": "18759a7b1e042a4a4a56018921e053de8cf45e1f",
                 "shasum": ""
             },
             "require": {
@@ -2510,7 +2510,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-10-28 16:08:29"
+            "time": "2015-10-28 18:09:49"
         },
         {
             "name": "styleci/git",
@@ -2643,7 +2643,7 @@
         },
         {
             "name": "styleci/php-cs-fixer",
-            "version": "dev-master",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
