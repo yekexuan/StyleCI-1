@@ -192,6 +192,7 @@ return [
         'DB'        => 'Illuminate\Support\Facades\DB',
         'Event'     => 'Illuminate\Support\Facades\Event',
         'File'      => 'Illuminate\Support\Facades\File',
+        'Gate'      => 'Illuminate\Support\Facades\Gate',
         'Form'      => 'Illuminate\Html\FormFacade',
         'Hash'      => 'Illuminate\Support\Facades\Hash',
         'Input'     => 'Illuminate\Support\Facades\Input',
