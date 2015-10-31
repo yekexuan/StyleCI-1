@@ -62,7 +62,7 @@ class GitHubController extends Controller
 
         $hash = hash_hmac($algo, Request::getContent(), $repo->token);
 
-        if (!Str::equals($hash, $sig)) {
+        if (!hash_equals((string) $hash, (string) $sig)) {
             throw new BadRequestHttpException('Request integrity validation failed.');
         }
 
