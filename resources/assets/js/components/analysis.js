@@ -9,6 +9,7 @@ var Analysis = Vue.extend({
     created: function() {
         SyntaxHighlighter.defaults.toolbar = false;
         SyntaxHighlighter.defaults.gutter = false;
+        SyntaxHighlighter.defaults['quick-code'] = false;
     },
     ready: function() {
         var $analysis = $('#analysis');
