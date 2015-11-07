@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ff63cd6967e16bde1dd513004bac7f05",
-    "content-hash": "5548e39a65e343375593d3a7487b7d49",
+    "hash": "da20c675b3327132205d05cc59c3ab43",
+    "content-hash": "0d83aa2e0caf093fe36a70c57686e0c3",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -328,16 +328,16 @@
         },
         {
             "name": "doctrine/inflector",
-            "version": "v1.0.1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604"
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/0bcb2e79d8571787f18b7eb036ed3d004908e604",
-                "reference": "0bcb2e79d8571787f18b7eb036ed3d004908e604",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
+                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
                 "shasum": ""
             },
             "require": {
@@ -349,7 +349,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -391,7 +391,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2014-12-20 21:24:13"
+            "time": "2015-11-06 14:35:42"
         },
         {
             "name": "fideloper/proxy",
@@ -508,12 +508,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gitonomy/gitlib.git",
-                "reference": "e0b0d32558ebaef2dd6c7cb7de62a0b3b4d2cfde"
+                "reference": "2e3cd227c6eaabaa3efe5ac340aec531290e759e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gitonomy/gitlib/zipball/e0b0d32558ebaef2dd6c7cb7de62a0b3b4d2cfde",
-                "reference": "e0b0d32558ebaef2dd6c7cb7de62a0b3b4d2cfde",
+                "url": "https://api.github.com/repos/gitonomy/gitlib/zipball/2e3cd227c6eaabaa3efe5ac340aec531290e759e",
+                "reference": "2e3cd227c6eaabaa3efe5ac340aec531290e759e",
                 "shasum": ""
             },
             "require": {
@@ -554,7 +554,7 @@
             ],
             "description": "Library for accessing git",
             "homepage": "http://gitonomy.com",
-            "time": "2015-10-24 09:50:40"
+            "time": "2015-11-06 15:15:13"
         },
         {
             "name": "graham-campbell/core",
@@ -1167,16 +1167,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.2.0",
+            "version": "1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "4ef919b0cf3b1989523138b60163bbcb7ba1ff7e"
+                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/4ef919b0cf3b1989523138b60163bbcb7ba1ff7e",
-                "reference": "4ef919b0cf3b1989523138b60163bbcb7ba1ff7e",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/4d0bdbe1206df7440219ce14c972aa57cc5e4982",
+                "reference": "4d0bdbe1206df7440219ce14c972aa57cc5e4982",
                 "shasum": ""
             },
             "require": {
@@ -1221,7 +1221,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2015-08-15 19:32:36"
+            "time": "2015-11-03 01:34:55"
         },
         {
             "name": "hashids/hashids",
@@ -1488,16 +1488,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.22",
+            "version": "v5.1.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "11d9627c7cd4d12b6e884b87daa7a2f898cf54cb"
+                "reference": "a4ea877d2bb6a68796b244a741594968796c1c4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/11d9627c7cd4d12b6e884b87daa7a2f898cf54cb",
-                "reference": "11d9627c7cd4d12b6e884b87daa7a2f898cf54cb",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/a4ea877d2bb6a68796b244a741594968796c1c4e",
+                "reference": "a4ea877d2bb6a68796b244a741594968796c1c4e",
                 "shasum": ""
             },
             "require": {
@@ -1613,7 +1613,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-10-28 21:58:18"
+            "time": "2015-11-03 16:32:33"
         },
         {
             "name": "league/flysystem",
@@ -1929,16 +1929,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.20.0",
+            "version": "1.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "bfd3eaba109c9a2405c92174c8e17f20c2b9caf3"
+                "reference": "7b08ec6f75791e130012f206e3f7b0e76e18e3d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bfd3eaba109c9a2405c92174c8e17f20c2b9caf3",
-                "reference": "bfd3eaba109c9a2405c92174c8e17f20c2b9caf3",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/7b08ec6f75791e130012f206e3f7b0e76e18e3d7",
+                "reference": "7b08ec6f75791e130012f206e3f7b0e76e18e3d7",
                 "shasum": ""
             },
             "require": {
@@ -1946,12 +1946,12 @@
                 "symfony/translation": "~2.6|~3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.0"
+                "phpunit/phpunit": "~4.0|~5.0"
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Carbon": "src"
+                "psr-4": {
+                    "Carbon\\": "src/Carbon/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1972,7 +1972,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2015-06-25 04:19:39"
+            "time": "2015-11-04 20:07:17"
         },
         {
             "name": "nikic/php-parser",
@@ -2386,16 +2386,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "7f2183b1ae5f607e37901657f846160eca431b7f"
+                "reference": "4e0029dfebc19f52ba98ad6da94334b4142ec005"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/7f2183b1ae5f607e37901657f846160eca431b7f",
-                "reference": "7f2183b1ae5f607e37901657f846160eca431b7f",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/4e0029dfebc19f52ba98ad6da94334b4142ec005",
+                "reference": "4e0029dfebc19f52ba98ad6da94334b4142ec005",
                 "shasum": ""
             },
             "require": {
@@ -2412,7 +2412,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -2444,28 +2444,28 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-09-23 13:37:16"
+            "time": "2015-11-07 11:22:59"
         },
         {
             "name": "styleci/fixer",
-            "version": "v3.0.0",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "18759a7b1e042a4a4a56018921e053de8cf45e1f"
+                "reference": "7263d4d01cf2b24562a5816114e0871f72108984"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/18759a7b1e042a4a4a56018921e053de8cf45e1f",
-                "reference": "18759a7b1e042a4a4a56018921e053de8cf45e1f",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/7263d4d01cf2b24562a5816114e0871f72108984",
+                "reference": "7263d4d01cf2b24562a5816114e0871f72108984",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.4",
                 "styleci/cache": "~1.1",
-                "styleci/config": "~2.2",
+                "styleci/config": "~2.3",
                 "styleci/git": "~2.0",
-                "styleci/php-cs-fixer": "~1.1.0"
+                "styleci/php-cs-fixer": "~1.2.0"
             },
             "require-dev": {
                 "graham-campbell/testbench": "~3.0",
@@ -2477,7 +2477,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "3.1-dev"
                 }
             },
             "autoload": {
@@ -2510,7 +2510,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-10-28 18:09:49"
+            "time": "2015-11-07 11:29:53"
         },
         {
             "name": "styleci/git",
@@ -2580,16 +2580,16 @@
         },
         {
             "name": "styleci/login",
-            "version": "v1.2.2",
+            "version": "v1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "a05521b5be4ca50abdc4e095c01301fcf999a4c5"
+                "reference": "b1395788367904c36c509b393216acec220f9a4b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/a05521b5be4ca50abdc4e095c01301fcf999a4c5",
-                "reference": "a05521b5be4ca50abdc4e095c01301fcf999a4c5",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/b1395788367904c36c509b393216acec220f9a4b",
+                "reference": "b1395788367904c36c509b393216acec220f9a4b",
                 "shasum": ""
             },
             "require": {
@@ -2639,20 +2639,20 @@
                 "github",
                 "login"
             ],
-            "time": "2015-09-23 13:41:10"
+            "time": "2015-10-01 17:40:10"
         },
         {
             "name": "styleci/php-cs-fixer",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "c6caeb634451566e2277195fbcc408e1e9bdf7a4"
+                "reference": "5789ed29df4dadc4f0baf5a73526f688c2bae440"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/c6caeb634451566e2277195fbcc408e1e9bdf7a4",
-                "reference": "c6caeb634451566e2277195fbcc408e1e9bdf7a4",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/5789ed29df4dadc4f0baf5a73526f688c2bae440",
+                "reference": "5789ed29df4dadc4f0baf5a73526f688c2bae440",
                 "shasum": ""
             },
             "require": {
@@ -2675,7 +2675,7 @@
             "type": "application",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.2-dev"
                 }
             },
             "autoload": {
@@ -2698,7 +2698,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-10-28 14:46:39"
+            "time": "2015-11-07 11:14:53"
         },
         {
             "name": "styleci/storage",
@@ -3875,16 +3875,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.5.0",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "eb8a73619af4f1c8711e2ce482f5de3643258a1f"
+                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/eb8a73619af4f1c8711e2ce482f5de3643258a1f",
-                "reference": "eb8a73619af4f1c8711e2ce482f5de3643258a1f",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
+                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
                 "shasum": ""
             },
             "require": {
@@ -3941,7 +3941,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-10-28 11:27:45"
+            "time": "2015-11-02 18:35:48"
         },
         {
             "name": "doctrine/collections",
