@@ -16,7 +16,7 @@ return [
     | Client ID
     |--------------------------------------------------------------------------
     |
-    | This it your application client id.
+    | This is your application client id.
     |
     */
 
