@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Handlers\Commands\Repo;
 
-use Illuminate\Support\Str;
 use StyleCI\StyleCI\Commands\Repo\EnableRepoCommand;
 use StyleCI\StyleCI\Events\Repo\RepoWasEnabledEvent;
 use StyleCI\StyleCI\Models\Repo;
@@ -37,7 +36,7 @@ class EnableRepoCommandHandler
             'user_id'        => $command->user->id,
             'name'           => $command->name,
             'default_branch' => $command->branch,
-            'token'          => bin2hex(Str::randomBytes(10)),
+            'token'          => bin2hex(random_bytes(10)),
         ]);
 
         event(new RepoWasEnabledEvent($repo));
