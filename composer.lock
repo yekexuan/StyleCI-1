@@ -4,37 +4,37 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b39fe21fad9d8ccda05981cae03cd0f9",
-    "content-hash": "613eb01bbcccd098a9fa0dbf13ec27ba",
+    "hash": "6c13bd5860893f043c735230be638b85",
+    "content-hash": "23bbc157fe40c8cbcf606b2ed7445327",
     "packages": [
         {
             "name": "alt-three/logger",
-            "version": "v1.0.2",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Logger.git",
-                "reference": "2a8ded9e4f8f03be0da3f30ac439a02be9ce6528"
+                "reference": "92efefc353f7c219fe81470b0f6bc30336f19a9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Logger/zipball/2a8ded9e4f8f03be0da3f30ac439a02be9ce6528",
-                "reference": "2a8ded9e4f8f03be0da3f30ac439a02be9ce6528",
+                "url": "https://api.github.com/repos/AltThree/Logger/zipball/92efefc353f7c219fe81470b0f6bc30336f19a9b",
+                "reference": "92efefc353f7c219fe81470b0f6bc30336f19a9b",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "5.1.*",
-                "illuminate/support": "5.1.*",
+                "illuminate/contracts": "5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
                 "php": ">=5.5.9",
-                "psr/log": "~1.0"
+                "psr/log": "^1.0"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
-                "phpunit/phpunit": "^4.7.6"
+                "graham-campbell/testbench": "^3.1",
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -66,35 +66,35 @@
                 "logger",
                 "logging"
             ],
-            "time": "2015-10-06 18:42:42"
+            "time": "2015-11-08 21:28:16"
         },
         {
             "name": "alt-three/validator",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/Validator.git",
-                "reference": "4325ea481844a230e0752b7f4860f9360981aa11"
+                "reference": "e7713677c9f0f00d1788eddf3b3ec335a98a70b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/Validator/zipball/4325ea481844a230e0752b7f4860f9360981aa11",
-                "reference": "4325ea481844a230e0752b7f4860f9360981aa11",
+                "url": "https://api.github.com/repos/AltThree/Validator/zipball/e7713677c9f0f00d1788eddf3b3ec335a98a70b4",
+                "reference": "e7713677c9f0f00d1788eddf3b3ec335a98a70b4",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "5.1.*",
-                "illuminate/support": "5.1.*",
+                "illuminate/contracts": "5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
                 "php": ">=5.5.9",
-                "psr/log": "~1.0"
+                "psr/log": "^1.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.7.6"
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -126,7 +126,7 @@
                 "logging",
                 "validator"
             ],
-            "time": "2015-10-18 18:42:38"
+            "time": "2015-11-08 21:30:34"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -558,33 +558,33 @@
         },
         {
             "name": "graham-campbell/core",
-            "version": "v4.1.1",
+            "version": "v4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Core.git",
-                "reference": "8a399ac87aa90b064859cfa56e80e874fb910c85"
+                "reference": "81b6f833ee988c9d4a690e66111ef17378e1ffaa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/8a399ac87aa90b064859cfa56e80e874fb910c85",
-                "reference": "8a399ac87aa90b064859cfa56e80e874fb910c85",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Core/zipball/81b6f833ee988c9d4a690e66111ef17378e1ffaa",
+                "reference": "81b6f833ee988c9d4a690e66111ef17378e1ffaa",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "5.0.*|5.1.*",
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
+                "illuminate/console": "5.1.*|5.2.*",
+                "illuminate/contracts": "5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
+                "graham-campbell/testbench": "^3.1",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "~4.8|~5.0"
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -614,40 +614,41 @@
                 "laravel",
                 "starter"
             ],
-            "time": "2015-10-06 16:45:46"
+            "time": "2015-11-14 11:39:14"
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "v5.0.0",
+            "version": "v5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "a62d5d189032f71e1cd97914ebb59c9a7f4b4767"
+                "reference": "6dd2bb9801eb8e45e7302a45e022d9294e2b62a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/a62d5d189032f71e1cd97914ebb59c9a7f4b4767",
-                "reference": "a62d5d189032f71e1cd97914ebb59c9a7f4b4767",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/6dd2bb9801eb8e45e7302a45e022d9294e2b62a3",
+                "reference": "6dd2bb9801eb8e45e7302a45e022d9294e2b62a3",
                 "shasum": ""
             },
             "require": {
                 "filp/whoops": "1.1.*",
-                "illuminate/contracts": "5.1.*",
-                "illuminate/support": "5.1.*",
+                "illuminate/contracts": "5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
+                "paragonie/random_compat": "^1.1",
                 "php": ">=5.5.9",
-                "psr/log": "~1.0",
-                "symfony/debug": "2.7.*",
-                "symfony/http-foundation": "2.7.*"
+                "psr/log": "^1.0",
+                "symfony/debug": "^2.7|^3.0",
+                "symfony/http-foundation": "^2.7|^3.0"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
+                "graham-campbell/testbench": "^3.1",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "~4.8|~5.0"
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.0-dev"
+                    "dev-master": "5.1-dev"
                 }
             },
             "autoload": {
@@ -679,45 +680,45 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-10-06 16:49:41"
+            "time": "2015-11-14 11:53:08"
         },
         {
             "name": "graham-campbell/flysystem",
-            "version": "v3.2.0",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Flysystem.git",
-                "reference": "98b819f284a64ec3a0f073d517b18d4ed5355170"
+                "reference": "b36a2b2a5a136347235ab003cdd21f5d1f0147e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Flysystem/zipball/98b819f284a64ec3a0f073d517b18d4ed5355170",
-                "reference": "98b819f284a64ec3a0f073d517b18d4ed5355170",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Flysystem/zipball/b36a2b2a5a136347235ab003cdd21f5d1f0147e3",
+                "reference": "b36a2b2a5a136347235ab003cdd21f5d1f0147e3",
                 "shasum": ""
             },
             "require": {
-                "graham-campbell/manager": "~2.2",
-                "illuminate/cache": "5.1.*",
-                "illuminate/contracts": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "league/flysystem": "~1.0",
+                "graham-campbell/manager": "^2.3",
+                "illuminate/cache": "5.1.*|5.2.*",
+                "illuminate/contracts": "5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
+                "league/flysystem": "^1.0",
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
-                "league/flysystem-aws-s3-v3": "~1.0",
-                "league/flysystem-azure": "~1.0",
-                "league/flysystem-cached-adapter": "~1.0",
-                "league/flysystem-copy": "~1.0",
-                "league/flysystem-dropbox": "~1.0",
-                "league/flysystem-eventable-filesystem": "~1.0",
-                "league/flysystem-gridfs": "~1.0",
-                "league/flysystem-rackspace": "~1.0",
-                "league/flysystem-sftp": "~1.0",
-                "league/flysystem-webdav": "~1.0",
-                "league/flysystem-ziparchive": "~1.0",
+                "graham-campbell/testbench": "^3.1",
+                "league/flysystem-aws-s3-v3": "^1.0",
+                "league/flysystem-azure": "^1.0",
+                "league/flysystem-cached-adapter": "^1.0",
+                "league/flysystem-copy": "^1.0",
+                "league/flysystem-dropbox": "^1.0",
+                "league/flysystem-eventable-filesystem": "^1.0",
+                "league/flysystem-gridfs": "^1.0",
+                "league/flysystem-rackspace": "^1.0",
+                "league/flysystem-sftp": "^1.0",
+                "league/flysystem-webdav": "^1.0",
+                "league/flysystem-ziparchive": "^1.0",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "~4.8|~5.0"
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "suggest": {
                 "league/flysystem-aws-s3-v3": "AwsS3 adapter support.",
@@ -736,7 +737,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -768,38 +769,38 @@
                 "laravel",
                 "s3"
             ],
-            "time": "2015-10-06 16:50:17"
+            "time": "2015-11-14 11:54:30"
         },
         {
             "name": "graham-campbell/github",
-            "version": "v4.1.0",
+            "version": "v4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-GitHub.git",
-                "reference": "9974d2faf78d2aa683aa716a8418686d913ebf99"
+                "reference": "c901c2e6aae2f3bc64adb3ce17ee503c829ea576"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-GitHub/zipball/9974d2faf78d2aa683aa716a8418686d913ebf99",
-                "reference": "9974d2faf78d2aa683aa716a8418686d913ebf99",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-GitHub/zipball/c901c2e6aae2f3bc64adb3ce17ee503c829ea576",
+                "reference": "c901c2e6aae2f3bc64adb3ce17ee503c829ea576",
                 "shasum": ""
             },
             "require": {
-                "graham-campbell/manager": "~2.2",
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
-                "knplabs/github-api": "~1.3",
+                "graham-campbell/manager": "^2.3",
+                "illuminate/contracts": "5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
+                "knplabs/github-api": "^1.3",
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
+                "graham-campbell/testbench": "^3.1",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "~4.8|~5.0"
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -831,41 +832,41 @@
                 "laravel",
                 "php-github-api"
             ],
-            "time": "2015-10-06 16:52:26"
+            "time": "2015-11-14 11:54:51"
         },
         {
             "name": "graham-campbell/htmlmin",
-            "version": "v4.1.0",
+            "version": "v4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-HTMLMin.git",
-                "reference": "870fdc0ecd36969a6752024d3642c0a3fcb4bcec"
+                "reference": "293a16bd9e7cd5df19283d3a748426261e704a89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-HTMLMin/zipball/870fdc0ecd36969a6752024d3642c0a3fcb4bcec",
-                "reference": "870fdc0ecd36969a6752024d3642c0a3fcb4bcec",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-HTMLMin/zipball/293a16bd9e7cd5df19283d3a748426261e704a89",
+                "reference": "293a16bd9e7cd5df19283d3a748426261e704a89",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/filesystem": "5.0.*|5.1.*",
-                "illuminate/http": "5.0.*|5.1.*",
-                "illuminate/routing": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
-                "illuminate/view": "5.0.*|5.1.*",
-                "mrclay/minify": "~2.2",
+                "illuminate/contracts": "5.1.*|5.2.*",
+                "illuminate/filesystem": "5.1.*|5.2.*",
+                "illuminate/http": "5.1.*|5.2.*",
+                "illuminate/routing": "5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
+                "illuminate/view": "5.1.*|5.2.*",
+                "mrclay/minify": "^2.2",
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
+                "graham-campbell/testbench": "^3.1",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "~4.8|~5.0"
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -896,36 +897,36 @@
                 "laravel",
                 "minifier"
             ],
-            "time": "2015-10-06 16:52:44"
+            "time": "2015-11-14 11:55:24"
         },
         {
             "name": "graham-campbell/manager",
-            "version": "v2.2.1",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Manager.git",
-                "reference": "2fb1898f21107d94a30f4660e5147c5bad04c7b9"
+                "reference": "fd643e56c99cc80cd8019be1bbaeb4f4f66ebb8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/2fb1898f21107d94a30f4660e5147c5bad04c7b9",
-                "reference": "2fb1898f21107d94a30f4660e5147c5bad04c7b9",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Manager/zipball/fd643e56c99cc80cd8019be1bbaeb4f4f66ebb8e",
+                "reference": "fd643e56c99cc80cd8019be1bbaeb4f4f66ebb8e",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
+                "illuminate/contracts": "5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench-core": "~1.0",
+                "graham-campbell/testbench-core": "^1.1",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "~4.8|~5.0"
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -955,7 +956,7 @@
                 "laravel",
                 "manager"
             ],
-            "time": "2015-10-06 16:53:10"
+            "time": "2015-11-14 11:41:39"
         },
         {
             "name": "guzzle/guzzle",
@@ -1488,16 +1489,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.24",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "875baf2d1645ce23e2ec0bf94fa7bb3e7fbfd6ed"
+                "reference": "59220f6e87ea3837fa1e5d3c2b37c3d9528a2972"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/875baf2d1645ce23e2ec0bf94fa7bb3e7fbfd6ed",
-                "reference": "875baf2d1645ce23e2ec0bf94fa7bb3e7fbfd6ed",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/59220f6e87ea3837fa1e5d3c2b37c3d9528a2972",
+                "reference": "59220f6e87ea3837fa1e5d3c2b37c3d9528a2972",
                 "shasum": ""
             },
             "require": {
@@ -1561,8 +1562,8 @@
             },
             "require-dev": {
                 "aws/aws-sdk-php": "~3.0",
-                "iron-io/iron_mq": "~2.0",
-                "mockery/mockery": "~0.9.1",
+                "iron-io/iron_mq": "~2.0|~4.0",
+                "mockery/mockery": "~0.9.2",
                 "pda/pheanstalk": "~3.0",
                 "phpunit/phpunit": "~4.0",
                 "predis/predis": "~1.0"
@@ -1572,7 +1573,7 @@
                 "doctrine/dbal": "Required to rename columns and drop SQLite columns (~2.4).",
                 "fzaninotto/faker": "Required to use the eloquent factory builder (~1.4).",
                 "guzzlehttp/guzzle": "Required to use the Mailgun and Mandrill mail drivers (~5.3|~6.0).",
-                "iron-io/iron_mq": "Required to use the iron queue driver (~2.0).",
+                "iron-io/iron_mq": "Required to use the iron queue driver (~2.0|~4.0).",
                 "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (~1.0).",
                 "league/flysystem-rackspace": "Required to use the Flysystem Rackspace driver (~1.0).",
                 "pda/pheanstalk": "Required to use the beanstalk queue driver (~3.0).",
@@ -1613,7 +1614,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-11-11 22:45:42"
+            "time": "2015-11-14 10:17:11"
         },
         {
             "name": "league/flysystem",
@@ -1701,36 +1702,36 @@
         },
         {
             "name": "mccool/laravel-auto-presenter",
-            "version": "4.1.0",
+            "version": "4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel-auto-presenter/laravel-auto-presenter.git",
-                "reference": "3f1c9d3ef8a1cc5d78dea2654058145c2920f25e"
+                "reference": "1e3efb5a0026eea6c80b2942515270992e53e837"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel-auto-presenter/laravel-auto-presenter/zipball/3f1c9d3ef8a1cc5d78dea2654058145c2920f25e",
-                "reference": "3f1c9d3ef8a1cc5d78dea2654058145c2920f25e",
+                "url": "https://api.github.com/repos/laravel-auto-presenter/laravel-auto-presenter/zipball/1e3efb5a0026eea6c80b2942515270992e53e837",
+                "reference": "1e3efb5a0026eea6c80b2942515270992e53e837",
                 "shasum": ""
             },
             "require": {
-                "illuminate/container": "5.1.*",
-                "illuminate/contracts": "5.1.*",
-                "illuminate/events": "5.1.*",
-                "illuminate/pagination": "5.1.*",
-                "illuminate/support": "5.1.*",
-                "illuminate/view": "5.1.*",
+                "illuminate/container": "5.1.*|5.2.*",
+                "illuminate/contracts": "5.1.*|5.2.*",
+                "illuminate/events": "5.1.*|5.2.*",
+                "illuminate/pagination": "5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
+                "illuminate/view": "5.1.*|5.2.*",
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
+                "graham-campbell/testbench": "^3.1",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "~4.8|~5.0"
+                "phpunit/phpunit": "^4.8|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -1759,7 +1760,7 @@
                 "lpm",
                 "presenter"
             ],
-            "time": "2015-10-04 11:19:41"
+            "time": "2015-11-14 11:46:57"
         },
         {
             "name": "monolog/monolog",
@@ -2324,25 +2325,25 @@
         },
         {
             "name": "styleci/cache",
-            "version": "v1.2.1",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Cache.git",
-                "reference": "6872c670269d12bb72d63e58b38a11da84b6de94"
+                "reference": "2609cb25dc90300f9dba83818cf16f5b65785741"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Cache/zipball/6872c670269d12bb72d63e58b38a11da84b6de94",
-                "reference": "6872c670269d12bb72d63e58b38a11da84b6de94",
+                "url": "https://api.github.com/repos/StyleCI/Cache/zipball/2609cb25dc90300f9dba83818cf16f5b65785741",
+                "reference": "2609cb25dc90300f9dba83818cf16f5b65785741",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.4"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
+                "graham-campbell/testbench": "^3.1",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "~5.0"
+                "phpunit/phpunit": "^5.0"
             },
             "suggest": {
                 "doctrine/cache": "Required to use the doctrine adapter.",
@@ -2352,7 +2353,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "1.3-dev"
                 }
             },
             "autoload": {
@@ -2385,29 +2386,29 @@
                 "cache",
                 "cs"
             ],
-            "time": "2015-09-23 13:36:47"
+            "time": "2015-11-08 21:08:18"
         },
         {
             "name": "styleci/config",
-            "version": "v2.3.0",
+            "version": "v2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "4e0029dfebc19f52ba98ad6da94334b4142ec005"
+                "reference": "c580a1f44ea37cfa9c08278eb974f011006c440a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/4e0029dfebc19f52ba98ad6da94334b4142ec005",
-                "reference": "4e0029dfebc19f52ba98ad6da94334b4142ec005",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/c580a1f44ea37cfa9c08278eb974f011006c440a",
+                "reference": "c580a1f44ea37cfa9c08278eb974f011006c440a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.4",
-                "symfony/yaml": "~2.3"
+                "symfony/yaml": "^2.3|^3.0"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
-                "phpunit/phpunit": "~5.0"
+                "graham-campbell/testbench": "^3.1",
+                "phpunit/phpunit": "^5.0"
             },
             "suggest": {
                 "illuminate/support": "Enables Laravel support."
@@ -2415,7 +2416,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -2447,32 +2448,32 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-11-07 11:22:59"
+            "time": "2015-11-14 14:46:21"
         },
         {
             "name": "styleci/fixer",
-            "version": "v3.1.0",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "7263d4d01cf2b24562a5816114e0871f72108984"
+                "reference": "b175bd139196bd5d229d87fc5f2be29cd448f217"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/7263d4d01cf2b24562a5816114e0871f72108984",
-                "reference": "7263d4d01cf2b24562a5816114e0871f72108984",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/b175bd139196bd5d229d87fc5f2be29cd448f217",
+                "reference": "b175bd139196bd5d229d87fc5f2be29cd448f217",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.4",
-                "styleci/cache": "~1.1",
-                "styleci/config": "~2.3",
-                "styleci/git": "~2.0",
-                "styleci/php-cs-fixer": "~1.2.0"
+                "styleci/cache": "^1.2",
+                "styleci/config": "^2.4",
+                "styleci/git": "^2.1",
+                "styleci/php-cs-fixer": "1.3.*"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
-                "phpunit/phpunit": "~5.0"
+                "graham-campbell/testbench": "^3.1",
+                "phpunit/phpunit": "^5.0"
             },
             "suggest": {
                 "illuminate/support": "Enables Laravel support."
@@ -2480,7 +2481,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.1-dev"
+                    "dev-master": "3.2-dev"
                 }
             },
             "autoload": {
@@ -2513,32 +2514,32 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-11-07 11:29:53"
+            "time": "2015-11-14 14:56:04"
         },
         {
             "name": "styleci/git",
-            "version": "v2.0.2",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "f9177b9d5b306516dfbb4856fc1a6150a838ab4f"
+                "reference": "9e5b4036fb4010a91d35e7ce40edf64c3c62bab5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/f9177b9d5b306516dfbb4856fc1a6150a838ab4f",
-                "reference": "f9177b9d5b306516dfbb4856fc1a6150a838ab4f",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/9e5b4036fb4010a91d35e7ce40edf64c3c62bab5",
+                "reference": "9e5b4036fb4010a91d35e7ce40edf64c3c62bab5",
                 "shasum": ""
             },
             "require": {
-                "cpliakas/git-wrapper": "~1.5",
-                "gitonomy/gitlib": "~1.0",
+                "cpliakas/git-wrapper": "^1.5",
+                "gitonomy/gitlib": "^1.0",
                 "php": ">=5.6.4",
-                "symfony/filesystem": "~2.3",
-                "symfony/finder": "~2.3"
+                "symfony/filesystem": "^2.3|^3.0",
+                "symfony/finder": "^2.3|^3.0"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
-                "phpunit/phpunit": "~5.0"
+                "graham-campbell/testbench": "^3.1",
+                "phpunit/phpunit": "^5.0"
             },
             "suggest": {
                 "illuminate/support": "Enables Laravel support."
@@ -2546,7 +2547,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
@@ -2579,37 +2580,37 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-09-23 13:40:58"
+            "time": "2015-11-08 21:10:55"
         },
         {
             "name": "styleci/login",
-            "version": "v1.2.3",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "b1395788367904c36c509b393216acec220f9a4b"
+                "reference": "6f1e5f4113cff2a274da9a1313a5baf146bb127d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/b1395788367904c36c509b393216acec220f9a4b",
-                "reference": "b1395788367904c36c509b393216acec220f9a4b",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/6f1e5f4113cff2a274da9a1313a5baf146bb127d",
+                "reference": "6f1e5f4113cff2a274da9a1313a5baf146bb127d",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "~5.3|~6.0",
-                "illuminate/contracts": "5.1.*",
-                "illuminate/http": "5.1.*",
-                "illuminate/support": "5.1.*",
+                "guzzlehttp/guzzle": "^5.3|^6.0",
+                "illuminate/contracts": "5.1.*|5.2.*",
+                "illuminate/http": "5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
                 "php": ">=5.6.4"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
-                "phpunit/phpunit": "~5.0"
+                "graham-campbell/testbench": "^3.1",
+                "phpunit/phpunit": "^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "1.3-dev"
                 }
             },
             "autoload": {
@@ -2642,20 +2643,20 @@
                 "github",
                 "login"
             ],
-            "time": "2015-10-01 17:40:10"
+            "time": "2015-11-08 21:28:45"
         },
         {
             "name": "styleci/php-cs-fixer",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "5789ed29df4dadc4f0baf5a73526f688c2bae440"
+                "reference": "3e67e02fbaa5ddaab6b1820f476087c977f2e97a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/5789ed29df4dadc4f0baf5a73526f688c2bae440",
-                "reference": "5789ed29df4dadc4f0baf5a73526f688c2bae440",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/3e67e02fbaa5ddaab6b1820f476087c977f2e97a",
+                "reference": "3e67e02fbaa5ddaab6b1820f476087c977f2e97a",
                 "shasum": ""
             },
             "require": {
@@ -2678,7 +2679,7 @@
             "type": "application",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.2-dev"
+                    "dev-master": "1.3-dev"
                 }
             },
             "autoload": {
@@ -2701,38 +2702,38 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-11-07 11:14:53"
+            "time": "2015-11-14 14:45:31"
         },
         {
             "name": "styleci/storage",
-            "version": "v1.0.2",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Storage.git",
-                "reference": "76f64b28931fa37e3f7933d71d21aeaa3ce1b99a"
+                "reference": "9c99ee45340b2ff5993831ca274710aa8d47f8f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/76f64b28931fa37e3f7933d71d21aeaa3ce1b99a",
-                "reference": "76f64b28931fa37e3f7933d71d21aeaa3ce1b99a",
+                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/9c99ee45340b2ff5993831ca274710aa8d47f8f5",
+                "reference": "9c99ee45340b2ff5993831ca274710aa8d47f8f5",
                 "shasum": ""
             },
             "require": {
-                "graham-campbell/flysystem": "~3.0",
-                "graham-campbell/manager": "~2.2",
-                "illuminate/contracts": "5.1.*",
-                "illuminate/support": "5.1.*",
+                "graham-campbell/flysystem": "^3.3",
+                "graham-campbell/manager": "^2.3",
+                "illuminate/contracts": "5.1.*|5.2.*",
+                "illuminate/support": "5.1.*|5.2.*",
                 "php": ">=5.6.4"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
+                "graham-campbell/testbench": "^3.1",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "~5.0"
+                "phpunit/phpunit": "^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -2765,7 +2766,7 @@
                 "StyleCI",
                 "storage"
             ],
-            "time": "2015-09-23 13:41:26"
+            "time": "2015-11-14 14:54:31"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3638,34 +3639,34 @@
         },
         {
             "name": "vinkla/hashids",
-            "version": "2.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vinkla/hashids.git",
-                "reference": "524843f5c287032573daef3273efaebdce96104f"
+                "reference": "1581309937d835c5e5c2a0812ceccaf1dfe6b677"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinkla/hashids/zipball/524843f5c287032573daef3273efaebdce96104f",
-                "reference": "524843f5c287032573daef3273efaebdce96104f",
+                "url": "https://api.github.com/repos/vinkla/hashids/zipball/1581309937d835c5e5c2a0812ceccaf1dfe6b677",
+                "reference": "1581309937d835c5e5c2a0812ceccaf1dfe6b677",
                 "shasum": ""
             },
             "require": {
-                "graham-campbell/manager": "~2.2",
-                "hashids/hashids": "~1.0",
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
+                "graham-campbell/manager": "^2.3",
+                "hashids/hashids": "^1.0",
+                "illuminate/contracts": "5.1.* || 5.2.*",
+                "illuminate/support": "5.1.* || 5.2.*",
                 "php": ">=5.5.9"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
+                "graham-campbell/testbench": "^3.1",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.8|^5.0"
+                "phpunit/phpunit": "^4.8 || ^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
@@ -3696,38 +3697,38 @@
                 "obfuscate",
                 "youtube"
             ],
-            "time": "2015-10-07 06:22:42"
+            "time": "2015-11-13 22:27:42"
         },
         {
             "name": "vinkla/pusher",
-            "version": "2.1.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vinkla/pusher.git",
-                "reference": "608757c2199fc00ded9c95642ad83dbff362a1c9"
+                "reference": "f23824c64d61ae13d5ca653cc328372b39696655"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vinkla/pusher/zipball/608757c2199fc00ded9c95642ad83dbff362a1c9",
-                "reference": "608757c2199fc00ded9c95642ad83dbff362a1c9",
+                "url": "https://api.github.com/repos/vinkla/pusher/zipball/f23824c64d61ae13d5ca653cc328372b39696655",
+                "reference": "f23824c64d61ae13d5ca653cc328372b39696655",
                 "shasum": ""
             },
             "require": {
-                "graham-campbell/manager": "~2.2",
-                "illuminate/contracts": "5.0.*|5.1.*",
-                "illuminate/support": "5.0.*|5.1.*",
+                "graham-campbell/manager": "^2.3",
+                "illuminate/contracts": "5.1.* || 5.2.*",
+                "illuminate/support": "5.1.* || 5.2.*",
                 "php": ">=5.5.9",
-                "pusher/pusher-php-server": "~2.0"
+                "pusher/pusher-php-server": "^2.2.1"
             },
             "require-dev": {
-                "graham-campbell/testbench": "~3.0",
+                "graham-campbell/testbench": "^3.1",
                 "mockery/mockery": "^0.9.4",
-                "phpunit/phpunit": "^4.8|^5.0"
+                "phpunit/phpunit": "^4.8 || ^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.1-dev"
+                    "dev-master": "2.2-dev"
                 }
             },
             "autoload": {
@@ -3758,7 +3759,7 @@
                 "rest",
                 "trigger"
             ],
-            "time": "2015-10-07 06:23:03"
+            "time": "2015-11-13 08:07:36"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -4266,16 +4267,16 @@
         },
         {
             "name": "graham-campbell/testbench-core",
-            "version": "dev-master",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-TestBench-Core.git",
-                "reference": "70ccdaa343d0e829c494864f273bd949a141d1a8"
+                "reference": "b8f471f366fc5afe714462d806ec3f63bdff4975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-TestBench-Core/zipball/70ccdaa343d0e829c494864f273bd949a141d1a8",
-                "reference": "70ccdaa343d0e829c494864f273bd949a141d1a8",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-TestBench-Core/zipball/b8f471f366fc5afe714462d806ec3f63bdff4975",
+                "reference": "b8f471f366fc5afe714462d806ec3f63bdff4975",
                 "shasum": ""
             },
             "require": {
@@ -4322,7 +4323,7 @@
                 "testbench-core",
                 "testing"
             ],
-            "time": "2015-11-08 20:26:12"
+            "time": "2015-11-14 11:31:57"
         },
         {
             "name": "hamcrest/hamcrest-php",
