@@ -55,7 +55,7 @@ class CleanupHandler
      */
     public function handle(AnalysisHasCompletedEvent $event)
     {
-        if (mt_rand(0, 15) > 0) {
+        if (random_int(0, 15) > 0) {
             return;
         }
 
