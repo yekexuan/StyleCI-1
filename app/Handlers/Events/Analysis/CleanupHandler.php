@@ -36,7 +36,7 @@ class CleanupHandler
      */
     public function handle(AnalysisHasCompletedEvent $event)
     {
-        if (mt_rand(0, 7) > 0) {
+        if (random_int(0, 7) > 0) {
             return;
         }
 
