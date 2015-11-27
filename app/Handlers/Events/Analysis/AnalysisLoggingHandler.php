@@ -85,6 +85,12 @@ class AnalysisLoggingHandler
             case Analysis::CONFIG_ISSUES:
                 $this->logger->notice('Analysis has failed due to misconfiguration.', $this->getContext($analysis));
                 break;
+            case Analysis::ACCESS_ISSUES:
+                $this->logger->warning('Analysis has failed due to git access issues.', $this->getContext($analysis));
+                break;
+            case Analysis::TIMEOUT:
+                $this->logger->error('Analysis has failed due to a platform timeout.', $this->getContext($analysis));
+                break;
             default:
                 $this->logger->error('Analysis has failed due to an internal error.', $this->getContext($analysis));
         }
