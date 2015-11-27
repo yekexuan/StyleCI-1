@@ -11,9 +11,8 @@
 
 namespace StyleCI\StyleCI\Console;
 
+use Illuminate\Console\Application;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use StyleCI\StyleCI\Console\Commands\RepoCommand;
-use StyleCI\StyleCI\Console\Commands\UserCommand;
 
 /**
  * This is the console kernel class.
@@ -23,12 +22,24 @@ use StyleCI\StyleCI\Console\Commands\UserCommand;
 class Kernel extends ConsoleKernel
 {
     /**
-     * The Artisan commands provided by your application.
+     * Get the artisan application instance.
      *
-     * @var string[]
+     * @return \Illuminate\Console\Application
      */
-    protected $commands = [
-        RepoCommand::class,
-        UserCommand::class,
-    ];
+    protected function getArtisan()
+    {
+        if (!$this->artisan) {
+            $this->artisan = new Application($this->app, $this->events, $this->app->version());
+
+            $commands = [];
+
+            foreach (glob(app_path('Console//Commands').'/*.php') as $file) {
+                $commands[] = 'StyleCI\\StyleCI\\Console\\Commands\\'.basename($file, '.php');
+            }
+
+            $this->artisan->resolveCommands($commands);
+        }
+
+        return $this->artisan;
+    }
 }
