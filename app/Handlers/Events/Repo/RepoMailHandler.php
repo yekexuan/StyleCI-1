@@ -77,7 +77,7 @@ class RepoMailHandler
         foreach ($this->userRepository->collaborators($repo) as $user) {
             $mail['email'] = $user->email;
             $mail['name'] = AutoPresenter::decorate($user)->first_name;
-            $this->mailer->queue(["emails.html.{$view}", "emails.html.{$view}"], $mail, function (Message $message) use ($mail) {
+            $this->mailer->queue("emails.{$view}", $mail, function (Message $message) use ($mail) {
                 $message->to($mail['email'])->subject($mail['subject']);
             });
         }

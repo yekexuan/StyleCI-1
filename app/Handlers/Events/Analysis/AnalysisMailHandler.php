@@ -112,7 +112,7 @@ class AnalysisMailHandler
         foreach ($this->userRepository->collaborators($repo) as $user) {
             $mail['email'] = $user->email;
             $mail['name'] = AutoPresenter::decorate($user)->first_name;
-            $this->mailer->queue(["emails.html.{$status}", "emails.text.{$status}"], $mail, function (Message $message) use ($mail) {
+            $this->mailer->queue("emails.{$status}", $mail, function (Message $message) use ($mail) {
                 $message->to($mail['email'])->subject($mail['subject']);
             });
         }
@@ -161,7 +161,7 @@ class AnalysisMailHandler
         foreach ($this->userRepository->collaborators($repo) as $user) {
             $mail['email'] = $user->email;
             $mail['name'] = AutoPresenter::decorate($user)->first_name;
-            $this->mailer->queue(["emails.html.{$status}", "emails.text.{$status}"], $mail, function (Message $message) use ($mail) {
+            $this->mailer->queue("emails.{$status}", $mail, function (Message $message) use ($mail) {
                 $message->to($mail['email'])->subject($mail['subject']);
             });
         }

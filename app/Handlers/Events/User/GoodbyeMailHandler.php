@@ -60,7 +60,7 @@ class GoodbyeMailHandler
             'subject' => 'Account Deleted',
         ];
 
-        $this->mailer->queue(['html' => 'emails.html.goodbye', 'text' => 'emails.text.goodbye'], $mail, function (Message $message) use ($mail) {
+        $this->mailer->queue('emails.goodbye', $mail, function (Message $message) use ($mail) {
             $message->to($mail['email'])->subject($mail['subject']);
         });
     }
