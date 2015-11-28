@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6591ed15a6049784ab550b66d35862b6",
-    "content-hash": "13cf8fe7d981469620245aab4f272977",
+    "hash": "b69750d4648566655b702fed446b7298",
+    "content-hash": "c3c257b57af0c356eaef2b8f27d1292d",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -1438,12 +1438,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c9a031f81b79ee8342200b3b2f0d34c5290705ae"
+                "reference": "d94379471553009e0ea4c9ebde116f0dcd4c23df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c9a031f81b79ee8342200b3b2f0d34c5290705ae",
-                "reference": "c9a031f81b79ee8342200b3b2f0d34c5290705ae",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/d94379471553009e0ea4c9ebde116f0dcd4c23df",
+                "reference": "d94379471553009e0ea4c9ebde116f0dcd4c23df",
                 "shasum": ""
             },
             "require": {
@@ -1559,7 +1559,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-11-27 15:40:52"
+            "time": "2015-11-28 15:29:29"
         },
         {
             "name": "league/flysystem",
@@ -2397,23 +2397,23 @@
         },
         {
             "name": "styleci/fixer",
-            "version": "v3.3.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "63ca497cfd60b4ac7ab89b9aca181b983e082e41"
+                "reference": "b9e7559b24c2eaff80bf8807c53bb53f751ed782"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/63ca497cfd60b4ac7ab89b9aca181b983e082e41",
-                "reference": "63ca497cfd60b4ac7ab89b9aca181b983e082e41",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/b9e7559b24c2eaff80bf8807c53bb53f751ed782",
+                "reference": "b9e7559b24c2eaff80bf8807c53bb53f751ed782",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.4",
                 "styleci/cache": "^1.2",
                 "styleci/config": "^2.5",
-                "styleci/git": "^2.2",
+                "styleci/git": "^2.3",
                 "styleci/php-cs-fixer": "1.4.*"
             },
             "require-dev": {
@@ -2426,7 +2426,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.3-dev"
+                    "dev-master": "3.4-dev"
                 }
             },
             "autoload": {
@@ -2459,20 +2459,20 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-11-27 10:01:59"
+            "time": "2015-11-28 15:19:14"
         },
         {
             "name": "styleci/git",
-            "version": "v2.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "c0fed41195d57de08fb8a10f18002398990d9e04"
+                "reference": "9607633ece229f27e48abcc3cbe338e5d85015ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/c0fed41195d57de08fb8a10f18002398990d9e04",
-                "reference": "c0fed41195d57de08fb8a10f18002398990d9e04",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/9607633ece229f27e48abcc3cbe338e5d85015ae",
+                "reference": "9607633ece229f27e48abcc3cbe338e5d85015ae",
                 "shasum": ""
             },
             "require": {
@@ -2492,7 +2492,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2-dev"
+                    "dev-master": "2.3-dev"
                 }
             },
             "autoload": {
@@ -2525,7 +2525,7 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-11-26 21:44:48"
+            "time": "2015-11-28 15:18:35"
         },
         {
             "name": "styleci/login",
