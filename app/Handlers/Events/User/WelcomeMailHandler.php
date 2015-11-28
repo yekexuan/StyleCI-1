@@ -59,7 +59,7 @@ class WelcomeMailHandler
             'subject' => 'Welcome',
         ];
 
-        $this->mailer->queue(['html' => 'emails.html.welcome', 'text' => 'emails.text.welcome'], $mail, function (Message $message) use ($mail) {
+        $this->mailer->queue('emails.welcome', $mail, function (Message $message) use ($mail) {
             $message->to($mail['email'])->subject($mail['subject']);
         });
     }
