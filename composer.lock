@@ -1438,12 +1438,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "d8f6daee108705026a55d4112eea9b1fbf3e5f0a"
+                "reference": "c9a031f81b79ee8342200b3b2f0d34c5290705ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d8f6daee108705026a55d4112eea9b1fbf3e5f0a",
-                "reference": "d8f6daee108705026a55d4112eea9b1fbf3e5f0a",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c9a031f81b79ee8342200b3b2f0d34c5290705ae",
+                "reference": "c9a031f81b79ee8342200b3b2f0d34c5290705ae",
                 "shasum": ""
             },
             "require": {
@@ -1559,7 +1559,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-11-26 20:18:39"
+            "time": "2015-11-27 15:40:52"
         },
         {
             "name": "league/flysystem",
