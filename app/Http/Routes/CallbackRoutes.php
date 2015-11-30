@@ -37,7 +37,7 @@ class CallbackRoutes
     public function map(Registrar $router)
     {
         $router->post('github-callback', [
-            'as'   => 'webhook_callback',
+            'as'   => 'github_callback',
             'uses' => 'GitHubController@handle',
         ]);
     }

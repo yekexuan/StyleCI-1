@@ -56,7 +56,7 @@ class Hooks
         $events = ['create', 'delete', 'member', 'pull_request', 'push', 'team_add'];
 
         $config = [
-            'url'          => route('webhook_callback'),
+            'url'          => route('github_callback'),
             'content_type' => 'json',
             'insecure_ssl' => 0,
             'secret'       => $repo->token,
