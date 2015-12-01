@@ -20,7 +20,7 @@
     ],
     "require": {
         "php": ">=5.6.4",
-        "laravel/framework": "~5.1.25",
+        "laravel/framework": "~5.1.26",
         "alt-three/logger": "^1.1",
         "alt-three/validator": "^1.4",
         "fideloper/proxy": "^3.0",
