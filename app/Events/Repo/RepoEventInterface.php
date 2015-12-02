@@ -11,12 +11,14 @@
 
 namespace StyleCI\StyleCI\Events\Repo;
 
+use StyleCI\StyleCI\Events\EventInterface;
+
 /**
  * This is the repo event interface.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-interface RepoEventInterface
+interface RepoEventInterface extends EventInterface
 {
     //
 }

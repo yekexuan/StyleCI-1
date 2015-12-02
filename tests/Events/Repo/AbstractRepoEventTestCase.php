@@ -23,6 +23,6 @@ class AbstractRepoEventTestCase extends AbstractEventTestCase
 {
     protected function getEventInterfaces()
     {
-        return [RepoEventInterface::class];
+        return array_merge(parent::getEventInterfaces(), [RepoEventInterface::class]);
     }
 }

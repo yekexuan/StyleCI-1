@@ -23,6 +23,6 @@ class AbstractAnalysisEventTestCase extends AbstractEventTestCase
 {
     protected function getEventInterfaces()
     {
-        return [AnalysisEventInterface::class];
+        return array_merge(parent::getEventInterfaces(), [AnalysisEventInterface::class]);
     }
 }
