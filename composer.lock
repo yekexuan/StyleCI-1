@@ -1434,16 +1434,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "5.1.x-dev",
+            "version": "v5.1.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "cc474f278e340102fcd32c3cb49d4a309029094c"
+                "reference": "be7fbb60376bd61f07e9c637473e5b2cf7eebe5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/cc474f278e340102fcd32c3cb49d4a309029094c",
-                "reference": "cc474f278e340102fcd32c3cb49d4a309029094c",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/be7fbb60376bd61f07e9c637473e5b2cf7eebe5c",
+                "reference": "be7fbb60376bd61f07e9c637473e5b2cf7eebe5c",
                 "shasum": ""
             },
             "require": {
@@ -1559,7 +1559,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-12-01 22:42:06"
+            "time": "2015-12-02 21:59:57"
         },
         {
             "name": "league/flysystem",
@@ -2335,16 +2335,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "dev-master",
+            "version": "v2.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "c6fd383736473c306cf17de6ffc64d0c870e943a"
+                "reference": "1c7b74b0364ff93417164201c8f2ab127f799d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/c6fd383736473c306cf17de6ffc64d0c870e943a",
-                "reference": "c6fd383736473c306cf17de6ffc64d0c870e943a",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/1c7b74b0364ff93417164201c8f2ab127f799d5e",
+                "reference": "1c7b74b0364ff93417164201c8f2ab127f799d5e",
                 "shasum": ""
             },
             "require": {
@@ -2393,11 +2393,11 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-12-02 15:04:28"
+            "time": "2015-12-02 21:42:58"
         },
         {
             "name": "styleci/fixer",
-            "version": "dev-master",
+            "version": "v3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
@@ -2463,7 +2463,7 @@
         },
         {
             "name": "styleci/git",
-            "version": "dev-master",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
@@ -2592,16 +2592,16 @@
         },
         {
             "name": "styleci/php-cs-fixer",
-            "version": "dev-master",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "54e4e0e00c1af22721b034f24523d27e15ccdf9a"
+                "reference": "72cd2dbd8f987b3d208773122a77136375fcfaac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/54e4e0e00c1af22721b034f24523d27e15ccdf9a",
-                "reference": "54e4e0e00c1af22721b034f24523d27e15ccdf9a",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/72cd2dbd8f987b3d208773122a77136375fcfaac",
+                "reference": "72cd2dbd8f987b3d208773122a77136375fcfaac",
                 "shasum": ""
             },
             "require": {
@@ -2651,7 +2651,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-12-01 13:37:13"
+            "time": "2015-12-02 21:44:19"
         },
         {
             "name": "styleci/storage",
