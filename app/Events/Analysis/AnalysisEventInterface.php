@@ -11,12 +11,14 @@
 
 namespace StyleCI\StyleCI\Events\Analysis;
 
+use StyleCI\StyleCI\Events\EventInterface;
+
 /**
  * This is the analysis event interface.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-interface AnalysisEventInterface
+interface AnalysisEventInterface extends EventInterface
 {
     //
 }

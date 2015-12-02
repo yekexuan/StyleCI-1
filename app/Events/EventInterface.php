@@ -9,16 +9,14 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Events\User;
-
-use StyleCI\StyleCI\Events\EventInterface;
+namespace StyleCI\StyleCI\Events;
 
 /**
- * This is the user event interface.
+ * This is the event interface.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-interface UserEventInterface extends EventInterface
+interface EventInterface
 {
     //
 }

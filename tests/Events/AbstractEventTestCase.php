@@ -12,6 +12,7 @@
 namespace StyleCI\Tests\StyleCI\Events;
 
 use ReflectionClass;
+use StyleCI\StyleCI\Events\EventInterface;
 use StyleCI\StyleCI\Providers\EventServiceProvider;
 use StyleCI\Tests\StyleCI\AbstractAnemicTestCase;
 
@@ -22,6 +23,11 @@ use StyleCI\Tests\StyleCI\AbstractAnemicTestCase;
  */
 abstract class AbstractEventTestCase extends AbstractAnemicTestCase
 {
+    protected function getEventInterfaces()
+    {
+        return [EventInterface::class];
+    }
+
     protected function objectHasRules()
     {
         return false;
