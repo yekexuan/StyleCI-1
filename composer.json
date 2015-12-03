@@ -41,7 +41,7 @@
         "filp/whoops": "^1.1",
         "graham-campbell/testbench-core": "^1.1",
         "mockery/mockery": "^0.9.4",
-        "phpunit/phpunit": "^5.0"
+        "phpunit/phpunit": "~5.0.10"
     },
     "autoload": {
         "classmap": [
