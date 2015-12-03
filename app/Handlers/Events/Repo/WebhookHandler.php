@@ -15,6 +15,7 @@ use Exception;
 use StyleCI\StyleCI\Events\Repo\RepoEventInterface;
 use StyleCI\StyleCI\Events\Repo\RepoWasEnabledEvent;
 use StyleCI\StyleCI\GitHub\Hooks;
+use Throwable;
 
 /**
  * This is the webhook handler class.
@@ -56,6 +57,8 @@ class WebhookHandler
         try {
             $this->hooks->disable($repo);
         } catch (Exception $e) {
+            //
+        } catch (Throwable $e) {
             //
         }
 

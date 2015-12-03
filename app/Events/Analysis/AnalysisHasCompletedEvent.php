@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Events\Analysis;
 
-use Exception;
 use StyleCI\StyleCI\Models\Analysis;
 
 /**
@@ -31,7 +30,7 @@ final class AnalysisHasCompletedEvent implements AnalysisEventInterface
     /**
      * The exception that occurred during analysis.
      *
-     * @var \Exception|null
+     * @var \Throwable|null
      */
     public $exception;
 
@@ -39,11 +38,11 @@ final class AnalysisHasCompletedEvent implements AnalysisEventInterface
      * Create a new analysis has completed event instance.
      *
      * @param \StyleCI\StyleCI\Models\Analysis $analysis
-     * @param \Exception|null                  $exception
+     * @param \Throwable|null                  $exception
      *
      * @return void
      */
-    public function __construct(Analysis $analysis, Exception $exception = null)
+    public function __construct(Analysis $analysis, $exception = null)
     {
         $this->analysis = $analysis;
         $this->exception = $exception;

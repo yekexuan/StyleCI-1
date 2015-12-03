@@ -23,6 +23,7 @@ use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasStartedEvent;
 use StyleCI\StyleCI\Jobs\Analysis\RunAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
+use Throwable;
 
 /**
  * This is the run analysis job handler.
@@ -94,6 +95,8 @@ class RunAnalysisJobHandler
         } catch (AnalysisTimeoutException $e) {
             $analysis->status = Analysis::TIMEOUT;
         } catch (Exception $e) {
+            $analysis->status = Analysis::INTERNAL;
+        } catch (Throwable $e) {
             $analysis->status = Analysis::INTERNAL;
         }
 

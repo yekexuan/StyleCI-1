@@ -17,6 +17,7 @@ use Psr\Log\LoggerInterface;
 use StyleCI\StyleCI\Commands\Repo\DisableRepoCommand;
 use StyleCI\StyleCI\Commands\User\DeleteAccountCommand;
 use StyleCI\StyleCI\Events\User\UserHasRageQuitEvent;
+use Throwable;
 
 /**
  * This is the delete account command handler class.
@@ -63,12 +64,17 @@ class DeleteAccountCommandHandler
             } catch (Exception $e) {
                 $this->logger->error($e);
                 $repo->delete();
+            } catch (Throwable $e) {
+                $this->logger->error($e);
+                $repo->delete();
             }
         }
 
         try {
             event(new UserHasRageQuitEvent($user));
         } catch (Exception $e) {
+            $this->logger->error($e);
+        } catch (Throwable $e) {
             $this->logger->error($e);
         }
 
