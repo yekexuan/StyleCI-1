@@ -33,6 +33,10 @@ class CleanupAnalysisJobHandler
     {
         $analysis = $job->analysis;
 
+        if ($analysis->status > Analysis::RUNNING) {
+            return;
+        }
+
         $analysis->status = Analysis::TIMEOUT;
         $analysis->save();
 
