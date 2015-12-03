@@ -31,7 +31,7 @@
         "guzzlehttp/guzzle": "^6.1",
         "mccool/laravel-auto-presenter": "^4.2",
         "styleci/fixer": "^3.5",
-        "styleci/login": "^1.3",
+        "styleci/login": "^1.4",
         "styleci/storage": "^1.1",
         "vinkla/hashids": "^2.2",
         "vinkla/pusher": "^2.2"
