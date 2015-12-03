@@ -16,6 +16,7 @@ use Gitonomy\Git\Exception\GitExceptionInterface as GitonomyException;
 use GitWrapper\GitException as GitWrapperException;
 use StyleCI\Config\Exceptions\ConfigExceptionInterface;
 use StyleCI\Fixer\ReportBuilder;
+use StyleCI\Fixer\Exceptions\AnalysisTimeoutException;
 use StyleCI\Git\Exceptions\GitExceptionInterface;
 use StyleCI\Storage\Stores\StoreInterface;
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
@@ -90,6 +91,8 @@ class RunAnalysisJobHandler
             $analysis->status = Analysis::ACCESS_ISSUES;
         } catch (GitWrapperException $e) {
             $analysis->status = Analysis::ACCESS_ISSUES;
+        } catch (AnalysisTimeoutException $e) {
+            $analysis->status = Analysis::TIMEOUT;
         } catch (Exception $e) {
             $analysis->status = Analysis::INTERNAL;
         }
