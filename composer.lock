@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d54e782fdbc460ac1d6bf563117c0df5",
-    "content-hash": "9dc57f9190915de72e2d7dc2bf7364ef",
+    "hash": "ffe1f707e2799d581f0fbfa0c1e3fca4",
+    "content-hash": "340eac4e7d46913844139a7eb0c35419",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -2335,16 +2335,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v2.6.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "1c7b74b0364ff93417164201c8f2ab127f799d5e"
+                "reference": "924b6d6e92b69c5db97ecbfc584019cbdf946be0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/1c7b74b0364ff93417164201c8f2ab127f799d5e",
-                "reference": "1c7b74b0364ff93417164201c8f2ab127f799d5e",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/924b6d6e92b69c5db97ecbfc584019cbdf946be0",
+                "reference": "924b6d6e92b69c5db97ecbfc584019cbdf946be0",
                 "shasum": ""
             },
             "require": {
@@ -2361,7 +2361,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "2.7-dev"
                 }
             },
             "autoload": {
@@ -2393,7 +2393,7 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-12-02 21:42:58"
+            "time": "2015-12-03 14:03:00"
         },
         {
             "name": "styleci/fixer",
@@ -2401,19 +2401,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "ca729c1eca2be51de17a46f50d51433080a85acf"
+                "reference": "f95fc879d54306cf10d21dc3556fb99921ef7d9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/ca729c1eca2be51de17a46f50d51433080a85acf",
-                "reference": "ca729c1eca2be51de17a46f50d51433080a85acf",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/f95fc879d54306cf10d21dc3556fb99921ef7d9b",
+                "reference": "f95fc879d54306cf10d21dc3556fb99921ef7d9b",
                 "shasum": ""
             },
             "require": {
                 "ext-pcntl": "*",
                 "php": ">=5.6.4",
                 "styleci/cache": "^1.2",
-                "styleci/config": "^2.6",
+                "styleci/config": "^2.7",
                 "styleci/git": "^2.4",
                 "styleci/php-cs-fixer": "1.6.*"
             },
@@ -2460,7 +2460,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-12-03 12:40:05"
+            "time": "2015-12-03 14:06:32"
         },
         {
             "name": "styleci/git",
@@ -2530,16 +2530,16 @@
         },
         {
             "name": "styleci/login",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Login.git",
-                "reference": "6f1e5f4113cff2a274da9a1313a5baf146bb127d"
+                "reference": "eb4ac945dcc2a80f4105d2a6fb42edb95f9d703c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Login/zipball/6f1e5f4113cff2a274da9a1313a5baf146bb127d",
-                "reference": "6f1e5f4113cff2a274da9a1313a5baf146bb127d",
+                "url": "https://api.github.com/repos/StyleCI/Login/zipball/eb4ac945dcc2a80f4105d2a6fb42edb95f9d703c",
+                "reference": "eb4ac945dcc2a80f4105d2a6fb42edb95f9d703c",
                 "shasum": ""
             },
             "require": {
@@ -2556,7 +2556,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -2589,7 +2589,7 @@
                 "github",
                 "login"
             ],
-            "time": "2015-11-08 21:28:45"
+            "time": "2015-12-03 14:02:47"
         },
         {
             "name": "styleci/php-cs-fixer",
