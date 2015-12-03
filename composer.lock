@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6a7d7331e9326541612d30dfbf5b583f",
-    "content-hash": "ddea6f8823e090e4306b7f64b819ecb0",
+    "hash": "d54e782fdbc460ac1d6bf563117c0df5",
+    "content-hash": "9dc57f9190915de72e2d7dc2bf7364ef",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -2397,24 +2397,25 @@
         },
         {
             "name": "styleci/fixer",
-            "version": "v3.4.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "267dd856b2f7952b49e254699c2f3f40b79cb409"
+                "reference": "ca729c1eca2be51de17a46f50d51433080a85acf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/267dd856b2f7952b49e254699c2f3f40b79cb409",
-                "reference": "267dd856b2f7952b49e254699c2f3f40b79cb409",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/ca729c1eca2be51de17a46f50d51433080a85acf",
+                "reference": "ca729c1eca2be51de17a46f50d51433080a85acf",
                 "shasum": ""
             },
             "require": {
+                "ext-pcntl": "*",
                 "php": ">=5.6.4",
                 "styleci/cache": "^1.2",
                 "styleci/config": "^2.6",
-                "styleci/git": "^2.3",
-                "styleci/php-cs-fixer": "1.5.*"
+                "styleci/git": "^2.4",
+                "styleci/php-cs-fixer": "1.6.*"
             },
             "require-dev": {
                 "graham-campbell/testbench": "^3.1",
@@ -2426,7 +2427,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.4-dev"
+                    "dev-master": "3.5-dev"
                 }
             },
             "autoload": {
@@ -2459,20 +2460,20 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-12-01 13:41:21"
+            "time": "2015-12-03 12:40:05"
         },
         {
             "name": "styleci/git",
-            "version": "v2.3.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "9607633ece229f27e48abcc3cbe338e5d85015ae"
+                "reference": "f56f47a17ea3059e53c86f90fd6ee3f2a7c92c82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/9607633ece229f27e48abcc3cbe338e5d85015ae",
-                "reference": "9607633ece229f27e48abcc3cbe338e5d85015ae",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/f56f47a17ea3059e53c86f90fd6ee3f2a7c92c82",
+                "reference": "f56f47a17ea3059e53c86f90fd6ee3f2a7c92c82",
                 "shasum": ""
             },
             "require": {
@@ -2492,7 +2493,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
@@ -2525,7 +2526,7 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-11-28 15:18:35"
+            "time": "2015-12-03 09:28:04"
         },
         {
             "name": "styleci/login",
@@ -2592,16 +2593,16 @@
         },
         {
             "name": "styleci/php-cs-fixer",
-            "version": "v1.5.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "72cd2dbd8f987b3d208773122a77136375fcfaac"
+                "reference": "d4b2739fe07b9609e08dfbfcec5770fa8cec3dc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/72cd2dbd8f987b3d208773122a77136375fcfaac",
-                "reference": "72cd2dbd8f987b3d208773122a77136375fcfaac",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/d4b2739fe07b9609e08dfbfcec5770fa8cec3dc7",
+                "reference": "d4b2739fe07b9609e08dfbfcec5770fa8cec3dc7",
                 "shasum": ""
             },
             "require": {
@@ -2624,7 +2625,7 @@
             "type": "application",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -2651,7 +2652,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-12-02 21:44:19"
+            "time": "2015-12-03 12:01:12"
         },
         {
             "name": "styleci/storage",
@@ -3873,16 +3874,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.5.1",
+            "version": "v1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e"
+                "reference": "47c7128262da274f590ae6f86eb137a7a64e82af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
-                "reference": "2b9cec5a5e722010cbebc91713d4c11eaa064d5e",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/47c7128262da274f590ae6f86eb137a7a64e82af",
+                "reference": "47c7128262da274f590ae6f86eb137a7a64e82af",
                 "shasum": ""
             },
             "require": {
@@ -3939,7 +3940,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2015-11-02 18:35:48"
+            "time": "2015-12-03 10:50:37"
         },
         {
             "name": "doctrine/collections",
