@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "56189bcabe9ff66f6a87ef7436d496c2",
-    "content-hash": "d94977dcfec57d19e42606affac89fee",
+    "hash": "ccaa437f9cd57e8676e22d91eea56a09",
+    "content-hash": "ac58bf88d5bcad95aab72cbfe12d588a",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -2397,20 +2397,19 @@
         },
         {
             "name": "styleci/fixer",
-            "version": "v3.5.0",
+            "version": "v3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "843f1ee949e90bc0df059a528dd8f6fe975a5413"
+                "reference": "1f78ea3720c0d10c47ab63285e98b50a8562f962"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/843f1ee949e90bc0df059a528dd8f6fe975a5413",
-                "reference": "843f1ee949e90bc0df059a528dd8f6fe975a5413",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/1f78ea3720c0d10c47ab63285e98b50a8562f962",
+                "reference": "1f78ea3720c0d10c47ab63285e98b50a8562f962",
                 "shasum": ""
             },
             "require": {
-                "ext-pcntl": "*",
                 "php": ">=5.6.4",
                 "styleci/cache": "^1.2",
                 "styleci/config": "^2.7",
@@ -2418,17 +2417,19 @@
                 "styleci/php-cs-fixer": "1.6.*"
             },
             "require-dev": {
+                "ext-pcntl": "*",
                 "graham-campbell/testbench": "^3.1",
                 "mockery/mockery": "^0.9.4",
                 "phpunit/phpunit": "^5.0"
             },
             "suggest": {
+                "ext-pcntl": "Enables analyzing within a timeout.",
                 "illuminate/support": "Enables Laravel support."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.5-dev"
+                    "dev-master": "3.6-dev"
                 }
             },
             "autoload": {
@@ -2461,7 +2462,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-12-03 20:55:29"
+            "time": "2015-12-04 12:29:52"
         },
         {
             "name": "styleci/git",
