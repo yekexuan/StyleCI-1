@@ -23,6 +23,7 @@
         "laravel/framework": "~5.1.26",
         "alt-three/logger": "^1.1",
         "alt-three/validator": "^1.4",
+        "doctrine/dbal": "^2.5",
         "fideloper/proxy": "^3.0",
         "graham-campbell/exceptions": "^6.0",
         "graham-campbell/core": "^4.2",
@@ -37,7 +38,6 @@
         "vinkla/pusher": "^2.2"
     },
     "require-dev": {
-        "doctrine/dbal": "^2.5",
         "filp/whoops": "^1.1",
         "graham-campbell/testbench-core": "^1.1",
         "mockery/mockery": "^0.9.4",
