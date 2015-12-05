@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0f266b159d1f7479807ffb55bbaf1be4",
-    "content-hash": "31aebf1d8c8aedb96209076030d9aeb0",
+    "hash": "c3c5e8e484b13fe7dfb6145cbf73b139",
+    "content-hash": "f466f0491f1fab0408666cfe9fe658d9",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -2737,16 +2737,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v2.7.0",
+            "version": "v2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "924b6d6e92b69c5db97ecbfc584019cbdf946be0"
+                "reference": "b383ae6c7787e1bca956eca36adc11d786348408"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/924b6d6e92b69c5db97ecbfc584019cbdf946be0",
-                "reference": "924b6d6e92b69c5db97ecbfc584019cbdf946be0",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/b383ae6c7787e1bca956eca36adc11d786348408",
+                "reference": "b383ae6c7787e1bca956eca36adc11d786348408",
                 "shasum": ""
             },
             "require": {
@@ -2763,7 +2763,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
@@ -2795,26 +2795,26 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-12-03 14:03:00"
+            "time": "2015-12-05 15:25:37"
         },
         {
             "name": "styleci/fixer",
-            "version": "v3.6.0",
+            "version": "v3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "1f78ea3720c0d10c47ab63285e98b50a8562f962"
+                "reference": "90af52e8db4d992e72bddea7030480569067aef2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/1f78ea3720c0d10c47ab63285e98b50a8562f962",
-                "reference": "1f78ea3720c0d10c47ab63285e98b50a8562f962",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/90af52e8db4d992e72bddea7030480569067aef2",
+                "reference": "90af52e8db4d992e72bddea7030480569067aef2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.4",
                 "styleci/cache": "^1.2",
-                "styleci/config": "^2.7",
+                "styleci/config": "^2.8",
                 "styleci/git": "^2.4",
                 "styleci/php-cs-fixer": "1.6.*"
             },
@@ -2831,7 +2831,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.6-dev"
+                    "dev-master": "3.7-dev"
                 }
             },
             "autoload": {
@@ -2864,7 +2864,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-12-04 12:29:52"
+            "time": "2015-12-05 15:28:28"
         },
         {
             "name": "styleci/git",
@@ -5244,16 +5244,16 @@
         },
         {
             "name": "sebastian/recursion-context",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/recursion-context.git",
-                "reference": "994d4a811bafe801fb06dccbee797863ba2792ba"
+                "reference": "913401df809e99e4f47b27cdd781f4a258d58791"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/994d4a811bafe801fb06dccbee797863ba2792ba",
-                "reference": "994d4a811bafe801fb06dccbee797863ba2792ba",
+                "url": "https://api.github.com/repos/sebastianbergmann/recursion-context/zipball/913401df809e99e4f47b27cdd781f4a258d58791",
+                "reference": "913401df809e99e4f47b27cdd781f4a258d58791",
                 "shasum": ""
             },
             "require": {
@@ -5293,7 +5293,7 @@
             ],
             "description": "Provides functionality to recursively process PHP variables",
             "homepage": "http://www.github.com/sebastianbergmann/recursion-context",
-            "time": "2015-06-21 08:04:50"
+            "time": "2015-11-11 19:50:13"
         },
         {
             "name": "sebastian/resource-operations",
