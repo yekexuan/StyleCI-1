@@ -11,18 +11,21 @@
 
 namespace StyleCI\Tests\StyleCI\Commands\Analysis;
 
+use AltThree\TestBench\CommandTrait;
 use StyleCI\StyleCI\Commands\Analysis\AnalyzePullRequestCommand;
 use StyleCI\StyleCI\Handlers\Commands\Analysis\AnalyzePullRequestCommandHandler;
 use StyleCI\StyleCI\Models\Repo;
-use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
+use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
  * This is the analyze pull request command test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalyzePullRequestCommandTest extends AbstractCommandTestCase
+class AnalyzePullRequestCommandTest extends AbstractTestCase
 {
+    use CommandTrait;
+
     protected function getObjectAndParams()
     {
         $params = ['repo' => new Repo(), 'pr' => 123, 'commit' => 'trololol', 'message' => 'SUP!'];

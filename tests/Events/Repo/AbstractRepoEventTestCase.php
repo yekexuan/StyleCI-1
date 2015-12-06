@@ -11,18 +11,22 @@
 
 namespace StyleCI\Tests\StyleCI\Events\Repo;
 
+use AltThree\TestBench\EventTrait;
+use StyleCI\StyleCI\Events\EventInterface;
 use StyleCI\StyleCI\Events\Repo\RepoEventInterface;
-use StyleCI\Tests\StyleCI\Events\AbstractEventTestCase;
+use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
  * This is the abstract repo event test case class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AbstractRepoEventTestCase extends AbstractEventTestCase
+class AbstractRepoEventTestCase extends AbstractTestCase
 {
+    use EventTrait;
+
     protected function getEventInterfaces()
     {
-        return array_merge(parent::getEventInterfaces(), [RepoEventInterface::class]);
+        return [EventInterface::class, RepoEventInterface::class];
     }
 }

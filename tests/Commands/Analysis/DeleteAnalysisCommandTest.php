@@ -11,29 +11,27 @@
 
 namespace StyleCI\Tests\StyleCI\Commands\Analysis;
 
+use AltThree\TestBench\CommandTrait;
 use StyleCI\StyleCI\Commands\Analysis\DeleteAnalysisCommand;
 use StyleCI\StyleCI\Handlers\Commands\Analysis\DeleteAnalysisCommandHandler;
 use StyleCI\StyleCI\Models\Analysis;
-use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
+use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
  * This is the delete analysis command test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class DeleteAnalysisCommandTest extends AbstractCommandTestCase
+class DeleteAnalysisCommandTest extends AbstractTestCase
 {
+    use CommandTrait;
+
     protected function getObjectAndParams()
     {
         $params = ['analysis' => new Analysis()];
         $object = new DeleteAnalysisCommand($params['analysis']);
 
         return compact('params', 'object');
-    }
-
-    protected function objectHasRules()
-    {
-        return false;
     }
 
     protected function getHandlerClass()

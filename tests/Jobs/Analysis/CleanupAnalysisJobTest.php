@@ -11,17 +11,20 @@
 
 namespace StyleCI\Tests\StyleCI\Jobs\Analysis;
 
+use AltThree\TestBench\JobTrait;
 use StyleCI\StyleCI\Jobs\Analysis\CleanupAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
-use StyleCI\Tests\StyleCI\Jobs\AbstractJobTestCase;
+use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
  * This is the run analysis job test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class CleanupAnalysisJobTest extends AbstractJobTestCase
+class CleanupAnalysisJobTest extends AbstractTestCase
 {
+    use JobTrait;
+
     protected function getObjectAndParams()
     {
         $params = ['analysis' => new Analysis()];

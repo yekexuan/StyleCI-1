@@ -11,18 +11,21 @@
 
 namespace StyleCI\Tests\StyleCI\Commands\Analysis;
 
+use AltThree\TestBench\CommandTrait;
 use StyleCI\StyleCI\Commands\Analysis\AnalyzeBranchCommand;
 use StyleCI\StyleCI\Handlers\Commands\Analysis\AnalyzeBranchCommandHandler;
 use StyleCI\StyleCI\Models\Repo;
-use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
+use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
  * This is the analyze branch command test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalyzeBranchCommandTest extends AbstractCommandTestCase
+class AnalyzeBranchCommandTest extends AbstractTestCase
 {
+    use CommandTrait;
+
     protected function getObjectAndParams()
     {
         $params = ['repo' => new Repo(), 'branch' => 'master'];
