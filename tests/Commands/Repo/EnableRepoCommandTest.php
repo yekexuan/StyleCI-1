@@ -11,18 +11,21 @@
 
 namespace StyleCI\Tests\StyleCI\Commands\Repo;
 
+use AltThree\TestBench\CommandTrait;
 use StyleCI\StyleCI\Commands\Repo\EnableRepoCommand;
 use StyleCI\StyleCI\Handlers\Commands\Repo\EnableRepoCommandHandler;
 use StyleCI\StyleCI\Models\User;
-use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
+use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
  * This is the enable repo command test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class EnableRepoCommandTest extends AbstractCommandTestCase
+class EnableRepoCommandTest extends AbstractTestCase
 {
+    use CommandTrait;
+
     protected function getObjectAndParams()
     {
         $params = ['id' => 12345, 'name' => 'Foo/Bar', 'branch' => 'master', 'user' => new User()];

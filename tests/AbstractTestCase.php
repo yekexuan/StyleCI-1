@@ -11,6 +11,7 @@
 
 namespace StyleCI\Tests\StyleCI;
 
+use AltThree\TestBench\DisableLoggingTrait;
 use GrahamCampbell\TestBenchCore\MockeryTrait;
 use Illuminate\Contracts\Console\Kernel;
 use Illuminate\Foundation\Testing\TestCase;
@@ -23,7 +24,7 @@ use Illuminate\Foundation\Testing\WithoutEvents;
  */
 abstract class AbstractTestCase extends TestCase
 {
-    use MockeryTrait, WithoutEvents;
+    use DisableLoggingTrait, MockeryTrait, WithoutEvents;
 
     /**
      * The base URL to use while testing the application.
@@ -31,14 +32,6 @@ abstract class AbstractTestCase extends TestCase
      * @var string
      */
     protected $baseUrl = 'http://localhost';
-
-    /**
-     * @before
-     */
-    public function disableLogging()
-    {
-        $this->app->config->set('logger.loggers', []);
-    }
 
     /**
      * Creates the application.

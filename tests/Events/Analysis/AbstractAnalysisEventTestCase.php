@@ -11,18 +11,22 @@
 
 namespace StyleCI\Tests\StyleCI\Events\Analysis;
 
+use AltThree\TestBench\EventTrait;
 use StyleCI\StyleCI\Events\Analysis\AnalysisEventInterface;
-use StyleCI\Tests\StyleCI\Events\AbstractEventTestCase;
+use StyleCI\StyleCI\Events\EventInterface;
+use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
  * This is the abstract analysis event test case class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AbstractAnalysisEventTestCase extends AbstractEventTestCase
+class AbstractAnalysisEventTestCase extends AbstractTestCase
 {
+    use EventTrait;
+
     protected function getEventInterfaces()
     {
-        return array_merge(parent::getEventInterfaces(), [AnalysisEventInterface::class]);
+        return [EventInterface::class, AnalysisEventInterface::class];
     }
 }

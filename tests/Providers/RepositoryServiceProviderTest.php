@@ -11,9 +11,7 @@
 
 namespace StyleCI\Tests\StyleCI\Providers;
 
-use GrahamCampbell\TestBenchCore\LaravelTrait;
-use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
-use StyleCI\StyleCI\Providers\RepositoryServiceProvider;
+use AltThree\TestBench\ServiceProviderTrait;
 use StyleCI\StyleCI\Repositories\RepoRepository;
 use StyleCI\StyleCI\Repositories\UserRepository;
 use StyleCI\Tests\StyleCI\AbstractTestCase;
@@ -25,12 +23,7 @@ use StyleCI\Tests\StyleCI\AbstractTestCase;
  */
 class RepositoryServiceProviderTest extends AbstractTestCase
 {
-    use LaravelTrait, ServiceProviderTrait;
-
-    protected function getServiceProviderClass($app)
-    {
-        return RepositoryServiceProvider::class;
-    }
+    use ServiceProviderTrait;
 
     public function testRepoRepositoryIsInjectable()
     {

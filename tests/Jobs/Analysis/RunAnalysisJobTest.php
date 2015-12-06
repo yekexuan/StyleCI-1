@@ -11,18 +11,21 @@
 
 namespace StyleCI\Tests\StyleCI\Jobs\Analysis;
 
+use AltThree\TestBench\JobTrait;
 use StyleCI\StyleCI\Events\Analysis\AnalysisWasQueuedEvent;
 use StyleCI\StyleCI\Jobs\Analysis\RunAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
-use StyleCI\Tests\StyleCI\Jobs\AbstractJobTestCase;
+use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
  * This is the run analysis job test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class RunAnalysisJobTest extends AbstractJobTestCase
+class RunAnalysisJobTest extends AbstractTestCase
 {
+    use JobTrait;
+
     protected function getObjectAndParams()
     {
         $this->expectsEvents(AnalysisWasQueuedEvent::class);

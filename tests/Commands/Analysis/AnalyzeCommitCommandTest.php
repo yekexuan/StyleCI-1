@@ -11,18 +11,21 @@
 
 namespace StyleCI\Tests\StyleCI\Commands\Analysis;
 
+use AltThree\TestBench\CommandTrait;
 use StyleCI\StyleCI\Commands\Analysis\AnalyzeCommitCommand;
 use StyleCI\StyleCI\Handlers\Commands\Analysis\AnalyzeCommitCommandHandler;
 use StyleCI\StyleCI\Models\Repo;
-use StyleCI\Tests\StyleCI\Commands\AbstractCommandTestCase;
+use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
  * This is the analyze commit command test class.
  *
  * @author Graham Campbell <graham@alt-three.com>
  */
-class AnalyzeCommitCommandTest extends AbstractCommandTestCase
+class AnalyzeCommitCommandTest extends AbstractTestCase
 {
+    use CommandTrait;
+
     protected function getObjectAndParams()
     {
         $params = ['repo' => new Repo(), 'branch' => 'foo', 'commit' => 'sha1 goes here', 'message' => 'Hi there!'];

@@ -11,10 +11,8 @@
 
 namespace StyleCI\Tests\StyleCI\Providers;
 
-use GrahamCampbell\TestBenchCore\LaravelTrait;
-use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
+use AltThree\TestBench\ServiceProviderTrait;
 use StyleCI\StyleCI\Http\Middleware\Authenticate;
-use StyleCI\StyleCI\Providers\AppServiceProvider;
 use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
@@ -24,12 +22,7 @@ use StyleCI\Tests\StyleCI\AbstractTestCase;
  */
 class AppServiceProviderTest extends AbstractTestCase
 {
-    use LaravelTrait, ServiceProviderTrait;
-
-    protected function getServiceProviderClass($app)
-    {
-        return AppServiceProvider::class;
-    }
+    use ServiceProviderTrait;
 
     public function testAuthenticateMiddlewareIsInjectable()
     {

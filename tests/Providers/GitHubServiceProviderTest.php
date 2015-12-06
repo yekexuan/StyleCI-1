@@ -11,8 +11,7 @@
 
 namespace StyleCI\Tests\StyleCI\Providers;
 
-use GrahamCampbell\TestBenchCore\LaravelTrait;
-use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
+use AltThree\TestBench\ServiceProviderTrait;
 use StyleCI\StyleCI\GitHub\Branches;
 use StyleCI\StyleCI\GitHub\ClientFactory;
 use StyleCI\StyleCI\GitHub\Collaborators;
@@ -21,7 +20,6 @@ use StyleCI\StyleCI\GitHub\Hooks;
 use StyleCI\StyleCI\GitHub\Repos;
 use StyleCI\StyleCI\GitHub\Status;
 use StyleCI\StyleCI\GitHub\Tokens;
-use StyleCI\StyleCI\Providers\GitHubServiceProvider;
 use StyleCI\Tests\StyleCI\AbstractTestCase;
 
 /**
@@ -31,12 +29,7 @@ use StyleCI\Tests\StyleCI\AbstractTestCase;
  */
 class GitHubServiceProviderTest extends AbstractTestCase
 {
-    use LaravelTrait, ServiceProviderTrait;
-
-    protected function getServiceProviderClass($app)
-    {
-        return GitHubServiceProvider::class;
-    }
+    use ServiceProviderTrait;
 
     public function testClientFactoryIsInjectable()
     {
