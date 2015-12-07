@@ -158,12 +158,12 @@ return [
         'StyleCI\Git\GitServiceProvider',
         'StyleCI\Login\LoginServiceProvider',
         'StyleCI\Storage\StorageServiceProvider',
-        'StyleCI\StyleCI\Providers\AppServiceProvider',
-        'StyleCI\StyleCI\Providers\ComposerServiceProvider',
-        'StyleCI\StyleCI\Providers\EventServiceProvider',
-        'StyleCI\StyleCI\Providers\GitHubServiceProvider',
-        'StyleCI\StyleCI\Providers\RepositoryServiceProvider',
-        'StyleCI\StyleCI\Providers\RouteServiceProvider',
+        'StyleCI\StyleCI\Foundation\Providers\AppServiceProvider',
+        'StyleCI\StyleCI\Foundation\Providers\ComposerServiceProvider',
+        'StyleCI\StyleCI\Foundation\Providers\EventServiceProvider',
+        'StyleCI\StyleCI\Foundation\Providers\GitHubServiceProvider',
+        'StyleCI\StyleCI\Foundation\Providers\RepositoryServiceProvider',
+        'StyleCI\StyleCI\Foundation\Providers\RouteServiceProvider',
 
     ],
 
