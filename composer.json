@@ -38,7 +38,7 @@
         "vinkla/pusher": "^2.2"
     },
     "require-dev": {
-        "alt-three/testbench": "^1.0",
+        "alt-three/testbench": "^1.1",
         "filp/whoops": "^1.1",
         "graham-campbell/testbench-core": "^1.1",
         "mockery/mockery": "^0.9.4",

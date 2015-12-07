@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3c12e50630391af6aca96e7624779e7e",
-    "content-hash": "ae135b62546f8fc6e12306eae00a3291",
+    "hash": "fb6c6e5fa214f7ad8641cc205fa40dcf",
+    "content-hash": "d65632b26a22e0d5ff3b8d2974c1e485",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -4324,16 +4324,16 @@
     "packages-dev": [
         {
             "name": "alt-three/testbench",
-            "version": "v1.0.0",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AltThree/TestBench.git",
-                "reference": "d3db224b22cc70fae5d7ce3d957d1a359648c92b"
+                "reference": "1fc2d7a725d2d85adc6a2dfba8975c37f701cb04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AltThree/TestBench/zipball/d3db224b22cc70fae5d7ce3d957d1a359648c92b",
-                "reference": "d3db224b22cc70fae5d7ce3d957d1a359648c92b",
+                "url": "https://api.github.com/repos/AltThree/TestBench/zipball/1fc2d7a725d2d85adc6a2dfba8975c37f701cb04",
+                "reference": "1fc2d7a725d2d85adc6a2dfba8975c37f701cb04",
                 "shasum": ""
             },
             "require": {
@@ -4349,7 +4349,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -4381,7 +4381,7 @@
                 "TestBench",
                 "app"
             ],
-            "time": "2015-12-06 11:51:01"
+            "time": "2015-12-07 21:57:27"
         },
         {
             "name": "doctrine/instantiator",
@@ -5132,16 +5132,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.0.4",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "b28b029356e65091dfbf8c2bc4ef106ffece509e"
+                "reference": "b6220d48e18954b96aa0be5829b8aad6d9b1c2de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/b28b029356e65091dfbf8c2bc4ef106ffece509e",
-                "reference": "b28b029356e65091dfbf8c2bc4ef106ffece509e",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/b6220d48e18954b96aa0be5829b8aad6d9b1c2de",
+                "reference": "b6220d48e18954b96aa0be5829b8aad6d9b1c2de",
                 "shasum": ""
             },
             "require": {
@@ -5184,7 +5184,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-11-09 15:37:17"
+            "time": "2015-12-07 17:45:01"
         },
         {
             "name": "sebastian/comparator",

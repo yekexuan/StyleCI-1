@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Exceptions\Transformers;
+namespace StyleCI\StyleCI\Foundation\Exceptions\Transformers;
 
 use AltThree\Validator\ValidationException;
 use Exception;

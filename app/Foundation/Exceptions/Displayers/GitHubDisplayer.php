@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Exceptions\Displayers;
+namespace StyleCI\StyleCI\Foundation\Exceptions\Displayers;
 
 use Exception;
 use GrahamCampbell\Exceptions\Displayers\JsonDisplayer;

@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Providers;
+namespace StyleCI\StyleCI\Foundation\Providers;
 
 use AltThree\Validator\ValidatingMiddleware;
 use Illuminate\Bus\Dispatcher;

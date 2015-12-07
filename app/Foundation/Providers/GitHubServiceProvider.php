@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace StyleCI\StyleCI\Providers;
+namespace StyleCI\StyleCI\Foundation\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use StyleCI\StyleCI\GitHub\Branches;

@@ -27,8 +27,8 @@ return [
 
     'transformers' => [
         'GrahamCampbell\Exceptions\Transformers\CsrfTransformer',
-        'StyleCI\StyleCI\Exceptions\Transformers\LoginTransformer',
-        'StyleCI\StyleCI\Exceptions\Transformers\ValidationTransformer',
+        'StyleCI\StyleCI\Foundation\Exceptions\Transformers\LoginTransformer',
+        'StyleCI\StyleCI\Foundation\Exceptions\Transformers\ValidationTransformer',
     ],
 
     /*
@@ -46,7 +46,7 @@ return [
     */
 
     'displayers' => [
-        'StyleCI\StyleCI\Exceptions\Displayers\GitHubDisplayer',
+        'StyleCI\StyleCI\Foundation\Exceptions\Displayers\GitHubDisplayer',
         'GrahamCampbell\Exceptions\Displayers\DebugDisplayer',
         'GrahamCampbell\Exceptions\Displayers\HtmlDisplayer',
         'GrahamCampbell\Exceptions\Displayers\JsonDisplayer',
