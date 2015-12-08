@@ -3,7 +3,7 @@
 <meta name="author" content="Alt Three Services Limited">
 
 <meta name="styleci:token" content="{{ csrf_token() }}">
-<meta name="styleci:pusher" content="{{ env('PUSHER_APP_KEY') }}">
+<meta name="styleci:pusher" content="{{ $pusher_key }}">
 @if ($current_user)
 <meta name="styleci:user" content="{{ $current_user->id }}">
 @endif
