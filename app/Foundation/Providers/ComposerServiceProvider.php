@@ -15,6 +15,7 @@ use Illuminate\Contracts\View\Factory;
 use Illuminate\Support\ServiceProvider;
 use StyleCI\StyleCI\Composers\CurrentUrlComposer;
 use StyleCI\StyleCI\Composers\CurrentUserComposer;
+use StyleCI\StyleCI\Composers\PusherKeyComposer;
 
 /**
  * This is the view composer service provider class.
@@ -33,8 +34,9 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot(Factory $factory)
     {
-        $factory->composer('*', CurrentUserComposer::class);
         $factory->composer('*', CurrentUrlComposer::class);
+        $factory->composer('*', CurrentUserComposer::class);
+        $factory->composer('*', PusherKeyComposer::class);
     }
 
     /**
