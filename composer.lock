@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fb6c6e5fa214f7ad8641cc205fa40dcf",
-    "content-hash": "d65632b26a22e0d5ff3b8d2974c1e485",
+    "hash": "bc2aeabe6f9427e8f5ee5696f86a938c",
+    "content-hash": "1adbbb28380f100e5ac307e1e1bf7ab4",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -2626,23 +2626,23 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "2b0112e42c338afa9ad9dfeb94d66f6d84c2f828"
+                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/2b0112e42c338afa9ad9dfeb94d66f6d84c2f828",
-                "reference": "2b0112e42c338afa9ad9dfeb94d66f6d84c2f828",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/13edfd8706462032c2f52b4b862974dd46b71c9e",
+                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "~5"
+                "phpunit/phpunit": "~4.8"
             },
             "type": "library",
             "extra": {
@@ -2674,7 +2674,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2015-12-06 07:21:36"
+            "time": "2015-12-08 07:14:41"
         },
         {
             "name": "styleci/cache",
@@ -2743,16 +2743,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v2.8.0",
+            "version": "v2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "b383ae6c7787e1bca956eca36adc11d786348408"
+                "reference": "ee62fe93c53d26866a0f173588914ff0d029c9b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/b383ae6c7787e1bca956eca36adc11d786348408",
-                "reference": "b383ae6c7787e1bca956eca36adc11d786348408",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/ee62fe93c53d26866a0f173588914ff0d029c9b0",
+                "reference": "ee62fe93c53d26866a0f173588914ff0d029c9b0",
                 "shasum": ""
             },
             "require": {
@@ -2769,7 +2769,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.8-dev"
+                    "dev-master": "2.9-dev"
                 }
             },
             "autoload": {
@@ -2801,28 +2801,28 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-12-05 15:25:37"
+            "time": "2015-12-08 22:56:05"
         },
         {
             "name": "styleci/fixer",
-            "version": "v3.7.0",
+            "version": "v3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "90af52e8db4d992e72bddea7030480569067aef2"
+                "reference": "f2265ac5bdbd934af21df61bba503a69863ecc8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/90af52e8db4d992e72bddea7030480569067aef2",
-                "reference": "90af52e8db4d992e72bddea7030480569067aef2",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/f2265ac5bdbd934af21df61bba503a69863ecc8c",
+                "reference": "f2265ac5bdbd934af21df61bba503a69863ecc8c",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.4",
                 "styleci/cache": "^1.2",
-                "styleci/config": "^2.8",
+                "styleci/config": "^2.9",
                 "styleci/git": "^2.4",
-                "styleci/php-cs-fixer": "1.6.*"
+                "styleci/php-cs-fixer": "1.7.*"
             },
             "require-dev": {
                 "ext-pcntl": "*",
@@ -2837,7 +2837,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.7-dev"
+                    "dev-master": "3.8-dev"
                 }
             },
             "autoload": {
@@ -2870,7 +2870,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-12-05 15:28:28"
+            "time": "2015-12-08 23:03:19"
         },
         {
             "name": "styleci/git",
@@ -3003,16 +3003,16 @@
         },
         {
             "name": "styleci/php-cs-fixer",
-            "version": "v1.6.0",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "d4b2739fe07b9609e08dfbfcec5770fa8cec3dc7"
+                "reference": "4f67a745a2220645290b5c1a44dd02ada2f0a5be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/d4b2739fe07b9609e08dfbfcec5770fa8cec3dc7",
-                "reference": "d4b2739fe07b9609e08dfbfcec5770fa8cec3dc7",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/4f67a745a2220645290b5c1a44dd02ada2f0a5be",
+                "reference": "4f67a745a2220645290b5c1a44dd02ada2f0a5be",
                 "shasum": ""
             },
             "require": {
@@ -3035,7 +3035,7 @@
             "type": "application",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6-dev"
+                    "dev-master": "1.7-dev"
                 }
             },
             "autoload": {
@@ -3062,7 +3062,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-12-03 12:01:12"
+            "time": "2015-12-08 22:47:46"
         },
         {
             "name": "styleci/storage",
@@ -5132,16 +5132,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.0.5",
+            "version": "3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "b6220d48e18954b96aa0be5829b8aad6d9b1c2de"
+                "reference": "49bc700750196c04dd6bc2c4c99cb632b893836b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/b6220d48e18954b96aa0be5829b8aad6d9b1c2de",
-                "reference": "b6220d48e18954b96aa0be5829b8aad6d9b1c2de",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/49bc700750196c04dd6bc2c4c99cb632b893836b",
+                "reference": "49bc700750196c04dd6bc2c4c99cb632b893836b",
                 "shasum": ""
             },
             "require": {
@@ -5184,7 +5184,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2015-12-07 17:45:01"
+            "time": "2015-12-08 08:47:06"
         },
         {
             "name": "sebastian/comparator",
