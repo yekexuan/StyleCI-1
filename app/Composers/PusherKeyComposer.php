@@ -32,7 +32,7 @@ class PusherKeyComposer
     {
         $connection = Config::get('pusher.connection', 'main');
 
-        $key = Config::get("pusher.{$connection}.auth_key");
+        $key = Config::get("pusher.connections.{$connection}.auth_key");
 
         $view->withPusherKey($key);
     }
