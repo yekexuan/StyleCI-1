@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "bc2aeabe6f9427e8f5ee5696f86a938c",
-    "content-hash": "1adbbb28380f100e5ac307e1e1bf7ab4",
+    "hash": "a10cb2bb9fb8ae567020d04563bd60c6",
+    "content-hash": "d7b337092e411fe7799775d092ddcc4b",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -962,16 +962,16 @@
         },
         {
             "name": "graham-campbell/exceptions",
-            "version": "v6.0.0",
+            "version": "v6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/GrahamCampbell/Laravel-Exceptions.git",
-                "reference": "abd3ea87415e2420576ace02969798222a114752"
+                "reference": "febf4f8c2e8013742269625d1af6cb440c895b18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/abd3ea87415e2420576ace02969798222a114752",
-                "reference": "abd3ea87415e2420576ace02969798222a114752",
+                "url": "https://api.github.com/repos/GrahamCampbell/Laravel-Exceptions/zipball/febf4f8c2e8013742269625d1af6cb440c895b18",
+                "reference": "febf4f8c2e8013742269625d1af6cb440c895b18",
                 "shasum": ""
             },
             "require": {
@@ -995,7 +995,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.0-dev"
+                    "dev-master": "6.1-dev"
                 }
             },
             "autoload": {
@@ -1027,7 +1027,7 @@
                 "laravel",
                 "whoops"
             ],
-            "time": "2015-11-22 19:54:20"
+            "time": "2015-12-09 12:50:33"
         },
         {
             "name": "graham-campbell/flysystem",
