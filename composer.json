@@ -25,7 +25,7 @@
         "alt-three/validator": "^1.4",
         "doctrine/dbal": "^2.5",
         "fideloper/proxy": "^3.0",
-        "graham-campbell/exceptions": "^6.0",
+        "graham-campbell/exceptions": "^6.1",
         "graham-campbell/core": "^4.2",
         "graham-campbell/github": "^4.2",
         "graham-campbell/htmlmin": "^4.2",
