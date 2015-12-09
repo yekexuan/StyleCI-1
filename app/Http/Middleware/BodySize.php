@@ -13,7 +13,7 @@ namespace StyleCI\StyleCI\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 /**
  * This is the body size middleware class.
@@ -36,7 +36,7 @@ class BodySize
     {
         // prevent body sizes of more than 1 MB
         if (mb_strlen($request->getContent(), '8bit') > 1048576) {
-            throw new BadRequestHttpException('Request body too large.');
+            throw new HttpException(413);
         }
 
         return $next($request);
