@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "118762eaa27c0047231730ca20aff2cf",
-    "content-hash": "e0b20cd79cfd63919a3d86f1d96a569e",
+    "hash": "1bf7828e1764c4d9495baed8173f53e4",
+    "content-hash": "d498c29699bc49ecd4b2a2c9b743a5fb",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -2743,16 +2743,16 @@
         },
         {
             "name": "styleci/config",
-            "version": "v2.10.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Config.git",
-                "reference": "b0bd0437cb8083f314128c743604deeab92b5c43"
+                "reference": "0dad64c01b6a0aed5e7a5787693ac18a7e49d293"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Config/zipball/b0bd0437cb8083f314128c743604deeab92b5c43",
-                "reference": "b0bd0437cb8083f314128c743604deeab92b5c43",
+                "url": "https://api.github.com/repos/StyleCI/Config/zipball/0dad64c01b6a0aed5e7a5787693ac18a7e49d293",
+                "reference": "0dad64c01b6a0aed5e7a5787693ac18a7e49d293",
                 "shasum": ""
             },
             "require": {
@@ -2769,7 +2769,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.10-dev"
+                    "dev-master": "2.11-dev"
                 }
             },
             "autoload": {
@@ -2801,28 +2801,28 @@
                 "StyleCI",
                 "config"
             ],
-            "time": "2015-12-09 17:18:44"
+            "time": "2015-12-15 15:33:28"
         },
         {
             "name": "styleci/fixer",
-            "version": "v3.9.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "b443382088ccef7b953619fac2662d2c77e628d8"
+                "reference": "d4294e08c97b08a4161e20233835617d6d7a194a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/b443382088ccef7b953619fac2662d2c77e628d8",
-                "reference": "b443382088ccef7b953619fac2662d2c77e628d8",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/d4294e08c97b08a4161e20233835617d6d7a194a",
+                "reference": "d4294e08c97b08a4161e20233835617d6d7a194a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6.4",
                 "styleci/cache": "^1.2",
-                "styleci/config": "^2.10",
-                "styleci/git": "^2.4",
-                "styleci/php-cs-fixer": "1.7.*"
+                "styleci/config": "^2.11",
+                "styleci/git": "^3.0",
+                "styleci/php-cs-fixer": "1.8.*"
             },
             "require-dev": {
                 "ext-pcntl": "*",
@@ -2837,7 +2837,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.9-dev"
+                    "dev-master": "4.0-dev"
                 }
             },
             "autoload": {
@@ -2870,20 +2870,20 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-12-09 17:25:02"
+            "time": "2015-12-15 15:36:14"
         },
         {
             "name": "styleci/git",
-            "version": "v2.4.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Git.git",
-                "reference": "f56f47a17ea3059e53c86f90fd6ee3f2a7c92c82"
+                "reference": "50bcb8285a4ca06cce4ec7a78ee7ae41d0b610ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Git/zipball/f56f47a17ea3059e53c86f90fd6ee3f2a7c92c82",
-                "reference": "f56f47a17ea3059e53c86f90fd6ee3f2a7c92c82",
+                "url": "https://api.github.com/repos/StyleCI/Git/zipball/50bcb8285a4ca06cce4ec7a78ee7ae41d0b610ca",
+                "reference": "50bcb8285a4ca06cce4ec7a78ee7ae41d0b610ca",
                 "shasum": ""
             },
             "require": {
@@ -2894,16 +2894,18 @@
                 "symfony/finder": "^2.7|^3.0"
             },
             "require-dev": {
+                "alt-three/locker": "^1.2",
                 "graham-campbell/testbench": "^3.1",
                 "phpunit/phpunit": "^5.0"
             },
             "suggest": {
+                "alt-three/locker": "Enables Locking support.",
                 "illuminate/support": "Enables Laravel support."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "3.0-dev"
                 }
             },
             "autoload": {
@@ -2936,7 +2938,7 @@
                 "StyleCI",
                 "git"
             ],
-            "time": "2015-12-03 09:28:04"
+            "time": "2015-12-15 15:35:21"
         },
         {
             "name": "styleci/login",
@@ -3003,16 +3005,16 @@
         },
         {
             "name": "styleci/php-cs-fixer",
-            "version": "v1.7.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
-                "reference": "4f67a745a2220645290b5c1a44dd02ada2f0a5be"
+                "reference": "cc7a9b3fd17841fbdb8b482827f2e7fa700d9075"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/4f67a745a2220645290b5c1a44dd02ada2f0a5be",
-                "reference": "4f67a745a2220645290b5c1a44dd02ada2f0a5be",
+                "url": "https://api.github.com/repos/StyleCI/PHP-CS-Fixer/zipball/cc7a9b3fd17841fbdb8b482827f2e7fa700d9075",
+                "reference": "cc7a9b3fd17841fbdb8b482827f2e7fa700d9075",
                 "shasum": ""
             },
             "require": {
@@ -3035,7 +3037,7 @@
             "type": "application",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.7-dev"
+                    "dev-master": "1.8-dev"
                 }
             },
             "autoload": {
@@ -3062,7 +3064,7 @@
                 }
             ],
             "description": "A tool to automatically fix PHP code style",
-            "time": "2015-12-08 22:47:46"
+            "time": "2015-12-15 15:09:24"
         },
         {
             "name": "styleci/storage",
