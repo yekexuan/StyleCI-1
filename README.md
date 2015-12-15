@@ -4,6 +4,7 @@
 ![StyleCI](https://cloud.githubusercontent.com/assets/11048387/8635622/6bf2af9c-2823-11e5-861c-91370e888943.png)
 
 <p align="center">
+<a href="https://styleci.io/repos/26929642"><img src="https://styleci.io/repos/26929642/shield" alt="StyleCI Status"></img></a>
 <a href="https://travis-ci.org/StyleCI/StyleCI"><img src="https://img.shields.io/travis/StyleCI/StyleCI/master.svg?style=flat-square" alt="Build Status"></img></a>
 <a href="https://scrutinizer-ci.com/g/StyleCI/StyleCI/code-structure"><img src="https://img.shields.io/scrutinizer/coverage/g/StyleCI/StyleCI.svg?style=flat-square" alt="Coverage Status"></img></a>
 <a href="https://scrutinizer-ci.com/g/StyleCI/StyleCI"><img src="https://img.shields.io/scrutinizer/g/StyleCI/StyleCI.svg?style=flat-square" alt="Quality Score"></img></a>
