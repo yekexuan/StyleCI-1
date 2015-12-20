@@ -29,19 +29,27 @@ return [
     | Storage Connections
     |--------------------------------------------------------------------------
     |
-    | Here are each of the connections setup for your application. The
-    | flysystem setting tells us which of your configured flysystem connections
-    | to use. The cache setting tells which cache driver to use. You can set
-    | this to false to disabled caching. The encryption setting tells us if you
-    | want us to encrypt your data in the storage. Note that data stored in the
-    | cache is not encrypted either way.
+    | Here are each of the connections setup for your application.
+    |
+    | The main flysystem setting tells us which of your configured flysystem
+    | connections to use, and a fallback connection can be provided if needed.
+    |
+    | The cache setting tells which cache driver to use. You can set this to
+    | false to disabled caching.
+    |
+    | The encryption setting tells us if you want us to encrypt your data in
+    | the storage.
+    |
+    | The compression setting tells us if you want us to compress your data in
+    | the storage.
     |
     */
 
     'connections' => [
 
         'default' => [
-            'flysystem'   => 'local',
+            'main'        => 'local',
+            'fallback'    => null,
             'cache'       => env('CACHE_DRIVER', 'file'),
             'encryption'  => false,
             'compression' => false,
