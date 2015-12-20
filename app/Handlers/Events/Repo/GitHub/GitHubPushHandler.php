@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Handlers\Events\Repo\GitHub;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Support\Str;
 use StyleCI\StyleCI\Commands\Analysis\AnalyzeCommitCommand;
 use StyleCI\StyleCI\Events\Repo\GitHub\GitHubPushEvent;
@@ -23,8 +22,6 @@ use StyleCI\StyleCI\Events\Repo\GitHub\GitHubPushEvent;
  */
 class GitHubPushHandler
 {
-    use DispatchesJobs;
-
     /**
      * Handle the github push event.
      *
@@ -44,7 +41,7 @@ class GitHubPushHandler
         $commit = $data['head_commit']['id'];
         $message = Str::commit($data['head_commit']['message']);
 
-        $this->dispatch(new AnalyzeCommitCommand($event->repo, $branch, $commit, $message));
+        dispatch(new AnalyzeCommitCommand($event->repo, $branch, $commit, $message));
     }
 
     /**

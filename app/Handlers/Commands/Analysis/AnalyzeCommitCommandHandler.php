@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use StyleCI\StyleCI\Commands\Analysis\AnalyzeCommitCommand;
 use StyleCI\StyleCI\Jobs\Analysis\RunAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
@@ -23,8 +22,6 @@ use StyleCI\StyleCI\Models\Analysis;
  */
 class AnalyzeCommitCommandHandler
 {
-    use DispatchesJobs;
-
     /**
      * Handle the analyze commit command.
      *
@@ -43,6 +40,6 @@ class AnalyzeCommitCommandHandler
             'hidden'  => false,
         ]);
 
-        $this->dispatch(new RunAnalysisJob($analysis));
+        dispatch(new RunAnalysisJob($analysis));
     }
 }

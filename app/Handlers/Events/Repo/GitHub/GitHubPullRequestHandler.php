@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Handlers\Events\Repo\GitHub;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Support\Str;
 use StyleCI\StyleCI\Commands\Analysis\AnalyzePullRequestCommand;
 use StyleCI\StyleCI\Events\Repo\GitHub\GitHubPullRequestEvent;
@@ -23,8 +22,6 @@ use StyleCI\StyleCI\Events\Repo\GitHub\GitHubPullRequestEvent;
  */
 class GitHubPullRequestHandler
 {
-    use DispatchesJobs;
-
     /**
      * Handle the github pull request event.
      *
@@ -44,7 +41,7 @@ class GitHubPullRequestHandler
         $commit = $data['pull_request']['head']['sha'];
         $message = Str::commit('Pull Request: '.$data['pull_request']['title']);
 
-        $this->dispatch(new AnalyzePullRequestCommand($event->repo, $pr, $commit, $message));
+        dispatch(new AnalyzePullRequestCommand($event->repo, $pr, $commit, $message));
     }
 
     /**

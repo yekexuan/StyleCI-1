@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use StyleCI\StyleCI\Commands\Analysis\AnalyzePullRequestCommand;
 use StyleCI\StyleCI\Jobs\Analysis\RunAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
@@ -23,8 +22,6 @@ use StyleCI\StyleCI\Models\Analysis;
  */
 class AnalyzePullRequestCommandHandler
 {
-    use DispatchesJobs;
-
     /**
      * Handle the analyze pull request command.
      *
@@ -43,6 +40,6 @@ class AnalyzePullRequestCommandHandler
             'hidden'  => false,
         ]);
 
-        $this->dispatch(new RunAnalysisJob($analysis));
+        dispatch(new RunAnalysisJob($analysis));
     }
 }

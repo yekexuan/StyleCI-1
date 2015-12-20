@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Http\Controllers\Api;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -29,8 +28,6 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
  */
 class AccountController extends Controller
 {
-    use DispatchesJobs;
-
     /**
      * Create a new account controller instance.
      *
@@ -82,7 +79,7 @@ class AccountController extends Controller
             throw new HttpException(403);
         }
 
-        $this->dispatch(new EnableRepoCommand($id, $repo['name'], $repo['default_branch'], Auth::user()));
+        dispatch(new EnableRepoCommand($id, $repo['name'], $repo['default_branch'], Auth::user()));
 
         return new JsonResponse(['enabled' => true]);
     }
@@ -102,7 +99,7 @@ class AccountController extends Controller
             throw new HttpException(403);
         }
 
-        $this->dispatch(new DisableRepoCommand($repo));
+        dispatch(new DisableRepoCommand($repo));
 
         return new JsonResponse(['enabled' => false]);
     }

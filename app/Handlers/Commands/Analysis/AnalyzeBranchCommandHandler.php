@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Handlers\Commands\Analysis;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Support\Str;
 use StyleCI\StyleCI\Commands\Analysis\AnalyzeBranchCommand;
 use StyleCI\StyleCI\GitHub\Branches;
@@ -26,8 +25,6 @@ use StyleCI\StyleCI\Models\Analysis;
  */
 class AnalyzeBranchCommandHandler
 {
-    use DispatchesJobs;
-
     /**
      * The branches instance.
      *
@@ -79,6 +76,6 @@ class AnalyzeBranchCommandHandler
             'hidden'  => false,
         ]);
 
-        $this->dispatch(new RunAnalysisJob($analysis));
+        dispatch(new RunAnalysisJob($analysis));
     }
 }

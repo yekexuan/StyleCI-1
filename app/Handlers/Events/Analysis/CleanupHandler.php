@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Handlers\Events\Analysis;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use StyleCI\StyleCI\Events\Analysis\AnalysisHasCompletedEvent;
 use StyleCI\StyleCI\Jobs\Analysis\CleanupAnalysisJob;
 use StyleCI\StyleCI\Models\Analysis;
@@ -23,8 +22,6 @@ use StyleCI\StyleCI\Models\Analysis;
  */
 class CleanupHandler
 {
-    use DispatchesJobs;
-
     /**
      * Handle the analysis has completed event.
      *
@@ -41,7 +38,7 @@ class CleanupHandler
         }
 
         foreach (Analysis::old()->pending()->orderBy('created_at', 'asc')->get() as $analysis) {
-            $this->dispatch(new CleanupAnalysisJob($analysis));
+            dispatch(new CleanupAnalysisJob($analysis));
         }
     }
 }

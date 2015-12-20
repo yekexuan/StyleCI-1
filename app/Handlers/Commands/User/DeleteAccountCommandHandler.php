@@ -12,7 +12,6 @@
 namespace StyleCI\StyleCI\Handlers\Commands\User;
 
 use Exception;
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use Psr\Log\LoggerInterface;
 use StyleCI\StyleCI\Commands\Repo\DisableRepoCommand;
 use StyleCI\StyleCI\Commands\User\DeleteAccountCommand;
@@ -26,8 +25,6 @@ use Throwable;
  */
 class DeleteAccountCommandHandler
 {
-    use DispatchesJobs;
-
     /**
      * The logger instance.
      *
@@ -60,7 +57,7 @@ class DeleteAccountCommandHandler
 
         foreach ($user->repos as $repo) {
             try {
-                $this->dispatch(new DisableRepoCommand($repo));
+                dispatch(new DisableRepoCommand($repo));
             } catch (Exception $e) {
                 $this->logger->error($e);
                 $repo->delete();

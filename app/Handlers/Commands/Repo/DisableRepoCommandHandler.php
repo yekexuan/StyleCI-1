@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Handlers\Commands\Repo;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use StyleCI\StyleCI\Commands\Analysis\DeleteAnalysisCommand;
 use StyleCI\StyleCI\Commands\Repo\DisableRepoCommand;
 use StyleCI\StyleCI\Events\Repo\RepoWasDisabledEvent;
@@ -23,8 +22,6 @@ use StyleCI\StyleCI\Events\Repo\RepoWasDisabledEvent;
  */
 class DisableRepoCommandHandler
 {
-    use DispatchesJobs;
-
     /**
      * Handle the disable repo command.
      *
@@ -37,7 +34,7 @@ class DisableRepoCommandHandler
         $repo = $command->repo;
 
         foreach ($repo->analyses as $analysis) {
-            $this->dispatch(new DeleteAnalysisCommand($analysis));
+            dispatch(new DeleteAnalysisCommand($analysis));
         }
 
         event(new RepoWasDisabledEvent($repo));

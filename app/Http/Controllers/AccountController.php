@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -26,8 +25,6 @@ use StyleCI\StyleCI\Http\Middleware\Authenticate;
  */
 class AccountController extends Controller
 {
-    use DispatchesJobs;
-
     /**
      * Create a new account controller instance.
      *
@@ -55,7 +52,7 @@ class AccountController extends Controller
      */
     public function handleDelete()
     {
-        $this->dispatch(new DeleteAccountCommand(Auth::user()));
+        dispatch(new DeleteAccountCommand(Auth::user()));
 
         return Redirect::route('home')->with('success', 'Your account has been successfully deleted!');
     }

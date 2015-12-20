@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Http\Controllers\Api;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -33,8 +32,6 @@ use StyleCI\StyleCI\Repositories\RepoRepository;
  */
 class RepoController extends Controller
 {
-    use DispatchesJobs;
-
     /**
      * Create a new account controller instance.
      *
@@ -93,7 +90,7 @@ class RepoController extends Controller
      */
     public function handleAnalyze(Repo $repo)
     {
-        $this->dispatch(new AnalyzeBranchCommand($repo, Request::get('branch')));
+        dispatch(new AnalyzeBranchCommand($repo, Request::get('branch')));
 
         return new JsonResponse(['queued' => true], 202);
     }

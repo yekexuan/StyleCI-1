@@ -11,7 +11,6 @@
 
 namespace StyleCI\StyleCI\Http\Controllers;
 
-use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
@@ -29,8 +28,6 @@ use StyleCI\StyleCI\Repositories\RepoRepository;
  */
 class AuthController extends Controller
 {
-    use DispatchesJobs;
-
     /**
      * Create a new authentication controller instance.
      *
@@ -63,7 +60,7 @@ class AuthController extends Controller
         $username = array_get($user, 'login');
         $name = Str::name(array_get($user, 'name') ?: $username);
 
-        $this->dispatch(new LoginCommand((int) $user['id'], $name, $username, array_get($user, 'email'), array_get($user, 'token')));
+        dispatch(new LoginCommand((int) $user['id'], $name, $username, array_get($user, 'email'), array_get($user, 'token')));
 
         if (count(app(RepoRepository::class)->allByUser(Auth::user())) > 0) {
             return Redirect::route('home');
