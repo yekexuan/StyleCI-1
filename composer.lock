@@ -1964,16 +1964,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.15",
+            "version": "1.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "31525caf9e8772683672fefd8a1ca0c0736020f4"
+                "reference": "183e1a610664baf6dcd6fceda415baf43cbdc031"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/31525caf9e8772683672fefd8a1ca0c0736020f4",
-                "reference": "31525caf9e8772683672fefd8a1ca0c0736020f4",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/183e1a610664baf6dcd6fceda415baf43cbdc031",
+                "reference": "183e1a610664baf6dcd6fceda415baf43cbdc031",
                 "shasum": ""
             },
             "require": {
@@ -1987,7 +1987,7 @@
                 "mockery/mockery": "~0.9",
                 "phpspec/phpspec": "^2.2",
                 "phpspec/prophecy-phpunit": "~1.0",
-                "phpunit/phpunit": "~4.1"
+                "phpunit/phpunit": "~4.8"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
@@ -2044,7 +2044,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2015-09-30 22:26:59"
+            "time": "2015-12-19 20:16:43"
         },
         {
             "name": "mccool/laravel-auto-presenter",
@@ -2804,16 +2804,16 @@
         },
         {
             "name": "styleci/fixer",
-            "version": "dev-master",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Fixer.git",
-                "reference": "34f99afb038e0f0e0abe9bc63618e4ee76443484"
+                "reference": "ea0809ec63140399b3852d1805f7aa435ff80b9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/34f99afb038e0f0e0abe9bc63618e4ee76443484",
-                "reference": "34f99afb038e0f0e0abe9bc63618e4ee76443484",
+                "url": "https://api.github.com/repos/StyleCI/Fixer/zipball/ea0809ec63140399b3852d1805f7aa435ff80b9c",
+                "reference": "ea0809ec63140399b3852d1805f7aa435ff80b9c",
                 "shasum": ""
             },
             "require": {
@@ -2872,7 +2872,7 @@
                 "cs",
                 "fixer"
             ],
-            "time": "2015-12-19 16:00:01"
+            "time": "2015-12-20 13:21:33"
         },
         {
             "name": "styleci/git",
@@ -3007,7 +3007,7 @@
         },
         {
             "name": "styleci/php-cs-fixer",
-            "version": "dev-master",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/PHP-CS-Fixer.git",
