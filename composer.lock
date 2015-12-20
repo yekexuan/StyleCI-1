@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "818890319e675527a5e68af1f67398e2",
-    "content-hash": "d3bade323a9c63a88848810d9a23dd14",
+    "hash": "3d5c77c685924e61f2b38c7c09cb6018",
+    "content-hash": "5b7cd565c3748258a585f01c4d61a844",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -3070,16 +3070,16 @@
         },
         {
             "name": "styleci/storage",
-            "version": "v2.0.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Storage.git",
-                "reference": "a768da82cb8655397d949bb9e8149dbde0d05214"
+                "reference": "3c37969f1d80c90120ed80ccdbf0c2f58e5f0a66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/a768da82cb8655397d949bb9e8149dbde0d05214",
-                "reference": "a768da82cb8655397d949bb9e8149dbde0d05214",
+                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/3c37969f1d80c90120ed80ccdbf0c2f58e5f0a66",
+                "reference": "3c37969f1d80c90120ed80ccdbf0c2f58e5f0a66",
                 "shasum": ""
             },
             "require": {
@@ -3097,7 +3097,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0-dev"
+                    "dev-master": "2.1-dev"
                 }
             },
             "autoload": {
@@ -3130,7 +3130,7 @@
                 "StyleCI",
                 "storage"
             ],
-            "time": "2015-12-20 17:30:58"
+            "time": "2015-12-20 19:09:49"
         },
         {
             "name": "swiftmailer/swiftmailer",
