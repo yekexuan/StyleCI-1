@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cccb261cc29c217bac9eaf8751884440",
-    "content-hash": "a604222889f6f2151d65909af27f717e",
+    "hash": "818890319e675527a5e68af1f67398e2",
+    "content-hash": "d3bade323a9c63a88848810d9a23dd14",
     "packages": [
         {
             "name": "alt-three/logger",
@@ -1836,16 +1836,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.1.27",
+            "version": "5.1.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "b16f80878fd3603022d3c84593397cedd9af0bcf"
+                "reference": "1fd5867bf9e88a89cdfe96db8c49e3c8fd5d0f7f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/b16f80878fd3603022d3c84593397cedd9af0bcf",
-                "reference": "b16f80878fd3603022d3c84593397cedd9af0bcf",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/1fd5867bf9e88a89cdfe96db8c49e3c8fd5d0f7f",
+                "reference": "1fd5867bf9e88a89cdfe96db8c49e3c8fd5d0f7f",
                 "shasum": ""
             },
             "require": {
@@ -1960,7 +1960,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2015-12-17 20:35:38"
+            "time": "2015-12-20 16:16:33"
         },
         {
             "name": "league/flysystem",
@@ -3070,16 +3070,16 @@
         },
         {
             "name": "styleci/storage",
-            "version": "v1.1.1",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/StyleCI/Storage.git",
-                "reference": "decd817cbfe0c18800252ba8a4a5412005976ff1"
+                "reference": "a768da82cb8655397d949bb9e8149dbde0d05214"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/decd817cbfe0c18800252ba8a4a5412005976ff1",
-                "reference": "decd817cbfe0c18800252ba8a4a5412005976ff1",
+                "url": "https://api.github.com/repos/StyleCI/Storage/zipball/a768da82cb8655397d949bb9e8149dbde0d05214",
+                "reference": "a768da82cb8655397d949bb9e8149dbde0d05214",
                 "shasum": ""
             },
             "require": {
@@ -3097,7 +3097,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -3130,7 +3130,7 @@
                 "StyleCI",
                 "storage"
             ],
-            "time": "2015-12-15 22:45:43"
+            "time": "2015-12-20 17:30:58"
         },
         {
             "name": "swiftmailer/swiftmailer",
