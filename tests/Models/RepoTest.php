@@ -81,7 +81,7 @@ class RepoTest extends AbstractTestCase
             'name'           => 'Foo/Baz',
             'default_branch' => 'lol',
             'updated_at'     => (string) $c,
-            'created_at'     => (string) $c,
+            'created_at'     => (string) $c
         ];
 
         $repo = Repo::create(['id' => '12345', 'user_id' => '4242', 'name' => 'Foo/Baz', 'default_branch' => 'lol', 'token' => str_repeat('a', 20)]);

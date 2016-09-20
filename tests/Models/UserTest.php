@@ -82,7 +82,7 @@ class UserTest extends AbstractTestCase
             'username'   => 'baz',
             'email'      => 'baz@foo.com',
             'updated_at' => (string) $c,
-            'created_at' => (string) $c,
+            'created_at' => (string) $c
         ];
 
         $user = User::create(['id' => '12345', 'name' => 'Foo Baz', 'username' => 'baz', 'email' => 'baz@foo.com', 'token' => str_repeat('a', 40)]);
